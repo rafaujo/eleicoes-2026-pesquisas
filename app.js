@@ -8,7 +8,6 @@ const candidates = [
 
 const TSE_DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026";
 const PESQELE_URL = "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml";
-const DATA_REFERENCE_DATE = "2026-08-16";
 const HALF_LIFE_DAYS = 7;
 
 // Percentuais transcritos das publicações indicadas em resultSource.
@@ -318,6 +317,16 @@ const oneDecimal = new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 1, ma
 const integer = new Intl.NumberFormat("pt-BR");
 const currency = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
 const state = { period: "21", query: "", round: "first" };
+const brazilDateParts = Object.fromEntries(
+  new Intl.DateTimeFormat("en", {
+    timeZone: "America/Sao_Paulo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date()).map((part) => [part.type, part.value]),
+);
+const DATA_REFERENCE_DATE = `${brazilDateParts.year}-${brazilDateParts.month}-${brazilDateParts.day}`;
+
 let tseData = null;
 
 const averageList = document.querySelector("#average-list");

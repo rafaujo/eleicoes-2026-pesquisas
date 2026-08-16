@@ -1,0 +1,30 @@
+name: Validar dados
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v7
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Validar sintaxe e testes
+        run: |
+          python -m compileall -q scripts tests
+          python -m unittest discover -s tests -v
+          python scripts/validate_data.py
+          node --check app.js

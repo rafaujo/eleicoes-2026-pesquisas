@@ -36,13 +36,39 @@ Fonte oficial de metadados: [Pesquisas Eleitorais 2026 — Dados Abertos do TSE]
 
 ## Atualizar o recorte do TSE
 
-O sincronizador usa apenas a biblioteca padrão do Python:
+O sincronizador usa apenas a biblioteca padrão do Python. Ele consulta o catálogo CKAN do TSE, baixa os ZIPs nacionais de pesquisas e contratantes e executa duas tarefas:
+
+- atualiza `data/tse-metadata.json` para os protocolos que já possuem resultados curados no site;
+- compara todos os registros presidenciais nacionais com `data/tse-monitor.json` e coloca protocolos novos em uma fila de revisão.
 
 ```powershell
 python scripts/sync_tse.py
 ```
 
-Ele consulta o catálogo CKAN do TSE, baixa os ZIPs nacionais de pesquisas e contratantes, valida se os 33 protocolos existem e recria `data/tse-metadata.json`.
+Para validar os arquivos sem acessar a rede:
+
+```powershell
+python -m unittest discover -s tests -v
+python scripts/validate_data.py
+node --check app.js
+```
+
+## Atualização e publicação automáticas
+
+O workflow `.github/workflows/update-polls.yml` roda todos os dias às 07h17 e 16h17 no horário de Brasília e também pode ser iniciado manualmente na aba **Actions** do GitHub.
+
+Em cada execução ele:
+
+1. baixa a versão diária do conjunto oficial do TSE;
+2. atualiza metadados alterados e detecta protocolos presidenciais novos;
+3. executa os testes e as validações de consistência;
+4. cria um commit na `main` somente quando os arquivos realmente mudaram;
+5. abre ou atualiza uma issue com os protocolos que ainda precisam de fonte de resultados;
+6. solicita uma nova publicação do GitHub Pages após o commit.
+
+O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. Depois que os percentuais forem conferidos em uma publicação ou relatório e adicionados a `app.js`, a próxima sincronização incorpora os metadados oficiais, remove a pendência e republica o site.
+
+O workflow `.github/workflows/validate.yml` também valida todo pull request e todo push feito manualmente na `main`.
 
 ## Média ponderada
 
@@ -60,7 +86,6 @@ A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens
 
 ## Próximas etapas
 
-- automatizar a execução diária do sincronizador;
 - normalizar pesquisas, cenários, candidaturas e resultados em banco de dados;
 - acrescentar outros cenários de segundo turno e páginas individuais;
 - criar painel editorial para revisão e publicação;

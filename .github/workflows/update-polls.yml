@@ -1,0 +1,89 @@
+name: Atualizar pesquisas
+
+on:
+  schedule:
+    - cron: "17 10,19 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+
+concurrency:
+  group: update-polls
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Sincronizar catálogo do TSE
+        id: sync
+        run: >-
+          python scripts/sync_tse.py
+          --summary "$RUNNER_TEMP/pending-polls.md"
+          --github-output "$GITHUB_OUTPUT"
+
+      - name: Validar dados antes de publicar
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/validate_data.py
+          node --check app.js
+
+      - name: Registrar atualização na main
+        id: commit
+        shell: bash
+        run: |
+          if git diff --quiet -- data/tse-metadata.json data/tse-monitor.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git config user.name "pulso26-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tse-metadata.json data/tse-monitor.json
+          git commit -m "chore: atualiza registros do TSE"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Solicitar publicação no GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh api --method POST
+          -H "Accept: application/vnd.github+json"
+          -H "X-GitHub-Api-Version: 2026-03-10"
+          "repos/$GITHUB_REPOSITORY/pages/builds"
+
+      - name: Atualizar fila editorial
+        if: steps.sync.outputs.monitor_changed == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_TITLE: Novas pesquisas aguardando revisão
+          PENDING_COUNT: ${{ steps.sync.outputs.pending_count }}
+        run: |
+          issue_number=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ "$PENDING_COUNT" = "0" ]; then
+            if [ -n "$issue_number" ]; then
+              gh issue close "$issue_number" --comment "Todos os protocolos detectados já foram revisados."
+            fi
+          elif [ -n "$issue_number" ]; then
+            gh issue edit "$issue_number" --body-file "$RUNNER_TEMP/pending-polls.md"
+          else
+            gh issue create --title "$ISSUE_TITLE" --body-file "$RUNNER_TEMP/pending-polls.md"
+          fi
