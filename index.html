@@ -8,13 +8,14 @@
       content="Central independente e transparente de pesquisas eleitorais brasileiras de 2026."
     />
     <title>Pulso 26 — Pesquisas eleitorais</title>
+    <link rel="icon" href="data:," />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260816-2" />
+    <link rel="stylesheet" href="styles.css?v=20260816-3" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -50,7 +51,7 @@
           <div>
             <small id="status-label">VERIFICANDO PESQELE…</small>
             <strong id="status-date">Base TSE de 16/08/2026</strong>
-            <span id="status-total">16 pesquisas · carregando entrevistas</span>
+            <span id="status-total">33 pesquisas · carregando entrevistas</span>
           </div>
         </div>
       </section>
@@ -74,6 +75,8 @@
             <option value="14">Últimos 14 dias</option>
             <option value="21" selected>Últimos 21 dias</option>
             <option value="30">Últimos 30 dias</option>
+            <option value="60">Últimos 60 dias</option>
+            <option value="90">Últimos 90 dias</option>
           </select>
         </label>
       </section>
@@ -111,6 +114,7 @@
           </div>
           <p class="chart-reading" aria-label="Como ler o gráfico">
             <span><i class="line-sample" aria-hidden="true"></i>Média ponderada</span>
+            <span><i class="band-sample" aria-hidden="true"></i>Margem de erro média</span>
             <span><i class="point-sample" aria-hidden="true"></i>Pesquisa individual</span>
           </p>
           <div class="chart-wrap">
@@ -185,6 +189,6 @@
       <div id="dialog-content"></div>
     </dialog>
 
-    <script src="app.js?v=20260816-2"></script>
+    <script src="app.js?v=20260816-3"></script>
   </body>
 </html>

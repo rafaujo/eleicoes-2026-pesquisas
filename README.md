@@ -17,18 +17,18 @@ Depois acesse `http://localhost:4173`.
 ## O que já funciona
 
 - painel responsivo com média ponderada por recência e tamanho da amostra;
-- recorte móvel de 7, 14, 21 ou 30 dias, com janela padrão de 21 dias;
+- recorte móvel de 7, 14, 21, 30, 60 ou 90 dias, com janela padrão de 21 dias;
 - cenários de primeiro turno e de segundo turno entre Lula e Flávio Bolsonaro;
-- gráfico de evolução com pontos por pesquisa e linhas da média ponderada;
+- gráfico de evolução com pontos por pesquisa, linhas da média ponderada e faixas de incerteza;
 - filtros por período e busca por instituto/contratante;
 - tabela de resultados e ficha metodológica;
-- cruzamento de 16 levantamentos com protocolos e metadados oficiais do PesqEle/TSE;
+- cruzamento de 33 levantamentos com protocolos e metadados oficiais do PesqEle/TSE;
 - exportação dos dados filtrados em CSV;
 - navegação por teclado, foco visível e suporte a movimento reduzido.
 
 ## Estado dos dados
 
-Os 16 levantamentos catalogados possuem protocolo conferido no PesqEle. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
+Os 33 levantamentos catalogados possuem protocolo conferido no PesqEle. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
 
 Os percentuais de intenção de voto não fazem parte dos CSVs abertos do TSE. Eles são transcritos das publicações ou dos relatórios ligados individualmente em cada ficha e reconciliados com o registro oficial por protocolo, período de campo e amostra.
 
@@ -42,7 +42,7 @@ O sincronizador usa apenas a biblioteca padrão do Python:
 python scripts/sync_tse.py
 ```
 
-Ele consulta o catálogo CKAN do TSE, baixa os ZIPs nacionais de pesquisas e contratantes, valida se os 16 protocolos existem e recria `data/tse-metadata.json`.
+Ele consulta o catálogo CKAN do TSE, baixa os ZIPs nacionais de pesquisas e contratantes, valida se os 33 protocolos existem e recria `data/tse-metadata.json`.
 
 ## Média ponderada
 
@@ -55,6 +55,8 @@ peso = 0,5 ^ (idade_em_dias / 7) × limite(raiz(amostra / 2.000), 0,75, 1,50)
 Assim, o componente de recência cai pela metade a cada sete dias e a amostra produz um ajuste moderado. O modelo ainda não atribui notas editoriais aos institutos e não é uma previsão eleitoral.
 
 No gráfico, cada ponto representa o percentual publicado por uma pesquisa. A linha é recalculada em cada data usando somente os levantamentos já disponíveis naquele momento; seu ponto final coincide com a média exibida no card de resumo.
+
+A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens de erro declaradas pelas pesquisas disponíveis. Ela serve como referência visual da incerteza amostral típica do recorte: não é um intervalo de confiança estatístico da média e não incorpora erros não amostrais nem incerteza do modelo.
 
 ## Próximas etapas
 
