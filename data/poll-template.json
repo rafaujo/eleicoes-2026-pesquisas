@@ -11,15 +11,32 @@
   "method": "Método informado no registro",
   "resultSource": "https://example.com/resultado",
   "resultSourceLabel": "Veículo — resultado publicado",
-  "lula": 0,
-  "flavio": 0,
-  "caiado": 0,
-  "zema": 0,
-  "renan": 0,
-  "undecided": 0,
-  "runoff": {
-    "lula": 0,
-    "flavio": 0,
-    "undecided": 0
+  "scenarios": {
+    "first-main": {
+      "results": {
+        "lula": 0,
+        "flavio": 0,
+        "caiado": 0,
+        "zema": 0,
+        "renan": 0
+      },
+      "undecided": 0
+    },
+    "runoff-lula-flavio": {
+      "results": {
+        "lula": 0,
+        "flavio": 0
+      },
+      "undecided": 0
+    },
+    "runoff-lula-caiado": {
+      "results": {
+        "lula": 0,
+        "caiado": 0
+      },
+      "undecided": 0,
+      "resultSource": "https://example.com/resultado-segundo-turno",
+      "resultSourceLabel": "Veículo — cenários de segundo turno"
+    }
   }
 }

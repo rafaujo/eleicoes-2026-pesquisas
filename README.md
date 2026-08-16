@@ -18,7 +18,7 @@ Depois acesse `http://localhost:4173`.
 
 - painel responsivo com média ponderada por recência e tamanho da amostra;
 - recorte móvel de 7, 14, 21, 30, 60 ou 90 dias, com janela padrão de 21 dias;
-- cenários de primeiro turno e de segundo turno entre Lula e Flávio Bolsonaro;
+- seletor dinâmico de cenários, com primeiro turno e segundo turno entre Lula e Flávio Bolsonaro, Ronaldo Caiado ou Romeu Zema;
 - gráfico de evolução com pontos por pesquisa, linhas da média ponderada e faixas de incerteza;
 - filtros por período e busca por instituto/contratante;
 - tabela de resultados e ficha metodológica;
@@ -32,6 +32,8 @@ Os 33 levantamentos catalogados possuem protocolo conferido no PesqEle. O arquiv
 
 Os percentuais de intenção de voto não fazem parte dos CSVs abertos do TSE. Eles ficam em `data/polls.json`, transcritos das publicações ou dos relatórios ligados individualmente em cada ficha e reconciliados com o registro oficial por protocolo, período de campo e amostra.
 
+A base usa um cadastro único de candidatos e um catálogo de cenários. Cada pesquisa informa somente os cenários que realmente publicou. Assim, o site pode acrescentar novos confrontos sem alterar o código e sem preencher lacunas com estimativas. Oito levantamentos já possuem resultados verificados para Lula × Caiado e Lula × Zema; todos os 33 mantêm o confronto Lula × Flávio Bolsonaro.
+
 ## Cadastrar uma pesquisa
 
 Copie `data/poll-template.json` para um arquivo de trabalho, preencha os percentuais e a fonte e execute:
@@ -42,7 +44,7 @@ python scripts/sync_tse.py
 python scripts/validate_data.py
 ```
 
-O utilitário atribui o próximo ID, rejeita protocolos duplicados, valida os campos obrigatórios e mantém a base em ordem cronológica. Para corrigir uma pesquisa já cadastrada, use `--replace`; o ID original será preservado.
+O utilitário atribui o próximo ID, rejeita protocolos duplicados, valida candidatos e cenários contra o catálogo e mantém a base em ordem cronológica. Para corrigir uma pesquisa já cadastrada, use `--replace`; o ID original será preservado. Uma fonte específica pode ser informada dentro de um cenário quando ela for diferente da publicação principal da pesquisa.
 
 Fonte oficial de metadados: [Pesquisas Eleitorais 2026 — Dados Abertos do TSE](https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026).
 
@@ -98,8 +100,7 @@ A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens
 
 ## Próximas etapas
 
-- normalizar pesquisas, cenários, candidaturas e resultados em banco de dados;
-- acrescentar outros cenários de segundo turno e páginas individuais;
+- acrescentar novos cenários à medida que forem publicados e páginas individuais;
 - criar painel editorial para revisão e publicação;
 - adicionar eleições estaduais.
 

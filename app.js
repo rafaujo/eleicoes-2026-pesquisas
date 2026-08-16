@@ -1,23 +1,17 @@
-const candidates = [
-  { key: "lula", name: "Lula", color: "#c83f49" },
-  { key: "flavio", name: "Flávio Bolsonaro", color: "#356ea8" },
-  { key: "caiado", name: "Ronaldo Caiado", color: "#238b57" },
-  { key: "zema", name: "Romeu Zema", color: "#e07a35" },
-  { key: "renan", name: "Renan Santos", color: "#c79a18" },
-];
-
 const TSE_DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026";
 const PESQELE_URL = "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml";
 const HALF_LIFE_DAYS = 7;
 
 // Carregado de data/polls.json. Metadados oficiais são reconciliados com data/tse-metadata.json.
 let polls = [];
+let candidateRegistry = {};
+let scenarioCatalog = [];
 
 const number = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 2 });
 const oneDecimal = new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const integer = new Intl.NumberFormat("pt-BR");
 const currency = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
-const state = { period: "21", query: "", round: "first" };
+const state = { period: "21", query: "", round: 1, scenarioId: "first-main" };
 const brazilDateParts = Object.fromEntries(
   new Intl.DateTimeFormat("en", {
     timeZone: "America/Sao_Paulo",
@@ -66,9 +60,18 @@ function formatField(start, end) {
 }
 
 function officialRecord(poll) { return tseData?.records?.[poll.protocol] || null; }
-function activeCandidates() { return state.round === "second" ? candidates.slice(0, 2) : candidates; }
-function valueFor(poll, key) { return state.round === "second" ? poll.runoff?.[key] : poll[key]; }
-function neutralFor(poll) { return state.round === "second" ? poll.runoff?.undecided : poll.undecided; }
+function activeScenario() {
+  return scenarioCatalog.find((scenario) => scenario.id === state.scenarioId)
+    || scenarioCatalog.find((scenario) => scenario.round === state.round)
+    || null;
+}
+function scenarioFor(poll) { return poll.scenarios?.[state.scenarioId] || null; }
+function activeCandidates() {
+  return (activeScenario()?.candidates || []).map((key) => ({ key, ...candidateRegistry[key] }));
+}
+function valueFor(poll, key) { return scenarioFor(poll)?.results?.[key]; }
+function neutralFor(poll) { return scenarioFor(poll)?.undecided; }
+function resultSourceFor(poll) { return scenarioFor(poll)?.resultSource || poll.resultSource; }
 
 function sortCandidatesByValue(items, valueGetter) {
   return items
@@ -101,7 +104,7 @@ function visiblePolls() {
     const searchable = `${poll.pollster} ${poll.publication} ${poll.protocol}`.toLowerCase();
     return searchable.includes(state.query.toLowerCase())
       && pollAgeDays(poll) <= windowDays
-      && (state.round === "first" || Boolean(poll.runoff));
+      && Boolean(poll.scenarios?.[state.scenarioId]);
   });
 }
 
@@ -126,7 +129,8 @@ function rankedCandidates(items) {
 }
 
 function renderAverage(items) {
-  document.querySelector("#average-title").textContent = state.round === "second" ? "Lula × Flávio Bolsonaro" : "Retrato do momento";
+  const scenario = activeScenario();
+  document.querySelector("#average-title").textContent = scenario?.round === 2 ? scenario.label : "Retrato do momento";
   document.querySelector("#method-note").innerHTML = `Entram apenas pesquisas encerradas nos últimos <strong>${state.period} dias</strong>. O peso cai pela metade a cada <strong>${HALF_LIFE_DAYS} dias</strong> e recebe um ajuste moderado pela raiz da amostra, limitado entre 0,75 e 1,50. Não há nota editorial por instituto.`;
   if (!items.length) {
     averageList.innerHTML = '<p class="dialog-note">Nenhuma pesquisa encontrada.</p>';
@@ -146,30 +150,31 @@ function renderAverage(items) {
 
 function renderTable(items) {
   const visibleCandidates = activeCandidates();
-  table.classList.toggle("runoff-table", state.round === "second");
+  table.classList.toggle("runoff-table", activeScenario()?.round === 2);
   tableHead.innerHTML = `<tr>
     <th>Pesquisa / divulgação</th><th>Período de campo</th><th>Amostra</th><th>Margem</th><th>Peso</th>
-    ${visibleCandidates.map((candidate) => `<th>${({ flavio: "Flávio", caiado: "Caiado", zema: "Zema", renan: "Renan" })[candidate.key] || candidate.name}</th>`).join("")}
+    ${visibleCandidates.map((candidate) => `<th>${candidate.shortName}</th>`).join("")}
     <th>Dif.</th><th><span class="sr-only">Detalhes</span></th>
   </tr>`;
   const maxWeight = items.length ? Math.max(...items.map(pollWeight)) : 1;
   tableBody.innerHTML = items.map((poll) => {
-    const lula = valueFor(poll, "lula");
-    const flavio = valueFor(poll, "flavio");
-    const leaderKey = lula >= flavio ? "lula" : "flavio";
-    const diff = Math.abs(lula - flavio);
+    const ranking = sortCandidatesByValue(visibleCandidates, (candidate) => valueFor(poll, candidate.key));
+    const leader = ranking[0];
+    const runnerUp = ranking[1];
+    const diff = runnerUp ? valueFor(poll, leader.key) - valueFor(poll, runnerUp.key) : 0;
     const relativeWeight = pollWeight(poll) / maxWeight;
     return `<tr>
       <td><span class="pollster">${escapeHtml(poll.pollster)}</span><span class="sponsor">${escapeHtml(poll.publication)}</span><span class="verified-badge" title="Registro verificado no PesqEle/TSE">✓ ${poll.protocol}</span></td>
       <td>${poll.field}</td><td>${integer.format(poll.sample)}</td><td>± ${number.format(poll.margin)}</td>
       <td><span class="weight-pill" title="Peso relativo à pesquisa de maior peso no recorte">×${number.format(relativeWeight)}</span></td>
-      ${visibleCandidates.map((candidate) => `<td class="${leaderKey === candidate.key ? "leader" : ""}">${formatPct(valueFor(poll, candidate.key))}</td>`).join("")}
-      <td><span class="difference">${diff === 0 ? "Empate" : `${leaderKey === "lula" ? "L" : "F"} +${number.format(diff)}`}</span></td>
+      ${visibleCandidates.map((candidate) => `<td class="${leader.key === candidate.key ? "leader" : ""}">${formatPct(valueFor(poll, candidate.key))}</td>`).join("")}
+      <td><span class="difference">${diff === 0 ? "Empate" : `${leader.shortName} +${number.format(diff)}`}</span></td>
       <td><button class="row-button" type="button" data-poll-id="${poll.id}" aria-label="Ver detalhes de ${escapeHtml(poll.pollster)}">Ver →</button></td>
     </tr>`;
   }).join("");
   const verified = items.filter((poll) => officialRecord(poll)).length;
-  const discarded = polls.length - polls.filter((poll) => pollAgeDays(poll) <= Number(state.period)).length;
+  const scenarioPolls = polls.filter((poll) => Boolean(poll.scenarios?.[state.scenarioId]));
+  const discarded = scenarioPolls.filter((poll) => pollAgeDays(poll) > Number(state.period)).length;
   const verification = tseData ? `${verified}/${items.length} registros conferidos no TSE` : `${items.length} pesquisas com protocolo informado`;
   pollCount.textContent = `${items.length} ${items.length === 1 ? "pesquisa no recorte" : "pesquisas no recorte"} · ${discarded} fora da janela · ${verification}`;
 }
@@ -226,7 +231,7 @@ function weightedTrend(items, candidateKey) {
 function renderChart(items) {
   chart.replaceChildren();
   const title = svgElement("title", { id: "chart-title" });
-  title.textContent = state.round === "second" ? "Evolução da média ponderada no segundo turno" : "Evolução da média ponderada no primeiro turno";
+  title.textContent = `Evolução da média ponderada — ${activeScenario()?.label || "cenário"}`;
   const desc = svgElement("desc", { id: "chart-description" });
   desc.textContent = "As linhas mostram a média ponderada calculada com as pesquisas disponíveis em cada data. As faixas mostram a margem de erro média ponderada e os pontos, o resultado de cada pesquisa.";
   chart.append(title, desc);
@@ -235,9 +240,10 @@ function renderChart(items) {
   const pad = { left: 46, right: 22, top: 20, bottom: 42 };
   const width = 760 - pad.left - pad.right;
   const height = 360 - pad.top - pad.bottom;
-  const minY = state.round === "second" ? 30 : 0;
-  const maxY = state.round === "second" ? 55 : 50;
-  const yTicks = state.round === "second" ? [30, 35, 40, 45, 50, 55] : [0, 10, 20, 30, 40, 50];
+  const isRunoff = activeScenario()?.round === 2;
+  const minY = isRunoff ? 25 : 0;
+  const maxY = isRunoff ? 55 : 50;
+  const yTicks = isRunoff ? [25, 30, 35, 40, 45, 50, 55] : [0, 10, 20, 30, 40, 50];
   const yFor = (value) => pad.top + height - ((value - minY) / (maxY - minY)) * height;
   yTicks.forEach((tick) => {
     const y = yFor(tick);
@@ -318,11 +324,12 @@ function openPoll(id) {
   const contractors = official?.contractors?.length ? official.contractors.map((item) => escapeHtml(item.name)).join("<br>") : "Consulte o PesqEle";
   const company = official?.company || poll.pollster;
   const method = official?.methodology || poll.method;
+  const scenario = activeScenario();
   const results = sortCandidatesByValue(activeCandidates(), (candidate) => valueFor(poll, candidate.key))
     .map((candidate) => `<div><small>${candidate.name}</small><strong>${formatPct(valueFor(poll, candidate.key))}</strong></div>`).join("");
   dialogContent.innerHTML = `<p class="dialog-eyebrow">FICHA DA PESQUISA <span class="dialog-verified">✓ TSE verificado</span></p>
     <h2>${escapeHtml(poll.pollster)}</h2>
-    <p class="dialog-scenario">${state.round === "second" ? "2º turno · Lula × Flávio Bolsonaro" : "1º turno · cenário principal"}</p>
+    <p class="dialog-scenario">${scenario?.round || 1}º turno · ${escapeHtml(scenario?.label || "Cenário principal")}</p>
     <div class="dialog-results">${results}</div>
     <div class="detail-grid">
       <div><small>Registro PesqEle</small><strong>${poll.protocol}</strong></div>
@@ -336,7 +343,7 @@ function openPoll(id) {
       ${official ? `<div><small>Estatístico responsável</small><strong>${escapeHtml(official.statistician)}</strong></div><div><small>CONRE</small><strong>${escapeHtml(official.conre)}</strong></div><div><small>Custo registrado</small><strong>${currency.format(official.researchCost)}</strong></div><div><small>Registro efetuado</small><strong>${formatDate(official.registeredAt.slice(0, 10))}</strong></div>` : ""}
     </div>
     <details class="method-details"><summary>Metodologia registrada no TSE</summary><p>${escapeHtml(method)}</p></details>
-    <div class="source-links"><a href="${poll.resultSource}" target="_blank" rel="noreferrer">Fonte dos percentuais ↗</a><a href="${PESQELE_URL}" target="_blank" rel="noreferrer">Consultar no PesqEle ↗</a></div>
+    <div class="source-links"><a href="${resultSourceFor(poll)}" target="_blank" rel="noreferrer">Fonte dos percentuais ↗</a><a href="${PESQELE_URL}" target="_blank" rel="noreferrer">Consultar no PesqEle ↗</a></div>
     <p class="dialog-note"><strong>Como ler:</strong> o TSE fornece os metadados do registro, mas não os percentuais deste cenário no arquivo CSV. Os resultados são conferidos na publicação identificada e ligados ao registro por protocolo, datas e amostra.</p>`;
   dialog.showModal();
 }
@@ -344,15 +351,16 @@ function openPoll(id) {
 function downloadCsv() {
   const items = visiblePolls();
   const selectedCandidates = activeCandidates();
+  const scenario = activeScenario();
   const headers = ["turno", "cenario", "instituto", "divulgacao", "registro_tse", "inicio", "fim", "amostra", "margem", "confianca", "peso_modelo", ...selectedCandidates.map((candidate) => candidate.key), "brancos_nulos_indecisos", "fonte_resultado", "fonte_tse"];
-  const rows = items.map((poll) => [state.round === "second" ? 2 : 1, state.round === "second" ? "Lula x Flavio Bolsonaro" : "principal", poll.pollster, poll.publication, poll.protocol, poll.start, poll.end, poll.sample, poll.margin, poll.confidence, pollWeight(poll), ...selectedCandidates.map((candidate) => valueFor(poll, candidate.key)), neutralFor(poll), poll.resultSource, TSE_DATASET_URL]);
+  const rows = items.map((poll) => [scenario.round, scenario.label, poll.pollster, poll.publication, poll.protocol, poll.start, poll.end, poll.sample, poll.margin, poll.confidence, pollWeight(poll), ...selectedCandidates.map((candidate) => valueFor(poll, candidate.key)), neutralFor(poll), resultSourceFor(poll), TSE_DATASET_URL]);
   const csvEscape = (value) => `"${String(value).replaceAll('"', '""')}"`;
   const csv = [headers, ...rows].map((row) => row.map(csvEscape).join(",")).join("\n");
   const blob = new Blob([`\ufeff${csv}`], { type: "text/csv;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `pulso26-${state.round === "second" ? "segundo-turno" : "primeiro-turno"}.csv`;
+  link.download = `pulso26-${scenario.id}.csv`;
   link.click();
   URL.revokeObjectURL(url);
 }
@@ -369,9 +377,16 @@ function updateStatus() {
 
 function render() {
   const items = visiblePolls();
-  document.querySelector("#scenario-select").value = state.round === "second" ? "runoff" : "main";
-  document.querySelector("#polls-title").textContent = state.round === "second" ? "Pesquisas de segundo turno" : "Pesquisas de primeiro turno";
-  document.querySelector("#chart-heading").textContent = state.round === "second" ? "Média Lula × Flávio no tempo" : "Evolução da média ponderada";
+  const scenario = activeScenario();
+  const scenarioSelect = document.querySelector("#scenario-select");
+  scenarioSelect.innerHTML = scenarioCatalog
+    .filter((item) => item.round === state.round)
+    .map((item) => `<option value="${item.id}">${escapeHtml(item.label)}</option>`)
+    .join("");
+  scenarioSelect.value = state.scenarioId;
+  document.querySelectorAll("[data-round]").forEach((button) => button.classList.toggle("selected", Number(button.dataset.round) === state.round));
+  document.querySelector("#polls-title").textContent = `Pesquisas de ${state.round}º turno`;
+  document.querySelector("#chart-heading").textContent = scenario?.round === 2 ? `${scenario.label} no tempo` : "Evolução da média ponderada";
   renderAverage(items);
   renderTable(items);
   renderChart(items);
@@ -383,10 +398,13 @@ async function loadData() {
     const pollsResponse = await fetch("data/polls.json", { cache: "no-store" });
     if (!pollsResponse.ok) throw new Error(`data/polls.json: HTTP ${pollsResponse.status}`);
     const pollData = await pollsResponse.json();
-    if (pollData.schemaVersion !== 1 || !Array.isArray(pollData.polls)) {
+    if (pollData.schemaVersion !== 2 || !Array.isArray(pollData.polls)
+      || !pollData.candidates || !Array.isArray(pollData.scenarios)) {
       throw new Error("Formato desconhecido em data/polls.json");
     }
     polls = pollData.polls;
+    candidateRegistry = pollData.candidates;
+    scenarioCatalog = pollData.scenarios;
 
     try {
       const metadataResponse = await fetch("data/tse-metadata.json", { cache: "no-store" });
@@ -416,8 +434,8 @@ async function loadData() {
 
 document.querySelector("#period-select").addEventListener("change", (event) => { state.period = event.target.value; render(); });
 document.querySelector("#scenario-select").addEventListener("change", (event) => {
-  state.round = event.target.value === "runoff" ? "second" : "first";
-  document.querySelectorAll("[data-round]").forEach((button) => button.classList.toggle("selected", button.dataset.round === state.round));
+  state.scenarioId = event.target.value;
+  state.round = activeScenario()?.round || state.round;
   render();
 });
 document.querySelector("#poll-search").addEventListener("input", (event) => { state.query = event.target.value.trim(); render(); });
@@ -428,8 +446,8 @@ document.querySelector("#average-info").addEventListener("click", (event) => {
 });
 document.querySelectorAll("[data-round]").forEach((button) => {
   button.addEventListener("click", () => {
-    state.round = button.dataset.round;
-    document.querySelectorAll("[data-round]").forEach((item) => item.classList.toggle("selected", item === button));
+    state.round = Number(button.dataset.round);
+    state.scenarioId = scenarioCatalog.find((scenario) => scenario.round === state.round)?.id || state.scenarioId;
     render();
   });
 });
