@@ -108,13 +108,20 @@ select:focus-visible, button:focus-visible, input:focus-visible, a:focus-visible
 .chart-legend { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .8rem; }
 .legend-item { display: flex; align-items: center; gap: .35rem; color: var(--muted); font-size: .68rem; font-weight: 600; }
 .legend-item i { width: 14px; height: 3px; border-radius: 2px; background: var(--candidate-color); }
-.chart-wrap { width: 100%; margin-top: 1rem; overflow: hidden; }
+.chart-reading { display: flex; flex-wrap: wrap; gap: .9rem; margin: 1rem 0 0; color: var(--muted); font-size: .68rem; }
+.chart-reading span { display: inline-flex; align-items: center; gap: .38rem; }
+.line-sample { width: 18px; height: 3px; border-radius: 2px; background: var(--ink); }
+.point-sample { width: 7px; height: 7px; border-radius: 50%; background: var(--ink); opacity: .42; }
+.chart-wrap { width: 100%; margin-top: .35rem; overflow: hidden; }
 #trend-chart { display: block; width: 100%; height: auto; overflow: visible; }
 .grid-line { stroke: #e3e5df; stroke-width: 1; }
 .axis-label { fill: #858d8a; font: 12px "DM Sans", sans-serif; }
-.trend-line { fill: none; stroke: var(--candidate-color); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.trend-point { fill: var(--card); stroke: var(--candidate-color); stroke-width: 3; transition: r .2s; }
-.trend-point:hover { r: 7; }
+.poll-point { fill: var(--candidate-color); opacity: .38; transition: r .16s, opacity .16s; }
+.poll-point:hover, .poll-point:focus { r: 6; opacity: 1; }
+.poll-point:focus { stroke: var(--card); stroke-width: 2; }
+.average-trend-line { fill: none; stroke: var(--candidate-color); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+.average-endpoint { fill: var(--card); stroke: var(--candidate-color); stroke-width: 3; }
+.average-endpoint:focus { stroke-width: 5; }
 
 .polls-section { min-width: 0; max-width: 100%; margin-top: 1.25rem; padding: clamp(1.4rem, 2vw, 2.2rem); overflow: hidden; }
 .table-heading { align-items: end; margin-bottom: 1.5rem; }
