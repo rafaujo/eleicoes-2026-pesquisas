@@ -19,7 +19,7 @@ Depois acesse `http://localhost:4173`.
 - painel responsivo com média ponderada por recência e tamanho da amostra;
 - recorte móvel de 7, 14, 21 ou 30 dias, com janela padrão de 21 dias;
 - cenários de primeiro turno e de segundo turno entre Lula e Flávio Bolsonaro;
-- gráfico de evolução;
+- gráfico de evolução com pontos por pesquisa e linhas da média ponderada;
 - filtros por período e busca por instituto/contratante;
 - tabela de resultados e ficha metodológica;
 - cruzamento de 16 levantamentos com protocolos e metadados oficiais do PesqEle/TSE;
@@ -53,6 +53,8 @@ peso = 0,5 ^ (idade_em_dias / 7) × limite(raiz(amostra / 2.000), 0,75, 1,50)
 ```
 
 Assim, o componente de recência cai pela metade a cada sete dias e a amostra produz um ajuste moderado. O modelo ainda não atribui notas editoriais aos institutos e não é uma previsão eleitoral.
+
+No gráfico, cada ponto representa o percentual publicado por uma pesquisa. A linha é recalculada em cada data usando somente os levantamentos já disponíveis naquele momento; seu ponto final coincide com a média exibida no card de resumo.
 
 ## Próximas etapas
 

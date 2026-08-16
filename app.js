@@ -211,10 +211,16 @@ function pollAgeDays(poll) {
   return Math.max(0, (reference - end) / 86400000);
 }
 
-function pollWeight(poll) {
-  const recency = Math.pow(0.5, pollAgeDays(poll) / HALF_LIFE_DAYS);
+function pollWeightAt(poll, referenceTime) {
+  const endTime = Date.parse(`${poll.end}T12:00:00Z`);
+  const ageDays = Math.max(0, (referenceTime - endTime) / 86400000);
+  const recency = Math.pow(0.5, ageDays / HALF_LIFE_DAYS);
   const sample = Math.min(1.5, Math.max(0.75, Math.sqrt(poll.sample / 2000)));
   return recency * sample;
+}
+
+function pollWeight(poll) {
+  return pollWeightAt(poll, Date.parse(`${DATA_REFERENCE_DATE}T12:00:00Z`));
 }
 
 function visiblePolls() {
@@ -227,11 +233,17 @@ function visiblePolls() {
   });
 }
 
-function weightedMean(items, getter) {
+function weightedMeanAt(items, getter, referenceTime) {
   if (!items.length) return 0;
   const valid = items.filter((item) => Number.isFinite(getter(item)));
-  const denominator = valid.reduce((sum, item) => sum + pollWeight(item), 0);
-  return denominator ? valid.reduce((sum, item) => sum + getter(item) * pollWeight(item), 0) / denominator : 0;
+  const denominator = valid.reduce((sum, item) => sum + pollWeightAt(item, referenceTime), 0);
+  return denominator
+    ? valid.reduce((sum, item) => sum + getter(item) * pollWeightAt(item, referenceTime), 0) / denominator
+    : 0;
+}
+
+function weightedMean(items, getter) {
+  return weightedMeanAt(items, getter, Date.parse(`${DATA_REFERENCE_DATE}T12:00:00Z`));
 }
 
 function renderAverage(items) {
@@ -289,62 +301,109 @@ function svgElement(name, attrs = {}) {
   return element;
 }
 
+function smoothPath(points) {
+  if (!points.length) return "";
+  if (points.length === 1) return `M${points[0].x},${points[0].y}`;
+  if (points.length === 2) return `M${points[0].x},${points[0].y} L${points[1].x},${points[1].y}`;
+  let path = `M${points[0].x},${points[0].y}`;
+  for (let index = 0; index < points.length - 1; index += 1) {
+    const before = points[Math.max(0, index - 1)];
+    const current = points[index];
+    const next = points[index + 1];
+    const after = points[Math.min(points.length - 1, index + 2)];
+    const control1 = { x: current.x + (next.x - before.x) / 6, y: current.y + (next.y - before.y) / 6 };
+    const control2 = { x: next.x - (after.x - current.x) / 6, y: next.y - (after.y - current.y) / 6 };
+    path += ` C${control1.x},${control1.y} ${control2.x},${control2.y} ${next.x},${next.y}`;
+  }
+  return path;
+}
+
+function weightedTrend(items, candidateKey) {
+  const dates = [...new Set(items.map((poll) => poll.end))].sort();
+  return dates.map((date) => {
+    const referenceTime = Date.parse(`${date}T12:00:00Z`);
+    const available = items.filter((poll) => Date.parse(`${poll.end}T12:00:00Z`) <= referenceTime);
+    return {
+      date,
+      value: weightedMeanAt(available, (poll) => valueFor(poll, candidateKey), referenceTime),
+    };
+  });
+}
+
 function renderChart(items) {
   chart.replaceChildren();
   const title = svgElement("title", { id: "chart-title" });
-  title.textContent = state.round === "second" ? "Evolução do segundo turno Lula e Flávio Bolsonaro" : "Evolução das intenções de voto no primeiro turno";
+  title.textContent = state.round === "second" ? "Evolução da média ponderada no segundo turno" : "Evolução da média ponderada no primeiro turno";
   const desc = svgElement("desc", { id: "chart-description" });
-  desc.textContent = "Gráfico das pesquisas selecionadas ao longo do tempo.";
+  desc.textContent = "As linhas mostram a média ponderada calculada com as pesquisas disponíveis em cada data. Os pontos mostram o resultado de cada pesquisa.";
   chart.append(title, desc);
 
   const ordered = [...items].sort((a, b) => a.end.localeCompare(b.end));
   const pad = { left: 46, right: 22, top: 20, bottom: 42 };
   const width = 760 - pad.left - pad.right;
   const height = 360 - pad.top - pad.bottom;
-  const maxY = state.round === "second" ? 60 : 50;
-  for (let tick = 0; tick <= maxY; tick += 10) {
-    const y = pad.top + height - (tick / maxY) * height;
+  const minY = state.round === "second" ? 30 : 0;
+  const maxY = state.round === "second" ? 55 : 50;
+  const yTicks = state.round === "second" ? [30, 35, 40, 45, 50, 55] : [0, 10, 20, 30, 40, 50];
+  const yFor = (value) => pad.top + height - ((value - minY) / (maxY - minY)) * height;
+  yTicks.forEach((tick) => {
+    const y = yFor(tick);
     chart.appendChild(svgElement("line", { x1: pad.left, x2: 760 - pad.right, y1: y, y2: y, class: "grid-line" }));
     const label = svgElement("text", { x: 6, y: y + 4, class: "axis-label" });
     label.textContent = `${tick}%`;
     chart.appendChild(label);
-  }
+  });
   if (!ordered.length) return;
 
   const timestamps = ordered.map((poll) => Date.parse(`${poll.end}T12:00:00Z`));
   const minTime = Math.min(...timestamps);
   const maxTime = Math.max(...timestamps);
-  const xFor = (poll) => minTime === maxTime ? pad.left + width / 2 : pad.left + ((Date.parse(`${poll.end}T12:00:00Z`) - minTime) / (maxTime - minTime)) * width;
-  const tickIndexes = [...new Set([0, Math.floor((ordered.length - 1) / 3), Math.floor((ordered.length - 1) * 2 / 3), ordered.length - 1])];
-  tickIndexes.forEach((index) => {
-    const poll = ordered[index];
-    const label = svgElement("text", { x: xFor(poll), y: 344, "text-anchor": "middle", class: "axis-label" });
-    label.textContent = formatDate(poll.end).slice(0, 5);
+  const xForTime = (time) => minTime === maxTime ? pad.left + width / 2 : pad.left + ((time - minTime) / (maxTime - minTime)) * width;
+  const xForPoll = (poll) => xForTime(Date.parse(`${poll.end}T12:00:00Z`));
+  const xTickTimes = [...new Set([minTime, minTime + (maxTime - minTime) / 3, minTime + (maxTime - minTime) * 2 / 3, maxTime])];
+  xTickTimes.forEach((time) => {
+    const label = svgElement("text", { x: xForTime(time), y: 344, "text-anchor": "middle", class: "axis-label" });
+    label.textContent = formatDate(new Date(time).toISOString().slice(0, 10)).slice(0, 5);
     chart.appendChild(label);
   });
 
-  const chartCandidates = state.round === "second" ? activeCandidates() : candidates.slice(0, 3);
+  const chartCandidates = activeCandidates();
   chartCandidates.forEach((candidate) => {
-    const points = ordered.map((poll) => ({
-      x: xFor(poll), y: pad.top + height - (valueFor(poll, candidate.key) / maxY) * height,
-      value: valueFor(poll, candidate.key), poll,
-    }));
-    chart.appendChild(svgElement("path", {
-      d: points.map((point, index) => `${index ? "L" : "M"}${point.x},${point.y}`).join(" "),
-      class: "trend-line", style: `--candidate-color:${candidate.color}`,
-    }));
-    points.forEach((point) => {
-      const circle = svgElement("circle", { cx: point.x, cy: point.y, r: 4.5, class: "trend-point", style: `--candidate-color:${candidate.color}`, tabindex: "0" });
+    ordered.forEach((poll) => {
+      const value = valueFor(poll, candidate.key);
+      const circle = svgElement("circle", {
+        cx: xForPoll(poll), cy: yFor(value), r: 3.2, class: "poll-point",
+        style: `--candidate-color:${candidate.color}`, tabindex: "0",
+      });
       const tooltip = svgElement("title");
-      tooltip.textContent = `${candidate.name}: ${formatPct(point.value)} — ${point.poll.pollster}, ${point.poll.field}`;
+      tooltip.textContent = `${candidate.name}: ${formatPct(value)} — ${poll.pollster}, ${poll.field}`;
       circle.appendChild(tooltip);
       chart.appendChild(circle);
     });
   });
+
+  chartCandidates.forEach((candidate) => {
+    const points = weightedTrend(ordered, candidate.key).map((point) => ({
+      ...point,
+      x: xForTime(Date.parse(`${point.date}T12:00:00Z`)),
+      y: yFor(point.value),
+    }));
+    chart.appendChild(svgElement("path", {
+      d: smoothPath(points), class: "average-trend-line", style: `--candidate-color:${candidate.color}`,
+    }));
+    const endpoint = points.at(-1);
+    if (endpoint) {
+      const circle = svgElement("circle", { cx: endpoint.x, cy: endpoint.y, r: 4.2, class: "average-endpoint", style: `--candidate-color:${candidate.color}`, tabindex: "0" });
+      const tooltip = svgElement("title");
+      tooltip.textContent = `${candidate.name}: média ponderada de ${formatPct(endpoint.value)} em ${formatDate(endpoint.date)}`;
+      circle.appendChild(tooltip);
+      chart.appendChild(circle);
+    }
+  });
 }
 
 function renderLegend() {
-  const items = state.round === "second" ? activeCandidates() : candidates.slice(0, 3);
+  const items = activeCandidates();
   chartLegend.innerHTML = items.map((candidate) => `<span class="legend-item" style="--candidate-color:${candidate.color}"><i></i>${candidate.name}</span>`).join("");
 }
 
@@ -404,7 +463,7 @@ function render() {
   const items = visiblePolls();
   document.querySelector("#scenario-select").value = state.round === "second" ? "runoff" : "main";
   document.querySelector("#polls-title").textContent = state.round === "second" ? "Pesquisas de segundo turno" : "Pesquisas de primeiro turno";
-  document.querySelector("#chart-heading").textContent = state.round === "second" ? "Lula × Flávio ao longo do tempo" : "Intenção de voto";
+  document.querySelector("#chart-heading").textContent = state.round === "second" ? "Média Lula × Flávio no tempo" : "Evolução da média ponderada";
   renderAverage(items);
   renderTable(items);
   renderChart(items);
