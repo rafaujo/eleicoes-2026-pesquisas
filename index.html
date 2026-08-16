@@ -58,15 +58,12 @@
 
       <section class="control-bar" aria-label="Filtros da visualização">
         <div class="segmented" role="group" aria-label="Turno">
-          <button class="selected" data-round="first" type="button">1º turno</button>
-          <button data-round="second" type="button">2º turno</button>
+          <button class="selected" data-round="1" type="button">1º turno</button>
+          <button data-round="2" type="button">2º turno</button>
         </div>
         <label>
           <span>Cenário</span>
-          <select id="scenario-select">
-            <option value="main">Cenário principal</option>
-            <option value="runoff">Lula × Flávio Bolsonaro</option>
-          </select>
+          <select id="scenario-select" aria-label="Cenário eleitoral"></select>
         </label>
         <label>
           <span>Período</span>
@@ -189,6 +186,6 @@
       <div id="dialog-content"></div>
     </dialog>
 
-    <script src="app.js?v=20260816-4"></script>
+    <script src="app.js?v=20260816-5"></script>
   </body>
 </html>

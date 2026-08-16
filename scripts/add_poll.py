@@ -39,7 +39,8 @@ def upsert_poll(database: dict, poll: dict, replace: bool = False) -> dict:
         candidate["id"] = max((item["id"] for item in polls), default=0) + 1
 
     errors: list[str] = []
-    validate_poll(candidate, candidate["id"], errors)
+    scenario_catalog = {item["id"]: item for item in database.get("scenarios", [])}
+    validate_poll(candidate, candidate["id"], errors, scenario_catalog)
     if errors:
         raise ValueError("Ficha inválida:\n- " + "\n- ".join(errors))
 
