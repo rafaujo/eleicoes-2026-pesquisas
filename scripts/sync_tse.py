@@ -7,7 +7,6 @@ import argparse
 import csv
 import io
 import json
-import re
 import sys
 import urllib.request
 import zipfile
@@ -20,10 +19,9 @@ PACKAGE_API = "https://dadosabertos.tse.jus.br/api/3/action/package_show?id=pesq
 DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026"
 PESQELE_URL = "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml"
 ROOT = Path(__file__).resolve().parents[1]
-APP_FILE = ROOT / "app.js"
+POLLS_FILE = ROOT / "data" / "polls.json"
 METADATA_OUTPUT = ROOT / "data" / "tse-metadata.json"
 MONITOR_OUTPUT = ROOT / "data" / "tse-monitor.json"
-PROTOCOL_PATTERN = re.compile(r'protocol:\s*"([A-Z]{2}\d{9})"')
 
 
 def parse_args() -> argparse.Namespace:
@@ -84,9 +82,10 @@ def source_generated_at(rows: list[dict[str, str]]) -> str:
 
 
 def curated_protocols() -> set[str]:
-    protocols = set(PROTOCOL_PATTERN.findall(APP_FILE.read_text(encoding="utf-8")))
+    payload = json.loads(POLLS_FILE.read_text(encoding="utf-8"))
+    protocols = {poll["protocol"] for poll in payload.get("polls", [])}
     if not protocols:
-        raise RuntimeError("Nenhum protocolo curado foi encontrado em app.js")
+        raise RuntimeError("Nenhum protocolo curado foi encontrado em data/polls.json")
     return protocols
 
 
@@ -249,7 +248,7 @@ def write_summary(path: Path, monitor: dict) -> None:
     lines = [
         "## Pesquisas presidenciais aguardando revisão",
         "",
-        "O monitor encontrou registros nacionais novos no PesqEle/TSE. Antes de publicar percentuais, confira o cenário e vincule uma fonte de resultados verificável em `app.js`.",
+        "O monitor encontrou registros nacionais novos no PesqEle/TSE. Antes de publicar percentuais, confira o cenário e vincule uma fonte de resultados verificável em `data/polls.json`.",
         "",
     ]
     if not pending:

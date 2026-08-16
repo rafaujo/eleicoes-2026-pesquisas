@@ -30,7 +30,19 @@ Depois acesse `http://localhost:4173`.
 
 Os 33 levantamentos catalogados possuem protocolo conferido no PesqEle. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
 
-Os percentuais de intenção de voto não fazem parte dos CSVs abertos do TSE. Eles são transcritos das publicações ou dos relatórios ligados individualmente em cada ficha e reconciliados com o registro oficial por protocolo, período de campo e amostra.
+Os percentuais de intenção de voto não fazem parte dos CSVs abertos do TSE. Eles ficam em `data/polls.json`, transcritos das publicações ou dos relatórios ligados individualmente em cada ficha e reconciliados com o registro oficial por protocolo, período de campo e amostra.
+
+## Cadastrar uma pesquisa
+
+Copie `data/poll-template.json` para um arquivo de trabalho, preencha os percentuais e a fonte e execute:
+
+```powershell
+python scripts/add_poll.py work/nova-pesquisa.json
+python scripts/sync_tse.py
+python scripts/validate_data.py
+```
+
+O utilitário atribui o próximo ID, rejeita protocolos duplicados, valida os campos obrigatórios e mantém a base em ordem cronológica. Para corrigir uma pesquisa já cadastrada, use `--replace`; o ID original será preservado.
 
 Fonte oficial de metadados: [Pesquisas Eleitorais 2026 — Dados Abertos do TSE](https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026).
 
@@ -66,7 +78,7 @@ Em cada execução ele:
 5. abre ou atualiza uma issue com os protocolos que ainda precisam de fonte de resultados;
 6. solicita uma nova publicação do GitHub Pages após o commit.
 
-O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. Depois que os percentuais forem conferidos em uma publicação ou relatório e adicionados a `app.js`, a próxima sincronização incorpora os metadados oficiais, remove a pendência e republica o site.
+O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. Depois que os percentuais forem conferidos em uma publicação ou relatório e adicionados a `data/polls.json`, a próxima sincronização incorpora os metadados oficiais, remove a pendência e republica o site.
 
 O workflow `.github/workflows/validate.yml` também valida todo pull request e todo push feito manualmente na `main`.
 
