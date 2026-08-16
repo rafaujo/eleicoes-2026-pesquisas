@@ -1,9 +1,9 @@
 const candidates = [
-  { key: "lula", name: "Lula", color: "#0b6b52" },
-  { key: "flavio", name: "Flávio Bolsonaro", color: "#dc7046" },
-  { key: "caiado", name: "Ronaldo Caiado", color: "#477aaa" },
-  { key: "zema", name: "Romeu Zema", color: "#8c6bad" },
-  { key: "renan", name: "Renan Santos", color: "#b58a17" },
+  { key: "lula", name: "Lula", color: "#c83f49" },
+  { key: "flavio", name: "Flávio Bolsonaro", color: "#356ea8" },
+  { key: "caiado", name: "Ronaldo Caiado", color: "#238b57" },
+  { key: "zema", name: "Romeu Zema", color: "#e07a35" },
+  { key: "renan", name: "Renan Santos", color: "#c79a18" },
 ];
 
 const TSE_DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026";
@@ -158,9 +158,163 @@ const polls = [
     lula: 40, flavio: 32, caiado: 4, zema: 3, renan: 3, undecided: 11,
     runoff: { lula: 48, flavio: 43, undecided: 10 },
   },
+  {
+    id: 17, pollster: "PoderData", publication: "Parceria de divulgação: Aya", protocol: "BR000592026",
+    start: "2026-07-12", end: "2026-07-15", field: "12–15 jul", sample: 2400, margin: 2, confidence: 95,
+    method: "Telefônica automatizada",
+    resultSource: "https://jovempan.com.br/politica/poderdata-aya-lula-marca-40-e-flavio-34-no-1o-turno-2o-tem-empate-tecnico/",
+    resultSourceLabel: "Jovem Pan — resultado publicado",
+    lula: 40, flavio: 34, caiado: 4, zema: 4, renan: 6, undecided: 10,
+    runoff: { lula: 45, flavio: 43, undecided: 12 },
+  },
+  {
+    id: 18, pollster: "Quaest", publication: "Genial/Quaest", protocol: "BR071812026",
+    start: "2026-07-10", end: "2026-07-13", field: "10–13 jul", sample: 2004, margin: 2, confidence: 95,
+    method: "Presencial domiciliar",
+    resultSource: "https://www.poder360.com.br/poder-eleicoes/lula-tem-45-contra-37-de-flavio-no-2o-turno-diz-quaest/",
+    resultSourceLabel: "Poder360 — resultado publicado",
+    lula: 40, flavio: 28, caiado: 4, zema: 2, renan: 3, undecided: 19,
+    runoff: { lula: 45, flavio: 37, undecided: 18 },
+  },
+  {
+    id: 19, pollster: "Nexus", publication: "BTG Pactual", protocol: "BR079812026",
+    start: "2026-07-10", end: "2026-07-12", field: "10–12 jul", sample: 2000, margin: 2, confidence: 95,
+    method: "Telefônica com entrevistadores",
+    resultSource: "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/nexus-btg-pactual-presidente-julho-2026/",
+    resultSourceLabel: "Gazeta do Povo — resultado publicado",
+    lula: 40, flavio: 34, caiado: 5, zema: 4, renan: 4, undecided: 9,
+    runoff: { lula: 47, flavio: 44, undecided: 9 },
+  },
+  {
+    id: 20, pollster: "Futura/100 Cidades", publication: "Apex/Futura", protocol: "BR072942026",
+    start: "2026-07-07", end: "2026-07-11", field: "7–11 jul", sample: 2000, margin: 2.2, confidence: 95,
+    method: "Telefônica por cotas",
+    resultSource: "https://www.poder360.com.br/poder-eleicoes/lula-e-flavio-empatam-no-2o-turno-diz-futura-apex/",
+    resultSourceLabel: "Poder360 — resultado publicado",
+    lula: 40.1, flavio: 36.8, caiado: 5, zema: 3.7, renan: 2.6, undecided: 8.7,
+    runoff: { lula: 46.3, flavio: 46.1, undecided: 7.6 },
+  },
+  {
+    id: 21, pollster: "GERP", publication: "Divulgação própria", protocol: "BR030672026",
+    start: "2026-07-03", end: "2026-07-07", field: "3–7 jul", sample: 2000, margin: 2.2, confidence: 95,
+    method: "Quantitativa por cotas",
+    resultSource: "https://www.poder360.com.br/poder-eleicoes/flavio-tem-45-e-lula-42-em-eventual-2o-turno-diz-pesquisa/",
+    resultSourceLabel: "Poder360 — resultado publicado",
+    lula: 36, flavio: 36, caiado: 4, zema: 2, renan: 2, undecided: 17,
+    runoff: { lula: 42, flavio: 45, undecided: 13 },
+  },
+  {
+    id: 22, pollster: "AtlasIntel", publication: "Bloomberg", protocol: "BR045822026",
+    start: "2026-06-25", end: "2026-06-30", field: "25–30 jun", sample: 5000, margin: 1, confidence: 95,
+    method: "Recrutamento digital aleatório",
+    resultSource: "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/atlasintel-presidente-julho-2026/",
+    resultSourceLabel: "Gazeta do Povo — resultado publicado",
+    lula: 46.3, flavio: 36.6, caiado: 2.9, zema: 2, renan: 7.8, undecided: 1.2,
+    runoff: { lula: 48.8, flavio: 42.3, undecided: 8.9 },
+  },
+  {
+    id: 23, pollster: "Nexus", publication: "BTG Pactual", protocol: "BR085212026",
+    start: "2026-06-26", end: "2026-06-28", field: "26–28 jun", sample: 2000, margin: 2, confidence: 95,
+    method: "Telefônica com entrevistadores",
+    resultSource: "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
+    resultSourceLabel: "Wikipédia — catálogo e fontes da pesquisa",
+    lula: 42, flavio: 35, caiado: 5, zema: 3, renan: 4, undecided: 8,
+    runoff: { lula: 47, flavio: 44, undecided: 9 },
+  },
+  {
+    id: 24, pollster: "Vox Brasil", publication: "Poder360", protocol: "BR066302026",
+    start: "2026-06-23", end: "2026-06-25", field: "23–25 jun", sample: 2100, margin: 2.15, confidence: 95,
+    method: "Presencial domiciliar",
+    resultSource: "https://www.poder360.com.br/poder-pesquisas/flavio-e-lula-empatam-no-2o-turno-diz-pesquisa-2/",
+    resultSourceLabel: "Poder360 — resultado publicado",
+    lula: 38.3, flavio: 32.2, caiado: 5.1, zema: 3.8, renan: 2.5, undecided: 14.3,
+    runoff: { lula: 45.3, flavio: 42.8, undecided: 11.9 },
+  },
+  {
+    id: 25, pollster: "PoderData", publication: "Parceria de divulgação: Aya", protocol: "BR057222026",
+    start: "2026-06-21", end: "2026-06-24", field: "21–24 jun", sample: 2400, margin: 2, confidence: 95,
+    method: "Telefônica automatizada",
+    resultSource: "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
+    resultSourceLabel: "Wikipédia — catálogo e fontes da pesquisa",
+    lula: 40, flavio: 36, caiado: 4, zema: 3, renan: 4, undecided: 8,
+    runoff: { lula: 46, flavio: 43, undecided: 11 },
+  },
+  {
+    id: 26, pollster: "Indexa", publication: "Divulgação Congresso em Foco", protocol: "BR089442026",
+    start: "2026-06-18", end: "2026-06-20", field: "18–20 jun", sample: 2000, margin: 2.2, confidence: 95,
+    method: "Entrevistas telefônicas",
+    resultSource: "https://www.congressoemfoco.com.br/amp/noticia/119896/lula-vence-flavio-por-47-a-40-no-2-turno-aponta-pesquisa-indexa",
+    resultSourceLabel: "Congresso em Foco — resultado e metodologia",
+    lula: 42, flavio: 31, caiado: 5, zema: 3, renan: 3, undecided: 14,
+    runoff: { lula: 47, flavio: 40, undecided: 13 },
+  },
+  {
+    id: 27, pollster: "Datafolha", publication: "Folha de S.Paulo", protocol: "BR099562026",
+    start: "2026-06-17", end: "2026-06-19", field: "17–19 jun", sample: 2004, margin: 2, confidence: 95,
+    method: "Presencial em pontos de fluxo",
+    resultSource: "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/06/20/datafolha-lula-tem-41percent-e-flavio-bolsonaro-31percent-das-intencoes-de-voto-no-1o-turno.ghtml",
+    resultSourceLabel: "G1 — resultado publicado",
+    lula: 41, flavio: 31, caiado: 3, zema: 2, renan: 3, undecided: 11,
+    runoff: { lula: 47, flavio: 43, undecided: 9 },
+  },
+  {
+    id: 28, pollster: "CNT/MDA", publication: "Confederação Nacional do Transporte", protocol: "BR042562026",
+    start: "2026-06-10", end: "2026-06-14", field: "10–14 jun", sample: 2002, margin: 2.2, confidence: 95,
+    method: "Presencial, domicílios e fluxo",
+    resultSource: "https://www.poder360.com.br/poder-pesquisas/cnt-42-dizem-votar-em-lula-mas-so-21-se-veem-como-de-esquerda/",
+    resultSourceLabel: "Poder360 — resultado publicado",
+    lula: 41.8, flavio: 28.2, caiado: 4, zema: 2.8, renan: 2, undecided: 14.9,
+    runoff: { lula: 49.3, flavio: 36.8, undecided: 13.9 },
+  },
+  {
+    id: 29, pollster: "Nexus", publication: "BTG Pactual", protocol: "BR066452026",
+    start: "2026-06-12", end: "2026-06-14", field: "12–14 jun", sample: 2000, margin: 2, confidence: 95,
+    method: "Telefônica com entrevistadores",
+    resultSource: "https://www.poder360.com.br/poder-eleicoes/lula-tem-49-contra-43-de-flavio-no-2o-turno-diz-nexus/",
+    resultSourceLabel: "Poder360 — resultado publicado",
+    lula: 42, flavio: 33, caiado: 4, zema: 2, renan: 4, undecided: 8,
+    runoff: { lula: 49, flavio: 43, undecided: 9 },
+  },
+  {
+    id: 30, pollster: "Futura/100 Cidades", publication: "Apex/Futura", protocol: "BR014612026",
+    start: "2026-06-08", end: "2026-06-12", field: "8–12 jun", sample: 2000, margin: 2.2, confidence: 95,
+    method: "Telefônica por cotas",
+    resultSource: "https://www.poder360.com.br/poder-pesquisas/lula-tem-481-e-flavio-429-em-eventual-2o-turno-diz-pesquisa/",
+    resultSourceLabel: "Poder360 — resultado publicado",
+    lula: 41.6, flavio: 34.1, caiado: 4.5, zema: 3.5, renan: 2.3, undecided: 10,
+    runoff: { lula: 48.1, flavio: 42.9, undecided: 10 },
+  },
+  {
+    id: 31, pollster: "Alfa Inteligência", publication: "Divulgação CNN Brasil", protocol: "BR034962026",
+    start: "2026-06-05", end: "2026-06-10", field: "5–10 jun", sample: 1400, margin: 2.6, confidence: 95,
+    method: "Entrevistas presenciais",
+    resultSource: "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
+    resultSourceLabel: "Wikipédia — catálogo e fontes da pesquisa",
+    lula: 40, flavio: 31, caiado: 7, zema: 7, renan: 2, undecided: 8,
+    runoff: { lula: 44, flavio: 41, undecided: 15 },
+  },
+  {
+    id: 32, pollster: "Quaest", publication: "Genial/Quaest", protocol: "BR076612026",
+    start: "2026-06-05", end: "2026-06-08", field: "5–8 jun", sample: 2004, margin: 2, confidence: 95,
+    method: "Presencial domiciliar",
+    resultSource: "https://www.poder360.com.br/poder-eleicoes/lula-tem-44-contra-38-de-flavio-diz-quaest/",
+    resultSourceLabel: "Poder360 — resultado publicado",
+    lula: 39, flavio: 29, caiado: 3, zema: 2, renan: 3, undecided: 19,
+    runoff: { lula: 44, flavio: 38, undecided: 18 },
+  },
+  {
+    id: 33, pollster: "GERP", publication: "Divulgação própria", protocol: "BR017922026",
+    start: "2026-06-01", end: "2026-06-05", field: "1–5 jun", sample: 2000, margin: 2.24, confidence: 95.55,
+    method: "Quantitativa por cotas",
+    resultSource: "https://www.poder360.com.br/poder-eleicoes/flavio-bolsonaro-vence-lula-no-2o-turno-diz-pesquisa-gerp/",
+    resultSourceLabel: "Poder360 — resultado publicado",
+    lula: 34, flavio: 35, caiado: 2, zema: 2, renan: 4, undecided: 19,
+    runoff: { lula: 39.1, flavio: 44.7, undecided: 16.2 },
+  },
 ];
 
 const number = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 2 });
+const oneDecimal = new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const integer = new Intl.NumberFormat("pt-BR");
 const currency = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
 const state = { period: "21", query: "", round: "first" };
@@ -183,6 +337,7 @@ function escapeHtml(value) {
 }
 
 function formatPct(value) { return `${number.format(value)}%`; }
+function formatAveragePct(value) { return `${oneDecimal.format(value)}%`; }
 
 function formatDate(value) {
   if (!value) return "—";
@@ -259,10 +414,10 @@ function renderAverage(items) {
     return `<div class="average-row" style="--candidate-color:${candidate.color}">
       <div class="candidate"><i class="candidate-dot"></i><span>${candidate.name}</span></div>
       <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100, value * 2.05)}%"></div></div>
-      <strong>${formatPct(value)}</strong>
+      <strong>${formatAveragePct(value)}</strong>
     </div>`;
   }).join("");
-  undecidedAverage.textContent = formatPct(weightedMean(items, neutralFor));
+  undecidedAverage.textContent = formatAveragePct(weightedMean(items, neutralFor));
 }
 
 function renderTable(items) {
@@ -318,6 +473,19 @@ function smoothPath(points) {
   return path;
 }
 
+function uncertaintyAreaPath(points, yFor, minY, maxY) {
+  if (!points.length) return "";
+  const upper = points.map((point) => ({
+    x: point.x,
+    y: yFor(Math.min(maxY, point.value + point.uncertainty)),
+  }));
+  const lower = [...points].reverse().map((point) => ({
+    x: point.x,
+    y: yFor(Math.max(minY, point.value - point.uncertainty)),
+  }));
+  return `${smoothPath(upper)} ${smoothPath(lower).replace(/^M/, "L")} Z`;
+}
+
 function weightedTrend(items, candidateKey) {
   const dates = [...new Set(items.map((poll) => poll.end))].sort();
   return dates.map((date) => {
@@ -326,6 +494,7 @@ function weightedTrend(items, candidateKey) {
     return {
       date,
       value: weightedMeanAt(available, (poll) => valueFor(poll, candidateKey), referenceTime),
+      uncertainty: weightedMeanAt(available, (poll) => poll.margin, referenceTime),
     };
   });
 }
@@ -335,7 +504,7 @@ function renderChart(items) {
   const title = svgElement("title", { id: "chart-title" });
   title.textContent = state.round === "second" ? "Evolução da média ponderada no segundo turno" : "Evolução da média ponderada no primeiro turno";
   const desc = svgElement("desc", { id: "chart-description" });
-  desc.textContent = "As linhas mostram a média ponderada calculada com as pesquisas disponíveis em cada data. Os pontos mostram o resultado de cada pesquisa.";
+  desc.textContent = "As linhas mostram a média ponderada calculada com as pesquisas disponíveis em cada data. As faixas mostram a margem de erro média ponderada e os pontos, o resultado de cada pesquisa.";
   chart.append(title, desc);
 
   const ordered = [...items].sort((a, b) => a.end.localeCompare(b.end));
@@ -368,6 +537,23 @@ function renderChart(items) {
   });
 
   const chartCandidates = activeCandidates();
+  const trendSeries = chartCandidates.map((candidate) => ({
+    candidate,
+    points: weightedTrend(ordered, candidate.key).map((point) => ({
+      ...point,
+      x: xForTime(Date.parse(`${point.date}T12:00:00Z`)),
+      y: yFor(point.value),
+    })),
+  }));
+
+  trendSeries.forEach(({ candidate, points }) => {
+    chart.appendChild(svgElement("path", {
+      d: uncertaintyAreaPath(points, yFor, minY, maxY),
+      class: "uncertainty-band",
+      style: `--candidate-color:${candidate.color}`,
+    }));
+  });
+
   chartCandidates.forEach((candidate) => {
     ordered.forEach((poll) => {
       const value = valueFor(poll, candidate.key);
@@ -382,12 +568,7 @@ function renderChart(items) {
     });
   });
 
-  chartCandidates.forEach((candidate) => {
-    const points = weightedTrend(ordered, candidate.key).map((point) => ({
-      ...point,
-      x: xForTime(Date.parse(`${point.date}T12:00:00Z`)),
-      y: yFor(point.value),
-    }));
+  trendSeries.forEach(({ candidate, points }) => {
     chart.appendChild(svgElement("path", {
       d: smoothPath(points), class: "average-trend-line", style: `--candidate-color:${candidate.color}`,
     }));
@@ -395,7 +576,7 @@ function renderChart(items) {
     if (endpoint) {
       const circle = svgElement("circle", { cx: endpoint.x, cy: endpoint.y, r: 4.2, class: "average-endpoint", style: `--candidate-color:${candidate.color}`, tabindex: "0" });
       const tooltip = svgElement("title");
-      tooltip.textContent = `${candidate.name}: média ponderada de ${formatPct(endpoint.value)} em ${formatDate(endpoint.date)}`;
+      tooltip.textContent = `${candidate.name}: média ponderada de ${formatPct(endpoint.value)} ± ${formatPct(endpoint.uncertainty)} em ${formatDate(endpoint.date)}`;
       circle.appendChild(tooltip);
       chart.appendChild(circle);
     }

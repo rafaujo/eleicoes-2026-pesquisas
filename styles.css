@@ -111,11 +111,13 @@ select:focus-visible, button:focus-visible, input:focus-visible, a:focus-visible
 .chart-reading { display: flex; flex-wrap: wrap; gap: .9rem; margin: 1rem 0 0; color: var(--muted); font-size: .68rem; }
 .chart-reading span { display: inline-flex; align-items: center; gap: .38rem; }
 .line-sample { width: 18px; height: 3px; border-radius: 2px; background: var(--ink); }
+.band-sample { width: 18px; height: 9px; border-radius: 2px; background: rgba(22, 40, 36, .13); }
 .point-sample { width: 7px; height: 7px; border-radius: 50%; background: var(--ink); opacity: .42; }
 .chart-wrap { width: 100%; margin-top: .35rem; overflow: hidden; }
 #trend-chart { display: block; width: 100%; height: auto; overflow: visible; }
 .grid-line { stroke: #e3e5df; stroke-width: 1; }
 .axis-label { fill: #858d8a; font: 12px "DM Sans", sans-serif; }
+.uncertainty-band { fill: var(--candidate-color); opacity: .085; stroke: none; pointer-events: none; }
 .poll-point { fill: var(--candidate-color); opacity: .38; transition: r .16s, opacity .16s; }
 .poll-point:hover, .poll-point:focus { r: 6; opacity: 1; }
 .poll-point:focus { stroke: var(--card); stroke-width: 2; }
