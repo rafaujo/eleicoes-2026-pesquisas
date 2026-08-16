@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from scripts.sync_tse import build_monitor
+from scripts.sync_tse import build_monitor, office_rows
 
 
 def poll(protocol: str) -> dict[str, str]:
@@ -19,6 +19,15 @@ def poll(protocol: str) -> dict[str, str]:
 
 
 class BuildMonitorTests(unittest.TestCase):
+    def test_office_rows_filters_jurisdiction_and_office(self) -> None:
+        sp_governor = poll("SP000012026") | {"SG_UE": "SP", "DS_CARGO": "Governador"}
+        sp_senator = poll("SP000022026") | {"SG_UE": "SP", "DS_CARGO": "Senador"}
+        mg_governor = poll("MG000012026") | {"SG_UE": "MG", "DS_CARGO": "Governador"}
+
+        filtered = office_rows([sp_governor, sp_senator, mg_governor], "SP", "Governador")
+
+        self.assertEqual(filtered, {"SP000012026": sp_governor})
+
     def test_bootstrap_marks_everything_seen_without_pending_items(self) -> None:
         rows = {"BR000012026": poll("BR000012026"), "BR000022026": poll("BR000022026")}
         monitor, new_protocols, changed = build_monitor(

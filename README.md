@@ -55,10 +55,12 @@ Fonte oficial de metadados: [Pesquisas Eleitorais 2026 — Dados Abertos do TSE]
 
 ## Atualizar o recorte do TSE
 
-O sincronizador usa apenas a biblioteca padrão do Python. Ele consulta o catálogo CKAN do TSE, baixa os ZIPs nacionais de pesquisas e contratantes e executa duas tarefas:
+O sincronizador usa apenas a biblioteca padrão do Python. Ele consulta o catálogo CKAN do TSE, baixa os ZIPs nacionais de pesquisas e contratantes e executa estas tarefas:
 
-- atualiza `data/tse-metadata.json` para os protocolos que já possuem resultados curados no site;
-- compara todos os registros presidenciais nacionais com `data/tse-monitor.json` e coloca protocolos novos em uma fila de revisão.
+- atualiza `data/tse-metadata.json` e `data/tse-metadata-sp.json` para os protocolos que já possuem resultados curados no site;
+- compara os registros presidenciais com `data/tse-monitor.json`;
+- compara os registros para governador de São Paulo com `data/tse-monitor-sp.json`;
+- coloca protocolos novos em filas editoriais separadas por eleição.
 
 ```powershell
 python scripts/sync_tse.py
@@ -74,7 +76,7 @@ node --check app.js
 
 ## Atualização e publicação automáticas
 
-O workflow `.github/workflows/update-polls.yml` roda todos os dias às 07h17 e 16h17 no horário de Brasília e também pode ser iniciado manualmente na aba **Actions** do GitHub. Nesta etapa, o monitor automático cobre a disputa presidencial; as pesquisas estaduais passam pela mesma validação, mas ainda entram por curadoria manual.
+O workflow `.github/workflows/update-polls.yml` roda todos os dias às 07h17 e 16h17 no horário de Brasília e também pode ser iniciado manualmente na aba **Actions** do GitHub. O monitor automático cobre a disputa presidencial e o governo de São Paulo.
 
 Em cada execução ele:
 
@@ -82,10 +84,10 @@ Em cada execução ele:
 2. atualiza metadados alterados e detecta protocolos presidenciais novos;
 3. executa os testes e as validações de consistência;
 4. cria um commit na `main` somente quando os arquivos realmente mudaram;
-5. abre ou atualiza uma issue com os protocolos que ainda precisam de fonte de resultados;
+5. abre ou atualiza issues separadas para a presidencial e São Paulo com os protocolos que ainda precisam de fonte de resultados;
 6. solicita uma nova publicação do GitHub Pages após o commit.
 
-O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. Depois que os percentuais forem conferidos em uma publicação ou relatório e adicionados a `data/polls.json`, a próxima sincronização incorpora os metadados oficiais, remove a pendência e republica o site.
+O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. Depois que os percentuais forem conferidos em uma publicação ou relatório e adicionados a `data/polls.json` ou `data/polls-sp-governor.json`, a próxima sincronização incorpora os metadados oficiais, remove a pendência e republica o site.
 
 O workflow `.github/workflows/validate.yml` também valida todo pull request e todo push feito manualmente na `main`.
 
@@ -105,7 +107,7 @@ A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens
 
 ## Próximas etapas
 
-- ampliar a cobertura estadual para outras UFs e automatizar o monitoramento por estado;
+- ampliar a cobertura estadual e o monitoramento para outras UFs;
 - acrescentar novos cenários à medida que forem publicados e páginas individuais;
 - criar painel editorial para revisão e publicação;
 
