@@ -48,9 +48,9 @@
         <div class="update-card" aria-label="Status da atualização">
           <span class="live-dot" aria-hidden="true"></span>
           <div>
-            <small>BASE DE DEMONSTRAÇÃO</small>
-            <strong>Atualizada em 16 ago 2026</strong>
-            <span>6 pesquisas · 12.807 entrevistas</span>
+            <small id="status-label">VERIFICANDO PESQELE…</small>
+            <strong id="status-date">Base TSE de 16/08/2026</strong>
+            <span id="status-total">6 pesquisas · 12.806 entrevistas</span>
           </div>
         </div>
       </section>
@@ -88,8 +88,8 @@
             </button>
           </div>
           <p class="method-note" id="method-note" hidden>
-            Média simples das pesquisas visíveis no período selecionado. Nesta demonstração, não
-            há ponderação por recência, tamanho da amostra ou histórico do instituto.
+            Média simples das pesquisas visíveis no período selecionado. Não há ponderação por
+            recência, tamanho da amostra ou histórico do instituto.
           </p>
           <div id="average-list" class="average-list"></div>
           <div class="undecided">
@@ -141,7 +141,7 @@
           <table>
             <thead>
               <tr>
-                <th>Instituto / contratante</th>
+                <th>Pesquisa / divulgação</th>
                 <th>Período de campo</th>
                 <th>Amostra</th>
                 <th>Margem</th>
@@ -158,6 +158,11 @@
           </table>
         </div>
         <p id="poll-count" class="table-count"></p>
+        <aside class="source-disclosure" aria-label="Origem dos dados">
+          <strong>Duas camadas de fonte.</strong>
+          <span>Cadastro, campo, amostra e metodologia vêm do PesqEle/TSE. Os percentuais vêm do relatório ou da publicação ligada em cada ficha.</span>
+          <a href="https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026" target="_blank" rel="noreferrer">Abrir base oficial ↗</a>
+        </aside>
       </section>
 
       <section class="principles" id="metodologia" aria-labelledby="method-title">
@@ -165,12 +170,12 @@
           <p class="kicker">NOSSO COMPROMISSO</p>
           <h2 id="method-title">Clareza antes da manchete.</h2>
           <p>
-            Cada número precisa ser rastreável até sua origem. A versão de produção combinará os
-            metadados oficiais do PesqEle com os relatórios publicados pelos institutos.
+            Cada número precisa ser rastreável até sua origem. Esta versão combina os metadados
+            oficiais do PesqEle com os relatórios e publicações dos resultados.
           </p>
         </div>
         <ul>
-          <li><span>01</span><div><strong>Fonte visível</strong><p>Registro, questionário e relatório a um clique.</p></div></li>
+          <li><span>01</span><div><strong>Fonte visível</strong><p>Protocolo oficial e publicação dos resultados a um clique.</p></div></li>
           <li><span>02</span><div><strong>Cenários separados</strong><p>Sem comparar listas diferentes como se fossem iguais.</p></div></li>
           <li><span>03</span><div><strong>Método aberto</strong><p>Cálculos documentados, reproduzíveis e revisáveis.</p></div></li>
         </ul>

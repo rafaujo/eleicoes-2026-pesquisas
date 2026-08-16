@@ -20,22 +20,31 @@ Depois acesse `http://localhost:4173`.
 - gráfico de evolução;
 - filtros por período e busca por instituto/contratante;
 - tabela de resultados e ficha metodológica;
+- cruzamento dos seis levantamentos com protocolos e metadados oficiais do PesqEle/TSE;
 - exportação dos dados filtrados em CSV;
 - navegação por teclado, foco visível e suporte a movimento reduzido.
 
 ## Estado dos dados
 
-Os números presentes no protótipo formam uma **base de demonstração**, transcrita da página de referência indicada no início do projeto. Antes da publicação editorial, cada levantamento deve ser validado contra:
+Os seis levantamentos exibidos possuem protocolo conferido no PesqEle. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
 
-1. o registro no PesqEle/TSE;
-2. o questionário registrado;
-3. o relatório ou release original do instituto.
+Os percentuais de intenção de voto não fazem parte dos CSVs abertos do TSE. Eles são transcritos das publicações ou dos relatórios ligados individualmente em cada ficha e reconciliados com o registro oficial por protocolo, período de campo e amostra.
 
 Fonte oficial de metadados: [Pesquisas Eleitorais 2026 — Dados Abertos do TSE](https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026).
 
+## Atualizar o recorte do TSE
+
+O sincronizador usa apenas a biblioteca padrão do Python:
+
+```powershell
+python scripts/sync_tse.py
+```
+
+Ele consulta o catálogo CKAN do TSE, baixa os ZIPs nacionais de pesquisas e contratantes, valida se os seis protocolos existem e recria `data/tse-metadata.json`.
+
 ## Próximas etapas
 
-- importar diariamente os metadados do TSE;
+- automatizar a execução diária do sincronizador;
 - normalizar pesquisas, cenários, candidaturas e resultados em banco de dados;
 - acrescentar segundo turno e páginas individuais;
 - documentar e implementar a média ponderada;
