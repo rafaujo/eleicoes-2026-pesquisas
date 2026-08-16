@@ -1,0 +1,25 @@
+{
+  "pollster": "Instituto",
+  "publication": "Contratante ou veículo",
+  "protocol": "BR000000000",
+  "start": "2026-08-01",
+  "end": "2026-08-03",
+  "field": "1–3 ago",
+  "sample": 2000,
+  "margin": 2.2,
+  "confidence": 95,
+  "method": "Método informado no registro",
+  "resultSource": "https://example.com/resultado",
+  "resultSourceLabel": "Veículo — resultado publicado",
+  "lula": 0,
+  "flavio": 0,
+  "caiado": 0,
+  "zema": 0,
+  "renan": 0,
+  "undecided": 0,
+  "runoff": {
+    "lula": 0,
+    "flavio": 0,
+    "undecided": 0
+  }
+}
