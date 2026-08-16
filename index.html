@@ -50,7 +50,7 @@
           <div>
             <small id="status-label">VERIFICANDO PESQELE…</small>
             <strong id="status-date">Base TSE de 16/08/2026</strong>
-            <span id="status-total">6 pesquisas · 12.806 entrevistas</span>
+            <span id="status-total">16 pesquisas · carregando entrevistas</span>
           </div>
         </div>
       </section>
@@ -64,14 +64,16 @@
           <span>Cenário</span>
           <select id="scenario-select">
             <option value="main">Cenário principal</option>
+            <option value="runoff">Lula × Flávio Bolsonaro</option>
           </select>
         </label>
         <label>
           <span>Período</span>
           <select id="period-select">
-            <option value="all">Todo o período</option>
+            <option value="7">Últimos 7 dias</option>
+            <option value="14">Últimos 14 dias</option>
+            <option value="21" selected>Últimos 21 dias</option>
             <option value="30">Últimos 30 dias</option>
-            <option value="15">Últimos 15 dias</option>
           </select>
         </label>
       </section>
@@ -80,16 +82,16 @@
         <article class="average-card">
           <div class="section-heading">
             <div>
-              <p class="kicker">MÉDIA DAS PESQUISAS</p>
-              <h2>Retrato do momento</h2>
+              <p class="kicker">MÉDIA PONDERADA</p>
+              <h2 id="average-title">Retrato do momento</h2>
             </div>
             <button class="info-button" id="average-info" type="button" aria-expanded="false">
               Como calculamos <span aria-hidden="true">ⓘ</span>
             </button>
           </div>
           <p class="method-note" id="method-note" hidden>
-            Média simples das pesquisas visíveis no período selecionado. Não há ponderação por
-            recência, tamanho da amostra ou histórico do instituto.
+            Entram apenas pesquisas dentro da janela selecionada. O peso combina recência e
+            tamanho da amostra; a fórmula completa é atualizada aqui conforme o recorte.
           </p>
           <div id="average-list" class="average-list"></div>
           <div class="undecided">
@@ -103,7 +105,7 @@
           <div class="section-heading">
             <div>
               <p class="kicker">EVOLUÇÃO</p>
-              <h2>Intenção de voto</h2>
+              <h2 id="chart-heading">Intenção de voto</h2>
             </div>
             <div class="chart-legend" id="chart-legend" aria-label="Legenda do gráfico"></div>
           </div>
@@ -139,21 +141,7 @@
 
         <div class="table-wrap">
           <table>
-            <thead>
-              <tr>
-                <th>Pesquisa / divulgação</th>
-                <th>Período de campo</th>
-                <th>Amostra</th>
-                <th>Margem</th>
-                <th>Lula</th>
-                <th>Flávio</th>
-                <th>Caiado</th>
-                <th>Zema</th>
-                <th>Renan</th>
-                <th>Dif.</th>
-                <th><span class="sr-only">Detalhes</span></th>
-              </tr>
-            </thead>
+            <thead id="poll-table-head"></thead>
             <tbody id="poll-table-body"></tbody>
           </table>
         </div>
