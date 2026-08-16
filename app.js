@@ -369,6 +369,13 @@ function activeCandidates() { return state.round === "second" ? candidates.slice
 function valueFor(poll, key) { return state.round === "second" ? poll.runoff?.[key] : poll[key]; }
 function neutralFor(poll) { return state.round === "second" ? poll.runoff?.undecided : poll.undecided; }
 
+function sortCandidatesByValue(items, valueGetter) {
+  return items
+    .map((candidate, index) => ({ candidate, index, value: valueGetter(candidate) }))
+    .sort((a, b) => (b.value - a.value) || (a.index - b.index))
+    .map(({ candidate }) => candidate);
+}
+
 function pollAgeDays(poll) {
   const reference = new Date(`${DATA_REFERENCE_DATE}T12:00:00Z`);
   const end = new Date(`${poll.end}T12:00:00Z`);
@@ -410,6 +417,13 @@ function weightedMean(items, getter) {
   return weightedMeanAt(items, getter, Date.parse(`${DATA_REFERENCE_DATE}T12:00:00Z`));
 }
 
+function rankedCandidates(items) {
+  return sortCandidatesByValue(
+    activeCandidates(),
+    (candidate) => weightedMean(items, (poll) => valueFor(poll, candidate.key)),
+  );
+}
+
 function renderAverage(items) {
   document.querySelector("#average-title").textContent = state.round === "second" ? "Lula × Flávio Bolsonaro" : "Retrato do momento";
   document.querySelector("#method-note").innerHTML = `Entram apenas pesquisas encerradas nos últimos <strong>${state.period} dias</strong>. O peso cai pela metade a cada <strong>${HALF_LIFE_DAYS} dias</strong> e recebe um ajuste moderado pela raiz da amostra, limitado entre 0,75 e 1,50. Não há nota editorial por instituto.`;
@@ -418,7 +432,7 @@ function renderAverage(items) {
     undecidedAverage.textContent = "—";
     return;
   }
-  averageList.innerHTML = activeCandidates().map((candidate) => {
+  averageList.innerHTML = rankedCandidates(items).map((candidate) => {
     const value = weightedMean(items, (poll) => valueFor(poll, candidate.key));
     return `<div class="average-row" style="--candidate-color:${candidate.color}">
       <div class="candidate"><i class="candidate-dot"></i><span>${candidate.name}</span></div>
@@ -545,7 +559,7 @@ function renderChart(items) {
     chart.appendChild(label);
   });
 
-  const chartCandidates = activeCandidates();
+  const chartCandidates = rankedCandidates(items);
   const trendSeries = chartCandidates.map((candidate) => ({
     candidate,
     points: weightedTrend(ordered, candidate.key).map((point) => ({
@@ -592,9 +606,8 @@ function renderChart(items) {
   });
 }
 
-function renderLegend() {
-  const items = activeCandidates();
-  chartLegend.innerHTML = items.map((candidate) => `<span class="legend-item" style="--candidate-color:${candidate.color}"><i></i>${candidate.name}</span>`).join("");
+function renderLegend(items) {
+  chartLegend.innerHTML = rankedCandidates(items).map((candidate) => `<span class="legend-item" style="--candidate-color:${candidate.color}"><i></i>${candidate.name}</span>`).join("");
 }
 
 function openPoll(id) {
@@ -604,7 +617,8 @@ function openPoll(id) {
   const contractors = official?.contractors?.length ? official.contractors.map((item) => escapeHtml(item.name)).join("<br>") : "Consulte o PesqEle";
   const company = official?.company || poll.pollster;
   const method = official?.methodology || poll.method;
-  const results = activeCandidates().map((candidate) => `<div><small>${candidate.name}</small><strong>${formatPct(valueFor(poll, candidate.key))}</strong></div>`).join("");
+  const results = sortCandidatesByValue(activeCandidates(), (candidate) => valueFor(poll, candidate.key))
+    .map((candidate) => `<div><small>${candidate.name}</small><strong>${formatPct(valueFor(poll, candidate.key))}</strong></div>`).join("");
   dialogContent.innerHTML = `<p class="dialog-eyebrow">FICHA DA PESQUISA <span class="dialog-verified">✓ TSE verificado</span></p>
     <h2>${escapeHtml(poll.pollster)}</h2>
     <p class="dialog-scenario">${state.round === "second" ? "2º turno · Lula × Flávio Bolsonaro" : "1º turno · cenário principal"}</p>
@@ -657,7 +671,7 @@ function render() {
   renderAverage(items);
   renderTable(items);
   renderChart(items);
-  renderLegend();
+  renderLegend(items);
 }
 
 async function loadTseData() {
