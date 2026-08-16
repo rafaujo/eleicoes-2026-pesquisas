@@ -18,12 +18,22 @@ PACKAGE_API = "https://dadosabertos.tse.jus.br/api/3/action/package_show?id=pesq
 DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026"
 PESQELE_URL = "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml"
 PROTOCOLS = {
+    "BR010842026",
+    "BR011662026",
+    "BR014892026",
+    "BR028742026",
+    "BR044882026",
+    "BR045792026",
+    "BR065912026",
+    "BR065962026",
     "BR067732026",
     "BR068682026",
     "BR069352026",
+    "BR078452026",
     "BR080452026",
     "BR081092026",
     "BR084282026",
+    "BR086022026",
 }
 OUTPUT = Path(__file__).resolve().parents[1] / "data" / "tse-metadata.json"
 
