@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Central independente e transparente de pesquisas eleitorais brasileiras de 2026."
+    />
+    <title>Pulso 26 — Pesquisas eleitorais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Pulso 26 — início">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Pulso <b>26</b></span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a class="active" href="#pesquisas">Pesquisas</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+      <button class="state-button" type="button" disabled>
+        <span>Presidencial</span>
+        <small>Estaduais em breve</small>
+      </button>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" aria-labelledby="titulo-principal">
+        <div>
+          <p class="eyebrow"><span></span> ELEIÇÕES 2026 · BRASIL</p>
+          <h1 id="titulo-principal">A corrida presidencial,<br />pesquisa por pesquisa.</h1>
+          <p class="hero-copy">
+            Resultados organizados, fontes abertas e contexto para acompanhar a opinião pública
+            sem transformar pesquisa em previsão.
+          </p>
+        </div>
+        <div class="update-card" aria-label="Status da atualização">
+          <span class="live-dot" aria-hidden="true"></span>
+          <div>
+            <small>BASE DE DEMONSTRAÇÃO</small>
+            <strong>Atualizada em 16 ago 2026</strong>
+            <span>6 pesquisas · 12.807 entrevistas</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="control-bar" aria-label="Filtros da visualização">
+        <div class="segmented" role="group" aria-label="Turno">
+          <button class="selected" data-round="first" type="button">1º turno</button>
+          <button data-round="second" type="button">2º turno</button>
+        </div>
+        <label>
+          <span>Cenário</span>
+          <select id="scenario-select">
+            <option value="main">Cenário principal</option>
+          </select>
+        </label>
+        <label>
+          <span>Período</span>
+          <select id="period-select">
+            <option value="all">Todo o período</option>
+            <option value="30">Últimos 30 dias</option>
+            <option value="15">Últimos 15 dias</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="dashboard" aria-label="Resumo das pesquisas">
+        <article class="average-card">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">MÉDIA DAS PESQUISAS</p>
+              <h2>Retrato do momento</h2>
+            </div>
+            <button class="info-button" id="average-info" type="button" aria-expanded="false">
+              Como calculamos <span aria-hidden="true">ⓘ</span>
+            </button>
+          </div>
+          <p class="method-note" id="method-note" hidden>
+            Média simples das pesquisas visíveis no período selecionado. Nesta demonstração, não
+            há ponderação por recência, tamanho da amostra ou histórico do instituto.
+          </p>
+          <div id="average-list" class="average-list"></div>
+          <div class="undecided">
+            <span>Brancos, nulos e indecisos</span>
+            <strong id="undecided-average">—</strong>
+          </div>
+          <p class="disclaimer">Média própria · não representa projeção do resultado eleitoral.</p>
+        </article>
+
+        <article class="chart-card">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">EVOLUÇÃO</p>
+              <h2>Intenção de voto</h2>
+            </div>
+            <div class="chart-legend" id="chart-legend" aria-label="Legenda do gráfico"></div>
+          </div>
+          <div class="chart-wrap">
+            <svg
+              id="trend-chart"
+              viewBox="0 0 760 360"
+              role="img"
+              aria-labelledby="chart-title chart-description"
+            >
+              <title id="chart-title">Evolução das intenções de voto</title>
+              <desc id="chart-description">Gráfico das pesquisas selecionadas ao longo do tempo.</desc>
+            </svg>
+          </div>
+        </article>
+      </section>
+
+      <section class="polls-section" id="pesquisas" aria-labelledby="polls-title">
+        <div class="section-heading table-heading">
+          <div>
+            <p class="kicker">DADOS ABERTOS</p>
+            <h2 id="polls-title">Pesquisas publicadas</h2>
+          </div>
+          <div class="table-actions">
+            <label class="search-field">
+              <span class="sr-only">Buscar instituto</span>
+              <span aria-hidden="true">⌕</span>
+              <input id="poll-search" type="search" placeholder="Buscar instituto" />
+            </label>
+            <button id="download-csv" class="outline-button" type="button">Baixar CSV ↓</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Instituto / contratante</th>
+                <th>Período de campo</th>
+                <th>Amostra</th>
+                <th>Margem</th>
+                <th>Lula</th>
+                <th>Flávio</th>
+                <th>Caiado</th>
+                <th>Zema</th>
+                <th>Renan</th>
+                <th>Dif.</th>
+                <th><span class="sr-only">Detalhes</span></th>
+              </tr>
+            </thead>
+            <tbody id="poll-table-body"></tbody>
+          </table>
+        </div>
+        <p id="poll-count" class="table-count"></p>
+      </section>
+
+      <section class="principles" id="metodologia" aria-labelledby="method-title">
+        <div>
+          <p class="kicker">NOSSO COMPROMISSO</p>
+          <h2 id="method-title">Clareza antes da manchete.</h2>
+          <p>
+            Cada número precisa ser rastreável até sua origem. A versão de produção combinará os
+            metadados oficiais do PesqEle com os relatórios publicados pelos institutos.
+          </p>
+        </div>
+        <ul>
+          <li><span>01</span><div><strong>Fonte visível</strong><p>Registro, questionário e relatório a um clique.</p></div></li>
+          <li><span>02</span><div><strong>Cenários separados</strong><p>Sem comparar listas diferentes como se fossem iguais.</p></div></li>
+          <li><span>03</span><div><strong>Método aberto</strong><p>Cálculos documentados, reproduzíveis e revisáveis.</p></div></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer id="sobre">
+      <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Pulso <b>26</b></span></a>
+      <p>Projeto independente em desenvolvimento. Pesquisas medem um momento; não preveem votos.</p>
+      <a href="https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026" target="_blank" rel="noreferrer">Dados oficiais do TSE ↗</a>
+    </footer>
+
+    <dialog id="poll-dialog">
+      <button class="dialog-close" type="button" aria-label="Fechar">×</button>
+      <div id="dialog-content"></div>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
