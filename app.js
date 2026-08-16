@@ -2,16 +2,18 @@ const TSE_DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleit
 const PESQELE_URL = "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml";
 const HALF_LIFE_DAYS = 7;
 
-// Carregado de data/polls.json. Metadados oficiais são reconciliados com data/tse-metadata.json.
+// Cada eleição aponta para sua própria base no catálogo data/elections.json.
 let polls = [];
 let candidateRegistry = {};
 let scenarioCatalog = [];
+let electionCatalog = [];
+let currentElection = null;
 
 const number = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 2 });
 const oneDecimal = new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const integer = new Intl.NumberFormat("pt-BR");
 const currency = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
-const state = { period: "21", query: "", round: 1, scenarioId: "first-main" };
+const state = { electionId: "president-br", period: "21", query: "", round: 1, scenarioId: "first-main" };
 const brazilDateParts = Object.fromEntries(
   new Intl.DateTimeFormat("en", {
     timeZone: "America/Sao_Paulo",
@@ -72,6 +74,7 @@ function activeCandidates() {
 function valueFor(poll, key) { return scenarioFor(poll)?.results?.[key]; }
 function neutralFor(poll) { return scenarioFor(poll)?.undecided; }
 function resultSourceFor(poll) { return scenarioFor(poll)?.resultSource || poll.resultSource; }
+function resultSourceLabelFor(poll) { return scenarioFor(poll)?.resultSourceLabel || poll.resultSourceLabel; }
 
 function sortCandidatesByValue(items, valueGetter) {
   return items
@@ -163,10 +166,15 @@ function renderTable(items) {
     const runnerUp = ranking[1];
     const diff = runnerUp ? valueFor(poll, leader.key) - valueFor(poll, runnerUp.key) : 0;
     const relativeWeight = pollWeight(poll) / maxWeight;
+    const relativeWeightLabel = relativeWeight < 0.01 ? "<0,01" : number.format(relativeWeight);
+    const isVerified = Boolean(officialRecord(poll));
+    const protocolBadge = isVerified
+      ? `<span class="verified-badge" title="Registro conferido no recorte local do PesqEle/TSE">✓ ${poll.protocol}</span>`
+      : `<span class="verified-badge protocol-badge" title="Protocolo informado na fonte da pesquisa">REG ${poll.protocol}</span>`;
     return `<tr>
-      <td><span class="pollster">${escapeHtml(poll.pollster)}</span><span class="sponsor">${escapeHtml(poll.publication)}</span><span class="verified-badge" title="Registro verificado no PesqEle/TSE">✓ ${poll.protocol}</span></td>
+      <td><span class="pollster">${escapeHtml(poll.pollster)}</span><span class="sponsor">${escapeHtml(poll.publication)}</span>${protocolBadge}</td>
       <td>${poll.field}</td><td>${integer.format(poll.sample)}</td><td>± ${number.format(poll.margin)}</td>
-      <td><span class="weight-pill" title="Peso relativo à pesquisa de maior peso no recorte">×${number.format(relativeWeight)}</span></td>
+      <td><span class="weight-pill" title="Peso relativo à pesquisa de maior peso no recorte">×${relativeWeightLabel}</span></td>
       ${visibleCandidates.map((candidate) => `<td class="${leader.key === candidate.key ? "leader" : ""}">${formatPct(valueFor(poll, candidate.key))}</td>`).join("")}
       <td><span class="difference">${diff === 0 ? "Empate" : `${leader.shortName} +${number.format(diff)}`}</span></td>
       <td><button class="row-button" type="button" data-poll-id="${poll.id}" aria-label="Ver detalhes de ${escapeHtml(poll.pollster)}">Ver →</button></td>
@@ -187,19 +195,7 @@ function svgElement(name, attrs = {}) {
 
 function smoothPath(points) {
   if (!points.length) return "";
-  if (points.length === 1) return `M${points[0].x},${points[0].y}`;
-  if (points.length === 2) return `M${points[0].x},${points[0].y} L${points[1].x},${points[1].y}`;
-  let path = `M${points[0].x},${points[0].y}`;
-  for (let index = 0; index < points.length - 1; index += 1) {
-    const before = points[Math.max(0, index - 1)];
-    const current = points[index];
-    const next = points[index + 1];
-    const after = points[Math.min(points.length - 1, index + 2)];
-    const control1 = { x: current.x + (next.x - before.x) / 6, y: current.y + (next.y - before.y) / 6 };
-    const control2 = { x: next.x - (after.x - current.x) / 6, y: next.y - (after.y - current.y) / 6 };
-    path += ` C${control1.x},${control1.y} ${control2.x},${control2.y} ${next.x},${next.y}`;
-  }
-  return path;
+  return points.map((point, index) => `${index ? "L" : "M"}${point.x},${point.y}`).join(" ");
 }
 
 function uncertaintyAreaPath(points, yFor, minY, maxY) {
@@ -241,9 +237,15 @@ function renderChart(items) {
   const width = 760 - pad.left - pad.right;
   const height = 360 - pad.top - pad.bottom;
   const isRunoff = activeScenario()?.round === 2;
-  const minY = isRunoff ? 25 : 0;
-  const maxY = isRunoff ? 55 : 50;
-  const yTicks = isRunoff ? [25, 30, 35, 40, 45, 50, 55] : [0, 10, 20, 30, 40, 50];
+  const plottedValues = ordered.flatMap((poll) => activeCandidates()
+    .map((candidate) => valueFor(poll, candidate.key))
+    .filter(Number.isFinite));
+  const observedMin = plottedValues.length ? Math.min(...plottedValues) : 0;
+  const observedMax = plottedValues.length ? Math.max(...plottedValues) : 50;
+  const tickStep = isRunoff ? 5 : 10;
+  const minY = isRunoff ? Math.max(0, Math.floor((observedMin - 5) / tickStep) * tickStep) : 0;
+  const maxY = Math.max(tickStep, Math.ceil((observedMax + 5) / tickStep) * tickStep);
+  const yTicks = Array.from({ length: Math.round((maxY - minY) / tickStep) + 1 }, (_, index) => minY + index * tickStep);
   const yFor = (value) => pad.top + height - ((value - minY) / (maxY - minY)) * height;
   yTicks.forEach((tick) => {
     const y = yFor(tick);
@@ -325,26 +327,35 @@ function openPoll(id) {
   const company = official?.company || poll.pollster;
   const method = official?.methodology || poll.method;
   const scenario = activeScenario();
+  const registrationBadge = official ? "✓ TSE conferido" : `REG ${poll.protocol}`;
+  const disclosureLabel = official ? "Divulgação prevista" : "Publicação";
+  const disclosureDate = official?.disclosureDate || poll.published;
+  const companyLabel = official ? "Empresa realizadora no TSE" : "Instituto";
+  const contractorsLabel = official ? "Contratante(s) no TSE" : "Contratante / divulgação";
+  const methodologyLabel = official ? "Metodologia registrada no TSE" : "Metodologia informada";
+  const metadataNote = official
+    ? "O recorte local do PesqEle fornece os metadados do registro, mas não os percentuais deste cenário. Os resultados são conferidos na publicação identificada e ligados ao registro por protocolo, datas e amostra."
+    : "O protocolo, as datas, a amostra e os resultados desta ficha foram conferidos na publicação ou no relatório identificado. Use o link do PesqEle para consultar o cadastro oficial.";
   const results = sortCandidatesByValue(activeCandidates(), (candidate) => valueFor(poll, candidate.key))
     .map((candidate) => `<div><small>${candidate.name}</small><strong>${formatPct(valueFor(poll, candidate.key))}</strong></div>`).join("");
-  dialogContent.innerHTML = `<p class="dialog-eyebrow">FICHA DA PESQUISA <span class="dialog-verified">✓ TSE verificado</span></p>
+  dialogContent.innerHTML = `<p class="dialog-eyebrow">FICHA DA PESQUISA <span class="dialog-verified">${registrationBadge}</span></p>
     <h2>${escapeHtml(poll.pollster)}</h2>
     <p class="dialog-scenario">${scenario?.round || 1}º turno · ${escapeHtml(scenario?.label || "Cenário principal")}</p>
     <div class="dialog-results">${results}</div>
     <div class="detail-grid">
       <div><small>Registro PesqEle</small><strong>${poll.protocol}</strong></div>
-      <div><small>Divulgação prevista</small><strong>${formatDate(official?.disclosureDate)}</strong></div>
+      <div><small>${disclosureLabel}</small><strong>${formatDate(disclosureDate)}</strong></div>
       <div><small>Campo</small><strong>${poll.field} de 2026</strong></div>
       <div><small>Amostra</small><strong>${integer.format(poll.sample)} entrevistas</strong></div>
       <div><small>Margem / confiança</small><strong>± ${number.format(poll.margin)} p.p. · ${number.format(poll.confidence)}%</strong></div>
       <div><small>Peso no modelo</small><strong>${number.format(pollWeight(poll))}</strong></div>
-      <div class="detail-wide"><small>Empresa realizadora no TSE</small><strong>${escapeHtml(company)}</strong></div>
-      <div class="detail-wide"><small>Contratante(s) no TSE</small><strong>${contractors}</strong></div>
+      <div class="detail-wide"><small>${companyLabel}</small><strong>${escapeHtml(company)}</strong></div>
+      <div class="detail-wide"><small>${contractorsLabel}</small><strong>${official ? contractors : escapeHtml(poll.publication)}</strong></div>
       ${official ? `<div><small>Estatístico responsável</small><strong>${escapeHtml(official.statistician)}</strong></div><div><small>CONRE</small><strong>${escapeHtml(official.conre)}</strong></div><div><small>Custo registrado</small><strong>${currency.format(official.researchCost)}</strong></div><div><small>Registro efetuado</small><strong>${formatDate(official.registeredAt.slice(0, 10))}</strong></div>` : ""}
     </div>
-    <details class="method-details"><summary>Metodologia registrada no TSE</summary><p>${escapeHtml(method)}</p></details>
-    <div class="source-links"><a href="${resultSourceFor(poll)}" target="_blank" rel="noreferrer">Fonte dos percentuais ↗</a><a href="${PESQELE_URL}" target="_blank" rel="noreferrer">Consultar no PesqEle ↗</a></div>
-    <p class="dialog-note"><strong>Como ler:</strong> o TSE fornece os metadados do registro, mas não os percentuais deste cenário no arquivo CSV. Os resultados são conferidos na publicação identificada e ligados ao registro por protocolo, datas e amostra.</p>`;
+    <details class="method-details"><summary>${methodologyLabel}</summary><p>${escapeHtml(method)}</p></details>
+    <div class="source-links"><a href="${resultSourceFor(poll)}" target="_blank" rel="noreferrer">${escapeHtml(resultSourceLabelFor(poll) || "Fonte dos percentuais")} ↗</a><a href="${PESQELE_URL}" target="_blank" rel="noreferrer">Consultar no PesqEle ↗</a></div>
+    <p class="dialog-note"><strong>Como ler:</strong> ${metadataNote}</p>`;
   dialog.showModal();
 }
 
@@ -360,7 +371,7 @@ function downloadCsv() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `pulso26-${scenario.id}.csv`;
+  link.download = `pulso26-${state.electionId}-${scenario.id}.csv`;
   link.click();
   URL.revokeObjectURL(url);
 }
@@ -370,9 +381,28 @@ function updateStatus() {
   const verified = polls.filter((poll) => officialRecord(poll)).length;
   document.querySelector("#status-label").textContent = tseData
     ? `${verified}/${polls.length} REGISTROS NO PESQELE`
-    : `${polls.length} PESQUISAS CARREGADAS`;
+    : `${polls.length} PROTOCOLOS INFORMADOS`;
   document.querySelector("#status-total").textContent = `${polls.length} pesquisas · ${integer.format(interviews)} entrevistas`;
-  if (tseData?.generatedAt) document.querySelector("#status-date").textContent = `Base TSE gerada em ${tseData.generatedAt.split(" ")[0]}`;
+  if (tseData?.generatedAt) {
+    document.querySelector("#status-date").textContent = `Base TSE gerada em ${tseData.generatedAt.split(" ")[0]}`;
+  } else {
+    const latestPublication = polls.map((poll) => poll.published || poll.end).sort().at(-1);
+    document.querySelector("#status-date").textContent = `Atualizado até ${formatDate(latestPublication)}`;
+  }
+}
+
+function renderElectionChrome() {
+  if (!currentElection) return;
+  document.querySelector("#hero-eyebrow").innerHTML = `<span></span> ${escapeHtml(currentElection.eyebrow)}`;
+  document.querySelector("#titulo-principal").textContent = currentElection.title;
+  document.title = `${currentElection.label} · Pulso 26`;
+  document.querySelector("#source-heading").textContent = tseData ? "Duas camadas de fonte." : "Fontes rastreáveis.";
+  document.querySelector("#source-copy").textContent = tseData
+    ? "Cadastro, campo, amostra e metodologia vêm do PesqEle/TSE. Os percentuais vêm do relatório ou da publicação ligada em cada ficha."
+    : "Protocolo, campo, amostra, metodologia e percentuais vêm do relatório ou da publicação ligada em cada ficha; a consulta oficial continua disponível no PesqEle.";
+  document.querySelector("#principles-copy").textContent = tseData
+    ? "Cada número precisa ser rastreável até sua origem. Esta versão combina os metadados oficiais do PesqEle com os relatórios e publicações dos resultados."
+    : "Cada número precisa ser rastreável até sua origem. A base paulista liga cada resultado ao protocolo e à publicação ou relatório; o cruzamento automático completo com o PesqEle é o próximo passo.";
 }
 
 function render() {
@@ -384,7 +414,11 @@ function render() {
     .map((item) => `<option value="${item.id}">${escapeHtml(item.label)}</option>`)
     .join("");
   scenarioSelect.value = state.scenarioId;
-  document.querySelectorAll("[data-round]").forEach((button) => button.classList.toggle("selected", Number(button.dataset.round) === state.round));
+  document.querySelectorAll("[data-round]").forEach((button) => {
+    const round = Number(button.dataset.round);
+    button.classList.toggle("selected", round === state.round);
+    button.disabled = !scenarioCatalog.some((item) => item.round === round);
+  });
   document.querySelector("#polls-title").textContent = `Pesquisas de ${state.round}º turno`;
   document.querySelector("#chart-heading").textContent = scenario?.round === 2 ? `${scenario.label} no tempo` : "Evolução da média ponderada";
   renderAverage(items);
@@ -393,37 +427,74 @@ function render() {
   renderLegend(items);
 }
 
-async function loadData() {
-  try {
-    const pollsResponse = await fetch("data/polls.json", { cache: "no-store" });
-    if (!pollsResponse.ok) throw new Error(`data/polls.json: HTTP ${pollsResponse.status}`);
-    const pollData = await pollsResponse.json();
-    if (pollData.schemaVersion !== 2 || !Array.isArray(pollData.polls)
-      || !pollData.candidates || !Array.isArray(pollData.scenarios)) {
-      throw new Error("Formato desconhecido em data/polls.json");
-    }
-    polls = pollData.polls;
-    candidateRegistry = pollData.candidates;
-    scenarioCatalog = pollData.scenarios;
+async function loadElection(electionId) {
+  const selected = electionCatalog.find((election) => election.id === electionId) || electionCatalog[0];
+  if (!selected) throw new Error("Catálogo sem eleições");
+  currentElection = selected;
+  state.electionId = selected.id;
+  state.period = selected.defaultPeriod || "21";
+  state.scenarioId = selected.defaultScenario || "first-main";
+  state.round = 1;
+  state.query = "";
+  document.querySelector("#period-select").value = state.period;
+  document.querySelector("#poll-search").value = "";
+  tseData = null;
 
+  const pollsResponse = await fetch(selected.dataFile, { cache: "no-store" });
+  if (!pollsResponse.ok) throw new Error(`${selected.dataFile}: HTTP ${pollsResponse.status}`);
+  const pollData = await pollsResponse.json();
+  if (pollData.schemaVersion !== 2 || !Array.isArray(pollData.polls)
+    || !pollData.candidates || !Array.isArray(pollData.scenarios)) {
+    throw new Error(`Formato desconhecido em ${selected.dataFile}`);
+  }
+  polls = pollData.polls;
+  candidateRegistry = pollData.candidates;
+  scenarioCatalog = pollData.scenarios;
+
+  if (selected.metadataFile) {
     try {
-      const metadataResponse = await fetch("data/tse-metadata.json", { cache: "no-store" });
+      const metadataResponse = await fetch(selected.metadataFile, { cache: "no-store" });
       if (!metadataResponse.ok) throw new Error(`HTTP ${metadataResponse.status}`);
       tseData = await metadataResponse.json();
     } catch (error) {
       console.warn("Não foi possível carregar o recorte local do TSE.", error);
     }
+  }
 
-    polls.forEach((poll) => {
-      const official = officialRecord(poll);
-      if (!official) return;
-      poll.start = official.fieldStart;
-      poll.end = official.fieldEnd;
-      poll.field = formatField(official.fieldStart, official.fieldEnd);
-      poll.sample = official.sample;
-    });
-    updateStatus();
-    render();
+  polls.forEach((poll) => {
+    const official = officialRecord(poll);
+    if (!official) return;
+    poll.start = official.fieldStart;
+    poll.end = official.fieldEnd;
+    poll.field = formatField(official.fieldStart, official.fieldEnd);
+    poll.sample = official.sample;
+  });
+
+  const url = new URL(window.location.href);
+  if (selected.id === electionCatalog[0]?.id) url.searchParams.delete("eleicao");
+  else url.searchParams.set("eleicao", selected.id);
+  window.history.replaceState({}, "", url);
+  document.querySelector("#election-select").value = selected.id;
+  renderElectionChrome();
+  updateStatus();
+  render();
+}
+
+async function loadData() {
+  try {
+    const catalogResponse = await fetch("data/elections.json", { cache: "no-store" });
+    if (!catalogResponse.ok) throw new Error(`data/elections.json: HTTP ${catalogResponse.status}`);
+    const catalog = await catalogResponse.json();
+    if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.elections) || !catalog.elections.length) {
+      throw new Error("Formato desconhecido em data/elections.json");
+    }
+    electionCatalog = catalog.elections;
+    const electionSelect = document.querySelector("#election-select");
+    electionSelect.innerHTML = electionCatalog
+      .map((election) => `<option value="${election.id}">${escapeHtml(election.label)} · ${escapeHtml(election.context)}</option>`)
+      .join("");
+    const requestedElection = new URLSearchParams(window.location.search).get("eleicao");
+    await loadElection(requestedElection || catalog.defaultElection);
   } catch (error) {
     console.error("Não foi possível carregar a base de pesquisas.", error);
     document.querySelector("#status-label").textContent = "BASE DE PESQUISAS INDISPONÍVEL";
@@ -433,6 +504,14 @@ async function loadData() {
 }
 
 document.querySelector("#period-select").addEventListener("change", (event) => { state.period = event.target.value; render(); });
+document.querySelector("#election-select").addEventListener("change", async (event) => {
+  try {
+    await loadElection(event.target.value);
+  } catch (error) {
+    console.error("Não foi possível trocar a eleição.", error);
+    document.querySelector("#status-label").textContent = "BASE DE PESQUISAS INDISPONÍVEL";
+  }
+});
 document.querySelector("#scenario-select").addEventListener("change", (event) => {
   state.scenarioId = event.target.value;
   state.round = activeScenario()?.round || state.round;

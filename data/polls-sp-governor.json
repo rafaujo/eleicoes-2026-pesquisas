@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 2,
+  "election": {
+    "year": 2026,
+    "country": "BR",
+    "office": "governor",
+    "jurisdiction": "SP"
+  },
+  "candidates": {
+    "tarcisio": {
+      "name": "Tarcísio de Freitas",
+      "shortName": "Tarcísio",
+      "color": "#252b2a"
+    },
+    "haddad": {
+      "name": "Fernando Haddad",
+      "shortName": "Haddad",
+      "color": "#c83f49"
+    },
+    "vera": {
+      "name": "Vera Lúcia",
+      "shortName": "Vera",
+      "color": "#7f4aa3"
+    },
+    "machado": {
+      "name": "Carlos Machado",
+      "shortName": "Machado",
+      "color": "#d18a22"
+    },
+    "vivian": {
+      "name": "Vivian Mendes",
+      "shortName": "Vivian",
+      "color": "#2d8a78"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "first-main",
+      "round": 1,
+      "label": "Cenário consolidado",
+      "candidates": [
+        "tarcisio",
+        "haddad",
+        "vera",
+        "machado",
+        "vivian"
+      ]
+    },
+    {
+      "id": "runoff-tarcisio-haddad",
+      "round": 2,
+      "label": "Tarcísio × Haddad",
+      "candidates": [
+        "tarcisio",
+        "haddad"
+      ]
+    }
+  ],
+  "polls": [
+    {
+      "id": 1,
+      "pollster": "Paraná Pesquisas",
+      "publication": "Divulgação CNN Brasil",
+      "protocol": "SP046242026",
+      "start": "2026-07-25",
+      "end": "2026-07-28",
+      "published": "2026-07-29",
+      "field": "25–28 jul",
+      "sample": 1680,
+      "margin": 2.4,
+      "confidence": 95,
+      "method": "Entrevistas presenciais em 79 municípios",
+      "resultSource": "https://www.cnnbrasil.com.br/eleicoes/parana-pesquisas-tarcisio-lidera-cenarios-de-1o-e-2o-turno-em-sp/",
+      "resultSourceLabel": "CNN Brasil — resultados e metodologia",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 48.5,
+            "haddad": 35.1,
+            "vera": 1.7,
+            "machado": 1.1,
+            "vivian": 0.9
+          },
+          "undecided": 12.7
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 51.8,
+            "haddad": 38.3
+          },
+          "undecided": 9.8
+        }
+      }
+    },
+    {
+      "id": 2,
+      "pollster": "Quaest",
+      "publication": "Genial/Quaest · UOL",
+      "protocol": "SP048462026",
+      "start": "2026-07-23",
+      "end": "2026-07-27",
+      "published": "2026-07-29",
+      "field": "23–27 jul",
+      "sample": 1650,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Entrevistas domiciliares presenciais",
+      "resultSource": "https://noticias.uol.com.br/eleicoes/2026/07/29/genialquaest-governo-sp.ghtm",
+      "resultSourceLabel": "UOL — resultados e metodologia",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 41,
+            "haddad": 26,
+            "vera": 3,
+            "machado": 1,
+            "vivian": 1
+          },
+          "undecided": 28
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 48,
+            "haddad": 32
+          },
+          "undecided": 20
+        }
+      }
+    },
+    {
+      "id": 3,
+      "pollster": "Datafolha",
+      "publication": "Folha de S.Paulo",
+      "protocol": "SP017032026",
+      "start": "2026-07-01",
+      "end": "2026-07-03",
+      "published": "2026-07-05",
+      "field": "1–3 jul",
+      "sample": 1608,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Entrevistas presenciais em 71 municípios",
+      "resultSource": "https://www1.folha.uol.com.br/poder/2026/07/datafolha-tarcisio-lidera-em-sp-com-46-e-haddad-tem-30.shtml",
+      "resultSourceLabel": "Folha de S.Paulo — resultados e metodologia",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 46,
+            "haddad": 30,
+            "vera": 5,
+            "machado": 4,
+            "vivian": 4
+          },
+          "undecided": 11
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 53,
+            "haddad": 37
+          },
+          "undecided": 10
+        }
+      }
+    },
+    {
+      "id": 4,
+      "pollster": "Paraná Pesquisas",
+      "publication": "Divulgação CNN Brasil",
+      "protocol": "SP086392026",
+      "start": "2026-06-16",
+      "end": "2026-06-18",
+      "published": "2026-06-19",
+      "field": "16–18 jun",
+      "sample": 1600,
+      "margin": 2.5,
+      "confidence": 95,
+      "method": "Entrevistas presenciais em 80 municípios",
+      "resultSource": "https://www.cnnbrasil.com.br/eleicoes/parana-pesquisas-no-2o-turno-em-sp-tarcisio-tem-514-haddad-379/",
+      "resultSourceLabel": "CNN Brasil — resultados e metodologia",
+      "scenarios": {
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 51.4,
+            "haddad": 37.9
+          },
+          "undecided": 10.7
+        }
+      }
+    },
+    {
+      "id": 5,
+      "pollster": "Paraná Pesquisas",
+      "publication": "Relatório do instituto",
+      "protocol": "SP027062026",
+      "start": "2026-05-18",
+      "end": "2026-05-20",
+      "published": "2026-05-21",
+      "field": "18–20 mai",
+      "sample": 1640,
+      "margin": 2.5,
+      "confidence": 95,
+      "method": "Entrevistas pessoais, domiciliares e presenciais em 82 municípios",
+      "resultSource": "https://paranapesquisas.com.br/wp-content/uploads/2026/05/SP_Mai26-Estadual.pdf",
+      "resultSourceLabel": "Paraná Pesquisas — relatório completo",
+      "scenarios": {
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 52.7,
+            "haddad": 37.6
+          },
+          "undecided": 9.7
+        }
+      }
+    },
+    {
+      "id": 6,
+      "pollster": "Paraná Pesquisas",
+      "publication": "Relatório do instituto",
+      "protocol": "SP003782026",
+      "start": "2026-04-11",
+      "end": "2026-04-14",
+      "published": "2026-04-16",
+      "field": "11–14 abr",
+      "sample": 1600,
+      "margin": 2.5,
+      "confidence": 95,
+      "method": "Entrevistas pessoais em 80 municípios",
+      "resultSource": "https://paranapesquisas.com.br/wp-content/uploads/2026/04/SP_Abr26.pdf",
+      "resultSourceLabel": "Paraná Pesquisas — relatório completo",
+      "scenarios": {
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 53.4,
+            "haddad": 37.3
+          },
+          "undecided": 9.3
+        }
+      }
+    }
+  ]
+}

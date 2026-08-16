@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "defaultElection": "president-br",
+  "elections": [
+    {
+      "id": "president-br",
+      "label": "Presidencial",
+      "context": "Brasil",
+      "dataFile": "data/polls.json",
+      "metadataFile": "data/tse-metadata.json",
+      "defaultPeriod": "21",
+      "defaultScenario": "first-main",
+      "eyebrow": "ELEIÇÕES 2026 · BRASIL",
+      "title": "A corrida presidencial, pesquisa por pesquisa."
+    },
+    {
+      "id": "governor-sp",
+      "label": "Governo de SP",
+      "context": "São Paulo",
+      "dataFile": "data/polls-sp-governor.json",
+      "defaultPeriod": "90",
+      "defaultScenario": "first-main",
+      "eyebrow": "ELEIÇÕES 2026 · SÃO PAULO",
+      "title": "A disputa pelo governo de São Paulo, pesquisa por pesquisa."
+    }
+  ]
+}

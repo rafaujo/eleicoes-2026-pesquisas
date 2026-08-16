@@ -2,7 +2,7 @@
 
 Central independente e transparente de pesquisas eleitorais brasileiras para as eleições de 2026.
 
-O MVP começa pela disputa presidencial e foi estruturado para incorporar pesquisas de governador e senador por UF posteriormente.
+O projeto cobre a disputa presidencial e começa a expansão estadual pelo governo de São Paulo.
 
 ## Executar localmente
 
@@ -17,29 +17,34 @@ Depois acesse `http://localhost:4173`.
 ## O que já funciona
 
 - painel responsivo com média ponderada por recência e tamanho da amostra;
-- recorte móvel de 7, 14, 21, 30, 60 ou 90 dias, com janela padrão de 21 dias;
+- seletor entre a eleição presidencial e o governo de São Paulo, com URL compartilhável por eleição;
+- recorte móvel de 7, 14, 21, 30, 60, 90 ou 180 dias, com janela padrão de 21 dias na presidencial e 90 dias em São Paulo;
 - seletor dinâmico de cenários, com primeiro turno e segundo turno entre Lula e Flávio Bolsonaro, Ronaldo Caiado ou Romeu Zema;
 - gráfico de evolução com pontos por pesquisa, linhas da média ponderada e faixas de incerteza;
 - filtros por período e busca por instituto/contratante;
 - tabela de resultados e ficha metodológica;
-- cruzamento de 33 levantamentos com protocolos e metadados oficiais do PesqEle/TSE;
+- 33 levantamentos presidenciais com protocolos e metadados oficiais do PesqEle/TSE;
+- seis levantamentos paulistas: três com a lista consolidada de 1º turno e seis no confronto Tarcísio × Haddad;
 - exportação dos dados filtrados em CSV;
 - navegação por teclado, foco visível e suporte a movimento reduzido.
 
 ## Estado dos dados
 
-Os 33 levantamentos catalogados possuem protocolo conferido no PesqEle. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
+Os 33 levantamentos presidenciais catalogados possuem protocolo conferido no PesqEle. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
 
 Os percentuais de intenção de voto não fazem parte dos CSVs abertos do TSE. Eles ficam em `data/polls.json`, transcritos das publicações ou dos relatórios ligados individualmente em cada ficha e reconciliados com o registro oficial por protocolo, período de campo e amostra.
 
-A base usa um cadastro único de candidatos e um catálogo de cenários. Cada pesquisa informa somente os cenários que realmente publicou. Assim, o site pode acrescentar novos confrontos sem alterar o código e sem preencher lacunas com estimativas. Oito levantamentos já possuem resultados verificados para Lula × Caiado e Lula × Zema; todos os 33 mantêm o confronto Lula × Flávio Bolsonaro.
+O arquivo `data/elections.json` lista as eleições disponíveis e aponta para uma base independente por cargo e território. Cada base tem seu próprio cadastro de candidatos e catálogo de cenários; cada pesquisa informa somente os cenários que realmente publicou. Assim, o site pode crescer para outras UFs sem misturar listas de candidatos ou preencher lacunas com estimativas.
+
+Em São Paulo, `data/polls-sp-governor.json` separa a lista consolidada de cinco candidaturas do 1º turno do confronto Tarcísio × Haddad. O primeiro recorte começa em julho, quando os institutos passaram a usar a mesma lista; o segundo tem série desde abril.
 
 ## Cadastrar uma pesquisa
 
-Copie `data/poll-template.json` para um arquivo de trabalho, preencha os percentuais e a fonte e execute:
+Copie `data/poll-template.json` para um arquivo de trabalho, preencha os percentuais e a fonte e execute. Para uma base estadual, informe também `--database`:
 
 ```powershell
 python scripts/add_poll.py work/nova-pesquisa.json
+python scripts/add_poll.py work/nova-pesquisa-sp.json --database data/polls-sp-governor.json
 python scripts/sync_tse.py
 python scripts/validate_data.py
 ```
@@ -69,7 +74,7 @@ node --check app.js
 
 ## Atualização e publicação automáticas
 
-O workflow `.github/workflows/update-polls.yml` roda todos os dias às 07h17 e 16h17 no horário de Brasília e também pode ser iniciado manualmente na aba **Actions** do GitHub.
+O workflow `.github/workflows/update-polls.yml` roda todos os dias às 07h17 e 16h17 no horário de Brasília e também pode ser iniciado manualmente na aba **Actions** do GitHub. Nesta etapa, o monitor automático cobre a disputa presidencial; as pesquisas estaduais passam pela mesma validação, mas ainda entram por curadoria manual.
 
 Em cada execução ele:
 
@@ -100,9 +105,9 @@ A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens
 
 ## Próximas etapas
 
+- ampliar a cobertura estadual para outras UFs e automatizar o monitoramento por estado;
 - acrescentar novos cenários à medida que forem publicados e páginas individuais;
 - criar painel editorial para revisão e publicação;
-- adicionar eleições estaduais.
 
 ## Aviso
 

@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260816-3" />
+    <link rel="stylesheet" href="styles.css?v=20260816-4" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -30,17 +30,17 @@
         <a href="#metodologia">Metodologia</a>
         <a href="#sobre">Sobre</a>
       </nav>
-      <button class="state-button" type="button" disabled>
-        <span>Presidencial</span>
-        <small>Estaduais em breve</small>
-      </button>
+      <label class="election-picker">
+        <span>ELEIÇÃO</span>
+        <select id="election-select" aria-label="Eleição"></select>
+      </label>
     </header>
 
     <main id="conteudo">
       <section class="hero" aria-labelledby="titulo-principal">
         <div>
-          <p class="eyebrow"><span></span> ELEIÇÕES 2026 · BRASIL</p>
-          <h1 id="titulo-principal">A corrida presidencial,<br />pesquisa por pesquisa.</h1>
+          <p class="eyebrow" id="hero-eyebrow"><span></span> ELEIÇÕES 2026 · BRASIL</p>
+          <h1 id="titulo-principal">A corrida presidencial, pesquisa por pesquisa.</h1>
           <p class="hero-copy">
             Resultados organizados, fontes abertas e contexto para acompanhar a opinião pública
             sem transformar pesquisa em previsão.
@@ -51,7 +51,7 @@
           <div>
             <small id="status-label">VERIFICANDO PESQELE…</small>
             <strong id="status-date">Base TSE de 16/08/2026</strong>
-            <span id="status-total">33 pesquisas · carregando entrevistas</span>
+            <span id="status-total">Carregando pesquisas</span>
           </div>
         </div>
       </section>
@@ -74,6 +74,7 @@
             <option value="30">Últimos 30 dias</option>
             <option value="60">Últimos 60 dias</option>
             <option value="90">Últimos 90 dias</option>
+            <option value="180">Últimos 180 dias</option>
           </select>
         </label>
       </section>
@@ -152,8 +153,8 @@
         </div>
         <p id="poll-count" class="table-count"></p>
         <aside class="source-disclosure" aria-label="Origem dos dados">
-          <strong>Duas camadas de fonte.</strong>
-          <span>Cadastro, campo, amostra e metodologia vêm do PesqEle/TSE. Os percentuais vêm do relatório ou da publicação ligada em cada ficha.</span>
+          <strong id="source-heading">Duas camadas de fonte.</strong>
+          <span id="source-copy">Cadastro, campo, amostra e metodologia vêm do PesqEle/TSE. Os percentuais vêm do relatório ou da publicação ligada em cada ficha.</span>
           <a href="https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026" target="_blank" rel="noreferrer">Abrir base oficial ↗</a>
         </aside>
       </section>
@@ -162,7 +163,7 @@
         <div>
           <p class="kicker">NOSSO COMPROMISSO</p>
           <h2 id="method-title">Clareza antes da manchete.</h2>
-          <p>
+          <p id="principles-copy">
             Cada número precisa ser rastreável até sua origem. Esta versão combina os metadados
             oficiais do PesqEle com os relatórios e publicações dos resultados.
           </p>
@@ -186,6 +187,6 @@
       <div id="dialog-content"></div>
     </dialog>
 
-    <script src="app.js?v=20260816-5"></script>
+    <script src="app.js?v=20260816-6"></script>
   </body>
 </html>

@@ -11,6 +11,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+ELECTIONS_FILE = ROOT / "data" / "elections.json"
 POLLS_FILE = ROOT / "data" / "polls.json"
 METADATA_FILE = ROOT / "data" / "tse-metadata.json"
 MONITOR_FILE = ROOT / "data" / "tse-monitor.json"
@@ -95,9 +96,6 @@ def validate_poll(
     if not isinstance(poll_scenarios, dict) or not poll_scenarios:
         errors.append(f"{label} não possui cenários")
         return
-    if "first-main" not in poll_scenarios:
-        errors.append(f"{label} não possui o cenário principal")
-
     catalog = scenario_catalog or {}
     unknown = sorted(set(poll_scenarios) - set(catalog)) if catalog else []
     if unknown:
@@ -132,10 +130,10 @@ def validate_poll(
             errors.append(f"{scenario_label} precisa de fonte HTTPS")
 
 
-def validate_catalog(poll_data: dict, errors: list[str]) -> dict[str, dict]:
+def validate_catalog(poll_data: dict, errors: list[str], source_name: str) -> dict[str, dict]:
     candidates = poll_data.get("candidates")
     if not isinstance(candidates, dict) or not candidates:
-        errors.append("data/polls.json deve possuir um cadastro de candidatos")
+        errors.append(f"{source_name} deve possuir um cadastro de candidatos")
         candidates = {}
     for key, candidate in candidates.items():
         label = f"Candidato {key}"
@@ -150,7 +148,7 @@ def validate_catalog(poll_data: dict, errors: list[str]) -> dict[str, dict]:
 
     scenarios = poll_data.get("scenarios")
     if not isinstance(scenarios, list) or not scenarios:
-        errors.append("data/polls.json deve possuir um catálogo de cenários")
+        errors.append(f"{source_name} deve possuir um catálogo de cenários")
         return {}
     catalog: dict[str, dict] = {}
     for position, scenario in enumerate(scenarios, start=1):
@@ -182,18 +180,23 @@ def validate_catalog(poll_data: dict, errors: list[str]) -> dict[str, dict]:
     return catalog
 
 
-def main() -> int:
-    errors: list[str] = []
-    poll_data = json.loads(POLLS_FILE.read_text(encoding="utf-8"))
+def validate_poll_database(path: Path, errors: list[str]) -> list[dict]:
+    source_name = path.relative_to(ROOT).as_posix()
+    poll_data = json.loads(path.read_text(encoding="utf-8"))
     if poll_data.get("schemaVersion") != 2:
-        errors.append("Versão desconhecida de data/polls.json")
-    election = poll_data.get("election", {})
-    if election != {"year": 2026, "country": "BR", "office": "president", "jurisdiction": "BR"}:
-        errors.append("Identificação eleitoral inválida em data/polls.json")
-    scenario_catalog = validate_catalog(poll_data, errors)
+        errors.append(f"Versão desconhecida de {source_name}")
+    election = poll_data.get("election")
+    if not isinstance(election, dict) or election.get("year") != 2026 or election.get("country") != "BR":
+        errors.append(f"Identificação eleitoral inválida em {source_name}")
+    elif election.get("office") not in {"president", "governor", "senator"}:
+        errors.append(f"Cargo eleitoral inválido em {source_name}")
+    elif not isinstance(election.get("jurisdiction"), str) or not election["jurisdiction"]:
+        errors.append(f"Jurisdição eleitoral inválida em {source_name}")
+
+    scenario_catalog = validate_catalog(poll_data, errors, source_name)
     polls = poll_data.get("polls")
     if not isinstance(polls, list) or not polls:
-        errors.append("data/polls.json deve conter uma lista não vazia de pesquisas")
+        errors.append(f"{source_name} deve conter uma lista não vazia de pesquisas")
         polls = []
 
     for position, poll in enumerate(polls, start=1):
@@ -204,9 +207,62 @@ def main() -> int:
     duplicate_protocols = duplicate_values(protocols)
     duplicate_ids = duplicate_values(ids)
     if duplicate_protocols:
-        errors.append(f"Protocolos duplicados: {', '.join(map(str, duplicate_protocols))}")
+        errors.append(f"Protocolos duplicados em {source_name}: {', '.join(map(str, duplicate_protocols))}")
     if duplicate_ids:
-        errors.append(f"IDs duplicados: {', '.join(map(str, duplicate_ids))}")
+        errors.append(f"IDs duplicados em {source_name}: {', '.join(map(str, duplicate_ids))}")
+    return polls
+
+
+def main() -> int:
+    errors: list[str] = []
+    elections_data = json.loads(ELECTIONS_FILE.read_text(encoding="utf-8"))
+    elections = elections_data.get("elections")
+    if elections_data.get("schemaVersion") != 1 or not isinstance(elections, list) or not elections:
+        errors.append("Catálogo inválido em data/elections.json")
+        elections = []
+
+    election_ids = [item.get("id") for item in elections if isinstance(item, dict)]
+    if duplicate_values(election_ids):
+        errors.append("Há IDs duplicados em data/elections.json")
+    if elections_data.get("defaultElection") not in election_ids:
+        errors.append("defaultElection não existe em data/elections.json")
+
+    all_databases: dict[Path, list[dict]] = {}
+    required_election_fields = {
+        "id", "label", "context", "dataFile", "defaultPeriod", "defaultScenario", "eyebrow", "title"
+    }
+    data_root = (ROOT / "data").resolve()
+    for position, item in enumerate(elections, start=1):
+        if not isinstance(item, dict):
+            errors.append(f"Eleição #{position} é inválida")
+            continue
+        missing = sorted(required_election_fields - set(item))
+        if missing:
+            errors.append(f"Eleição {item.get('id', position)} sem campos: {', '.join(missing)}")
+            continue
+        path = (ROOT / str(item["dataFile"])).resolve()
+        try:
+            path.relative_to(data_root)
+        except ValueError:
+            errors.append(f"Arquivo fora de data/ para {item['id']}")
+            continue
+        if not path.is_file():
+            errors.append(f"Base ausente para {item['id']}: {item['dataFile']}")
+            continue
+        if path in all_databases:
+            errors.append(f"Base reutilizada por mais de uma eleição: {item['dataFile']}")
+            continue
+        polls = validate_poll_database(path, errors)
+        all_databases[path] = polls
+        data = json.loads(path.read_text(encoding="utf-8"))
+        scenario_ids = {scenario.get("id") for scenario in data.get("scenarios", []) if isinstance(scenario, dict)}
+        if item["defaultScenario"] not in scenario_ids:
+            errors.append(f"Cenário padrão ausente para {item['id']}")
+        if str(item["defaultPeriod"]) not in {"7", "14", "21", "30", "60", "90", "180"}:
+            errors.append(f"Período padrão inválido para {item['id']}")
+
+    presidential_polls = all_databases.get(POLLS_FILE.resolve(), [])
+    protocols = [poll.get("protocol") for poll in presidential_polls if isinstance(poll, dict)]
 
     metadata = json.loads(METADATA_FILE.read_text(encoding="utf-8"))
     records = metadata.get("records", {})
@@ -246,7 +302,8 @@ def main() -> int:
         return 1
 
     print(
-        f"Dados válidos: {len(polls)} pesquisas curadas, "
+        f"Dados válidos: {sum(len(polls) for polls in all_databases.values())} pesquisas em "
+        f"{len(all_databases)} eleições, "
         f"{len(seen)} protocolos monitorados e {len(pending)} pendentes"
     )
     return 0

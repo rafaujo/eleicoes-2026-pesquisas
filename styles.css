@@ -56,10 +56,9 @@ nav { display: flex; align-self: stretch; gap: 2rem; }
 nav a { display: grid; place-items: center; position: relative; text-decoration: none; color: var(--muted); font-size: .9rem; font-weight: 600; }
 nav a.active { color: var(--ink); }
 nav a.active::after { content: ""; position: absolute; bottom: 0; width: 100%; height: 3px; border-radius: 2px 2px 0 0; background: var(--green); }
-.state-button { justify-self: end; border: 0; padding: 0; background: transparent; text-align: right; color: var(--ink); }
-.state-button span, .state-button small { display: block; }
-.state-button span { font-weight: 700; }
-.state-button small { margin-top: 2px; color: var(--muted); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; }
+.election-picker { justify-self: end; display: grid; justify-items: end; }
+.election-picker > span { color: var(--muted); font-size: .62rem; font-weight: 800; letter-spacing: .1em; }
+.election-picker select { width: auto; max-width: 190px; padding: .2rem 1.5rem .2rem .2rem; text-align: right; font-size: .88rem; }
 
 main { max-width: 1440px; margin: auto; padding: 0 5vw 5rem; }
 .hero { padding: 5.8rem 0 4rem; display: flex; align-items: end; justify-content: space-between; gap: 3rem; }
@@ -144,6 +143,7 @@ tbody tr:hover { background: #f8f7f2; }
 .pollster { display: block; font-weight: 700; }
 .sponsor { display: block; margin-top: .2rem; color: var(--muted); font-size: .67rem; }
 .verified-badge { display: inline-block; margin-top: .38rem; padding: .18rem .35rem; border: 1px solid rgba(11, 107, 82, .2); border-radius: 4px; color: var(--green); background: rgba(11, 107, 82, .06); font-size: .58rem; font-weight: 800; letter-spacing: .035em; }
+.protocol-badge { border-color: rgba(102, 112, 110, .22); color: var(--muted); background: rgba(102, 112, 110, .07); }
 .weight-pill { display: inline-block; min-width: 42px; padding: .22rem .35rem; border-radius: 5px; color: #59625f; background: #eeeee9; font-size: .68rem; font-weight: 800; }
 .leader { color: var(--green); font-weight: 800; }
 .difference { display: inline-block; min-width: 43px; padding: .22rem .35rem; border-radius: 5px; color: var(--green-dark); background: rgba(11, 107, 82, .09); font-weight: 800; }
@@ -209,7 +209,8 @@ dialog h2 { margin: .5rem 0 1.5rem; font-size: 2.2rem; }
 @media (max-width: 600px) {
   .site-header, main, footer { padding-left: 1rem; padding-right: 1rem; }
   .site-header { min-height: 66px; }
-  .state-button small { display: none; }
+  .election-picker > span { display: none; }
+  .election-picker select { max-width: 145px; font-size: .8rem; }
   .hero { padding: 3.5rem 0 2.5rem; }
   h1 { font-size: 3.2rem; }
   .hero-copy { font-size: 1rem; }
