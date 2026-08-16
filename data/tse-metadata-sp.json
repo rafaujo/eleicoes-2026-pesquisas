@@ -1,0 +1,150 @@
+{
+  "generatedAt": "16/08/2026 05:46:46",
+  "syncedAt": "2026-08-16T17:44:05-03:00",
+  "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
+  "pesqEle": "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml",
+  "resourceUrls": {
+    "polls": "https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_eleitoral_2026.zip",
+    "contractors": "https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_contratante_2026.zip"
+  },
+  "records": {
+    "SP003782026": {
+      "protocol": "SP003782026",
+      "registeredAt": "2026-04-10 17:17:40",
+      "fieldStart": "2026-04-11",
+      "fieldEnd": "2026-04-14",
+      "disclosureDate": "2026-04-16",
+      "sample": 1600,
+      "company": "INSTITUTO PARANA DE PESQUISAS E ANALISE DE CONSUMIDOR LTDA",
+      "tradeName": "",
+      "statistician": "Tatiani Cristina Ara",
+      "conre": "10245 - 4ª Região",
+      "researchCost": 50000.0,
+      "methodology": "Pesquisa com metodologia quantitativa, com a realização de entrevistas pessoais, domiciliares e presenciais, utilizando questionário estruturado junto a uma amostra representativa do eleitorado do Estado de São Paulo.",
+      "samplingPlan": "\"A amostra será representativa do eleitorado da área pesquisada e será selecionada em três etapas. Na primeira etapa realiza-se um sorteio probabilístico dos municípios onde as entrevistas serão realizadas através do método PPT (Probabilidade Proporcional ao Tamanho), considerando a população eleitora com 16 anos ou mais residente nos municípios como base para essa seleção. Na segunda etapa, faz-se um sorteio probabilístico das localidades, onde as entrevistas serão realizadas, através do método PPT (Probabilidade Proporcional ao Tamanho), tomando a população eleitora de 16 anos ou mais residente nas localidades como base para essa seleção. Na terceira etapa, a seleção do entrevistado dentro da localidade, será feita utilizando-se quotas amostrais proporcionais, em função das seguintes variáveis: GÊNERO: TSE Março 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_metricas=E&p24_back=22&p24_cruzamento_1=ds_sexo&clear=24&p0_uf=SP&p0_mes=3&debug=LEVEL5&session=312990078978641) Masculino - 47%; | Feminino - 53%; | FAIXA ETÁRIA: TSE Março 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_faixa_etaria&p24_metricas=E&p24_back=22&clear=24&p0_uf=SP&p0_mes=3&debug=LEVEL5&session=8904950028837) Entre 16 e 24 anos: 11%; | Entre 25 e 34 anos: 18%; | Entre 35 e 44 anos: 20%; | Entre 45 e 59 anos: 26%; | Com 60 anos ou mais: 25%; | ESCOLARIDADE: TSE Março 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_grau_instrucao&p24_metricas=E&p24_back=22&clear=24&p0_uf=SP&p0_mes=3&debug=LEVEL5&session=309383598034615) De analfabeto até ensino fundamental completo: 29%; | Ensino médio incompleto ou completo: 50% | Ensino superior incompleto ou completo: 21% | RENDA DOMICILIAR MENSAL: (https://cidades.ibge.gov.br/brasil/sp/pesquisa/23/24304) IBGE - Censo 2010. Observação: Conforme informações obtidas do Instituto Brasileiro de Geografia e Estatística, o IBGE, não divulgou - e não tem previsão - de data para divulgação do perfil econômico (nível econômico) da população brasileira; portanto, os dados quanto ao nível econômico obtidos no Censo 2022, não podem ser utilizados, pois não foram publicados. (https://censo2022.ibge.gov.br/panorama/) Sem rendimentos até 2 salários mínimos: 31% | Mais de 2 a 5 salários mínimos: 39% | Mais de 5 salários mínimos: 30% | Está prevista eventual ponderação para correção das variáveis gênero e faixa etária, com base nos percentuais acima apresentados, caso ocorram diferenças superiores a 3,0 (três) pontos percentuais entre o previsto na amostra e a coleta realizada; para as variáveis escolaridade e renda domiciliar mensal, o fator de ponderação é igual a 1 (resultados obtidos no campo). O nível de confiança estimado é de 95% (noventa e cinco por cento) para uma margem de erro estimada, considerando uma técnica de amostragem aleatória simples, de aproximadamente 2,5 (dois vírgula cinco) pontos percentuais para mais ou para menos sobre os resultados obtidos.\"",
+      "contractors": [
+        {
+          "name": "INSTITUTO PARANA DE PESQUISAS E ANALISE DE CONSUMIDOR LTDA",
+          "amount": 0.0,
+          "payer": false,
+          "resourceOrigin": ""
+        }
+      ]
+    },
+    "SP017032026": {
+      "protocol": "SP017032026",
+      "registeredAt": "2026-06-29 13:11:37",
+      "fieldStart": "2026-07-01",
+      "fieldEnd": "2026-07-03",
+      "disclosureDate": "2026-07-05",
+      "sample": 1608,
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "statistician": "Renata Nunes Cesar",
+      "conre": "7249A",
+      "researchCost": 185706.64,
+      "methodology": "Pesquisa do tipo quantitativo, por amostragem, com aplicação de questionário estruturado e abordagem pessoal em pontos de fluxo populacional. O eleitorado do estado de São Paulo foi tomado como universo da pesquisa.",
+      "samplingPlan": "Universo: Eleitorado do estado de São Paulo Tamanho da amostra: A amostra prevista é de 1608 entrevistas. Técnica de amostragem: A amostra é estratificada por natureza dos municípios (capital, região metropolitana ou interior), sendo que os estratos são desproporcionais em relação ao tamanho do universo. Posteriormente, as proporções corretas serão restabelecidas na fase de ponderação dos dados. Os municípios com população acima de 500 mil habitantes constituem estratos. Em cada estrato, num primeiro estágio, são sorteados com probabilidade proporcional ao tamanho (PPT) os municípios que farão parte do levantamento. Num segundo estágio, são sorteados os bairros e pontos de abordagem onde serão aplicadas as entrevistas. Por fim, os entrevistados são selecionados aleatoriamente para responder ao questionário, de acordo com cotas de gênero e faixa etária. Os dados utilizados para definição e seleção da amostra são baseados nos dados fornecidos pelo TSE (dados maio 2026), IBGE (Censo 2022, PNADC 2024 e Estimativa populacional 2025), além de dados primários de outros levantamentos do instituto. Os dados relativos a gênero e faixa etária são: Homens: 47%, mulheres: 53%, 16 a 24 anos: 11%, 25 a 34 anos: 18%, 35 a 44 anos: 20%, 45 a 59 anos: 26% e 60 anos ou mais: 25%. Para a variável grau de instrução os dados utilizados como referência são: até nível médio completo ou incompleto (inclui os sem escolaridade e analfabetos) =70% e nível superior (inclui superior incompleto) = 30%. Ponderação dos resultados: Está prevista ponderação considerando as variáveis natureza do município (capital 27%, outros municípios da região metropolitana 21%, interior 52%), gênero e faixa etária. A variável escolaridade poderá ser ajustada de acordo com os percentuais detalhados anteriormente caso a diferença entre os valores descritos e observados seja maior que a margem de erro definida. Para o nível econômico do entrevistado (renda familiar mensal declarada pelo respondente), a distribuição utilizada como referência foi: Até 2 S.M. (salários mínimos)=38%, mais de 2 S.M.=58%, não souberam ou recusaram a resposta=4%. O fator previsto para ponderação é 1 (resultados obtidos em campo). Margem de Erro: A margem de erro máxima prevista é de 2 pontos percentuais para mais ou para menos, considerando um nível de confiança de 95% e baseada em uma amostra aleatória simples (AAS). Os intervalos de confiança serão calculados considerando os resultados obtidos para um nível de confiança de 95%.",
+      "contractors": [
+        {
+          "name": "EMPRESA FOLHA DA MANHA S.A.",
+          "amount": 185706.64,
+          "payer": true,
+          "resourceOrigin": "Outros"
+        }
+      ]
+    },
+    "SP027062026": {
+      "protocol": "SP027062026",
+      "registeredAt": "2026-05-15 00:00:00",
+      "fieldStart": "2026-05-18",
+      "fieldEnd": "2026-05-20",
+      "disclosureDate": "2026-05-21",
+      "sample": 1640,
+      "company": "INSTITUTO PARANA DE PESQUISAS E ANALISE DE CONSUMIDOR LTDA",
+      "tradeName": "",
+      "statistician": "Tatiani Cristina Ara",
+      "conre": "10245 - 4ª Região",
+      "researchCost": 50000.0,
+      "methodology": "Pesquisa com metodologia quantitativa, com a realização de entrevistas pessoais, domiciliares e presenciais, utilizando questionário estruturado junto a uma amostra representativa do eleitorado do Estado de São Paulo.",
+      "samplingPlan": "\"A amostra será representativa do eleitorado da área pesquisada e será selecionada em três etapas. Na primeira etapa realiza-se um sorteio probabilístico dos municípios onde as entrevistas serão realizadas através do método PPT (Probabilidade Proporcional ao Tamanho), considerando a população eleitora com 16 anos ou mais residente nos municípios como base para essa seleção. Na segunda etapa, faz-se um sorteio probabilístico das localidades, onde as entrevistas serão realizadas, através do método PPT (Probabilidade Proporcional ao Tamanho), tomando a população eleitora de 16 anos ou mais residente nas localidades como base para essa seleção. Na terceira etapa, a seleção do entrevistado dentro da localidade, será feita utilizando-se quotas amostrais proporcionais, em função das seguintes variáveis: GÊNERO: TSE Abril 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_metricas=E&p24_back=22&p24_cruzamento_1=ds_sexo&clear=24&p0_uf=SP&p0_mes=4&debug=LEVEL5&session=312990078978641) Masculino - 47%; | Feminino - 53%; | FAIXA ETÁRIA: TSE Abril 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_faixa_etaria&p24_metricas=E&p24_back=22&clear=24&p0_uf=SP&p0_mes=4&debug=LEVEL5&session=8904950028837) Entre 16 e 24 anos: 11%; | Entre 25 e 34 anos: 18%; | Entre 35 e 44 anos: 20%; | Entre 45 e 59 anos: 26%; | Com 60 anos ou mais: 25%; | ESCOLARIDADE: TSE Abril 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_grau_instrucao&p24_metricas=E&p24_back=22&clear=24&p0_uf=SP&p0_mes=4&debug=LEVEL5&session=309383598034615) De analfabeto até ensino fundamental completo: 29%; | Ensino médio incompleto ou completo: 50% | Ensino superior incompleto ou completo: 21% | RENDA DOMICILIAR MENSAL: (https://cidades.ibge.gov.br/brasil/sp/pesquisa/23/24304) IBGE - Censo 2010. Observação: Conforme informações obtidas do Instituto Brasileiro de Geografia e Estatística, o IBGE, não divulgou - e não tem previsão - de data para divulgação do perfil econômico (nível econômico) da população brasileira; portanto, os dados quanto ao nível econômico obtidos no Censo 2022, não podem ser utilizados, pois não foram publicados. (https://censo2022.ibge.gov.br/panorama/) Sem rendimentos até 2 salários mínimos: 31% | Mais de 2 a 5 salários mínimos: 39% | Mais de 5 salários mínimos: 30% | Está prevista eventual ponderação para correção das variáveis gênero e faixa etária, com base nos percentuais acima apresentados, caso ocorram diferenças superiores a 3,0 (três) pontos percentuais entre o previsto na amostra e a coleta realizada; para as variáveis escolaridade e renda domiciliar mensal, o fator de ponderação é igual a 1 (resultados obtidos no campo). O nível de confiança estimado é de 95% (noventa e cinco por cento) para uma margem de erro estimada, considerando uma técnica de amostragem aleatória simples, de aproximadamente 2,5 (dois vírgula cinco) pontos percentuais para mais ou para menos sobre os resultados obtidos.\"",
+      "contractors": [
+        {
+          "name": "INSTITUTO PARANA DE PESQUISAS E ANALISE DE CONSUMIDOR LTDA",
+          "amount": 0.0,
+          "payer": false,
+          "resourceOrigin": ""
+        }
+      ]
+    },
+    "SP046242026": {
+      "protocol": "SP046242026",
+      "registeredAt": "2026-07-23 19:37:24",
+      "fieldStart": "2026-07-25",
+      "fieldEnd": "2026-07-28",
+      "disclosureDate": "2026-07-29",
+      "sample": 1680,
+      "company": "INSTITUTO PARANA DE PESQUISAS E ANALISE DE CONSUMIDOR LTDA",
+      "tradeName": "",
+      "statistician": "Tatiani Cristina Ara",
+      "conre": "10245 - 4ª",
+      "researchCost": 50000.0,
+      "methodology": "Pesquisa com metodologia quantitativa, com a realização de entrevistas pessoais, domiciliares e presenciais, utilizando questionário estruturado junto a uma amostra representativa do eleitorado do Estado de São Paulo. Os questionamentos feitos aos(às) eleitores(as) em relação à eleição presidencial foram devidamente registrados no Tribunal Superior Eleitoral - TSE sob o nº BR-09071/2026, pois o Sistema Pesqele não permite nos registros regionais a inclusão do campo Presidente no momento do registro da pesquisa eleitoral.",
+      "samplingPlan": "\"A amostra será representativa do eleitorado da área pesquisada e será selecionada em três etapas. Na primeira etapa realiza-se um sorteio probabilístico dos municípios onde as entrevistas serão realizadas através do método PPT (Probabilidade Proporcional ao Tamanho), considerando a população eleitora com 16 anos ou mais residente nos municípios como base para essa seleção. Na segunda etapa, faz-se um sorteio probabilístico das localidades, onde as entrevistas serão realizadas, através do método PPT (Probabilidade Proporcional ao Tamanho), tomando a população eleitora de 16 anos ou mais residente nas localidades como base para essa seleção. Na terceira etapa, a seleção do entrevistado dentro da localidade, será feita utilizando-se quotas amostrais proporcionais, em função das seguintes variáveis: GÊNERO: TSE Junho 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_metricas=E&p24_back=22&p24_cruzamento_1=ds_sexo&clear=24&p0_uf=SP&p0_mes=6&debug=LEVEL5&session=312990078978641) Masculino - 47%; | Feminino - 53%; | FAIXA ETÁRIA: TSE Junho 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_faixa_etaria&p24_metricas=E&p24_back=22&clear=24&p0_uf=SP&p0_mes=6&debug=LEVEL5&session=8904950028837) Entre 16 e 24 anos: 11%; | Entre 25 e 34 anos: 18%; | Entre 35 e 44 anos: 20%; | Entre 45 e 59 anos: 26%; | Com 60 anos ou mais: 25%; | ESCOLARIDADE: TSE Junho 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_grau_instrucao&p24_metricas=E&p24_back=22&clear=24&p0_uf=SP&p0_mes=6&debug=LEVEL5&session=309383598034615) Observação: Conforme informações obtidas no site do Tribunal Superior Eleitoral, o TSE, (https://dadosabertos.tse.jus.br/group/about/eleitorado) \"\"Os registros de grau de escolaridade podem apresentar dados defasados, pois refletem a situação do eleitor na ocasião do cadastramento.\"\" De analfabeto até ensino fundamental completo: 29%; | Ensino médio incompleto ou completo: 50% | Ensino superior incompleto ou completo: 21% | RENDA DOMICILIAR MENSAL: (https://cidades.ibge.gov.br/brasil/sp/pesquisa/23/24304) IBGE - Censo 2010. Observação: Conforme informações obtidas do Instituto Brasileiro de Geografia e Estatística, o IBGE, não divulgou - e não tem previsão - de data para divulgação do perfil econômico (nível econômico) da população brasileira; portanto, os dados quanto ao nível econômico obtidos no Censo 2022, não podem ser utilizados, pois não foram publicados. (https://censo2022.ibge.gov.br/panorama/) Sem rendimentos até 2 salários mínimos: 31% | Mais de 2 a 5 salários mínimos: 39% | Mais de 5 salários mínimos: 30% | Está prevista eventual ponderação para correção das variáveis gênero e faixa etária, com base nos percentuais acima apresentados, caso ocorram diferenças superiores a 3,0 (três) pontos percentuais entre o previsto na amostra e a coleta realizada; para as variáveis escolaridade e renda domiciliar mensal, o fator de ponderação é igual a 1 (resultados obtidos no campo). O nível de confiança estimado é de 95% (noventa e cinco por cento) para uma margem de erro estimada, considerando uma técnica de amostragem aleatória simples, de aproximadamente 2,4 (dois vírgula quatro) pontos percentuais para mais ou para menos sobre os resultados obtidos.\"",
+      "contractors": [
+        {
+          "name": "INSTITUTO PARANA DE PESQUISAS E ANALISE DE CONSUMIDOR LTDA",
+          "amount": 0.0,
+          "payer": false,
+          "resourceOrigin": ""
+        }
+      ]
+    },
+    "SP048462026": {
+      "protocol": "SP048462026",
+      "registeredAt": "2026-07-23 22:29:32",
+      "fieldStart": "2026-07-23",
+      "fieldEnd": "2026-07-27",
+      "disclosureDate": "2026-07-29",
+      "sample": 1650,
+      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "statistician": "Margarida Maria de Mendonca",
+      "conre": "6731",
+      "researchCost": 279386.9,
+      "methodology": "Pesquisa quantitativa, de survey, que consiste na realização de entrevistas pessoais, domiciliares e presenciais, conduzidas por profissionais treinados, com a aplicação de questionários estruturados a uma amostra representativa da população votante de 16 anos ou mais residente no estado de São Paulo. O desenho amostral aplicado combina sorteio probabilístico de municípios e de setores censitários fornecidos pelo IBGE (unidades territoriais homogêneas, de tamanho similar a quadras ou blocos), dentro dos quais serão selecionadas pessoas respondentes por meio de cotas amostrais.",
+      "samplingPlan": "O público pesquisado é composto por eleitores de 16 anos ou mais residentes na área de abrangência da pesquisa. Para produzir uma amostra representativa desse público-alvo, utilizamos um desenho amostral por conglomerados que prevê três estágios. No primeiro estágio, é feito um sorteio probabilístico de municípios para comporem a amostra por meio do método PPT (Probabilidade Proporcional ao Tamanho) a partir de suas populações votantes acima de 16 anos. Dentro da lista de municípios sorteados, no segundo estágio, é realizado um sorteio probabilístico por meio do método PPT (Probabilidade Proporcional ao Tamanho) de setores censitários a serem visitados pelos entrevistadores, sorteio que tem como base o total de habitantes residentes nos setores de acordo com dados do Censo de 2022, o que garante a dispersão aleatória e estatística da amostra dentro dos territórios municipais, independentemente de divisões administrativas. Finalmente, dentro da lista de setores censitários sorteados, no último estágio são selecionados domicílios e pessoas a serem entrevistadas utilizando-se cotas amostrais para as seguintes variáveis: sexo, idade, renda familiar e escolaridade. O perfil da amostra, definido pelas cotas previstas, é o seguinte: Sexo: Masculino (47%); Feminino (53%). Faixa etária: 16-34 anos (29%); 35-59 anos (46%); 60 ou mais (25%). Renda domiciliar total, incluindo pensões, benefícios e rendimentos de trabalhos informais: Até 2 salários-mínimos (19%); Mais de 2 a 5 salários-mínimos (43%); Mais de 5 salários-mínimos (38%). Nível de instrução: Até Fundamental completo ou médio incompleto (33%); Médio completo ou superior incompleto (43%); Superior completo ou mais (24%). Fonte dos dados: para a distribuição de sexo e idade, TSE-Tribunal Superior Eleitoral - julho/2026; para a malha de setores censitários, Censo 2022 (IBGE); para a distribuição de renda domiciliar, PNADc Anual 2025, 1ª visita (IBGE); e, para a distribuição de escolaridade/instrução, PNADc trimestral 1-2026 (IBGE). A PNADc é utilizada por ser a fonte oficial mais atualizada de rendimentos do país, incluindo rendimentos informais, pensões, entre outros, e corrigindo as defasagens temporais do Censo 2022, além de ser a fonte mais atualizada de nível de instrução da população com 16 anos ou mais dada ausência de atualização obrigatória da escolaridade no registro de eleitores do TSE. Está prevista eventual pós-estratificação da amostra, por meio de algoritmos de calibração (rake) e modelos (MrP), para correção de estimativas e das distribuições das variáveis sexo, idade, renda familiar e escolaridade, com base nos percentuais anteriormente mencionados, caso ocorram diferenças entre os percentuais previstos na amostra e a coleta de dados realizada. Dentro do público-alvo anteriormente descrito, serão realizadas 1.650 entrevistas. O nível de confiança das estimativas é de 95% e a margem de erro máxima prevista, atendendo às diretivas do TSE e usando o cálculo para amostra aleatória simples (AAS) como aproximação, é de cerca de 2 pontos percentuais para mais ou para menos em relação aos totais da amostra.",
+      "contractors": [
+        {
+          "name": "BANCO GENIAL S.A.",
+          "amount": 279386.9,
+          "payer": true,
+          "resourceOrigin": "Outros"
+        }
+      ]
+    },
+    "SP086392026": {
+      "protocol": "SP086392026",
+      "registeredAt": "2026-06-13 16:53:22",
+      "fieldStart": "2026-06-16",
+      "fieldEnd": "2026-06-18",
+      "disclosureDate": "2026-06-19",
+      "sample": 1600,
+      "company": "INSTITUTO PARANA DE PESQUISAS E ANALISE DE CONSUMIDOR LTDA",
+      "tradeName": "",
+      "statistician": "Tatiani Cristina Ara",
+      "conre": "10245 - 4ª Região",
+      "researchCost": 50000.0,
+      "methodology": "Pesquisa com metodologia quantitativa, com a realização de entrevistas pessoais, domiciliares e presenciais, utilizando questionário estruturado junto a uma amostra representativa do eleitorado do Estado de São Paulo.",
+      "samplingPlan": "\"A amostra será representativa do eleitorado da área pesquisada e será selecionada em três etapas. Na primeira etapa realiza-se um sorteio probabilístico dos municípios onde as entrevistas serão realizadas através do método PPT (Probabilidade Proporcional ao Tamanho), considerando a população eleitora com 16 anos ou mais residente nos municípios como base para essa seleção. Na segunda etapa, faz-se um sorteio probabilístico das localidades, onde as entrevistas serão realizadas, através do método PPT (Probabilidade Proporcional ao Tamanho), tomando a população eleitora de 16 anos ou mais residente nas localidades como base para essa seleção. Na terceira etapa, a seleção do entrevistado dentro da localidade, será feita utilizando-se quotas amostrais proporcionais, em função das seguintes variáveis: GÊNERO: TSE Maio 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_metricas=E&p24_back=22&p24_cruzamento_1=ds_sexo&clear=24&p0_uf=SP&p0_mes=5&debug=LEVEL5&session=312990078978641) Masculino - 47%; | Feminino - 53%; | FAIXA ETÁRIA: TSE Maio 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_faixa_etaria&p24_metricas=E&p24_back=22&clear=24&p0_uf=SP&p0_mes=5&debug=LEVEL5&session=8904950028837) Entre 16 e 24 anos: 11%; | Entre 25 e 34 anos: 18%; | Entre 35 e 44 anos: 20%; | Entre 45 e 59 anos: 26%; | Com 60 anos ou mais: 25%; | ESCOLARIDADE: TSE Maio 2026 (https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_grau_instrucao&p24_metricas=E&p24_back=22&clear=24&p0_uf=SP&p0_mes=5&debug=LEVEL5&session=309383598034615) De analfabeto até ensino fundamental completo: 29%; | Ensino médio incompleto ou completo: 50% | Ensino superior incompleto ou completo: 21% | RENDA DOMICILIAR MENSAL: (https://cidades.ibge.gov.br/brasil/sp/pesquisa/23/24304) IBGE - Censo 2010. Observação: Conforme informações obtidas do Instituto Brasileiro de Geografia e Estatística, o IBGE, não divulgou - e não tem previsão - de data para divulgação do perfil econômico (nível econômico) da população brasileira; portanto, os dados quanto ao nível econômico obtidos no Censo 2022, não podem ser utilizados, pois não foram publicados. (https://censo2022.ibge.gov.br/panorama/) Sem rendimentos até 2 salários mínimos: 31% | Mais de 2 a 5 salários mínimos: 39% | Mais de 5 salários mínimos: 30% | Está prevista eventual ponderação para correção das variáveis gênero e faixa etária, com base nos percentuais acima apresentados, caso ocorram diferenças superiores a 3,0 (três) pontos percentuais entre o previsto na amostra e a coleta realizada; para as variáveis escolaridade e renda domiciliar mensal, o fator de ponderação é igual a 1 (resultados obtidos no campo). O nível de confiança estimado é de 95% (noventa e cinco por cento) para uma margem de erro estimada, considerando uma técnica de amostragem aleatória simples, de aproximadamente 2,5 (dois vírgula cinco) pontos percentuais para mais ou para menos sobre os resultados obtidos.\"",
+      "contractors": [
+        {
+          "name": "INSTITUTO PARANA DE PESQUISAS E ANALISE DE CONSUMIDOR LTDA",
+          "amount": 0.0,
+          "payer": false,
+          "resourceOrigin": ""
+        }
+      ]
+    }
+  }
+}

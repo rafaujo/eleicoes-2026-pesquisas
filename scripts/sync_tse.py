@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sincroniza o recorte oficial do TSE e monitora novos registros presidenciais."""
+"""Sincroniza recortes oficiais do TSE e monitora registros por eleição."""
 
 from __future__ import annotations
 
@@ -22,6 +22,9 @@ ROOT = Path(__file__).resolve().parents[1]
 POLLS_FILE = ROOT / "data" / "polls.json"
 METADATA_OUTPUT = ROOT / "data" / "tse-metadata.json"
 MONITOR_OUTPUT = ROOT / "data" / "tse-monitor.json"
+SP_POLLS_FILE = ROOT / "data" / "polls-sp-governor.json"
+SP_METADATA_OUTPUT = ROOT / "data" / "tse-metadata-sp.json"
+SP_MONITOR_OUTPUT = ROOT / "data" / "tse-monitor-sp.json"
 
 
 def parse_args() -> argparse.Namespace:
@@ -29,9 +32,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--bootstrap-monitor",
         action="store_true",
-        help="registra o catálogo atual como linha de base, sem criar pendências",
+        help="reinicializa todos os monitores com o catálogo atual, sem criar pendências",
     )
-    parser.add_argument("--summary", type=Path, help="grava um resumo Markdown das pendências")
+    parser.add_argument(
+        "--bootstrap-sp-monitor",
+        action="store_true",
+        help="inicializa somente o monitor de São Paulo, preservando o presidencial",
+    )
+    parser.add_argument("--summary", type=Path, help="grava o resumo presidencial (compatibilidade)")
+    parser.add_argument("--summary-president", type=Path, help="grava o resumo presidencial")
+    parser.add_argument("--summary-sp", type=Path, help="grava o resumo de São Paulo")
     parser.add_argument("--github-output", type=Path, help="acrescenta resultados ao GITHUB_OUTPUT")
     return parser.parse_args()
 
@@ -81,19 +91,27 @@ def source_generated_at(rows: list[dict[str, str]]) -> str:
     return f"{rows[0]['DT_GERACAO']} {rows[0]['HH_GERACAO']}"
 
 
-def curated_protocols() -> set[str]:
-    payload = json.loads(POLLS_FILE.read_text(encoding="utf-8"))
+def curated_protocols(path: Path = POLLS_FILE) -> set[str]:
+    payload = json.loads(path.read_text(encoding="utf-8"))
     protocols = {poll["protocol"] for poll in payload.get("polls", [])}
     if not protocols:
-        raise RuntimeError("Nenhum protocolo curado foi encontrado em data/polls.json")
+        raise RuntimeError(f"Nenhum protocolo curado foi encontrado em {path.relative_to(ROOT)}")
     return protocols
 
 
 def presidential_rows(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
+    return office_rows(rows, "BR", "Presidente")
+
+
+def office_rows(
+    rows: list[dict[str, str]],
+    jurisdiction: str,
+    office: str,
+) -> dict[str, dict[str, str]]:
     return {
         row["NR_PROTOCOLO_REGISTRO"]: row
         for row in rows
-        if row.get("SG_UE") == "BR" and "Presidente" in row.get("DS_CARGO", "")
+        if row.get("SG_UE") == jurisdiction and office in row.get("DS_CARGO", "")
     }
 
 
@@ -166,6 +184,7 @@ def update_metadata(
     protocols: set[str],
     generated_at: str,
     resource_urls: dict[str, str],
+    output_path: Path = METADATA_OUTPUT,
 ) -> bool:
     missing = sorted(protocols - poll_rows.keys())
     if missing:
@@ -181,7 +200,7 @@ def update_metadata(
         "resourceUrls": resource_urls,
         "records": records,
     }
-    current = read_json(METADATA_OUTPUT)
+    current = read_json(output_path)
     if current and all(current.get(key) == value for key, value in core.items()):
         return False
 
@@ -190,7 +209,7 @@ def update_metadata(
         "syncedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
         **core,
     }
-    write_json(METADATA_OUTPUT, payload)
+    write_json(output_path, payload)
     return True
 
 
@@ -243,12 +262,17 @@ def markdown_escape(value: object) -> str:
     return str(value or "—").replace("|", "\\|").replace("\n", " ")
 
 
-def write_summary(path: Path, monitor: dict) -> None:
+def write_summary(
+    path: Path,
+    monitor: dict,
+    heading: str = "Pesquisas presidenciais aguardando revisão",
+    database: str = "data/polls.json",
+) -> None:
     pending = list(monitor.get("pending", {}).values())
     lines = [
-        "## Pesquisas presidenciais aguardando revisão",
+        f"## {heading}",
         "",
-        "O monitor encontrou registros nacionais novos no PesqEle/TSE. Antes de publicar percentuais, confira o cenário e vincule uma fonte de resultados verificável em `data/polls.json`.",
+        f"O monitor encontrou registros novos no PesqEle/TSE. Antes de publicar percentuais, confira o cenário e vincule uma fonte de resultados verificável em `{database}`.",
         "",
     ]
     if not pending:
@@ -288,16 +312,28 @@ def main() -> int:
     all_polls = national_rows(fetch(polls_url), "pesquisa_eleitoral_2026_BRASIL.csv")
     all_contractors = national_rows(fetch(contractors_url), "pesquisa_contratante_2026_BRASIL.csv")
     polls = presidential_rows(all_polls)
+    sp_polls = office_rows(all_polls, "SP", "Governador")
     contractors = contractor_index(all_contractors)
-    protocols = curated_protocols()
+    protocols = curated_protocols(POLLS_FILE)
+    sp_protocols = curated_protocols(SP_POLLS_FILE)
     generated_at = source_generated_at(all_polls)
+    resource_urls = {"polls": polls_url, "contractors": contractors_url}
 
     metadata_changed = update_metadata(
         polls,
         contractors,
         protocols,
         generated_at,
-        {"polls": polls_url, "contractors": contractors_url},
+        resource_urls,
+        METADATA_OUTPUT,
+    )
+    sp_metadata_changed = update_metadata(
+        sp_polls,
+        contractors,
+        sp_protocols,
+        generated_at,
+        resource_urls,
+        SP_METADATA_OUTPUT,
     )
     existing_monitor = read_json(MONITOR_OUTPUT)
     monitor, new_protocols, monitor_changed = build_monitor(
@@ -311,20 +347,50 @@ def main() -> int:
     if monitor_changed:
         write_json(MONITOR_OUTPUT, monitor)
 
-    if args.summary:
-        write_summary(args.summary, monitor)
+    existing_sp_monitor = read_json(SP_MONITOR_OUTPUT)
+    sp_monitor, new_sp_protocols, sp_monitor_changed = build_monitor(
+        existing_sp_monitor,
+        sp_polls,
+        contractors,
+        sp_protocols,
+        generated_at,
+        args.bootstrap_monitor or args.bootstrap_sp_monitor,
+    )
+    if sp_monitor_changed:
+        write_json(SP_MONITOR_OUTPUT, sp_monitor)
+
+    presidential_summary = args.summary_president or args.summary
+    if presidential_summary:
+        write_summary(presidential_summary, monitor)
+    if args.summary_sp:
+        write_summary(
+            args.summary_sp,
+            sp_monitor,
+            "Pesquisas de São Paulo aguardando revisão",
+            "data/polls-sp-governor.json",
+        )
     if args.github_output:
         write_github_output(args.github_output, {
-            "metadata_changed": metadata_changed,
-            "monitor_changed": monitor_changed,
+            "metadata_changed": metadata_changed or sp_metadata_changed,
+            "monitor_changed": monitor_changed or sp_monitor_changed,
             "new_count": len(new_protocols),
             "pending_count": len(monitor["pending"]),
+            "president_metadata_changed": metadata_changed,
+            "president_monitor_changed": monitor_changed,
+            "president_new_count": len(new_protocols),
+            "president_pending_count": len(monitor["pending"]),
+            "sp_metadata_changed": sp_metadata_changed,
+            "sp_monitor_changed": sp_monitor_changed,
+            "sp_new_count": len(new_sp_protocols),
+            "sp_pending_count": len(sp_monitor["pending"]),
             "source_generated_at": generated_at,
         })
 
     print(
-        f"{len(protocols)} registros curados; {len(polls)} registros presidenciais monitorados; "
-        f"{len(new_protocols)} novos; {len(monitor['pending'])} pendentes"
+        f"Presidencial: {len(protocols)} curados, {len(polls)} monitorados, "
+        f"{len(new_protocols)} novos, {len(monitor['pending'])} pendentes; "
+        f"São Paulo: {len(sp_protocols)} curados, {len(sp_polls)} monitorados, "
+        f"{len(new_sp_protocols)} novos, {len(sp_monitor['pending'])} pendentes"
     )
     return 0
 

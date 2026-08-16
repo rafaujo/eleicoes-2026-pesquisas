@@ -213,6 +213,52 @@ def validate_poll_database(path: Path, errors: list[str]) -> list[dict]:
     return polls
 
 
+def validate_official_files(
+    polls: list[dict],
+    metadata_path: Path,
+    monitor_path: Path,
+    errors: list[str],
+    election_id: str,
+) -> tuple[int, int]:
+    for path in (metadata_path, monitor_path):
+        if not path.is_file():
+            errors.append(f"Arquivo oficial ausente para {election_id}: {path.relative_to(ROOT).as_posix()}")
+            return 0, 0
+
+    protocols = [poll.get("protocol") for poll in polls if isinstance(poll, dict)]
+    protocol_set = set(protocols)
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    records = metadata.get("records", {})
+    missing_records = sorted(protocol_set - set(records))
+    extra_records = sorted(set(records) - protocol_set)
+    if missing_records:
+        errors.append(f"Protocolos sem metadados do TSE em {election_id}: {', '.join(missing_records)}")
+    if extra_records:
+        errors.append(f"Metadados sem pesquisa curada em {election_id}: {', '.join(extra_records)}")
+    for protocol, record in records.items():
+        missing_fields = sorted(REQUIRED_METADATA_FIELDS - set(record))
+        if missing_fields:
+            errors.append(f"{protocol} sem campos: {', '.join(missing_fields)}")
+        if record.get("protocol") != protocol:
+            errors.append(f"Chave e protocolo divergem em {protocol}")
+        if not isinstance(record.get("sample"), int) or record.get("sample", 0) <= 0:
+            errors.append(f"Amostra inválida em {protocol}")
+
+    monitor = json.loads(monitor_path.read_text(encoding="utf-8"))
+    seen = monitor.get("seenProtocols", [])
+    pending = monitor.get("pending", {})
+    if monitor.get("schemaVersion") != 1:
+        errors.append(f"Versão desconhecida de {monitor_path.relative_to(ROOT).as_posix()}")
+    if seen != sorted(set(seen)):
+        errors.append(f"seenProtocols deve estar ordenado e sem duplicatas em {election_id}")
+    overlap = sorted(protocol_set & set(pending))
+    if overlap:
+        errors.append(f"Protocolos curados ainda estão pendentes em {election_id}: {', '.join(overlap)}")
+    if not set(pending).issubset(set(seen)):
+        errors.append(f"Há protocolos pendentes ausentes de seenProtocols em {election_id}")
+    return len(seen), len(pending)
+
+
 def main() -> int:
     errors: list[str] = []
     elections_data = json.loads(ELECTIONS_FILE.read_text(encoding="utf-8"))
@@ -228,8 +274,11 @@ def main() -> int:
         errors.append("defaultElection não existe em data/elections.json")
 
     all_databases: dict[Path, list[dict]] = {}
+    monitored_total = 0
+    pending_total = 0
     required_election_fields = {
-        "id", "label", "context", "dataFile", "defaultPeriod", "defaultScenario", "eyebrow", "title"
+        "id", "label", "context", "dataFile", "metadataFile", "monitorFile",
+        "defaultPeriod", "defaultScenario", "eyebrow", "title"
     }
     data_root = (ROOT / "data").resolve()
     for position, item in enumerate(elections, start=1):
@@ -260,40 +309,19 @@ def main() -> int:
             errors.append(f"Cenário padrão ausente para {item['id']}")
         if str(item["defaultPeriod"]) not in {"7", "14", "21", "30", "60", "90", "180"}:
             errors.append(f"Período padrão inválido para {item['id']}")
-
-    presidential_polls = all_databases.get(POLLS_FILE.resolve(), [])
-    protocols = [poll.get("protocol") for poll in presidential_polls if isinstance(poll, dict)]
-
-    metadata = json.loads(METADATA_FILE.read_text(encoding="utf-8"))
-    records = metadata.get("records", {})
-    protocol_set = set(protocols)
-    missing_records = sorted(protocol_set - set(records))
-    extra_records = sorted(set(records) - protocol_set)
-    if missing_records:
-        errors.append(f"Protocolos sem metadados do TSE: {', '.join(missing_records)}")
-    if extra_records:
-        errors.append(f"Metadados sem pesquisa curada: {', '.join(extra_records)}")
-    for protocol, record in records.items():
-        missing_fields = sorted(REQUIRED_METADATA_FIELDS - set(record))
-        if missing_fields:
-            errors.append(f"{protocol} sem campos: {', '.join(missing_fields)}")
-        if record.get("protocol") != protocol:
-            errors.append(f"Chave e protocolo divergem em {protocol}")
-        if not isinstance(record.get("sample"), int) or record.get("sample", 0) <= 0:
-            errors.append(f"Amostra inválida em {protocol}")
-
-    monitor = json.loads(MONITOR_FILE.read_text(encoding="utf-8"))
-    seen = monitor.get("seenProtocols", [])
-    pending = monitor.get("pending", {})
-    if monitor.get("schemaVersion") != 1:
-        errors.append("Versão desconhecida de data/tse-monitor.json")
-    if seen != sorted(set(seen)):
-        errors.append("seenProtocols deve estar ordenado e sem duplicatas")
-    overlap = sorted(protocol_set & set(pending))
-    if overlap:
-        errors.append(f"Protocolos curados ainda estão pendentes: {', '.join(overlap)}")
-    if not set(pending).issubset(set(seen)):
-        errors.append("Há protocolos pendentes ausentes de seenProtocols")
+        metadata_path = (ROOT / str(item["metadataFile"])).resolve()
+        monitor_path = (ROOT / str(item["monitorFile"])).resolve()
+        try:
+            metadata_path.relative_to(data_root)
+            monitor_path.relative_to(data_root)
+        except ValueError:
+            errors.append(f"Arquivos oficiais fora de data/ para {item['id']}")
+            continue
+        monitored, pending = validate_official_files(
+            polls, metadata_path, monitor_path, errors, str(item["id"])
+        )
+        monitored_total += monitored
+        pending_total += pending
 
     if errors:
         print("Falha na validação:", file=sys.stderr)
@@ -304,7 +332,7 @@ def main() -> int:
     print(
         f"Dados válidos: {sum(len(polls) for polls in all_databases.values())} pesquisas em "
         f"{len(all_databases)} eleições, "
-        f"{len(seen)} protocolos monitorados e {len(pending)} pendentes"
+        f"{monitored_total} protocolos monitorados e {pending_total} pendentes"
     )
     return 0
 
