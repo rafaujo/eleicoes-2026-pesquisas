@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "16/08/2026 05:46:46",
+  "sourceGeneratedAt": "17/08/2026 05:46:24",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -419,6 +419,7 @@
     "BR067732026",
     "BR067762026",
     "BR067802026",
+    "BR067832026",
     "BR067982026",
     "BR068082026",
     "BR068152026",
@@ -536,6 +537,7 @@
     "BR087132026",
     "BR087302026",
     "BR087612026",
+    "BR087652026",
     "BR087742026",
     "BR087912026",
     "BR087942026",
@@ -605,5 +607,32 @@
     "BR099642026",
     "BR099982026"
   ],
-  "pending": {}
+  "pending": {
+    "BR067832026": {
+      "protocol": "BR067832026",
+      "registeredAt": "2026-08-16 21:24:40",
+      "fieldStart": "2026-08-17",
+      "fieldEnd": "2026-08-21",
+      "disclosureDate": "2026-08-22",
+      "sample": 1200,
+      "company": "INSTITUTO OPNUS DE PESQUISA, CONSULTORIA E INTELIGENCIA DE DADOS LTDA",
+      "tradeName": "INSTITUTO OPNUS",
+      "contractors": [
+        "ALVES QUATRO ASSESSORIA DE COMUNICACAO LTDA / ALVES QUATRO"
+      ]
+    },
+    "BR087652026": {
+      "protocol": "BR087652026",
+      "registeredAt": "2026-08-16 18:21:09",
+      "fieldStart": "2026-08-18",
+      "fieldEnd": "2026-08-20",
+      "disclosureDate": "2026-08-22",
+      "sample": 1000,
+      "company": "INSTITUTO DE PESQUISAS PERFIL LTDA",
+      "tradeName": "",
+      "contractors": [
+        "INSTITUTO DE PESQUISAS PERFIL LTDA"
+      ]
+    }
+  }
 }
