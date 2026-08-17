@@ -2,7 +2,7 @@
 
 Central independente e transparente de pesquisas eleitorais brasileiras para as eleições de 2026.
 
-O projeto cobre a disputa presidencial e começa a expansão estadual pelo governo de São Paulo.
+O projeto cobre a disputa presidencial e os governos de São Paulo e Minas Gerais.
 
 ## Executar localmente
 
@@ -17,14 +17,15 @@ Depois acesse `http://localhost:4173`.
 ## O que já funciona
 
 - painel responsivo com média ponderada por recência e tamanho da amostra;
-- seletor entre a eleição presidencial e o governo de São Paulo, com URL compartilhável por eleição;
-- recorte móvel de 7, 14, 21, 30, 60, 90 ou 180 dias, com janela padrão de 21 dias na presidencial e 90 dias em São Paulo;
+- seletor agrupado entre Brasil e eleições estaduais, com URL compartilhável por eleição;
+- recorte móvel de 7, 14, 21, 30, 60, 90 ou 180 dias, com janela padrão própria por eleição;
 - seletor dinâmico de cenários, com primeiro turno e segundo turno entre Lula e Flávio Bolsonaro, Ronaldo Caiado ou Romeu Zema;
 - gráfico de evolução com pontos por pesquisa, linhas da média ponderada e faixas de incerteza;
 - filtros por período e busca por instituto/contratante;
 - tabela de resultados e ficha metodológica;
 - 33 levantamentos presidenciais com protocolos e metadados oficiais do PesqEle/TSE;
 - seis levantamentos paulistas: três com a lista consolidada de 1º turno e seis no confronto Tarcísio × Haddad;
+- dois levantamentos mineiros, com cenário atual de 1º turno e confrontos de 2º turno mantidos em séries comparáveis;
 - exportação dos dados filtrados em CSV;
 - navegação por teclado, foco visível e suporte a movimento reduzido.
 
@@ -38,6 +39,8 @@ O arquivo `data/elections.json` lista as eleições disponíveis e aponta para u
 
 Em São Paulo, `data/polls-sp-governor.json` separa a lista consolidada de cinco candidaturas do 1º turno do confronto Tarcísio × Haddad. O primeiro recorte começa em julho, quando os institutos passaram a usar a mesma lista; o segundo tem série desde abril.
 
+Em Minas Gerais, `data/polls-mg-governor.json` usa a lista mais recente de candidaturas no cenário principal e mantém cada confronto de 2º turno como uma série independente. Listas antigas incompatíveis não entram na média do cenário atual.
+
 ## Cadastrar uma pesquisa
 
 Copie `data/poll-template.json` para um arquivo de trabalho, preencha os percentuais e a fonte e execute. Para uma base estadual, informe também `--database`:
@@ -45,6 +48,7 @@ Copie `data/poll-template.json` para um arquivo de trabalho, preencha os percent
 ```powershell
 python scripts/add_poll.py work/nova-pesquisa.json
 python scripts/add_poll.py work/nova-pesquisa-sp.json --database data/polls-sp-governor.json
+python scripts/add_poll.py work/nova-pesquisa-mg.json --database data/polls-mg-governor.json
 python scripts/sync_tse.py
 python scripts/validate_data.py
 ```
@@ -57,9 +61,9 @@ Fonte oficial de metadados: [Pesquisas Eleitorais 2026 — Dados Abertos do TSE]
 
 O sincronizador usa apenas a biblioteca padrão do Python. Ele consulta o catálogo CKAN do TSE, baixa os ZIPs nacionais de pesquisas e contratantes e executa estas tarefas:
 
-- atualiza `data/tse-metadata.json` e `data/tse-metadata-sp.json` para os protocolos que já possuem resultados curados no site;
-- compara os registros presidenciais com `data/tse-monitor.json`;
-- compara os registros para governador de São Paulo com `data/tse-monitor-sp.json`;
+- lê em `data/elections.json` quais cargos e territórios devem ser acompanhados;
+- atualiza o arquivo de metadados de cada eleição para os protocolos que já possuem resultados curados no site;
+- compara os registros do TSE com o monitor independente de cada eleição;
 - coloca protocolos novos em filas editoriais separadas por eleição.
 
 ```powershell
@@ -76,18 +80,18 @@ node --check app.js
 
 ## Atualização e publicação automáticas
 
-O workflow `.github/workflows/update-polls.yml` roda todos os dias às 07h17 e 16h17 no horário de Brasília e também pode ser iniciado manualmente na aba **Actions** do GitHub. O monitor automático cobre a disputa presidencial e o governo de São Paulo.
+O workflow `.github/workflows/update-polls.yml` roda todos os dias às 07h17 e 16h17 no horário de Brasília e também pode ser iniciado manualmente na aba **Actions** do GitHub. O monitor automático cobre todas as eleições cadastradas, hoje presidencial, São Paulo e Minas Gerais.
 
 Em cada execução ele:
 
 1. baixa a versão diária do conjunto oficial do TSE;
-2. atualiza metadados alterados e detecta protocolos presidenciais novos;
+2. atualiza metadados alterados e detecta protocolos novos em cada eleição;
 3. executa os testes e as validações de consistência;
 4. cria um commit na `main` somente quando os arquivos realmente mudaram;
-5. abre ou atualiza issues separadas para a presidencial e São Paulo com os protocolos que ainda precisam de fonte de resultados;
+5. abre ou atualiza uma issue separada por eleição com os protocolos que ainda precisam de fonte de resultados;
 6. solicita uma nova publicação do GitHub Pages após o commit.
 
-O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. Depois que os percentuais forem conferidos em uma publicação ou relatório e adicionados a `data/polls.json` ou `data/polls-sp-governor.json`, a próxima sincronização incorpora os metadados oficiais, remove a pendência e republica o site.
+O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. Depois que os percentuais forem conferidos em uma publicação ou relatório e adicionados à base indicada em `data/elections.json`, a próxima sincronização incorpora os metadados oficiais, remove a pendência e republica o site.
 
 O workflow `.github/workflows/validate.yml` também valida todo pull request e todo push feito manualmente na `main`.
 
@@ -107,7 +111,7 @@ A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens
 
 ## Próximas etapas
 
-- ampliar a cobertura estadual e o monitoramento para outras UFs;
+- ampliar a cobertura estadual e o monitoramento para outras UFs usando o catálogo;
 - acrescentar novos cenários à medida que forem publicados e páginas individuais;
 - criar painel editorial para revisão e publicação;
 

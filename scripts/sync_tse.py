@@ -19,12 +19,9 @@ PACKAGE_API = "https://dadosabertos.tse.jus.br/api/3/action/package_show?id=pesq
 DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026"
 PESQELE_URL = "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml"
 ROOT = Path(__file__).resolve().parents[1]
+ELECTIONS_FILE = ROOT / "data" / "elections.json"
 POLLS_FILE = ROOT / "data" / "polls.json"
 METADATA_OUTPUT = ROOT / "data" / "tse-metadata.json"
-MONITOR_OUTPUT = ROOT / "data" / "tse-monitor.json"
-SP_POLLS_FILE = ROOT / "data" / "polls-sp-governor.json"
-SP_METADATA_OUTPUT = ROOT / "data" / "tse-metadata-sp.json"
-SP_MONITOR_OUTPUT = ROOT / "data" / "tse-monitor-sp.json"
 
 
 def parse_args() -> argparse.Namespace:
@@ -37,11 +34,20 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--bootstrap-sp-monitor",
         action="store_true",
-        help="inicializa somente o monitor de São Paulo, preservando o presidencial",
+        help="inicializa somente o monitor de São Paulo (compatibilidade)",
+    )
+    parser.add_argument(
+        "--bootstrap-target",
+        action="append",
+        default=[],
+        metavar="CHAVE",
+        help="inicializa somente o monitor identificado pela chave tse.key do catálogo",
     )
     parser.add_argument("--summary", type=Path, help="grava o resumo presidencial (compatibilidade)")
     parser.add_argument("--summary-president", type=Path, help="grava o resumo presidencial")
     parser.add_argument("--summary-sp", type=Path, help="grava o resumo de São Paulo")
+    parser.add_argument("--summary-dir", type=Path, help="grava um resumo por eleição neste diretório")
+    parser.add_argument("--issue-manifest", type=Path, help="grava o manifesto das filas editoriais")
     parser.add_argument("--github-output", type=Path, help="acrescenta resultados ao GITHUB_OUTPUT")
     return parser.parse_args()
 
@@ -311,87 +317,99 @@ def main() -> int:
 
     all_polls = national_rows(fetch(polls_url), "pesquisa_eleitoral_2026_BRASIL.csv")
     all_contractors = national_rows(fetch(contractors_url), "pesquisa_contratante_2026_BRASIL.csv")
-    polls = presidential_rows(all_polls)
-    sp_polls = office_rows(all_polls, "SP", "Governador")
     contractors = contractor_index(all_contractors)
-    protocols = curated_protocols(POLLS_FILE)
-    sp_protocols = curated_protocols(SP_POLLS_FILE)
     generated_at = source_generated_at(all_polls)
     resource_urls = {"polls": polls_url, "contractors": contractors_url}
+    catalog = json.loads(ELECTIONS_FILE.read_text(encoding="utf-8"))
+    elections = catalog.get("elections", [])
+    if not elections:
+        raise RuntimeError("Nenhuma eleição encontrada em data/elections.json")
 
-    metadata_changed = update_metadata(
-        polls,
-        contractors,
-        protocols,
-        generated_at,
-        resource_urls,
-        METADATA_OUTPUT,
-    )
-    sp_metadata_changed = update_metadata(
-        sp_polls,
-        contractors,
-        sp_protocols,
-        generated_at,
-        resource_urls,
-        SP_METADATA_OUTPUT,
-    )
-    existing_monitor = read_json(MONITOR_OUTPUT)
-    monitor, new_protocols, monitor_changed = build_monitor(
-        existing_monitor,
-        polls,
-        contractors,
-        protocols,
-        generated_at,
-        args.bootstrap_monitor,
-    )
-    if monitor_changed:
-        write_json(MONITOR_OUTPUT, monitor)
+    results: list[dict] = []
+    outputs: dict[str, object] = {"source_generated_at": generated_at}
+    bootstrap_targets = set(args.bootstrap_target)
+    if args.bootstrap_sp_monitor:
+        bootstrap_targets.add("sp")
 
-    existing_sp_monitor = read_json(SP_MONITOR_OUTPUT)
-    sp_monitor, new_sp_protocols, sp_monitor_changed = build_monitor(
-        existing_sp_monitor,
-        sp_polls,
-        contractors,
-        sp_protocols,
-        generated_at,
-        args.bootstrap_monitor or args.bootstrap_sp_monitor,
-    )
-    if sp_monitor_changed:
-        write_json(SP_MONITOR_OUTPUT, sp_monitor)
+    for election in elections:
+        tse = election.get("tse")
+        if not isinstance(tse, dict):
+            raise RuntimeError(f"Configuração TSE ausente para {election.get('id', 'eleição sem ID')}")
 
-    presidential_summary = args.summary_president or args.summary
-    if presidential_summary:
-        write_summary(presidential_summary, monitor)
-    if args.summary_sp:
-        write_summary(
-            args.summary_sp,
-            sp_monitor,
-            "Pesquisas de São Paulo aguardando revisão",
-            "data/polls-sp-governor.json",
+        key = str(tse["key"])
+        poll_path = ROOT / election["dataFile"]
+        metadata_path = ROOT / election["metadataFile"]
+        monitor_path = ROOT / election["monitorFile"]
+        protocols = curated_protocols(poll_path)
+        poll_rows = office_rows(all_polls, str(tse["jurisdiction"]), str(tse["office"]))
+        metadata_changed = update_metadata(
+            poll_rows,
+            contractors,
+            protocols,
+            generated_at,
+            resource_urls,
+            metadata_path,
         )
-    if args.github_output:
-        write_github_output(args.github_output, {
-            "metadata_changed": metadata_changed or sp_metadata_changed,
-            "monitor_changed": monitor_changed or sp_monitor_changed,
-            "new_count": len(new_protocols),
-            "pending_count": len(monitor["pending"]),
-            "president_metadata_changed": metadata_changed,
-            "president_monitor_changed": monitor_changed,
-            "president_new_count": len(new_protocols),
-            "president_pending_count": len(monitor["pending"]),
-            "sp_metadata_changed": sp_metadata_changed,
-            "sp_monitor_changed": sp_monitor_changed,
-            "sp_new_count": len(new_sp_protocols),
-            "sp_pending_count": len(sp_monitor["pending"]),
-            "source_generated_at": generated_at,
+        monitor, new_protocols, monitor_changed = build_monitor(
+            read_json(monitor_path),
+            poll_rows,
+            contractors,
+            protocols,
+            generated_at,
+            args.bootstrap_monitor or key in bootstrap_targets,
+        )
+        if monitor_changed:
+            write_json(monitor_path, monitor)
+
+        summary_path = args.summary_dir / f"{key}.md" if args.summary_dir else None
+        if key == "president":
+            summary_path = args.summary_president or args.summary or summary_path
+        elif key == "sp":
+            summary_path = args.summary_sp or summary_path
+        if summary_path:
+            write_summary(
+                summary_path,
+                monitor,
+                str(tse["issueHeading"]),
+                str(election["dataFile"]),
+            )
+
+        result = {
+            "key": key,
+            "label": election["context"],
+            "issueTitle": tse["issueTitle"],
+            "summaryFile": str(summary_path.resolve()) if summary_path else "",
+            "metadataChanged": metadata_changed,
+            "monitorChanged": monitor_changed,
+            "newCount": len(new_protocols),
+            "pendingCount": len(monitor["pending"]),
+            "curatedCount": len(protocols),
+            "monitoredCount": len(poll_rows),
+        }
+        results.append(result)
+        outputs.update({
+            f"{key}_metadata_changed": metadata_changed,
+            f"{key}_monitor_changed": monitor_changed,
+            f"{key}_new_count": len(new_protocols),
+            f"{key}_pending_count": len(monitor["pending"]),
         })
 
-    print(
-        f"Presidencial: {len(protocols)} curados, {len(polls)} monitorados, "
-        f"{len(new_protocols)} novos, {len(monitor['pending'])} pendentes; "
-        f"São Paulo: {len(sp_protocols)} curados, {len(sp_polls)} monitorados, "
-        f"{len(new_sp_protocols)} novos, {len(sp_monitor['pending'])} pendentes"
-    )
+    outputs.update({
+        "metadata_changed": any(item["metadataChanged"] for item in results),
+        "monitor_changed": any(item["monitorChanged"] for item in results),
+        "new_count": sum(item["newCount"] for item in results),
+        "pending_count": sum(item["pendingCount"] for item in results),
+    })
+    if args.issue_manifest:
+        write_json(args.issue_manifest, {"elections": results})
+    if args.github_output:
+        write_github_output(args.github_output, outputs)
+
+    print("; ".join(
+        f"{item['label']}: {item['curatedCount']} curados, {item['monitoredCount']} monitorados, "
+        f"{item['newCount']} novos, {item['pendingCount']} pendentes"
+        for item in results
+    ))
     return 0
 
 
