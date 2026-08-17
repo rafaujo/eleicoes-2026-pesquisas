@@ -4,6 +4,7 @@
   "elections": [
     {
       "id": "president-br",
+      "group": "Brasil",
       "label": "Presidencial",
       "context": "Brasil",
       "dataFile": "data/polls.json",
@@ -12,10 +13,18 @@
       "defaultPeriod": "21",
       "defaultScenario": "first-main",
       "eyebrow": "ELEIÇÕES 2026 · BRASIL",
-      "title": "A corrida presidencial, pesquisa por pesquisa."
+      "title": "A corrida presidencial, pesquisa por pesquisa.",
+      "tse": {
+        "key": "president",
+        "jurisdiction": "BR",
+        "office": "Presidente",
+        "issueTitle": "Novas pesquisas aguardando revisão",
+        "issueHeading": "Pesquisas presidenciais aguardando revisão"
+      }
     },
     {
       "id": "governor-sp",
+      "group": "Estados",
       "label": "Governo de SP",
       "context": "São Paulo",
       "dataFile": "data/polls-sp-governor.json",
@@ -24,7 +33,34 @@
       "defaultPeriod": "90",
       "defaultScenario": "first-main",
       "eyebrow": "ELEIÇÕES 2026 · SÃO PAULO",
-      "title": "A disputa pelo governo de São Paulo, pesquisa por pesquisa."
+      "title": "A disputa pelo governo de São Paulo, pesquisa por pesquisa.",
+      "tse": {
+        "key": "sp",
+        "jurisdiction": "SP",
+        "office": "Governador",
+        "issueTitle": "Novas pesquisas de São Paulo aguardando revisão",
+        "issueHeading": "Pesquisas de São Paulo aguardando revisão"
+      }
+    },
+    {
+      "id": "governor-mg",
+      "group": "Estados",
+      "label": "Governo de MG",
+      "context": "Minas Gerais",
+      "dataFile": "data/polls-mg-governor.json",
+      "metadataFile": "data/tse-metadata-mg.json",
+      "monitorFile": "data/tse-monitor-mg.json",
+      "defaultPeriod": "180",
+      "defaultScenario": "first-main",
+      "eyebrow": "ELEIÇÕES 2026 · MINAS GERAIS",
+      "title": "A disputa pelo governo de Minas Gerais, pesquisa por pesquisa.",
+      "tse": {
+        "key": "mg",
+        "jurisdiction": "MG",
+        "office": "Governador",
+        "issueTitle": "Novas pesquisas de Minas Gerais aguardando revisão",
+        "issueHeading": "Pesquisas de Minas Gerais aguardando revisão"
+      }
     }
   ]
 }

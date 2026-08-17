@@ -277,9 +277,10 @@ def main() -> int:
     monitored_total = 0
     pending_total = 0
     required_election_fields = {
-        "id", "label", "context", "dataFile", "metadataFile", "monitorFile",
+        "id", "group", "label", "context", "dataFile", "metadataFile", "monitorFile", "tse",
         "defaultPeriod", "defaultScenario", "eyebrow", "title"
     }
+    tse_keys: list[str] = []
     data_root = (ROOT / "data").resolve()
     for position, item in enumerate(elections, start=1):
         if not isinstance(item, dict):
@@ -289,6 +290,15 @@ def main() -> int:
         if missing:
             errors.append(f"Eleição {item.get('id', position)} sem campos: {', '.join(missing)}")
             continue
+        tse = item["tse"]
+        required_tse_fields = {"key", "jurisdiction", "office", "issueTitle", "issueHeading"}
+        if not isinstance(tse, dict) or required_tse_fields - set(tse):
+            errors.append(f"Configuração TSE inválida para {item['id']}")
+            continue
+        key = str(tse["key"])
+        if not key.replace("_", "").isalnum():
+            errors.append(f"Chave TSE inválida para {item['id']}: {key}")
+        tse_keys.append(key)
         path = (ROOT / str(item["dataFile"])).resolve()
         try:
             path.relative_to(data_root)
@@ -322,6 +332,9 @@ def main() -> int:
         )
         monitored_total += monitored
         pending_total += pending
+
+    if duplicate_values(tse_keys):
+        errors.append("Há chaves TSE duplicadas em data/elections.json")
 
     if errors:
         print("Falha na validação:", file=sys.stderr)

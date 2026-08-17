@@ -490,8 +490,18 @@ async function loadData() {
     }
     electionCatalog = catalog.elections;
     const electionSelect = document.querySelector("#election-select");
-    electionSelect.innerHTML = electionCatalog
-      .map((election) => `<option value="${election.id}">${escapeHtml(election.label)} · ${escapeHtml(election.context)}</option>`)
+    const electionGroups = new Map();
+    electionCatalog.forEach((election) => {
+      const group = election.group || "Eleições";
+      if (!electionGroups.has(group)) electionGroups.set(group, []);
+      electionGroups.get(group).push(election);
+    });
+    electionSelect.innerHTML = [...electionGroups.entries()]
+      .map(([group, elections]) => `
+        <optgroup label="${escapeHtml(group)}">
+          ${elections.map((election) => `<option value="${election.id}">${escapeHtml(election.label)} · ${escapeHtml(election.context)}</option>`).join("")}
+        </optgroup>
+      `)
       .join("");
     const requestedElection = new URLSearchParams(window.location.search).get("eleicao");
     await loadElection(requestedElection || catalog.defaultElection);
