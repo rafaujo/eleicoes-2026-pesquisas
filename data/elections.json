@@ -18,6 +18,7 @@
         "key": "president",
         "jurisdiction": "BR",
         "office": "Presidente",
+        "reviewSince": "2026-08-16",
         "issueTitle": "Novas pesquisas aguardando revisão",
         "issueHeading": "Pesquisas presidenciais aguardando revisão",
         "excludedProtocols": [

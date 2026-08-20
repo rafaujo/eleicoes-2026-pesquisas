@@ -76,6 +76,55 @@
   ],
   "polls": [
     {
+      "id": 34,
+      "pollster": "Nexus",
+      "publication": "BTG Pactual",
+      "protocol": "BR033172026",
+      "published": "2026-08-17",
+      "start": "2026-08-14",
+      "end": "2026-08-16",
+      "field": "14–16 ago",
+      "sample": 2003,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Telefônica com entrevistadores",
+      "resultSource": "https://www.bol.uol.com.br/noticias/2026/08/17/btgnexus-pesquisa-presidencial.amp.htm",
+      "resultSourceLabel": "UOL/BOL — resultados de 1º e 2º turnos",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "lula": 41,
+            "flavio": 36,
+            "caiado": 5,
+            "zema": 4,
+            "renan": 4
+          },
+          "undecided": 7
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 47,
+            "flavio": 44
+          },
+          "undecided": 9
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 45,
+            "caiado": 42
+          },
+          "undecided": 13
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 46,
+            "zema": 41
+          },
+          "undecided": 13
+        }
+      }
+    },
+    {
       "id": 1,
       "pollster": "Quaest",
       "publication": "Genial/Quaest · G1",
