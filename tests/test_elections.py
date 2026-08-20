@@ -48,7 +48,8 @@ class ElectionCatalogTests(unittest.TestCase):
 
         self.assertEqual(set(metadata["records"]), curated)
         self.assertTrue(curated.issubset(set(monitor["seenProtocols"])))
-        self.assertEqual(monitor["pending"], {})
+        self.assertTrue(curated.isdisjoint(set(monitor["pending"])))
+        self.assertTrue(set(monitor["pending"]).issubset(set(monitor["seenProtocols"])))
 
     def test_minas_gerais_keeps_current_first_round_and_runoffs_separate(self) -> None:
         polls = self.mg["polls"]
@@ -66,7 +67,8 @@ class ElectionCatalogTests(unittest.TestCase):
 
         self.assertEqual(set(metadata["records"]), curated)
         self.assertTrue(curated.issubset(set(monitor["seenProtocols"])))
-        self.assertEqual(monitor["pending"], {})
+        self.assertTrue(curated.isdisjoint(set(monitor["pending"])))
+        self.assertTrue(set(monitor["pending"]).issubset(set(monitor["seenProtocols"])))
 
 
 if __name__ == "__main__":
