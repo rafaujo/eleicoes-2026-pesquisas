@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "17/08/2026 05:46:24",
+  "sourceGeneratedAt": "2026-08-20 22:16:02",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -387,6 +387,7 @@
     "BR062592026",
     "BR062672026",
     "BR062762026",
+    "BR062782026",
     "BR062872026",
     "BR063302026",
     "BR063452026",
@@ -483,6 +484,7 @@
     "BR078402026",
     "BR078452026",
     "BR078472026",
+    "BR078502026",
     "BR078732026",
     "BR078752026",
     "BR078782026",
@@ -608,6 +610,17 @@
     "BR099982026"
   ],
   "pending": {
+    "BR062782026": {
+      "protocol": "BR062782026",
+      "registeredAt": "2026-07-28",
+      "fieldStart": "2026-07-31",
+      "fieldEnd": "2026-08-02",
+      "disclosureDate": "2026-08-03",
+      "sample": 1200,
+      "company": "INSTITUTO DATATRENDS LTDA",
+      "tradeName": "DATATRENDS",
+      "contractors": []
+    },
     "BR067832026": {
       "protocol": "BR067832026",
       "registeredAt": "2026-08-16 21:24:40",
@@ -620,6 +633,17 @@
       "contractors": [
         "ALVES QUATRO ASSESSORIA DE COMUNICACAO LTDA / ALVES QUATRO"
       ]
+    },
+    "BR078502026": {
+      "protocol": "BR078502026",
+      "registeredAt": "2026-07-30",
+      "fieldStart": "2026-07-31",
+      "fieldEnd": "2026-08-04",
+      "disclosureDate": "2026-08-05",
+      "sample": 1600,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": []
     },
     "BR087652026": {
       "protocol": "BR087652026",
