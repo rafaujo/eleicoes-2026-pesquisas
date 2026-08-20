@@ -6,8 +6,10 @@ from urllib.error import HTTPError
 
 from scripts.sync_tse import (
     CONTRACTORS_ZIP_URL,
+    DATASET_URL,
     POLLS_ZIP_URL,
     build_monitor,
+    fetch,
     office_rows,
     resolve_resource_urls,
 )
@@ -27,6 +29,16 @@ def poll(protocol: str) -> dict[str, str]:
 
 
 class BuildMonitorTests(unittest.TestCase):
+    @patch("scripts.sync_tse.urllib.request.urlopen")
+    def test_fetch_uses_browser_headers_required_by_tse(self, urlopen_mock) -> None:
+        urlopen_mock.return_value.__enter__.return_value.read.return_value = b"ok"
+
+        self.assertEqual(fetch(POLLS_ZIP_URL), b"ok")
+        request = urlopen_mock.call_args.args[0]
+        self.assertIn("Mozilla/5.0", request.get_header("User-agent"))
+        self.assertEqual(request.get_header("Accept-language"), "pt-BR,pt;q=0.9,en;q=0.8")
+        self.assertEqual(request.get_header("Referer"), DATASET_URL)
+
     @patch("scripts.sync_tse.fetch")
     def test_cdn_urls_are_used_when_ckan_blocks_the_runner(self, fetch_mock) -> None:
         fetch_mock.side_effect = HTTPError("https://dadosabertos.tse.jus.br", 403, "Forbidden", {}, None)
