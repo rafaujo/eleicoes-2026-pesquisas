@@ -25,6 +25,7 @@ const brazilDateParts = Object.fromEntries(
 const DATA_REFERENCE_DATE = `${brazilDateParts.year}-${brazilDateParts.month}-${brazilDateParts.day}`;
 
 let tseData = null;
+let tseMonitor = null;
 
 const averageList = document.querySelector("#average-list");
 const undecidedAverage = document.querySelector("#undecided-average");
@@ -383,12 +384,22 @@ function updateStatus() {
     ? `${verified}/${polls.length} REGISTROS NO PESQELE`
     : `${polls.length} PROTOCOLOS INFORMADOS`;
   document.querySelector("#status-total").textContent = `${polls.length} pesquisas · ${integer.format(interviews)} entrevistas`;
-  if (tseData?.generatedAt) {
-    document.querySelector("#status-date").textContent = `Base TSE gerada em ${tseData.generatedAt.split(" ")[0]}`;
-  } else {
-    const latestPublication = polls.map((poll) => poll.published || poll.end).sort().at(-1);
-    document.querySelector("#status-date").textContent = `Atualizado até ${formatDate(latestPublication)}`;
-  }
+  const latestPublication = polls
+    .map((poll) => poll.published || officialRecord(poll)?.disclosureDate || poll.end)
+    .filter(Boolean)
+    .sort()
+    .at(-1);
+  document.querySelector("#status-date").textContent = `Resultados incorporados até ${formatDate(latestPublication)}`;
+
+  const monitorDate = tseMonitor?.sourceGeneratedAt?.match(/^\d{4}-\d{2}-\d{2}/)?.[0];
+  const legacyMetadataDate = tseData?.generatedAt?.match(/^(\d{2})\/(\d{2})\/(\d{4})/);
+  const metadataDate = legacyMetadataDate
+    ? `${legacyMetadataDate[3]}-${legacyMetadataDate[2]}-${legacyMetadataDate[1]}`
+    : tseData?.generatedAt?.match(/^\d{4}-\d{2}-\d{2}/)?.[0];
+  const tseDate = monitorDate || metadataDate;
+  document.querySelector("#status-tse-date").textContent = tseDate
+    ? `Cadastro do TSE monitorado em ${formatDate(tseDate)}`
+    : "Monitoramento do TSE indisponível";
 }
 
 function renderElectionChrome() {
@@ -439,6 +450,7 @@ async function loadElection(electionId) {
   document.querySelector("#period-select").value = state.period;
   document.querySelector("#poll-search").value = "";
   tseData = null;
+  tseMonitor = null;
 
   const pollsResponse = await fetch(selected.dataFile, { cache: "no-store" });
   if (!pollsResponse.ok) throw new Error(`${selected.dataFile}: HTTP ${pollsResponse.status}`);
@@ -458,6 +470,16 @@ async function loadElection(electionId) {
       tseData = await metadataResponse.json();
     } catch (error) {
       console.warn("Não foi possível carregar o recorte local do TSE.", error);
+    }
+  }
+
+  if (selected.monitorFile) {
+    try {
+      const monitorResponse = await fetch(selected.monitorFile, { cache: "no-store" });
+      if (!monitorResponse.ok) throw new Error(`HTTP ${monitorResponse.status}`);
+      tseMonitor = await monitorResponse.json();
+    } catch (error) {
+      console.warn("Não foi possível carregar o estado do monitor do TSE.", error);
     }
   }
 

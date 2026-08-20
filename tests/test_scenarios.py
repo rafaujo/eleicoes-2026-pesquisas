@@ -20,11 +20,20 @@ class ScenarioDataTests(unittest.TestCase):
         self.assertEqual(scenarios["runoff-lula-caiado"]["candidates"], ["lula", "caiado"])
         self.assertEqual(scenarios["runoff-lula-zema"]["candidates"], ["lula", "zema"])
 
-    def test_eight_polls_have_new_runoff_results(self) -> None:
+    def test_nine_polls_have_extended_runoff_results(self) -> None:
         polls = self.database["polls"]
 
-        self.assertEqual(sum("runoff-lula-caiado" in poll["scenarios"] for poll in polls), 8)
-        self.assertEqual(sum("runoff-lula-zema" in poll["scenarios"] for poll in polls), 8)
+        self.assertEqual(sum("runoff-lula-caiado" in poll["scenarios"] for poll in polls), 9)
+        self.assertEqual(sum("runoff-lula-zema" in poll["scenarios"] for poll in polls), 9)
+
+    def test_latest_nexus_values_match_published_scenarios(self) -> None:
+        nexus = next(poll for poll in self.database["polls"] if poll["protocol"] == "BR033172026")
+
+        self.assertEqual(nexus["published"], "2026-08-17")
+        self.assertEqual(nexus["scenarios"]["first-main"]["results"]["lula"], 41)
+        self.assertEqual(nexus["scenarios"]["runoff-lula-flavio"]["results"], {"lula": 47, "flavio": 44})
+        self.assertEqual(nexus["scenarios"]["runoff-lula-caiado"]["results"], {"lula": 45, "caiado": 42})
+        self.assertEqual(nexus["scenarios"]["runoff-lula-zema"]["results"], {"lula": 46, "zema": 41})
 
     def test_atlas_values_match_published_scenarios(self) -> None:
         atlas = next(poll for poll in self.database["polls"] if poll["protocol"] == "BR086022026")

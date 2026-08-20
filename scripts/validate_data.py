@@ -86,6 +86,11 @@ def validate_poll(
             date.fromisoformat(str(poll[field]))
         except ValueError:
             errors.append(f"{label} tem data inválida em {field}")
+    if "published" in poll:
+        try:
+            date.fromisoformat(str(poll["published"]))
+        except ValueError:
+            errors.append(f"{label} tem data inválida em published")
     if str(poll["start"]) > str(poll["end"]):
         errors.append(f"{label} termina antes do início do campo")
     for field in ("margin", "confidence"):
@@ -229,7 +234,26 @@ def validate_official_files(
     protocol_set = set(protocols)
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     records = metadata.get("records", {})
-    missing_records = sorted(protocol_set - set(records))
+    metadata_date_match = re.match(
+        r"^(?:(\d{4})-(\d{2})-(\d{2})|(\d{2})/(\d{2})/(\d{4}))",
+        str(metadata.get("generatedAt", "")),
+    )
+    metadata_date = ""
+    if metadata_date_match:
+        groups = metadata_date_match.groups()
+        metadata_date = "-".join(groups[:3]) if groups[0] else "-".join((groups[5], groups[4], groups[3]))
+    missing_records = []
+    for poll in polls:
+        protocol = poll.get("protocol") if isinstance(poll, dict) else None
+        if not protocol or protocol in records:
+            continue
+        # Uma pesquisa pode ser curada entre a publicação dos resultados e a
+        # próxima atualização do recorte de metadados. A sincronização seguinte
+        # deve preencher o registro oficial sem bloquear a publicação editorial.
+        if metadata_date and str(poll.get("published", "")) > metadata_date:
+            continue
+        missing_records.append(protocol)
+    missing_records.sort()
     extra_records = sorted(set(records) - protocol_set)
     if missing_records:
         errors.append(f"Protocolos sem metadados do TSE em {election_id}: {', '.join(missing_records)}")

@@ -133,6 +133,50 @@ class BuildMonitorTests(unittest.TestCase):
         self.assertTrue(changed)
         self.assertEqual(monitor["pending"], {})
 
+    def test_seen_protocol_is_recovered_when_disclosed_after_cutoff(self) -> None:
+        existing = {
+            "seenProtocols": ["BR000012026"],
+            "pending": {},
+            "sourceGeneratedAt": "2026-08-16 12:00:00",
+        }
+        rows = {"BR000012026": poll("BR000012026")}
+
+        monitor, new_protocols, changed = build_monitor(
+            existing,
+            rows,
+            {},
+            set(),
+            "2026-08-20 12:00:00",
+            False,
+            "2026-08-16",
+        )
+
+        self.assertTrue(changed)
+        self.assertEqual(new_protocols, [])
+        self.assertIn("BR000012026", monitor["pending"])
+
+    def test_seen_protocol_before_cutoff_is_not_reopened(self) -> None:
+        existing = {
+            "seenProtocols": ["BR000012026"],
+            "pending": {},
+            "sourceGeneratedAt": "2026-08-16 12:00:00",
+        }
+        old_poll = poll("BR000012026") | {"DT_DIVULGACAO": "2026-08-15"}
+
+        monitor, _, changed = build_monitor(
+            existing,
+            {"BR000012026": old_poll},
+            {},
+            set(),
+            "2026-08-20 12:00:00",
+            False,
+            "2026-08-16",
+        )
+
+        self.assertFalse(changed)
+        self.assertEqual(monitor["pending"], {})
+        self.assertEqual(monitor["sourceGeneratedAt"], "2026-08-20 12:00:00")
+
 
 if __name__ == "__main__":
     unittest.main()
