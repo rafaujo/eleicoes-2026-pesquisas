@@ -71,12 +71,12 @@ jobs:
           "repos/$GITHUB_REPOSITORY/pages/builds"
 
       - name: Atualizar filas editoriais
-        if: steps.sync.outputs.monitor_changed == 'true'
+        if: steps.sync.outputs.queue_changed == 'true'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          jq -c '.elections[] | select(.monitorChanged == true)' "$RUNNER_TEMP/issues.json" | while IFS= read -r item; do
+          jq -c '.elections[] | select(.queueChanged == true)' "$RUNNER_TEMP/issues.json" | while IFS= read -r item; do
             issue_title=$(jq -r '.issueTitle' <<< "$item")
             pending_count=$(jq -r '.pendingCount' <<< "$item")
             summary_file=$(jq -r '.summaryFile' <<< "$item")
