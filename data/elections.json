@@ -19,7 +19,19 @@
         "jurisdiction": "BR",
         "office": "Presidente",
         "issueTitle": "Novas pesquisas aguardando revisão",
-        "issueHeading": "Pesquisas presidenciais aguardando revisão"
+        "issueHeading": "Pesquisas presidenciais aguardando revisão",
+        "excludedProtocols": [
+          {
+            "protocol": "BR078502026",
+            "reason": "Amostra restrita ao estado da Bahia; não representa o eleitorado nacional.",
+            "source": "https://www.afos-analytics.com/pt-BR/daily/2026-08-02"
+          },
+          {
+            "protocol": "BR062782026",
+            "reason": "Amostra restrita ao estado de Alagoas; não representa o eleitorado nacional.",
+            "source": "https://www.opovo.com.br/noticias/politica/eleicoes/2026/08/03/amp/com-real-time-big-data-e-quaest-veja-quando-saem-as-pesquias-nesta-semana-3-a-7-8.html"
+          }
+        ]
       }
     },
     {
