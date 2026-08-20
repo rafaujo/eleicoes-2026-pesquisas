@@ -64,6 +64,7 @@ O sincronizador usa apenas a biblioteca padrão do Python. Ele consulta o catál
 - lê em `data/elections.json` quais cargos e territórios devem ser acompanhados;
 - atualiza o arquivo de metadados de cada eleição para os protocolos que já possuem resultados curados no site;
 - compara os registros do TSE com o monitor independente de cada eleição;
+- ignora registros comprovadamente fora do território da série, mantendo a justificativa e a fonte em `data/elections.json`;
 - coloca protocolos novos em filas editoriais separadas por eleição.
 
 ```powershell
