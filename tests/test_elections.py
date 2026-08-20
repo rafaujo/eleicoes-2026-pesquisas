@@ -27,6 +27,13 @@ class ElectionCatalogTests(unittest.TestCase):
         self.assertEqual(elections["governor-mg"]["tse"]["jurisdiction"], "MG")
         self.assertEqual({item["group"] for item in elections.values()}, {"Brasil", "Estados"})
 
+        presidential_exclusions = elections["president-br"]["tse"]["excludedProtocols"]
+        self.assertEqual(
+            {item["protocol"] for item in presidential_exclusions},
+            {"BR078502026", "BR062782026"},
+        )
+        self.assertTrue(all(item["reason"] and item["source"] for item in presidential_exclusions))
+
     def test_sao_paulo_keeps_comparable_scenarios_separate(self) -> None:
         polls = self.sp["polls"]
 
