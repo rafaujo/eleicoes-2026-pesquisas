@@ -143,6 +143,10 @@ def presidential_mirror_rows(csv_bytes: bytes) -> list[dict[str, str]]:
     source = csv.DictReader(io.StringIO(csv_bytes.decode("utf-8-sig")))
     rows: list[dict[str, str]] = []
     for item in source:
+        # O espelho inclui registros presidenciais com amostra restrita a uma UF.
+        # Eles não são comparáveis ao retrato nacional exibido pelo site.
+        if item.get("scope", "").strip().lower() == "state":
+            continue
         row = {target: item.get(source_name, "") for target, source_name in aliases.items()}
         row.update({
             "SG_UE": "BR",
@@ -184,6 +188,25 @@ def curated_protocols(path: Path = POLLS_FILE) -> set[str]:
     protocols = {poll["protocol"] for poll in payload.get("polls", [])}
     if not protocols:
         raise RuntimeError(f"Nenhum protocolo curado foi encontrado em {path.relative_to(ROOT)}")
+    return protocols
+
+
+def configured_exclusions(tse: dict) -> set[str]:
+    """Retorna protocolos revisados que não pertencem à série configurada."""
+    exclusions = tse.get("excludedProtocols", [])
+    if not isinstance(exclusions, list):
+        raise RuntimeError("excludedProtocols deve ser uma lista")
+
+    protocols: set[str] = set()
+    for item in exclusions:
+        if not isinstance(item, dict) or not item.get("protocol"):
+            raise RuntimeError("Cada exclusão deve informar protocol, reason e source")
+        if not item.get("reason") or not item.get("source"):
+            raise RuntimeError(f"Exclusão incompleta para {item['protocol']}")
+        protocol = str(item["protocol"])
+        if protocol in protocols:
+            raise RuntimeError(f"Protocolo excluído em duplicidade: {protocol}")
+        protocols.add(protocol)
     return protocols
 
 
@@ -435,6 +458,7 @@ def main() -> int:
         metadata_path = ROOT / election["metadataFile"]
         monitor_path = ROOT / election["monitorFile"]
         protocols = curated_protocols(poll_path)
+        resolved_protocols = protocols | configured_exclusions(tse)
         if mirror_mode and key != "president":
             monitor = read_json(monitor_path)
             if monitor is None:
@@ -472,7 +496,7 @@ def main() -> int:
             read_json(monitor_path),
             poll_rows,
             contractors,
-            protocols,
+            resolved_protocols,
             generated_at,
             args.bootstrap_monitor or key in bootstrap_targets,
         )

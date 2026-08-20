@@ -9,6 +9,7 @@ from scripts.sync_tse import (
     DATASET_URL,
     POLLS_ZIP_URL,
     build_monitor,
+    configured_exclusions,
     fetch,
     office_rows,
     presidential_mirror_rows,
@@ -33,16 +34,35 @@ class BuildMonitorTests(unittest.TestCase):
     def test_presidential_mirror_is_mapped_to_the_official_schema(self) -> None:
         content = (
             "register_tse,registration_date,institute,institute_trade_name,office,"
-            "field_start,field_end,publication_date,sample_size,conre,statistician\n"
+            "field_start,field_end,publication_date,sample_size,conre,statistician,scope\n"
             "BR-01234/2026,2026-08-20,Instituto Teste,Teste,Presidente,"
-            "2026-08-18,2026-08-20,2026-08-21,2000,1234,Estatístico\n"
+            "2026-08-18,2026-08-20,2026-08-21,2000,1234,Estatístico,national\n"
+            "BR-05678/2026,2026-08-20,Instituto Estadual,Estadual,Presidente,"
+            "2026-08-18,2026-08-20,2026-08-21,1200,1234,Estatístico,state\n"
         ).encode("utf-8")
 
-        row = presidential_mirror_rows(content)[0]
+        rows = presidential_mirror_rows(content)
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
         self.assertEqual(row["NR_PROTOCOLO_REGISTRO"], "BR-01234/2026")
         self.assertEqual(row["SG_UE"], "BR")
         self.assertEqual(row["DS_CARGO"], "Presidente")
         self.assertEqual(row["QT_ENTREVISTADO"], "2000")
+
+    def test_exclusions_require_an_auditable_reason_and_source(self) -> None:
+        tse = {
+            "excludedProtocols": [
+                {
+                    "protocol": "BR000012026",
+                    "reason": "Amostra estadual",
+                    "source": "https://example.com/fonte",
+                }
+            ]
+        }
+
+        self.assertEqual(configured_exclusions(tse), {"BR000012026"})
+        with self.assertRaisesRegex(RuntimeError, "Exclusão incompleta"):
+            configured_exclusions({"excludedProtocols": [{"protocol": "BR000022026"}]})
 
     @patch("scripts.sync_tse.urllib.request.urlopen")
     def test_fetch_uses_browser_headers_required_by_tse(self, urlopen_mock) -> None:
