@@ -11,6 +11,7 @@ from scripts.sync_tse import (
     build_monitor,
     fetch,
     office_rows,
+    presidential_mirror_rows,
     resolve_resource_urls,
 )
 
@@ -29,6 +30,20 @@ def poll(protocol: str) -> dict[str, str]:
 
 
 class BuildMonitorTests(unittest.TestCase):
+    def test_presidential_mirror_is_mapped_to_the_official_schema(self) -> None:
+        content = (
+            "register_tse,registration_date,institute,institute_trade_name,office,"
+            "field_start,field_end,publication_date,sample_size,conre,statistician\n"
+            "BR-01234/2026,2026-08-20,Instituto Teste,Teste,Presidente,"
+            "2026-08-18,2026-08-20,2026-08-21,2000,1234,Estatístico\n"
+        ).encode("utf-8")
+
+        row = presidential_mirror_rows(content)[0]
+        self.assertEqual(row["NR_PROTOCOLO_REGISTRO"], "BR-01234/2026")
+        self.assertEqual(row["SG_UE"], "BR")
+        self.assertEqual(row["DS_CARGO"], "Presidente")
+        self.assertEqual(row["QT_ENTREVISTADO"], "2000")
+
     @patch("scripts.sync_tse.urllib.request.urlopen")
     def test_fetch_uses_browser_headers_required_by_tse(self, urlopen_mock) -> None:
         urlopen_mock.return_value.__enter__.return_value.read.return_value = b"ok"
