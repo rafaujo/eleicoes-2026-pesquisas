@@ -8,6 +8,8 @@ import csv
 import io
 import json
 import sys
+import time
+import urllib.error
 import urllib.request
 import zipfile
 from collections import defaultdict
@@ -18,6 +20,8 @@ from pathlib import Path
 PACKAGE_API = "https://dadosabertos.tse.jus.br/api/3/action/package_show?id=pesquisas-eleitorais-2026"
 DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026"
 PESQELE_URL = "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml"
+POLLS_ZIP_URL = "https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_eleitoral_2026.zip"
+CONTRACTORS_ZIP_URL = "https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_contratante_2026.zip"
 ROOT = Path(__file__).resolve().parents[1]
 ELECTIONS_FILE = ROOT / "data" / "elections.json"
 POLLS_FILE = ROOT / "data" / "polls.json"
@@ -52,10 +56,20 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def fetch(url: str) -> bytes:
+def fetch(url: str, attempts: int = 3) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": "Pulso26/2.0 (+dados eleitorais abertos)"})
-    with urllib.request.urlopen(request, timeout=60) as response:
-        return response.read()
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                return response.read()
+        except urllib.error.HTTPError as error:
+            if error.code not in {429, 500, 502, 503, 504} or attempt == attempts:
+                raise
+        except urllib.error.URLError:
+            if attempt == attempts:
+                raise
+        time.sleep(2 ** (attempt - 1))
+    raise RuntimeError(f"Não foi possível baixar {url}")
 
 
 def find_resource(resources: list[dict], filename: str) -> str:
@@ -63,6 +77,22 @@ def find_resource(resources: list[dict], filename: str) -> str:
         if resource.get("url", "").endswith(filename):
             return resource["url"]
     raise RuntimeError(f"Recurso {filename} não encontrado no catálogo do TSE")
+
+
+def resolve_resource_urls() -> tuple[str, str]:
+    try:
+        package = json.loads(fetch(PACKAGE_API).decode("utf-8"))["result"]
+        resources = package["resources"]
+        return (
+            find_resource(resources, "pesquisa_eleitoral_2026.zip"),
+            find_resource(resources, "pesquisa_contratante_2026.zip"),
+        )
+    except (OSError, ValueError, KeyError, RuntimeError) as error:
+        print(
+            f"Aviso: catálogo CKAN indisponível ({error}); usando URLs canônicas do CDN do TSE.",
+            file=sys.stderr,
+        )
+        return POLLS_ZIP_URL, CONTRACTORS_ZIP_URL
 
 
 def national_rows(zip_bytes: bytes, filename: str) -> list[dict[str, str]]:
@@ -310,10 +340,7 @@ def write_github_output(path: Path, values: dict[str, object]) -> None:
 
 def main() -> int:
     args = parse_args()
-    package = json.loads(fetch(PACKAGE_API).decode("utf-8"))["result"]
-    resources = package["resources"]
-    polls_url = find_resource(resources, "pesquisa_eleitoral_2026.zip")
-    contractors_url = find_resource(resources, "pesquisa_contratante_2026.zip")
+    polls_url, contractors_url = resolve_resource_urls()
 
     all_polls = national_rows(fetch(polls_url), "pesquisa_eleitoral_2026_BRASIL.csv")
     all_contractors = national_rows(fetch(contractors_url), "pesquisa_contratante_2026_BRASIL.csv")
