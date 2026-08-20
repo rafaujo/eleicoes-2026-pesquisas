@@ -35,6 +35,9 @@ const tableBody = document.querySelector("#poll-table-body");
 const pollCount = document.querySelector("#poll-count");
 const chart = document.querySelector("#trend-chart");
 const chartLegend = document.querySelector("#chart-legend");
+const upcomingSection = document.querySelector("#proximas-pesquisas");
+const upcomingList = document.querySelector("#upcoming-list");
+const upcomingCount = document.querySelector("#upcoming-count");
 const dialog = document.querySelector("#poll-dialog");
 const dialogContent = document.querySelector("#dialog-content");
 
@@ -402,6 +405,47 @@ function updateStatus() {
     : "Monitoramento do TSE indisponível";
 }
 
+function upcomingStatus(item) {
+  if (item.disclosureDate > DATA_REFERENCE_DATE) {
+    return { label: `Divulgação em ${formatDate(item.disclosureDate)}`, className: "future" };
+  }
+  if (item.disclosureDate === DATA_REFERENCE_DATE) {
+    return { label: "Divulgação prevista hoje", className: "today" };
+  }
+  return { label: `Aguardando incorporação desde ${formatDate(item.disclosureDate)}`, className: "review" };
+}
+
+function renderUpcoming() {
+  const items = Object.values(tseMonitor?.pending || {})
+    .filter((item) => item?.protocol && item?.disclosureDate)
+    .sort((a, b) => a.disclosureDate.localeCompare(b.disclosureDate)
+      || (a.fieldEnd || "").localeCompare(b.fieldEnd || "")
+      || a.protocol.localeCompare(b.protocol));
+
+  upcomingSection.hidden = items.length === 0;
+  upcomingCount.textContent = items.length === 1
+    ? "1 pesquisa registrada"
+    : `${items.length} pesquisas registradas`;
+  upcomingList.innerHTML = items.map((item) => {
+    const status = upcomingStatus(item);
+    const institute = item.tradeName || item.company || "Instituto não informado";
+    const contractor = (item.contractors || []).filter(Boolean).join(" · ") || "Contratante não informado";
+    const field = item.fieldStart && item.fieldEnd ? formatField(item.fieldStart, item.fieldEnd) : "—";
+    return `<article class="upcoming-card">
+      <div class="upcoming-card-header">
+        <div><span class="pollster">${escapeHtml(institute)}</span><span class="sponsor">${escapeHtml(contractor)}</span></div>
+        <time class="upcoming-date ${status.className}" datetime="${item.disclosureDate}">${status.label}</time>
+      </div>
+      <dl class="upcoming-details">
+        <div><dt>Campo</dt><dd>${field}</dd></div>
+        <div><dt>Amostra</dt><dd>${item.sample ? integer.format(item.sample) : "—"}</dd></div>
+        <div><dt>Registro</dt><dd>${escapeHtml(item.protocol)}</dd></div>
+      </dl>
+      <a class="upcoming-link" href="${PESQELE_URL}" target="_blank" rel="noreferrer">Consultar no PesqEle ↗</a>
+    </article>`;
+  }).join("");
+}
+
 function renderElectionChrome() {
   if (!currentElection) return;
   document.querySelector("#hero-eyebrow").innerHTML = `<span></span> ${escapeHtml(currentElection.eyebrow)}`;
@@ -499,6 +543,7 @@ async function loadElection(electionId) {
   document.querySelector("#election-select").value = selected.id;
   renderElectionChrome();
   updateStatus();
+  renderUpcoming();
   render();
 }
 
