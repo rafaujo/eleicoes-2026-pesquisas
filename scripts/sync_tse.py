@@ -296,22 +296,27 @@ def update_metadata(
     generated_at: str,
     resource_urls: dict[str, str],
     output_path: Path = METADATA_OUTPUT,
+    preserve_contractors: bool = False,
 ) -> bool:
     missing = sorted(protocols - poll_rows.keys())
     if missing:
         raise RuntimeError(f"Protocolos ausentes no arquivo oficial: {', '.join(missing)}")
 
-    records = {
-        protocol: metadata_record(poll_rows[protocol], contractors.get(protocol, []))
-        for protocol in sorted(protocols)
-    }
+    current = read_json(output_path)
+    current_records = current.get("records", {}) if current else {}
+    records: dict[str, dict] = {}
+    for protocol in sorted(protocols):
+        contractor_rows = contractors.get(protocol, [])
+        record = metadata_record(poll_rows[protocol], contractor_rows)
+        if preserve_contractors and not contractor_rows:
+            record["contractors"] = current_records.get(protocol, {}).get("contractors", [])
+        records[protocol] = record
     core = {
         "source": DATASET_URL,
         "pesqEle": PESQELE_URL,
         "resourceUrls": resource_urls,
         "records": records,
     }
-    current = read_json(output_path)
     if current and all(current.get(key) == value for key, value in core.items()):
         return False
 
@@ -331,7 +336,18 @@ def build_monitor(
     protocols: set[str],
     generated_at: str,
     bootstrap: bool,
+    review_since: str = "",
 ) -> tuple[dict, list[str], bool]:
+    if review_since:
+        try:
+            datetime.strptime(review_since, "%Y-%m-%d")
+        except ValueError as error:
+            raise RuntimeError(f"reviewSince inválido: {review_since}") from error
+    reviewable_protocols = {
+        protocol
+        for protocol, row in poll_rows.items()
+        if review_since and iso_date(row.get("DT_DIVULGACAO", "")) >= review_since
+    }
     current_protocols = set(poll_rows)
     if bootstrap:
         seen = current_protocols
@@ -344,7 +360,7 @@ def build_monitor(
         seen = previous_seen | current_protocols
         new_protocols = sorted(current_protocols - previous_seen)
         pending = dict(existing.get("pending", {}))
-        for protocol in new_protocols:
+        for protocol in sorted(set(new_protocols) | reviewable_protocols):
             if protocol not in protocols:
                 pending[protocol] = monitor_record(poll_rows[protocol], contractors.get(protocol, []))
 
@@ -354,7 +370,7 @@ def build_monitor(
             elif protocol in poll_rows:
                 pending[protocol] = monitor_record(poll_rows[protocol], contractors.get(protocol, []))
 
-    core_changed = (
+    queue_changed = (
         existing is None
         or sorted(existing.get("seenProtocols", [])) != sorted(seen)
         or existing.get("pending", {}) != dict(sorted(pending.items()))
@@ -362,11 +378,11 @@ def build_monitor(
     payload = {
         "schemaVersion": 1,
         "source": DATASET_URL,
-        "sourceGeneratedAt": generated_at if core_changed else existing.get("sourceGeneratedAt", generated_at),
+        "sourceGeneratedAt": generated_at,
         "seenProtocols": sorted(seen),
         "pending": dict(sorted(pending.items())),
     }
-    return payload, new_protocols, core_changed
+    return payload, new_protocols, queue_changed
 
 
 def markdown_escape(value: object) -> str:
@@ -475,6 +491,7 @@ def main() -> int:
                 "summaryFile": str(summary_path.resolve()) if summary_path else "",
                 "metadataChanged": False,
                 "monitorChanged": False,
+                "queueChanged": False,
                 "newCount": 0,
                 "pendingCount": len(monitor["pending"]),
                 "curatedCount": len(protocols),
@@ -484,22 +501,32 @@ def main() -> int:
             outputs.update({
                 f"{key}_metadata_changed": False,
                 f"{key}_monitor_changed": False,
+                f"{key}_queue_changed": False,
                 f"{key}_new_count": 0,
                 f"{key}_pending_count": len(monitor["pending"]),
             })
             continue
         poll_rows = office_rows(all_polls, str(tse["jurisdiction"]), str(tse["office"]))
-        metadata_changed = False if mirror_mode else update_metadata(
-            poll_rows, contractors, protocols, generated_at, resource_urls, metadata_path
+        metadata_changed = update_metadata(
+            poll_rows,
+            contractors,
+            protocols,
+            generated_at,
+            resource_urls,
+            metadata_path,
+            preserve_contractors=mirror_mode,
         )
-        monitor, new_protocols, monitor_changed = build_monitor(
-            read_json(monitor_path),
+        previous_monitor = read_json(monitor_path)
+        monitor, new_protocols, queue_changed = build_monitor(
+            previous_monitor,
             poll_rows,
             contractors,
             resolved_protocols,
             generated_at,
             args.bootstrap_monitor or key in bootstrap_targets,
+            str(tse.get("reviewSince", "")),
         )
+        monitor_changed = previous_monitor != monitor
         if monitor_changed:
             write_json(monitor_path, monitor)
 
@@ -523,6 +550,7 @@ def main() -> int:
             "summaryFile": str(summary_path.resolve()) if summary_path else "",
             "metadataChanged": metadata_changed,
             "monitorChanged": monitor_changed,
+            "queueChanged": queue_changed,
             "newCount": len(new_protocols),
             "pendingCount": len(monitor["pending"]),
             "curatedCount": len(protocols),
@@ -532,6 +560,7 @@ def main() -> int:
         outputs.update({
             f"{key}_metadata_changed": metadata_changed,
             f"{key}_monitor_changed": monitor_changed,
+            f"{key}_queue_changed": queue_changed,
             f"{key}_new_count": len(new_protocols),
             f"{key}_pending_count": len(monitor["pending"]),
         })
@@ -539,6 +568,7 @@ def main() -> int:
     outputs.update({
         "metadata_changed": any(item["metadataChanged"] for item in results),
         "monitor_changed": any(item["monitorChanged"] for item in results),
+        "queue_changed": any(item.get("queueChanged", False) for item in results),
         "new_count": sum(item["newCount"] for item in results),
         "pending_count": sum(item["pendingCount"] for item in results),
     })
