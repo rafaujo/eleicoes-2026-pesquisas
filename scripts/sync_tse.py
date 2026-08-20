@@ -26,6 +26,16 @@ ROOT = Path(__file__).resolve().parents[1]
 ELECTIONS_FILE = ROOT / "data" / "elections.json"
 POLLS_FILE = ROOT / "data" / "polls.json"
 METADATA_OUTPUT = ROOT / "data" / "tse-metadata.json"
+BROWSER_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
+    "Referer": DATASET_URL,
+    "Origin": "https://dadosabertos.tse.jus.br",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -57,7 +67,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def fetch(url: str, attempts: int = 3) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": "Pulso26/2.0 (+dados eleitorais abertos)"})
+    request = urllib.request.Request(url, headers=BROWSER_HEADERS)
     for attempt in range(1, attempts + 1):
         try:
             with urllib.request.urlopen(request, timeout=60) as response:
