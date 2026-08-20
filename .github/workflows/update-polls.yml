@@ -80,14 +80,15 @@ jobs:
             issue_title=$(jq -r '.issueTitle' <<< "$item")
             pending_count=$(jq -r '.pendingCount' <<< "$item")
             summary_file=$(jq -r '.summaryFile' <<< "$item")
-            issue_number=$(gh issue list --state open --limit 100 --json number,title | jq -r --arg title "$issue_title" '.[] | select(.title == $title) | .number' | head -n1)
+            issue_number=$(gh api "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" | jq -r --arg title "$issue_title" '.[] | select((has("pull_request") | not) and .title == $title) | .number' | head -n1)
             if [ "$pending_count" = "0" ]; then
               if [ -n "$issue_number" ]; then
-                gh issue close "$issue_number" --comment "Todos os protocolos detectados já foram revisados."
+                gh api --method POST "repos/$GITHUB_REPOSITORY/issues/$issue_number/comments" -f body="Todos os protocolos detectados já foram revisados."
+                gh api --method PATCH "repos/$GITHUB_REPOSITORY/issues/$issue_number" -f state=closed
               fi
             elif [ -n "$issue_number" ]; then
-              gh issue edit "$issue_number" --body-file "$summary_file"
+              gh api --method PATCH "repos/$GITHUB_REPOSITORY/issues/$issue_number" -F "body=@$summary_file"
             else
-              gh issue create --title "$issue_title" --body-file "$summary_file"
+              gh api --method POST "repos/$GITHUB_REPOSITORY/issues" -f title="$issue_title" -F "body=@$summary_file"
             fi
           done

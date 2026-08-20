@@ -1,8 +1,16 @@
 from __future__ import annotations
 
 import unittest
+from unittest.mock import patch
+from urllib.error import HTTPError
 
-from scripts.sync_tse import build_monitor, office_rows
+from scripts.sync_tse import (
+    CONTRACTORS_ZIP_URL,
+    POLLS_ZIP_URL,
+    build_monitor,
+    office_rows,
+    resolve_resource_urls,
+)
 
 
 def poll(protocol: str) -> dict[str, str]:
@@ -19,6 +27,12 @@ def poll(protocol: str) -> dict[str, str]:
 
 
 class BuildMonitorTests(unittest.TestCase):
+    @patch("scripts.sync_tse.fetch")
+    def test_cdn_urls_are_used_when_ckan_blocks_the_runner(self, fetch_mock) -> None:
+        fetch_mock.side_effect = HTTPError("https://dadosabertos.tse.jus.br", 403, "Forbidden", {}, None)
+
+        self.assertEqual(resolve_resource_urls(), (POLLS_ZIP_URL, CONTRACTORS_ZIP_URL))
+
     def test_office_rows_filters_jurisdiction_and_office(self) -> None:
         sp_governor = poll("SP000012026") | {"SG_UE": "SP", "DS_CARGO": "Governador"}
         sp_senator = poll("SP000022026") | {"SG_UE": "SP", "DS_CARGO": "Senador"}
