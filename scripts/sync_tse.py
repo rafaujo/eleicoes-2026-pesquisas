@@ -22,6 +22,10 @@ DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026
 PESQELE_URL = "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml"
 POLLS_ZIP_URL = "https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_eleitoral_2026.zip"
 CONTRACTORS_ZIP_URL = "https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_contratante_2026.zip"
+PRESIDENTIAL_MIRROR_URL = (
+    "https://huggingface.co/datasets/AFOS-Analytics1/brazil-2026-electoral-divergence/"
+    "resolve/main/polls/tse-registry.csv"
+)
 ROOT = Path(__file__).resolve().parents[1]
 ELECTIONS_FILE = ROOT / "data" / "elections.json"
 POLLS_FILE = ROOT / "data" / "polls.json"
@@ -113,6 +117,44 @@ def national_rows(zip_bytes: bytes, filename: str) -> list[dict[str, str]]:
         with archive.open(member) as raw:
             text = io.TextIOWrapper(raw, encoding="latin-1", newline="")
             return list(csv.DictReader(text, delimiter=";"))
+
+
+def presidential_mirror_rows(csv_bytes: bytes) -> list[dict[str, str]]:
+    """Converte o espelho presidencial diário para o esquema do CSV oficial."""
+    generated = datetime.now().astimezone()
+    aliases = {
+        "NR_PROTOCOLO_REGISTRO": "register_tse",
+        "DT_REGISTRO": "registration_date",
+        "ST_PESQUISA_PROPRIA": "own_poll",
+        "NR_CNPJ_EMPRESA": "cnpj",
+        "NM_EMPRESA": "institute",
+        "NM_EMPRESA_FANTASIA": "institute_trade_name",
+        "DS_CARGO": "office",
+        "DT_INICIO_PESQUISA": "field_start",
+        "DT_FIM_PESQUISA": "field_end",
+        "DT_DIVULGACAO": "publication_date",
+        "QT_ENTREVISTADO": "sample_size",
+        "CD_CONRE": "conre",
+        "NM_ESTATISTICO_RESP": "statistician",
+        "VR_PESQUISA": "cost_brl",
+        "DS_METODOLOGIA_PESQUISA": "methodology",
+        "DS_PLANO_AMOSTRAL": "sampling_plan",
+    }
+    source = csv.DictReader(io.StringIO(csv_bytes.decode("utf-8-sig")))
+    rows: list[dict[str, str]] = []
+    for item in source:
+        row = {target: item.get(source_name, "") for target, source_name in aliases.items()}
+        row.update({
+            "SG_UE": "BR",
+            "NM_UE": "BRASIL",
+            "DT_GERACAO": generated.date().isoformat(),
+            "HH_GERACAO": generated.strftime("%H:%M:%S"),
+        })
+        if row["NR_PROTOCOLO_REGISTRO"]:
+            rows.append(row)
+    if not rows:
+        raise RuntimeError("O espelho presidencial não retornou registros")
+    return rows
 
 
 def iso_date(value: str) -> str:
@@ -352,11 +394,26 @@ def main() -> int:
     args = parse_args()
     polls_url, contractors_url = resolve_resource_urls()
 
-    all_polls = national_rows(fetch(polls_url), "pesquisa_eleitoral_2026_BRASIL.csv")
-    all_contractors = national_rows(fetch(contractors_url), "pesquisa_contratante_2026_BRASIL.csv")
+    mirror_mode = False
+    try:
+        all_polls = national_rows(fetch(polls_url), "pesquisa_eleitoral_2026_BRASIL.csv")
+        all_contractors = national_rows(fetch(contractors_url), "pesquisa_contratante_2026_BRASIL.csv")
+    except urllib.error.HTTPError as error:
+        if error.code != 403:
+            raise
+        print(
+            "Aviso: downloads do TSE bloqueados para o runner; usando o espelho presidencial diário.",
+            file=sys.stderr,
+        )
+        all_polls = presidential_mirror_rows(fetch(PRESIDENTIAL_MIRROR_URL))
+        all_contractors = []
+        mirror_mode = True
     contractors = contractor_index(all_contractors)
     generated_at = source_generated_at(all_polls)
-    resource_urls = {"polls": polls_url, "contractors": contractors_url}
+    resource_urls = {
+        "polls": PRESIDENTIAL_MIRROR_URL if mirror_mode else polls_url,
+        "contractors": "" if mirror_mode else contractors_url,
+    }
     catalog = json.loads(ELECTIONS_FILE.read_text(encoding="utf-8"))
     elections = catalog.get("elections", [])
     if not elections:
@@ -378,14 +435,38 @@ def main() -> int:
         metadata_path = ROOT / election["metadataFile"]
         monitor_path = ROOT / election["monitorFile"]
         protocols = curated_protocols(poll_path)
+        if mirror_mode and key != "president":
+            monitor = read_json(monitor_path)
+            if monitor is None:
+                raise RuntimeError(f"Monitor estadual ausente para {key}")
+            summary_path = args.summary_dir / f"{key}.md" if args.summary_dir else None
+            if key == "sp":
+                summary_path = args.summary_sp or summary_path
+            if summary_path:
+                write_summary(summary_path, monitor, str(tse["issueHeading"]), str(election["dataFile"]))
+            result = {
+                "key": key,
+                "label": election["context"],
+                "issueTitle": tse["issueTitle"],
+                "summaryFile": str(summary_path.resolve()) if summary_path else "",
+                "metadataChanged": False,
+                "monitorChanged": False,
+                "newCount": 0,
+                "pendingCount": len(monitor["pending"]),
+                "curatedCount": len(protocols),
+                "monitoredCount": len(monitor["seenProtocols"]),
+            }
+            results.append(result)
+            outputs.update({
+                f"{key}_metadata_changed": False,
+                f"{key}_monitor_changed": False,
+                f"{key}_new_count": 0,
+                f"{key}_pending_count": len(monitor["pending"]),
+            })
+            continue
         poll_rows = office_rows(all_polls, str(tse["jurisdiction"]), str(tse["office"]))
-        metadata_changed = update_metadata(
-            poll_rows,
-            contractors,
-            protocols,
-            generated_at,
-            resource_urls,
-            metadata_path,
+        metadata_changed = False if mirror_mode else update_metadata(
+            poll_rows, contractors, protocols, generated_at, resource_urls, metadata_path
         )
         monitor, new_protocols, monitor_changed = build_monitor(
             read_json(monitor_path),
