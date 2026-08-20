@@ -85,7 +85,7 @@ select { width: 100%; border: 0; padding: .66rem 2.1rem .66rem .7rem; color: var
 select:focus-visible, button:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid rgba(71, 122, 170, .4); outline-offset: 2px; }
 
 .dashboard { display: grid; grid-template-columns: minmax(320px, .72fr) minmax(500px, 1.28fr); gap: 1.25rem; margin-top: 1.25rem; }
-.average-card, .chart-card, .polls-section { border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: var(--shadow); }
+.average-card, .chart-card, .polls-section, .upcoming-section { border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: var(--shadow); }
 .average-card, .chart-card { padding: clamp(1.4rem, 2vw, 2.2rem); }
 .section-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
 .section-heading .kicker { margin-bottom: .45rem; }
@@ -123,6 +123,24 @@ select:focus-visible, button:focus-visible, input:focus-visible, a:focus-visible
 .average-trend-line { fill: none; stroke: var(--candidate-color); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
 .average-endpoint { fill: var(--card); stroke: var(--candidate-color); stroke-width: 3; }
 .average-endpoint:focus { stroke-width: 5; }
+
+.upcoming-section { margin-top: 1.25rem; padding: clamp(1.4rem, 2vw, 2.2rem); }
+.upcoming-heading { align-items: end; }
+.upcoming-count { margin: 0 0 .25rem; color: var(--green); font-size: .72rem; font-weight: 800; }
+.upcoming-intro { max-width: 720px; margin: .7rem 0 1.35rem; color: var(--muted); font-size: .78rem; line-height: 1.55; }
+.upcoming-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: .85rem; }
+.upcoming-card { min-width: 0; padding: 1rem; border: 1px solid #e5e6df; border-radius: 12px; background: #fbfaf5; }
+.upcoming-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.upcoming-card-header > div { min-width: 0; }
+.upcoming-card .sponsor { overflow: hidden; text-overflow: ellipsis; }
+.upcoming-date { flex: 0 0 auto; padding: .3rem .5rem; border-radius: 999px; color: var(--green-dark); background: rgba(11, 107, 82, .09); font-size: .62rem; font-weight: 800; white-space: nowrap; }
+.upcoming-date.today { color: #755900; background: rgba(229, 189, 57, .18); }
+.upcoming-date.review { color: #6b4a14; background: rgba(199, 133, 33, .13); }
+.upcoming-details { margin: .9rem 0 .8rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: .55rem; }
+.upcoming-details div { min-width: 0; }
+.upcoming-details dt { color: var(--muted); font-size: .58rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.upcoming-details dd { margin: .18rem 0 0; overflow-wrap: anywhere; font-size: .72rem; font-weight: 700; }
+.upcoming-link { color: var(--green); font-size: .68rem; font-weight: 800; text-decoration: none; }
 
 .polls-section { min-width: 0; max-width: 100%; margin-top: 1.25rem; padding: clamp(1.4rem, 2vw, 2.2rem); overflow: hidden; }
 .table-heading { align-items: end; margin-bottom: 1.5rem; }
@@ -221,6 +239,10 @@ dialog h2 { margin: .5rem 0 1.5rem; font-size: 2.2rem; }
   .section-heading { display: block; }
   .info-button { margin-top: .7rem; }
   .chart-legend { justify-content: flex-start; margin-top: 1rem; }
+  .upcoming-heading { display: block; }
+  .upcoming-count { margin-top: .6rem; }
+  .upcoming-card-header { display: block; }
+  .upcoming-date { display: inline-block; margin-top: .7rem; }
   .average-row { grid-template-columns: minmax(90px, 1fr) 1.25fr auto; gap: .6rem; }
   .table-actions { width: 100%; margin-top: 1rem; }
   .search-field { flex: 1; min-width: 0; }
