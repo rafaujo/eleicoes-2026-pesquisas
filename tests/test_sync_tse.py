@@ -186,10 +186,10 @@ class BuildMonitorTests(unittest.TestCase):
         self.assertEqual(monitor["pending"], {})
         self.assertEqual(monitor["sourceGeneratedAt"], "2026-08-20 12:00:00")
 
-    def test_partial_mirror_preserves_existing_records_and_snapshot_date(self) -> None:
+    def test_partial_mirror_keeps_authoritative_snapshot_untouched(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "metadata.json"
-            output.write_text(json.dumps({
+            original = {
                 "generatedAt": "16/08/2026 05:46:46",
                 "source": "fonte-antiga",
                 "pesqEle": "pesqele",
@@ -197,10 +197,13 @@ class BuildMonitorTests(unittest.TestCase):
                 "records": {
                     "BR000012026": {
                         "protocol": "BR000012026",
+                        "registeredAt": "2026-08-15 12:34:56",
+                        "researchCost": 164888.89,
                         "contractors": [{"name": "Contratante preservado"}],
                     }
                 },
-            }), encoding="utf-8")
+            }
+            output.write_text(json.dumps(original), encoding="utf-8")
 
             changed = update_metadata(
                 {"BR000012026": poll("BR000012026")},
@@ -214,10 +217,8 @@ class BuildMonitorTests(unittest.TestCase):
             )
             payload = json.loads(output.read_text(encoding="utf-8"))
 
-        self.assertTrue(changed)
-        self.assertEqual(payload["generatedAt"], "16/08/2026 05:46:46")
-        self.assertEqual(payload["records"]["BR000012026"]["contractors"][0]["name"], "Contratante preservado")
-        self.assertNotIn("BR000022026", payload["records"])
+        self.assertFalse(changed)
+        self.assertEqual(payload, original)
 
 
 if __name__ == "__main__":

@@ -304,6 +304,8 @@ def update_metadata(
         raise RuntimeError(f"Protocolos ausentes no arquivo oficial: {', '.join(missing)}")
 
     current = read_json(output_path)
+    if missing and allow_partial and current:
+        return False
     current_records = current.get("records", {}) if current else {}
     records: dict[str, dict] = {}
     for protocol in sorted(protocols):
