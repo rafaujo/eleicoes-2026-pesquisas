@@ -297,15 +297,20 @@ def update_metadata(
     resource_urls: dict[str, str],
     output_path: Path = METADATA_OUTPUT,
     preserve_contractors: bool = False,
+    allow_partial: bool = False,
 ) -> bool:
     missing = sorted(protocols - poll_rows.keys())
-    if missing:
+    if missing and not allow_partial:
         raise RuntimeError(f"Protocolos ausentes no arquivo oficial: {', '.join(missing)}")
 
     current = read_json(output_path)
     current_records = current.get("records", {}) if current else {}
     records: dict[str, dict] = {}
     for protocol in sorted(protocols):
+        if protocol not in poll_rows:
+            if protocol in current_records:
+                records[protocol] = current_records[protocol]
+            continue
         contractor_rows = contractors.get(protocol, [])
         record = metadata_record(poll_rows[protocol], contractor_rows)
         if preserve_contractors and not contractor_rows:
@@ -321,7 +326,7 @@ def update_metadata(
         return False
 
     payload = {
-        "generatedAt": generated_at,
+        "generatedAt": current.get("generatedAt", generated_at) if missing and current else generated_at,
         "syncedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
         **core,
     }
@@ -515,6 +520,7 @@ def main() -> int:
             resource_urls,
             metadata_path,
             preserve_contractors=mirror_mode,
+            allow_partial=mirror_mode,
         )
         previous_monitor = read_json(monitor_path)
         monitor, new_protocols, queue_changed = build_monitor(

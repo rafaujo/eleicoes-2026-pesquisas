@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+import json
+import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import patch
 from urllib.error import HTTPError
 
@@ -14,6 +17,7 @@ from scripts.sync_tse import (
     office_rows,
     presidential_mirror_rows,
     resolve_resource_urls,
+    update_metadata,
 )
 
 
@@ -27,6 +31,11 @@ def poll(protocol: str) -> dict[str, str]:
         "QT_ENTREVISTADO": "2000",
         "NM_EMPRESA": "INSTITUTO TESTE LTDA",
         "NM_EMPRESA_FANTASIA": "Instituto Teste",
+        "NM_ESTATISTICO_RESP": "Estatístico Teste",
+        "CD_CONRE": "1234",
+        "VR_PESQUISA": "100000,00",
+        "DS_METODOLOGIA_PESQUISA": "Entrevistas por telefone",
+        "DS_PLANO_AMOSTRAL": "Amostra nacional",
     }
 
 
@@ -176,6 +185,39 @@ class BuildMonitorTests(unittest.TestCase):
         self.assertFalse(changed)
         self.assertEqual(monitor["pending"], {})
         self.assertEqual(monitor["sourceGeneratedAt"], "2026-08-20 12:00:00")
+
+    def test_partial_mirror_preserves_existing_records_and_snapshot_date(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "metadata.json"
+            output.write_text(json.dumps({
+                "generatedAt": "16/08/2026 05:46:46",
+                "source": "fonte-antiga",
+                "pesqEle": "pesqele",
+                "resourceUrls": {},
+                "records": {
+                    "BR000012026": {
+                        "protocol": "BR000012026",
+                        "contractors": [{"name": "Contratante preservado"}],
+                    }
+                },
+            }), encoding="utf-8")
+
+            changed = update_metadata(
+                {"BR000012026": poll("BR000012026")},
+                {},
+                {"BR000012026", "BR000022026"},
+                "2026-08-20 12:00:00",
+                {"polls": "espelho", "contractors": ""},
+                output,
+                preserve_contractors=True,
+                allow_partial=True,
+            )
+            payload = json.loads(output.read_text(encoding="utf-8"))
+
+        self.assertTrue(changed)
+        self.assertEqual(payload["generatedAt"], "16/08/2026 05:46:46")
+        self.assertEqual(payload["records"]["BR000012026"]["contractors"][0]["name"], "Contratante preservado")
+        self.assertNotIn("BR000022026", payload["records"])
 
 
 if __name__ == "__main__":
