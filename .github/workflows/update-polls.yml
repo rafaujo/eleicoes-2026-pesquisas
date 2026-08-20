@@ -16,7 +16,8 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    # O CDN do TSE bloqueia os endereços dos runners Linux/Azure com HTTP 403.
+    runs-on: macos-latest
     timeout-minutes: 15
     steps:
       - name: Baixar repositório
