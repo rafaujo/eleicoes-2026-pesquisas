@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-08-21 19:39:30",
+  "sourceGeneratedAt": "2026-08-22 10:42:59",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -219,6 +219,7 @@
     "BR034962026",
     "BR035092026",
     "BR035332026",
+    "BR035472026",
     "BR035492026",
     "BR035622026",
     "BR035832026",
@@ -392,6 +393,7 @@
     "BR063302026",
     "BR063452026",
     "BR063602026",
+    "BR063662026",
     "BR064282026",
     "BR064722026",
     "BR064812026",
@@ -478,6 +480,7 @@
     "BR077632026",
     "BR077732026",
     "BR078012026",
+    "BR078062026",
     "BR078242026",
     "BR078342026",
     "BR078382026",
@@ -538,6 +541,7 @@
     "BR087072026",
     "BR087132026",
     "BR087302026",
+    "BR087572026",
     "BR087612026",
     "BR087652026",
     "BR087742026",
@@ -558,6 +562,7 @@
     "BR089772026",
     "BR090112026",
     "BR090222026",
+    "BR090282026",
     "BR090442026",
     "BR090482026",
     "BR090552026",
@@ -610,6 +615,61 @@
     "BR099982026"
   ],
   "pending": {
+    "BR035472026": {
+      "protocol": "BR035472026",
+      "registeredAt": "2026-08-19",
+      "fieldStart": "2026-08-20",
+      "fieldEnd": "2026-08-23",
+      "disclosureDate": "2026-08-25",
+      "sample": 2400,
+      "company": "GERP MERCADOLOGIA LTDA",
+      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
+      "contractors": []
+    },
+    "BR040062026": {
+      "protocol": "BR040062026",
+      "registeredAt": "2026-08-15",
+      "fieldStart": "2026-08-16",
+      "fieldEnd": "2026-08-20",
+      "disclosureDate": "2026-08-21",
+      "sample": 3840,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": []
+    },
+    "BR044962026": {
+      "protocol": "BR044962026",
+      "registeredAt": "2026-08-15",
+      "fieldStart": "2026-08-18",
+      "fieldEnd": "2026-08-20",
+      "disclosureDate": "2026-08-21",
+      "sample": 2058,
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
+    "BR054232026": {
+      "protocol": "BR054232026",
+      "registeredAt": "2026-08-13",
+      "fieldStart": "2026-08-14",
+      "fieldEnd": "2026-08-18",
+      "disclosureDate": "2026-08-19",
+      "sample": 1600,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": []
+    },
+    "BR063662026": {
+      "protocol": "BR063662026",
+      "registeredAt": "2026-08-20",
+      "fieldStart": "2026-08-20",
+      "fieldEnd": "2026-08-23",
+      "disclosureDate": "2026-08-26",
+      "sample": 2000,
+      "company": "INSTITUTO INDEXA PESQUISAS LTDA",
+      "tradeName": "INDEXA PESQUISAS",
+      "contractors": []
+    },
     "BR067832026": {
       "protocol": "BR067832026",
       "registeredAt": "2026-08-16 21:24:40",
@@ -623,6 +683,28 @@
         "ALVES QUATRO ASSESSORIA DE COMUNICACAO LTDA / ALVES QUATRO"
       ]
     },
+    "BR078062026": {
+      "protocol": "BR078062026",
+      "registeredAt": "2026-08-20",
+      "fieldStart": "2026-07-27",
+      "fieldEnd": "2026-08-24",
+      "disclosureDate": "2026-08-26",
+      "sample": 6000,
+      "company": "JOTA JORNALISMO S/A",
+      "tradeName": "JOTA JORNALISMO",
+      "contractors": []
+    },
+    "BR087572026": {
+      "protocol": "BR087572026",
+      "registeredAt": "2026-08-17",
+      "fieldStart": "2026-08-18",
+      "fieldEnd": "2026-08-20",
+      "disclosureDate": "2026-08-23",
+      "sample": 1000,
+      "company": "INSTITUTO DE PESQUISAS PERFIL LTDA",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR087652026": {
       "protocol": "BR087652026",
       "registeredAt": "2026-08-16 18:21:09",
@@ -635,6 +717,17 @@
       "contractors": [
         "INSTITUTO DE PESQUISAS PERFIL LTDA"
       ]
+    },
+    "BR090282026": {
+      "protocol": "BR090282026",
+      "registeredAt": "2026-08-18",
+      "fieldStart": "2026-08-21",
+      "fieldEnd": "2026-08-23",
+      "disclosureDate": "2026-08-24",
+      "sample": 2000,
+      "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
+      "tradeName": "NEXUS",
+      "contractors": []
     }
   }
 }

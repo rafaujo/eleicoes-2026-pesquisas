@@ -1,16 +1,16 @@
 {
-  "generatedAt": "16/08/2026 05:46:46",
-  "syncedAt": "2026-08-16T14:58:14-03:00",
+  "generatedAt": "2026-08-22 10:42:59",
+  "syncedAt": "2026-08-22T10:42:59+00:00",
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
   "pesqEle": "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml",
   "resourceUrls": {
-    "polls": "https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_eleitoral_2026.zip",
-    "contractors": "https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_contratante_2026.zip"
+    "polls": "https://huggingface.co/datasets/AFOS-Analytics1/brazil-2026-electoral-divergence/resolve/main/polls/tse-registry.csv",
+    "contractors": ""
   },
   "records": {
     "BR000592026": {
       "protocol": "BR000592026",
-      "registeredAt": "2026-07-10 20:51:25",
+      "registeredAt": "2026-07-10",
       "fieldStart": "2026-07-12",
       "fieldEnd": "2026-07-15",
       "disclosureDate": "2026-07-16",
@@ -33,7 +33,7 @@
     },
     "BR010842026": {
       "protocol": "BR010842026",
-      "registeredAt": "2026-07-25 23:50:08",
+      "registeredAt": "2026-07-25",
       "fieldStart": "2026-07-26",
       "fieldEnd": "2026-07-28",
       "disclosureDate": "2026-07-31",
@@ -56,7 +56,7 @@
     },
     "BR011662026": {
       "protocol": "BR011662026",
-      "registeredAt": "2026-07-18 14:07:45",
+      "registeredAt": "2026-07-18",
       "fieldStart": "2026-07-22",
       "fieldEnd": "2026-07-24",
       "disclosureDate": "2026-07-24",
@@ -65,7 +65,7 @@
       "tradeName": "",
       "statistician": "Renata Nunes Cesar",
       "conre": "7249A",
-      "researchCost": 307541.6,
+      "researchCost": 3075416.0,
       "methodology": "Pesquisa do tipo quantitativo, por amostragem, com aplicação de questionário estruturado e abordagem pessoal em pontos de fluxo populacional. O conjunto do eleitorado brasileiro foi tomado como universo da pesquisa.",
       "samplingPlan": "Universo: Eleitorado brasileiro Tamanho da amostra: A amostra prevista é de 2004 entrevistas. Técnica de amostragem: A amostra é estratificada por região geográfica (Sudeste, Sul, Nordeste, Norte e Centro-oeste) e natureza dos municípios (capital, região metropolitana ou interior). Em cada estrato, num primeiro estágio, são sorteados com probabilidade proporcional ao tamanho (PPT) os municípios que farão parte do levantamento. Num segundo estágio, são sorteados os bairros e pontos de abordagem onde serão aplicadas as entrevistas. Por fim, os entrevistados são selecionados aleatoriamente para responder ao questionário, de acordo com cotas de gênero e faixa etária. Os dados utilizados para definição e seleção da amostra são baseados nos dados fornecidos pelo TSE, IBGE (Censo 2022, PNADC 2024 e Estimativa populacional 2025), além de dados primários de outros levantamentos do instituto. Os dados relativos a gênero e faixa etária são: Homens: 48%, mulheres: 52%, 16 a 24 anos: 13%, 25 a 34 anos: 20%, 35 a 44 anos: 20%, 45 a 59 anos: 25% e 60 anos ou mais: 22%. Para a variável grau de instrução os dados utilizados como referência são: até nível médio completo ou incompleto (inclui os sem escolaridade e analfabetos) =76% e nível superior (inclui superior incompleto) = 24%. Ponderação dos resultados: Está prevista ponderação considerando os estratos (região geográfica, natureza do município), gênero e faixa etária. A variável escolaridade poderá ser ajustada de acordo com os percentuais detalhados anteriormente caso a diferença entre os valores descritos e observados seja maior que a margem de erro definida. Para o nível econômico do entrevistado (renda familiar mensal declarada pelo respondente), a distribuição utilizada como referência foi: Até 2 S.M. (salários mínimos)=48%, mais de 2 S.M.=48%, não souberam ou recusaram a resposta=4%. O fator previsto para ponderação é 1 (resultados obtidos em campo). Margem de Erro: A margem de erro máxima prevista é de 2 pontos percentuais para mais ou para menos, considerando um nível de confiança de 95% e baseada em uma amostra aleatória simples (AAS). Os intervalos de confiança serão calculados considerando os resultados obtidos para um nível de confiança de 95%.",
       "contractors": [
@@ -79,7 +79,7 @@
     },
     "BR014612026": {
       "protocol": "BR014612026",
-      "registeredAt": "2026-06-10 16:43:02",
+      "registeredAt": "2026-06-10",
       "fieldStart": "2026-06-08",
       "fieldEnd": "2026-06-12",
       "disclosureDate": "2026-06-16",
@@ -102,7 +102,7 @@
     },
     "BR014892026": {
       "protocol": "BR014892026",
-      "registeredAt": "2026-07-21 18:20:07",
+      "registeredAt": "2026-07-21",
       "fieldStart": "2026-07-24",
       "fieldEnd": "2026-07-26",
       "disclosureDate": "2026-07-27",
@@ -111,7 +111,7 @@
       "tradeName": "NEXUS",
       "statistician": "Neale Ahmed El Dash",
       "conre": "8656-A",
-      "researchCost": 164888.89,
+      "researchCost": 16488889.0,
       "methodology": "Pesquisa quantitativa telefônica realizada com população brasileira a partir de 16 anos e com título de eleitor, em um questionário estruturado, para avaliação do cenário político eleitoral. Os entrevistados são selecionados por sorteio em uma amostra representativa do eleitorado brasileiro com acesso a telefonia fixa e móvel. Todas as entrevistas são realizadas por um time de pesquisadores experientes com pesquisas de opinião e treinados especificamente para o projeto",
       "samplingPlan": "Realização de 2.000 entrevistas em uma amostra representativa do eleitorado brasileiro (a partir de 16 anos com título de eleitor) selecionados de modo aleatório a partir do cadastro de todos os telefones fixos e móveis existentes de acordo com a Agência Nacional de Telecomunicações (Anatel). A técnica de seleção dos entrevistados é a aleatória estratificada por DDD, em uma amostra com margem de erro estimada de 2 pontos percentuais para mais ou para menos, considerando um intervalo de confiança de 95%. A amostra é controlada a partir de cinco variáveis: (a) região; (b) tipo de telefonia (fixo e móvel), (c) sexo, (d) idade e (e) escolaridade. Para construção da amostra são usados como referência os dados da Pesquisa Nacional por Amostragem de Domicílios Contínua (PNADc), do suplemento anual acumulado da 1º Visita de 2024, e dados do TSE de junho de 2026 para distribuição de sexo,idade e região. A distribuição amostral esperada é a seguinte: para escolaridade, até Fundamental Completo (36%), até Médio Completo (41%), Superior Incompleto ou mais (23%); para faixa etária, 16 a 24 anos (12%), 25 a 34 anos (19%), 35 a 44 anos (20%), 45 a 59 anos (26%), 60 anos ou mais (24%); para região, Centro-Oeste (8%), Nordeste (28%), Norte (8%), Sudeste (42%), Sul (14%); e para sexo, Homem (47%), Mulher (53%). Ao final da coleta, será aplicado um fator de ponderação nos resultados para correção de eventuais diferenças entre o planejado na amostra e o observado pelo trabalho de campo, levando em conta todas as variáveis descritas acima, além de variáveis como pessoas dentro e fora da força de trabalho e renda. A relação completa dos municípios pesquisados será encaminhada a este tribunal até o sétimo dia seguinte à data de registro da pesquisa, conforme a Resolução 23.600/2019 do TSE, art.2º §7º",
       "contractors": [
@@ -125,7 +125,7 @@
     },
     "BR017922026": {
       "protocol": "BR017922026",
-      "registeredAt": "2026-06-03 15:59:33",
+      "registeredAt": "2026-06-03",
       "fieldStart": "2026-06-01",
       "fieldEnd": "2026-06-05",
       "disclosureDate": "2026-06-09",
@@ -148,7 +148,7 @@
     },
     "BR028742026": {
       "protocol": "BR028742026",
-      "registeredAt": "2026-07-28 15:31:30",
+      "registeredAt": "2026-07-28",
       "fieldStart": "2026-07-31",
       "fieldEnd": "2026-08-02",
       "disclosureDate": "2026-08-03",
@@ -157,7 +157,7 @@
       "tradeName": "NEXUS",
       "statistician": "Neale Ahmed El Dash",
       "conre": "8656-A",
-      "researchCost": 164888.89,
+      "researchCost": 16488889.0,
       "methodology": "Pesquisa quantitativa telefônica realizada com população brasileira a partir de 16 anos e com título de eleitor, em um questionário estruturado, para avaliação do cenário político eleitoral. Os entrevistados são selecionados por sorteio em uma amostra representativa do eleitorado brasileiro com acesso a telefonia fixa e móvel. Todas as entrevistas são realizadas por um time de pesquisadores experientes com pesquisas de opinião e treinados especificamente para o projeto.",
       "samplingPlan": "Realização de 2.000 entrevistas em uma amostra representativa do eleitorado brasileiro (a partir de 16 anos com título de eleitor) selecionados de modo aleatório a partir do cadastro de todos os telefones fixos e móveis existentes de acordo com a Agência Nacional de Telecomunicações (Anatel). A técnica de seleção dos entrevistados é a aleatória estratificada por DDD, em uma amostra com margem de erro estimada de 2 pontos percentuais para mais ou para menos, considerando um intervalo de confiança de 95%. A amostra é controlada a partir de cinco variáveis: (a) região; (b) tipo de telefonia (fixo e móvel), (c) sexo, (d) idade e (e) escolaridade. Para construção da amostra são usados como referência os dados da Pesquisa Nacional por Amostragem de Domicílios Contínua (PNADc), do suplemento anual acumulado da 1º Visita de 2024, e dados do TSE de junho de 2026 para distribuição de sexo,idade e região. A distribuição amostral esperada é a seguinte: para escolaridade, até Fundamental Completo (36%), até Médio Completo (41%), Superior Incompleto ou mais (23%); para faixa etária, 16 a 24 anos (12%), 25 a 34 anos (19%), 35 a 44 anos (20%), 45 a 59 anos (26%), 60 anos ou mais (24%); para região, Centro-Oeste (8%), Nordeste (28%), Norte (8%), Sudeste (42%), Sul (14%); e para sexo, Homem (47%), Mulher (53%). Ao final da coleta, será aplicado um fator de ponderação nos resultados para correção de eventuais diferenças entre o planejado na amostra e o observado pelo trabalho de campo, levando em conta todas as variáveis descritas acima, além de variáveis como pessoas dentro e fora da força de trabalho e renda. A relação completa dos municípios pesquisados será encaminhada a este tribunal até o sétimo dia seguinte à data de registro da pesquisa, conforme a Resolução 23.600/2019 do TSE, art.2º §7º",
       "contractors": [
@@ -171,7 +171,7 @@
     },
     "BR030672026": {
       "protocol": "BR030672026",
-      "registeredAt": "2026-07-02 20:47:58",
+      "registeredAt": "2026-07-02",
       "fieldStart": "2026-07-03",
       "fieldEnd": "2026-07-07",
       "disclosureDate": "2026-07-08",
@@ -192,9 +192,25 @@
         }
       ]
     },
+    "BR033172026": {
+      "protocol": "BR033172026",
+      "registeredAt": "2026-08-11",
+      "fieldStart": "2026-08-14",
+      "fieldEnd": "2026-08-16",
+      "disclosureDate": "2026-08-17",
+      "sample": 2000,
+      "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
+      "tradeName": "NEXUS",
+      "statistician": "Neale Ahmed El Dash",
+      "conre": "8656-A",
+      "researchCost": 16488889.0,
+      "methodology": "Pesquisa quantitativa telefônica realizada com população brasileira a partir de 16 anos e com título de eleitor, em um questionário estruturado, para avaliação do cenário político eleitoral. Os entrevistados são selecionados por sorteio em uma amostra representativa do eleitorado brasileiro com acesso a telefonia fixa e móvel. Todas as entrevistas são realizadas por um time de pesquisadores experientes com pesquisas de opinião e treinados especificamente para o projeto.",
+      "samplingPlan": "Realização de 2.000 entrevistas em uma amostra representativa do eleitorado brasileiro (a partir de 16 anos com título de eleitor) selecionados de modo aleatório a partir do cadastro de todos os telefones fixos e móveis existentes de acordo com a Agência Nacional de Telecomunicações (Anatel). A técnica de seleção dos entrevistados é a aleatória estratificada por DDD, em uma amostra com margem de erro estimada de 2 pontos percentuais para mais ou para menos, considerando um intervalo de confiança de 95%. A amostra é controlada a partir de cinco variáveis: (a) região; (b) tipo de telefonia (fixo e móvel), (c) sexo, (d) idade e (e) escolaridade. Para construção da amostra são usados como referência os dados da Pesquisa Nacional por Amostragem de Domicílios Contínua (PNADc), do suplemento anual acumulado da 1º Visita de 2025, e dados do TSE de junho de 2026 para distribuição de sexo,idade e região. A distribuição amostral esperada é a seguinte: para escolaridade, até Fundamental Completo (34%), até Médio Completo (41%), Superior Incompleto ou mais (25%); para faixa etária, 16 a 24 anos (12%), 25 a 34 anos (19%), 35 a 44 anos (20%), 45 a 59 anos (26%), 60 anos ou mais (24%); para região, Centro-Oeste (8%), Nordeste (28%), Norte (8%), Sudeste (42%), Sul (14%); e para sexo, Homem (47%), Mulher (53%). Ao final da coleta, será aplicado um fator de ponderação nos resultados para correção de eventuais diferenças entre o planejado na amostra e o observado pelo trabalho de campo, levando em conta todas as variáveis descritas acima, além de variáveis como pessoas dentro e fora da força de trabalho e renda. A relação completa dos municípios pesquisados será encaminhada a este tribunal até o sétimo dia seguinte à data de registro da pesquisa, conforme a Resolução 23.600/2019 do TSE, art.2º §7º",
+      "contractors": []
+    },
     "BR034962026": {
       "protocol": "BR034962026",
-      "registeredAt": "2026-06-05 21:50:36",
+      "registeredAt": "2026-06-05",
       "fieldStart": "2026-06-05",
       "fieldEnd": "2026-06-10",
       "disclosureDate": "2026-06-11",
@@ -217,7 +233,7 @@
     },
     "BR042562026": {
       "protocol": "BR042562026",
-      "registeredAt": "2026-06-10 10:34:16",
+      "registeredAt": "2026-06-10",
       "fieldStart": "2026-06-10",
       "fieldEnd": "2026-06-14",
       "disclosureDate": "2026-06-16",
@@ -240,7 +256,7 @@
     },
     "BR044882026": {
       "protocol": "BR044882026",
-      "registeredAt": "2026-07-25 00:25:06",
+      "registeredAt": "2026-07-25",
       "fieldStart": "2026-07-23",
       "fieldEnd": "2026-07-28",
       "disclosureDate": "2026-07-31",
@@ -263,7 +279,7 @@
     },
     "BR045792026": {
       "protocol": "BR045792026",
-      "registeredAt": "2026-07-30 20:21:14",
+      "registeredAt": "2026-07-30",
       "fieldStart": "2026-07-31",
       "fieldEnd": "2026-08-03",
       "disclosureDate": "2026-08-05",
@@ -286,7 +302,7 @@
     },
     "BR045822026": {
       "protocol": "BR045822026",
-      "registeredAt": "2026-06-25 19:44:54",
+      "registeredAt": "2026-06-25",
       "fieldStart": "2026-06-25",
       "fieldEnd": "2026-06-30",
       "disclosureDate": "2026-07-01",
@@ -309,7 +325,7 @@
     },
     "BR057222026": {
       "protocol": "BR057222026",
-      "registeredAt": "2026-06-19 20:45:18",
+      "registeredAt": "2026-06-19",
       "fieldStart": "2026-06-21",
       "fieldEnd": "2026-06-24",
       "disclosureDate": "2026-06-25",
@@ -332,7 +348,7 @@
     },
     "BR065912026": {
       "protocol": "BR065912026",
-      "registeredAt": "2026-07-30 20:15:49",
+      "registeredAt": "2026-07-30",
       "fieldStart": "2026-07-31",
       "fieldEnd": "2026-08-03",
       "disclosureDate": "2026-08-05",
@@ -341,7 +357,7 @@
       "tradeName": "",
       "statistician": "Margarida Maria de Mendonca",
       "conre": "6731",
-      "researchCost": 433255.92,
+      "researchCost": 43325592.0,
       "methodology": "Pesquisa quantitativa, de survey, que consiste na realização de entrevistas pessoais, domiciliares e presenciais, conduzidas por profissionais treinados, com a aplicação de questionários estruturados a uma amostra representativa da população votante de 16 anos ou mais residente no Brasil. O desenho amostral aplicado combina sorteio probabilístico de municípios e de setores censitários fornecidos pelo IBGE (unidades territoriais homogêneas, de tamanho similar a quadras ou blocos), dentro dos quais serão selecionadas pessoas respondentes por meio de cotas amostrais.",
       "samplingPlan": "O público pesquisado é composto por eleitores de 16 anos ou mais residentes na área de abrangência da pesquisa. Para produzir uma amostra representativa desse público-alvo, utilizamos um desenho amostral por conglomerados que prevê três estágios. No primeiro estágio, é feito um sorteio probabilístico de municípios para comporem a amostra por meio do método PPT (Probabilidade Proporcional ao Tamanho) a partir de suas populações votantes acima de 16 anos. Dentro da lista de municípios sorteados, no segundo estágio, é realizado um sorteio probabilístico por meio do método PPT (Probabilidade Proporcional ao Tamanho) de setores censitários a serem visitados pelos entrevistadores, sorteio que tem como base o total de habitantes residentes nos setores de acordo com dados do Censo de 2022, o que garante a dispersão aleatória e estatística da amostra dentro dos territórios municipais, independentemente de divisões administrativas. Finalmente, dentro da lista de setores censitários sorteados, no último estágio são selecionados domicílios e pessoas a serem entrevistadas utilizando-se cotas amostrais para as seguintes variáveis: sexo, idade, renda familiar e escolaridade. O perfil da amostra, definido pelas cotas previstas, é o seguinte: Sexo: Masculino (47%); Feminino (53%). Faixa etária: 16-34 anos (31%); 35-59 anos (45%); 60 ou mais (24%). Renda domiciliar total, incluindo pensões, benefícios e rendimentos de trabalhos informais: Até 2 salários-mínimos (31%); Mais de 2 a 5 salários-mínimos (42%); Mais de 5 salários-mínimos (27%). Nível de instrução: Até Fundamental completo ou médio incompleto (41%); Médio completo ou superior incompleto (40%); Superior completo ou mais (19%). Fonte dos dados: para a distribuição de sexo e idade, TSE-Tribunal Superior Eleitoral - julho/2026; para a malha de setores censitários, Censo 2022 (IBGE); para a distribuição de renda domiciliar, PNADc Anual 2025, 1a visita (IBGE); e, para a distribuição de escolaridade/instrução, PNADc trimestral 1-2026 (IBGE). A PNADc é utilizada por ser a fonte oficial mais atualizada de rendimentos do país, incluindo rendimentos informais, pensões, entre outros, e corrigindo as defasagens temporais do Censo 2022, além de ser a fonte mais atualizada de nível de instrução da população com 16 anos ou mais dada ausência de atualização obrigatória da escolaridade no registro de eleitores do TSE. Está prevista eventual pós-estratificação da amostra, por meio de algoritmos de calibração (rake) e modelos (MrP), para correção de estimativas e das distribuições das variáveis sexo, idade, renda familiar e escolaridade, com base nos percentuais anteriormente mencionados, caso ocorram diferenças entre os percentuais previstos na amostra e a coleta de dados realizada. Dentro do público-alvo anteriormente descrito, serão realizadas 2.004 entrevistas. O nível de confiança das estimativas é de 95% e a margem de erro máxima prevista, atendendo às diretivas do TSE e usando o cálculo para amostra aleatória simples (AAS) como aproximação, é de cerca de 2 pontos percentuais para mais ou para menos em relação aos totais da amostra.",
       "contractors": [
@@ -355,7 +371,7 @@
     },
     "BR065962026": {
       "protocol": "BR065962026",
-      "registeredAt": "2026-08-04 14:25:55",
+      "registeredAt": "2026-08-04",
       "fieldStart": "2026-08-03",
       "fieldEnd": "2026-08-09",
       "disclosureDate": "2026-08-10",
@@ -378,7 +394,7 @@
     },
     "BR066302026": {
       "protocol": "BR066302026",
-      "registeredAt": "2026-06-20 23:19:33",
+      "registeredAt": "2026-06-20",
       "fieldStart": "2026-06-23",
       "fieldEnd": "2026-06-25",
       "disclosureDate": "2026-06-26",
@@ -401,7 +417,7 @@
     },
     "BR066452026": {
       "protocol": "BR066452026",
-      "registeredAt": "2026-06-09 15:31:07",
+      "registeredAt": "2026-06-09",
       "fieldStart": "2026-06-12",
       "fieldEnd": "2026-06-14",
       "disclosureDate": "2026-06-15",
@@ -410,7 +426,7 @@
       "tradeName": "NEXUS",
       "statistician": "Neale Ahmed El-Dash",
       "conre": "8656-A",
-      "researchCost": 164888.89,
+      "researchCost": 16488889.0,
       "methodology": "Pesquisa quantitativa telefônica realizada com população brasileira a partir de 16 anos e com título de eleitor, em um questionário estruturado, para avaliação do cenário político eleitoral. Os entrevistados são selecionados por sorteio em uma amostra representativa do eleitorado brasileiro com acesso a telefonia fixa e móvel. Todas as entrevistas são realizadas por um time de pesquisadores experientes com pesquisas de opinião e treinados especificamente para o projeto",
       "samplingPlan": "Realização de 2.000 entrevistas em uma amostra representativa do eleitorado brasileiro (a partir de 16 anos com título de eleitor) selecionados de modo aleatório a partir do cadastro de todos os telefones fixos e móveis existentes de acordo com a Agência Nacional de Telecomunicações (Anatel). A técnica de seleção dos entrevistados é a aleatória estratificada por DDD, em uma amostra com margem de erro estimada de 2 pontos percentuais para mais ou para menos, considerando um intervalo de confiança de 95%. A amostra é controlada a partir de cinco variáveis: (a) região; (b) tipo de telefonia (fixo e móvel), (c) sexo, (d) idade e (e) escolaridade. Para construção da amostra são usados como referência os dados da Pesquisa Nacional por Amostragem de Domicílios Contínua (PNADc), do suplemento anual acumulado da 1º Visita de 2024. A distribuição amostral esperada é a seguinte: para escolaridade, até Fundamental Completo (36%), até Médio Completo (41%), Superior Incompleto ou mais (23%); para faixa etária, 16 a 24 anos (17%), 25 a 34 anos (20%), 35 a 44 anos (20%), 45 a 59 anos (24%), 60 anos ou mais (20%); para região, Centro-Oeste (8%), Nordeste (27%), Norte (8%), Sudeste (43%), Sul (15%); e para sexo, Homem (48%), Mulher (52%). Ao final da coleta, será aplicado um fator de ponderação nos resultados para correção de eventuais diferenças entre o planejado na amostra e o observado pelo trabalho de campo, levando em conta todas as variáveis descritas acima, além de variáveis como pessoas dentro e fora da força de trabalho e renda. A relação completa dos municípios pesquisados será encaminhada a este tribunal até o sétimo dia seguinte à data de registro da pesquisa, conforme a Resolução 23.600/2019 do TSE, art.2º §7º",
       "contractors": [
@@ -424,7 +440,7 @@
     },
     "BR067732026": {
       "protocol": "BR067732026",
-      "registeredAt": "2026-08-08 15:24:08",
+      "registeredAt": "2026-08-08",
       "fieldStart": "2026-08-10",
       "fieldEnd": "2026-08-13",
       "disclosureDate": "2026-08-14",
@@ -453,7 +469,7 @@
     },
     "BR068682026": {
       "protocol": "BR068682026",
-      "registeredAt": "2026-08-07 21:25:05",
+      "registeredAt": "2026-08-07",
       "fieldStart": "2026-08-09",
       "fieldEnd": "2026-08-12",
       "disclosureDate": "2026-08-13",
@@ -476,7 +492,7 @@
     },
     "BR069352026": {
       "protocol": "BR069352026",
-      "registeredAt": "2026-08-05 15:48:30",
+      "registeredAt": "2026-08-05",
       "fieldStart": "2026-08-05",
       "fieldEnd": "2026-08-09",
       "disclosureDate": "2026-08-11",
@@ -499,7 +515,7 @@
     },
     "BR071812026": {
       "protocol": "BR071812026",
-      "registeredAt": "2026-07-09 14:07:49",
+      "registeredAt": "2026-07-09",
       "fieldStart": "2026-07-10",
       "fieldEnd": "2026-07-13",
       "disclosureDate": "2026-07-15",
@@ -508,7 +524,7 @@
       "tradeName": "",
       "statistician": "Margarida Maria de Mendonca",
       "conre": "6731",
-      "researchCost": 433255.92,
+      "researchCost": 43325592.0,
       "methodology": "Pesquisa quantitativa, de survey, que consiste na realização de entrevistas pessoais, domiciliares e presenciais, conduzidas por profissionais treinados, com a aplicação de questionários estruturados a uma amostra representativa da população votante de 16 anos ou mais residente no Brasil. O desenho amostral aplicado combina sorteio probabilístico de municípios e de setores censitários fornecidos pelo IBGE (unidades territoriais homogêneas, de tamanho similar a quadras ou blocos), dentro dos quais serão selecionadas pessoas respondentes por meio de cotas amostrais.",
       "samplingPlan": "O público pesquisado é composto por eleitores de 16 anos ou mais residentes na área de abrangência da pesquisa. Para produzir uma amostra representativa desse público-alvo, utilizamos um desenho amostral por conglomerados que prevê três estágios. No primeiro estágio, é feito um sorteio probabilístico de municípios para comporem a amostra por meio do método PPT (Probabilidade Proporcional ao Tamanho) a partir de suas populações votantes acima de 16 anos. Dentro da lista de municípios sorteados, no segundo estágio, é realizado um sorteio probabilístico por meio do método PPT (Probabilidade Proporcional ao Tamanho) de setores censitários a serem visitados pelos entrevistadores, sorteio que tem como base o total de habitantes residentes nos setores de acordo com dados do Censo de 2022, o que garante a dispersão aleatória e estatística da amostra dentro dos territórios municipais, independentemente de divisões administrativas. Finalmente, dentro da lista de setores censitários sorteados, no último estágio são selecionados domicílios e pessoas a serem entrevistadas utilizando-se cotas amostrais para as seguintes variáveis: sexo, idade, renda familiar e escolaridade. O perfil da amostra, definido pelas cotas previstas, é o seguinte: Sexo: Masculino (47%); Feminino (53%). Faixa etária: 16-34 anos (32%); 35-59 anos (45%); 60 ou mais (23%). Renda domiciliar total, incluindo pensões, benefícios e rendimentos de trabalhos informais: Até 2 salários-mínimos (31%); Mais de 2 a 5 salários-mínimos (42%); Mais de 5 salários-mínimos (27%). Nível de instrução: Até Fundamental completo ou médio incompleto (41%); Médio completo ou superior incompleto (40%); Superior completo ou mais (19%). Fonte dos dados: para a distribuição de sexo e idade, TSE-Tribunal Superior Eleitoral - junho/2026; para a malha de setores censitários, Censo 2022 (IBGE); para a distribuição de renda domiciliar, PNADc Anual 2025, 1a visita (IBGE); e, para a distribuição de escolaridade/instrução, PNADc trimestral 1-2026 (IBGE). A PNADc é utilizada por ser a fonte oficial mais atualizada de rendimentos do país, incluindo rendimentos informais, pensões, entre outros, e corrigindo as defasagens temporais do Censo 2022, além de ser a fonte mais atualizada de nível de instrução da população com 16 anos ou mais dada ausência de atualização obrigatória da escolaridade no registro de eleitores do TSE. Está prevista eventual pós-estratificação da amostra, por meio de algoritmos de calibração (rake) e modelos (MrP), para correção de estimativas e das distribuições das variáveis sexo, idade, renda familiar e escolaridade, com base nos percentuais anteriormente mencionados, caso ocorram diferenças entre os percentuais previstos na amostra e a coleta de dados realizada. Dentro do público-alvo anteriormente descrito, serão realizadas 2.004 entrevistas. O nível de confiança das estimativas é de 95% e a margem de erro máxima prevista, atendendo às diretivas do TSE e usando o cálculo para amostra aleatória simples (AAS) como aproximação, é de cerca de 2 pontos percentuais para mais ou para menos em relação aos totais da amostra.",
       "contractors": [
@@ -522,7 +538,7 @@
     },
     "BR072942026": {
       "protocol": "BR072942026",
-      "registeredAt": "2026-07-08 17:48:18",
+      "registeredAt": "2026-07-08",
       "fieldStart": "2026-07-07",
       "fieldEnd": "2026-07-11",
       "disclosureDate": "2026-07-14",
@@ -545,7 +561,7 @@
     },
     "BR076612026": {
       "protocol": "BR076612026",
-      "registeredAt": "2026-06-04 15:30:30",
+      "registeredAt": "2026-06-04",
       "fieldStart": "2026-06-05",
       "fieldEnd": "2026-06-08",
       "disclosureDate": "2026-06-10",
@@ -554,7 +570,7 @@
       "tradeName": "",
       "statistician": "Margarida Maria de Mendonça",
       "conre": "6731",
-      "researchCost": 433255.92,
+      "researchCost": 43325592.0,
       "methodology": "Pesquisa quantitativa, de survey, que consiste na realização de entrevistas pessoais, domiciliares e presenciais, conduzidas por profissionais treinados, com a aplicação de questionários estruturados a uma amostra representativa da população votante de 16 anos ou mais residente no Brasil. O desenho amostral aplicado combina sorteio probabilístico de municípios e de setores censitários fornecidos pelo IBGE (unidades territoriais homogêneas, de tamanho similar a quadras ou blocos), dentro dos quais serão selecionadas pessoas respondentes por meio de cotas amostrais.",
       "samplingPlan": "O público pesquisado é composto por eleitores de 16 anos ou mais residentes na área de abrangência da pesquisa. Para produzir uma amostra representativa desse público-alvo, utilizamos um desenho amostral por conglomerados que prevê três estágios. No primeiro estágio, é feito um sorteio probabilístico de municípios para comporem a amostra por meio do método PPT (Probabilidade Proporcional ao Tamanho) a partir de suas populações votantes acima de 16 anos. Dentro da lista de municípios sorteados, no segundo estágio, é realizado um sorteio probabilístico por meio do método PPT (Probabilidade Proporcional ao Tamanho) de setores censitários a serem visitados pelos entrevistadores, sorteio que tem como base o total de habitantes residentes nos setores de acordo com dados do Censo de 2022, o que garante a dispersão aleatória e estatística da amostra dentro dos territórios municipais, independentemente de divisões administrativas. Finalmente, dentro da lista de setores censitários sorteados, no último estágio são selecionados domicílios e pessoas a serem entrevistadas utilizando-se cotas amostrais para as seguintes variáveis: sexo, idade, renda familiar e escolaridade. O perfil da amostra, definido pelas cotas previstas, é o seguinte: Sexo: Masculino (47%); Feminino (53%). Faixa etária: 16-34 anos (31%); 35-59 anos (46%); 60 ou mais (23%). Renda domiciliar total, incluindo pensões, benefícios e rendimentos de trabalhos informais: Até 2 salários-mínimos (31%); Mais de 2 a 5 salários-mínimos (42%); Mais de 5 salários-mínimos (27%). Nível de instrução: Até Fundamental completo ou médio incompleto (41%); Médio completo ou superior incompleto (40%); Superior completo ou mais (19%). Fonte dos dados: para a distribuição de sexo e idade, TSE-Tribunal Superior Eleitoral - maio/2026; para a malha de setores censitários, Censo 2022 (IBGE); para a distribuição de renda domiciliar, PNADc Anual 2025, 1a visita (IBGE); e, para a distribuição de escolaridade/instrução, PNADc trimestral 1-2026 (IBGE). A PNADc é utilizada por ser a fonte oficial mais atualizada de rendimentos do país, incluindo rendimentos informais, pensões, entre outros, e corrigindo as defasagens temporais do Censo 2022, além de ser a fonte mais atualizada de nível de instrução da população com 16 anos ou mais dada ausência de atualização obrigatória da escolaridade no registro de eleitores do TSE. Está prevista eventual pós-estratificação da amostra, por meio de algoritmos de calibração (rake) e modelos (MrP), para correção de estimativas e das distribuições das variáveis sexo, idade, renda familiar e escolaridade, com base nos percentuais anteriormente mencionados, caso ocorram diferenças entre os percentuais previstos na amostra e a coleta de dados realizada. Dentro do público-alvo anteriormente descrito, serão realizadas 2.004 entrevistas. O nível de confiança das estimativas é de 95% e a margem de erro máxima prevista, atendendo às diretivas do TSE e usando o cálculo para amostra aleatória simples (AAS) como aproximação, é de cerca de 2 pontos percentuais para mais ou para menos em relação aos totais da amostra.",
       "contractors": [
@@ -568,7 +584,7 @@
     },
     "BR078452026": {
       "protocol": "BR078452026",
-      "registeredAt": "2026-07-24 18:56:06",
+      "registeredAt": "2026-07-24",
       "fieldStart": "2026-07-26",
       "fieldEnd": "2026-07-29",
       "disclosureDate": "2026-07-30",
@@ -591,7 +607,7 @@
     },
     "BR079812026": {
       "protocol": "BR079812026",
-      "registeredAt": "2026-07-07 10:44:28",
+      "registeredAt": "2026-07-07",
       "fieldStart": "2026-07-10",
       "fieldEnd": "2026-07-12",
       "disclosureDate": "2026-07-13",
@@ -600,7 +616,7 @@
       "tradeName": "NEXUS",
       "statistician": "Neale Ahmed El Dash",
       "conre": "8656-A",
-      "researchCost": 164888.89,
+      "researchCost": 16488889.0,
       "methodology": "Pesquisa quantitativa telefônica realizada com população brasileira a partir de 16 anos e com título de eleitor, em um questionário estruturado, para avaliação do cenário político eleitoral. Os entrevistados são selecionados por sorteio em uma amostra representativa do eleitorado brasileiro com acesso a telefonia fixa e móvel. Todas as entrevistas são realizadas por um time de pesquisadores experientes com pesquisas de opinião e treinados especificamente para o projeto",
       "samplingPlan": "Realização de 2.000 entrevistas em uma amostra representativa do eleitorado brasileiro (a partir de 16 anos com título de eleitor) selecionados de modo aleatório a partir do cadastro de todos os telefones fixos e móveis existentes de acordo com a Agência Nacional de Telecomunicações (Anatel). A técnica de seleção dos entrevistados é a aleatória estratificada por DDD, em uma amostra com margem de erro estimada de 2 pontos percentuais para mais ou para menos, considerando um intervalo de confiança de 95%. A amostra é controlada a partir de cinco variáveis: (a) região; (b) tipo de telefonia (fixo e móvel), (c) sexo, (d) idade e (e) escolaridade. Para construção da amostra são usados como referência os dados da Pesquisa Nacional por Amostragem de Domicílios Contínua (PNADc), do suplemento anual acumulado da 1º Visita de 2024. A distribuição amostral esperada é a seguinte: para escolaridade, até Fundamental Completo (36%), até Médio Completo (41%), Superior Incompleto ou mais (23%); para faixa etária, 16 a 24 anos (17%), 25 a 34 anos (20%), 35 a 44 anos (20%), 45 a 59 anos (24%), 60 anos ou mais (20%); para região, Centro-Oeste (8%), Nordeste (27%), Norte (8%), Sudeste (43%), Sul (15%); e para sexo, Homem (48%), Mulher (52%). Ao final da coleta, será aplicado um fator de ponderação nos resultados para correção de eventuais diferenças entre o planejado na amostra e o observado pelo trabalho de campo, levando em conta todas as variáveis descritas acima, além de variáveis como pessoas dentro e fora da força de trabalho e renda. A relação completa dos municípios pesquisados será encaminhada a este tribunal até o sétimo dia seguinte à data de registro da pesquisa, conforme a Resolução 23.600/2019 do TSE, art.2º §7º",
       "contractors": [
@@ -614,7 +630,7 @@
     },
     "BR080452026": {
       "protocol": "BR080452026",
-      "registeredAt": "2026-08-04 14:18:56",
+      "registeredAt": "2026-08-04",
       "fieldStart": "2026-08-06",
       "fieldEnd": "2026-08-10",
       "disclosureDate": "2026-08-10",
@@ -637,7 +653,7 @@
     },
     "BR081092026": {
       "protocol": "BR081092026",
-      "registeredAt": "2026-08-05 17:10:40",
+      "registeredAt": "2026-08-05",
       "fieldStart": "2026-08-03",
       "fieldEnd": "2026-08-06",
       "disclosureDate": "2026-08-11",
@@ -660,7 +676,7 @@
     },
     "BR084282026": {
       "protocol": "BR084282026",
-      "registeredAt": "2026-08-04 18:44:24",
+      "registeredAt": "2026-08-04",
       "fieldStart": "2026-08-07",
       "fieldEnd": "2026-08-09",
       "disclosureDate": "2026-08-10",
@@ -669,7 +685,7 @@
       "tradeName": "NEXUS",
       "statistician": "Neale Ahmed El Dash",
       "conre": "8656-A",
-      "researchCost": 164888.89,
+      "researchCost": 16488889.0,
       "methodology": "Pesquisa quantitativa telefônica realizada com população brasileira a partir de 16 anos e com título de eleitor, em um questionário estruturado, para avaliação do cenário político eleitoral. Os entrevistados são selecionados por sorteio em uma amostra representativa do eleitorado brasileiro com acesso a telefonia fixa e móvel. Todas as entrevistas são realizadas por um time de pesquisadores experientes com pesquisas de opinião e treinados especificamente para o projeto.",
       "samplingPlan": "Realização de 2.000 entrevistas em uma amostra representativa do eleitorado brasileiro (a partir de 16 anos com título de eleitor) selecionados de modo aleatório a partir do cadastro de todos os telefones fixos e móveis existentes de acordo com a Agência Nacional de Telecomunicações (Anatel). A técnica de seleção dos entrevistados é a aleatória estratificada por DDD, em uma amostra com margem de erro estimada de 2 pontos percentuais para mais ou para menos, considerando um intervalo de confiança de 95%. A amostra é controlada a partir de cinco variáveis: (a) região; (b) tipo de telefonia (fixo e móvel), (c) sexo, (d) idade e (e) escolaridade. Para construção da amostra são usados como referência os dados da Pesquisa Nacional por Amostragem de Domicílios Contínua (PNADc), do suplemento anual acumulado da 1º Visita de 2025, e dados do TSE de junho de 2026 para distribuição de sexo,idade e região. A distribuição amostral esperada é a seguinte: para escolaridade, até Fundamental Completo (34%), até Médio Completo (41%), Superior Incompleto ou mais (25%); para faixa etária, 16 a 24 anos (12%), 25 a 34 anos (19%), 35 a 44 anos (20%), 45 a 59 anos (26%), 60 anos ou mais (24%); para região, Centro-Oeste (8%), Nordeste (28%), Norte (8%), Sudeste (42%), Sul (14%); e para sexo, Homem (47%), Mulher (53%). Ao final da coleta, será aplicado um fator de ponderação nos resultados para correção de eventuais diferenças entre o planejado na amostra e o observado pelo trabalho de campo, levando em conta todas as variáveis descritas acima, além de variáveis como pessoas dentro e fora da força de trabalho e renda. A relação completa dos municípios pesquisados será encaminhada a este tribunal até o sétimo dia seguinte à data de registro da pesquisa, conforme a Resolução 23.600/2019 do TSE, art.2º §7º",
       "contractors": [
@@ -683,7 +699,7 @@
     },
     "BR085212026": {
       "protocol": "BR085212026",
-      "registeredAt": "2026-06-23 18:23:32",
+      "registeredAt": "2026-06-23",
       "fieldStart": "2026-06-26",
       "fieldEnd": "2026-06-28",
       "disclosureDate": "2026-06-29",
@@ -692,7 +708,7 @@
       "tradeName": "NEXUS",
       "statistician": "Neale Ahmed El-Dash",
       "conre": "8656-A",
-      "researchCost": 164888.89,
+      "researchCost": 16488889.0,
       "methodology": "Pesquisa quantitativa telefônica realizada com população brasileira a partir de 16 anos e com título de eleitor, em um questionário estruturado, para avaliação do cenário político eleitoral. Os entrevistados são selecionados por sorteio em uma amostra representativa do eleitorado brasileiro com acesso a telefonia fixa e móvel. Todas as entrevistas são realizadas por um time de pesquisadores experientes com pesquisas de opinião e treinados especificamente para o projeto",
       "samplingPlan": "Realização de 2.000 entrevistas em uma amostra representativa do eleitorado brasileiro (a partir de 16 anos com título de eleitor) selecionados de modo aleatório a partir do cadastro de todos os telefones fixos e móveis existentes de acordo com a Agência Nacional de Telecomunicações (Anatel). A técnica de seleção dos entrevistados é a aleatória estratificada por DDD, em uma amostra com margem de erro estimada de 2 pontos percentuais para mais ou para menos, considerando um intervalo de confiança de 95%. A amostra é controlada a partir de cinco variáveis: (a) região; (b) tipo de telefonia (fixo e móvel), (c) sexo, (d) idade e (e) escolaridade. Para construção da amostra são usados como referência os dados da Pesquisa Nacional por Amostragem de Domicílios Contínua (PNADc), do suplemento anual acumulado da 1º Visita de 2024. A distribuição amostral esperada é a seguinte: para escolaridade, até Fundamental Completo (36%), até Médio Completo (41%), Superior Incompleto ou mais (23%); para faixa etária, 16 a 24 anos (17%), 25 a 34 anos (20%), 35 a 44 anos (20%), 45 a 59 anos (24%), 60 anos ou mais (20%); para região, Centro-Oeste (8%), Nordeste (27%), Norte (8%), Sudeste (43%), Sul (15%); e para sexo, Homem (48%), Mulher (52%). Ao final da coleta, será aplicado um fator de ponderação nos resultados para correção de eventuais diferenças entre o planejado na amostra e o observado pelo trabalho de campo, levando em conta todas as variáveis descritas acima, além de variáveis como pessoas dentro e fora da força de trabalho e renda. A relação completa dos municípios pesquisados será encaminhada a este tribunal até o sétimo dia seguinte à data de registro da pesquisa, conforme a Resolução 23.600/2019 do TSE, art.2º §7º",
       "contractors": [
@@ -706,7 +722,7 @@
     },
     "BR086022026": {
       "protocol": "BR086022026",
-      "registeredAt": "2026-07-22 19:16:08",
+      "registeredAt": "2026-07-22",
       "fieldStart": "2026-07-22",
       "fieldEnd": "2026-07-27",
       "disclosureDate": "2026-07-28",
@@ -729,7 +745,7 @@
     },
     "BR089442026": {
       "protocol": "BR089442026",
-      "registeredAt": "2026-06-17 20:25:23",
+      "registeredAt": "2026-06-17",
       "fieldStart": "2026-06-18",
       "fieldEnd": "2026-06-20",
       "disclosureDate": "2026-06-23",
@@ -752,7 +768,7 @@
     },
     "BR099562026": {
       "protocol": "BR099562026",
-      "registeredAt": "2026-06-13 15:35:40",
+      "registeredAt": "2026-06-13",
       "fieldStart": "2026-06-17",
       "fieldEnd": "2026-06-19",
       "disclosureDate": "2026-06-19",
@@ -761,7 +777,7 @@
       "tradeName": "",
       "statistician": "Renata Nunes Cesar",
       "conre": "7249",
-      "researchCost": 307641.6,
+      "researchCost": 3076416.0,
       "methodology": "Pesquisa do tipo quantitativo, por amostragem, com aplicação de questionário estruturado e abordagem pessoal em pontos de fluxo populacional. O conjunto do eleitorado brasileiro foi tomado como universo da pesquisa. Plano amostral e ponderação quanto a sexo, idade, grau de instrução e nível econômico do entrevistado; intervalo de confiança e margem de erro: Universo: Eleitorado brasileiro Tamanho da amostra: A amostra prevista é de 2004 entrevistas. Técnica de amostragem: A amostra é estratificada por região geográfica (Sudeste, Sul, Nordeste, Norte e Centro-oeste) e natureza dos municípios (capital, região metropolitana ou interior). Em cada estrato, num primeiro estágio, são sorteados com probabilidade proporcional ao tamanho (PPT) os municípios que farão parte do levantamento. Num segundo estágio, são sorteados os bairros e pontos de abordagem onde serão aplicadas as entrevistas. Por fim, os entrevistados são selecionados aleatoriamente para responder ao questionário, de acordo com cotas de gênero e faixa etária. Os dados utilizados para definição e seleção da amostra são baseados nos dados fornecidos pelo TSE (dados mais atuais publicados), IBGE (Censo 2022, PNADC 2024 e Estimativa populacional 2025), além de dados primários de outros levantamentos do instituto. Os dados relativos a gênero e faixa etária são: Homens: 48%, mulheres: 52%, 16 a 24 anos: 13%, 25 a 34 anos: 20%, 35 a 44 anos: 20%, 45 a 59 anos: 25% e 60 anos ou mais: 22%. Para a variável grau de instrução os dados utilizados como referência são: até nível médio completo ou incompleto (inclui os sem escolaridade e analfabetos) =76% e nível superior (inclui superior incompleto) = 24%.",
       "samplingPlan": "Ponderação dos resultados: Está prevista ponderação considerando os estratos (região geográfica, natureza do município), gênero e faixa etária. A variável escolaridade poderá ser ajustada de acordo com os percentuais detalhados anteriormente caso a diferença entre os valores descritos e observados seja maior que a margem de erro definida. Para o nível econômico do entrevistado (renda familiar mensal declarada pelo respondente), a distribuição utilizada como referência foi: Até 2 S.M. (salários mínimos)=48%, mais de 2 S.M.=48%, não souberam ou recusaram a resposta=4%. O fator previsto para ponderação é 1 (resultados obtidos em campo). Margem de Erro: A margem de erro máxima prevista é de 2 pontos percentuais para mais ou para menos, considerando um nível de confiança de 95% e baseada em uma amostra aleatória simples (AAS). Os intervalos de confiança serão calculados considerando os resultados obtidos para um nível de confiança de 95%.",
       "contractors": [
