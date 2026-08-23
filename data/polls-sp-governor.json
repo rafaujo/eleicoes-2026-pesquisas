@@ -31,13 +31,37 @@
       "name": "Vivian Mendes",
       "shortName": "Vivian",
       "color": "#2d8a78"
+    },
+    "edjane": {
+      "name": "Policial Edjane",
+      "shortName": "Edjane",
+      "color": "#2878b5"
+    },
+    "izadora": {
+      "name": "Izadora Dias",
+      "shortName": "Izadora",
+      "color": "#68716f"
     }
   },
   "scenarios": [
     {
       "id": "first-main",
       "round": 1,
-      "label": "Cenário consolidado",
+      "label": "Lista oficial",
+      "candidates": [
+        "tarcisio",
+        "haddad",
+        "vera",
+        "machado",
+        "edjane",
+        "vivian",
+        "izadora"
+      ]
+    },
+    {
+      "id": "first-pre-campaign",
+      "round": 1,
+      "label": "Lista da pré-campanha",
       "candidates": [
         "tarcisio",
         "haddad",
@@ -73,7 +97,7 @@
       "resultSource": "https://www.cnnbrasil.com.br/eleicoes/parana-pesquisas-tarcisio-lidera-cenarios-de-1o-e-2o-turno-em-sp/",
       "resultSourceLabel": "CNN Brasil — resultados e metodologia",
       "scenarios": {
-        "first-main": {
+        "first-pre-campaign": {
           "results": {
             "tarcisio": 48.5,
             "haddad": 35.1,
@@ -108,7 +132,7 @@
       "resultSource": "https://noticias.uol.com.br/eleicoes/2026/07/29/genialquaest-governo-sp.ghtm",
       "resultSourceLabel": "UOL — resultados e metodologia",
       "scenarios": {
-        "first-main": {
+        "first-pre-campaign": {
           "results": {
             "tarcisio": 41,
             "haddad": 26,
@@ -143,7 +167,7 @@
       "resultSource": "https://www1.folha.uol.com.br/poder/2026/07/datafolha-tarcisio-lidera-em-sp-com-46-e-haddad-tem-30.shtml",
       "resultSourceLabel": "Folha de S.Paulo — resultados e metodologia",
       "scenarios": {
-        "first-main": {
+        "first-pre-campaign": {
           "results": {
             "tarcisio": 46,
             "haddad": 30,
@@ -234,6 +258,68 @@
             "haddad": 37.3
           },
           "undecided": 9.3
+        }
+      }
+    },
+    {
+      "id": 7,
+      "pollster": "Paraná Pesquisas",
+      "publication": "Divulgação InfoMoney",
+      "protocol": "SP089132026",
+      "start": "2026-08-16",
+      "end": "2026-08-18",
+      "published": "2026-08-19",
+      "field": "16–18 ago",
+      "sample": 1680,
+      "margin": 2.4,
+      "confidence": 95,
+      "method": "Entrevistas presenciais em 80 municípios",
+      "resultSource": "https://www.infomoney.com.br/politica/parana-pesquisa-tarcisio-chega-a-50-e-abre-16-pontos-de-vantagem-sobre-haddad-em-sp/",
+      "resultSourceLabel": "InfoMoney — resultados e metodologia",
+      "scenarios": {
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 53,
+            "haddad": 36.9
+          },
+          "undecided": 10.1
+        }
+      }
+    },
+    {
+      "id": 8,
+      "pollster": "Datafolha",
+      "publication": "Folha de S.Paulo/TV Globo · InfoMoney",
+      "protocol": "SP018062026",
+      "start": "2026-08-18",
+      "end": "2026-08-19",
+      "published": "2026-08-21",
+      "field": "18–19 ago",
+      "sample": 1610,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Entrevistas presenciais em 65 municípios",
+      "resultSource": "https://www.infomoney.com.br/politica/datafolha-tarcisio-tem-45-e-haddad-27-na-disputa-pelo-governo-de-sp/",
+      "resultSourceLabel": "InfoMoney — resultados e metodologia",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 45,
+            "haddad": 27,
+            "vera": 4,
+            "machado": 3,
+            "edjane": 3,
+            "vivian": 2,
+            "izadora": 1
+          },
+          "undecided": 15
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 54,
+            "haddad": 35
+          },
+          "undecided": 11
         }
       }
     }

@@ -39,6 +39,7 @@ POLLSTER_ALIASES = {
     "ipsos ipec": "Ipsos-Ipec",
     "nexus": "Nexus",
     "palver": "Palver",
+    "parana pesquisa": "Paraná Pesquisas",
     "parana pesquisas": "Paraná Pesquisas",
     "poderdata": "PoderData",
     "quaest": "Quaest",
@@ -48,15 +49,24 @@ POLLSTER_ALIASES = {
 }
 ELECTION_RULES = {
     "president-br": {
-        "query": 'pesquisa eleitoral presidente 2026 Lula "Flávio Bolsonaro"',
+        "queries": (
+            'pesquisa eleitoral presidente 2026 Lula "Flávio Bolsonaro"',
+            'pesquisa 2026 Lula Flávio Caiado Zema Renan',
+        ),
         "terms": ("presidente", "presidencial", "lula", "flavio bolsonaro", "marcal"),
     },
     "governor-sp": {
-        "query": 'pesquisa eleitoral governador "São Paulo" 2026',
+        "queries": (
+            'pesquisa eleitoral governador "São Paulo" 2026',
+            'pesquisa Tarcísio Haddad 2026',
+        ),
         "terms": ("governo de sp", "governador de sao paulo", "tarcisio", "haddad"),
     },
     "governor-mg": {
-        "query": 'pesquisa eleitoral governador "Minas Gerais" 2026',
+        "queries": (
+            'pesquisa eleitoral governador "Minas Gerais" 2026',
+            'pesquisa Cleitinho Kalil Patrus 2026',
+        ),
         "terms": ("governo de mg", "governador de minas", "cleitinho", "kalil"),
     },
 }
@@ -92,6 +102,8 @@ PRESIDENT_REGIONAL_TERMS = (
     "na bahia",
     "no ceara",
     "no distrito federal",
+    "no df",
+    "em df",
     "no espirito santo",
     "em goias",
     "no maranhao",
@@ -99,9 +111,12 @@ PRESIDENT_REGIONAL_TERMS = (
     "em minas gerais",
     "em mg",
     "no para",
+    "no pa",
     "na paraiba",
     "no parana",
+    "no pr",
     "em pernambuco",
+    "em pe",
     "no piaui",
     "no rio de janeiro",
     "no rio grande do norte",
@@ -113,6 +128,7 @@ PRESIDENT_REGIONAL_TERMS = (
     "em sp",
     "em sergipe",
     "no tocantins",
+    "estado em que",
 )
 SOURCE_PRIORITY = {
     "Folha de S.Paulo": 0,
@@ -156,11 +172,10 @@ def matches_election(title: str, election_id: str, source: str = "") -> bool:
     if normalize(source) in {normalize(item) for item in SOCIAL_SOURCES}:
         return False
 
-    # Alguns veículos publicam o resultado começando diretamente pelo nome do
-    # instituto (por exemplo, "Veritá: Lula...") e omitem a palavra
-    # "pesquisa" do título. O instituto reconhecido funciona como sinal
-    # equivalente, sem afrouxar o filtro para manchetes eleitorais genéricas.
-    if "pesquisa" not in normalized and not detect_pollster(title):
+    # Exigir um instituto identificável evita que análises, agregadores e
+    # republicações vagas entrem na fila como se fossem um levantamento novo.
+    # Os aliases são explícitos e ampliáveis conforme novos institutos surgem.
+    if not detect_pollster(title, source):
         return False
     if any(term in normalized for term in EDITORIAL_ONLY_TERMS):
         return False
@@ -331,22 +346,36 @@ def main() -> int:
         rule = ELECTION_RULES.get(election_id)
         if not rule:
             continue
-        try:
-            articles = parse_feed(fetch(news_url(str(rule["query"]), args.lookback_days)), election_id)
-        except (OSError, ET.ParseError, ValueError) as error:
-            failures.append(f"{election_id}: {error}")
-            continue
+        articles: list[dict[str, str]] = []
+        for query in rule["queries"]:
+            try:
+                articles.extend(
+                    parse_feed(fetch(news_url(str(query), args.lookback_days)), election_id)
+                )
+            except (OSError, ET.ParseError, ValueError) as error:
+                failures.append(f"{election_id} ({query}): {error}")
         for article in articles:
             key = article["key"]
             seen.add(key)
             if not already_curated(article, databases.get(election_id, [])):
                 pending_by_key[key] = article
 
-    pending = deduplicate_disclosures([
-        article
-        for article in pending_by_key.values()
-        if not already_curated(article, databases.get(article["election"], []))
-    ])
+    reclassified: list[dict[str, str]] = []
+    for stored in pending_by_key.values():
+        article = dict(stored)
+        article["pollster"] = detect_pollster(
+            article.get("title", ""), article.get("source", "")
+        )
+        if not matches_election(
+            article.get("title", ""),
+            article.get("election", ""),
+            article.get("source", ""),
+        ):
+            continue
+        if already_curated(article, databases.get(article["election"], [])):
+            continue
+        reclassified.append(article)
+    pending = deduplicate_disclosures(reclassified)
     pending.sort(key=lambda item: (item.get("published", ""), item["key"]), reverse=True)
     new_state = {"schemaVersion": 1, "seenKeys": sorted(seen), "pending": pending}
     changed = new_state != state

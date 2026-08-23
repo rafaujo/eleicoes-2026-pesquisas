@@ -24,8 +24,8 @@ Depois acesse `http://localhost:4173`.
 - filtros por período e busca por instituto/contratante;
 - tabela de resultados e ficha metodológica;
 - 36 levantamentos presidenciais com protocolos conferidos no PesqEle/TSE;
-- seis levantamentos paulistas: três com a lista consolidada de 1º turno e seis no confronto Tarcísio × Haddad;
-- dois levantamentos mineiros, com cenário atual de 1º turno e confrontos de 2º turno mantidos em séries comparáveis;
+- oito levantamentos paulistas, com listas de 1º turno separadas por composição e oito medições no confronto Tarcísio × Haddad;
+- três levantamentos mineiros, com listas de 1º turno separadas por composição e confrontos de 2º turno mantidos em séries comparáveis;
 - exportação dos dados filtrados em CSV;
 - navegação por teclado, foco visível e suporte a movimento reduzido.
 

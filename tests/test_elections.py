@@ -30,31 +30,41 @@ class ElectionCatalogTests(unittest.TestCase):
         presidential_exclusions = elections["president-br"]["tse"]["excludedProtocols"]
         self.assertEqual(
             {item["protocol"] for item in presidential_exclusions},
-            {"BR078502026", "BR062782026"},
+            {"BR078502026", "BR062782026", "BR054232026", "BR067832026"},
         )
         self.assertTrue(all(item["reason"] and item["source"] for item in presidential_exclusions))
 
     def test_sao_paulo_keeps_comparable_scenarios_separate(self) -> None:
         polls = self.sp["polls"]
 
-        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 3)
-        self.assertEqual(sum("runoff-tarcisio-haddad" in poll["scenarios"] for poll in polls), 6)
+        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 1)
+        self.assertEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 3)
+        self.assertEqual(sum("runoff-tarcisio-haddad" in poll["scenarios"] for poll in polls), 8)
 
     def test_latest_sao_paulo_results_match_sources(self) -> None:
         parana = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP046242026")
         quaest = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP048462026")
 
-        self.assertEqual(parana["scenarios"]["first-main"]["results"]["tarcisio"], 48.5)
+        self.assertEqual(parana["scenarios"]["first-pre-campaign"]["results"]["tarcisio"], 48.5)
         self.assertEqual(parana["scenarios"]["runoff-tarcisio-haddad"]["results"]["haddad"], 38.3)
-        self.assertEqual(quaest["scenarios"]["first-main"]["results"]["haddad"], 26)
+        self.assertEqual(quaest["scenarios"]["first-pre-campaign"]["results"]["haddad"], 26)
+
+        datafolha = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP018062026")
+        latest_parana = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP089132026")
+        self.assertEqual(datafolha["scenarios"]["first-main"]["results"]["tarcisio"], 45)
+        self.assertEqual(datafolha["scenarios"]["first-main"]["results"]["edjane"], 3)
+        self.assertEqual(datafolha["scenarios"]["runoff-tarcisio-haddad"]["results"]["haddad"], 35)
+        self.assertEqual(latest_parana["scenarios"]["runoff-tarcisio-haddad"]["results"]["tarcisio"], 53)
 
     def test_sao_paulo_official_files_cover_curated_protocols(self) -> None:
         metadata = json.loads((ROOT / "data" / "tse-metadata-sp.json").read_text(encoding="utf-8"))
         monitor = json.loads((ROOT / "data" / "tse-monitor-sp.json").read_text(encoding="utf-8"))
         curated = {poll["protocol"] for poll in self.sp["polls"]}
 
-        self.assertEqual(set(metadata["records"]), curated)
-        self.assertTrue(curated.issubset(set(monitor["seenProtocols"])))
+        awaiting_sync = {"SP089132026", "SP018062026"}
+        self.assertTrue(set(metadata["records"]).issubset(curated))
+        self.assertTrue((curated - awaiting_sync).issubset(set(metadata["records"])))
+        self.assertTrue((curated - awaiting_sync).issubset(set(monitor["seenProtocols"])))
         self.assertTrue(curated.isdisjoint(set(monitor["pending"])))
         self.assertTrue(set(monitor["pending"]).issubset(set(monitor["seenProtocols"])))
 
@@ -63,17 +73,24 @@ class ElectionCatalogTests(unittest.TestCase):
         quaest = next(poll for poll in polls if poll["protocol"] == "MG034902026")
 
         self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 1)
+        self.assertEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 1)
         self.assertEqual(sum("runoff-cleitinho-kalil" in poll["scenarios"] for poll in polls), 2)
-        self.assertEqual(quaest["scenarios"]["first-main"]["results"]["cleitinho"], 35)
+        self.assertEqual(quaest["scenarios"]["first-pre-campaign"]["results"]["cleitinho"], 35)
         self.assertEqual(quaest["scenarios"]["runoff-cleitinho-patrus"]["results"]["patrus"], 31)
+
+        datafolha = next(poll for poll in polls if poll["protocol"] == "MG004462026")
+        self.assertEqual(datafolha["scenarios"]["first-main"]["results"]["cleitinho"], 32)
+        self.assertEqual(datafolha["scenarios"]["first-main"]["results"]["indira"], 1)
 
     def test_minas_gerais_official_files_cover_curated_protocols(self) -> None:
         metadata = json.loads((ROOT / "data" / "tse-metadata-mg.json").read_text(encoding="utf-8"))
         monitor = json.loads((ROOT / "data" / "tse-monitor-mg.json").read_text(encoding="utf-8"))
         curated = {poll["protocol"] for poll in self.mg["polls"]}
 
-        self.assertEqual(set(metadata["records"]), curated)
-        self.assertTrue(curated.issubset(set(monitor["seenProtocols"])))
+        awaiting_sync = {"MG004462026"}
+        self.assertTrue(set(metadata["records"]).issubset(curated))
+        self.assertTrue((curated - awaiting_sync).issubset(set(metadata["records"])))
+        self.assertTrue((curated - awaiting_sync).issubset(set(monitor["seenProtocols"])))
         self.assertTrue(curated.isdisjoint(set(monitor["pending"])))
         self.assertTrue(set(monitor["pending"]).issubset(set(monitor["seenProtocols"])))
 

@@ -61,13 +61,41 @@
       "name": "Túlio Lopes",
       "shortName": "Túlio",
       "color": "#68716f"
+    },
+    "indira": {
+      "name": "Indira Xavier",
+      "shortName": "Indira",
+      "color": "#3c8d4e"
+    },
+    "henrique": {
+      "name": "Henrique Áreas",
+      "shortName": "Henrique",
+      "color": "#826b56"
     }
   },
   "scenarios": [
     {
       "id": "first-main",
       "round": 1,
-      "label": "Cenário consolidado",
+      "label": "Lista oficial",
+      "candidates": [
+        "cleitinho",
+        "kalil",
+        "patrus",
+        "mateus",
+        "gabriel",
+        "roscoe",
+        "tulio",
+        "duda",
+        "ben",
+        "indira",
+        "henrique"
+      ]
+    },
+    {
+      "id": "first-pre-campaign",
+      "round": 1,
+      "label": "Lista da pré-campanha",
       "candidates": [
         "cleitinho",
         "kalil",
@@ -130,7 +158,7 @@
       "resultSource": "https://www.cnnbrasil.com.br/eleicoes/quaest-cleitinho-lidera-cenarios-de-1o-e-2o-turno-pelo-governo-de-mg/",
       "resultSourceLabel": "CNN Brasil — resultados e metodologia",
       "scenarios": {
-        "first-main": {
+        "first-pre-campaign": {
           "results": {
             "cleitinho": 35,
             "kalil": 12,
@@ -191,6 +219,40 @@
         "runoff-cleitinho-mateus": {
           "results": {"cleitinho": 48, "mateus": 26},
           "undecided": 26
+        }
+      }
+    },
+    {
+      "id": 3,
+      "pollster": "Datafolha",
+      "publication": "Folha de S.Paulo/Grupo Globo · CNN Brasil",
+      "protocol": "MG004462026",
+      "start": "2026-08-18",
+      "end": "2026-08-21",
+      "published": "2026-08-21",
+      "field": "18–21 ago",
+      "sample": 1204,
+      "margin": 3,
+      "confidence": 95,
+      "method": "Entrevistas presenciais em Minas Gerais",
+      "resultSource": "https://www.cnnbrasil.com.br/eleicoes/datafolha-cleitinho-lidera-cenario-de-1o-turno-pelo-governo-de-mg/",
+      "resultSourceLabel": "CNN Brasil — resultados e metodologia",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "cleitinho": 32,
+            "kalil": 12,
+            "patrus": 12,
+            "mateus": 4,
+            "gabriel": 4,
+            "roscoe": 4,
+            "tulio": 2,
+            "duda": 1,
+            "ben": 1,
+            "indira": 1,
+            "henrique": 0
+          },
+          "undecided": 27
         }
       }
     }

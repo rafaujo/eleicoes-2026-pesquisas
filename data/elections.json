@@ -31,6 +31,16 @@
             "protocol": "BR062782026",
             "reason": "Amostra restrita ao estado de Alagoas; não representa o eleitorado nacional.",
             "source": "https://www.opovo.com.br/noticias/politica/eleicoes/2026/08/03/amp/com-real-time-big-data-e-quaest-veja-quando-saem-as-pesquias-nesta-semana-3-a-7-8.html"
+          },
+          {
+            "protocol": "BR054232026",
+            "reason": "Amostra restrita ao Distrito Federal; não representa o eleitorado nacional.",
+            "source": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-44-e-lula-39-no-df-diz-real-time-big-data/"
+          },
+          {
+            "protocol": "BR067832026",
+            "reason": "Amostra restrita ao estado da Bahia; não representa o eleitorado nacional.",
+            "source": "https://www.bnews.com.br/amp/noticias/politica/bnews-divulga-pesquisa-feita-pelo-opnus-para-o-governo-e-senado-na-bahia-na-segunda-24.html"
           }
         ]
       }
