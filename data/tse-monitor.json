@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-08-23 20:26:57",
+  "sourceGeneratedAt": "2026-08-23 21:42:20",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -626,17 +626,6 @@
       "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
       "contractors": []
     },
-    "BR054232026": {
-      "protocol": "BR054232026",
-      "registeredAt": "2026-08-13",
-      "fieldStart": "2026-08-14",
-      "fieldEnd": "2026-08-18",
-      "disclosureDate": "2026-08-19",
-      "sample": 1600,
-      "company": "REAL TIME MIDIA LTDA",
-      "tradeName": "REAL TIME BIG DATA",
-      "contractors": []
-    },
     "BR063662026": {
       "protocol": "BR063662026",
       "registeredAt": "2026-08-20",
@@ -647,19 +636,6 @@
       "company": "INSTITUTO INDEXA PESQUISAS LTDA",
       "tradeName": "INDEXA PESQUISAS",
       "contractors": []
-    },
-    "BR067832026": {
-      "protocol": "BR067832026",
-      "registeredAt": "2026-08-16 21:24:40",
-      "fieldStart": "2026-08-17",
-      "fieldEnd": "2026-08-21",
-      "disclosureDate": "2026-08-22",
-      "sample": 1200,
-      "company": "INSTITUTO OPNUS DE PESQUISA, CONSULTORIA E INTELIGENCIA DE DADOS LTDA",
-      "tradeName": "INSTITUTO OPNUS",
-      "contractors": [
-        "ALVES QUATRO ASSESSORIA DE COMUNICACAO LTDA / ALVES QUATRO"
-      ]
     },
     "BR078062026": {
       "protocol": "BR078062026",
