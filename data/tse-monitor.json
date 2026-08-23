@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-08-22 10:42:59",
+  "sourceGeneratedAt": "2026-08-23 10:43:34",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -635,17 +635,6 @@
       "sample": 3840,
       "company": "INSTITUTO VERITA LTDA",
       "tradeName": "VERITA",
-      "contractors": []
-    },
-    "BR044962026": {
-      "protocol": "BR044962026",
-      "registeredAt": "2026-08-15",
-      "fieldStart": "2026-08-18",
-      "fieldEnd": "2026-08-20",
-      "disclosureDate": "2026-08-21",
-      "sample": 2058,
-      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
-      "tradeName": "",
       "contractors": []
     },
     "BR054232026": {
