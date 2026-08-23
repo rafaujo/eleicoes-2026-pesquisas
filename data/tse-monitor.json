@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-08-23 21:42:20",
+  "sourceGeneratedAt": "2026-08-23 21:47:47",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -646,17 +646,6 @@
       "sample": 6000,
       "company": "JOTA JORNALISMO S/A",
       "tradeName": "JOTA JORNALISMO",
-      "contractors": []
-    },
-    "BR087572026": {
-      "protocol": "BR087572026",
-      "registeredAt": "2026-08-17",
-      "fieldStart": "2026-08-18",
-      "fieldEnd": "2026-08-20",
-      "disclosureDate": "2026-08-23",
-      "sample": 1000,
-      "company": "INSTITUTO DE PESQUISAS PERFIL LTDA",
-      "tradeName": "",
       "contractors": []
     },
     "BR087652026": {
