@@ -234,6 +234,390 @@ def validate_official_files(
     protocol_set = set(protocols)
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     records = metadata.get("records", {})
+    monitor = json.loads(monitor_path.read_text(encoding="utf-8"))
+    seen = monitor.get("seenProtocols", [])
+    seen_set = set(seen)
+    pending = monitor.get("pending", {})
+    metadata_date_match = re.match(
+        r"^(?:(\d{4})-(\d{2})-(\d{2})|(\d{2})/(\d{2})/(\d{4}))",
+        str(metadata.get("generatedAt", "")),
+    )
+    metadata_date = ""
+    if metadata_date_match:
+        groups = metadata_date_match.groups()
+        metadata_date = "-".join(groups[:3]) if groups[0] else "-".join((groups[5], groups[4], groups[3]))
+    missing_records = []
+    for poll in polls:
+        protocol = poll.get("protocol") if isinstance(poll, dict) else None
+        if not protocol or protocol in records:
+            continue
+        # Uma pesquisa pode ser curada entre a publicação dos resultados e a
+        # próxima atualização do recorte de metadados. A sincronização seguinte
+        # deve preencher o registro oficial sem bloquear a publicação editorial.
+        if protocol in seen_set or (
+            metadata_date and str(poll.get("published", "")) > metadata_date
+        ):
+            continue
+        missing_records.append(protocol)
+    missing_records.sort()
+    extra_records = sorted(set(records) - protocol_set)
+    if missing_records:
+        errors.append(f"Protocolos sem metadados do TSE em {election_id}: {', '.join(missing_records)}")
+    if extra_records:
+        errors.append(f"Metadados sem pesquisa curada em {election_id}: {', '.join(extra_records)}")
+    for protocol, record in records.items():
+        missing_fields = sorted(REQUIRED_METADATA_FIELDS - set(record))
+        if missing_fields:
+            errors.append(f"{protocol} sem campos: {', '.join(missing_fields)}")
+        if record.get("protocol") != protocol:
+            errors.append(f"Chave e protocolo divergem em {protocol}")
+        if not isinstance(record.get("sample"), int) or record.get("sample", 0) <= 0:
+            errors.append(f"Amostra inválida em {protocol}")
+
+    if monitor.get("schemaVersion") != 1:
+        errors.append(f"Versão desconhecida de {monitor_path.relative_to(ROOT).as_posix()}")
+    if seen != sorted(set(seen)):
+        errors.append(f"seenProtocols deve estar ordenado e sem duplicatas em {election_id}")
+    # Durante a curadoria, o resultado pode entrar antes de o sincronizador
+    # remover a pendência. Só há inconsistência se o protocolo já possui o
+    # registro detalhado em cache e ainda assim continua na fila.
+    overlap = sorted(protocol_set & set(pending) & set(records))
+    if overlap:
+        errors.append(f"Protocolos curados ainda estão pendentes em {election_id}: {', '.join(overlap)}")
+    if not set(pending).issubset(set(seen)):
+        errors.append(f"Há protocolos pendentes ausentes de seenProtocols em {election_id}")
+    return len(seen), len(pending)
+
+
+def main() -> int:
+    errors: list[str] = []
+    elections_data = json.loads(ELECTIONS_FILE.read_text(encoding="utf-8"))
+    elections = elections_data.get("elections")
+    if elections_data.get("schemaVersion") != 1 or not isinstance(elections, list) or not elections:
+        errors.append("Catálogo inválido em data/elections.json")
+        elections = []
+
+    election_ids = [item.get("id") for item in elections if isinstance(item, dict)]
+    if duplicate_values(election_ids):
+        errors.append("Há IDs duplicados em data/elections.json")
+    if elections_data.get("defaultElection") not in election_ids:
+        errors.append("defaultElection não existe em data/elections.json")
+
+    all_databases: dict[Path, list[dict]] = {}
+    monitored_total = 0
+    pending_total = 0
+    required_election_fields = {
+        "id", "group", "label", "context", "dataFile", "metadataFile", "monitorFile", "tse",
+        "defaultPeriod", "defaultScenario", "eyebrow", "title"
+    }
+    tse_keys: list[str] = []
+    data_root = (ROOT / "data").resolve()
+    for position, item in enumerate(elections, start=1):
+        if not isinstance(item, dict):
+            errors.append(f"Eleição #{position} é inválida")
+            continue
+        missing = sorted(required_election_fields - set(item))
+        if missing:
+            errors.append(f"Eleição {item.get('id', position)} sem campos: {', '.join(missing)}")
+            continue
+        tse = item["tse"]
+        required_tse_fields = {"key", "jurisdiction", "office", "issueTitle", "issueHeading"}
+        if not isinstance(tse, dict) or required_tse_fields - set(tse):
+            errors.append(f"Configuração TSE inválida para {item['id']}")
+            continue
+        key = str(tse["key"])
+        if not key.replace("_", "").isalnum():
+            errors.append(f"Chave TSE inválida para {item['id']}: {key}")
+        tse_keys.append(key)
+        path = (ROOT / str(item["dataFile"])).resolve()
+        try:
+            path.relative_to(data_root)
+        except ValueError:
+            errors.append(f"Arquivo fora de data/ para {item['id']}")
+            continue
+        if not path.is_file():
+            errors.append(f"Base ausente para {item['id']}: {item['dataFile']}")
+            continue
+        if path in all_databases:
+            errors.append(f"Base reutilizada por mais de uma eleição: {item['dataFile']}")
+            continue
+        polls = validate_poll_database(path, errors)
+        all_databases[path] = polls
+        data = json.loads(path.read_text(encoding="utf-8"))
+        scenario_ids = {scenario.get("id") for scenario in data.get("scenarios", []) if isinstance(scenario, dict)}
+        if item["defaultScenario"] not in scenario_ids:
+            errors.append(f"Cenário padrão ausente para {item['id']}")
+        if str(item["defaultPeriod"]) not in {"7", "14", "21", "30", "60", "90", "180"}:
+            errors.append(f"Período padrão inválido para {item['id']}")
+        metadata_path = (ROOT / str(item["metadataFile"])).resolve()
+        monitor_path = (ROOT / str(item["monitorFile"])).resolve()
+        try:
+            metadata_path.relative_to(data_root)
+            monitor_path.relative_to(data_root)
+        except ValueError:
+            errors.append(f"Arquivos oficiais fora de data/ para {item['id']}")
+            continue
+        monitored, pending = validate_official_files(
+            polls, metadata_path, monitor_path, errors, str(item["id"])
+        )
+        monitored_total += monitored
+        pending_total += pending
+
+    if duplicate_values(tse_keys):
+        errors.append("Há chaves TSE duplicadas em data/elections.json")
+
+    if errors:
+        print("Falha na validação:", file=sys.stderr)
+        for error in errors:
+            print(f"- {error}", file=sys.stderr)
+        return 1
+
+    print(
+        f"Dados válidos: {sum(len(polls) for polls in all_databases.values())} pesquisas em "
+        f"{len(all_databases)} eleições, "
+        f"{monitored_total} protocolos monitorados e {pending_total} pendentes"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+#!/usr/bin/env python3
+"""Valida a base curada e sua consistência com o recorte oficial do TSE."""
+
+from __future__ import annotations
+
+import json
+import re
+import sys
+from datetime import date
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+ELECTIONS_FILE = ROOT / "data" / "elections.json"
+POLLS_FILE = ROOT / "data" / "polls.json"
+METADATA_FILE = ROOT / "data" / "tse-metadata.json"
+MONITOR_FILE = ROOT / "data" / "tse-monitor.json"
+PROTOCOL_PATTERN = re.compile(r"^[A-Z]{2}\d{9}$")
+REQUIRED_POLL_FIELDS = {
+    "id",
+    "pollster",
+    "publication",
+    "protocol",
+    "start",
+    "end",
+    "field",
+    "sample",
+    "margin",
+    "confidence",
+    "method",
+    "resultSource",
+    "resultSourceLabel",
+    "scenarios",
+}
+REQUIRED_CANDIDATE_FIELDS = {"name", "shortName", "color"}
+REQUIRED_SCENARIO_FIELDS = {"id", "round", "label", "candidates"}
+HEX_COLOR_PATTERN = re.compile(r"^#[0-9a-fA-F]{6}$")
+REQUIRED_METADATA_FIELDS = {
+    "protocol",
+    "registeredAt",
+    "fieldStart",
+    "fieldEnd",
+    "disclosureDate",
+    "sample",
+    "company",
+    "methodology",
+    "contractors",
+}
+
+
+def duplicate_values(values: list[object]) -> list[object]:
+    return sorted({value for value in values if values.count(value) > 1})
+
+
+def valid_percentage(value: object) -> bool:
+    return isinstance(value, (int, float)) and not isinstance(value, bool) and 0 <= value <= 100
+
+
+def validate_poll(
+    poll: object,
+    position: int,
+    errors: list[str],
+    scenario_catalog: dict[str, dict] | None = None,
+) -> None:
+    label = f"Pesquisa #{position}"
+    if not isinstance(poll, dict):
+        errors.append(f"{label} não é um objeto")
+        return
+
+    missing = sorted(REQUIRED_POLL_FIELDS - set(poll))
+    if missing:
+        errors.append(f"{label} sem campos: {', '.join(missing)}")
+        return
+
+    label = f"Pesquisa {poll['protocol']}"
+    if not isinstance(poll["id"], int) or poll["id"] <= 0:
+        errors.append(f"{label} tem ID inválido")
+    if not PROTOCOL_PATTERN.fullmatch(str(poll["protocol"])):
+        errors.append(f"{label} tem protocolo inválido")
+    if not str(poll["resultSource"]).startswith("https://"):
+        errors.append(f"{label} precisa de fonte HTTPS")
+    if not isinstance(poll["sample"], int) or poll["sample"] <= 0:
+        errors.append(f"{label} tem amostra inválida")
+    for field in ("start", "end"):
+        try:
+            date.fromisoformat(str(poll[field]))
+        except ValueError:
+            errors.append(f"{label} tem data inválida em {field}")
+    if "published" in poll:
+        try:
+            date.fromisoformat(str(poll["published"]))
+        except ValueError:
+            errors.append(f"{label} tem data inválida em published")
+    if str(poll["start"]) > str(poll["end"]):
+        errors.append(f"{label} termina antes do início do campo")
+    for field in ("margin", "confidence"):
+        if not valid_percentage(poll[field]):
+            errors.append(f"{label} tem percentual inválido em {field}")
+
+    poll_scenarios = poll.get("scenarios")
+    if not isinstance(poll_scenarios, dict) or not poll_scenarios:
+        errors.append(f"{label} não possui cenários")
+        return
+    catalog = scenario_catalog or {}
+    unknown = sorted(set(poll_scenarios) - set(catalog)) if catalog else []
+    if unknown:
+        errors.append(f"{label} possui cenários desconhecidos: {', '.join(unknown)}")
+    for scenario_id, scenario_result in poll_scenarios.items():
+        scenario_label = f"{label}, cenário {scenario_id}"
+        if not isinstance(scenario_result, dict):
+            errors.append(f"{scenario_label} é inválido")
+            continue
+        results = scenario_result.get("results")
+        if not isinstance(results, dict):
+            errors.append(f"{scenario_label} não possui resultados")
+            continue
+        expected_candidates = catalog.get(scenario_id, {}).get("candidates")
+        expected = set(expected_candidates) if isinstance(expected_candidates, list) else set(results)
+        missing_results = sorted(expected - set(results))
+        extra_results = sorted(set(results) - expected)
+        if missing_results:
+            errors.append(f"{scenario_label} não possui: {', '.join(missing_results)}")
+        if extra_results:
+            errors.append(f"{scenario_label} possui candidatos extras: {', '.join(extra_results)}")
+        for candidate, value in results.items():
+            if not valid_percentage(value):
+                errors.append(f"{scenario_label} tem percentual inválido para {candidate}")
+        if not valid_percentage(scenario_result.get("undecided")):
+            errors.append(f"{scenario_label} tem brancos/nulos/indecisos inválido")
+        scenario_source = scenario_result.get("resultSource")
+        scenario_source_label = scenario_result.get("resultSourceLabel")
+        if bool(scenario_source) != bool(scenario_source_label):
+            errors.append(f"{scenario_label} deve informar URL e rótulo da fonte juntos")
+        if scenario_source and not str(scenario_source).startswith("https://"):
+            errors.append(f"{scenario_label} precisa de fonte HTTPS")
+
+
+def validate_catalog(poll_data: dict, errors: list[str], source_name: str) -> dict[str, dict]:
+    candidates = poll_data.get("candidates")
+    if not isinstance(candidates, dict) or not candidates:
+        errors.append(f"{source_name} deve possuir um cadastro de candidatos")
+        candidates = {}
+    for key, candidate in candidates.items():
+        label = f"Candidato {key}"
+        if not isinstance(candidate, dict):
+            errors.append(f"{label} é inválido")
+            continue
+        missing = sorted(REQUIRED_CANDIDATE_FIELDS - set(candidate))
+        if missing:
+            errors.append(f"{label} sem campos: {', '.join(missing)}")
+        if not HEX_COLOR_PATTERN.fullmatch(str(candidate.get("color", ""))):
+            errors.append(f"{label} tem cor inválida")
+
+    scenarios = poll_data.get("scenarios")
+    if not isinstance(scenarios, list) or not scenarios:
+        errors.append(f"{source_name} deve possuir um catálogo de cenários")
+        return {}
+    catalog: dict[str, dict] = {}
+    for position, scenario in enumerate(scenarios, start=1):
+        label = f"Cenário #{position}"
+        if not isinstance(scenario, dict):
+            errors.append(f"{label} é inválido")
+            continue
+        missing = sorted(REQUIRED_SCENARIO_FIELDS - set(scenario))
+        if missing:
+            errors.append(f"{label} sem campos: {', '.join(missing)}")
+            continue
+        scenario_id = str(scenario["id"])
+        if scenario_id in catalog:
+            errors.append(f"ID de cenário duplicado: {scenario_id}")
+        if scenario["round"] not in (1, 2):
+            errors.append(f"{label} tem turno inválido")
+        scenario_candidates = scenario["candidates"]
+        if not isinstance(scenario_candidates, list) or len(scenario_candidates) < 2:
+            errors.append(f"{label} precisa ter ao menos dois candidatos")
+        else:
+            if len(scenario_candidates) != len(set(scenario_candidates)):
+                errors.append(f"{label} possui candidatos duplicados")
+            unknown_candidates = sorted(set(scenario_candidates) - set(candidates))
+            if unknown_candidates:
+                errors.append(f"{label} possui candidatos desconhecidos: {', '.join(unknown_candidates)}")
+        catalog[scenario_id] = scenario
+    if "first-main" not in catalog or catalog["first-main"].get("round") != 1:
+        errors.append("O catálogo precisa definir first-main como cenário de primeiro turno")
+    return catalog
+
+
+def validate_poll_database(path: Path, errors: list[str]) -> list[dict]:
+    source_name = path.relative_to(ROOT).as_posix()
+    poll_data = json.loads(path.read_text(encoding="utf-8"))
+    if poll_data.get("schemaVersion") != 2:
+        errors.append(f"Versão desconhecida de {source_name}")
+    election = poll_data.get("election")
+    if not isinstance(election, dict) or election.get("year") != 2026 or election.get("country") != "BR":
+        errors.append(f"Identificação eleitoral inválida em {source_name}")
+    elif election.get("office") not in {"president", "governor", "senator"}:
+        errors.append(f"Cargo eleitoral inválido em {source_name}")
+    elif not isinstance(election.get("jurisdiction"), str) or not election["jurisdiction"]:
+        errors.append(f"Jurisdição eleitoral inválida em {source_name}")
+
+    scenario_catalog = validate_catalog(poll_data, errors, source_name)
+    polls = poll_data.get("polls")
+    if not isinstance(polls, list) or not polls:
+        errors.append(f"{source_name} deve conter uma lista não vazia de pesquisas")
+        polls = []
+
+    for position, poll in enumerate(polls, start=1):
+        validate_poll(poll, position, errors, scenario_catalog)
+
+    ids = [poll.get("id") for poll in polls if isinstance(poll, dict)]
+    protocols = [poll.get("protocol") for poll in polls if isinstance(poll, dict)]
+    duplicate_protocols = duplicate_values(protocols)
+    duplicate_ids = duplicate_values(ids)
+    if duplicate_protocols:
+        errors.append(f"Protocolos duplicados em {source_name}: {', '.join(map(str, duplicate_protocols))}")
+    if duplicate_ids:
+        errors.append(f"IDs duplicados em {source_name}: {', '.join(map(str, duplicate_ids))}")
+    return polls
+
+
+def validate_official_files(
+    polls: list[dict],
+    metadata_path: Path,
+    monitor_path: Path,
+    errors: list[str],
+    election_id: str,
+) -> tuple[int, int]:
+    for path in (metadata_path, monitor_path):
+        if not path.is_file():
+            errors.append(f"Arquivo oficial ausente para {election_id}: {path.relative_to(ROOT).as_posix()}")
+            return 0, 0
+
+    protocols = [poll.get("protocol") for poll in polls if isinstance(poll, dict)]
+    protocol_set = set(protocols)
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    records = metadata.get("records", {})
     metadata_date_match = re.match(
         r"^(?:(\d{4})-(\d{2})-(\d{2})|(\d{2})/(\d{2})/(\d{4}))",
         str(metadata.get("generatedAt", "")),
