@@ -81,7 +81,7 @@ node --check app.js
 
 ## Atualização e publicação automáticas
 
-O workflow `.github/workflows/update-polls.yml` roda todos os dias às 07h17 e 16h17 no horário de Brasília e também pode ser iniciado manualmente na aba **Actions** do GitHub. O monitor automático cobre todas as eleições cadastradas, hoje presidencial, São Paulo e Minas Gerais.
+O workflow `.github/workflows/update-polls.yml` roda todos os dias às 07h17, 12h17, 16h17 e 21h17 no horário de Brasília e também pode ser iniciado manualmente na aba **Actions** do GitHub. O monitor automático cobre todas as eleições cadastradas, hoje presidencial, São Paulo e Minas Gerais.
 
 Em cada execução ele:
 
@@ -119,3 +119,4 @@ A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens
 ## Aviso
 
 Pesquisas medem a opinião declarada em um período e possuem incertezas amostrais e não amostrais. A média exibida não é uma previsão do resultado eleitoral.
+
