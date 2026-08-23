@@ -30,7 +30,13 @@ class ElectionCatalogTests(unittest.TestCase):
         presidential_exclusions = elections["president-br"]["tse"]["excludedProtocols"]
         self.assertEqual(
             {item["protocol"] for item in presidential_exclusions},
-            {"BR078502026", "BR062782026", "BR054232026", "BR067832026"},
+            {
+                "BR078502026",
+                "BR062782026",
+                "BR054232026",
+                "BR067832026",
+                "BR087572026",
+            },
         )
         self.assertTrue(all(item["reason"] and item["source"] for item in presidential_exclusions))
 

@@ -41,6 +41,11 @@
             "protocol": "BR067832026",
             "reason": "Amostra restrita ao estado da Bahia; não representa o eleitorado nacional.",
             "source": "https://www.bnews.com.br/amp/noticias/politica/bnews-divulga-pesquisa-feita-pelo-opnus-para-o-governo-e-senado-na-bahia-na-segunda-24.html"
+          },
+          {
+            "protocol": "BR087572026",
+            "reason": "A metodologia oficial declara universo restrito a residentes de Vila Velha (ES); não representa o eleitorado nacional.",
+            "source": "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml"
           }
         ]
       }
