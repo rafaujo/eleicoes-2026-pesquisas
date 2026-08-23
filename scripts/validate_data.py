@@ -234,6 +234,9 @@ def validate_official_files(
     protocol_set = set(protocols)
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     records = metadata.get("records", {})
+    monitor = json.loads(monitor_path.read_text(encoding="utf-8"))
+    seen = monitor.get("seenProtocols", [])
+    pending = monitor.get("pending", {})
     metadata_date_match = re.match(
         r"^(?:(\d{4})-(\d{2})-(\d{2})|(\d{2})/(\d{2})/(\d{4}))",
         str(metadata.get("generatedAt", "")),
@@ -246,6 +249,10 @@ def validate_official_files(
     for poll in polls:
         protocol = poll.get("protocol") if isinstance(poll, dict) else None
         if not protocol or protocol in records:
+            continue
+        # O protocolo pode ter sido confirmado pelo monitor antes que o espelho
+        # parcial forneça todos os seus metadados detalhados.
+        if protocol in seen and protocol not in pending:
             continue
         # Uma pesquisa pode ser curada entre a publicação dos resultados e a
         # próxima atualização do recorte de metadados. A sincronização seguinte
@@ -268,9 +275,6 @@ def validate_official_files(
         if not isinstance(record.get("sample"), int) or record.get("sample", 0) <= 0:
             errors.append(f"Amostra inválida em {protocol}")
 
-    monitor = json.loads(monitor_path.read_text(encoding="utf-8"))
-    seen = monitor.get("seenProtocols", [])
-    pending = monitor.get("pending", {})
     if monitor.get("schemaVersion") != 1:
         errors.append(f"Versão desconhecida de {monitor_path.relative_to(ROOT).as_posix()}")
     if seen != sorted(set(seen)):
