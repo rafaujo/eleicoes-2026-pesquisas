@@ -31,6 +31,11 @@
       "name": "Renan Santos",
       "shortName": "Renan",
       "color": "#c79a18"
+    },
+    "marcal": {
+      "name": "Pablo Marçal",
+      "shortName": "Marçal",
+      "color": "#7c3aed"
     }
   },
   "scenarios": [
@@ -47,12 +52,34 @@
       ]
     },
     {
+      "id": "first-with-marcal",
+      "round": 1,
+      "label": "Cenário com Pablo Marçal",
+      "candidates": [
+        "lula",
+        "flavio",
+        "marcal",
+        "caiado",
+        "renan",
+        "zema"
+      ]
+    },
+    {
       "id": "runoff-lula-flavio",
       "round": 2,
       "label": "Lula × Flávio Bolsonaro",
       "candidates": [
         "lula",
         "flavio"
+      ]
+    },
+    {
+      "id": "runoff-lula-marcal",
+      "round": 2,
+      "label": "Lula × Pablo Marçal",
+      "candidates": [
+        "lula",
+        "marcal"
       ]
     },
     {
@@ -84,6 +111,70 @@
     }
   ],
   "polls": [
+    {
+      "id": 36,
+      "pollster": "Veritá",
+      "publication": "Instituto Veritá",
+      "protocol": "BR040062026",
+      "published": "2026-08-21",
+      "start": "2026-08-16",
+      "end": "2026-08-20",
+      "field": "16–20 ago",
+      "sample": 3840,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Telefônica automatizada (IVR)",
+      "resultSource": "https://eleicoes26.institutoverita.com.br/pesquisa/8e9d5a6b-e6b5-4870-a02f-131c565ed17f",
+      "resultSourceLabel": "Instituto Veritá — pesquisa nacional de agosto",
+      "scenarios": {
+        "first-with-marcal": {
+          "results": {
+            "lula": 39.3,
+            "flavio": 39.1,
+            "marcal": 5.2,
+            "caiado": 3.3,
+            "renan": 3.8,
+            "zema": 1.3
+          },
+          "undecided": 8.2
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 42,
+            "flavio": 47.3
+          },
+          "undecided": 10.7
+        },
+        "runoff-lula-marcal": {
+          "results": {
+            "lula": 42.7,
+            "marcal": 43.6
+          },
+          "undecided": 13.7
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 40.4,
+            "caiado": 23.7
+          },
+          "undecided": 35.9
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 41.2,
+            "zema": 25
+          },
+          "undecided": 33.8
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 40.5,
+            "renan": 16.2
+          },
+          "undecided": 43.3
+        }
+      }
+    },
     {
       "id": 35,
       "pollster": "Datafolha",
@@ -1457,4 +1548,3 @@
     }
   ]
 }
-

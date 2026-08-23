@@ -20,13 +20,33 @@ class ScenarioDataTests(unittest.TestCase):
         self.assertEqual(scenarios["runoff-lula-caiado"]["candidates"], ["lula", "caiado"])
         self.assertEqual(scenarios["runoff-lula-zema"]["candidates"], ["lula", "zema"])
         self.assertEqual(scenarios["runoff-lula-renan"]["candidates"], ["lula", "renan"])
+        self.assertEqual(scenarios["runoff-lula-marcal"]["candidates"], ["lula", "marcal"])
+        self.assertEqual(
+            scenarios["first-with-marcal"]["candidates"],
+            ["lula", "flavio", "marcal", "caiado", "renan", "zema"],
+        )
 
-    def test_ten_polls_have_extended_runoff_results(self) -> None:
+    def test_eleven_polls_have_extended_runoff_results(self) -> None:
         polls = self.database["polls"]
 
-        self.assertEqual(sum("runoff-lula-caiado" in poll["scenarios"] for poll in polls), 10)
-        self.assertEqual(sum("runoff-lula-zema" in poll["scenarios"] for poll in polls), 10)
-        self.assertEqual(sum("runoff-lula-renan" in poll["scenarios"] for poll in polls), 1)
+        self.assertEqual(sum("runoff-lula-caiado" in poll["scenarios"] for poll in polls), 11)
+        self.assertEqual(sum("runoff-lula-zema" in poll["scenarios"] for poll in polls), 11)
+        self.assertEqual(sum("runoff-lula-renan" in poll["scenarios"] for poll in polls), 2)
+        self.assertEqual(sum("runoff-lula-marcal" in poll["scenarios"] for poll in polls), 1)
+
+    def test_verita_values_match_published_scenarios(self) -> None:
+        verita = next(poll for poll in self.database["polls"] if poll["protocol"] == "BR040062026")
+
+        self.assertEqual(verita["published"], "2026-08-21")
+        self.assertEqual(
+            verita["scenarios"]["first-with-marcal"]["results"],
+            {"lula": 39.3, "flavio": 39.1, "marcal": 5.2, "caiado": 3.3, "renan": 3.8, "zema": 1.3},
+        )
+        self.assertEqual(verita["scenarios"]["runoff-lula-flavio"]["results"], {"lula": 42, "flavio": 47.3})
+        self.assertEqual(verita["scenarios"]["runoff-lula-marcal"]["results"], {"lula": 42.7, "marcal": 43.6})
+        self.assertEqual(verita["scenarios"]["runoff-lula-caiado"]["results"], {"lula": 40.4, "caiado": 23.7})
+        self.assertEqual(verita["scenarios"]["runoff-lula-zema"]["results"], {"lula": 41.2, "zema": 25})
+        self.assertEqual(verita["scenarios"]["runoff-lula-renan"]["results"], {"lula": 40.5, "renan": 16.2})
 
     def test_latest_datafolha_values_match_published_scenarios(self) -> None:
         datafolha = next(poll for poll in self.database["polls"] if poll["protocol"] == "BR044962026")
@@ -66,4 +86,3 @@ class ScenarioDataTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

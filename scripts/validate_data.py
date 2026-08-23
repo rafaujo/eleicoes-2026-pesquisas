@@ -236,6 +236,7 @@ def validate_official_files(
     records = metadata.get("records", {})
     monitor = json.loads(monitor_path.read_text(encoding="utf-8"))
     seen = monitor.get("seenProtocols", [])
+    seen_set = set(seen)
     pending = monitor.get("pending", {})
     metadata_date_match = re.match(
         r"^(?:(\d{4})-(\d{2})-(\d{2})|(\d{2})/(\d{2})/(\d{4}))",
@@ -250,14 +251,12 @@ def validate_official_files(
         protocol = poll.get("protocol") if isinstance(poll, dict) else None
         if not protocol or protocol in records:
             continue
-        # O protocolo pode ter sido confirmado pelo monitor antes que o espelho
-        # parcial forneça todos os seus metadados detalhados.
-        if protocol in seen and protocol not in pending:
-            continue
         # Uma pesquisa pode ser curada entre a publicação dos resultados e a
         # próxima atualização do recorte de metadados. A sincronização seguinte
         # deve preencher o registro oficial sem bloquear a publicação editorial.
-        if metadata_date and str(poll.get("published", "")) > metadata_date:
+        if protocol in seen_set or (
+            metadata_date and str(poll.get("published", "")) > metadata_date
+        ):
             continue
         missing_records.append(protocol)
     missing_records.sort()
@@ -279,7 +278,10 @@ def validate_official_files(
         errors.append(f"Versão desconhecida de {monitor_path.relative_to(ROOT).as_posix()}")
     if seen != sorted(set(seen)):
         errors.append(f"seenProtocols deve estar ordenado e sem duplicatas em {election_id}")
-    overlap = sorted(protocol_set & set(pending))
+    # Durante a curadoria, o resultado pode entrar antes de o sincronizador
+    # remover a pendência. Só há inconsistência se o protocolo já possui o
+    # registro detalhado em cache e ainda assim continua na fila.
+    overlap = sorted(protocol_set & set(pending) & set(records))
     if overlap:
         errors.append(f"Protocolos curados ainda estão pendentes em {election_id}: {', '.join(overlap)}")
     if not set(pending).issubset(set(seen)):
