@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 from scripts.discover_results import (
+    ELECTION_RULES,
     already_curated,
     deduplicate_disclosures,
     matches_election,
@@ -24,6 +25,9 @@ VERITA_FEED = b"""<?xml version="1.0" encoding="UTF-8"?>
 
 
 class ResultDiscoveryTests(unittest.TestCase):
+    def test_each_election_uses_redundant_news_queries(self) -> None:
+        self.assertTrue(all(len(rule["queries"]) >= 2 for rule in ELECTION_RULES.values()))
+
     def test_verita_disclosure_is_detected_for_presidential_queue(self) -> None:
         articles = parse_feed(VERITA_FEED, "president-br")
 
@@ -36,6 +40,24 @@ class ResultDiscoveryTests(unittest.TestCase):
             matches_election(
                 "O que dizem as pesquisas para presidente na primeira semana de campanha",
                 "president-br",
+            )
+        )
+
+    def test_vague_result_without_identifiable_pollster_is_rejected(self) -> None:
+        self.assertFalse(
+            matches_election(
+                "Pesquisa: Tarcísio pode vencer no primeiro turno em SP",
+                "governor-sp",
+                "VEJA",
+            )
+        )
+
+    def test_singular_parana_pesquisa_title_is_recognized(self) -> None:
+        self.assertTrue(
+            matches_election(
+                "Paraná Pesquisa: Tarcísio chega a 50% e abre vantagem sobre Haddad em SP",
+                "governor-sp",
+                "InfoMoney",
             )
         )
 
