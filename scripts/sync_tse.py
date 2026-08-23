@@ -413,16 +413,19 @@ def write_summary(
         lines.append("Não há protocolos pendentes.")
     else:
         lines.extend([
-            "| Protocolo | Instituto | Campo | Divulgação | Amostra | Contratante(s) |",
-            "| --- | --- | --- | --- | ---: | --- |",
+            "| Protocolo | Instituto | Campo | Divulgação | Situação | Amostra | Contratante(s) |",
+            "| --- | --- | --- | --- | --- | ---: | --- |",
         ])
+        today = datetime.now().astimezone().date().isoformat()
         for item in sorted(pending, key=lambda row: (row.get("disclosureDate", ""), row["protocol"]), reverse=True):
             company = item.get("tradeName") or item.get("company")
             field = f"{item.get('fieldStart') or '—'} a {item.get('fieldEnd') or '—'}"
             contractors = ", ".join(item.get("contractors", [])) or "—"
+            disclosure = item.get("disclosureDate") or ""
+            status = "prevista" if disclosure > today else "procurar resultado"
             lines.append(
                 f"| {markdown_escape(item['protocol'])} | {markdown_escape(company)} | "
-                f"{markdown_escape(field)} | {markdown_escape(item.get('disclosureDate'))} | "
+                f"{markdown_escape(field)} | {markdown_escape(disclosure)} | {status} | "
                 f"{markdown_escape(item.get('sample'))} | {markdown_escape(contractors)} |"
             )
     lines.extend(["", f"Fonte: [Dados Abertos do TSE]({DATASET_URL}).", ""])
