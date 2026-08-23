@@ -72,9 +72,74 @@
         "lula",
         "zema"
       ]
+    },
+    {
+      "id": "runoff-lula-renan",
+      "round": 2,
+      "label": "Lula × Renan Santos",
+      "candidates": [
+        "lula",
+        "renan"
+      ]
     }
   ],
   "polls": [
+    {
+      "id": 35,
+      "pollster": "Datafolha",
+      "publication": "Folha de S.Paulo e TV Globo",
+      "protocol": "BR044962026",
+      "published": "2026-08-21",
+      "start": "2026-08-18",
+      "end": "2026-08-20",
+      "field": "18–20 ago",
+      "sample": 2058,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Presencial em pontos de fluxo",
+      "resultSource": "https://gauchazh.clicrbs.com.br/politica/eleicoes/noticia/2026/08/pesquisa-datafolha-lula-tem-47-das-intencoes-de-voto-no-segundo-turno-e-flavio-bolsonaro-43-cmt3gw5jq00jy01jn4ne2s3bb.html",
+      "resultSourceLabel": "GZH — resultados Datafolha de 1º e 2º turnos",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "lula": 39,
+            "flavio": 33,
+            "caiado": 5,
+            "zema": 3,
+            "renan": 4
+          },
+          "undecided": 10
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 47,
+            "flavio": 43
+          },
+          "undecided": 11
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 47,
+            "caiado": 40
+          },
+          "undecided": 14
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 48,
+            "zema": 38
+          },
+          "undecided": 14
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 47,
+            "renan": 37
+          },
+          "undecided": 16
+        }
+      }
+    },
     {
       "id": 34,
       "pollster": "Nexus",
@@ -1392,3 +1457,4 @@
     }
   ]
 }
+
