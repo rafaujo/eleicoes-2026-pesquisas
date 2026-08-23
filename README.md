@@ -19,11 +19,11 @@ Depois acesse `http://localhost:4173`.
 - painel responsivo com média ponderada por recência e tamanho da amostra;
 - seletor agrupado entre Brasil e eleições estaduais, com URL compartilhável por eleição;
 - recorte móvel de 7, 14, 21, 30, 60, 90 ou 180 dias, com janela padrão própria por eleição;
-- seletor dinâmico de cenários, com primeiro turno e segundo turno entre Lula e Flávio Bolsonaro, Ronaldo Caiado ou Romeu Zema;
+- seletor dinâmico de cenários, com listas de primeiro turno comparáveis — inclusive uma opção com Pablo Marçal — e confrontos de segundo turno;
 - gráfico de evolução com pontos por pesquisa, linhas da média ponderada e faixas de incerteza;
 - filtros por período e busca por instituto/contratante;
 - tabela de resultados e ficha metodológica;
-- 33 levantamentos presidenciais com protocolos e metadados oficiais do PesqEle/TSE;
+- 36 levantamentos presidenciais com protocolos conferidos no PesqEle/TSE;
 - seis levantamentos paulistas: três com a lista consolidada de 1º turno e seis no confronto Tarcísio × Haddad;
 - dois levantamentos mineiros, com cenário atual de 1º turno e confrontos de 2º turno mantidos em séries comparáveis;
 - exportação dos dados filtrados em CSV;
@@ -31,7 +31,7 @@ Depois acesse `http://localhost:4173`.
 
 ## Estado dos dados
 
-Os 33 levantamentos presidenciais catalogados possuem protocolo conferido no PesqEle. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
+Os 36 levantamentos presidenciais catalogados possuem protocolo conferido no PesqEle. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
 
 Os percentuais de intenção de voto não fazem parte dos CSVs abertos do TSE. Eles ficam em `data/polls.json`, transcritos das publicações ou dos relatórios ligados individualmente em cada ficha e reconciliados com o registro oficial por protocolo, período de campo e amostra.
 
@@ -87,12 +87,13 @@ Em cada execução ele:
 
 1. baixa a versão diária do conjunto oficial do TSE;
 2. atualiza metadados alterados e detecta protocolos novos em cada eleição;
-3. executa os testes e as validações de consistência;
-4. cria um commit na `main` somente quando os arquivos realmente mudaram;
-5. abre ou atualiza uma issue separada por eleição com os protocolos que ainda precisam de fonte de resultados;
-6. solicita uma nova publicação do GitHub Pages após o commit.
+3. consulta feeds públicos de notícias para localizar divulgações que possam ter escapado do espelho oficial;
+4. executa os testes e as validações de consistência;
+5. cria um commit na `main` somente quando os arquivos realmente mudaram;
+6. abre ou atualiza issues com protocolos e fontes públicas que ainda precisam de revisão;
+7. solicita uma nova publicação do GitHub Pages após o commit.
 
-O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. Depois que os percentuais forem conferidos em uma publicação ou relatório e adicionados à base indicada em `data/elections.json`, a próxima sincronização incorpora os metadados oficiais, remove a pendência e republica o site.
+O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. A busca pública redundante também cria alertas a partir de títulos recentes que mencionem resultados, institutos e candidatos. Os links encontrados são candidatos editoriais: os percentuais só entram na média depois da conferência em uma publicação ou relatório e da conciliação com o protocolo do TSE.
 
 O workflow `.github/workflows/validate.yml` também valida todo pull request e todo push feito manualmente na `main`.
 
@@ -119,4 +120,3 @@ A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens
 ## Aviso
 
 Pesquisas medem a opinião declarada em um período e possuem incertezas amostrais e não amostrais. A média exibida não é uma previsão do resultado eleitoral.
-
