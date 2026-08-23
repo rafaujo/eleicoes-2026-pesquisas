@@ -19,12 +19,27 @@ class ScenarioDataTests(unittest.TestCase):
         self.assertEqual(scenarios["runoff-lula-flavio"]["candidates"], ["lula", "flavio"])
         self.assertEqual(scenarios["runoff-lula-caiado"]["candidates"], ["lula", "caiado"])
         self.assertEqual(scenarios["runoff-lula-zema"]["candidates"], ["lula", "zema"])
+        self.assertEqual(scenarios["runoff-lula-renan"]["candidates"], ["lula", "renan"])
 
-    def test_nine_polls_have_extended_runoff_results(self) -> None:
+    def test_ten_polls_have_extended_runoff_results(self) -> None:
         polls = self.database["polls"]
 
-        self.assertEqual(sum("runoff-lula-caiado" in poll["scenarios"] for poll in polls), 9)
-        self.assertEqual(sum("runoff-lula-zema" in poll["scenarios"] for poll in polls), 9)
+        self.assertEqual(sum("runoff-lula-caiado" in poll["scenarios"] for poll in polls), 10)
+        self.assertEqual(sum("runoff-lula-zema" in poll["scenarios"] for poll in polls), 10)
+        self.assertEqual(sum("runoff-lula-renan" in poll["scenarios"] for poll in polls), 1)
+
+    def test_latest_datafolha_values_match_published_scenarios(self) -> None:
+        datafolha = next(poll for poll in self.database["polls"] if poll["protocol"] == "BR044962026")
+
+        self.assertEqual(datafolha["published"], "2026-08-21")
+        self.assertEqual(
+            datafolha["scenarios"]["first-main"]["results"],
+            {"lula": 39, "flavio": 33, "caiado": 5, "zema": 3, "renan": 4},
+        )
+        self.assertEqual(datafolha["scenarios"]["runoff-lula-flavio"]["results"], {"lula": 47, "flavio": 43})
+        self.assertEqual(datafolha["scenarios"]["runoff-lula-caiado"]["results"], {"lula": 47, "caiado": 40})
+        self.assertEqual(datafolha["scenarios"]["runoff-lula-zema"]["results"], {"lula": 48, "zema": 38})
+        self.assertEqual(datafolha["scenarios"]["runoff-lula-renan"]["results"], {"lula": 47, "renan": 37})
 
     def test_latest_nexus_values_match_published_scenarios(self) -> None:
         nexus = next(poll for poll in self.database["polls"] if poll["protocol"] == "BR033172026")
@@ -51,3 +66,4 @@ class ScenarioDataTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
