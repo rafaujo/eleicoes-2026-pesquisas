@@ -16,11 +16,13 @@
     "13dad475d55395406191",
     "178566f5b9f91c0c6ab8",
     "1864846b3538e374e1e4",
+    "18cda805a91cb1122faf",
     "1c87b0b9f27691361ae4",
     "1e8f222689c1b086805c",
     "21a7fa4b1613da770629",
     "23a1b15ab51ac26cdf78",
     "2804d6a68925e0d0ba1e",
+    "295b0b80934e9d36488f",
     "2a4acbaac1316f7df558",
     "2ae85294c591cf597502",
     "2c42d8162f6725eb3025",
@@ -30,6 +32,7 @@
     "34e1fb9b22405e11118a",
     "3aaf1b79d72baf694f43",
     "3cbe52d0658d59f233c7",
+    "402437b6aef8d1265789",
     "40bd0f81c91306b43e4d",
     "42bfca01720c3ac2b712",
     "43ffb9ff2f3a0f535ed5",
@@ -37,6 +40,7 @@
     "58228710dc48f4d0d26d",
     "58b255bb2fda772169ee",
     "65488cf29f83601d7f2f",
+    "655c0e2dc5323cc7ca8a",
     "688a8e66f43cc80923fa",
     "6f2e3c2caccbe27f4289",
     "7213a8500cca37c85721",
@@ -72,6 +76,7 @@
     "b84b25e43eb107dd2768",
     "bb61c96c517bcc7c44c1",
     "bc8193cef775cd87b2a8",
+    "c3c45dd97ec9a18f5560",
     "c56b3e48ba97247a85de",
     "ca9197a8f68d6783be94",
     "cc494f50059dbbd40a0c",
@@ -88,10 +93,31 @@
     "e6817c311afbc775136d",
     "e8760670bd721c7b1d12",
     "eb222cf5f5cce0d3d041",
+    "edd22567a1c8a995ca9a",
     "f270c65362f7cc651652",
     "f67fab86607d7f4071c4",
     "f798bd54bad0ab11b3c2",
+    "f98a1362de38698949eb",
     "fa6bc3d8f04921434b4b"
   ],
-  "pending": []
+  "pending": [
+    {
+      "election": "governor-sp",
+      "title": "Tarcísio lidera contra Haddad nos cenários de 1º e 2º turnos ao governo de São Paulo, aponta Real Time Big Data - Money Times",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNSFMyWkRiYXQ0blI5ek9ja2E4TXBtWHdjVEpCdEtGajROSDlFbjcxQ3FHR2Q0Z185MmllZmlGR0RHdU9HTzNlZ3pFeHlvVm1iZnBLNWR0TWl5M1pOMDhfR3J4aDAzZ0RmVjg3Y2o1THNfTXBJQmZKRWp1NTh5N2pEU2MzOWpRNER5Sm1ubGlaYWIxeTZuMDZMUlNqSnZHY0RDSVdocDBvM010OUtxUXRMdHBCRzBUcm5lZGhTNjkxZ1ZWQUhEb0E4SlY1WENOV2NQVlBxVlhRQVk5UUVxWlIw?oc=5",
+      "source": "Money Times",
+      "published": "2026-08-24",
+      "pollster": "Real Time Big Data",
+      "key": "402437b6aef8d1265789"
+    },
+    {
+      "election": "president-br",
+      "title": "BTG/Nexus: segundo turno mostra empate técnico entre Lula e Flávio Bolsonaro - Brasil 247",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOTElhb1hGYktlNU9Rc2ZGSFZkMUN3UUJIOVlyRHViZ3NRSlV1cFhhRlBPanhfbU5uV2xIdmJCRFBINU0yQ2hfZ0lsYUNtZGxBNnl3azNMemZRaE1NTGt3eWgyWDZkVUVFSnF3My1rOGZSY0ZsNkFOY01NOFNoVU1CUC1vZTZHOFZfQjZzclBjZTF3YmZJd2N4VkhtaEx0ci05dGtOcGF0LVFSWjV6d0E?oc=5",
+      "source": "Brasil 247",
+      "published": "2026-08-24",
+      "pollster": "Nexus",
+      "key": "18cda805a91cb1122faf"
+    }
+  ]
 }
