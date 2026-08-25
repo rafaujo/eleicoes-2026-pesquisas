@@ -16,6 +16,7 @@
     "13790234e8c1e09485b0",
     "13795bbaa10855752df5",
     "13dad475d55395406191",
+    "1637b2aef93af42ebf05",
     "178566f5b9f91c0c6ab8",
     "1864846b3538e374e1e4",
     "18cda805a91cb1122faf",
@@ -111,6 +112,7 @@
     "c3c45dd97ec9a18f5560",
     "c56b3e48ba97247a85de",
     "ca9197a8f68d6783be94",
+    "cb73e5d174d9ba4f773e",
     "cc494f50059dbbd40a0c",
     "cd42f013099dd4ed4308",
     "d2d28e5b6ff91fe9581b",
@@ -130,6 +132,7 @@
     "e8760670bd721c7b1d12",
     "e8954f28cc7c8c128017",
     "eb222cf5f5cce0d3d041",
+    "ed08c90a6f830228a899",
     "edd22567a1c8a995ca9a",
     "ef0d0e2c5dce0d3a53a4",
     "ef4553ba866b6dae2e72",
@@ -149,6 +152,15 @@
       "published": "2026-08-25",
       "pollster": "Real Time Big Data",
       "key": "6b4103cbfb1b6a2c874c"
+    },
+    {
+      "election": "governor-sp",
+      "title": "Tarcísio de Freitas lidera disputa pelo governo de SP, diz Gerp - Poder360",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUTVoTkJ4RDJmeU1VbzNlS2M3bzI0NWxJLTg2VS1vbkZuUktzMjhkVXNZeW9DcmlqM1FDbGk2YjBYaWpaNWVDa0ZQM0gzbnJKaTdlRmd6ZTNpa2RpQ3hOcm93aThpM1Q2NkZZVFFUeXZtS2VydGlZRjJEVUptS2cwQ2tvN2xta0VFb3RHc1hQQ2R3dVhNQmYxVnFHWkNfbjFFWHB5VnJzZXB2Z2ppNnhUTQ?oc=5",
+      "source": "Poder360",
+      "published": "2026-08-25",
+      "pollster": "GERP",
+      "key": "1637b2aef93af42ebf05"
     },
     {
       "election": "president-br",
