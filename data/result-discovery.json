@@ -13,6 +13,7 @@
     "0ee159ef25d38891568d",
     "119f56f25cc786e43308",
     "1294c9a792287f307ea3",
+    "13790234e8c1e09485b0",
     "13795bbaa10855752df5",
     "13dad475d55395406191",
     "178566f5b9f91c0c6ab8",
@@ -47,7 +48,9 @@
     "40bd0f81c91306b43e4d",
     "42bfca01720c3ac2b712",
     "43ffb9ff2f3a0f535ed5",
+    "497ff98d015a43c118c8",
     "4cab670807efe3930e86",
+    "510ae5fa16c43e814add",
     "58228710dc48f4d0d26d",
     "58805b8d4ee02f19aa36",
     "58b255bb2fda772169ee",
@@ -55,6 +58,7 @@
     "655c0e2dc5323cc7ca8a",
     "688a8e66f43cc80923fa",
     "6a9d67a69ecfaa406f41",
+    "6b4103cbfb1b6a2c874c",
     "6f2e3c2caccbe27f4289",
     "7213a8500cca37c85721",
     "762e5a8536a7a9d9ad07",
@@ -67,6 +71,7 @@
     "86d4f7d6723415212031",
     "880fa95513e6d000974c",
     "8bd90b13dfe977887fa1",
+    "8f21bff6cd86030db99a",
     "92908ca54b8361e32b5a",
     "92b44aea2700de0af903",
     "94cad8758b702ed03a08",
@@ -83,6 +88,7 @@
     "a4daa047f5da2b89fa44",
     "a552ceda8fdc0900eaac",
     "a5da6c93405b8332c63f",
+    "a5e747bca32e7b99a5ec",
     "a72b0945b9301079a77e",
     "a7cc9169fce24c4d75e7",
     "a7eb04349a95d10f2d7e",
@@ -101,6 +107,7 @@
     "bb61c96c517bcc7c44c1",
     "bc8193cef775cd87b2a8",
     "bffd511f804d31dafbb1",
+    "c0ef4f57ab1bdc6be3f6",
     "c3c45dd97ec9a18f5560",
     "c56b3e48ba97247a85de",
     "ca9197a8f68d6783be94",
@@ -109,6 +116,8 @@
     "d2d28e5b6ff91fe9581b",
     "d6c344eaed138aaebd6d",
     "d6ceb9de0884fad214aa",
+    "d6fae93e6ed3234d322f",
+    "db07da7fa15e6bdcf70e",
     "db6516fdc2ebfca15e68",
     "dbde93adf20fc06c7d2d",
     "dc898dd04fd8c7e8dc5f",
@@ -134,6 +143,15 @@
   "pending": [
     {
       "election": "president-br",
+      "title": "Real Time Big Data: Lula vence Flávio Bolsonaro por 10 pontos no segundo turno no RS - tmc.com.br",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNSHpWQ0xLSnBibTZXbl9YUVBwQV8yQU9aV2tISURkcHdHb0RTdW0wMEZURjh6R1UxdHNpVXNOTWJpVlAwV3g5UEVtQUhWNEQtVnJyOG04T2gwN2d6UUllN3FiX1h1cS1Icm8yMWlaRlFDOTFJSmtwUmpER3gxWG1PN1BuVkw4WnQ0YzFDVDRscEozdw?oc=5",
+      "source": "tmc.com.br",
+      "published": "2026-08-25",
+      "pollster": "Real Time Big Data",
+      "key": "6b4103cbfb1b6a2c874c"
+    },
+    {
+      "election": "president-br",
       "title": "BTG/Nexus: Lula e Flávio Bolsonaro mantêm empate técnico no 2º turno, com 46% a 45% - Folha de S.Paulo",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNR0lCaXJRV2lpaWppT0E1QV9MQ2JFZnpjVEtOck1yVDFpZDQ0bm5uREZvc3hoZHhVbTN1WjJuRHBvNmFvX29SUVZsR01BQlRUU1ZpeUpfRVVUdTNvQnVDQlV6ejhRa0pJWVU5WXlnUXdYeFhPUmdsZjE4T1R1RVpRMWNRXzVkNkRfSmlvNlA2am5kQkthaEV4aURkVDVPc282QmhjVlE2MUhVRFlYSWMtQmJPTDczQkg3QTlnLWgyR2RHc01KRzZJ?oc=5",
       "source": "Folha de S.Paulo",
@@ -152,12 +170,12 @@
     },
     {
       "election": "president-br",
-      "title": "Quaest em SC: Flávio Bolsonaro, 45%; Lula, 20% - G1",
+      "title": "Quaest em SC: Flávio Bolsonaro, 45%; Lula, 20%; Renan Santos, 4%; Romeu Zema, 3%; Augusto Cury, 3%; Ronaldo Caiado, 3% - G1",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNakl0MWl0a2ZXYU9qWnctVTBwUzZQRWp5U09YYU5mSm5tNERKd1gwaURYVnVXOWlLR0ZURDIzc3lNRHJvVXdTUXNZZWpQM1puX3RTWTJZcjVjdWZNYXRLWUpsV0JFQk96bUNYSGdUd1drR1lyTThiakJQMGFHNTVkcnJ3b2JXWkFsSjZRZ0xOQjhtaE5UTm9SSUhLN0hjQXktQWFUNEJDM3VUc1FUREhORFB5UzVseEI3VFgtMtIBywFBVV95cUxPamVfVEFRb01pbGFOdEhGenp5WVZvTkFPRkVJLVRwZHRYTUpZak9ZWjI1S2EwdmFvWmViSFFHdjY3Y2tHenhaTy00N3J6cE9YLW9yeFRXVldSeVdacXItS0RDckIyaG9lTHhTeWRVdFJFY0RNSFQyRk9BMTZ1MDdWTHlTeG9qR0EyWW8zekw3U3hWeU9lWUZxekZRbzM0NnNaaTlLemxYMnFRWmdUWktJaXlHclo2TjZCNHI4M05ScFVaVE1aN1QtSDFBcw?oc=5",
       "source": "G1",
       "published": "2026-08-24",
       "pollster": "Quaest",
-      "key": "346478f5f6b6c6862407"
+      "key": "13790234e8c1e09485b0"
     }
   ]
 }
