@@ -36,6 +36,7 @@
     "2edc28fbad96b17752d1",
     "3288c6f059df5ed36a8f",
     "32bb66a5ee203a161dfb",
+    "346478f5f6b6c6862407",
     "34e1fb9b22405e11118a",
     "3713d2ed89346a091d44",
     "3862721f84ab731cff08",
@@ -48,6 +49,7 @@
     "43ffb9ff2f3a0f535ed5",
     "4cab670807efe3930e86",
     "58228710dc48f4d0d26d",
+    "58805b8d4ee02f19aa36",
     "58b255bb2fda772169ee",
     "65488cf29f83601d7f2f",
     "655c0e2dc5323cc7ca8a",
@@ -58,6 +60,7 @@
     "762e5a8536a7a9d9ad07",
     "77470bfba2b4bc0452b3",
     "783d1b2f6376d4842098",
+    "7c2b7a3143523e01e50d",
     "7cad81f775c104692770",
     "7d153134a260e2c531ab",
     "8183664b9529cceb44f0",
@@ -83,6 +86,7 @@
     "a72b0945b9301079a77e",
     "a7cc9169fce24c4d75e7",
     "a7eb04349a95d10f2d7e",
+    "a887a247e4f5ce599644",
     "aa39b2f262b3204f984b",
     "afcc9a83419afd8559bd",
     "b0b798396e91060d4d5a",
@@ -90,6 +94,7 @@
     "b3dfbeb95d43565ec300",
     "b544fde31335f6f6fbaf",
     "b64f591ae52c24902995",
+    "b679d1d0ccfa1fbf1c70",
     "b84b25e43eb107dd2768",
     "ba743eeced84cd1daa06",
     "baa6766f6272df55eff4",
@@ -117,6 +122,7 @@
     "e8954f28cc7c8c128017",
     "eb222cf5f5cce0d3d041",
     "edd22567a1c8a995ca9a",
+    "ef0d0e2c5dce0d3a53a4",
     "ef4553ba866b6dae2e72",
     "f053cfad97e70fa2251d",
     "f270c65362f7cc651652",
@@ -143,6 +149,15 @@
       "published": "2026-08-24",
       "pollster": "Real Time Big Data",
       "key": "6a9d67a69ecfaa406f41"
+    },
+    {
+      "election": "president-br",
+      "title": "Quaest em SC: Flávio Bolsonaro, 45%; Lula, 20% - G1",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNakl0MWl0a2ZXYU9qWnctVTBwUzZQRWp5U09YYU5mSm5tNERKd1gwaURYVnVXOWlLR0ZURDIzc3lNRHJvVXdTUXNZZWpQM1puX3RTWTJZcjVjdWZNYXRLWUpsV0JFQk96bUNYSGdUd1drR1lyTThiakJQMGFHNTVkcnJ3b2JXWkFsSjZRZ0xOQjhtaE5UTm9SSUhLN0hjQXktQWFUNEJDM3VUc1FUREhORFB5UzVseEI3VFgtMtIBywFBVV95cUxPamVfVEFRb01pbGFOdEhGenp5WVZvTkFPRkVJLVRwZHRYTUpZak9ZWjI1S2EwdmFvWmViSFFHdjY3Y2tHenhaTy00N3J6cE9YLW9yeFRXVldSeVdacXItS0RDckIyaG9lTHhTeWRVdFJFY0RNSFQyRk9BMTZ1MDdWTHlTeG9qR0EyWW8zekw3U3hWeU9lWUZxekZRbzM0NnNaaTlLemxYMnFRWmdUWktJaXlHclo2TjZCNHI4M05ScFVaVE1aN1QtSDFBcw?oc=5",
+      "source": "G1",
+      "published": "2026-08-24",
+      "pollster": "Quaest",
+      "key": "346478f5f6b6c6862407"
     }
   ]
 }
