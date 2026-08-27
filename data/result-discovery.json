@@ -70,8 +70,10 @@
     "40bd0f81c91306b43e4d",
     "42bfca01720c3ac2b712",
     "43ffb9ff2f3a0f535ed5",
+    "440ece9e8e508695332b",
     "482a84aa85cd9a2f63a4",
     "48c0e353b7579b467ffe",
+    "48dafb5243a48eb5c377",
     "497ff98d015a43c118c8",
     "4cab670807efe3930e86",
     "4d3e413164ea117d2da0",
@@ -83,6 +85,7 @@
     "5fce57e7d6d71ba7984b",
     "6281d565a07d14b3e3e8",
     "62a1124300ffd3b92345",
+    "646f36c1f774b1f60542",
     "65488cf29f83601d7f2f",
     "655c0e2dc5323cc7ca8a",
     "688a8e66f43cc80923fa",
@@ -223,12 +226,12 @@
   "pending": [
     {
       "election": "president-br",
-      "title": "Quaest: Flávio lidera entre jovens e Lula nos 60+ em MT - Primeira Página",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNbEx5VXkzZnVWWmpmVm9SM0s1cDZTQ3dWdWFBeVp1VllVcmRzbDNmV1BaTHBfOFNSQVhzR1Y3Q1lEbzhkZFotSWFpSGtpUk00QjRSTEpvVTgxelZHMEZqWFJEcmNLdVdhMGVXeVFETUNvYTV3Ym1zQ21aR3FUVk8tYmdrQ3VqMGZkWC1kdjFfb1NUSnNWTEFySXF0S2hHSHVpQWs1bll3RHVzSlRXU3dVS2dPbzRTZXVXS1RrVTNVdTVNTVhGMnA4QmVjTlE?oc=5",
-      "source": "Primeira Página",
+      "title": "Quaest em MT: Flávio Bolsonaro, 43%; Lula, 26%; Ronaldo Caiado, 4%; Renan Santos; 3%; Romeu Zema, 2% - GC Notícias",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQZEE1ZVM5cTlOenBFMEJ1dmVmWU9kaTV4RVFaSXVFZWVlWEpBMzRmZ0VwenVZVy05QV94WHM5clhYUm5JOU5uekMzYWdyb0xwdThzYnNEdllGLUVYekRCOTd1X3RDSWtpMUc1dEprNE5JNlR3MlFDbVU0Vm92Y1RQb2N4WTFzZ01TSVdraU5ySU1DZV9lQjBIRERlZ2lRQWhfTEFhdWVjLVRUaXEyOFhKa2hJQVFrRWVlN1BuQ1RxTVdIeHZSY0pfTUxSZTd4X2s?oc=5",
+      "source": "GC Notícias",
       "published": "2026-08-26",
       "pollster": "Quaest",
-      "key": "ac017206c2e4c2fdfc95"
+      "key": "48dafb5243a48eb5c377"
     },
     {
       "election": "president-br",
