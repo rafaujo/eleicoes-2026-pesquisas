@@ -128,6 +128,11 @@ PRESIDENT_REGIONAL_TERMS = (
     "em sp",
     "em sergipe",
     "no tocantins",
+    "no centro oeste",
+    "no nordeste",
+    "no norte",
+    "no sudeste",
+    "no sul",
     "estado em que",
 )
 STATE_ABBREVIATIONS = (

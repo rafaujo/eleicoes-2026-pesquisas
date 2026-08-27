@@ -89,6 +89,14 @@ class ResultDiscoveryTests(unittest.TestCase):
                     )
                 )
 
+    def test_regional_breakdown_is_not_treated_as_national(self) -> None:
+        self.assertFalse(
+            matches_election(
+                "Quaest: Lula e Flávio empatam no Sudeste com 37%",
+                "president-br",
+            )
+        )
+
     def test_social_post_is_not_used_as_editorial_source(self) -> None:
         self.assertFalse(
             matches_election(
