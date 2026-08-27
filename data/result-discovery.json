@@ -242,15 +242,5 @@
     "fae241547f29a883fc14",
     "fc1e86ae3d6f8df0c6cd"
   ],
-  "pending": [
-    {
-      "election": "president-br",
-      "title": "Quaest: Lula e Flávio empatam no Sudeste e buscam votos dos indecisos - Folha PE",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQM2ZNY3NSQm12NERuSmstMEZveTl6b2ptX2k4Sk1UZ3liV1Q4NF9PRHk3MFl1RmVXVVFKRE5BbmVnWktmamJmNGstV01DVUJwRWhIanN3dWwzNnRIbnQ4bl9mWHo4d2Q4ZXpTbkxrWWlJdndhRXI1b2NtdGpBRURySXVPcjhZaDJRV2pta1NfVVdHQm1jNm5LOXhPY3l0TGZRbThOQURMbENxeERTY2ZVNTVfMl9YUdIBtgFBVV95cUxQM2ZNY3NSQm12NERuSmstMEZveTl6b2ptX2k4Sk1UZ3liV1Q4NF9PRHk3MFl1RmVXVVFKRE5BbmVnWktmamJmNGstV01DVUJwRWhIanN3dWwzNnRIbnQ4bl9mWHo4d2Q4ZXpTbkxrWWlJdndhRXI1b2NtdGpBRURySXVPcjhZaDJRV2pta1NfVVdHQm1jNm5LOXhPY3l0TGZRbThOQURMbENxeERTY2ZVNTVfMl9YUQ?oc=5",
-      "source": "Folha PE",
-      "published": "2026-08-27",
-      "pollster": "Quaest",
-      "key": "d185b8f2d9b20bd593b8"
-    }
-  ]
+  "pending": []
 }
