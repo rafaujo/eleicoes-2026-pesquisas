@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-08-27 20:28:37",
+  "sourceGeneratedAt": "2026-08-27 21:32:41",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -615,28 +615,6 @@
     "BR099982026"
   ],
   "pending": {
-    "BR035472026": {
-      "protocol": "BR035472026",
-      "registeredAt": "2026-08-19",
-      "fieldStart": "2026-08-20",
-      "fieldEnd": "2026-08-23",
-      "disclosureDate": "2026-08-25",
-      "sample": 2400,
-      "company": "GERP MERCADOLOGIA LTDA",
-      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
-      "contractors": []
-    },
-    "BR063662026": {
-      "protocol": "BR063662026",
-      "registeredAt": "2026-08-20",
-      "fieldStart": "2026-08-20",
-      "fieldEnd": "2026-08-23",
-      "disclosureDate": "2026-08-26",
-      "sample": 2000,
-      "company": "INSTITUTO INDEXA PESQUISAS LTDA",
-      "tradeName": "INDEXA PESQUISAS",
-      "contractors": []
-    },
     "BR078062026": {
       "protocol": "BR078062026",
       "registeredAt": "2026-08-20",
@@ -660,17 +638,6 @@
       "contractors": [
         "INSTITUTO DE PESQUISAS PERFIL LTDA"
       ]
-    },
-    "BR090282026": {
-      "protocol": "BR090282026",
-      "registeredAt": "2026-08-18",
-      "fieldStart": "2026-08-21",
-      "fieldEnd": "2026-08-23",
-      "disclosureDate": "2026-08-24",
-      "sample": 2000,
-      "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
-      "tradeName": "NEXUS",
-      "contractors": []
     }
   }
 }
