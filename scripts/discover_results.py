@@ -130,6 +130,19 @@ PRESIDENT_REGIONAL_TERMS = (
     "no tocantins",
     "estado em que",
 )
+STATE_ABBREVIATIONS = (
+    "ac", "al", "ap", "am", "ba", "ce", "df", "es", "go", "ma", "mt", "ms",
+    "mg", "pa", "pb", "pr", "pe", "pi", "rj", "rn", "rs", "ro", "rr", "sc",
+    "sp", "se", "to",
+)
+STATE_NAMES = (
+    "acre", "alagoas", "amapa", "amazonas", "bahia", "ceara",
+    "distrito federal", "espirito santo", "goias", "maranhao",
+    "mato grosso", "mato grosso do sul", "minas gerais", "para",
+    "paraiba", "parana", "pernambuco", "piaui", "rio de janeiro",
+    "rio grande do norte", "rio grande do sul", "rondonia", "roraima",
+    "santa catarina", "sao paulo", "sergipe", "tocantins",
+)
 SOURCE_PRIORITY = {
     "Folha de S.Paulo": 0,
     "G1": 1,
@@ -181,6 +194,11 @@ def matches_election(title: str, election_id: str, source: str = "") -> bool:
         return False
     if election_id == "president-br" and any(
         term in normalized for term in PRESIDENT_REGIONAL_TERMS
+    ):
+        return False
+    if election_id == "president-br" and re.search(
+        rf"\b(?:no|na|em)\s+(?:{'|'.join((*STATE_ABBREVIATIONS, *STATE_NAMES))})\b",
+        normalized,
     ):
         return False
     if not any(term in normalized for term in rule["terms"]):

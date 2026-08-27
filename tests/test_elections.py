@@ -43,9 +43,10 @@ class ElectionCatalogTests(unittest.TestCase):
     def test_sao_paulo_keeps_comparable_scenarios_separate(self) -> None:
         polls = self.sp["polls"]
 
-        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 1)
+        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 3)
+        self.assertEqual(sum("first-short" in poll["scenarios"] for poll in polls), 1)
         self.assertEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 3)
-        self.assertEqual(sum("runoff-tarcisio-haddad" in poll["scenarios"] for poll in polls), 8)
+        self.assertEqual(sum("runoff-tarcisio-haddad" in poll["scenarios"] for poll in polls), 11)
 
     def test_latest_sao_paulo_results_match_sources(self) -> None:
         parana = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP046242026")
@@ -62,12 +63,23 @@ class ElectionCatalogTests(unittest.TestCase):
         self.assertEqual(datafolha["scenarios"]["runoff-tarcisio-haddad"]["results"]["haddad"], 35)
         self.assertEqual(latest_parana["scenarios"]["runoff-tarcisio-haddad"]["results"]["tarcisio"], 53)
 
+        latest_quaest = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP069462026")
+        latest_gerp = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP014772026")
+        latest_realtime = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP013472026")
+        self.assertEqual(latest_quaest["scenarios"]["first-main"]["results"]["tarcisio"], 40)
+        self.assertEqual(latest_gerp["scenarios"]["first-main"]["results"]["haddad"], 32)
+        self.assertEqual(latest_realtime["scenarios"]["first-short"]["results"]["tarcisio"], 52)
+
     def test_sao_paulo_official_files_cover_curated_protocols(self) -> None:
         metadata = json.loads((ROOT / "data" / "tse-metadata-sp.json").read_text(encoding="utf-8"))
         monitor = json.loads((ROOT / "data" / "tse-monitor-sp.json").read_text(encoding="utf-8"))
         curated = {poll["protocol"] for poll in self.sp["polls"]}
 
-        awaiting_sync = {"SP089132026", "SP018062026"}
+        metadata_date = str(metadata["generatedAt"])[:10]
+        awaiting_sync = {
+            poll["protocol"] for poll in self.sp["polls"]
+            if poll.get("published", "") > metadata_date
+        }
         self.assertTrue(set(metadata["records"]).issubset(curated))
         self.assertTrue((curated - awaiting_sync).issubset(set(metadata["records"])))
         self.assertTrue((curated - awaiting_sync).issubset(set(monitor["seenProtocols"])))
@@ -78,9 +90,10 @@ class ElectionCatalogTests(unittest.TestCase):
         polls = self.mg["polls"]
         quaest = next(poll for poll in polls if poll["protocol"] == "MG034902026")
 
-        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 1)
+        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 2)
+        self.assertEqual(sum("first-short" in poll["scenarios"] for poll in polls), 1)
         self.assertEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 1)
-        self.assertEqual(sum("runoff-cleitinho-kalil" in poll["scenarios"] for poll in polls), 2)
+        self.assertEqual(sum("runoff-cleitinho-kalil" in poll["scenarios"] for poll in polls), 4)
         self.assertEqual(quaest["scenarios"]["first-pre-campaign"]["results"]["cleitinho"], 35)
         self.assertEqual(quaest["scenarios"]["runoff-cleitinho-patrus"]["results"]["patrus"], 31)
 
@@ -88,12 +101,21 @@ class ElectionCatalogTests(unittest.TestCase):
         self.assertEqual(datafolha["scenarios"]["first-main"]["results"]["cleitinho"], 32)
         self.assertEqual(datafolha["scenarios"]["first-main"]["results"]["indira"], 1)
 
+        latest_quaest = next(poll for poll in polls if poll["protocol"] == "MG040602026")
+        latest_realtime = next(poll for poll in polls if poll["protocol"] == "MG079722026")
+        self.assertEqual(latest_quaest["scenarios"]["first-main"]["results"]["cleitinho"], 29)
+        self.assertEqual(latest_realtime["scenarios"]["first-short"]["results"]["cleitinho"], 33)
+
     def test_minas_gerais_official_files_cover_curated_protocols(self) -> None:
         metadata = json.loads((ROOT / "data" / "tse-metadata-mg.json").read_text(encoding="utf-8"))
         monitor = json.loads((ROOT / "data" / "tse-monitor-mg.json").read_text(encoding="utf-8"))
         curated = {poll["protocol"] for poll in self.mg["polls"]}
 
-        awaiting_sync = {"MG004462026"}
+        metadata_date = str(metadata["generatedAt"])[:10]
+        awaiting_sync = {
+            poll["protocol"] for poll in self.mg["polls"]
+            if poll.get("published", "") > metadata_date
+        }
         self.assertTrue(set(metadata["records"]).issubset(curated))
         self.assertTrue((curated - awaiting_sync).issubset(set(metadata["records"])))
         self.assertTrue((curated - awaiting_sync).issubset(set(monitor["seenProtocols"])))

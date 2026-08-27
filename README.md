@@ -88,12 +88,13 @@ Em cada execução ele:
 1. baixa a versão diária do conjunto oficial do TSE;
 2. atualiza metadados alterados e detecta protocolos novos em cada eleição;
 3. consulta feeds públicos de notícias para localizar divulgações que possam ter escapado do espelho oficial;
-4. executa os testes e as validações de consistência;
-5. cria um commit na `main` somente quando os arquivos realmente mudaram;
-6. abre ou atualiza issues com protocolos e fontes públicas que ainda precisam de revisão;
-7. solicita uma nova publicação do GitHub Pages após o commit.
+4. cruza um acervo estruturado com o protocolo do TSE e com a publicação original, incorporando somente cenários em que instituto, amostra e todos os percentuais são confirmados nas duas fontes;
+5. executa os testes e as validações de consistência;
+6. cria um commit na `main` somente quando os arquivos realmente mudaram;
+7. mantém em issues os casos incompletos, divergentes ou sem cenário comparável;
+8. solicita uma nova publicação do GitHub Pages após o commit.
 
-O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. Por isso, um protocolo novo entra primeiro na fila editorial. A busca pública redundante também cria alertas a partir de títulos recentes que mencionem resultados, institutos e candidatos. Os links encontrados são candidatos editoriais: os percentuais só entram na média depois da conferência em uma publicação ou relatório e da conciliação com o protocolo do TSE.
+O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. O importador automático usa uma fonte estruturada apenas como índice: antes de gravar qualquer resultado, exige o mesmo protocolo, a mesma amostra e os mesmos pares candidato/percentual na publicação original ligada à ficha. Divergências, páginas bloqueadas e listas de candidatos sem cenário equivalente continuam na fila editorial em vez de entrarem silenciosamente na média.
 
 O workflow `.github/workflows/validate.yml` também valida todo pull request e todo push feito manualmente na `main`.
 

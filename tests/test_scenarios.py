@@ -26,13 +26,13 @@ class ScenarioDataTests(unittest.TestCase):
             ["lula", "flavio", "marcal", "caiado", "renan", "zema"],
         )
 
-    def test_eleven_polls_have_extended_runoff_results(self) -> None:
+    def test_extended_runoff_results_keep_growing(self) -> None:
         polls = self.database["polls"]
 
-        self.assertEqual(sum("runoff-lula-caiado" in poll["scenarios"] for poll in polls), 11)
-        self.assertEqual(sum("runoff-lula-zema" in poll["scenarios"] for poll in polls), 11)
-        self.assertEqual(sum("runoff-lula-renan" in poll["scenarios"] for poll in polls), 2)
-        self.assertEqual(sum("runoff-lula-marcal" in poll["scenarios"] for poll in polls), 1)
+        self.assertGreaterEqual(sum("runoff-lula-caiado" in poll["scenarios"] for poll in polls), 13)
+        self.assertGreaterEqual(sum("runoff-lula-zema" in poll["scenarios"] for poll in polls), 13)
+        self.assertGreaterEqual(sum("runoff-lula-renan" in poll["scenarios"] for poll in polls), 4)
+        self.assertGreaterEqual(sum("runoff-lula-marcal" in poll["scenarios"] for poll in polls), 1)
 
     def test_verita_values_match_published_scenarios(self) -> None:
         verita = next(poll for poll in self.database["polls"] if poll["protocol"] == "BR040062026")
