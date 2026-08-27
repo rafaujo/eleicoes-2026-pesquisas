@@ -59,6 +59,16 @@
       ]
     },
     {
+      "id": "first-short",
+      "round": 1,
+      "label": "Lista reduzida",
+      "candidates": [
+        "tarcisio",
+        "haddad",
+        "vivian"
+      ]
+    },
+    {
       "id": "first-pre-campaign",
       "round": 1,
       "label": "Lista da pré-campanha",
@@ -81,6 +91,179 @@
     }
   ],
   "polls": [
+    {
+      "id": 11,
+      "pollster": "GERP",
+      "publication": "AESP Rádio + TV · Exame",
+      "protocol": "SP014772026",
+      "published": "2026-08-25",
+      "start": "2026-08-19",
+      "end": "2026-08-24",
+      "field": "19–24 ago",
+      "sample": 1800,
+      "margin": 2.3,
+      "confidence": 95,
+      "method": "Entrevistas telefônicas assistidas por computador (GerpCati)",
+      "resultSource": "https://exame.com/brasil/pesquisa-gerp-tarcisio-tem-50-e-haddad-32-no-1o-turno-em-sao-paulo/",
+      "resultSourceLabel": "Exame — resultados e metodologia",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 50,
+            "haddad": 32,
+            "vera": 1,
+            "machado": 1,
+            "edjane": 1,
+            "vivian": 0,
+            "izadora": 1
+          },
+          "undecided": 14
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 55,
+            "haddad": 36
+          },
+          "undecided": 9
+        }
+      }
+    },
+    {
+      "id": 10,
+      "pollster": "Real Time Big Data",
+      "publication": "Divulgação UOL",
+      "protocol": "SP013472026",
+      "published": "2026-08-24",
+      "start": "2026-08-19",
+      "end": "2026-08-22",
+      "field": "19–22 ago",
+      "sample": 2000,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Entrevistas telefônicas",
+      "resultSource": "https://noticias.uol.com.br/eleicoes/2026/08/24/realtime-big-data-sp.amp.htm",
+      "resultSourceLabel": "UOL — resultados e metodologia",
+      "scenarios": {
+        "first-short": {
+          "results": {
+            "tarcisio": 52,
+            "haddad": 35,
+            "vivian": 1
+          },
+          "undecided": 11
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 54,
+            "haddad": 36
+          },
+          "undecided": 10
+        }
+      }
+    },
+    {
+      "id": 9,
+      "pollster": "Quaest",
+      "publication": "TV Globo · G1",
+      "protocol": "SP069462026",
+      "published": "2026-08-25",
+      "start": "2026-08-21",
+      "end": "2026-08-24",
+      "field": "21–24 ago",
+      "sample": 1800,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Entrevistas domiciliares presenciais",
+      "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/08/25/quaest-em-sp-tarcisio-40percent-haddad-27percent.ghtml",
+      "resultSourceLabel": "g1.globo.com — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 40,
+            "haddad": 27,
+            "vera": 1,
+            "machado": 1,
+            "edjane": 2,
+            "vivian": 1,
+            "izadora": 1
+          },
+          "undecided": 27,
+          "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/08/25/quaest-em-sp-tarcisio-40percent-haddad-27percent.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 47,
+            "haddad": 30
+          },
+          "undecided": 23,
+          "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/08/25/quaest-em-sp-tarcisio-40percent-haddad-27percent.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "pollster": "Datafolha",
+      "publication": "Folha de S.Paulo/TV Globo · InfoMoney",
+      "protocol": "SP018062026",
+      "start": "2026-08-18",
+      "end": "2026-08-19",
+      "published": "2026-08-21",
+      "field": "18–19 ago",
+      "sample": 1610,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Entrevistas presenciais em 65 municípios",
+      "resultSource": "https://www.infomoney.com.br/politica/datafolha-tarcisio-tem-45-e-haddad-27-na-disputa-pelo-governo-de-sp/",
+      "resultSourceLabel": "InfoMoney — resultados e metodologia",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 45,
+            "haddad": 27,
+            "vera": 4,
+            "machado": 3,
+            "edjane": 3,
+            "vivian": 2,
+            "izadora": 1
+          },
+          "undecided": 15
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 54,
+            "haddad": 35
+          },
+          "undecided": 11
+        }
+      }
+    },
+    {
+      "id": 7,
+      "pollster": "Paraná Pesquisas",
+      "publication": "Divulgação InfoMoney",
+      "protocol": "SP089132026",
+      "start": "2026-08-16",
+      "end": "2026-08-18",
+      "published": "2026-08-19",
+      "field": "16–18 ago",
+      "sample": 1680,
+      "margin": 2.4,
+      "confidence": 95,
+      "method": "Entrevistas presenciais em 80 municípios",
+      "resultSource": "https://www.infomoney.com.br/politica/parana-pesquisa-tarcisio-chega-a-50-e-abre-16-pontos-de-vantagem-sobre-haddad-em-sp/",
+      "resultSourceLabel": "InfoMoney — resultados e metodologia",
+      "scenarios": {
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 53,
+            "haddad": 36.9
+          },
+          "undecided": 10.1
+        }
+      }
+    },
     {
       "id": 1,
       "pollster": "Paraná Pesquisas",
@@ -258,68 +441,6 @@
             "haddad": 37.3
           },
           "undecided": 9.3
-        }
-      }
-    },
-    {
-      "id": 7,
-      "pollster": "Paraná Pesquisas",
-      "publication": "Divulgação InfoMoney",
-      "protocol": "SP089132026",
-      "start": "2026-08-16",
-      "end": "2026-08-18",
-      "published": "2026-08-19",
-      "field": "16–18 ago",
-      "sample": 1680,
-      "margin": 2.4,
-      "confidence": 95,
-      "method": "Entrevistas presenciais em 80 municípios",
-      "resultSource": "https://www.infomoney.com.br/politica/parana-pesquisa-tarcisio-chega-a-50-e-abre-16-pontos-de-vantagem-sobre-haddad-em-sp/",
-      "resultSourceLabel": "InfoMoney — resultados e metodologia",
-      "scenarios": {
-        "runoff-tarcisio-haddad": {
-          "results": {
-            "tarcisio": 53,
-            "haddad": 36.9
-          },
-          "undecided": 10.1
-        }
-      }
-    },
-    {
-      "id": 8,
-      "pollster": "Datafolha",
-      "publication": "Folha de S.Paulo/TV Globo · InfoMoney",
-      "protocol": "SP018062026",
-      "start": "2026-08-18",
-      "end": "2026-08-19",
-      "published": "2026-08-21",
-      "field": "18–19 ago",
-      "sample": 1610,
-      "margin": 2,
-      "confidence": 95,
-      "method": "Entrevistas presenciais em 65 municípios",
-      "resultSource": "https://www.infomoney.com.br/politica/datafolha-tarcisio-tem-45-e-haddad-27-na-disputa-pelo-governo-de-sp/",
-      "resultSourceLabel": "InfoMoney — resultados e metodologia",
-      "scenarios": {
-        "first-main": {
-          "results": {
-            "tarcisio": 45,
-            "haddad": 27,
-            "vera": 4,
-            "machado": 3,
-            "edjane": 3,
-            "vivian": 2,
-            "izadora": 1
-          },
-          "undecided": 15
-        },
-        "runoff-tarcisio-haddad": {
-          "results": {
-            "tarcisio": 54,
-            "haddad": 35
-          },
-          "undecided": 11
         }
       }
     }

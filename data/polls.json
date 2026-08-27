@@ -112,6 +112,244 @@
   ],
   "polls": [
     {
+      "id": 40,
+      "pollster": "PoderData",
+      "publication": "poder360.com.br",
+      "protocol": "BR049742026",
+      "published": "2026-08-27",
+      "start": "2026-08-23",
+      "end": "2026-08-26",
+      "field": "23–26 ago",
+      "sample": 2400,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Telefone",
+      "resultSource": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-35-de-flavio-no-1o-turno/",
+      "resultSourceLabel": "poder360.com.br — resultado publicado",
+      "scenarios": {
+        "first-with-marcal": {
+          "results": {
+            "lula": 38,
+            "flavio": 35,
+            "marcal": 3,
+            "caiado": 4,
+            "renan": 4,
+            "zema": 2
+          },
+          "undecided": 7,
+          "resultSource": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-35-de-flavio-no-1o-turno/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 45,
+            "flavio": 44
+          },
+          "undecided": 11,
+          "resultSource": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-35-de-flavio-no-1o-turno/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 43,
+            "caiado": 44
+          },
+          "undecided": 12,
+          "resultSource": "https://www.cnnbrasil.com.br/eleicoes/poderdata-aya-caiado-aparece-numericamente-a-frente-de-lula-no-2o-turno/",
+          "resultSourceLabel": "CNN Brasil — resultado publicado"
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 44,
+            "zema": 43
+          },
+          "undecided": 12,
+          "resultSource": "https://www.cnnbrasil.com.br/eleicoes/poderdata-aya-lula-empata-com-flavio-caiado-e-zema-no-2o-turno/",
+          "resultSourceLabel": "CNN Brasil — resultado publicado"
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 44,
+            "renan": 37
+          },
+          "undecided": 19,
+          "resultSource": "https://www.cnnbrasil.com.br/eleicoes/poderdata-aya-lula-empata-com-flavio-caiado-e-zema-no-2o-turno/",
+          "resultSourceLabel": "CNN Brasil — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 37,
+      "pollster": "Gerp",
+      "publication": "poder360.com.br",
+      "protocol": "BR035472026",
+      "published": "2026-08-26",
+      "start": "2026-08-21",
+      "end": "2026-08-25",
+      "field": "21–25 ago",
+      "sample": 2400,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-47-e-lula-42-em-2o-turno-diz-pesquisa/",
+      "resultSourceLabel": "poder360.com.br — resultado publicado",
+      "scenarios": {
+        "first-with-marcal": {
+          "results": {
+            "lula": 37,
+            "flavio": 38,
+            "marcal": 4,
+            "caiado": 3,
+            "renan": 3,
+            "zema": 1
+          },
+          "undecided": 12,
+          "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-47-e-lula-42-em-2o-turno-diz-pesquisa/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 42,
+            "flavio": 47
+          },
+          "undecided": 11,
+          "resultSource": "https://www.cnnbrasil.com.br/eleicoes/gerp-flavio-tem-47-no-2o-turno-lula-42/",
+          "resultSourceLabel": "CNN Brasil — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 38,
+      "pollster": "Indexa",
+      "publication": "gazetadopovo.com.br",
+      "protocol": "BR063662026",
+      "published": "2026-08-26",
+      "start": "2026-08-20",
+      "end": "2026-08-23",
+      "field": "20–23 ago",
+      "sample": 2000,
+      "margin": 2.2,
+      "confidence": 95,
+      "method": "Híbrido (telefone+presencial)",
+      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-agosto-2026/",
+      "resultSourceLabel": "gazetadopovo.com.br — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "lula": 39,
+            "flavio": 34,
+            "caiado": 5,
+            "zema": 1,
+            "renan": 4
+          },
+          "undecided": 16,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-agosto-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 44,
+            "caiado": 38
+          },
+          "undecided": 18,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-agosto-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 46,
+            "flavio": 41
+          },
+          "undecided": 13,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-agosto-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 46,
+            "renan": 34
+          },
+          "undecided": 20,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-agosto-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 45,
+            "zema": 34
+          },
+          "undecided": 21,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-agosto-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "first-with-marcal": {
+          "results": {
+            "lula": 39,
+            "flavio": 33,
+            "marcal": 2,
+            "caiado": 5,
+            "renan": 4,
+            "zema": 1
+          },
+          "undecided": 16,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-agosto-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 39,
+      "pollster": "Nexus",
+      "publication": "poder360.com.br",
+      "protocol": "BR090282026",
+      "published": "2026-08-24",
+      "start": "2026-08-21",
+      "end": "2026-08-23",
+      "field": "21–23 ago",
+      "sample": 2006,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Híbrido (telefone+presencial)",
+      "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-46-contra-45-de-flavio-no-2o-turno-diz-btg-nexus/",
+      "resultSourceLabel": "poder360.com.br — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "lula": 41,
+            "flavio": 37,
+            "caiado": 5,
+            "zema": 3,
+            "renan": 3
+          },
+          "undecided": 8,
+          "resultSource": "https://www.nexus.fsb.com.br/estudos-divulgados/pesquisa-btg-nexus-de-intencao-de-votos-para-presidente-do-brasil-24-de-agosto-de-2026/",
+          "resultSourceLabel": "Nexus — resultado oficial"
+        },
+        "first-with-marcal": {
+          "results": {
+            "lula": 40,
+            "flavio": 34,
+            "marcal": 4,
+            "caiado": 5,
+            "renan": 3,
+            "zema": 2
+          },
+          "undecided": 7,
+          "resultSource": "https://www.nexus.fsb.com.br/estudos-divulgados/pesquisa-btg-nexus-de-intencao-de-votos-para-presidente-do-brasil-24-de-agosto-de-2026/",
+          "resultSourceLabel": "Nexus — resultado oficial"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 46,
+            "flavio": 45
+          },
+          "undecided": 9,
+          "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-46-contra-45-de-flavio-no-2o-turno-diz-btg-nexus/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 36,
       "pollster": "Veritá",
       "publication": "Instituto Veritá",
@@ -451,40 +689,6 @@
       }
     },
     {
-      "id": 6,
-      "pollster": "Futura/100 Cidades",
-      "publication": "Divulgação Apex/Futura",
-      "protocol": "BR081092026",
-      "start": "2026-08-03",
-      "end": "2026-08-06",
-      "field": "3–6 ago",
-      "sample": 2000,
-      "margin": 2.2,
-      "confidence": 95,
-      "method": "Telefônica por cotas",
-      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/futura-inteligencia-presidente-agosto-2026/",
-      "resultSourceLabel": "Gazeta do Povo — resultado publicado",
-      "scenarios": {
-        "first-main": {
-          "results": {
-            "lula": 36.3,
-            "flavio": 32.7,
-            "caiado": 7.7,
-            "zema": 4.4,
-            "renan": 3.8
-          },
-          "undecided": 12.2
-        },
-        "runoff-lula-flavio": {
-          "results": {
-            "lula": 46.5,
-            "flavio": 44
-          },
-          "undecided": 9.5
-        }
-      }
-    },
-    {
       "id": 7,
       "pollster": "Palver",
       "publication": "Divulgação CartaCapital",
@@ -515,6 +719,40 @@
             "flavio": 46
           },
           "undecided": 8
+        }
+      }
+    },
+    {
+      "id": 6,
+      "pollster": "Futura/100 Cidades",
+      "publication": "Divulgação Apex/Futura",
+      "protocol": "BR081092026",
+      "start": "2026-08-03",
+      "end": "2026-08-06",
+      "field": "3–6 ago",
+      "sample": 2000,
+      "margin": 2.2,
+      "confidence": 95,
+      "method": "Telefônica por cotas",
+      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/futura-inteligencia-presidente-agosto-2026/",
+      "resultSourceLabel": "Gazeta do Povo — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "lula": 36.3,
+            "flavio": 32.7,
+            "caiado": 7.7,
+            "zema": 4.4,
+            "renan": 3.8
+          },
+          "undecided": 12.2
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 46.5,
+            "flavio": 44
+          },
+          "undecided": 9.5
         }
       }
     },
@@ -621,40 +859,6 @@
       }
     },
     {
-      "id": 11,
-      "pollster": "Vox Brasil",
-      "publication": "Poder360",
-      "protocol": "BR010842026",
-      "start": "2026-07-26",
-      "end": "2026-07-28",
-      "field": "26–28 jul",
-      "sample": 2100,
-      "margin": 2.15,
-      "confidence": 95,
-      "method": "Presencial domiciliar",
-      "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-475-contra-411-de-flavio-no-2o-turno-diz-pesquisa/",
-      "resultSourceLabel": "Poder360 — resultado publicado",
-      "scenarios": {
-        "first-main": {
-          "results": {
-            "lula": 40.5,
-            "flavio": 31.2,
-            "caiado": 5.5,
-            "zema": 3.2,
-            "renan": 3
-          },
-          "undecided": 11.9
-        },
-        "runoff-lula-flavio": {
-          "results": {
-            "lula": 47.5,
-            "flavio": 41.1
-          },
-          "undecided": 11.4
-        }
-      }
-    },
-    {
       "id": 12,
       "pollster": "PoderData",
       "publication": "Poder360",
@@ -703,6 +907,40 @@
           "undecided": 13,
           "resultSource": "https://www.itatiaia.com.br/politica/eleicoes/pesquisas/lula-empate-bolsonaro-zema-caiado-2-turno-poderdata-aya/",
           "resultSourceLabel": "Itatiaia — cenários de segundo turno PoderData/Aya"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "pollster": "Vox Brasil",
+      "publication": "Poder360",
+      "protocol": "BR010842026",
+      "start": "2026-07-26",
+      "end": "2026-07-28",
+      "field": "26–28 jul",
+      "sample": 2100,
+      "margin": 2.15,
+      "confidence": 95,
+      "method": "Presencial domiciliar",
+      "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-475-contra-411-de-flavio-no-2o-turno-diz-pesquisa/",
+      "resultSourceLabel": "Poder360 — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "lula": 40.5,
+            "flavio": 31.2,
+            "caiado": 5.5,
+            "zema": 3.2,
+            "renan": 3
+          },
+          "undecided": 11.9
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 47.5,
+            "flavio": 41.1
+          },
+          "undecided": 11.4
         }
       }
     },

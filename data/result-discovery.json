@@ -90,6 +90,7 @@
     "58805b8d4ee02f19aa36",
     "58b255bb2fda772169ee",
     "5fce57e7d6d71ba7984b",
+    "5ff19f7de192d84e6092",
     "6281d565a07d14b3e3e8",
     "62a1124300ffd3b92345",
     "646f36c1f774b1f60542",
@@ -241,123 +242,5 @@
     "fae241547f29a883fc14",
     "fc1e86ae3d6f8df0c6cd"
   ],
-  "pending": [
-    {
-      "election": "president-br",
-      "title": "Real Time Big Data: no ES, Flávio empata com Lula no 1º turno e vence no 2º - CNN Brasil",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPUk1xUWlZOGNqZnFvOXI3M1NTNWR2WjZvMmtFT3lSX01XaWZyYU5vRHJiLUJrVjExXzNyVGFVTWl4aERPams3ZEZtZ1o4cWRGZGs5OWc0Mk14MmIyZVpLRk9YTHBZSld5OV92cWRYbVJ4VlBpVlhKZkwxOWZibl9xVkpKa0Z1eEZIRU8xVk81SllUY0lLNTJuamo4MW5UMDVnSzZNS2pLRzNUa19QTGxMTl9B?oc=5",
-      "source": "CNN Brasil",
-      "published": "2026-08-27",
-      "pollster": "Real Time Big Data",
-      "key": "b39d751b6bcb125d39c8"
-    },
-    {
-      "election": "governor-mg",
-      "title": "Cleitinho e Lula lideram em Minas Gerais, aponta Real Time Big Data - Money Times",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQTzk2TVBuYWJja1NBeGJtNEN0M05ySlZRZU5maDR3bUd1Q3NuSmQ5NXJ3ZklVM0ZkeldaZ18zdzlvMi04bGdzVmVrNnBqUmNpZmMtZFVZT01rbjJLcG04NXpkeEhZUEU4VUNCLWJMWDY3RExoMWR0ZV9LeGQ2YW81UGNDRlN3Rmh1a2VlaXd4a2dkVkpYWUJlcC1BM2NQbkdDXzdqZg?oc=5",
-      "source": "Money Times",
-      "published": "2026-08-27",
-      "pollster": "Real Time Big Data",
-      "key": "4bb5dc70cf874824ac1f"
-    },
-    {
-      "election": "president-br",
-      "title": "PoderData/AYA: Lula empata com Flávio, Caiado e Zema no 2º turno - CNN Brasil",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQWlF5YTE1djQzMlZQeWdrblptRGJyVGM1NFhCbzlySlFXSF9rSEpvdFMtQnNmSFQwSUREWVUwSndxam5ENHN5V3BRVU1UQWF4VllWMjF0NDRqS2hoZl9oVmNZZko4OU11aVdMM2l5Q3VsamlveDloTXVESDM4anNtZThPV2J2MjVmVEVmQ3hCU2p4VFluTG9qMkRvVnRyVldKZDYw?oc=5",
-      "source": "CNN Brasil",
-      "published": "2026-08-27",
-      "pollster": "PoderData",
-      "key": "240d21bf99fe7fb98b9a"
-    },
-    {
-      "election": "governor-sp",
-      "title": "Tarcísio de Freitas lidera disputa pelo governo de SP com 40% contra 27% de Haddad, diz Quaest - Tribuna de Jundiaí",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUGZRRVFCNXdHdHFZa0J1OEJJbTlKRV8tb3FHanBzYmNDTmd4c25xaXlhQWhpeGFMSWI3Z2NvU1Fkcm1ZWEx3U1FpRkRSM0VrZVRfSWZLWFpYbTlCYl8tVXczeURoREhZbUFNVEM0YkpNX3VFZmN5bXVTd0lBdEh0djlSV3pZckNMRmVHdGExQkxVMDFyTzR5T3ZFckFXTkRGOEdjSHJn?oc=5",
-      "source": "Tribuna de Jundiaí",
-      "published": "2026-08-27",
-      "pollster": "Quaest",
-      "key": "0dac999b43694a7b2d7f"
-    },
-    {
-      "election": "president-br",
-      "title": "Quaest em MT: Flávio Bolsonaro, 43%; Lula, 26%; Ronaldo Caiado, 4%; Renan Santos; 3%; Romeu Zema, 2% - GC Notícias",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQZEE1ZVM5cTlOenBFMEJ1dmVmWU9kaTV4RVFaSXVFZWVlWEpBMzRmZ0VwenVZVy05QV94WHM5clhYUm5JOU5uekMzYWdyb0xwdThzYnNEdllGLUVYekRCOTd1X3RDSWtpMUc1dEprNE5JNlR3MlFDbVU0Vm92Y1RQb2N4WTFzZ01TSVdraU5ySU1DZV9lQjBIRERlZ2lRQWhfTEFhdWVjLVRUaXEyOFhKa2hJQVFrRWVlN1BuQ1RxTVdIeHZSY0pfTUxSZTd4X2s?oc=5",
-      "source": "GC Notícias",
-      "published": "2026-08-26",
-      "pollster": "Quaest",
-      "key": "48dafb5243a48eb5c377"
-    },
-    {
-      "election": "president-br",
-      "title": "Gerp: Flávio tem 47% no 2º turno; Lula, 42% - CNN Brasil",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMGVycXc2RWNmZTFsa3dZZDlCeWdKMUtGLVBobzdzS3RGSUF5d3JDdDc3cnhEN3B1M3IyT0hnX1drOVpwNS1aNDA1Nm1NbkRIOW1sUXIxdUMtN0FBVHpoRnpLdEFRNTRPc2h5cnBBcWpyYTBSNUh0cDlBdS1PN2lucEQ4WQ?oc=5",
-      "source": "CNN Brasil",
-      "published": "2026-08-26",
-      "pollster": "GERP",
-      "key": "341910536c59bf306012"
-    },
-    {
-      "election": "governor-sp",
-      "title": "Quaest: Tarcísio tem 40% no 1º turno para Governo de São Paulo, contra 27% de Haddad - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxORkR6TlJEeDRPUjFsZFdLQkJocTJkNTA1Y1hCTTRubHFTN2t0YWN3Nnk4UmlRWlYya3ZvY3VpU2gweEdhLXNrS0l6QnJ2OHNMZ1VPQWducy1aNlgtME1RM1FuZmlHb0NqV1h4ak43aHFXeHNiTmMtcU02ckg0LV9lT2hwVno4RXRNeUxteG9NX3Z4SnBWSnk3Uzh1QnZrNW96a0dXcV80V082LUFvSGM3dHFUMmQ3Z3ZYdEV2MU1uSzlBTTlKSVVjSEl3?oc=5",
-      "source": "Folha de S.Paulo",
-      "published": "2026-08-25",
-      "pollster": "Quaest",
-      "key": "a5261ffc1c893a7ab70e"
-    },
-    {
-      "election": "governor-mg",
-      "title": "Quaest: Cleitinho lidera em MG com 29%; Patrus tem 11% e Kalil, 10% - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdzVTRERuY19GSHU5bXM3Sjc0R0JjNi10QWo1dFN3UU1ya3dwU0Jmci1CSm9raHAybTRYVmNsM1B4QjFPUGwxNGFRdTNLYlBwcTBnU3N6cDBjRHU2blJvVmpndnlOMHpDX0lsQmp1TlhsSGZOdkc1WWtXMVNXWW1MdVRmOTQ5NUUxSVJCd0dsNURrN0pfNE5UNWFXWXFsdTdTYktuVzFGYmNIUHZZXzhQUw?oc=5",
-      "source": "Folha de S.Paulo",
-      "published": "2026-08-25",
-      "pollster": "Quaest",
-      "key": "9f8478489609e63990ae"
-    },
-    {
-      "election": "president-br",
-      "title": "Real Time Big Data: Lula vence Flávio Bolsonaro por 10 pontos no segundo turno no RS - tmc.com.br",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNSHpWQ0xLSnBibTZXbl9YUVBwQV8yQU9aV2tISURkcHdHb0RTdW0wMEZURjh6R1UxdHNpVXNOTWJpVlAwV3g5UEVtQUhWNEQtVnJyOG04T2gwN2d6UUllN3FiX1h1cS1Icm8yMWlaRlFDOTFJSmtwUmpER3gxWG1PN1BuVkw4WnQ0YzFDVDRscEozdw?oc=5",
-      "source": "tmc.com.br",
-      "published": "2026-08-25",
-      "pollster": "Real Time Big Data",
-      "key": "6b4103cbfb1b6a2c874c"
-    },
-    {
-      "election": "governor-sp",
-      "title": "Tarcísio de Freitas lidera disputa pelo governo de SP, diz Gerp - Poder360",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUTVoTkJ4RDJmeU1VbzNlS2M3bzI0NWxJLTg2VS1vbkZuUktzMjhkVXNZeW9DcmlqM1FDbGk2YjBYaWpaNWVDa0ZQM0gzbnJKaTdlRmd6ZTNpa2RpQ3hOcm93aThpM1Q2NkZZVFFUeXZtS2VydGlZRjJEVUptS2cwQ2tvN2xta0VFb3RHc1hQQ2R3dVhNQmYxVnFHWkNfbjFFWHB5VnJzZXB2Z2ppNnhUTQ?oc=5",
-      "source": "Poder360",
-      "published": "2026-08-25",
-      "pollster": "GERP",
-      "key": "1637b2aef93af42ebf05"
-    },
-    {
-      "election": "president-br",
-      "title": "BTG/Nexus: Lula e Flávio Bolsonaro mantêm empate técnico no 2º turno, com 46% a 45% - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNR0lCaXJRV2lpaWppT0E1QV9MQ2JFZnpjVEtOck1yVDFpZDQ0bm5uREZvc3hoZHhVbTN1WjJuRHBvNmFvX29SUVZsR01BQlRUU1ZpeUpfRVVUdTNvQnVDQlV6ejhRa0pJWVU5WXlnUXdYeFhPUmdsZjE4T1R1RVpRMWNRXzVkNkRfSmlvNlA2am5kQkthaEV4aURkVDVPc282QmhjVlE2MUhVRFlYSWMtQmJPTDczQkg3QTlnLWgyR2RHc01KRzZJ?oc=5",
-      "source": "Folha de S.Paulo",
-      "published": "2026-08-24",
-      "pollster": "Nexus",
-      "key": "a7cc9169fce24c4d75e7"
-    },
-    {
-      "election": "governor-sp",
-      "title": "Tarcísio vence no 1º turno em SP, diz Real Time Big Data - Poder360",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObTNQN3NfNWMyQnNMTzlUYnBDRnpyTW82dEtsSGtqV1JZZE1mYTNjTVZfdWs4dzQ1dm9fNTZEWkhpWXpKTU5BSlBpSzNoMmU3Q3d6Vmp2LWIyZ0RvN1VuSXJ6TkhidVY4QW1RSUEzT2tWRTljUk1TUlhaNFFHTWdhbkg0QnZXZGlLVlEydTFNTHNuRWhkcEFycHpOUmNURGxoeU9rNDNXTQ?oc=5",
-      "source": "Poder360",
-      "published": "2026-08-24",
-      "pollster": "Real Time Big Data",
-      "key": "6a9d67a69ecfaa406f41"
-    },
-    {
-      "election": "president-br",
-      "title": "Quaest em SC: Flávio Bolsonaro, 45%; Lula, 20%; Renan Santos, 4%; Romeu Zema, 3%; Augusto Cury, 3%; Ronaldo Caiado, 3% - G1",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNakl0MWl0a2ZXYU9qWnctVTBwUzZQRWp5U09YYU5mSm5tNERKd1gwaURYVnVXOWlLR0ZURDIzc3lNRHJvVXdTUXNZZWpQM1puX3RTWTJZcjVjdWZNYXRLWUpsV0JFQk96bUNYSGdUd1drR1lyTThiakJQMGFHNTVkcnJ3b2JXWkFsSjZRZ0xOQjhtaE5UTm9SSUhLN0hjQXktQWFUNEJDM3VUc1FUREhORFB5UzVseEI3VFgtMtIBywFBVV95cUxPamVfVEFRb01pbGFOdEhGenp5WVZvTkFPRkVJLVRwZHRYTUpZak9ZWjI1S2EwdmFvWmViSFFHdjY3Y2tHenhaTy00N3J6cE9YLW9yeFRXVldSeVdacXItS0RDckIyaG9lTHhTeWRVdFJFY0RNSFQyRk9BMTZ1MDdWTHlTeG9qR0EyWW8zekw3U3hWeU9lWUZxekZRbzM0NnNaaTlLemxYMnFRWmdUWktJaXlHclo2TjZCNHI4M05ScFVaVE1aN1QtSDFBcw?oc=5",
-      "source": "G1",
-      "published": "2026-08-24",
-      "pollster": "Quaest",
-      "key": "13790234e8c1e09485b0"
-    }
-  ]
+  "pending": []
 }

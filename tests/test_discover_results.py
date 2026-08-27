@@ -69,6 +69,26 @@ class ResultDiscoveryTests(unittest.TestCase):
             )
         )
 
+    def test_state_abbreviations_are_not_treated_as_national(self) -> None:
+        for state in ("ES", "MT", "RS", "SC"):
+            with self.subTest(state=state):
+                self.assertFalse(
+                    matches_election(
+                        f"Quaest em {state}: Lula tem 39% e Flávio Bolsonaro 35%",
+                        "president-br",
+                    )
+                )
+
+    def test_full_state_names_are_not_treated_as_national(self) -> None:
+        for state in ("Tocantins", "Alagoas"):
+            with self.subTest(state=state):
+                self.assertFalse(
+                    matches_election(
+                        f"Quaest em {state}: Lula tem 39% e Flávio Bolsonaro 35%",
+                        "president-br",
+                    )
+                )
+
     def test_social_post_is_not_used_as_editorial_source(self) -> None:
         self.assertFalse(
             matches_election(
