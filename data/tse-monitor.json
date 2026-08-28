@@ -639,5 +639,30 @@
         "INSTITUTO DE PESQUISAS PERFIL LTDA"
       ]
     }
+  },
+  "agendaSource": "https://depoisdas17.com.br/agenda/",
+  "upcoming": {
+    "BR055192026": {
+      "protocol": "BR055192026",
+      "fieldStart": "2026-08-25",
+      "fieldEnd": "2026-08-27",
+      "disclosureDate": "2026-08-29",
+      "sample": 2100,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR089002026": {
+      "protocol": "BR089002026",
+      "fieldStart": "2026-08-28",
+      "fieldEnd": "2026-08-30",
+      "disclosureDate": "2026-08-31",
+      "sample": 2000,
+      "company": "Nexus",
+      "tradeName": "Nexus",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    }
   }
 }

@@ -142,6 +142,28 @@ class BuildMonitorTests(unittest.TestCase):
         self.assertTrue(changed)
         self.assertEqual(monitor["pending"], {})
 
+    def test_tse_sync_preserves_complementary_upcoming_agenda(self) -> None:
+        upcoming = {"BR000022026": {"protocol": "BR000022026", "disclosureDate": "2026-08-29"}}
+        existing = {
+            "seenProtocols": ["BR000012026"],
+            "pending": {},
+            "sourceGeneratedAt": "2026-08-15 12:00:00",
+            "agendaSource": "https://example.com/agenda",
+            "upcoming": upcoming,
+        }
+
+        monitor, _, _ = build_monitor(
+            existing,
+            {"BR000012026": poll("BR000012026")},
+            {},
+            {"BR000012026"},
+            "2026-08-16 12:00:00",
+            False,
+        )
+
+        self.assertEqual(monitor["agendaSource"], "https://example.com/agenda")
+        self.assertEqual(monitor["upcoming"], upcoming)
+
     def test_seen_protocol_is_recovered_when_disclosed_after_cutoff(self) -> None:
         existing = {
             "seenProtocols": ["BR000012026"],

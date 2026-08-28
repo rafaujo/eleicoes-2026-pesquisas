@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260828-1" />
+    <link rel="stylesheet" href="styles.css?v=20260828-2" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -107,12 +107,12 @@
           <div class="section-heading">
             <div>
               <p class="kicker">TENDÊNCIA PONDERADA</p>
-              <h2 id="chart-heading">Evolução da média ponderada</h2>
+              <h2 id="chart-heading">Evolução suavizada</h2>
             </div>
             <div class="chart-legend" id="chart-legend" aria-label="Legenda do gráfico"></div>
           </div>
           <p class="chart-reading" aria-label="Como ler o gráfico">
-            <span><i class="line-sample" aria-hidden="true"></i>Média ponderada</span>
+            <span><i class="line-sample" aria-hidden="true"></i>Tendência suavizada</span>
             <span><i class="band-sample" aria-hidden="true"></i>Margem de erro média</span>
             <span><i class="point-sample" aria-hidden="true"></i>Pesquisa individual</span>
           </p>
@@ -133,14 +133,14 @@
       <section class="upcoming-section" id="proximas-pesquisas" aria-labelledby="upcoming-title" hidden>
         <div class="section-heading upcoming-heading">
           <div>
-            <p class="kicker">AGENDA DO PESQELE</p>
+            <p class="kicker">AGENDA ELEITORAL</p>
             <h2 id="upcoming-title">Próximas pesquisas</h2>
           </div>
           <p id="upcoming-count" class="upcoming-count"></p>
         </div>
         <p class="upcoming-intro">
-          Registros já encontrados no TSE, mas ainda sem resultados incorporados à média.
-          A data indicada é a previsão oficial de divulgação.
+          Registros do PesqEle encontrados no espelho oficial ou na agenda pública complementar,
+          ainda sem resultados incorporados à média. A data indicada é a previsão de divulgação.
         </p>
         <div id="upcoming-list" class="upcoming-list"></div>
       </section>
@@ -203,6 +203,6 @@
       <div id="dialog-content"></div>
     </dialog>
 
-    <script src="app.js?v=20260828-1"></script>
+    <script src="app.js?v=20260828-2"></script>
   </body>
 </html>

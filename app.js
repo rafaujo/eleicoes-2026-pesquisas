@@ -1,6 +1,8 @@
 const TSE_DATASET_URL = "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026";
 const PESQELE_URL = "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml";
 const HALF_LIFE_DAYS = 7;
+const TREND_BANDWIDTH_DAYS = 6;
+const DAY_MS = 86400000;
 
 // Cada eleição aponta para sua própria base no catálogo data/elections.json.
 let polls = [];
@@ -136,15 +138,18 @@ function sortCandidatesByValue(items, valueGetter) {
 function pollAgeDays(poll) {
   const reference = new Date(`${DATA_REFERENCE_DATE}T12:00:00Z`);
   const end = new Date(`${poll.end}T12:00:00Z`);
-  return Math.max(0, (reference - end) / 86400000);
+  return Math.max(0, (reference - end) / DAY_MS);
+}
+
+function pollSampleWeight(poll) {
+  return Math.min(1.5, Math.max(0.75, Math.sqrt(poll.sample / 2000)));
 }
 
 function pollWeightAt(poll, referenceTime) {
   const endTime = Date.parse(`${poll.end}T12:00:00Z`);
-  const ageDays = Math.max(0, (referenceTime - endTime) / 86400000);
+  const ageDays = Math.max(0, (referenceTime - endTime) / DAY_MS);
   const recency = Math.pow(0.5, ageDays / HALF_LIFE_DAYS);
-  const sample = Math.min(1.5, Math.max(0.75, Math.sqrt(poll.sample / 2000)));
-  return recency * sample;
+  return recency * pollSampleWeight(poll);
 }
 
 function pollWeight(poll) {
@@ -273,26 +278,35 @@ function uncertaintyAreaPath(points, yFor, minY, maxY) {
 }
 
 function weightedTrend(items, candidateKey) {
-  const dates = [...new Set(items.map((poll) => poll.end))].sort();
-  return dates.map((date) => {
-    const referenceTime = Date.parse(`${date}T12:00:00Z`);
-    const available = items.filter((poll) => Date.parse(`${poll.end}T12:00:00Z`) <= referenceTime
-      && Number.isFinite(valueFor(poll, candidateKey)));
-    if (!available.length) return null;
-    return {
-      date,
-      value: weightedMeanAt(available, (poll) => valueFor(poll, candidateKey), referenceTime),
-      uncertainty: weightedMeanAt(available, (poll) => poll.margin, referenceTime),
-    };
-  }).filter(Boolean);
+  const available = items.filter((poll) => Number.isFinite(valueFor(poll, candidateKey)));
+  if (!available.length) return [];
+  const timestamps = available.map((poll) => Date.parse(`${poll.end}T12:00:00Z`));
+  const start = Math.min(...timestamps);
+  const end = Math.max(...timestamps);
+  const points = [];
+  for (let referenceTime = start; referenceTime <= end; referenceTime += DAY_MS) {
+    const weighted = available.map((poll) => {
+      const distanceDays = Math.abs(referenceTime - Date.parse(`${poll.end}T12:00:00Z`)) / DAY_MS;
+      const temporal = Math.exp(-0.5 * (distanceDays / TREND_BANDWIDTH_DAYS) ** 2);
+      return { poll, weight: temporal * pollSampleWeight(poll) };
+    }).filter((item) => item.weight >= 0.01);
+    const denominator = weighted.reduce((sum, item) => sum + item.weight, 0);
+    if (!denominator) continue;
+    points.push({
+      date: new Date(referenceTime).toISOString().slice(0, 10),
+      value: weighted.reduce((sum, item) => sum + valueFor(item.poll, candidateKey) * item.weight, 0) / denominator,
+      uncertainty: weighted.reduce((sum, item) => sum + item.poll.margin * item.weight, 0) / denominator,
+    });
+  }
+  return points;
 }
 
 function renderChart(items) {
   chart.replaceChildren();
   const title = svgElement("title", { id: "chart-title" });
-  title.textContent = `Evolução da média ponderada — ${activeScenarioLabel()}`;
+  title.textContent = `Evolução suavizada — ${activeScenarioLabel()}`;
   const desc = svgElement("desc", { id: "chart-description" });
-  desc.textContent = "As linhas mostram a média ponderada calculada com as pesquisas disponíveis em cada data. As faixas mostram a margem de erro média ponderada e os pontos, o resultado de cada pesquisa.";
+  desc.textContent = `As linhas mostram uma tendência suavizada com janela temporal de ${TREND_BANDWIDTH_DAYS} dias. As faixas mostram a margem de erro média ponderada e os pontos, o resultado de cada pesquisa.`;
   chart.append(title, desc);
 
   const ordered = [...items].sort((a, b) => a.end.localeCompare(b.end));
@@ -372,7 +386,7 @@ function renderChart(items) {
     if (endpoint) {
       const circle = svgElement("circle", { cx: endpoint.x, cy: endpoint.y, r: 4.2, class: "average-endpoint", style: `--candidate-color:${candidate.color}`, tabindex: "0" });
       const tooltip = svgElement("title");
-      tooltip.textContent = `${candidate.name}: média ponderada de ${formatPct(endpoint.value)} ± ${formatPct(endpoint.uncertainty)} em ${formatDate(endpoint.date)}`;
+      tooltip.textContent = `${candidate.name}: tendência suavizada de ${formatPct(endpoint.value)} ± ${formatPct(endpoint.uncertainty)} em ${formatDate(endpoint.date)}`;
       circle.appendChild(tooltip);
       chart.appendChild(circle);
     }
@@ -480,12 +494,15 @@ function upcomingStatus(item) {
   if (item.disclosureDate === DATA_REFERENCE_DATE) {
     return { label: "Divulgação prevista hoje", className: "today" };
   }
-  return { label: `Aguardando incorporação desde ${formatDate(item.disclosureDate)}`, className: "review" };
+  return { label: `Divulgação em ${formatDate(item.disclosureDate)}`, className: "future" };
 }
 
 function renderUpcoming() {
-  const items = Object.values(tseMonitor?.pending || {})
-    .filter((item) => item?.protocol && item?.disclosureDate)
+  const byProtocol = new Map();
+  [...Object.values(tseMonitor?.pending || {}), ...Object.values(tseMonitor?.upcoming || {})]
+    .filter((item) => item?.protocol && item?.disclosureDate && item.disclosureDate >= DATA_REFERENCE_DATE)
+    .forEach((item) => byProtocol.set(item.protocol, item));
+  const items = [...byProtocol.values()]
     .sort((a, b) => a.disclosureDate.localeCompare(b.disclosureDate)
       || (a.fieldEnd || "").localeCompare(b.fieldEnd || "")
       || a.protocol.localeCompare(b.protocol));
@@ -544,7 +561,7 @@ function render() {
     button.disabled = !scenarioCatalog.some((item) => item.round === round);
   });
   document.querySelector("#polls-title").textContent = `Pesquisas de ${state.round}º turno`;
-  document.querySelector("#chart-heading").textContent = scenario?.round === 2 ? `${activeScenarioLabel()} no tempo` : "Evolução da média ponderada";
+  document.querySelector("#chart-heading").textContent = scenario?.round === 2 ? `${activeScenarioLabel()} no tempo` : "Evolução suavizada";
   renderAverage(items);
   renderTable(items);
   renderChart(items);

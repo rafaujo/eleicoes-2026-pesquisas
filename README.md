@@ -85,12 +85,13 @@ Em cada execução ele:
 
 1. baixa a versão diária do conjunto oficial do TSE;
 2. atualiza metadados alterados e detecta protocolos novos em cada eleição;
-3. consulta feeds públicos de notícias para localizar divulgações que possam ter escapado do espelho oficial;
-4. cruza um acervo estruturado com o protocolo do TSE e com a publicação original, incorporando somente cenários em que instituto, amostra e todos os percentuais são confirmados nas duas fontes;
-5. executa os testes e as validações de consistência;
-6. cria um commit na `main` somente quando os arquivos realmente mudaram;
-7. mantém em issues os casos incompletos, divergentes ou sem cenário comparável;
-8. solicita uma nova publicação do GitHub Pages após o commit.
+3. complementa as próximas divulgações com uma agenda pública estruturada quando o espelho diário estiver atrasado;
+4. consulta feeds públicos de notícias para localizar divulgações que possam ter escapado do espelho oficial;
+5. cruza um acervo estruturado com o protocolo do TSE e com a publicação original, incorporando somente cenários em que instituto, amostra e todos os percentuais são confirmados nas duas fontes;
+6. executa os testes e as validações de consistência;
+7. cria um commit na `main` somente quando os arquivos realmente mudaram;
+8. mantém em issues os casos incompletos, divergentes ou sem cenário comparável;
+9. solicita uma nova publicação do GitHub Pages após o commit.
 
 O TSE disponibiliza cadastro, período, amostra, metodologia e contratantes, mas não os percentuais dos cenários no CSV. O importador automático usa uma fonte estruturada apenas como índice: antes de gravar qualquer resultado, exige o mesmo protocolo, a mesma amostra e os mesmos pares candidato/percentual na publicação original ligada à ficha. Divergências, páginas bloqueadas e listas de candidatos sem cenário equivalente continuam na fila editorial em vez de entrarem silenciosamente na média.
 
@@ -108,7 +109,13 @@ Assim, o componente de recência cai pela metade a cada sete dias e a amostra pr
 
 Quando duas listas de candidatos pertencem ao mesmo grupo comparável, elas aparecem na mesma tabela e na mesma evolução. A média de cada candidato usa apenas levantamentos em que seu nome foi efetivamente testado; uma ausência fica em branco, nunca é convertida em 0%. Por isso, o número de pesquisas pode variar entre candidatos e é exibido ao lado de cada média.
 
-No gráfico, cada ponto representa o percentual publicado por uma pesquisa. A linha é recalculada em cada data usando somente os levantamentos já disponíveis naquele momento; seu ponto final coincide com a média exibida no card de resumo.
+No gráfico, cada ponto representa o percentual publicado por uma pesquisa. A linha usa uma suavização temporal gaussiana calculada diariamente, com largura de seis dias e ajuste moderado pelo tamanho da amostra:
+
+```text
+peso_tendência = exp(-0,5 × (distância_em_dias / 6)²) × limite(raiz(amostra / 2.000), 0,75, 1,50)
+```
+
+Pesquisas próximas no tempo têm mais influência e levantamentos isolados deixam de produzir quinas artificiais. Como a suavização usa observações ao redor de cada data, ela descreve a tendência da série e não uma reconstrução do que seria conhecido em tempo real naquele dia. O “Retrato do momento” continua usando a média ponderada por recência descrita acima.
 
 A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens de erro declaradas pelas pesquisas disponíveis. Ela serve como referência visual da incerteza amostral típica do recorte: não é um intervalo de confiança estatístico da média e não incorpora erros não amostrais nem incerteza do modelo.
 
