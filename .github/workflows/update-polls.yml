@@ -38,6 +38,9 @@ jobs:
           --issue-manifest "$RUNNER_TEMP/issues.json"
           --github-output "$GITHUB_OUTPUT"
 
+      - name: Complementar agenda de próximas divulgações
+        run: python scripts/sync_agenda.py --days 10
+
       - name: Descobrir resultados divulgados publicamente
         id: discover
         run: >-

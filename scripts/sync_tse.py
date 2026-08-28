@@ -389,6 +389,11 @@ def build_monitor(
         "seenProtocols": sorted(seen),
         "pending": dict(sorted(pending.items())),
     }
+    if existing:
+        if existing.get("agendaSource"):
+            payload["agendaSource"] = existing["agendaSource"]
+        if isinstance(existing.get("upcoming"), dict):
+            payload["upcoming"] = existing["upcoming"]
     return payload, new_protocols, queue_changed
 
 
