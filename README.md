@@ -109,15 +109,17 @@ Assim, o componente de recência cai pela metade a cada sete dias e a amostra pr
 
 Quando duas listas de candidatos pertencem ao mesmo grupo comparável, elas aparecem na mesma tabela e na mesma evolução. A média de cada candidato usa apenas levantamentos em que seu nome foi efetivamente testado; uma ausência fica em branco, nunca é convertida em 0%. Por isso, o número de pesquisas pode variar entre candidatos e é exibido ao lado de cada média.
 
-No gráfico, cada ponto representa o percentual publicado por uma pesquisa. A linha usa uma suavização temporal gaussiana calculada diariamente, com largura de seis dias e ajuste moderado pelo tamanho da amostra:
+No gráfico, cada ponto representa o percentual publicado por uma pesquisa. A linha usa uma estimativa temporal gaussiana calculada diariamente, com largura de seis dias e ajuste moderado pelo tamanho da amostra:
 
 ```text
 peso_tendência = exp(-0,5 × (distância_em_dias / 6)²) × limite(raiz(amostra / 2.000), 0,75, 1,50)
 ```
 
-Pesquisas próximas no tempo têm mais influência e levantamentos isolados deixam de produzir quinas artificiais. Como a suavização usa observações ao redor de cada data, ela descreve a tendência da série e não uma reconstrução do que seria conhecido em tempo real naquele dia. O “Retrato do momento” continua usando a média ponderada por recência descrita acima.
+Pesquisas próximas no tempo têm mais influência e levantamentos isolados deixam de produzir quinas artificiais. Como o cálculo usa observações ao redor de cada data, ele descreve a tendência da série e não uma reconstrução do que seria conhecido em tempo real naquele dia. O “Retrato do momento” continua usando a média ponderada por recência descrita acima.
 
-A faixa ao redor de cada linha usa, em cada data, a média ponderada das margens de erro declaradas pelas pesquisas disponíveis. Ela serve como referência visual da incerteza amostral típica do recorte: não é um intervalo de confiança estatístico da média e não incorpora erros não amostrais nem incerteza do modelo.
+A faixa ao redor de cada linha é recalculada para cada candidato e data. O modelo estima a dispersão ponderada dos resultados próximos, converte-a no erro-padrão da média pelo número efetivo de pesquisas e aplica um intervalo aproximado de 95%. Para impedir uma faixa artificialmente igual a zero quando os levantamentos coincidem, o cálculo mantém como piso a variância binomial derivada dos percentuais e das amostras combinadas.
+
+O cálculo não usa a média das margens de erro publicadas pelos institutos. A faixa representa a incerteza da tendência agregada, não a margem de erro de uma pesquisa nem um intervalo que incorpore todos os possíveis efeitos de instituto, desenho amostral ou erro não amostral.
 
 ## Próximas etapas
 
