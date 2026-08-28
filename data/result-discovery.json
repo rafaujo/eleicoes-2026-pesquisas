@@ -134,6 +134,7 @@
     "92908ca54b8361e32b5a",
     "92b44aea2700de0af903",
     "94cad8758b702ed03a08",
+    "969c1542a93f57243fa4",
     "9704959bab872056d6bf",
     "9842f741fa9e6b7a2224",
     "99a6e61aef946566726b",
@@ -194,8 +195,10 @@
     "c8db0239f4d213769f0a",
     "ca9197a8f68d6783be94",
     "cb73e5d174d9ba4f773e",
+    "cb7d4d153b924a741ecf",
     "cc494f50059dbbd40a0c",
     "cd42f013099dd4ed4308",
+    "cf5059b51ab35e6c2b84",
     "cf5922ec6843d80c258b",
     "d185b8f2d9b20bd593b8",
     "d27304ee35f4ddabc5f6",
@@ -243,5 +246,15 @@
     "fae241547f29a883fc14",
     "fc1e86ae3d6f8df0c6cd"
   ],
-  "pending": []
+  "pending": [
+    {
+      "election": "president-br",
+      "title": "Quaest/SE: Lula tem 53%; Flávio Bolsonaro, 19% - UOL Notícias",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQS1AxRDMzcU1yWnE4NkZGWXp5bkJfSTBhelJ6RjBPNTAzQUpQVXJ3cFpoU3R4T1FuUzdZMDJHMTFfNVl5RFBkYmRIQzVRcHBlMk5GNjE1NDR2UGs5VDdjTHd3d1pvS2NQTjQxbDNDOUxUY1BzelVZVnhGOU9tS3VFc2hhT29ScjRFRlBlMEptYnoxWnRCeHRpWTF2Qkg5QWNRVlFDMkpNek4yY3VVa09lSjFTVUotQQ?oc=5",
+      "source": "UOL Notícias",
+      "published": "2026-08-28",
+      "pollster": "Quaest",
+      "key": "969c1542a93f57243fa4"
+    }
+  ]
 }
