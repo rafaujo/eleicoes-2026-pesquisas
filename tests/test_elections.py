@@ -47,6 +47,8 @@ class ElectionCatalogTests(unittest.TestCase):
         self.assertEqual(sum("first-short" in poll["scenarios"] for poll in polls), 1)
         self.assertEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 3)
         self.assertEqual(sum("runoff-tarcisio-haddad" in poll["scenarios"] for poll in polls), 11)
+        first_round = [item for item in self.sp["scenarios"] if item["round"] == 1]
+        self.assertEqual({item["comparisonGroup"] for item in first_round}, {"first-round"})
 
     def test_latest_sao_paulo_results_match_sources(self) -> None:
         parana = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP046242026")
@@ -105,6 +107,8 @@ class ElectionCatalogTests(unittest.TestCase):
         latest_realtime = next(poll for poll in polls if poll["protocol"] == "MG079722026")
         self.assertEqual(latest_quaest["scenarios"]["first-main"]["results"]["cleitinho"], 29)
         self.assertEqual(latest_realtime["scenarios"]["first-short"]["results"]["cleitinho"], 33)
+        first_round = [item for item in self.mg["scenarios"] if item["round"] == 1]
+        self.assertEqual({item["comparisonGroup"] for item in first_round}, {"first-round"})
 
     def test_minas_gerais_official_files_cover_curated_protocols(self) -> None:
         metadata = json.loads((ROOT / "data" / "tse-metadata-mg.json").read_text(encoding="utf-8"))

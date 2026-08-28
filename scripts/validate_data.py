@@ -156,6 +156,7 @@ def validate_catalog(poll_data: dict, errors: list[str], source_name: str) -> di
         errors.append(f"{source_name} deve possuir um catálogo de cenários")
         return {}
     catalog: dict[str, dict] = {}
+    comparison_groups: dict[str, tuple[int, str]] = {}
     for position, scenario in enumerate(scenarios, start=1):
         label = f"Cenário #{position}"
         if not isinstance(scenario, dict):
@@ -170,6 +171,18 @@ def validate_catalog(poll_data: dict, errors: list[str], source_name: str) -> di
             errors.append(f"ID de cenário duplicado: {scenario_id}")
         if scenario["round"] not in (1, 2):
             errors.append(f"{label} tem turno inválido")
+        comparison_group = scenario.get("comparisonGroup")
+        comparison_label = scenario.get("comparisonLabel")
+        if comparison_group is not None:
+            if not isinstance(comparison_group, str) or not comparison_group.strip():
+                errors.append(f"{label} tem grupo de comparação inválido")
+            elif not isinstance(comparison_label, str) or not comparison_label.strip():
+                errors.append(f"{label} agrupado precisa de rótulo de comparação")
+            else:
+                signature = (scenario["round"], comparison_label)
+                if comparison_group in comparison_groups and comparison_groups[comparison_group] != signature:
+                    errors.append(f"Grupo de comparação {comparison_group} mistura turnos ou rótulos")
+                comparison_groups[comparison_group] = signature
         scenario_candidates = scenario["candidates"]
         if not isinstance(scenario_candidates, list) or len(scenario_candidates) < 2:
             errors.append(f"{label} precisa ter ao menos dois candidatos")

@@ -19,27 +19,25 @@ Depois acesse `http://localhost:4173`.
 - painel responsivo com média ponderada por recência e tamanho da amostra;
 - seletor agrupado entre Brasil e eleições estaduais, com URL compartilhável por eleição;
 - recorte móvel de 7, 14, 21, 30, 60, 90 ou 180 dias, com janela padrão própria por eleição;
-- seletor dinâmico de cenários, com listas de primeiro turno comparáveis — inclusive uma opção com Pablo Marçal — e confrontos de segundo turno;
+- seletor dinâmico de cenários, com listas comparáveis de primeiro turno integradas e confrontos de segundo turno separados;
 - gráfico de evolução com pontos por pesquisa, linhas da média ponderada e faixas de incerteza;
 - filtros por período e busca por instituto/contratante;
 - tabela de resultados e ficha metodológica;
-- 36 levantamentos presidenciais com protocolos conferidos no PesqEle/TSE;
-- oito levantamentos paulistas, com listas de 1º turno separadas por composição e oito medições no confronto Tarcísio × Haddad;
-- três levantamentos mineiros, com listas de 1º turno separadas por composição e confrontos de 2º turno mantidos em séries comparáveis;
+- levantamentos presidenciais, paulistas e mineiros com protocolo e fonte dos resultados identificados;
 - exportação dos dados filtrados em CSV;
 - navegação por teclado, foco visível e suporte a movimento reduzido.
 
 ## Estado dos dados
 
-Os 36 levantamentos presidenciais catalogados possuem protocolo conferido no PesqEle. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
+Os levantamentos presidenciais catalogados possuem protocolo conferido no PesqEle ou na publicação identificada. O arquivo `data/tse-metadata.json` guarda o recorte oficial de cadastro, datas, amostra, empresa realizadora, contratantes, responsável estatístico e metodologia.
 
 Os percentuais de intenção de voto não fazem parte dos CSVs abertos do TSE. Eles ficam em `data/polls.json`, transcritos das publicações ou dos relatórios ligados individualmente em cada ficha e reconciliados com o registro oficial por protocolo, período de campo e amostra.
 
-O arquivo `data/elections.json` lista as eleições disponíveis e aponta para uma base independente por cargo e território. Cada base tem seu próprio cadastro de candidatos e catálogo de cenários; cada pesquisa informa somente os cenários que realmente publicou. Assim, o site pode crescer para outras UFs sem misturar listas de candidatos ou preencher lacunas com estimativas.
+O arquivo `data/elections.json` lista as eleições disponíveis e aponta para uma base independente por cargo e território. Cada base tem seu próprio cadastro de candidatos e catálogo de cenários; cada pesquisa informa somente os cenários que realmente publicou. Cenários marcados com o mesmo `comparisonGroup` podem alimentar uma única comparação, sem alterar os resultados originais.
 
-Em São Paulo, `data/polls-sp-governor.json` separa a lista consolidada de cinco candidaturas do 1º turno do confronto Tarcísio × Haddad. O primeiro recorte começa em julho, quando os institutos passaram a usar a mesma lista; o segundo tem série desde abril.
+Em São Paulo, `data/polls-sp-governor.json` integra as listas comparáveis do 1º turno e mantém o confronto Tarcísio × Haddad como série independente.
 
-Em Minas Gerais, `data/polls-mg-governor.json` usa a lista mais recente de candidaturas no cenário principal e mantém cada confronto de 2º turno como uma série independente. Listas antigas incompatíveis não entram na média do cenário atual.
+Em Minas Gerais, `data/polls-mg-governor.json` integra as listas comparáveis do 1º turno e mantém cada confronto de 2º turno como uma série independente.
 
 ## Cadastrar uma pesquisa
 
@@ -107,6 +105,8 @@ peso = 0,5 ^ (idade_em_dias / 7) × limite(raiz(amostra / 2.000), 0,75, 1,50)
 ```
 
 Assim, o componente de recência cai pela metade a cada sete dias e a amostra produz um ajuste moderado. O modelo ainda não atribui notas editoriais aos institutos e não é uma previsão eleitoral.
+
+Quando duas listas de candidatos pertencem ao mesmo grupo comparável, elas aparecem na mesma tabela e na mesma evolução. A média de cada candidato usa apenas levantamentos em que seu nome foi efetivamente testado; uma ausência fica em branco, nunca é convertida em 0%. Por isso, o número de pesquisas pode variar entre candidatos e é exibido ao lado de cada média.
 
 No gráfico, cada ponto representa o percentual publicado por uma pesquisa. A linha é recalculada em cada data usando somente os levantamentos já disponíveis naquele momento; seu ponto final coincide com a média exibida no card de resumo.
 

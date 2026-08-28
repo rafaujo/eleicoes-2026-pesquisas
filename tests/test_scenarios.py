@@ -26,6 +26,15 @@ class ScenarioDataTests(unittest.TestCase):
             ["lula", "flavio", "marcal", "caiado", "renan", "zema"],
         )
 
+    def test_first_round_variants_share_a_comparison_group(self) -> None:
+        first_round = [item for item in self.database["scenarios"] if item["round"] == 1]
+
+        self.assertEqual({item["comparisonGroup"] for item in first_round}, {"first-round"})
+        self.assertEqual(
+            {item["comparisonLabel"] for item in first_round},
+            {"Primeiro turno — listas integradas"},
+        )
+
     def test_extended_runoff_results_keep_growing(self) -> None:
         polls = self.database["polls"]
 

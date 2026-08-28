@@ -48,6 +48,7 @@ function escapeHtml(value) {
 
 function formatPct(value) { return `${number.format(value)}%`; }
 function formatAveragePct(value) { return `${oneDecimal.format(value)}%`; }
+function formatOptionalPct(value) { return Number.isFinite(value) ? formatPct(value) : "—"; }
 
 function formatDate(value) {
   if (!value) return "—";
@@ -71,11 +72,56 @@ function activeScenario() {
     || scenarioCatalog.find((scenario) => scenario.round === state.round)
     || null;
 }
-function scenarioFor(poll) { return poll.scenarios?.[state.scenarioId] || null; }
-function activeCandidates() {
-  return (activeScenario()?.candidates || []).map((key) => ({ key, ...candidateRegistry[key] }));
+function scenarioGroup(scenario) { return scenario?.comparisonGroup || scenario?.id || ""; }
+function activeScenarioVariants() {
+  const selected = activeScenario();
+  if (!selected) return [];
+  const group = scenarioGroup(selected);
+  return scenarioCatalog.filter((scenario) => scenario.round === selected.round && scenarioGroup(scenario) === group);
 }
-function valueFor(poll, key) { return scenarioFor(poll)?.results?.[key]; }
+function activeScenarioLabel() {
+  const selected = activeScenario();
+  return selected?.comparisonLabel || selected?.label || "Cenário";
+}
+function scenarioChoices(round) {
+  const seen = new Set();
+  return scenarioCatalog.filter((scenario) => {
+    if (scenario.round !== round || seen.has(scenarioGroup(scenario))) return false;
+    seen.add(scenarioGroup(scenario));
+    return true;
+  });
+}
+function scenarioDistance(left, right) {
+  const leftCandidates = new Set(left?.candidates || []);
+  const rightCandidates = new Set(right?.candidates || []);
+  return new Set([...leftCandidates, ...rightCandidates]).size
+    - [...leftCandidates].filter((candidate) => rightCandidates.has(candidate)).length;
+}
+function scenarioEntryFor(poll, candidateKey = null) {
+  const selected = activeScenario();
+  return activeScenarioVariants()
+    .map((definition, index) => ({ definition, index, result: poll.scenarios?.[definition.id] }))
+    .filter((entry) => entry.result && (!candidateKey || Number.isFinite(entry.result.results?.[candidateKey])))
+    .sort((left, right) => {
+      const exact = Number(right.definition.id === state.scenarioId) - Number(left.definition.id === state.scenarioId);
+      return exact || scenarioDistance(left.definition, selected) - scenarioDistance(right.definition, selected)
+        || left.index - right.index;
+    })[0] || null;
+}
+function scenariosForPoll(poll) {
+  return activeScenarioVariants().filter((scenario) => Boolean(poll.scenarios?.[scenario.id]));
+}
+function scenarioFor(poll, candidateKey = null) { return scenarioEntryFor(poll, candidateKey)?.result || null; }
+function activeCandidates() {
+  const keys = [];
+  [...activeScenarioVariants()]
+    .sort((left, right) => right.candidates.length - left.candidates.length)
+    .forEach((scenario) => scenario.candidates.forEach((key) => {
+      if (!keys.includes(key)) keys.push(key);
+    }));
+  return keys.map((key) => ({ key, ...candidateRegistry[key] }));
+}
+function valueFor(poll, key) { return scenarioFor(poll, key)?.results?.[key]; }
 function neutralFor(poll) { return scenarioFor(poll)?.undecided; }
 function resultSourceFor(poll) { return scenarioFor(poll)?.resultSource || poll.resultSource; }
 function resultSourceLabelFor(poll) { return scenarioFor(poll)?.resultSourceLabel || poll.resultSourceLabel; }
@@ -111,7 +157,7 @@ function visiblePolls() {
     const searchable = `${poll.pollster} ${poll.publication} ${poll.protocol}`.toLowerCase();
     return searchable.includes(state.query.toLowerCase())
       && pollAgeDays(poll) <= windowDays
-      && Boolean(poll.scenarios?.[state.scenarioId]);
+      && scenariosForPoll(poll).length > 0;
   });
 }
 
@@ -130,7 +176,7 @@ function weightedMean(items, getter) {
 
 function rankedCandidates(items) {
   return sortCandidatesByValue(
-    activeCandidates(),
+    activeCandidates().filter((candidate) => items.some((poll) => Number.isFinite(valueFor(poll, candidate.key)))),
     (candidate) => weightedMean(items, (poll) => valueFor(poll, candidate.key)),
   );
 }
@@ -138,7 +184,10 @@ function rankedCandidates(items) {
 function renderAverage(items) {
   const scenario = activeScenario();
   document.querySelector("#average-title").textContent = scenario?.round === 2 ? scenario.label : "Retrato do momento";
-  document.querySelector("#method-note").innerHTML = `Entram apenas pesquisas encerradas nos últimos <strong>${state.period} dias</strong>. O peso cai pela metade a cada <strong>${HALF_LIFE_DAYS} dias</strong> e recebe um ajuste moderado pela raiz da amostra, limitado entre 0,75 e 1,50. Não há nota editorial por instituto.`;
+  const integrationNote = activeScenarioVariants().length > 1
+    ? " Listas comparáveis são integradas, mas cada média usa somente as pesquisas que testaram aquele candidato; ausência nunca vale 0%."
+    : "";
+  document.querySelector("#method-note").innerHTML = `Entram apenas pesquisas encerradas nos últimos <strong>${state.period} dias</strong>. O peso cai pela metade a cada <strong>${HALF_LIFE_DAYS} dias</strong> e recebe um ajuste moderado pela raiz da amostra, limitado entre 0,75 e 1,50.${integrationNote} Não há nota editorial por instituto.`;
   if (!items.length) {
     averageList.innerHTML = '<p class="dialog-note">Nenhuma pesquisa encontrada.</p>';
     undecidedAverage.textContent = "—";
@@ -146,8 +195,9 @@ function renderAverage(items) {
   }
   averageList.innerHTML = rankedCandidates(items).map((candidate) => {
     const value = weightedMean(items, (poll) => valueFor(poll, candidate.key));
+    const observations = items.filter((poll) => Number.isFinite(valueFor(poll, candidate.key))).length;
     return `<div class="average-row" style="--candidate-color:${candidate.color}">
-      <div class="candidate"><i class="candidate-dot"></i><span>${candidate.name}</span></div>
+      <div class="candidate"><i class="candidate-dot"></i><span class="candidate-copy"><b>${candidate.name}</b><small>${observations} ${observations === 1 ? "pesquisa" : "pesquisas"}</small></span></div>
       <div class="bar-track"><div class="bar-fill" style="width:${Math.min(100, value * 2.05)}%"></div></div>
       <strong>${formatAveragePct(value)}</strong>
     </div>`;
@@ -165,10 +215,13 @@ function renderTable(items) {
   </tr>`;
   const maxWeight = items.length ? Math.max(...items.map(pollWeight)) : 1;
   tableBody.innerHTML = items.map((poll) => {
-    const ranking = sortCandidatesByValue(visibleCandidates, (candidate) => valueFor(poll, candidate.key));
+    const ranking = sortCandidatesByValue(
+      visibleCandidates.filter((candidate) => Number.isFinite(valueFor(poll, candidate.key))),
+      (candidate) => valueFor(poll, candidate.key),
+    );
     const leader = ranking[0];
     const runnerUp = ranking[1];
-    const diff = runnerUp ? valueFor(poll, leader.key) - valueFor(poll, runnerUp.key) : 0;
+    const diff = leader && runnerUp ? valueFor(poll, leader.key) - valueFor(poll, runnerUp.key) : 0;
     const relativeWeight = pollWeight(poll) / maxWeight;
     const relativeWeightLabel = relativeWeight < 0.01 ? "<0,01" : number.format(relativeWeight);
     const isVerified = Boolean(officialRecord(poll));
@@ -179,13 +232,17 @@ function renderTable(items) {
       <td><span class="pollster">${escapeHtml(poll.pollster)}</span><span class="sponsor">${escapeHtml(poll.publication)}</span>${protocolBadge}</td>
       <td>${poll.field}</td><td>${integer.format(poll.sample)}</td><td>± ${number.format(poll.margin)}</td>
       <td><span class="weight-pill" title="Peso relativo à pesquisa de maior peso no recorte">×${relativeWeightLabel}</span></td>
-      ${visibleCandidates.map((candidate) => `<td class="${leader.key === candidate.key ? "leader" : ""}">${formatPct(valueFor(poll, candidate.key))}</td>`).join("")}
-      <td><span class="difference">${diff === 0 ? "Empate" : `${leader.shortName} +${number.format(diff)}`}</span></td>
+      ${visibleCandidates.map((candidate) => {
+        const value = valueFor(poll, candidate.key);
+        const missing = !Number.isFinite(value);
+        return `<td class="${leader?.key === candidate.key ? "leader" : ""}${missing ? " not-tested" : ""}"${missing ? ' title="Candidato não testado nesta lista"' : ""}>${formatOptionalPct(value)}</td>`;
+      }).join("")}
+      <td><span class="difference">${!runnerUp ? "—" : diff === 0 ? "Empate" : `${leader.shortName} +${number.format(diff)}`}</span></td>
       <td><button class="row-button" type="button" data-poll-id="${poll.id}" aria-label="Ver detalhes de ${escapeHtml(poll.pollster)}">Ver →</button></td>
     </tr>`;
   }).join("");
   const verified = items.filter((poll) => officialRecord(poll)).length;
-  const scenarioPolls = polls.filter((poll) => Boolean(poll.scenarios?.[state.scenarioId]));
+  const scenarioPolls = polls.filter((poll) => scenariosForPoll(poll).length > 0);
   const discarded = scenarioPolls.filter((poll) => pollAgeDays(poll) > Number(state.period)).length;
   const verification = tseData ? `${verified}/${items.length} registros conferidos no TSE` : `${items.length} pesquisas com protocolo informado`;
   pollCount.textContent = `${items.length} ${items.length === 1 ? "pesquisa no recorte" : "pesquisas no recorte"} · ${discarded} fora da janela · ${verification}`;
@@ -219,19 +276,21 @@ function weightedTrend(items, candidateKey) {
   const dates = [...new Set(items.map((poll) => poll.end))].sort();
   return dates.map((date) => {
     const referenceTime = Date.parse(`${date}T12:00:00Z`);
-    const available = items.filter((poll) => Date.parse(`${poll.end}T12:00:00Z`) <= referenceTime);
+    const available = items.filter((poll) => Date.parse(`${poll.end}T12:00:00Z`) <= referenceTime
+      && Number.isFinite(valueFor(poll, candidateKey)));
+    if (!available.length) return null;
     return {
       date,
       value: weightedMeanAt(available, (poll) => valueFor(poll, candidateKey), referenceTime),
       uncertainty: weightedMeanAt(available, (poll) => poll.margin, referenceTime),
     };
-  });
+  }).filter(Boolean);
 }
 
 function renderChart(items) {
   chart.replaceChildren();
   const title = svgElement("title", { id: "chart-title" });
-  title.textContent = `Evolução da média ponderada — ${activeScenario()?.label || "cenário"}`;
+  title.textContent = `Evolução da média ponderada — ${activeScenarioLabel()}`;
   const desc = svgElement("desc", { id: "chart-description" });
   desc.textContent = "As linhas mostram a média ponderada calculada com as pesquisas disponíveis em cada data. As faixas mostram a margem de erro média ponderada e os pontos, o resultado de cada pesquisa.";
   chart.append(title, desc);
@@ -293,6 +352,7 @@ function renderChart(items) {
   chartCandidates.forEach((candidate) => {
     ordered.forEach((poll) => {
       const value = valueFor(poll, candidate.key);
+      if (!Number.isFinite(value)) return;
       const circle = svgElement("circle", {
         cx: xForPoll(poll), cy: yFor(value), r: 3.2, class: "poll-point",
         style: `--candidate-color:${candidate.color}`, tabindex: "0",
@@ -331,6 +391,8 @@ function openPoll(id) {
   const company = official?.company || poll.pollster;
   const method = official?.methodology || poll.method;
   const scenario = activeScenario();
+  const sourceScenarios = scenariosForPoll(poll);
+  const sourceScenarioLabels = sourceScenarios.map((item) => item.label).join(" + ");
   const registrationBadge = official ? "✓ TSE conferido" : `REG ${poll.protocol}`;
   const disclosureLabel = official ? "Divulgação prevista" : "Publicação";
   const disclosureDate = official?.disclosureDate || poll.published;
@@ -340,11 +402,14 @@ function openPoll(id) {
   const metadataNote = official
     ? "O recorte local do PesqEle fornece os metadados do registro, mas não os percentuais deste cenário. Os resultados são conferidos na publicação identificada e ligados ao registro por protocolo, datas e amostra."
     : "O protocolo, as datas, a amostra e os resultados desta ficha foram conferidos na publicação ou no relatório identificado. Use o link do PesqEle para consultar o cadastro oficial.";
-  const results = sortCandidatesByValue(activeCandidates(), (candidate) => valueFor(poll, candidate.key))
+  const results = sortCandidatesByValue(
+    activeCandidates().filter((candidate) => Number.isFinite(valueFor(poll, candidate.key))),
+    (candidate) => valueFor(poll, candidate.key),
+  )
     .map((candidate) => `<div><small>${candidate.name}</small><strong>${formatPct(valueFor(poll, candidate.key))}</strong></div>`).join("");
   dialogContent.innerHTML = `<p class="dialog-eyebrow">FICHA DA PESQUISA <span class="dialog-verified">${registrationBadge}</span></p>
     <h2>${escapeHtml(poll.pollster)}</h2>
-    <p class="dialog-scenario">${scenario?.round || 1}º turno · ${escapeHtml(scenario?.label || "Cenário principal")}</p>
+    <p class="dialog-scenario">${scenario?.round || 1}º turno · ${escapeHtml(activeScenarioLabel())}${sourceScenarioLabels ? ` · origem: ${escapeHtml(sourceScenarioLabels)}` : ""}</p>
     <div class="dialog-results">${results}</div>
     <div class="detail-grid">
       <div><small>Registro PesqEle</small><strong>${poll.protocol}</strong></div>
@@ -367,15 +432,18 @@ function downloadCsv() {
   const items = visiblePolls();
   const selectedCandidates = activeCandidates();
   const scenario = activeScenario();
-  const headers = ["turno", "cenario", "instituto", "divulgacao", "registro_tse", "inicio", "fim", "amostra", "margem", "confianca", "peso_modelo", ...selectedCandidates.map((candidate) => candidate.key), "brancos_nulos_indecisos", "fonte_resultado", "fonte_tse"];
-  const rows = items.map((poll) => [scenario.round, scenario.label, poll.pollster, poll.publication, poll.protocol, poll.start, poll.end, poll.sample, poll.margin, poll.confidence, pollWeight(poll), ...selectedCandidates.map((candidate) => valueFor(poll, candidate.key)), neutralFor(poll), resultSourceFor(poll), TSE_DATASET_URL]);
+  const headers = ["turno", "comparacao", "variantes_origem", "instituto", "divulgacao", "registro_tse", "inicio", "fim", "amostra", "margem", "confianca", "peso_modelo", ...selectedCandidates.map((candidate) => candidate.key), "brancos_nulos_indecisos", "fonte_resultado", "fonte_tse"];
+  const rows = items.map((poll) => [scenario.round, activeScenarioLabel(), scenariosForPoll(poll).map((item) => item.label).join(" + "), poll.pollster, poll.publication, poll.protocol, poll.start, poll.end, poll.sample, poll.margin, poll.confidence, pollWeight(poll), ...selectedCandidates.map((candidate) => {
+    const value = valueFor(poll, candidate.key);
+    return Number.isFinite(value) ? value : "";
+  }), neutralFor(poll), resultSourceFor(poll), TSE_DATASET_URL]);
   const csvEscape = (value) => `"${String(value).replaceAll('"', '""')}"`;
   const csv = [headers, ...rows].map((row) => row.map(csvEscape).join(",")).join("\n");
   const blob = new Blob([`\ufeff${csv}`], { type: "text/csv;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `pulso26-${state.electionId}-${scenario.id}.csv`;
+  link.download = `pulso26-${state.electionId}-${scenarioGroup(scenario)}.csv`;
   link.click();
   URL.revokeObjectURL(url);
 }
@@ -461,12 +529,13 @@ function renderElectionChrome() {
 }
 
 function render() {
+  const scenarioSelect = document.querySelector("#scenario-select");
+  const choices = scenarioChoices(state.round);
+  if (!choices.some((item) => item.id === state.scenarioId)) state.scenarioId = choices[0]?.id || state.scenarioId;
   const items = visiblePolls();
   const scenario = activeScenario();
-  const scenarioSelect = document.querySelector("#scenario-select");
-  scenarioSelect.innerHTML = scenarioCatalog
-    .filter((item) => item.round === state.round)
-    .map((item) => `<option value="${item.id}">${escapeHtml(item.label)}</option>`)
+  scenarioSelect.innerHTML = choices
+    .map((item) => `<option value="${item.id}">${escapeHtml(item.comparisonLabel || item.label)}</option>`)
     .join("");
   scenarioSelect.value = state.scenarioId;
   document.querySelectorAll("[data-round]").forEach((button) => {
@@ -475,7 +544,7 @@ function render() {
     button.disabled = !scenarioCatalog.some((item) => item.round === round);
   });
   document.querySelector("#polls-title").textContent = `Pesquisas de ${state.round}º turno`;
-  document.querySelector("#chart-heading").textContent = scenario?.round === 2 ? `${scenario.label} no tempo` : "Evolução da média ponderada";
+  document.querySelector("#chart-heading").textContent = scenario?.round === 2 ? `${activeScenarioLabel()} no tempo` : "Evolução da média ponderada";
   renderAverage(items);
   renderTable(items);
   renderChart(items);
@@ -603,7 +672,7 @@ document.querySelector("#average-info").addEventListener("click", (event) => {
 document.querySelectorAll("[data-round]").forEach((button) => {
   button.addEventListener("click", () => {
     state.round = Number(button.dataset.round);
-    state.scenarioId = scenarioCatalog.find((scenario) => scenario.round === state.round)?.id || state.scenarioId;
+    state.scenarioId = scenarioChoices(state.round)[0]?.id || state.scenarioId;
     render();
   });
 });
