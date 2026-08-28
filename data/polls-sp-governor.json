@@ -48,6 +48,8 @@
       "id": "first-main",
       "round": 1,
       "label": "Lista oficial",
+      "comparisonGroup": "first-round",
+      "comparisonLabel": "Primeiro turno — listas integradas",
       "candidates": [
         "tarcisio",
         "haddad",
@@ -62,6 +64,8 @@
       "id": "first-short",
       "round": 1,
       "label": "Lista reduzida",
+      "comparisonGroup": "first-round",
+      "comparisonLabel": "Primeiro turno — listas integradas",
       "candidates": [
         "tarcisio",
         "haddad",
@@ -72,6 +76,8 @@
       "id": "first-pre-campaign",
       "round": 1,
       "label": "Lista da pré-campanha",
+      "comparisonGroup": "first-round",
+      "comparisonLabel": "Primeiro turno — listas integradas",
       "candidates": [
         "tarcisio",
         "haddad",

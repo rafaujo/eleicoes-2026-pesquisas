@@ -43,6 +43,8 @@
       "id": "first-main",
       "round": 1,
       "label": "Cenário principal",
+      "comparisonGroup": "first-round",
+      "comparisonLabel": "Primeiro turno — listas integradas",
       "candidates": [
         "lula",
         "flavio",
@@ -55,6 +57,8 @@
       "id": "first-with-marcal",
       "round": 1,
       "label": "Cenário com Pablo Marçal",
+      "comparisonGroup": "first-round",
+      "comparisonLabel": "Primeiro turno — listas integradas",
       "candidates": [
         "lula",
         "flavio",
