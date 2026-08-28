@@ -277,6 +277,34 @@ function uncertaintyAreaPath(points, yFor, minY, maxY) {
   return `${smoothPath(upper)} ${smoothPath(lower).replace(/^M/, "L")} Z`;
 }
 
+function localTrendUncertainty(weighted, mean, denominator) {
+  if (weighted.length < 2 || !denominator) return 0;
+  const normalized = weighted.map((item) => ({
+    ...item,
+    normalizedWeight: item.weight / denominator,
+  }));
+  const squaredWeightSum = normalized.reduce(
+    (sum, item) => sum + item.normalizedWeight ** 2,
+    0,
+  );
+  const effectivePolls = 1 / squaredWeightSum;
+  const varianceCorrection = 1 - squaredWeightSum;
+  if (effectivePolls <= 1 || varianceCorrection <= 0) return 0;
+
+  const localVariance = normalized.reduce((sum, item) => {
+    const residual = valueFor(item.poll, item.candidateKey) - mean;
+    return sum + item.normalizedWeight * residual ** 2;
+  }, 0) / varianceCorrection;
+  const dispersionVariance = localVariance / effectivePolls;
+  const samplingVariance = normalized.reduce((sum, item) => {
+    const proportion = valueFor(item.poll, item.candidateKey) / 100;
+    const sample = Math.max(1, Number(item.poll.sample) || 1);
+    return sum + item.normalizedWeight ** 2 * proportion * (1 - proportion) / sample;
+  }, 0) * 10000;
+
+  return 1.96 * Math.sqrt(Math.max(dispersionVariance, samplingVariance));
+}
+
 function weightedTrend(items, candidateKey) {
   const available = items.filter((poll) => Number.isFinite(valueFor(poll, candidateKey)));
   if (!available.length) return [];
@@ -288,14 +316,15 @@ function weightedTrend(items, candidateKey) {
     const weighted = available.map((poll) => {
       const distanceDays = Math.abs(referenceTime - Date.parse(`${poll.end}T12:00:00Z`)) / DAY_MS;
       const temporal = Math.exp(-0.5 * (distanceDays / TREND_BANDWIDTH_DAYS) ** 2);
-      return { poll, weight: temporal * pollSampleWeight(poll) };
+      return { poll, candidateKey, weight: temporal * pollSampleWeight(poll) };
     }).filter((item) => item.weight >= 0.01);
     const denominator = weighted.reduce((sum, item) => sum + item.weight, 0);
     if (!denominator) continue;
+    const value = weighted.reduce((sum, item) => sum + valueFor(item.poll, candidateKey) * item.weight, 0) / denominator;
     points.push({
       date: new Date(referenceTime).toISOString().slice(0, 10),
-      value: weighted.reduce((sum, item) => sum + valueFor(item.poll, candidateKey) * item.weight, 0) / denominator,
-      uncertainty: weighted.reduce((sum, item) => sum + item.poll.margin * item.weight, 0) / denominator,
+      value,
+      uncertainty: localTrendUncertainty(weighted, value, denominator),
     });
   }
   return points;
@@ -304,9 +333,9 @@ function weightedTrend(items, candidateKey) {
 function renderChart(items) {
   chart.replaceChildren();
   const title = svgElement("title", { id: "chart-title" });
-  title.textContent = `Evolução suavizada — ${activeScenarioLabel()}`;
+  title.textContent = `Evolução da média — ${activeScenarioLabel()}`;
   const desc = svgElement("desc", { id: "chart-description" });
-  desc.textContent = `As linhas mostram uma tendência suavizada com janela temporal de ${TREND_BANDWIDTH_DAYS} dias. As faixas mostram a margem de erro média ponderada e os pontos, o resultado de cada pesquisa.`;
+  desc.textContent = `As linhas mostram a tendência ponderada com janela temporal de ${TREND_BANDWIDTH_DAYS} dias. As faixas mostram a incerteza calculada pela dispersão das pesquisas próximas e os pontos, o resultado de cada pesquisa.`;
   chart.append(title, desc);
 
   const ordered = [...items].sort((a, b) => a.end.localeCompare(b.end));
@@ -386,7 +415,7 @@ function renderChart(items) {
     if (endpoint) {
       const circle = svgElement("circle", { cx: endpoint.x, cy: endpoint.y, r: 4.2, class: "average-endpoint", style: `--candidate-color:${candidate.color}`, tabindex: "0" });
       const tooltip = svgElement("title");
-      tooltip.textContent = `${candidate.name}: tendência suavizada de ${formatPct(endpoint.value)} ± ${formatPct(endpoint.uncertainty)} em ${formatDate(endpoint.date)}`;
+      tooltip.textContent = `${candidate.name}: tendência de ${formatPct(endpoint.value)} ± ${formatPct(endpoint.uncertainty)} em ${formatDate(endpoint.date)}`;
       circle.appendChild(tooltip);
       chart.appendChild(circle);
     }
@@ -561,7 +590,7 @@ function render() {
     button.disabled = !scenarioCatalog.some((item) => item.round === round);
   });
   document.querySelector("#polls-title").textContent = `Pesquisas de ${state.round}º turno`;
-  document.querySelector("#chart-heading").textContent = scenario?.round === 2 ? `${activeScenarioLabel()} no tempo` : "Evolução suavizada";
+  document.querySelector("#chart-heading").textContent = scenario?.round === 2 ? `${activeScenarioLabel()} no tempo` : "Evolução da média";
   renderAverage(items);
   renderTable(items);
   renderChart(items);
