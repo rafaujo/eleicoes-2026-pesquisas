@@ -18,6 +18,7 @@
     "0910e8e3d27101e7da6b",
     "09b37d617962b76eb176",
     "0bc7f2b002a760c437d0",
+    "0d3cda1e07eae2fb5f27",
     "0dac999b43694a7b2d7f",
     "0ee159ef25d38891568d",
     "119f56f25cc786e43308",
@@ -245,9 +246,19 @@
     "f98a1362de38698949eb",
     "fa6bc3d8f04921434b4b",
     "fae241547f29a883fc14",
+    "fba87e09e6429cdfeaa8",
     "fc1e86ae3d6f8df0c6cd"
   ],
   "pending": [
+    {
+      "election": "governor-mg",
+      "title": "Quaest (25/8): Cleitinho mantém liderança em Minas com 29%; Patrus tem 11% e Kalil, 10% - DiviNews",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRmtBeXVTQ0c2UUhBUWtaelVIeDZoVGtUV2hmbWJxbXJYZXRIWnBLMVE1TmNNb3hhcXhVN21GZkFseHViZjk5VFBneVBwTTYzOWhLR3E0ZlcxNWJJWmwyWDU2S1RRdTZTNkFOVnZEQ240RlhJRVl1eEN2NGt3MDBoVTJld3U5QmcyTEE3VHJTT1ZxWTdYNVVURnlxQWhUQjdBTU9iM0VSXzlaLUY1ZDFJMWF3?oc=5",
+      "source": "DiviNews",
+      "published": "2026-08-28",
+      "pollster": "Quaest",
+      "key": "fba87e09e6429cdfeaa8"
+    },
     {
       "election": "president-br",
       "title": "Quaest/SE: Lula tem 53%; Flávio Bolsonaro, 19% - UOL Notícias",
