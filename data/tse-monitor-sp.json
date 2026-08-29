@@ -54,6 +54,17 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "SP006812026": {
+      "protocol": "SP006812026",
+      "fieldStart": "2026-08-29",
+      "fieldEnd": "2026-08-30",
+      "disclosureDate": "2026-09-03",
+      "sample": 1100,
+      "company": "Intelligence Pesquisa e Comunicacao",
+      "tradeName": "Intelligence Pesquisa e Comunicacao",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP009402026": {
       "protocol": "SP009402026",
       "fieldStart": "2026-08-29",
