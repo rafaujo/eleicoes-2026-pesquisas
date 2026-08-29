@@ -92,6 +92,7 @@
     "58228710dc48f4d0d26d",
     "58805b8d4ee02f19aa36",
     "58b255bb2fda772169ee",
+    "5efee8ac537a77789ed7",
     "5fce57e7d6d71ba7984b",
     "5ff19f7de192d84e6092",
     "6281d565a07d14b3e3e8",
@@ -173,6 +174,7 @@
     "aa39b2f262b3204f984b",
     "abe2046677064c9fe8f1",
     "ac017206c2e4c2fdfc95",
+    "ac2ccda06ab836c9b295",
     "afcc9a83419afd8559bd",
     "b0b798396e91060d4d5a",
     "b12fd9cbb50a15ddb520",
@@ -212,6 +214,7 @@
     "d2d28e5b6ff91fe9581b",
     "d35ffaff3a42f6eb918d",
     "d503ad1d0f12659c016e",
+    "d679117b52eca0112bda",
     "d6c344eaed138aaebd6d",
     "d6ceb9de0884fad214aa",
     "d6fae93e6ed3234d322f",
@@ -268,12 +271,12 @@
     },
     {
       "election": "president-br",
-      "title": "Pesquisa Vox Brasil: Lula tem 37,1% no 1º turno e Flávio Bolsonaro, 34,8% - JOTA Info",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVTNHX1dLUTFucUd3WTRqZW1pUDZFSXlGQmtZNWxJRUZSczJVTnNpejRKYklHQVl5YjNrY01yOVNZcmRfakRMT3EwdC1VaDBGSjFBS1RaYWRieW9VRVg1Qk1XRDByRHpmMXRZNDkxZTRuVWhneW1kZHduWkdBZmFkbVhZbUk3UmEyWk81aW5WcTVwSWNORkMzdTFmOUM5eGJoT3dybm1LRVFHLUJ3ZTktQWN3?oc=5",
-      "source": "JOTA Info",
+      "title": "Vox Brasil: Flávio tem 45,1%, e Lula, 44,5% no 2º turno - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWDVGYk90NHJTdXRhYlZUVTloZExxWjR6cTQ2UjE0eFZ1Ny1KZzMwZHJQckxsUUtRX1FXc3luUzhWaUMwckU2OHRKb2xmUmlWdDlmV3RkWlBjeVZIemJlbGFNR0RUR3VuMXZqN3ItbWRZTVdmZXFkakxsYmlaa05hUFI2aHoyUUFtUVZOVjl2dlM?oc=5",
+      "source": "CNN Brasil",
       "published": "2026-08-29",
       "pollster": "Vox Brasil",
-      "key": "6aa6269898ade362c55f"
+      "key": "5efee8ac537a77789ed7"
     },
     {
       "election": "governor-mg",
