@@ -116,6 +116,45 @@
   ],
   "polls": [
     {
+      "id": 41,
+      "pollster": "Nexus",
+      "publication": "nexus.fsb.com.br",
+      "protocol": "BR089002026",
+      "published": "2026-08-31",
+      "start": "2026-08-28",
+      "end": "2026-08-30",
+      "field": "28–30 ago",
+      "sample": 2005,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.nexus.fsb.com.br/estudos-divulgados/pesquisa-btg-nexus-de-intencao-de-votos-para-presidente-do-brasil-31-de-agosto-de-2026/",
+      "resultSourceLabel": "nexus.fsb.com.br — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "lula": 39,
+            "flavio": 33,
+            "caiado": 5,
+            "zema": 1,
+            "renan": 3
+          },
+          "undecided": 6,
+          "resultSource": "https://www.nexus.fsb.com.br/estudos-divulgados/pesquisa-btg-nexus-de-intencao-de-votos-para-presidente-do-brasil-31-de-agosto-de-2026/",
+          "resultSourceLabel": "nexus.fsb.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 46,
+            "flavio": 45
+          },
+          "undecided": 9,
+          "resultSource": "https://www.nexus.fsb.com.br/estudos-divulgados/pesquisa-btg-nexus-de-intencao-de-votos-para-presidente-do-brasil-31-de-agosto-de-2026/",
+          "resultSourceLabel": "nexus.fsb.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 40,
       "pollster": "PoderData",
       "publication": "poder360.com.br",
