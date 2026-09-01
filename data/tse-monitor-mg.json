@@ -32,14 +32,14 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
-    "MG003662026": {
-      "protocol": "MG003662026",
-      "fieldStart": "2026-08-25",
-      "fieldEnd": "2026-08-29",
-      "disclosureDate": "2026-08-31",
-      "sample": 1100,
-      "company": "Sectral Negocios",
-      "tradeName": "Sectral Negocios",
+    "MG015792026": {
+      "protocol": "MG015792026",
+      "fieldStart": "2026-08-30",
+      "fieldEnd": "2026-09-04",
+      "disclosureDate": "2026-09-05",
+      "sample": 1800,
+      "company": "Atlasintel",
+      "tradeName": "Atlasintel",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -51,17 +51,6 @@
       "sample": 1000,
       "company": "F5 Atualiza Dados",
       "tradeName": "F5 Atualiza Dados",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "MG046762026": {
-      "protocol": "MG046762026",
-      "fieldStart": "2026-08-26",
-      "fieldEnd": "2026-08-31",
-      "disclosureDate": "2026-09-01",
-      "sample": 1800,
-      "company": "Atlasintel",
-      "tradeName": "Atlasintel",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
