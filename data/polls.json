@@ -116,6 +116,33 @@
   ],
   "polls": [
     {
+      "id": 42,
+      "pollster": "Real Time Big Data",
+      "publication": "gazetadopovo.com.br",
+      "protocol": "BR034902026",
+      "published": "2026-09-01",
+      "start": "2026-08-31",
+      "end": "2026-08-31",
+      "field": "31–31 ago",
+      "sample": 2000,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026/",
+      "resultSourceLabel": "gazetadopovo.com.br — resultado publicado",
+      "scenarios": {
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 44,
+            "flavio": 44
+          },
+          "undecided": 12,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 41,
       "pollster": "Nexus",
       "publication": "nexus.fsb.com.br",

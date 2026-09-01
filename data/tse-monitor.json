@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-01 05:03:53",
+  "sourceGeneratedAt": "2026-09-01 14:51:35",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -650,6 +650,17 @@
       "sample": 2000,
       "company": "Futura Inteligência",
       "tradeName": "Futura Inteligência",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR036692026": {
+      "protocol": "BR036692026",
+      "fieldStart": "2026-09-01",
+      "fieldEnd": "2026-09-03",
+      "disclosureDate": "2026-09-03",
+      "sample": 2002,
+      "company": "Datafolha",
+      "tradeName": "Datafolha",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
