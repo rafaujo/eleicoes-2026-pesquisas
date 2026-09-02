@@ -116,6 +116,85 @@
   ],
   "polls": [
     {
+      "id": 43,
+      "pollster": "Quaest",
+      "publication": "gazetadopovo.com.br",
+      "protocol": "BR070652026",
+      "published": "2026-09-02",
+      "start": "2026-09-01",
+      "end": "2026-09-01",
+      "field": "1–1 set",
+      "sample": 2004,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Presencial",
+      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026/",
+      "resultSourceLabel": "gazetadopovo.com.br — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "lula": 37,
+            "flavio": 29,
+            "caiado": 1,
+            "zema": 1,
+            "renan": 3
+          },
+          "undecided": 18,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 42,
+            "flavio": 41
+          },
+          "undecided": 17,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 43,
+            "renan": 36
+          },
+          "undecided": 21,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 44,
+            "zema": 33
+          },
+          "undecided": 23,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 42,
+            "caiado": 37
+          },
+          "undecided": 21,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "first-with-marcal": {
+          "results": {
+            "lula": 37,
+            "flavio": 30,
+            "marcal": 1,
+            "caiado": 1,
+            "renan": 3,
+            "zema": 1
+          },
+          "undecided": 17,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 42,
       "pollster": "Real Time Big Data",
       "publication": "gazetadopovo.com.br",
