@@ -32,6 +32,17 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "MG009982026": {
+      "protocol": "MG009982026",
+      "fieldStart": "2026-09-03",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-08",
+      "sample": 2000,
+      "company": "Real Time Big Data",
+      "tradeName": "Real Time Big Data",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG015792026": {
       "protocol": "MG015792026",
       "fieldStart": "2026-08-30",
@@ -51,6 +62,17 @@
       "sample": 1000,
       "company": "F5 Atualiza Dados",
       "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG047162026": {
+      "protocol": "MG047162026",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-08",
+      "sample": 1506,
+      "company": "Quaest",
+      "tradeName": "Quaest",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }

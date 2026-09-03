@@ -75,6 +75,17 @@
       "tradeName": "Intelligence Pesquisa e Comunicacao",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP009592026": {
+      "protocol": "SP009592026",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-08",
+      "sample": 1800,
+      "company": "Quaest",
+      "tradeName": "Quaest",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
     }
   }
 }

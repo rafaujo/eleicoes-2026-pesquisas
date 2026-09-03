@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-03 14:32:28",
+  "sourceGeneratedAt": "2026-09-03 18:36:22",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -778,6 +778,17 @@
   },
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "BR002512026": {
+      "protocol": "BR002512026",
+      "fieldStart": "2026-09-03",
+      "fieldEnd": "2026-09-08",
+      "disclosureDate": "2026-09-08",
+      "sample": 2400,
+      "company": "Gerp",
+      "tradeName": "Gerp",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR027932026": {
       "protocol": "BR027932026",
       "fieldStart": "2026-08-28",
@@ -808,6 +819,17 @@
       "sample": 400,
       "company": "Instituto de Pesquisa Multipla",
       "tradeName": "Instituto de Pesquisa Multipla",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR067902026": {
+      "protocol": "BR067902026",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-08",
+      "sample": 2000,
+      "company": "Nexus",
+      "tradeName": "Nexus",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
