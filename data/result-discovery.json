@@ -56,6 +56,7 @@
     "1944b06ac40ce080cd4b",
     "1a082666b71aa1da28e9",
     "1a8c9b773d5f0068f0fb",
+    "1b954bb7630691ea25e4",
     "1ba342b15b46d85eb6a2",
     "1bee90bed7ed608e4768",
     "1c87b0b9f27691361ae4",
@@ -77,6 +78,7 @@
     "240d21bf99fe7fb98b9a",
     "24bc21df3bfad56031ae",
     "24c6b77b7c2831c97028",
+    "25fbdefc0bb1f17f634d",
     "2630eb37108ddcdc2f38",
     "2718e84a1a2d86f53140",
     "2804d6a68925e0d0ba1e",
@@ -92,6 +94,7 @@
     "2c675a15ef2d7b6008e4",
     "2cacb71d5ab09da35129",
     "2e52f1a735dfa898ad77",
+    "2e8d4ed3ebc99cb62d45",
     "2edc28fbad96b17752d1",
     "2f89e0868da91c2368b4",
     "2fd2801e2b9512c7a745",
@@ -196,6 +199,7 @@
     "6f2488330523ff5a6b43",
     "6f2e3c2caccbe27f4289",
     "704a7d8998c0926efae3",
+    "70a0be3442499c2c5905",
     "717c31d3df3a3e771868",
     "7213a8500cca37c85721",
     "737fd5a8f9878fadc9b5",
@@ -261,6 +265,7 @@
     "92b44aea2700de0af903",
     "92d261a1e55bc2582794",
     "94091ffcf09f791d976f",
+    "94331503bc08fba0788e",
     "94cad8758b702ed03a08",
     "969c1542a93f57243fa4",
     "9704959bab872056d6bf",
@@ -472,9 +477,19 @@
     "fc250ab3a40e1d11e5e4",
     "fc9e4de36a8c3a77c670",
     "fd54769a89702cd002c8",
-    "fd83aba51196ef940511"
+    "fd83aba51196ef940511",
+    "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "governor-sp",
+      "title": "Atlas/Estadão: Tarcísio venceria no 1º turno com 51,1%; Haddad tem 39,9% - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWEFIZXdBTXRabVhUY1lTbFFodmQzTjBKN1pmeVFUejMya2pxck5jQnNENHNBOEZlTjZWMVY3eXVKOTVyOV9HMElNSlVTeU51MVpjWTY0QUhjcmRJTHpFUm1aZ2JWUXFZanBuM2xhbVRlS18wQ2EyaWVCM1E3Tk9MSkd6cXB2a3ZnV3o0RFo5MkthZWhzNUt4TzlTbm91dVZZb1NXZE1RZEE?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-09-03",
+      "pollster": "AtlasIntel",
+      "key": "1b954bb7630691ea25e4"
+    },
     {
       "election": "governor-sp",
       "title": "Vox Brasil: Tarcísio tem 55,3%, e Haddad, 35,1% no 1º turno em SP - CNN Brasil",
