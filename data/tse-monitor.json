@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-04 04:28:11",
+  "sourceGeneratedAt": "2026-09-04 18:22:26",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -696,17 +696,6 @@
       "tradeName": "",
       "contractors": []
     },
-    "BR036692026": {
-      "protocol": "BR036692026",
-      "registeredAt": "2026-08-28",
-      "fieldStart": "2026-09-01",
-      "fieldEnd": "2026-09-03",
-      "disclosureDate": "2026-09-03",
-      "sample": 2002,
-      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
-      "tradeName": "",
-      "contractors": []
-    },
     "BR055192026": {
       "protocol": "BR055192026",
       "registeredAt": "2026-08-23",
@@ -808,6 +797,17 @@
       "sample": 2000,
       "company": "Nexus",
       "tradeName": "Nexus",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR079352026": {
+      "protocol": "BR079352026",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-09",
+      "sample": 1500,
+      "company": "Instituto Ideia",
+      "tradeName": "Instituto Ideia",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-03 04:19:53",
-  "syncedAt": "2026-09-03T04:19:53+00:00",
+  "generatedAt": "2026-09-04 18:22:26",
+  "syncedAt": "2026-09-04T18:22:26+00:00",
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
   "pesqEle": "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml",
   "resourceUrls": {
@@ -261,6 +261,22 @@
       "researchCost": 20000.0,
       "methodology": "A população pesquisada é definida como pessoas maiores de 16 anos, eleitoras e residentes em todas as regiões do Brasil. A pesquisa é do tipo QUANTITATIVA e os entrevistados serão selecionados por cotas em função das variáveis sexo, faixa etária, renda do chefe do domicílio e área de residência. Os dados para definição das cotas foram obtidos de publicações do IBGE e da Estatística do Eleitorado do TSE. Os dados serão tabulados em função das variáveis sócio-econômicas e agregados segundo as diversas áreas de residência de interesse.",
       "samplingPlan": "Com a realização de 2400 (duas mil e quatrocentas) entrevistas, dentro de um universo considerado infinito e um nível de confiança de 95,55%, a margem de erro para projeções dos dados é estimada em 2,04 pontos percentuais, nos casos limites em que as variáveis assumam o percentual de 50%. O resultado projetado para a população pesquisada vai de um mínimo de 47,96% a um máximo de 52,04%. Para o mesmo número de entrevistas, a margem de erro tende a se estreitar quando os percentuais se aproximam de 0% ou de 100%. Se a variável incidir em 10%, por exemplo, a margem de erro é estimada em 1,22 pontos percentuais. E o resultado projetado vai de um mínimo de 8,78% a um máximo de 91,22%. O Instituto Gerp utiliza dois desvios padrões para o cálculo da margem de erro em todos os seus projetos de pesquisa, o que representa um nível de confiança de 95,55%, confiando ao trabalho uma segurança ainda maior do que o normalmente utilizado pelo mercado. Está prevista eventual ponderação para correção das variáveis área de residência, sexo, faixa etária e renda do chefe do domicílio, caso ocorram diferenças superiores a 2 pontos percentuais entre o previsto na amostra e a coleta de dados realizada. O plano amostral a ser cumprido, pelo entrevistador, é o definido a seguir: IDADE/SEXO: 16-24/masculino (12,45%), 16-24/feminino (11,45%), 25-34/masculino (19,59%), 25-34/feminino (18,97%), 35-44/masculino (20,24%), 35-44/feminino (19,84%), 45- 59/masculino (25,60%), 45-59/feminino (25,49%), 60 ou +/masculino (22,11%), 60 ou +/feminino (24,26%) RENDA DO CHEFE DO DOMICÍLIO: Até 01 SM (22,64%), De 01 a 02 SM (23,16%), De 02 a 05 SM (32,90%), De 05 a 10 SM (13,65%), De 10 a 20 SM (5,30%), Mais de 20 SM (2,35%)",
+      "contractors": []
+    },
+    "BR036692026": {
+      "protocol": "BR036692026",
+      "registeredAt": "2026-08-28",
+      "fieldStart": "2026-09-01",
+      "fieldEnd": "2026-09-03",
+      "disclosureDate": "2026-09-03",
+      "sample": 2002,
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "statistician": "Renata Nunes Cesar",
+      "conre": "7249A",
+      "researchCost": 3076416.0,
+      "methodology": "Pesquisa do tipo quantitativo, por amostragem, com aplicação de questionário estruturado e abordagem pessoal em pontos de fluxo populacional. O conjunto do eleitorado brasileiro foi tomado como universo da pesquisa",
+      "samplingPlan": "Universo: Eleitorado brasileiro Tamanho da amostra: A amostra prevista é de 2002 entrevistas. Técnica de amostragem: A amostra é estratificada por região geográfica (Sudeste, Sul, Nordeste, Norte e Centro-oeste) e natureza dos municípios (capital, região metropolitana ou interior). Em cada estrato, num primeiro estágio, são sorteados com probabilidade proporcional ao tamanho (PPT) os municípios que farão parte do levantamento. Num segundo estágio, são sorteados os bairros e pontos de abordagem onde serão aplicadas as entrevistas. Por fim, os entrevistados são selecionados aleatoriamente para responder ao questionário, de acordo com cotas de gênero e faixa etária. Os dados utilizados para definição e seleção da amostra são baseados nos dados fornecidos pelo TSE, IBGE (Censo 2022, PNADC-A 2024 e Estimativa populacional 2025), além de dados primários de outros levantamentos do instituto. Os dados relativos a gênero e faixa etária são: Homens: 47%, mulheres: 53%, 16 a 24 anos: 12%, 25 a 34 anos: 19%, 35 a 44 anos: 20%, 45 a 59 anos: 25% e 60 anos ou mais: 24%. Para a variável grau de instrução os dados utilizados como referência são: até nível médio completo ou incompleto (inclui os sem escolaridade e analfabetos) =76% e nível superior (inclui superior incompleto) = 24%. Ponderação dos resultados: Está prevista ponderação considerando os estratos (região geográfica, natureza do município), gênero e faixa etária. A variável escolaridade poderá ser ajustada de acordo com os percentuais detalhados anteriormente caso a diferença entre os valores descritos e observados seja maior que a margem de erro definida. Para o nível econômico do entrevistado (renda familiar mensal declarada pelo respondente), a distribuição utilizada como referência foi: Até 2 S.M. (salários mínimos)=49%, mais de 2 S.M.=47%, não souberam ou recusaram a resposta=4%. O fator previsto para ponderação é 1 (resultados obtidos em campo). Margem de Erro: A margem de erro máxima prevista é de 2 pontos percentuais para mais ou para menos, considerando um nível de confiança de 95% e baseada em uma amostra aleatória simples (AAS). Os intervalos de confiança serão calculados considerando os resultados obtidos para um nível de confiança de 95%.",
       "contractors": []
     },
     "BR040062026": {
