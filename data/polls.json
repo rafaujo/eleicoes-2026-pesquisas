@@ -116,6 +116,36 @@
   ],
   "polls": [
     {
+      "id": 44,
+      "pollster": "Datafolha",
+      "publication": "g1.globo.com",
+      "protocol": "BR036692026",
+      "published": "2026-09-03",
+      "start": "2026-09-02",
+      "end": "2026-09-02",
+      "field": "2–2 set",
+      "sample": 2002,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/03/datafolha-2o-turno-presidente-3-setembro.ghtml",
+      "resultSourceLabel": "g1.globo.com — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "lula": 38,
+            "flavio": 33,
+            "caiado": 4,
+            "zema": 2,
+            "renan": 3
+          },
+          "undecided": 9,
+          "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/03/datafolha-2o-turno-presidente-3-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 43,
       "pollster": "Quaest",
       "publication": "gazetadopovo.com.br",
