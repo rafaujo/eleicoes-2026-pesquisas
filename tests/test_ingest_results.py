@@ -20,8 +20,10 @@ class IngestResultsTests(unittest.TestCase):
             child = Node("div")
             current.children.append(child)
             current = child
+        current.chunks.append("resultado")
 
         self.assertEqual(len(list(walk(root))), 1_501)
+        self.assertEqual(root.text(), "resultado")
 
     def test_index_only_returns_recent_first_round_fiches(self) -> None:
         markup = """
