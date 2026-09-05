@@ -45,6 +45,7 @@ jobs:
         id: discover
         run: >-
           python scripts/discover_results.py
+          --lookback-days 10
           --summary "$RUNNER_TEMP/result-discovery.md"
           --github-output "$GITHUB_OUTPUT"
 
