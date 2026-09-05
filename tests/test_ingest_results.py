@@ -5,6 +5,7 @@ from scripts.ingest_results import (
     normalize,
     parse_detail,
     protocol_key,
+    merge_scenarios,
     scenario_for,
 )
 
@@ -58,6 +59,47 @@ class IngestResultsTests(unittest.TestCase):
         scenario_id, results = scenario_for(detail, "president-br", catalog)
         self.assertEqual(scenario_id, "first-with-marcal")
         self.assertEqual(results["marcal"], 3)
+
+    def test_presidential_scenario_keeps_cury_in_the_most_complete_variant(self) -> None:
+        detail = {
+            "round": 1,
+            "results": {
+                "Lula": 38, "Flávio Bolsonaro": 33, "Augusto Cury": 8,
+                "Ronaldo Caiado": 4, "Romeu Zema": 2, "Renan Santos": 3,
+            },
+        }
+        catalog = {
+            "first-main": {"id": "first-main", "round": 1, "candidates": ["lula", "flavio", "caiado", "zema", "renan"]},
+            "first-with-cury": {"id": "first-with-cury", "round": 1, "candidates": ["lula", "flavio", "cury", "caiado", "zema", "renan"]},
+        }
+
+        scenario_id, results = scenario_for(detail, "president-br", catalog)
+
+        self.assertEqual(scenario_id, "first-with-cury")
+        self.assertEqual(results["cury"], 8)
+
+    def test_existing_poll_is_enriched_and_truncated_variant_is_removed(self) -> None:
+        existing = {
+            "scenarios": {
+                "first-main": {"results": {"lula": 38, "flavio": 33}},
+                "runoff-lula-flavio": {"results": {"lula": 46, "flavio": 44}},
+            },
+        }
+        catalog = {
+            "first-main": {"id": "first-main", "round": 1, "comparisonGroup": "first-round", "candidates": ["lula", "flavio"]},
+            "first-with-cury": {"id": "first-with-cury", "round": 1, "comparisonGroup": "first-round", "candidates": ["lula", "flavio", "cury"]},
+            "runoff-lula-flavio": {"id": "runoff-lula-flavio", "round": 2, "candidates": ["lula", "flavio"]},
+        }
+        incoming = {
+            "first-with-cury": {"results": {"lula": 38, "flavio": 33, "cury": 8}},
+        }
+
+        changed = merge_scenarios(existing, incoming, catalog)
+
+        self.assertTrue(changed)
+        self.assertNotIn("first-main", existing["scenarios"])
+        self.assertEqual(existing["scenarios"]["first-with-cury"]["results"]["cury"], 8)
+        self.assertIn("runoff-lula-flavio", existing["scenarios"])
 
     def test_normalization_and_protocol_are_accent_and_punctuation_safe(self) -> None:
         self.assertEqual(normalize("Tarcísio — São Paulo"), "tarcisio sao paulo")

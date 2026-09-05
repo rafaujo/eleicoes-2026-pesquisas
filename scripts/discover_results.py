@@ -52,6 +52,7 @@ ELECTION_RULES = {
         "queries": (
             'pesquisa eleitoral presidente 2026 Lula "Flávio Bolsonaro"',
             'pesquisa 2026 Lula Flávio Caiado Zema Renan',
+            'pesquisa presidente 2026 "Augusto Cury" AtlasIntel Datafolha Quaest',
         ),
         "terms": ("presidente", "presidencial", "lula", "flavio bolsonaro", "marcal"),
     },

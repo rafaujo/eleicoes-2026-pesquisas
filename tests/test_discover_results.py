@@ -28,6 +28,12 @@ class ResultDiscoveryTests(unittest.TestCase):
     def test_each_election_uses_redundant_news_queries(self) -> None:
         self.assertTrue(all(len(rule["queries"]) >= 2 for rule in ELECTION_RULES.values()))
 
+    def test_presidential_queries_cover_cury_and_atlasintel(self) -> None:
+        queries = " ".join(ELECTION_RULES["president-br"]["queries"]).lower()
+
+        self.assertIn("augusto cury", queries)
+        self.assertIn("atlasintel", queries)
+
     def test_verita_disclosure_is_detected_for_presidential_queue(self) -> None:
         articles = parse_feed(VERITA_FEED, "president-br")
 

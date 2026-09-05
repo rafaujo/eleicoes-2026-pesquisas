@@ -21,9 +21,14 @@ class ScenarioDataTests(unittest.TestCase):
         self.assertEqual(scenarios["runoff-lula-zema"]["candidates"], ["lula", "zema"])
         self.assertEqual(scenarios["runoff-lula-renan"]["candidates"], ["lula", "renan"])
         self.assertEqual(scenarios["runoff-lula-marcal"]["candidates"], ["lula", "marcal"])
+        self.assertEqual(scenarios["runoff-lula-cury"]["candidates"], ["lula", "cury"])
         self.assertEqual(
             scenarios["first-with-marcal"]["candidates"],
             ["lula", "flavio", "marcal", "caiado", "renan", "zema"],
+        )
+        self.assertEqual(
+            scenarios["first-with-cury-marcal"]["candidates"],
+            ["lula", "flavio", "cury", "marcal", "caiado", "renan", "zema"],
         )
 
     def test_first_round_variants_share_a_comparison_group(self) -> None:
@@ -62,8 +67,8 @@ class ScenarioDataTests(unittest.TestCase):
 
         self.assertEqual(datafolha["published"], "2026-08-21")
         self.assertEqual(
-            datafolha["scenarios"]["first-main"]["results"],
-            {"lula": 39, "flavio": 33, "caiado": 5, "zema": 3, "renan": 4},
+            datafolha["scenarios"]["first-with-cury"]["results"],
+            {"lula": 39, "flavio": 33, "cury": 2, "caiado": 5, "zema": 3, "renan": 4},
         )
         self.assertEqual(datafolha["scenarios"]["runoff-lula-flavio"]["results"], {"lula": 47, "flavio": 43})
         self.assertEqual(datafolha["scenarios"]["runoff-lula-caiado"]["results"], {"lula": 47, "caiado": 40})
@@ -91,6 +96,24 @@ class ScenarioDataTests(unittest.TestCase):
                 "resultSourceLabel": "UOL — cenários de segundo turno Atlas/Bloomberg",
             },
         )
+
+    def test_latest_atlas_and_augusto_cury_are_present(self) -> None:
+        atlas = next(poll for poll in self.database["polls"] if poll["protocol"] == "BR079722026")
+
+        self.assertEqual(atlas["pollster"], "AtlasIntel")
+        self.assertEqual(atlas["published"], "2026-08-31")
+        self.assertEqual(atlas["scenarios"]["first-with-cury-marcal"]["results"]["cury"], 7.8)
+        self.assertEqual(atlas["scenarios"]["runoff-lula-flavio"]["results"], {"lula": 47.1, "flavio": 42.6})
+
+    def test_recent_published_national_polls_are_covered(self) -> None:
+        protocols = {poll["protocol"] for poll in self.database["polls"]}
+
+        self.assertTrue({
+            "BR055192026",  # Vox Brasil
+            "BR079722026",  # AtlasIntel/Bloomberg
+            "BR027932026",  # Futura/Apex
+            "BR075612026",  # PoderData/Aya
+        }.issubset(protocols))
 
 
 if __name__ == "__main__":
