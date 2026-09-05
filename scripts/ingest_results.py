@@ -48,6 +48,7 @@ CANDIDATE_ALIASES = {
         "zema": ("romeu zema", "zema"),
         "renan": ("renan santos",),
         "marcal": ("pablo marcal", "marcal"),
+        "cury": ("augusto cury", "cury"),
     },
     "governor-sp": {
         "tarcisio": ("tarcisio de freitas", "tarcisio"),
@@ -288,9 +289,14 @@ def scenario_for(detail: dict, election_id: str, catalog: dict[str, dict]) -> tu
     if detail["round"] == 1:
         candidates = set(mapped)
         choices = [item for item in catalog.values() if item["round"] == 1]
-        if election_id == "president-br":
-            preferred = "first-with-marcal" if "marcal" in candidates else "first-main"
-            choices.sort(key=lambda item: item["id"] != preferred)
+        # Escolher primeiro a lista exata e, na ausência dela, a mais completa.
+        # Isso impede que um candidato recém-adicionado seja silenciosamente
+        # descartado por um cenário antigo que também é subconjunto da ficha.
+        choices.sort(key=lambda item: (
+            set(item["candidates"]) != candidates,
+            -len(item["candidates"]),
+            item["id"],
+        ))
         for item in choices:
             expected = set(item["candidates"])
             if expected.issubset(candidates):
@@ -372,13 +378,36 @@ def load_catalogs() -> tuple[list[dict], dict[str, dict]]:
     return elections, databases
 
 
+def merge_scenarios(existing: dict, incoming: dict[str, dict], catalog: dict[str, dict]) -> bool:
+    """Complementa uma pesquisa já conhecida sem manter sua versão truncada."""
+    before = json.dumps(existing["scenarios"], ensure_ascii=False, sort_keys=True)
+    incoming_ids = set(incoming)
+    for old_id in list(existing["scenarios"]):
+        if old_id in incoming_ids or old_id not in catalog:
+            continue
+        old = catalog[old_id]
+        old_candidates = set(old["candidates"])
+        for new_id in incoming_ids:
+            new = catalog[new_id]
+            new_candidates = set(new["candidates"])
+            same_group = (
+                old.get("comparisonGroup", old_id)
+                == new.get("comparisonGroup", new_id)
+            )
+            # Substituição conservadora: a nova ficha difere por exatamente
+            # um nome. Listas alternativas (por exemplo, com/sem Marçal)
+            # continuam coexistindo quando ambas foram efetivamente testadas.
+            if same_group and old_candidates < new_candidates and len(new_candidates - old_candidates) == 1:
+                del existing["scenarios"][old_id]
+                break
+    existing["scenarios"].update(incoming)
+    after = json.dumps(existing["scenarios"], ensure_ascii=False, sort_keys=True)
+    return before != after
+
+
 def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
     elections, databases = load_catalogs()
     election_by_id = {item["id"]: item for item in elections}
-    known = {
-        election_id: {poll["protocol"] for poll in database["polls"]}
-        for election_id, database in databases.items()
-    }
     grouped: dict[tuple[str, str], list[dict]] = {}
     warnings: list[str] = []
     since = date.today() - timedelta(days=lookback_days)
@@ -401,15 +430,13 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
             if not re.fullmatch(r"[A-Z]{2}\d{9}", primary["protocol"]):
                 warnings.append(f"{url}: protocolo não localizado")
                 continue
-            if primary["protocol"] in known[election_id]:
-                continue
             details = [primary]
             details.extend(parse_detail(related, fetch(related)) for related in primary["related"])
             grouped.setdefault((election_id, primary["protocol"]), []).extend(details)
         except (OSError, ValueError, AttributeError) as error:
             warnings.append(f"{url}: {error}")
 
-    added = 0
+    changed = 0
     for (election_id, protocol), details in grouped.items():
         database = databases[election_id]
         catalog = {item["id"]: item for item in database["scenarios"]}
@@ -441,6 +468,12 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
         if not scenarios:
             continue
 
+        existing = next((item for item in database["polls"] if item["protocol"] == protocol), None)
+        if existing:
+            if merge_scenarios(existing, scenarios, catalog):
+                changed += 1
+            continue
+
         primary = details[0]
         start = field_start(source_text(source_markup_for_dates), primary["end"])
         source = next(iter(source_labels))
@@ -463,13 +496,12 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
         }
         database["polls"].append(poll)
         database["polls"].sort(key=lambda item: item["end"], reverse=True)
-        known[election_id].add(protocol)
-        added += 1
+        changed += 1
 
     for election_id, database in databases.items():
         path = ROOT / election_by_id[election_id]["dataFile"]
         path.write_text(json.dumps(database, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return added, warnings
+    return changed, warnings
 
 
 def parse_args() -> argparse.Namespace:
