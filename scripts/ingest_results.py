@@ -83,9 +83,12 @@ class Node:
     chunks: list[str] = field(default_factory=list)
 
     def text(self) -> str:
-        parts = list(self.chunks)
-        for child in self.children:
-            parts.append(child.text())
+        parts: list[str] = []
+        stack = [self]
+        while stack:
+            current = stack.pop()
+            parts.extend(current.chunks)
+            stack.extend(reversed(current.children))
         return " ".join(" ".join(parts).split())
 
 
