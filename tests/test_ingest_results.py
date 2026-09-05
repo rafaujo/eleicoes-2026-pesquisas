@@ -1,16 +1,28 @@
 import unittest
 
 from scripts.ingest_results import (
+    Node,
     index_links,
     normalize,
     parse_detail,
     protocol_key,
     merge_scenarios,
     scenario_for,
+    walk,
 )
 
 
 class IngestResultsTests(unittest.TestCase):
+    def test_walk_handles_deep_html_without_recursion_error(self):
+        root = Node("document")
+        current = root
+        for _ in range(1_500):
+            child = Node("div")
+            current.children.append(child)
+            current = child
+
+        self.assertEqual(len(list(walk(root))), 1_501)
+
     def test_index_only_returns_recent_first_round_fiches(self) -> None:
         markup = """
         <a href="/pesquisas/nexus_2026-08-23_T1_BR090282026_1/">ficha</a>
