@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-05 15:12:46",
+  "sourceGeneratedAt": "2026-09-05 17:19:30",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -13,6 +13,7 @@
     "BR002092026",
     "BR002112026",
     "BR002492026",
+    "BR002512026",
     "BR002572026",
     "BR002802026",
     "BR002822026",
@@ -57,6 +58,7 @@
     "BR008732026",
     "BR008782026",
     "BR008792026",
+    "BR009192026",
     "BR009352026",
     "BR009462026",
     "BR009562026",
@@ -92,6 +94,7 @@
     "BR013812026",
     "BR014282026",
     "BR014432026",
+    "BR014522026",
     "BR014612026",
     "BR014692026",
     "BR014892026",
@@ -147,6 +150,7 @@
     "BR022492026",
     "BR022762026",
     "BR023002026",
+    "BR023222026",
     "BR023362026",
     "BR024022026",
     "BR024102026",
@@ -289,6 +293,7 @@
     "BR044092026",
     "BR044192026",
     "BR044202026",
+    "BR044422026",
     "BR044622026",
     "BR044682026",
     "BR044882026",
@@ -311,6 +316,7 @@
     "BR048872026",
     "BR048902026",
     "BR049072026",
+    "BR049142026",
     "BR049392026",
     "BR049482026",
     "BR049562026",
@@ -341,6 +347,7 @@
     "BR054032026",
     "BR054052026",
     "BR054082026",
+    "BR054202026",
     "BR054232026",
     "BR054252026",
     "BR054362026",
@@ -433,6 +440,7 @@
     "BR067762026",
     "BR067802026",
     "BR067832026",
+    "BR067902026",
     "BR067982026",
     "BR068082026",
     "BR068152026",
@@ -504,6 +512,8 @@
     "BR078752026",
     "BR078782026",
     "BR079092026",
+    "BR079322026",
+    "BR079352026",
     "BR079462026",
     "BR079472026",
     "BR079702026",
@@ -630,6 +640,17 @@
     "BR099982026"
   ],
   "pending": {
+    "BR002512026": {
+      "protocol": "BR002512026",
+      "registeredAt": "2026-09-02",
+      "fieldStart": "2026-09-03",
+      "fieldEnd": "2026-09-08",
+      "disclosureDate": "2026-09-08",
+      "sample": 2400,
+      "company": "GERP MERCADOLOGIA LTDA",
+      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
+      "contractors": []
+    },
     "BR005302026": {
       "protocol": "BR005302026",
       "registeredAt": "2026-08-25",
@@ -641,6 +662,28 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR009192026": {
+      "protocol": "BR009192026",
+      "registeredAt": "2026-09-04",
+      "fieldStart": "2026-09-06",
+      "fieldEnd": "2026-09-08",
+      "disclosureDate": "2026-09-10",
+      "sample": 1500,
+      "company": "DATAVERO PESQUISA E CONSULTORIA LTDA",
+      "tradeName": "DATAVERO INSTITUTO DE PESQUISAS",
+      "contractors": []
+    },
+    "BR014522026": {
+      "protocol": "BR014522026",
+      "registeredAt": "2026-09-04",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-09",
+      "disclosureDate": "2026-09-10",
+      "sample": 5000,
+      "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
+      "tradeName": "ATLASINTEL",
+      "contractors": []
+    },
     "BR017202026": {
       "protocol": "BR017202026",
       "registeredAt": "2026-09-01",
@@ -650,6 +693,17 @@
       "sample": 2004,
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
       "tradeName": "",
+      "contractors": []
+    },
+    "BR023222026": {
+      "protocol": "BR023222026",
+      "registeredAt": "2026-09-04",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-09",
+      "disclosureDate": "2026-09-10",
+      "sample": 2000,
+      "company": "100% CIDADES PARTICIPACOES LTDA",
+      "tradeName": "100 CIDADES",
       "contractors": []
     },
     "BR027722026": {
@@ -685,6 +739,50 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR044422026": {
+      "protocol": "BR044422026",
+      "registeredAt": "2026-09-02",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-08",
+      "sample": 1104,
+      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
+    "BR049142026": {
+      "protocol": "BR049142026",
+      "registeredAt": "2026-09-04",
+      "fieldStart": "2026-09-06",
+      "fieldEnd": "2026-09-09",
+      "disclosureDate": "2026-09-10",
+      "sample": 3000,
+      "company": "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA",
+      "tradeName": "PODERDATA",
+      "contractors": []
+    },
+    "BR054202026": {
+      "protocol": "BR054202026",
+      "registeredAt": "2026-09-03",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-08",
+      "disclosureDate": "2026-09-09",
+      "sample": 5000,
+      "company": "PALVER CONSULTORIA E DESENVOLVIMENTO TECNOLOGICO LTDA.",
+      "tradeName": "PALVER",
+      "contractors": []
+    },
+    "BR067902026": {
+      "protocol": "BR067902026",
+      "registeredAt": "2026-09-02",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-08",
+      "sample": 2000,
+      "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
+      "tradeName": "NEXUS",
+      "contractors": []
+    },
     "BR078062026": {
       "protocol": "BR078062026",
       "registeredAt": "2026-08-20",
@@ -694,6 +792,28 @@
       "sample": 6000,
       "company": "JOTA JORNALISMO S/A",
       "tradeName": "JOTA JORNALISMO",
+      "contractors": []
+    },
+    "BR079322026": {
+      "protocol": "BR079322026",
+      "registeredAt": "2026-09-03",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-08",
+      "disclosureDate": "2026-09-09",
+      "sample": 1600,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": []
+    },
+    "BR079352026": {
+      "protocol": "BR079352026",
+      "registeredAt": "2026-09-03",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-09",
+      "sample": 1500,
+      "company": "BOAS IDEIAS INTELIGENCIA EM PESQUISA E ESTRATEGIA DIGITAL LTDA",
+      "tradeName": "BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.",
       "contractors": []
     },
     "BR087652026": {
