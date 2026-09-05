@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-04 18:22:26",
+  "sourceGeneratedAt": "2026-09-05 15:12:46",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -663,17 +663,6 @@
       "tradeName": "SECTRAL NEGOCIOS",
       "contractors": []
     },
-    "BR027932026": {
-      "protocol": "BR027932026",
-      "registeredAt": "2026-08-28",
-      "fieldStart": "2026-08-28",
-      "fieldEnd": "2026-09-01",
-      "disclosureDate": "2026-09-03",
-      "sample": 2000,
-      "company": "100% CIDADES PARTICIPACOES LTDA",
-      "tradeName": "100 CIDADES",
-      "contractors": []
-    },
     "BR034342026": {
       "protocol": "BR034342026",
       "registeredAt": "2026-08-22",
@@ -696,28 +685,6 @@
       "tradeName": "",
       "contractors": []
     },
-    "BR055192026": {
-      "protocol": "BR055192026",
-      "registeredAt": "2026-08-23",
-      "fieldStart": "2026-08-25",
-      "fieldEnd": "2026-08-27",
-      "disclosureDate": "2026-08-29",
-      "sample": 2100,
-      "company": "INSTITUTO VOX BRASIL OPINIAO E PESQUISAS LTDA",
-      "tradeName": "",
-      "contractors": []
-    },
-    "BR075612026": {
-      "protocol": "BR075612026",
-      "registeredAt": "2026-08-28",
-      "fieldStart": "2026-08-30",
-      "fieldEnd": "2026-09-02",
-      "disclosureDate": "2026-09-03",
-      "sample": 3000,
-      "company": "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA",
-      "tradeName": "PODERDATA",
-      "contractors": []
-    },
     "BR078062026": {
       "protocol": "BR078062026",
       "registeredAt": "2026-08-20",
@@ -727,17 +694,6 @@
       "sample": 6000,
       "company": "JOTA JORNALISMO S/A",
       "tradeName": "JOTA JORNALISMO",
-      "contractors": []
-    },
-    "BR079722026": {
-      "protocol": "BR079722026",
-      "registeredAt": "2026-08-25",
-      "fieldStart": "2026-08-25",
-      "fieldEnd": "2026-08-30",
-      "disclosureDate": "2026-08-31",
-      "sample": 5000,
-      "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
-      "tradeName": "ATLASINTEL",
       "contractors": []
     },
     "BR087652026": {

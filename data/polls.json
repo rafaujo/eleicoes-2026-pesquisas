@@ -448,8 +448,8 @@
             "cury": 34
           },
           "undecided": 26,
-          "resultSource": "https://noticias.uol.com.br/eleicoes/2026/09/04/pesquisa-presidente-2026-veja-como-estao-os-levantamentos-mais-recentes.ghtm",
-          "resultSourceLabel": "UOL — resultados publicados"
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
         }
       }
     },
@@ -487,9 +487,9 @@
             "zema": 2,
             "renan": 7
           },
-          "undecided": 6,
-          "resultSource": "https://noticias.uol.com.br/eleicoes/2026/09/04/pesquisa-presidente-2026-veja-como-estao-os-levantamentos-mais-recentes.ghtm",
-          "resultSourceLabel": "UOL — resultados publicados"
+          "undecided": 8,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
         },
         "runoff-lula-caiado": {
           "results": {
@@ -497,8 +497,8 @@
             "caiado": 45
           },
           "undecided": 12,
-          "resultSource": "https://noticias.uol.com.br/eleicoes/2026/09/04/pesquisa-presidente-2026-veja-como-estao-os-levantamentos-mais-recentes.ghtm",
-          "resultSourceLabel": "UOL — resultados publicados"
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
         },
         "runoff-lula-zema": {
           "results": {
@@ -506,8 +506,8 @@
             "zema": 40
           },
           "undecided": 17,
-          "resultSource": "https://noticias.uol.com.br/eleicoes/2026/09/04/pesquisa-presidente-2026-veja-como-estao-os-levantamentos-mais-recentes.ghtm",
-          "resultSourceLabel": "UOL — resultados publicados"
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
         },
         "runoff-lula-renan": {
           "results": {
@@ -515,8 +515,31 @@
             "renan": 37
           },
           "undecided": 19,
-          "resultSource": "https://noticias.uol.com.br/eleicoes/2026/09/04/pesquisa-presidente-2026-veja-como-estao-os-levantamentos-mais-recentes.ghtm",
-          "resultSourceLabel": "UOL — resultados publicados"
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "first-with-cury-marcal": {
+          "results": {
+            "lula": 38,
+            "flavio": 29,
+            "cury": 10,
+            "marcal": 3,
+            "caiado": 4,
+            "renan": 6,
+            "zema": 2
+          },
+          "undecided": 8,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-marcal": {
+          "results": {
+            "lula": 44,
+            "marcal": 40
+          },
+          "undecided": 16,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
         }
       }
     },
@@ -812,19 +835,6 @@
       "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-47-e-lula-42-em-2o-turno-diz-pesquisa/",
       "resultSourceLabel": "poder360.com.br — resultado publicado",
       "scenarios": {
-        "first-with-marcal": {
-          "results": {
-            "lula": 37,
-            "flavio": 38,
-            "marcal": 4,
-            "caiado": 3,
-            "renan": 3,
-            "zema": 1
-          },
-          "undecided": 12,
-          "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-47-e-lula-42-em-2o-turno-diz-pesquisa/",
-          "resultSourceLabel": "poder360.com.br — resultado publicado"
-        },
         "runoff-lula-flavio": {
           "results": {
             "lula": 42,
@@ -833,6 +843,20 @@
           "undecided": 11,
           "resultSource": "https://www.cnnbrasil.com.br/eleicoes/gerp-flavio-tem-47-no-2o-turno-lula-42/",
           "resultSourceLabel": "CNN Brasil — resultado publicado"
+        },
+        "first-with-cury-marcal": {
+          "results": {
+            "lula": 31,
+            "flavio": 32,
+            "cury": 1,
+            "marcal": 1,
+            "caiado": 2,
+            "renan": 3,
+            "zema": 1
+          },
+          "undecided": 30,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/gerp-presidente-agosto-2026-2/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
         }
       }
     },

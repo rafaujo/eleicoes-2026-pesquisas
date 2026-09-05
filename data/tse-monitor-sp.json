@@ -54,17 +54,6 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
-    "SP001522026": {
-      "protocol": "SP001522026",
-      "fieldStart": "2026-09-01",
-      "fieldEnd": "2026-09-03",
-      "disclosureDate": "2026-09-04",
-      "sample": 1600,
-      "company": "Futura Inteligência",
-      "tradeName": "Futura Inteligência",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "SP009592026": {
       "protocol": "SP009592026",
       "fieldStart": "2026-09-04",
