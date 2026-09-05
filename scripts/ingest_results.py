@@ -121,9 +121,11 @@ class TreeParser(HTMLParser):
 
 
 def walk(node: Node):
-    yield node
-    for child in node.children:
-        yield from walk(child)
+    stack = [node]
+    while stack:
+        current = stack.pop()
+        yield current
+        stack.extend(reversed(current.children))
 
 
 def has_class(node: Node, class_name: str) -> bool:
