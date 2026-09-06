@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-06 17:36:17",
+  "sourceGeneratedAt": "2026-09-06 21:18:56",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -119,6 +119,7 @@
     "BR017842026",
     "BR017922026",
     "BR017982026",
+    "BR018332026",
     "BR018522026",
     "BR018682026",
     "BR018712026",
@@ -530,6 +531,7 @@
     "BR080542026",
     "BR080632026",
     "BR080862026",
+    "BR080932026",
     "BR081092026",
     "BR081332026",
     "BR081812026",
@@ -695,6 +697,17 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR018332026": {
+      "protocol": "BR018332026",
+      "registeredAt": "2026-09-05",
+      "fieldStart": "2026-09-08",
+      "fieldEnd": "2026-09-11",
+      "disclosureDate": "2026-09-11",
+      "sample": 2002,
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR023222026": {
       "protocol": "BR023222026",
       "registeredAt": "2026-09-04",
@@ -816,6 +829,17 @@
       "tradeName": "BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.",
       "contractors": []
     },
+    "BR080932026": {
+      "protocol": "BR080932026",
+      "registeredAt": "2026-09-05",
+      "fieldStart": "2026-09-06",
+      "fieldEnd": "2026-09-11",
+      "disclosureDate": "2026-09-11",
+      "sample": 40500,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": []
+    },
     "BR087652026": {
       "protocol": "BR087652026",
       "registeredAt": "2026-08-16 18:21:09",
@@ -851,6 +875,17 @@
       "sample": 2400,
       "company": "Gerp",
       "tradeName": "Gerp",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR018332026": {
+      "protocol": "BR018332026",
+      "fieldStart": "2026-09-08",
+      "fieldEnd": "2026-09-11",
+      "disclosureDate": "2026-09-11",
+      "sample": 2002,
+      "company": "Datafolha",
+      "tradeName": "Datafolha",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -895,6 +930,17 @@
       "sample": 1500,
       "company": "Instituto Ideia",
       "tradeName": "Instituto Ideia",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR080932026": {
+      "protocol": "BR080932026",
+      "fieldStart": "2026-09-06",
+      "fieldEnd": "2026-09-11",
+      "disclosureDate": "2026-09-11",
+      "sample": 40500,
+      "company": "Veritá",
+      "tradeName": "Veritá",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

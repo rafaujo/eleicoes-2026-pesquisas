@@ -275,6 +275,7 @@
     "7cbd2ced70bb39a01245",
     "7d153134a260e2c531ab",
     "7de58bd08c49db22c117",
+    "7e5af2951759c403ae22",
     "7e73478a7a38d6324741",
     "7f245375bf665058f42a",
     "7f49be81ac14e10bc792",
@@ -404,9 +405,11 @@
     "b14b048f174e60fe40d1",
     "b18b9293839ea98e9b83",
     "b18dd57d3f0dc15a0892",
+    "b1b5b012b2c4a87d8c6b",
     "b1d1716aa74f39647f78",
     "b248c10d4f7e2c9185f3",
     "b2682fbf43dfc2a1b59a",
+    "b292050af3cb6ccb0842",
     "b2c4fe088dabdabfe9ec",
     "b39d751b6bcb125d39c8",
     "b3dfbeb95d43565ec300",
@@ -544,10 +547,12 @@
     "e8954f28cc7c8c128017",
     "e91e97de7c0290839b46",
     "e97d11fd5201b73bcefc",
+    "e9ac11a4336d7e193057",
     "eb16e6bcaa5da778f1b4",
     "eb222cf5f5cce0d3d041",
     "eb424e3c813653f04a5e",
     "ec1da35ef09bd532779c",
+    "ec41f54ab3c32ce90757",
     "ed08c90a6f830228a899",
     "ed0b857fe130876ecc39",
     "edab87914ec9d508bae5",
@@ -598,6 +603,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Veritá: Flávio tem 48,5% no 2º turno; Lula, 43,1% - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQWtjMXYwVHlrdDJWaWdwMjZuR1BweFhOdFlOLU5zMWU0blVpbXRVeDl0UV9PQS1Mc3VFVmVxQVJpWk4tUG51WGpxbHFMNFhpR2xYRW45aVo0dmt6Y3JiQ0VRTmZuSDBTYlVqbTYweUtaa25oZ2xOcnl0dFhEVFlNdy1xTGRiMmhh?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-09-06",
+      "pollster": "Veritá",
+      "key": "b1b5b012b2c4a87d8c6b"
+    },
     {
       "election": "governor-mg",
       "title": "Cleitinho lidera disputa pelo governo de MG, aponta Paraná Pesquisas - CNN Brasil",

@@ -64,6 +64,28 @@
       "tradeName": "Quaest",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP041892026": {
+      "protocol": "SP041892026",
+      "fieldStart": "2026-09-08",
+      "fieldEnd": "2026-09-11",
+      "disclosureDate": "2026-09-11",
+      "sample": 1610,
+      "company": "Datafolha",
+      "tradeName": "Datafolha",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP080902026": {
+      "protocol": "SP080902026",
+      "fieldStart": "2026-09-07",
+      "fieldEnd": "2026-09-10",
+      "disclosureDate": "2026-09-11",
+      "sample": 1680,
+      "company": "Paraná Pesquisas",
+      "tradeName": "Paraná Pesquisas",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
     }
   }
 }
