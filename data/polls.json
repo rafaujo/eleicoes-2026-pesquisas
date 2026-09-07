@@ -161,6 +161,87 @@
   ],
   "polls": [
     {
+      "id": 49,
+      "pollster": "Quaest",
+      "publication": "bnews.com.br",
+      "protocol": "BR017202026",
+      "published": "2026-09-07",
+      "start": "2026-09-03",
+      "end": "2026-09-06",
+      "field": "3–6 set",
+      "sample": 2004,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Presencial",
+      "resultSource": "https://www.bnews.com.br/noticias/politica/quaest-mostra-lula-na-lideranca-mas-flavio-encurta-distancia-e-cury-perde-forca-na-corrida-de-2026.html",
+      "resultSourceLabel": "bnews.com.br — resultado publicado",
+      "scenarios": {
+        "first-with-cury": {
+          "results": {
+            "lula": 36,
+            "flavio": 29,
+            "cury": 8,
+            "caiado": 3,
+            "zema": 2,
+            "renan": 3
+          },
+          "undecided": 18,
+          "resultSource": "https://www.bnews.com.br/noticias/politica/quaest-mostra-lula-na-lideranca-mas-flavio-encurta-distancia-e-cury-perde-forca-na-corrida-de-2026.html",
+          "resultSourceLabel": "bnews.com.br — resultado publicado"
+        },
+        "runoff-lula-cury": {
+          "results": {
+            "lula": 39,
+            "cury": 35
+          },
+          "undecided": 26,
+          "resultSource": "https://www.bnews.com.br/noticias/politica/pesquisa-quaest-segundo-turno-tem-lula-e-flavio-empatados-com-41.html",
+          "resultSourceLabel": "bnews.com.br — resultado publicado"
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 42,
+            "renan": 37
+          },
+          "undecided": 21,
+          "resultSource": "https://www.bnews.com.br/noticias/politica/pesquisa-quaest-segundo-turno-tem-lula-e-flavio-empatados-com-41.html",
+          "resultSourceLabel": "bnews.com.br — resultado publicado"
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 44,
+            "zema": 33
+          },
+          "undecided": 23,
+          "resultSource": "https://www.bnews.com.br/noticias/politica/pesquisa-quaest-segundo-turno-tem-lula-e-flavio-empatados-com-41.html",
+          "resultSourceLabel": "bnews.com.br — resultado publicado"
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 41,
+            "caiado": 38
+          },
+          "undecided": 21,
+          "resultSource": "https://www.bnews.com.br/noticias/politica/pesquisa-quaest-segundo-turno-tem-lula-e-flavio-empatados-com-41.html",
+          "resultSourceLabel": "bnews.com.br — resultado publicado"
+        },
+        "first-with-cury-marcal": {
+          "results": {
+            "lula": 36,
+            "flavio": 29,
+            "cury": 8,
+            "marcal": 1,
+            "caiado": 3,
+            "renan": 3,
+            "zema": 2
+          },
+          "undecided": 17,
+          "resultSource": "https://www.infomoney.com.br/politica/quaest-lula-tem-36-e-flavio-29-no-primeiro-turno-a-menos-de-um-mes-do-1o-turno/",
+          "resultSourceLabel": "infomoney.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 44,
       "pollster": "Datafolha",
       "publication": "g1.globo.com",

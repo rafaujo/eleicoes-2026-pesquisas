@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "seenKeys": [
     "0028f619701432a77502",
+    "0114ade22216b17c244e",
     "012933814da4c85c5a6e",
     "016a6b75dd865e7151c5",
     "0191fc7aab8c6a8d9cf2",
@@ -74,6 +75,7 @@
     "1c87b0b9f27691361ae4",
     "1cf090d19e0d9216b000",
     "1d083613cb4b629f5250",
+    "1d47f5c464d472480ced",
     "1d5c6fa8db2255b80d68",
     "1da805090de665133e7c",
     "1e8f222689c1b086805c",
@@ -220,6 +222,7 @@
     "62a1124300ffd3b92345",
     "62c9ca080098f726dd4a",
     "63bbc4650c458951984b",
+    "6443e75ba6a6373d6229",
     "646f36c1f774b1f60542",
     "648a2d4bda3ed572bc8a",
     "653faf359e25f05ec131",
@@ -301,6 +304,7 @@
     "86566aabc13f684bd8f3",
     "865e3d3989aeb39b0ccd",
     "86d4f7d6723415212031",
+    "86ece0079f9f8d628fc8",
     "873730a28f3870174b2a",
     "87373bd854980f4bb5b7",
     "873cb5836837a64faa42",
@@ -362,6 +366,7 @@
     "9f249cd5fc047ef07ae8",
     "9f3d6430231f6406a10d",
     "9f8478489609e63990ae",
+    "a0494ab2ac7fc91204bb",
     "a072886064da3adb90ab",
     "a0ea6c2c5a0a30eecc60",
     "a11eb460ce57be9f30fc",
@@ -387,6 +392,7 @@
     "a887a247e4f5ce599644",
     "a8b0c8f85ed583632b18",
     "a8e0eb95e37497769039",
+    "a9550cf981ac34b5d5f7",
     "aa2ad587d45fb721dd49",
     "aa39b2f262b3204f984b",
     "aa4541738eddfb1a4510",
@@ -564,6 +570,7 @@
     "ef0d0e2c5dce0d3a53a4",
     "ef31b6af5e6681e0ef3a",
     "ef4553ba866b6dae2e72",
+    "efb1a82984d962477618",
     "efbd3a84e6a3c5e1c485",
     "f053cfad97e70fa2251d",
     "f065bbc202cc54e1e7cd",
@@ -606,6 +613,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Quaest: Lula e Flávio Bolsonaro empatam numericamente em cenário de 2º turno - Folha de S.Paulo",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNcTJWSkZETG5ObHpOX0VpT2lNazdQdzBOVEpqTWhwZ2NoeTlCSURYU2hKMFZRSGNTalVvNUd5YTF2OEpHczNxV3FxcndVd2pvVXFTS2dMN1BPUWdIbDZLOWRXTGlzQm5Gcy1RVGYtNHY0MlpVaVMxQUV5UEJNaGdhbzhDU2Fsa3ZWTVZrU05lN3J3cnVWakhoMkpBNERhTk9LVnpLbndHSmpndW04bUdYUnJ4cG5LTEtYZnY4R292b0pua0E?oc=5",
+      "source": "Folha de S.Paulo",
+      "published": "2026-09-07",
+      "pollster": "Quaest",
+      "key": "a0494ab2ac7fc91204bb"
+    },
     {
       "election": "president-br",
       "title": "Veritá: Flávio tem 48,5% no 2º turno; Lula, 43,1% - CNN Brasil",
