@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-07 21:59:56",
+  "sourceGeneratedAt": "2026-09-08 04:31:13",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -686,17 +686,6 @@
       "tradeName": "ATLASINTEL",
       "contractors": []
     },
-    "BR017202026": {
-      "protocol": "BR017202026",
-      "registeredAt": "2026-09-01",
-      "fieldStart": "2026-09-03",
-      "fieldEnd": "2026-09-06",
-      "disclosureDate": "2026-09-07",
-      "sample": 2004,
-      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
-      "tradeName": "",
-      "contractors": []
-    },
     "BR018332026": {
       "protocol": "BR018332026",
       "registeredAt": "2026-09-05",
@@ -897,17 +886,6 @@
       "sample": 2000,
       "company": "Futura Inteligência",
       "tradeName": "Futura Inteligência",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR039312026": {
-      "protocol": "BR039312026",
-      "fieldStart": "2026-08-30",
-      "fieldEnd": "2026-09-01",
-      "disclosureDate": "2026-09-07",
-      "sample": 400,
-      "company": "Instituto de Pesquisa Multipla",
-      "tradeName": "Instituto de Pesquisa Multipla",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
