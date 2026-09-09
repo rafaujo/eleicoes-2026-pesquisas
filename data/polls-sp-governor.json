@@ -98,6 +98,45 @@
   ],
   "polls": [
     {
+      "id": 13,
+      "pollster": "Quaest",
+      "publication": "cartacapital.com.br",
+      "protocol": "SP009592026",
+      "published": "2026-09-08",
+      "start": "2026-09-04",
+      "end": "2026-09-07",
+      "field": "4–7 set",
+      "sample": 1800,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.cartacapital.com.br/politica/quaest-tarcisio-tem-42-na-disputa-pelo-governo-de-sao-paulo-haddad-27/",
+      "resultSourceLabel": "cartacapital.com.br — resultado publicado",
+      "scenarios": {
+        "first-pre-campaign": {
+          "results": {
+            "tarcisio": 42,
+            "haddad": 27,
+            "vera": 1,
+            "machado": 1,
+            "vivian": 1
+          },
+          "undecided": 27,
+          "resultSource": "https://www.cartacapital.com.br/politica/quaest-tarcisio-tem-42-na-disputa-pelo-governo-de-sao-paulo-haddad-27/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 48,
+            "haddad": 31
+          },
+          "undecided": 21,
+          "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/09/08/quaest-sp-governador-8-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 12,
       "pollster": "Vox Brasil",
       "publication": "poder360.com.br",
