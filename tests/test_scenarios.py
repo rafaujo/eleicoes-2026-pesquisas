@@ -113,6 +113,11 @@ class ScenarioDataTests(unittest.TestCase):
             "BR079722026",  # AtlasIntel/Bloomberg
             "BR027932026",  # Futura/Apex
             "BR075612026",  # PoderData/Aya
+            "BR094262026",  # Veritá
+            "BR067902026",  # Nexus/BTG
+            "BR002512026",  # GERP
+            "BR079352026",  # Meio/Ideia
+            "BR054202026",  # Palver
         }.issubset(protocols))
 
 
