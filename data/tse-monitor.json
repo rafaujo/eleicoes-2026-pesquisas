@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-09 15:24:24",
+  "sourceGeneratedAt": "2026-09-09 23:03:32",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -145,6 +145,7 @@
     "BR021092026",
     "BR021132026",
     "BR021392026",
+    "BR021422026",
     "BR021542026",
     "BR022282026",
     "BR022442026",
@@ -178,6 +179,7 @@
     "BR028472026",
     "BR028742026",
     "BR028972026",
+    "BR029032026",
     "BR029042026",
     "BR029122026",
     "BR029182026",
@@ -237,6 +239,7 @@
     "BR035832026",
     "BR035942026",
     "BR035982026",
+    "BR036072026",
     "BR036272026",
     "BR036382026",
     "BR036562026",
@@ -266,6 +269,7 @@
     "BR040542026",
     "BR040592026",
     "BR040702026",
+    "BR040762026",
     "BR040892026",
     "BR041032026",
     "BR041182026",
@@ -686,6 +690,17 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR021422026": {
+      "protocol": "BR021422026",
+      "registeredAt": "2026-09-07",
+      "fieldStart": "2026-09-08",
+      "fieldEnd": "2026-09-10",
+      "disclosureDate": "2026-09-13",
+      "sample": 1500,
+      "company": "BADRA COMUNICACAO LTDA",
+      "tradeName": "BADRA COMUNICACAO",
+      "contractors": []
+    },
     "BR023222026": {
       "protocol": "BR023222026",
       "registeredAt": "2026-09-04",
@@ -703,6 +718,17 @@
       "fieldStart": "2026-08-25",
       "fieldEnd": "2026-08-29",
       "disclosureDate": "2026-08-30",
+      "sample": 1100,
+      "company": "SECTRAL SERVICOS E COMERCIO EM GERAL LTDA",
+      "tradeName": "SECTRAL NEGOCIOS",
+      "contractors": []
+    },
+    "BR029032026": {
+      "protocol": "BR029032026",
+      "registeredAt": "2026-09-08",
+      "fieldStart": "2026-09-08",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-14",
       "sample": 1100,
       "company": "SECTRAL SERVICOS E COMERCIO EM GERAL LTDA",
       "tradeName": "SECTRAL NEGOCIOS",
@@ -728,6 +754,28 @@
       "sample": 1200,
       "company": "IPAT - INSTITUTO DE PESQUISAS A TRIBUNA LTDA",
       "tradeName": "",
+      "contractors": []
+    },
+    "BR036072026": {
+      "protocol": "BR036072026",
+      "registeredAt": "2026-09-08",
+      "fieldStart": "2026-09-10",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-14",
+      "sample": 2004,
+      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
+    "BR040762026": {
+      "protocol": "BR040762026",
+      "registeredAt": "2026-09-08",
+      "fieldStart": "2026-09-11",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-14",
+      "sample": 2000,
+      "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
+      "tradeName": "NEXUS",
       "contractors": []
     },
     "BR044422026": {

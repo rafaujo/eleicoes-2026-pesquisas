@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-08 04:31:13",
-  "syncedAt": "2026-09-08T04:31:13+00:00",
+  "generatedAt": "2026-09-09 23:03:32",
+  "syncedAt": "2026-09-09T23:03:32+00:00",
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
   "pesqEle": "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml",
   "resourceUrls": {
@@ -30,6 +30,22 @@
           "resourceOrigin": ""
         }
       ]
+    },
+    "BR002512026": {
+      "protocol": "BR002512026",
+      "registeredAt": "2026-09-02",
+      "fieldStart": "2026-09-03",
+      "fieldEnd": "2026-09-08",
+      "disclosureDate": "2026-09-08",
+      "sample": 2400,
+      "company": "GERP MERCADOLOGIA LTDA",
+      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
+      "statistician": "CLENILSON SANTOS DE OLIVEIRA",
+      "conre": "8153 - 2ª",
+      "researchCost": 15000.0,
+      "methodology": "A população pesquisada é definida como pessoas maiores de 16 anos, eleitoras e residentes em todas as regiões do Brasil. A pesquisa é do tipo QUANTITATIVA e os entrevistados serão selecionados por cotas em função das variáveis sexo, faixa etária, renda do chefe do domicílio e área de residência. Os dados para definição das cotas foram obtidos de publicações do IBGE e da Estatística do Eleitorado do TSE. Os dados serão tabulados em função das variáveis sócio-econômicas e agregados segundo as diversas áreas de residência de interesse.",
+      "samplingPlan": "Com a realização de 2400 (duas mil e quatrocentas) entrevistas, dentro de um universo considerado infinito e um nível de confiança de 95,55%, a margem de erro para projeções dos dados é estimada em 2,04 pontos percentuais, nos casos limites em que as variáveis assumam o percentual de 50%. O resultado projetado para a população pesquisada vai de um mínimo de 47,96% a um máximo de 52,04%. Para o mesmo número de entrevistas, a margem de erro tende a se estreitar quando os percentuais se aproximam de 0% ou de 100%. Se a variável incidir em 10%, por exemplo, a margem de erro é estimada em 1,22 pontos percentuais. E o resultado projetado vai de um mínimo de 8,78% a um máximo de 91,22%. O Instituto Gerp utiliza dois desvios padrões para o cálculo da margem de erro em todos os seus projetos de pesquisa, o que representa um nível de confiança de 95,55%, confiando ao trabalho uma segurança ainda maior do que o normalmente utilizado pelo mercado. Está prevista eventual ponderação para correção das variáveis área de residência, sexo, faixa etária e renda do chefe do domicílio, caso ocorram diferenças superiores a 2 pontos percentuais entre o previsto na amostra e a coleta de dados realizada. O plano amostral a ser cumprido, pelo entrevistador, é o definido a seguir: IDADE/SEXO: 16-24/masculino (12,45%), 16-24/feminino (11,45%), 25-34/masculino (19,59%), 25-34/feminino (18,97%), 35-44/masculino (20,24%), 35-44/feminino (19,84%), 45- 59/masculino (25,60%), 45-59/feminino (25,49%), 60 ou +/masculino (22,11%), 60 ou +/feminino (24,26%) RENDA DO CHEFE DO DOMICÍLIO: Até 01 SM (22,64%), De 01 a 02 SM (23,16%), De 02 a 05 SM (32,90%), De 05 a 10 SM (13,65%), De 10 a 20 SM (5,30%), Mais de 20 SM (2,35%).",
+      "contractors": []
     },
     "BR010842026": {
       "protocol": "BR010842026",
@@ -451,6 +467,22 @@
       "samplingPlan": "Universo: eleitoras e eleitores com 16 anos de idade ou mais. Tamanho da amostra: 2.400 entrevistas. Técnica de amostragem: amostra aleatória simples a partir de banco de dados de números telefônicos fixos e celulares. A amostra é estratificada por região geográfica com base no CEP associado a cada número telefônico. Na apresentação final do resultado da pesquisa os dados serão ponderados com base nos percentuais mencionados abaixo, caso ocorram diferenças entre os percentuais previstos na amostra e a coleta de dados realizada. Fonte pública dos dados: TSE (julho 2026) e IBGE (Censo 2010). Conforme informações obtidas do Instituto Brasileiro de Geografia e Estatística, o IBGE não divulgou ¿ e não tem previsão de data para divulgação do perfil econômico da população brasileira; portanto, os dados quanto ao nível econômico obtidos no Censo 2022 não podem ser utilizados, pois não foram publicados (https://censo2022.ibge.gov.br/panorama/). Os números relativos a sexo e faixa etária são: Masculino: 47,2%; Feminino: 52,8%. (Fonte: TSE ¿ Perfil do eleitorado mensal ¿ julho de 2026: https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p0_pais=Brasil&session=103819590651000). Para a distribuição por faixa etária, os dados são: 16 a 24 anos, 12,1%; 25 a 44 anos, 38,7%; 45 a 59 anos, 25,6%; 60 anos ou mais, 23,7%. (Fonte: TSE ¿ Perfil do eleitorado mensal ¿ julho de 2026: https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_faixa_etaria&p24_metricas=E&p24_back=22&clear=24&session=103819590651000). Para a distribuição por nível de instrução, os dados são: De analfabeto até ensino fundamental completo, 37%; Ensino médio completo ou incompleto, 46%; Ensino superior completo ou incompleto, 17%. Fonte: TSE ¿ Perfil do eleitorado mensal ¿ julho de 2026: https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_faixa_etaria&p24_metricas=E&p24_back=22&clear=24&session=103819590651000). Para a distribuição por regiões geográficas serão: Centro-Oeste: 8%; Nordeste: 28%; Norte: 8%; Sudeste: 42%; Sul: 14%. (Fonte: TSE ¿ Perfil do eleitorado mensal ¿ julho de 2026: https://sig.tse.jus.br/ords/dwapr/r/seai/sig-eleitor-eleitorado-mensal/cruzamento-eleitorado-mensal?p24_cruzamento_1=ds_faixa_etaria&p24_metricas=E&p24_back=22&clear=24&session=103819590651000). Para a distribuição por renda: Sem rendimentos até 2 SM: 45,8%, de mais de 2 a 5 SM: 32,9%, de mais de 5 SM: 21,3%. (Fonte: IBGE ¿ Censo 2010 - https://cidades.ibge.gov.br/brasil/pesquisa/23/24304?detalhes=true). Serão realizadas entrevistas nas seguintes unidades da Federação: Acre, Alagoas, Amazonas, Amapá, Bahia, Ceará, Distrito Federal, Espírito Santo, Goiás, Maranhão, Minas Gerais, Mato Grosso, Mato Grosso do Sul, Pará, Paraíba, Paraná, Pernambuco, Piauí, Rio de Janeiro, Rio Grande do Norte, Rio Grande do Sul, Rondônia, Roraima, Santa Catarina, São Paulo, Sergipe e Tocantins. A relação completa dos municípios pesquisados será encaminhada a este tribunal após a realização da pesquisa, conforme a Resolução 23.600/2019 do TSE. Margem de Erro: A margem de erro máxima prevista é de 2 pontos percentuais para mais ou para menos. Os intervalos de confiança serão calculados considerando os resultados obtidos para um nível de confiança de 95%.",
       "contractors": []
     },
+    "BR054202026": {
+      "protocol": "BR054202026",
+      "registeredAt": "2026-09-03",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-08",
+      "disclosureDate": "2026-09-09",
+      "sample": 5000,
+      "company": "PALVER CONSULTORIA E DESENVOLVIMENTO TECNOLOGICO LTDA.",
+      "tradeName": "PALVER",
+      "statistician": "Renan Junio Gomes Machado",
+      "conre": "11556",
+      "researchCost": 30000.0,
+      "methodology": "A metodologia utilizada é survey quantitativo online por questionário estruturado com amostragem não-probabilística, baseada em recrutamento por meio de anúncios em plataformas de redes sociais, controlada por cotas de sexo, faixa etária e geografia, e com os dados submetidos a ajuste de pesos iterativo ancorado em dados oficiais do IBGE e TSE para refletir o perfil da população brasileira com respeito a sexo, faixa etária, escolaridade, renda domiciliar, região, e voto no 2o turno da eleição presidencial de 2022.",
+      "samplingPlan": "O público-alvo do levantamento será composto por brasileiros a partir dos 16 anos. Os dados brutos serão submetidos a um processo iterativo de calibração (raking), ajustando as proporções da amostra às características da população. As variáveis socioeconômicas utilizarão como referência a Pesquisa Nacional por Amostras de Domicílios Contínua (microdados da 5ª entrevista, 2024). Fixando a cota de homens em 48,12% e mulheres em 51,88%. Para as idades, os pesos acompanharão os grupos de 16 a 34 anos (36,07%), 35 a 59 anos (43,54%), 60 anos ou mais (20,40%). O grau de instrução será calibrado para refletir respondentes com até o ensino médio incompleto (43,82%), com médio completo ou superior incompleto (38,33%) e com superior completo ou mais (17,85%). Já a renda familiar mensal estratificará a amostra em até R$3.242 (até 2 salários-mínimos, 42,12%), mais de R$3.242 até R$8.105 (mais de 2 até 5 salários-mínimos, 39,56%), mais de R$8.105 (mais de 5 salários-mínimos, 18,31%). A convergência do algoritmo admitirá variações pontuais de até 3 pontos porcentuais frente às cotas estabelecidas, e a soma total das proporções poderá flutuar entre 99% e 101% devido aos arredondamentos analíticos. O estudo trabalhará com nível de confiança de 95% e margem de erro amostral máxima de +/- 4 pontos percentuais, assumindo-se um modelo em que as observações são permutáveis ou, equivalentemente, um modelo que assume que a amostra tenha sido selecionada como uma Amostragem Aleatória Simples. Uma vez que os dados forem coletados e processados, a margem de erro de cada estimativa será calculada, considerando-se mais elementos do processo de recrutamento e ajuste da amostra, como a utilização de cotas por sexo, idade e geografia e a calibração da amostra. A margem de erro amostral apenas incorpora a incerteza das estimativas decorrentes da variabilidade amostral sob o modelo adotado. Outras fontes de erro, como erro de cobertura, não-resposta, erro de mensuração ou mesmo erro de seleção sistemáticas, devido a natureza do recrutamento da amostra, não são incorporados pela margem de erro amostral reportada.",
+      "contractors": []
+    },
     "BR055192026": {
       "protocol": "BR055192026",
       "registeredAt": "2026-08-23",
@@ -627,6 +659,22 @@
         }
       ]
     },
+    "BR067902026": {
+      "protocol": "BR067902026",
+      "registeredAt": "2026-09-02",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-08",
+      "sample": 2000,
+      "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
+      "tradeName": "NEXUS",
+      "statistician": "Neale Ahmed El Dash",
+      "conre": "8656-A",
+      "researchCost": 16488889.0,
+      "methodology": "Pesquisa quantitativa telefônica realizada com população brasileira a partir de 16 anos e com título de eleitor, em um questionário estruturado, para avaliação do cenário político eleitoral. Os entrevistados são selecionados por sorteio em uma amostra representativa do eleitorado brasileiro com acesso a telefonia fixa e móvel. Todas as entrevistas são realizadas por um time de pesquisadores experientes com pesquisas de opinião e treinados especificamente para o projeto.",
+      "samplingPlan": "Realização de 2.000 entrevistas em uma amostra representativa do eleitorado brasileiro (a partir de 16 anos com título de eleitor) selecionados de modo aleatório a partir do cadastro de todos os telefones fixos e móveis existentes de acordo com a Agência Nacional de Telecomunicações (Anatel). A técnica de seleção dos entrevistados é a aleatória estratificada por DDD, em uma amostra com margem de erro estimada de 2 pontos percentuais para mais ou para menos, considerando um intervalo de confiança de 95%. A amostra é controlada a partir de cinco variáveis: (a) região; (b) tipo de telefonia (fixo e móvel), (c) sexo, (d) idade e (e) escolaridade. Para construção da amostra são usados como referência os dados da Pesquisa Nacional por Amostragem de Domicílios Contínua (PNADc), do suplemento anual acumulado da 1º Visita de 2025, e dados do TSE de junho de 2026 para distribuição de sexo,idade e região. A distribuição amostral esperada é a seguinte: para escolaridade, até Fundamental Completo (34%), até Médio Completo (41%), Superior Incompleto ou mais (25%); para faixa etária, 16 a 24 anos (12%), 25 a 34 anos (19%), 35 a 44 anos (20%), 45 a 59 anos (26%), 60 anos ou mais (24%); para região, Centro-Oeste (8%), Nordeste (28%), Norte (8%), Sudeste (42%), Sul (14%); e para sexo, Homem (47%), Mulher (53%). Ao final da coleta, será aplicado um fator de ponderação nos resultados para correção de eventuais diferenças entre o planejado na amostra e o observado pelo trabalho de campo, levando em conta todas as variáveis descritas acima, além de variáveis como pessoas dentro e fora da força de trabalho e renda. A relação completa dos municípios pesquisados será encaminhada a este tribunal até o sétimo dia seguinte à data de registro da pesquisa, conforme a Resolução 23.600/2019 do TSE, art.2º §7º",
+      "contractors": []
+    },
     "BR068682026": {
       "protocol": "BR068682026",
       "registeredAt": "2026-08-07",
@@ -796,6 +844,22 @@
           "resourceOrigin": ""
         }
       ]
+    },
+    "BR079352026": {
+      "protocol": "BR079352026",
+      "registeredAt": "2026-09-03",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-07",
+      "disclosureDate": "2026-09-09",
+      "sample": 1500,
+      "company": "BOAS IDEIAS INTELIGENCIA EM PESQUISA E ESTRATEGIA DIGITAL LTDA",
+      "tradeName": "BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.",
+      "statistician": "ADRIANA APARECIDA MARCAL",
+      "conre": "10524",
+      "researchCost": 27600.0,
+      "methodology": "Pesquisa quantitativa com aplicação de questionário estruturado, através pesquisa telefônica, junto a uma parcela representativa do eleitorado de todo o país.",
+      "samplingPlan": "Representativo do eleitorado da área em estudo selecionado por amostragem através do método de probabilidade proporcional ao tamanho (PPT), com a técnica de Random Digit Dialing (RDD), que consiste na geração aleatória de números de telefone, assegurando que todos os indivíduos da população-alvo tenham probabilidade conhecida e diferente de zero de serem selecionados, o que permite o cálculo estatístico do tamanho da amostra, da margem de erro e dos intervalos de confiança. Considerando a população com 16 anos ou mais residente na localidade pesquisada em função das seguintes variáveis: Gênero: Masculino: 47%; Feminino: 53%; Grupos de idade: 16-24: 13%; 25-34: 20%; 35-44: 21%; 45-59: 25%; 60 anos e mais: 20%; Nível de escolaridade: Fundamental: 38%; Médio: 40% e Superior: 22%; Nível Econômico: Economicamente Ativo: 62%, Não Economicamente Ativo: 38%. Ponderação dos resultados: Está prevista eventual ponderação para correção das variáveis sexo e idade com base nos percentuais anteriormente mencionados, caso ocorram diferenças superiores a 2,5 pontos percentuais entre o previsto na amostra e a coleta de dados realizada. Para as variáveis de grau de instrução e nível econômico do entrevistado, o fator previsto para ponderação é 1 (resultados obtidos em campo). Margem de Erro: A margem de erro máxima estimada, considerando um modelo de amostragem aleatório simples, é de 2,5% para mais ou para menos e o nível de confiança é de 95%. Fonte dos dados: As proporções das variáveis são definidas a partir das pesquisas PNAD 2025 e Censo 2022/IBGE, TSE 2025.",
+      "contractors": []
     },
     "BR079722026": {
       "protocol": "BR079722026",
@@ -1004,6 +1068,22 @@
       "researchCost": 16488889.0,
       "methodology": "Pesquisa quantitativa telefônica realizada com população brasileira a partir de 16 anos e com título de eleitor, em um questionário estruturado, para avaliação do cenário político eleitoral. Os entrevistados são selecionados por sorteio em uma amostra representativa do eleitorado brasileiro com acesso a telefonia fixa e móvel. Todas as entrevistas são realizadas por um time de pesquisadores experientes com pesquisas de opinião e treinados especificamente para o projeto.",
       "samplingPlan": "Realização de 2.000 entrevistas em uma amostra representativa do eleitorado brasileiro (a partir de 16 anos com título de eleitor) selecionados de modo aleatório a partir do cadastro de todos os telefones fixos e móveis existentes de acordo com a Agência Nacional de Telecomunicações (Anatel). A técnica de seleção dos entrevistados é a aleatória estratificada por DDD, em uma amostra com margem de erro estimada de 2 pontos percentuais para mais ou para menos, considerando um intervalo de confiança de 95%. A amostra é controlada a partir de cinco variáveis: (a) região; (b) tipo de telefonia (fixo e móvel), (c) sexo, (d) idade e (e) escolaridade. Para construção da amostra são usados como referência os dados da Pesquisa Nacional por Amostragem de Domicílios Contínua (PNADc), do suplemento anual acumulado da 1º Visita de 2025, e dados do TSE de junho de 2026 para distribuição de sexo,idade e região. A distribuição amostral esperada é a seguinte: para escolaridade, até Fundamental Completo (34%), até Médio Completo (41%), Superior Incompleto ou mais (25%); para faixa etária, 16 a 24 anos (12%), 25 a 34 anos (19%), 35 a 44 anos (20%), 45 a 59 anos (26%), 60 anos ou mais (24%); para região, Centro-Oeste (8%), Nordeste (28%), Norte (8%), Sudeste (42%), Sul (14%); e para sexo, Homem (47%), Mulher (53%). Ao final da coleta, será aplicado um fator de ponderação nos resultados para correção de eventuais diferenças entre o planejado na amostra e o observado pelo trabalho de campo, levando em conta todas as variáveis descritas acima, além de variáveis como pessoas dentro e fora da força de trabalho e renda. A relação completa dos municípios pesquisados será encaminhada a este tribunal até o sétimo dia seguinte à data de registro da pesquisa, conforme a Resolução 23.600/2019 do TSE, art.2º §7º",
+      "contractors": []
+    },
+    "BR094262026": {
+      "protocol": "BR094262026",
+      "registeredAt": "2026-08-31",
+      "fieldStart": "2026-09-01",
+      "fieldEnd": "2026-09-04",
+      "disclosureDate": "2026-09-06",
+      "sample": 3840,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "statistician": "Guilherme Alvarenga Laia",
+      "conre": "10699",
+      "researchCost": 295680.0,
+      "methodology": "Estudo quantitativo voltado às Eleições 2026, realizado por meio de entrevistas individuais, aplicadas mediante questionário eletrônico estruturado e Unidade Automatizada de Respostas Audíveis e Auditáveis, por meio de ligações para telefones móveis (celulares). A inteligência artificial é empregada exclusivamente para a transcrição automatizada das respostas em áudio, não interferindo na formulação das perguntas, na condução das entrevistas, na coleta das informações, na interpretação das respostas ou no tratamento estatístico dos dados. A participação dos eleitores é voluntária, espontânea e não remunerada. As respostas são prestadas por autodeclaração, sendo, em sua maioria, registradas por meio de códigos numéricos correspondentes às alternativas previamente definidas no questionário. A utilização de sistema eletrônico automatizado para a coleta e o registro das respostas proporciona elevado nível de padronização operacional, reduz a possibilidade de interferência humana durante a realização das entrevistas, amplia a rastreabilidade e a auditabilidade de todo o processo de coleta e contribui para maior precisão, consistência e confiabilidade dos dados obtidos. O plano amostral foi elaborado para assegurar a representatividade estatística do eleitorado do Brasil, observando critérios técnicos de seleção, distribuição e ponderação da amostra, quando aplicáveis.",
+      "samplingPlan": "A pesquisa foi planejada para produzir uma amostra estatisticamente representativa do eleitorado DO BRASIL, utilizando o método de Probabilidade Proporcional ao Tamanho (PPT), com plano amostral em múltiplos estágios. Na primeira etapa, o país é dividido em macrorregiões, de forma a assegurar adequada distribuição territorial da amostra e representação das diferentes características geográficas, demográficas e eleitorais. Na segunda etapa, os municípios de cada estrato são ordenados segundo seu porte populacional e eleitoral e sorteados. Na terceira etapa, os respondentes são selecionados entre os eleitores aptos residentes nos municípios sorteados, observando-se a distribuição proporcional da amostra e as cotas estabelecidas para as variáveis de sexo, faixa etária, grau de instrução e nível econômico. As cotas são estabelecidas para a pesquisa completa, considerando a composição do eleitorado e os parâmetros oficiais de referência, não sendo aplicadas isoladamente a cada município selecionado. SEXO E FAIXA ETÁRIA - Fonte: Tribunal Superior Eleitoral (TSE), Perfil do Eleitorado, junho de 2026. Feminino de 16 a 34 anos: 16%; Masculino de 16 a 34 anos: 15,1%; Feminino de 35 a 54 anos: 19,9%; Masculino de 35 a 54 anos: 18,1%; Feminino com 55 anos ou mais: 16,9%; Masculino com 55 anos ou mais: 14%. Os parâmetros de sexo e idade têm como referência o cadastro eleitoral brasileiro atualizado pelo Tribunal Superior Eleitoral, considerando o universo de eleitores aptos com 16 anos ou mais. GRAU DE INSTRUÇÃO - Fonte: IBGE - Pesquisa Nacional por Amostra de Domicílios Contínua - PNAD Contínua, 1º trimestre de 2026. A distribuição é: sem instrução 4,2%; ensino fundamental incompleto ou equivalente 23,8%; ensino fundamental completo ou equivalente 8,2%; ensino médio incompleto ou equivalente 8%; ensino médio completo ou equivalente 32,3%; ensino superior incompleto ou equivalente 5,5%; ensino superior completo 18%. Para não confundir os respondentes as faixas de escolaridade no questionário foram agrupadas em 3 faixas: até ensino fundamental incompleto e completo, ensino médio incompleto e completo e superior incompleto, completo ou mais. A PNAD Contínua é utilizada como referência por constituir a fonte oficial mais atualizada para a mensuração do nível de instrução da população brasileira, sua utilização também corrige limitações decorrentes da ausência de atualização obrigatória e contínua das informações de escolaridade no cadastro eleitoral do Tribunal Superior Eleitoral. NÍVEL ECONÔMICO - RENDA FAMILIAR DO DOMICÍLIO - Fonte: IBGE - PNAD Contínua Anual 2025. Considera-se a renda domiciliar total, compreendendo rendimentos provenientes de trabalho formal e informal, aposentadorias, pensões, benefícios sociais e demais fontes de renda existentes no domicílio. observando-se a seguinte distribuição: renda familiar de até 2 salários-mínimos 46,7%; de 2 a 5 salários-mínimos 34,6%, acima de 5 salários-mínimos 18,7%. PONDERAÇÃO E CALIBRAÇÃO DA AMOSTRA - Prevê-se eventual ponderação das variáveis de sexo, faixa etária, grau de instrução e nível econômico, caso sejam verificadas diferenças relevantes entre a distribuição da amostra efetivamente coletada e os parâmetros populacionais de referência adotados. Inicialmente, o fator de ponderação é igual a 1 (um), podendo ser recalculado sempre que necessário para assegurar a representatividade estatística da amostra. INTERVALO DE CONFIANÇA E MARGEM DE ERRO - O intervalo de confiança adotado é de 95%, com margem máxima estimada de erro de aproximadamente 2 pontos percentuais, para mais ou para menos, sobre os resultados do total da amostra, calculada segundo o modelo de amostragem aleatória simples e a hipótese de máxima variabilidade.",
       "contractors": []
     },
     "BR099562026": {

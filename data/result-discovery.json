@@ -13,6 +13,7 @@
     "01d2e2b16218e509bd66",
     "01e964284608471a6504",
     "02189c06bcd36b69dd43",
+    "022db984a8cc7d6f9d7c",
     "026a10bee09561fe5fa0",
     "0283ca5f3a49dd91dafb",
     "02dbda2a19b95df332f5",
@@ -95,6 +96,7 @@
     "1f10d0c4a5eee45273a2",
     "1f4bcebfb554173d52d9",
     "1fc2a647d4780d9d74f5",
+    "1fe3ab64699daa75a9e1",
     "201c52806bfbfc4dc59f",
     "20240336cfd15fb48a8b",
     "20593b42533b9a77f35c",
@@ -174,6 +176,7 @@
     "3afa54a6a1d69fe14d71",
     "3afde6c86d23a4c7846d",
     "3b2e34f8fcf43b163f2f",
+    "3b5971dd2f9456b6708a",
     "3b79f277f63f67fa8695",
     "3b9f2210bfa611722a87",
     "3c1457f674966c810f4a",
@@ -343,6 +346,7 @@
     "7e3722fdc1c4727556e6",
     "7e5af2951759c403ae22",
     "7e73478a7a38d6324741",
+    "7e8513b5b2ce4b567c21",
     "7ea455d031576e054872",
     "7f245375bf665058f42a",
     "7f49be81ac14e10bc792",
@@ -432,6 +436,7 @@
     "9de8b01dfea44ef80de5",
     "9e3dbc4e13c5c493a59e",
     "9e4447cfe6b435a97184",
+    "9e7f94a1b4a008e6537f",
     "9e81c176cadef9d21679",
     "9ed78bbadce13409aaec",
     "9ee6bbcd91f24664ab6b",
@@ -542,6 +547,7 @@
     "bdd9e2ebe6850309c932",
     "be660b93b3f31f5fbfe2",
     "bee02b2283c42716a18c",
+    "bfa3b9a3108e5a0ed8cd",
     "bffd511f804d31dafbb1",
     "bffe0d940cf67589f230",
     "c09dab1b35f7c9a841aa",
@@ -557,8 +563,10 @@
     "c3c45dd97ec9a18f5560",
     "c43cdb53c578b3c298bc",
     "c49256c721c9b4ad5232",
+    "c4e8e153b93d8935a86a",
     "c5021c496cf6967a1308",
     "c56b3e48ba97247a85de",
+    "c61d6baa9e6844e02c5e",
     "c6763d9f6e61d0036413",
     "c7c4162be9a97b2cda63",
     "c8db0239f4d213769f0a",
@@ -732,26 +740,27 @@
     "fc9e4de36a8c3a77c670",
     "fd54769a89702cd002c8",
     "fd83aba51196ef940511",
+    "ffd9e965068c0bdfa7e3",
     "fffc7e3084915a3f157a"
   ],
   "pending": [
     {
-      "election": "president-br",
-      "title": "Meio/Ideia: Lula e Flávio Bolsonaro empatam nos dois turnos - Congresso em Foco",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaU01SzBuanI3U0VfRndFZFFmbUtnVXhfVld4X3NSdWl1U091Z3JCby1keGNtdmFYRDJud0p3d3I1anpLRTJSNzEwZldXY3djTGx3U3dXeVJXLVd6MUZzUDd2eFBPeFBRbkhjbVREYnkzNkIxN0E4RnFNOHpvVGlKOHhkdFhCdjZ0U0JwV1NJY0I0TEdNX0R1SjlENHhBRzJmd2FqSC1UUDdpZlla?oc=5",
-      "source": "Congresso em Foco",
-      "published": "2026-09-08",
-      "pollster": "Ideia",
-      "key": "fa11c44d7655cd4ae9fd"
+      "election": "governor-sp",
+      "title": "Tarcísio tem 42% contra 27% de Haddad no 1º turno, aponta pesquisa Quaest - CBN São José dos Campos e Vale",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNjZGcXRkS1BzMXhIRDFuQ1ZGaHZST080a25kaW1pSzlQMTVONE44ZzBicURrNmtSTkVhZGduWUxENWdqVWN4Tzd6YjJYOHNBRG1UZF8yMGk0MXJwZEUtSnpOcHdzMlhFRmwxekVEOUJENGxRVzJzN3V1VVFza3BXOGcyeWJtVjVtWERzZWF5dWI4bC1UXzZQaWxxSkZ5bUE?oc=5",
+      "source": "CBN São José dos Campos e Vale",
+      "published": "2026-09-09",
+      "pollster": "Quaest",
+      "key": "71abe39dc6ae625a7b78"
     },
     {
       "election": "governor-mg",
-      "title": "Atlas: Cleitinho tem 41%; Patrus, 30%; e Kalil, 9% no 1º turno em MG - CNN Brasil",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVzF2T0tJLVVFMk1tSDZnZ25EbEQtcGlJVVlrc092RnY3RHdBSDBiUThnSS1uZDZNQ1NIdTVWbFlxTWFNUEEzaEROeHhqQ0s2VTg0WV9OaWhwOGZLX09WUndWRG85SzZpaEp6SHZWbG9nV3lXalJuSS1jTUhYNV82WnRlZS0weVlLRGNQd3pkUlk0S3ZrRVlERTRnSUJIVTc2?oc=5",
-      "source": "CNN Brasil",
-      "published": "2026-09-08",
-      "pollster": "AtlasIntel",
-      "key": "b3c58cb9ce0453f0e21e"
+      "title": "Quaest: Cleitinho lidera com 32%; Kalil e Patrus empatam em 2º com 11% - sucessofm.com",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMm9QeHNwclRjdE9oQ3BpLVhFWnhObDdsQWlySW9PN0ZCZjFtbzNraUFBWFRMd1QwRW1sMDZCQ1A1cWR3enhoZktxRE9RYWlaMmtFM01VNHU3SGlGc0ttM2pPUjM0ZUFKeHlOUHhUb0FQbElZclQ3WDgtRUxLRHA1VTlkVzlRNDg1dVNFOWdBUjhaUk9YQ0IzRXBVd2FuSThpRTZlR3Y3SQ?oc=5",
+      "source": "sucessofm.com",
+      "published": "2026-09-09",
+      "pollster": "Quaest",
+      "key": "7152163946be6468b175"
     },
     {
       "election": "governor-sp",
@@ -763,15 +772,6 @@
       "key": "a65f376ce06c118b2d01"
     },
     {
-      "election": "governor-mg",
-      "title": "Real Time Big Data: Cleitinho tem 31% e Patrus, 17%, no 1º turno em Minas Gerais - Exame",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOamM3NHNjN19NSklzVXZnN2pJdEV1blBWYjE5aEZVU3FiVHJhdUFlWFN6Y3o0U1dhMVJmMWctdFdYek0tUmhSWEhqWWhBbHJmblZjMFJ4U0lkYXBhVWdZcnZBamxEekNHaXhwN2F2YkF0NjVTWmp5Q091YVpQVkp0aHRReTFiNzFheDNuRFBKTFZXSlViX0tKbjBlNHdNVF9vSk1R?oc=5",
-      "source": "Exame",
-      "published": "2026-09-08",
-      "pollster": "Real Time Big Data",
-      "key": "5e6498f0f42d4be397fa"
-    },
-    {
       "election": "president-br",
       "title": "Quaest 1º turno: Lula tem 36%; Flávio Bolsonaro, 29%; Cury, 8%; Renan, 3%; Caiado, 3%; e Zema, 2% - cbncaruaru.com",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSG9hUUYyYlc4ZTBMRVM5bzl0aEF1WENJUnFnc2NDMlI0OG1maHBITkJHSjEtdTVsLXlVLXBudm9KWjFkYWozcVFWTjEwX0tDb3JjbzBrTXZBTmhpc3AxbnR0Nm5DRDhPd01JRXptT0xwZExlb3ZlODcxekZQVXdaWVk4TmZ5ZFpoRUFGUjFhdGVTdkZ0RkRaSXhEWmVUZkJGck5Sb1JyRFdmWUpWREVoOE1yTGNWUQ?oc=5",
@@ -781,22 +781,31 @@
       "key": "4fbeaa0daea89b6256a8"
     },
     {
-      "election": "governor-sp",
-      "title": "Quaest: Tarcísio tem 42% no 1º turno para Governo de SP, contra 27% de Haddad - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQWEdBcDROenM1ZlJKTHJ2aDBadnZUeGFibWZJS01iQXJGR0haNWJWVUpsb3hhanNzOG5oRERGNHZObkZIQnd5YTNjQUdFblVpVGlJRlVXRFFqMkpSVXJIeVNzLWVYbU1ZaG9xTGU2bE1TZXJxU05tY0p2RnhpTXFQU0hFTFRLNnBSSWgwRDhTc1haSlJEVkR0Y1B1N3RQeGpKcGYxYVpaczQ2aVBraEVidzBxWnptY3Z5RVFWLURMQ2o?oc=5",
-      "source": "Folha de S.Paulo",
+      "election": "president-br",
+      "title": "Meio/Ideia: Lula e Flávio Bolsonaro empatam nos dois turnos - congressoemfoco.com.br",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaU01SzBuanI3U0VfRndFZFFmbUtnVXhfVld4X3NSdWl1U091Z3JCby1keGNtdmFYRDJud0p3d3I1anpLRTJSNzEwZldXY3djTGx3U3dXeVJXLVd6MUZzUDd2eFBPeFBRbkhjbVREYnkzNkIxN0E4RnFNOHpvVGlKOHhkdFhCdjZ0U0JwV1NJY0I0TEdNX0R1SjlENHhBRzJmd2FqSC1UUDdpZlla?oc=5",
+      "source": "congressoemfoco.com.br",
       "published": "2026-09-08",
-      "pollster": "Quaest",
-      "key": "3639ba2c85a974c7f3bd"
+      "pollster": "Ideia",
+      "key": "3b5971dd2f9456b6708a"
     },
     {
-      "election": "governor-mg",
-      "title": "Quaest: Cleitinho lidera com 32% em Minas Gerais; Patrus, Kalil e Simões disputam 2º lugar - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQekptWTJRcUpuR0dQRHhCbUZFVnVfWUF1cUQ1RlAxZGFLS0FMbGNSaFZrMkhMcDI5cUpuUS1OUlgyVHhfQ2JCTm1ncDVUYkpxalRZbW5WdlhLcTFYRXFnTEJzaFVwSlFCQXljb2cyUnJUSG9Ia0RDYktxNHpMZy1IRmo1NEhVb1ozd3JSRjl4bGE5WHFNQkVlblZXeXFhdjQ4RkUweG5zOEo5dUc0WDdVVzNoeVFOWW5HRmVoSU9SaUduMXNjUDlLX1l4aWpUSjkydEE?oc=5",
-      "source": "Folha de S.Paulo",
+      "election": "president-br",
+      "title": "Lula mantém vantagem no 1º turno, e no 2º turno Flavio Bolsonaro empata com petista - 08/09/2026 - Eleições - datafolha.folha.uol.com.br",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNUFZVS01yRUhDVmdVZUZ3bldrNkZBTUhkWGtZQzQ5UGk4T2JGeEJQWVFkcDdLdk53Tk41Q3RCNmh4U0ZzMmxjXzlHU0twNTBoOGNiVVFsNUNEQTZyTlAyV2JtV1UzUU5UY2d0NDRWVUZyaVJWaFdnRThyMXc4MEt5clFrVlBhcVkycnFtNFdFejBUdkRoeldGRGVndXl3T24xYTFDOFU2VTN3WFNBUVNZNjBlRmU2WjRFN2NFNkstNldkR3BEelF0emVFbHFGb2l6WnhQa3BXbw?oc=5",
+      "source": "datafolha.folha.uol.com.br",
       "published": "2026-09-08",
+      "pollster": "Datafolha",
+      "key": "1fe3ab64699daa75a9e1"
+    },
+    {
+      "election": "president-br",
+      "title": "Cury avança, Lula e Flávio empatam no 2º turno: 10 pontos da nova Quaest - G1",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQllzcGx4aVpNOG1PM3BqMEVJRFpjS2JGck5ValItOXI3bEh4c045WTJoRzBCakc3VEljWTI1RnZfMDU2Mk9IQS1pRndEWVZCWFNGcjFacHlBd1JJR3dmYThibUlEbUJHdUlFZmN1cmVxcUtmQ1B1cmk5M2pBVnY4MzAyWVlOcGd5UW5FNmc0bDY0bEl6eHY5Z2o3VTNEVDhhVGpPc19xMTAwOVNENmhoTDZXNWdiNWdiQi00Uzdn0gHMAUFVX3lxTE5LdXBzVnU5UG5sZzRLbGlVS3p3bGpJb2xaMjNIRmFlR3huQlZ4TXpEekc1ZWY3X2t6ckppajhuazg0NjZDWF80VEN1NEdCeXBLbkc0UVF2ZnZHWmJaM0E4MnJyZUNWOWs1RTViSDdjdWV5bTZfbGhaRWtMei1CVndiUlBOOXdPTVo1X0c1aUhxcnpNUGtsTFNBUnQtSTNseHFOeWhCMTV0UTVaNnZSTGZsV0dsckxfUzhyT25sVjZWaFh6TW5zTldHS2l1RQ?oc=5",
+      "source": "G1",
+      "published": "2026-09-03",
       "pollster": "Quaest",
-      "key": "15d44022ff7a4aa72ef1"
+      "key": "d2d755aa276d8bb60601"
     },
     {
       "election": "governor-mg",
@@ -815,15 +824,6 @@
       "published": "2026-09-03",
       "pollster": "AtlasIntel",
       "key": "82cefd6fb0911b179946"
-    },
-    {
-      "election": "president-br",
-      "title": "Quaest, 1º turno: Lula, 37%; Flávio Bolsonaro, 29%; Cury, 10%; Renan, 3%; Caiado, 1%; Zema, 1% - grupo sepé",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5NOEdLNTloS1h0X2FkUGFaNldidjc4Z1Z2TXd5Nm1JRUhTb25DTVhsSWtlUDJGN2tYMWd2anppTnhzdGRGVUpGcU9iU1ZKWDBHQnlWOENTaVEwT2JMX1dlb2lHbzVrQ2k4MEttYjVNUm0xSVpy?oc=5",
-      "source": "grupo sepé",
-      "published": "2026-09-03",
-      "pollster": "Quaest",
-      "key": "3b79f277f63f67fa8695"
     },
     {
       "election": "governor-sp",
