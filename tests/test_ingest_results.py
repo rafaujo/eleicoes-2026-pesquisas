@@ -1,7 +1,9 @@
 import unittest
+from unittest.mock import patch
 
 from scripts.ingest_results import (
     Node,
+    fetch_cached,
     index_links,
     normalize,
     parse_detail,
@@ -12,11 +14,28 @@ from scripts.ingest_results import (
     source_confirmed_scenario,
     source_confirms,
     field_start,
+    format_field,
+    ensure_scenario,
     walk,
 )
 
 
 class IngestResultsTests(unittest.TestCase):
+    def test_fetch_cache_reuses_successes_and_failures(self) -> None:
+        cache = {}
+        with patch("scripts.ingest_results.fetch", return_value="conteúdo") as mocked_fetch:
+            self.assertEqual(fetch_cached(cache, "https://example.com/fonte"), "conteúdo")
+            self.assertEqual(fetch_cached(cache, "https://example.com/fonte"), "conteúdo")
+        self.assertEqual(mocked_fetch.call_count, 1)
+
+        failed_cache = {}
+        with patch("scripts.ingest_results.fetch", side_effect=OSError("indisponível")) as mocked_fetch:
+            with self.assertRaises(OSError):
+                fetch_cached(failed_cache, "https://example.com/lenta")
+            with self.assertRaises(OSError):
+                fetch_cached(failed_cache, "https://example.com/lenta")
+        self.assertEqual(mocked_fetch.call_count, 1)
+
     def test_walk_handles_deep_html_without_recursion_error(self):
         root = Node("document")
         current = root
@@ -117,6 +136,26 @@ class IngestResultsTests(unittest.TestCase):
         self.assertEqual(scenario_id, "first-with-cury")
         self.assertEqual(results["cury"], 8)
 
+    def test_new_first_round_list_keeps_every_confirmed_candidate(self) -> None:
+        detail = {
+            "round": 1,
+            "results": {
+                "Cleitinho": 41, "Patrus": 30, "Alexandre Kalil": 9.2,
+                "Gabriel": 4.7, "Ben Mendes": 4, "Flávio Roscoe": 4,
+                "Mateus Simões": 4,
+            },
+        }
+        database = {"scenarios": []}
+        catalog = {}
+
+        scenario_id, results = scenario_for(detail, "governor-mg", catalog)
+        ensure_scenario(database, catalog, scenario_id, results)
+
+        self.assertTrue(scenario_id.startswith("first-auto-"))
+        self.assertEqual(set(results), {"cleitinho", "patrus", "kalil", "gabriel", "ben", "roscoe", "mateus"})
+        self.assertEqual(catalog[scenario_id]["comparisonGroup"], "first-round")
+        self.assertEqual(len(database["scenarios"]), 1)
+
     def test_existing_poll_is_enriched_and_truncated_variant_is_removed(self) -> None:
         existing = {
             "scenarios": {
@@ -189,6 +228,14 @@ class IngestResultsTests(unittest.TestCase):
         source = "Pesquisa feita entre os dias 1º e 4 de setembro de 2026."
 
         self.assertEqual(field_start(source, "2026-09-04"), "2026-09-01")
+
+    def test_field_start_and_label_accept_cross_month_period(self) -> None:
+        source = "Levantamento feito de 30 de agosto a 4 de setembro de 2026."
+
+        start = field_start(source, "2026-09-04")
+
+        self.assertEqual(start, "2026-08-30")
+        self.assertEqual(format_field(start, "2026-09-04"), "30 ago–4 set")
 
 
 if __name__ == "__main__":

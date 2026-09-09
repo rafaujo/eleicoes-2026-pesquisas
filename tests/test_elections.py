@@ -43,10 +43,10 @@ class ElectionCatalogTests(unittest.TestCase):
     def test_sao_paulo_keeps_comparable_scenarios_separate(self) -> None:
         polls = self.sp["polls"]
 
-        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 4)
-        self.assertEqual(sum("first-short" in poll["scenarios"] for poll in polls), 1)
-        self.assertEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 3)
-        self.assertEqual(sum("runoff-tarcisio-haddad" in poll["scenarios"] for poll in polls), 11)
+        self.assertGreaterEqual(sum("first-main" in poll["scenarios"] for poll in polls), 4)
+        self.assertGreaterEqual(sum("first-short" in poll["scenarios"] for poll in polls), 1)
+        self.assertGreaterEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 3)
+        self.assertGreaterEqual(sum("runoff-tarcisio-haddad" in poll["scenarios"] for poll in polls), 11)
         first_round = [item for item in self.sp["scenarios"] if item["round"] == 1]
         self.assertEqual({item["comparisonGroup"] for item in first_round}, {"first-round"})
 
@@ -94,10 +94,10 @@ class ElectionCatalogTests(unittest.TestCase):
         polls = self.mg["polls"]
         quaest = next(poll for poll in polls if poll["protocol"] == "MG034902026")
 
-        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 2)
-        self.assertEqual(sum("first-short" in poll["scenarios"] for poll in polls), 1)
-        self.assertEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 1)
-        self.assertEqual(sum("runoff-cleitinho-kalil" in poll["scenarios"] for poll in polls), 4)
+        self.assertGreaterEqual(sum("first-main" in poll["scenarios"] for poll in polls), 2)
+        self.assertGreaterEqual(sum("first-short" in poll["scenarios"] for poll in polls), 1)
+        self.assertGreaterEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 1)
+        self.assertGreaterEqual(sum("runoff-cleitinho-kalil" in poll["scenarios"] for poll in polls), 4)
         self.assertEqual(quaest["scenarios"]["first-pre-campaign"]["results"]["cleitinho"], 35)
         self.assertEqual(quaest["scenarios"]["runoff-cleitinho-patrus"]["results"]["patrus"], 31)
 

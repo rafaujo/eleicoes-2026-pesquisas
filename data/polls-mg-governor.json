@@ -175,9 +175,202 @@
         "mateus",
         "patrus"
       ]
+    },
+    {
+      "id": "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe",
+      "round": 1,
+      "label": "Lista com 7 nomes",
+      "comparisonGroup": "first-round",
+      "comparisonLabel": "Primeiro turno — listas integradas",
+      "candidates": [
+        "cleitinho",
+        "patrus",
+        "kalil",
+        "gabriel",
+        "mateus",
+        "roscoe",
+        "ben"
+      ]
     }
   ],
   "polls": [
+    {
+      "id": 7,
+      "pollster": "Quaest",
+      "publication": "gazetadopovo.com.br",
+      "protocol": "MG047162026",
+      "published": "2026-09-08",
+      "start": "2026-09-04",
+      "end": "2026-09-07",
+      "field": "4–7 set",
+      "sample": 1506,
+      "margin": 3,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-minas-gerais-setembro-2026/",
+      "resultSourceLabel": "gazetadopovo.com.br — resultado publicado",
+      "scenarios": {
+        "runoff-cleitinho-kalil": {
+          "results": {
+            "cleitinho": 49,
+            "kalil": 27
+          },
+          "undecided": 24,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-minas-gerais-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-cleitinho-patrus": {
+          "results": {
+            "cleitinho": 51,
+            "patrus": 26
+          },
+          "undecided": 23,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-minas-gerais-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe": {
+          "results": {
+            "cleitinho": 32,
+            "patrus": 11,
+            "kalil": 11,
+            "gabriel": 3,
+            "mateus": 8,
+            "roscoe": 3,
+            "ben": 2
+          },
+          "undecided": 32,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-minas-gerais-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "pollster": "Real Time Big Data",
+      "publication": "gazetadopovo.com.br",
+      "protocol": "MG009982026",
+      "published": "2026-09-08",
+      "start": "2026-09-03",
+      "end": "2026-09-07",
+      "field": "3–7 set",
+      "sample": 2000,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-minas-gerais-setembro-2026/",
+      "resultSourceLabel": "gazetadopovo.com.br — resultado publicado",
+      "scenarios": {
+        "runoff-mateus-kalil": {
+          "results": {
+            "mateus": 37,
+            "kalil": 34
+          },
+          "undecided": 29,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-minas-gerais-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-cleitinho-kalil": {
+          "results": {
+            "cleitinho": 44,
+            "kalil": 37
+          },
+          "undecided": 19,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-minas-gerais-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-cleitinho-mateus": {
+          "results": {
+            "cleitinho": 43,
+            "mateus": 35
+          },
+          "undecided": 22,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-minas-gerais-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-cleitinho-patrus": {
+          "results": {
+            "cleitinho": 43,
+            "patrus": 41
+          },
+          "undecided": 16,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-minas-gerais-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-mateus-patrus": {
+          "results": {
+            "mateus": 35,
+            "patrus": 35
+          },
+          "undecided": 30,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-minas-gerais-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe": {
+          "results": {
+            "cleitinho": 31,
+            "patrus": 17,
+            "kalil": 12,
+            "gabriel": 8,
+            "mateus": 11,
+            "roscoe": 7,
+            "ben": 2
+          },
+          "undecided": 12,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-minas-gerais-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "pollster": "AtlasIntel",
+      "publication": "poder360.com.br",
+      "protocol": "MG015792026",
+      "published": "2026-09-08",
+      "start": "2026-08-30",
+      "end": "2026-09-04",
+      "field": "30 ago–4 set",
+      "sample": 1804,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/cleitinho-lidera-todos-os-cenarios-de-1o-e-2o-turno-em-minas/",
+      "resultSourceLabel": "poder360.com.br — resultado publicado",
+      "scenarios": {
+        "runoff-cleitinho-kalil": {
+          "results": {
+            "cleitinho": 53.3,
+            "kalil": 35.5
+          },
+          "undecided": 11.2,
+          "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/cleitinho-lidera-todos-os-cenarios-de-1o-e-2o-turno-em-minas/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        },
+        "runoff-cleitinho-patrus": {
+          "results": {
+            "cleitinho": 53.4,
+            "patrus": 39.3
+          },
+          "undecided": 7.2,
+          "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/cleitinho-lidera-todos-os-cenarios-de-1o-e-2o-turno-em-minas/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        },
+        "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe": {
+          "results": {
+            "cleitinho": 41,
+            "patrus": 30,
+            "kalil": 9.2,
+            "gabriel": 4.7,
+            "mateus": 4,
+            "roscoe": 4,
+            "ben": 4
+          },
+          "undecided": 3.1,
+          "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/cleitinho-lidera-todos-os-cenarios-de-1o-e-2o-turno-em-minas/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        }
+      }
+    },
     {
       "id": 5,
       "pollster": "Real Time Big Data",
