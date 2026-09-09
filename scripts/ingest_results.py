@@ -206,6 +206,19 @@ def fetch(url: str) -> str:
             return payload.decode("cp1252", "replace")
 
 
+def fetch_cached(cache: dict[str, str | OSError], url: str) -> str:
+    """Busca cada URL uma única vez, inclusive quando a resposta falha."""
+    if url not in cache:
+        try:
+            cache[url] = fetch(url)
+        except OSError as error:
+            cache[url] = error
+    cached = cache[url]
+    if isinstance(cached, OSError):
+        raise cached
+    return cached
+
+
 def parse_tree(markup: str) -> Node:
     parser = TreeParser()
     parser.feed(markup)
@@ -316,18 +329,16 @@ def scenario_for(detail: dict, election_id: str, catalog: dict[str, dict]) -> tu
     if detail["round"] == 1:
         candidates = set(mapped)
         choices = [item for item in catalog.values() if item["round"] == 1]
-        # Escolher primeiro a lista exata e, na ausência dela, a mais completa.
-        # Isso impede que um candidato recém-adicionado seja silenciosamente
-        # descartado por um cenário antigo que também é subconjunto da ficha.
-        choices.sort(key=lambda item: (
-            set(item["candidates"]) != candidates,
-            -len(item["candidates"]),
-            item["id"],
-        ))
+        # Listas de candidatos mudam frequentemente. Reaproveitar apenas uma
+        # correspondência exata impede que a ausência de um único nome descarte
+        # ou atribua silenciosamente a pesquisa a outro cenário.
         for item in choices:
             expected = set(item["candidates"])
-            if expected.issubset(candidates):
+            if expected == candidates:
                 return item["id"], {key: mapped[key] for key in item["candidates"]}
+        if len(candidates) >= 2:
+            scenario_id = "first-auto-" + "-".join(sorted(candidates))
+            return scenario_id, mapped
         return None
 
     pair = set(mapped)
@@ -421,6 +432,14 @@ def source_confirmed_scenario(
 
 def field_start(source: str, end: str) -> str:
     normalized = normalize(source)
+    cross_month = re.search(
+        r"(?:entre os dias|dos dias|entre|de)\s+(\d{1,2})(?:o)?\s+de\s+([a-z]+)"
+        r"\s+(?:e|a)\s+\d{1,2}(?:o)?\s+de\s+[a-z]+(?:\s+de\s+(20\d{2}))?",
+        normalized,
+    )
+    if cross_month and cross_month.group(2) in MONTHS:
+        year = int(cross_month.group(3)) if cross_month.group(3) else date.fromisoformat(end).year
+        return date(year, MONTHS[cross_month.group(2)], int(cross_month.group(1))).isoformat()
     patterns = (
         r"(?:entre os dias|dos dias|entre|de)\s+(\d{1,2})(?:o)?\s+(?:e|a)\s+\d{1,2}(?:o)?\s+de\s+([a-z]+)(?:\s+de\s+(20\d{2}))?",
         r"(?:entre os dias|dos dias|entre|de)\s+(\d{1,2})(?:o)?\s+(?:e|a)\s+\d{1,2}(?:o)?\s+([a-z]+)(?:\s+(20\d{2}))?",
@@ -447,7 +466,24 @@ def published_date(markup: str, end: str) -> str:
 def format_field(start: str, end: str) -> str:
     months = ("jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez")
     a, b = date.fromisoformat(start), date.fromisoformat(end)
+    if a.month != b.month:
+        return f"{a.day} {months[a.month - 1]}–{b.day} {months[b.month - 1]}"
     return f"{a.day}–{b.day} {months[b.month - 1]}"
+
+
+def ensure_scenario(database: dict, catalog: dict[str, dict], scenario_id: str, results: dict[str, float]) -> None:
+    if scenario_id in catalog:
+        return
+    scenario = {
+        "id": scenario_id,
+        "round": 1,
+        "label": f"Lista com {len(results)} nomes",
+        "comparisonGroup": "first-round",
+        "comparisonLabel": "Primeiro turno — listas integradas",
+        "candidates": list(results),
+    }
+    database["scenarios"].append(scenario)
+    catalog[scenario_id] = scenario
 
 
 def load_catalogs() -> tuple[list[dict], dict[str, dict]]:
@@ -507,19 +543,20 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
     grouped: dict[tuple[str, str], list[dict]] = {}
     warnings: list[str] = []
     since = date.today() - timedelta(days=lookback_days)
+    document_cache: dict[str, str | OSError] = {}
 
-    for url in index_links(fetch(INDEX_URL), since):
+    for url in index_links(fetch_cached(document_cache, INDEX_URL), since):
         slug = url.rstrip("/").rsplit("/", 1)[-1]
         if slug.startswith(("gov-", "sen-")) and not slug.startswith(("gov-sp-", "gov-mg-")):
             continue
         try:
-            primary = parse_detail(url, fetch(url))
+            primary = parse_detail(url, fetch_cached(document_cache, url))
             election_id = election_for(primary)
             if not election_id:
                 continue
             if not re.fullmatch(r"[A-Z]{2}\d{9}", primary["protocol"]):
                 if primary["source"]:
-                    source_markup = fetch(primary["source"])
+                    source_markup = fetch_cached(document_cache, primary["source"])
                     protocol_match = re.search(r"\b(BR|SP|MG)[-\s]?(\d{5})[/\s-]?(2026)\b", source_markup, re.I)
                     if protocol_match:
                         primary["protocol"] = protocol_key("".join(protocol_match.groups()))
@@ -527,7 +564,10 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
                 warnings.append(f"{url}: protocolo não localizado")
                 continue
             details = [primary]
-            details.extend(parse_detail(related, fetch(related)) for related in primary["related"])
+            details.extend(
+                parse_detail(related, fetch_cached(document_cache, related))
+                for related in primary["related"]
+            )
             grouped.setdefault((election_id, primary["protocol"]), []).extend(details)
         except (OSError, ValueError, AttributeError) as error:
             warnings.append(f"{url}: {error}")
@@ -538,7 +578,6 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
         catalog = {item["id"]: item for item in database["scenarios"]}
         scenarios: dict[str, dict] = {}
         scenario_quality: dict[str, int] = {}
-        source_cache: dict[str, str] = {}
         source_labels: dict[str, str] = {}
         source_markup_for_dates = ""
         for detail in details:
@@ -549,7 +588,7 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
                 continue
             scenario_id, results = mapped
             try:
-                markup = source_cache.setdefault(detail["source"], fetch(detail["source"]))
+                markup = fetch_cached(document_cache, detail["source"])
             except OSError as error:
                 warnings.append(f"{detail['source']}: {error}")
                 continue
@@ -560,6 +599,8 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
                     warnings.append(f"{protocol}/{scenario_id}: fonte não confirmou todos os valores")
                     continue
                 scenario_id, results = confirmed
+            elif detail["round"] == 1:
+                ensure_scenario(database, catalog, scenario_id, results)
             quality = 1 if exact_confirmation else 0
             if scenario_quality.get(scenario_id, -1) > quality:
                 continue
@@ -575,13 +616,22 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
         if not scenarios:
             continue
 
+        primary = details[0]
         existing = next((item for item in database["polls"] if item["protocol"] == protocol), None)
         if existing:
-            if merge_scenarios(existing, scenarios, catalog):
+            updated = merge_scenarios(existing, scenarios, catalog)
+            official = official_records.get(election_id, {}).get(protocol, {})
+            detected_start = official.get("fieldStart") or field_start(
+                source_text(source_markup_for_dates), primary["end"]
+            )
+            if detected_start < existing.get("start", primary["end"]):
+                existing["start"] = detected_start
+                existing["field"] = format_field(detected_start, existing["end"])
+                updated = True
+            if updated:
                 changed += 1
             continue
 
-        primary = details[0]
         official = official_records.get(election_id, {}).get(protocol, {})
         start = official.get("fieldStart") or field_start(
             source_text(source_markup_for_dates), primary["end"]
@@ -613,7 +663,7 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
     for election_id, database in databases.items():
         path = ROOT / election_by_id[election_id]["dataFile"]
         path.write_text(json.dumps(database, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return changed, warnings
+    return changed, list(dict.fromkeys(warnings))
 
 
 def parse_args() -> argparse.Namespace:
