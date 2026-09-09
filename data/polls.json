@@ -261,14 +261,18 @@
             "renan": 4,
             "zema": 1
           },
-          "undecided": 12
+          "undecided": 12,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/gerp-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
         },
         "runoff-lula-flavio": {
           "results": {
             "lula": 40,
             "flavio": 47
           },
-          "undecided": 14
+          "undecided": 14,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/gerp-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
         }
       },
       "id": 52
@@ -305,7 +309,9 @@
             "lula": 46,
             "flavio": 46
           },
-          "undecided": 8
+          "undecided": 8,
+          "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/lula-e-flavio-empatam-em-2o-turno-diz-pesquisa-meio-ideia/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
         },
         "runoff-lula-caiado": {
           "results": {
