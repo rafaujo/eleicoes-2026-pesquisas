@@ -103,6 +103,14 @@ class ResultDiscoveryTests(unittest.TestCase):
             )
         )
 
+    def test_minas_shorthand_is_not_treated_as_national(self) -> None:
+        self.assertFalse(
+            matches_election(
+                "Atlas: Lula abre 9 pontos sobre Flávio em Minas",
+                "president-br",
+            )
+        )
+
     def test_social_post_is_not_used_as_editorial_source(self) -> None:
         self.assertFalse(
             matches_election(
@@ -131,6 +139,12 @@ class ResultDiscoveryTests(unittest.TestCase):
         polls = [{"pollster": "Veritá", "published": "2026-08-21"}]
 
         self.assertTrue(already_curated(article, polls))
+
+    def test_nearby_publication_from_same_pollster_stays_in_queue(self) -> None:
+        article = parse_feed(VERITA_FEED, "president-br")[0]
+        polls = [{"pollster": "Veritá", "published": "2026-08-20"}]
+
+        self.assertFalse(already_curated(article, polls))
 
 
 if __name__ == "__main__":

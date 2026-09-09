@@ -43,7 +43,7 @@ class ElectionCatalogTests(unittest.TestCase):
     def test_sao_paulo_keeps_comparable_scenarios_separate(self) -> None:
         polls = self.sp["polls"]
 
-        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 3)
+        self.assertEqual(sum("first-main" in poll["scenarios"] for poll in polls), 4)
         self.assertEqual(sum("first-short" in poll["scenarios"] for poll in polls), 1)
         self.assertEqual(sum("first-pre-campaign" in poll["scenarios"] for poll in polls), 3)
         self.assertEqual(sum("runoff-tarcisio-haddad" in poll["scenarios"] for poll in polls), 11)
@@ -68,9 +68,11 @@ class ElectionCatalogTests(unittest.TestCase):
         latest_quaest = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP069462026")
         latest_gerp = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP014772026")
         latest_realtime = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP013472026")
+        latest_vox = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP009402026")
         self.assertEqual(latest_quaest["scenarios"]["first-main"]["results"]["tarcisio"], 40)
         self.assertEqual(latest_gerp["scenarios"]["first-main"]["results"]["haddad"], 32)
         self.assertEqual(latest_realtime["scenarios"]["first-short"]["results"]["tarcisio"], 52)
+        self.assertEqual(latest_vox["scenarios"]["first-main"]["results"]["tarcisio"], 55.3)
 
     def test_sao_paulo_official_files_cover_curated_protocols(self) -> None:
         metadata = json.loads((ROOT / "data" / "tse-metadata-sp.json").read_text(encoding="utf-8"))

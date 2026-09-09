@@ -98,6 +98,38 @@
   ],
   "polls": [
     {
+      "id": 12,
+      "pollster": "Vox Brasil",
+      "publication": "poder360.com.br",
+      "protocol": "SP009402026",
+      "published": "2026-09-01",
+      "start": "2026-08-29",
+      "end": "2026-08-31",
+      "field": "29–31 ago",
+      "sample": 1480,
+      "margin": 2.6,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/tarcisio-tem-553-contra-351-de-haddad-no-1o-turno-em-sp-diz-vox/",
+      "resultSourceLabel": "poder360.com.br — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 55.3,
+            "haddad": 35.1,
+            "vera": 0.7,
+            "machado": 1.1,
+            "edjane": 0.3,
+            "vivian": 0.5,
+            "izadora": 0.3
+          },
+          "undecided": 6.7,
+          "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/tarcisio-tem-553-contra-351-de-haddad-no-1o-turno-em-sp-diz-vox/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 11,
       "pollster": "GERP",
       "publication": "AESP Rádio + TV · Exame",
@@ -131,39 +163,6 @@
             "haddad": 36
           },
           "undecided": 9
-        }
-      }
-    },
-    {
-      "id": 10,
-      "pollster": "Real Time Big Data",
-      "publication": "Divulgação UOL",
-      "protocol": "SP013472026",
-      "published": "2026-08-24",
-      "start": "2026-08-19",
-      "end": "2026-08-22",
-      "field": "19–22 ago",
-      "sample": 2000,
-      "margin": 2,
-      "confidence": 95,
-      "method": "Entrevistas telefônicas",
-      "resultSource": "https://noticias.uol.com.br/eleicoes/2026/08/24/realtime-big-data-sp.amp.htm",
-      "resultSourceLabel": "UOL — resultados e metodologia",
-      "scenarios": {
-        "first-short": {
-          "results": {
-            "tarcisio": 52,
-            "haddad": 35,
-            "vivian": 1
-          },
-          "undecided": 11
-        },
-        "runoff-tarcisio-haddad": {
-          "results": {
-            "tarcisio": 54,
-            "haddad": 36
-          },
-          "undecided": 10
         }
       }
     },
@@ -205,6 +204,39 @@
           "undecided": 23,
           "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/08/25/quaest-em-sp-tarcisio-40percent-haddad-27percent.ghtml",
           "resultSourceLabel": "g1.globo.com — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "pollster": "Real Time Big Data",
+      "publication": "Divulgação UOL",
+      "protocol": "SP013472026",
+      "published": "2026-08-24",
+      "start": "2026-08-19",
+      "end": "2026-08-22",
+      "field": "19–22 ago",
+      "sample": 2000,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Entrevistas telefônicas",
+      "resultSource": "https://noticias.uol.com.br/eleicoes/2026/08/24/realtime-big-data-sp.amp.htm",
+      "resultSourceLabel": "UOL — resultados e metodologia",
+      "scenarios": {
+        "first-short": {
+          "results": {
+            "tarcisio": 52,
+            "haddad": 35,
+            "vivian": 1
+          },
+          "undecided": 11
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 54,
+            "haddad": 36
+          },
+          "undecided": 10
         }
       }
     },

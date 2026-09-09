@@ -107,6 +107,7 @@ PRESIDENT_REGIONAL_TERMS = (
     "em df",
     "no espirito santo",
     "em goias",
+    "em minas",
     "no maranhao",
     "no mato grosso",
     "em minas gerais",
@@ -290,7 +291,10 @@ def already_curated(article: dict[str, str], polls: list[dict]) -> bool:
             poll_date = date.fromisoformat(str(poll.get("published", "")))
         except ValueError:
             continue
-        if abs((article_date - poll_date).days) <= 2:
+        # Institutos podem divulgar levantamentos diferentes em dias próximos.
+        # Só retirar automaticamente da fila quando a data de publicação bate;
+        # falsos positivos aqui escondem justamente pesquisas novas.
+        if article_date == poll_date:
             return True
     return False
 

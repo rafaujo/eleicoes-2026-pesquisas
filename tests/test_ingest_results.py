@@ -5,9 +5,13 @@ from scripts.ingest_results import (
     index_links,
     normalize,
     parse_detail,
+    percentage_pattern,
     protocol_key,
     merge_scenarios,
     scenario_for,
+    source_confirmed_scenario,
+    source_confirms,
+    field_start,
     walk,
 )
 
@@ -57,6 +61,27 @@ class IngestResultsTests(unittest.TestCase):
         self.assertEqual(detail["results"], {"Lula": 41, "Flávio Bolsonaro": 37})
         self.assertEqual(detail["undecided"], 9)
         self.assertEqual(len(detail["related"]), 1)
+        self.assertFalse(detail["spontaneous"])
+
+    def test_detail_parser_marks_spontaneous_scenario(self) -> None:
+        markup = """
+        <p class="olho">Presidente — nacional · 1º turno</p>
+        <h1>Nexus</h1>
+        <p class="cenario">Espontânea, 1º turno, nacional</p>
+        <ol class="placar"><li class="linha"><span class="nome">Lula</span><span class="valor">39%</span></li></ol>
+        <div class="par"><dt>Registro no TSE</dt><dd>BR-06790/2026</dd></div>
+        <div class="par"><dt>Entrevistas</dt><dd>2.002</dd></div>
+        <div class="par"><dt>Margem de erro</dt><dd>2 p.p.</dd></div>
+        <div class="par"><dt>Coleta</dt><dd>telefone</dd></div>
+        <p class="fonte"><a href="https://example.com/relatorio.pdf">fonte</a></p>
+        """
+
+        detail = parse_detail(
+            "https://depoisdas17.com.br/pesquisas/nexus_2026-09-07_T1_BR067902026_1532/",
+            markup,
+        )
+
+        self.assertTrue(detail["spontaneous"])
 
     def test_presidential_scenario_with_marcal_is_classified_separately(self) -> None:
         detail = {
@@ -118,6 +143,52 @@ class IngestResultsTests(unittest.TestCase):
     def test_normalization_and_protocol_are_accent_and_punctuation_safe(self) -> None:
         self.assertEqual(normalize("Tarcísio — São Paulo"), "tarcisio sao paulo")
         self.assertEqual(protocol_key("BR-09028/2026"), "BR090282026")
+
+    def test_source_confirmation_accepts_decimal_percentages_after_normalization(self) -> None:
+        detail = {"protocol": "BR094262026", "sample": 3804}
+        source = "Registro BR-09426/2026. Foram 3.804 entrevistas. Flávio Bolsonaro tem 38,9%."
+
+        self.assertEqual(percentage_pattern(38.9), r"38(?:\s+|[,.])9")
+        self.assertTrue(source_confirms(detail, "president-br", {"flavio": 38.9}, source))
+
+    def test_source_confirmation_falls_back_to_largest_fully_confirmed_list(self) -> None:
+        detail = {
+            "round": 1,
+            "protocol": "BR094262026",
+            "sample": 3804,
+            "results": {
+                "Lula": 38.4,
+                "Flávio Bolsonaro": 38.9,
+                "Augusto Cury": 12.2,
+                "Pablo Marçal": 1.3,
+            },
+        }
+        catalog = {
+            "first-with-cury": {
+                "id": "first-with-cury", "round": 1,
+                "candidates": ["lula", "flavio", "cury"],
+            },
+            "first-with-cury-marcal": {
+                "id": "first-with-cury-marcal", "round": 1,
+                "candidates": ["lula", "flavio", "cury", "marcal"],
+            },
+        }
+        source = (
+            "BR-09426/2026, 3.804 entrevistas: Lula 38,4%; "
+            "Flávio Bolsonaro 38,9%; Augusto Cury 12,2%; Pablo Marçal 1,4%."
+        )
+
+        scenario_id, results = source_confirmed_scenario(
+            detail, "president-br", catalog, source
+        )
+
+        self.assertEqual(scenario_id, "first-with-cury")
+        self.assertNotIn("marcal", results)
+
+    def test_field_start_accepts_ordinal_day_from_article_text(self) -> None:
+        source = "Pesquisa feita entre os dias 1º e 4 de setembro de 2026."
+
+        self.assertEqual(field_start(source, "2026-09-04"), "2026-09-01")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-09 04:37:42",
+  "sourceGeneratedAt": "2026-09-09 14:19:52",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -642,17 +642,6 @@
     "BR099982026"
   ],
   "pending": {
-    "BR002512026": {
-      "protocol": "BR002512026",
-      "registeredAt": "2026-09-02",
-      "fieldStart": "2026-09-03",
-      "fieldEnd": "2026-09-08",
-      "disclosureDate": "2026-09-08",
-      "sample": 2400,
-      "company": "GERP MERCADOLOGIA LTDA",
-      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
-      "contractors": []
-    },
     "BR005302026": {
       "protocol": "BR005302026",
       "registeredAt": "2026-08-25",
@@ -763,28 +752,6 @@
       "tradeName": "PODERDATA",
       "contractors": []
     },
-    "BR054202026": {
-      "protocol": "BR054202026",
-      "registeredAt": "2026-09-03",
-      "fieldStart": "2026-09-04",
-      "fieldEnd": "2026-09-08",
-      "disclosureDate": "2026-09-09",
-      "sample": 5000,
-      "company": "PALVER CONSULTORIA E DESENVOLVIMENTO TECNOLOGICO LTDA.",
-      "tradeName": "PALVER",
-      "contractors": []
-    },
-    "BR067902026": {
-      "protocol": "BR067902026",
-      "registeredAt": "2026-09-02",
-      "fieldStart": "2026-09-04",
-      "fieldEnd": "2026-09-07",
-      "disclosureDate": "2026-09-08",
-      "sample": 2000,
-      "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
-      "tradeName": "NEXUS",
-      "contractors": []
-    },
     "BR078062026": {
       "protocol": "BR078062026",
       "registeredAt": "2026-08-20",
@@ -805,17 +772,6 @@
       "sample": 1600,
       "company": "REAL TIME MIDIA LTDA",
       "tradeName": "REAL TIME BIG DATA",
-      "contractors": []
-    },
-    "BR079352026": {
-      "protocol": "BR079352026",
-      "registeredAt": "2026-09-03",
-      "fieldStart": "2026-09-04",
-      "fieldEnd": "2026-09-07",
-      "disclosureDate": "2026-09-09",
-      "sample": 1500,
-      "company": "BOAS IDEIAS INTELIGENCIA EM PESQUISA E ESTRATEGIA DIGITAL LTDA",
-      "tradeName": "BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.",
       "contractors": []
     },
     "BR080932026": {
@@ -841,17 +797,6 @@
       "contractors": [
         "INSTITUTO DE PESQUISAS PERFIL LTDA"
       ]
-    },
-    "BR094262026": {
-      "protocol": "BR094262026",
-      "registeredAt": "2026-08-31",
-      "fieldStart": "2026-09-01",
-      "fieldEnd": "2026-09-04",
-      "disclosureDate": "2026-09-06",
-      "sample": 3840,
-      "company": "INSTITUTO VERITA LTDA",
-      "tradeName": "VERITA",
-      "contractors": []
     }
   },
   "agendaSource": "https://depoisdas17.com.br/agenda/",
@@ -878,14 +823,14 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "BR079352026": {
-      "protocol": "BR079352026",
-      "fieldStart": "2026-09-04",
-      "fieldEnd": "2026-09-07",
-      "disclosureDate": "2026-09-09",
-      "sample": 1500,
-      "company": "Instituto Ideia",
-      "tradeName": "Instituto Ideia",
+    "BR040762026": {
+      "protocol": "BR040762026",
+      "fieldStart": "2026-09-11",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-14",
+      "sample": 2000,
+      "company": "Nexus",
+      "tradeName": "Nexus",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

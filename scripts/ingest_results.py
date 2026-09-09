@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import io
 import json
 import re
 import sys
@@ -21,6 +22,11 @@ from dataclasses import dataclass, field
 from datetime import date, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
+
+try:
+    from pypdf import PdfReader
+except ImportError:  # A mensagem amigável é emitida apenas se uma fonte PDF aparecer.
+    PdfReader = None
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -180,6 +186,20 @@ def fetch(url: str) -> str:
         # As páginas monitoradas usam UTF-8; tentar esse codec primeiro evita
         # corromper nomes e, por consequência, a conciliação de candidatos.
         payload = response.read()
+        content_type = response.headers.get_content_type()
+        if content_type == "application/pdf" or payload.startswith(b"%PDF-"):
+            if PdfReader is None:
+                raise OSError("fonte em PDF exige a dependência pypdf")
+            try:
+                reader = PdfReader(io.BytesIO(payload))
+                # O modo layout mantém cada candidato perto do respectivo
+                # percentual em tabelas e gráficos horizontais.
+                return "\n".join(
+                    page.extract_text(extraction_mode="layout") or ""
+                    for page in reader.pages
+                )
+            except Exception as error:
+                raise OSError(f"não foi possível extrair o PDF: {error}") from error
         try:
             return payload.decode("utf-8")
         except UnicodeDecodeError:
@@ -242,6 +262,7 @@ def parse_detail(url: str, markup: str) -> dict:
         residual = sum(percentage(item.text()) for item in descendants(aggregate, class_name="ag-val"))
 
     source_anchor = first(source_block, tag="a")
+    scenario_label = first(root, tag="p", class_name="cenario")
     related = [
         urllib.parse.urljoin(url, anchor.attrs["href"])
         for anchor in descendants(root, tag="a", class_name="tb-link")
@@ -258,6 +279,7 @@ def parse_detail(url: str, markup: str) -> dict:
         "margin": percentage(tech.get("margem de erro", "0")),
         "method": tech.get("coleta", "não informado").capitalize(),
         "round": int(round_match.group(1)) if round_match else 0,
+        "spontaneous": bool(scenario_label and "espontanea" in normalize(scenario_label.text())),
         "end": re.search(r"2026-\d{2}-\d{2}", url).group(0),
         "results": result_list(placar),
         "undecided": residual,
@@ -325,29 +347,83 @@ def source_text(markup: str) -> str:
     return normalize(root.text())
 
 
-def source_confirms(detail: dict, election_id: str, results: dict[str, float], markup: str) -> bool:
-    text = source_text(markup)
+def percentage_pattern(value: float) -> str:
+    rendered = f"{float(value):g}"
+    if "." not in rendered:
+        return re.escape(rendered)
+    whole, decimal = rendered.split(".", 1)
+    # ``source_text`` normaliza vírgulas e pontos para espaços. Aceitar também
+    # a pontuação original torna a função segura para futuros extratores.
+    return rf"{re.escape(whole)}(?:\s+|[,.]){re.escape(decimal)}"
+
+
+def source_confirms_metadata(detail: dict, text: str) -> bool:
     if detail["protocol"] not in protocol_key(text):
         return False
     if str(detail["sample"]) not in text.replace(" ", "").replace(".", ""):
         return False
+    return True
+
+
+def source_confirms_candidate(election_id: str, identifier: str, value: float, text: str) -> bool:
+    aliases = CANDIDATE_ALIASES[election_id][identifier]
+    rendered = percentage_pattern(value)
+    return any(
+        re.search(rf"{re.escape(alias)}.{{0,100}}{rendered}\s*%", text)
+        or re.search(rf"{rendered}\s*%.{{0,100}}{re.escape(alias)}", text)
+        for alias in aliases
+    )
+
+
+def source_confirms(detail: dict, election_id: str, results: dict[str, float], markup: str) -> bool:
+    text = source_text(markup)
+    if not source_confirms_metadata(detail, text):
+        return False
     for identifier, value in results.items():
-        aliases = CANDIDATE_ALIASES[election_id][identifier]
-        rendered = str(value).replace(".0", "").replace(".", r"[,.]")
-        if not any(
-            re.search(rf"{re.escape(alias)}.{{0,100}}{rendered}\s*%", text)
-            or re.search(rf"{rendered}\s*%.{{0,100}}{re.escape(alias)}", text)
-            for alias in aliases
-        ):
+        if not source_confirms_candidate(election_id, identifier, value, text):
             return False
     return True
+
+
+def source_confirmed_scenario(
+    detail: dict,
+    election_id: str,
+    catalog: dict[str, dict],
+    markup: str,
+) -> tuple[str, dict[str, float]] | None:
+    """Escolhe a lista mais completa cujos números constam na fonte.
+
+    Algumas fichas trazem uma lista maior com um único número divergente da
+    publicação. Nesses casos é preferível incorporar o subconjunto integralmente
+    confirmado a perder toda a pesquisa.
+    """
+    mapped = {
+        identifier: value
+        for name, value in detail["results"].items()
+        if (identifier := candidate_id(election_id, name))
+    }
+    text = source_text(markup)
+    if not source_confirms_metadata(detail, text):
+        return None
+    confirmed = {
+        identifier
+        for identifier, value in mapped.items()
+        if source_confirms_candidate(election_id, identifier, value, text)
+    }
+    choices = [item for item in catalog.values() if item["round"] == detail["round"]]
+    choices.sort(key=lambda item: (-len(item["candidates"]), item["id"]))
+    for item in choices:
+        expected = set(item["candidates"])
+        if expected.issubset(confirmed):
+            return item["id"], {key: mapped[key] for key in item["candidates"]}
+    return None
 
 
 def field_start(source: str, end: str) -> str:
     normalized = normalize(source)
     patterns = (
-        r"(?:entre os dias|dos dias|entre|de)\s+(\d{1,2})\s+(?:e|a)\s+\d{1,2}\s+de\s+([a-z]+)(?:\s+de\s+(20\d{2}))?",
-        r"(?:entre os dias|dos dias|entre|de)\s+(\d{1,2})\s+(?:e|a)\s+\d{1,2}\s+([a-z]+)(?:\s+(20\d{2}))?",
+        r"(?:entre os dias|dos dias|entre|de)\s+(\d{1,2})(?:o)?\s+(?:e|a)\s+\d{1,2}(?:o)?\s+de\s+([a-z]+)(?:\s+de\s+(20\d{2}))?",
+        r"(?:entre os dias|dos dias|entre|de)\s+(\d{1,2})(?:o)?\s+(?:e|a)\s+\d{1,2}(?:o)?\s+([a-z]+)(?:\s+(20\d{2}))?",
     )
     for pattern in patterns:
         match = re.search(pattern, normalized)
@@ -383,6 +459,20 @@ def load_catalogs() -> tuple[list[dict], dict[str, dict]]:
     return elections, databases
 
 
+def load_official_records(elections: list[dict]) -> dict[str, dict[str, dict]]:
+    records: dict[str, dict[str, dict]] = {}
+    for election in elections:
+        election_records: dict[str, dict] = {}
+        for key, bucket in (("metadataFile", "records"), ("monitorFile", "pending")):
+            path = ROOT / election.get(key, "")
+            if not path.is_file():
+                continue
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            election_records.update(payload.get(bucket, {}))
+        records[election["id"]] = election_records
+    return records
+
+
 def merge_scenarios(existing: dict, incoming: dict[str, dict], catalog: dict[str, dict]) -> bool:
     """Complementa uma pesquisa já conhecida sem manter sua versão truncada."""
     before = json.dumps(existing["scenarios"], ensure_ascii=False, sort_keys=True)
@@ -412,6 +502,7 @@ def merge_scenarios(existing: dict, incoming: dict[str, dict], catalog: dict[str
 
 def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
     elections, databases = load_catalogs()
+    official_records = load_official_records(elections)
     election_by_id = {item["id"]: item for item in elections}
     grouped: dict[tuple[str, str], list[dict]] = {}
     warnings: list[str] = []
@@ -446,10 +537,13 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
         database = databases[election_id]
         catalog = {item["id"]: item for item in database["scenarios"]}
         scenarios: dict[str, dict] = {}
+        scenario_quality: dict[str, int] = {}
         source_cache: dict[str, str] = {}
         source_labels: dict[str, str] = {}
         source_markup_for_dates = ""
         for detail in details:
+            if detail.get("spontaneous"):
+                continue
             mapped = scenario_for(detail, election_id, catalog)
             if not mapped or not detail["source"]:
                 continue
@@ -459,8 +553,15 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
             except OSError as error:
                 warnings.append(f"{detail['source']}: {error}")
                 continue
-            if not source_confirms(detail, election_id, results, markup):
-                warnings.append(f"{protocol}/{scenario_id}: fonte não confirmou todos os valores")
+            exact_confirmation = source_confirms(detail, election_id, results, markup)
+            if not exact_confirmation:
+                confirmed = source_confirmed_scenario(detail, election_id, catalog, markup)
+                if not confirmed:
+                    warnings.append(f"{protocol}/{scenario_id}: fonte não confirmou todos os valores")
+                    continue
+                scenario_id, results = confirmed
+            quality = 1 if exact_confirmation else 0
+            if scenario_quality.get(scenario_id, -1) > quality:
                 continue
             source_markup_for_dates = source_markup_for_dates or markup
             source_labels[detail["source"]] = urllib.parse.urlparse(detail["source"]).netloc.removeprefix("www.")
@@ -470,6 +571,7 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
                 "resultSource": detail["source"],
                 "resultSourceLabel": f"{source_labels[detail['source']]} — resultado publicado",
             }
+            scenario_quality[scenario_id] = quality
         if not scenarios:
             continue
 
@@ -480,14 +582,19 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
             continue
 
         primary = details[0]
-        start = field_start(source_text(source_markup_for_dates), primary["end"])
+        official = official_records.get(election_id, {}).get(protocol, {})
+        start = official.get("fieldStart") or field_start(
+            source_text(source_markup_for_dates), primary["end"]
+        )
         source = next(iter(source_labels))
         poll = {
             "id": max((item["id"] for item in database["polls"]), default=0) + 1,
             "pollster": primary["pollster"],
             "publication": source_labels[source],
             "protocol": protocol,
-            "published": published_date(source_markup_for_dates, primary["end"]),
+            "published": official.get("disclosureDate") or published_date(
+                source_markup_for_dates, primary["end"]
+            ),
             "start": start,
             "end": primary["end"],
             "field": format_field(start, primary["end"]),
