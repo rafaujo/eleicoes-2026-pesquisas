@@ -43,6 +43,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG060142026": {
+      "protocol": "MG060142026",
+      "fieldStart": "2026-09-08",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-14",
+      "sample": 1100,
+      "company": "Sectral Negocios",
+      "tradeName": "Sectral Negocios",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG090352026": {
+      "protocol": "MG090352026",
+      "fieldStart": "2026-09-09",
+      "fieldEnd": "2026-09-12",
+      "disclosureDate": "2026-09-14",
+      "sample": 1560,
+      "company": "F5 Atualiza Dados",
+      "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG099182026": {
       "protocol": "MG099182026",
       "fieldStart": "2026-09-05",
