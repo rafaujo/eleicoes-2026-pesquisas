@@ -54,6 +54,17 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "SP027942026": {
+      "protocol": "SP027942026",
+      "fieldStart": "2026-09-09",
+      "fieldEnd": "2026-09-12",
+      "disclosureDate": "2026-09-14",
+      "sample": 2000,
+      "company": "Real Time Big Data",
+      "tradeName": "Real Time Big Data",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP031392026": {
       "protocol": "SP031392026",
       "fieldStart": "2026-09-07",
