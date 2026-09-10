@@ -137,6 +137,88 @@
       }
     },
     {
+      "id": 15,
+      "pollster": "Futura Inteligência",
+      "publication": "cnnbrasil.com.br",
+      "protocol": "SP001522026",
+      "published": "2026-09-08",
+      "start": "2026-09-02",
+      "end": "2026-09-04",
+      "field": "2–4 set",
+      "sample": 1600,
+      "margin": 2.4,
+      "confidence": 95,
+      "method": "Entrevistas por telefone",
+      "resultSource": "https://www.cnnbrasil.com.br/eleicoes/futura-sp-tarcisio-venceria-em-1o-turno-com-54-haddad-tem-315/",
+      "resultSourceLabel": "cnnbrasil.com.br — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 54,
+            "haddad": 31.5,
+            "vera": 0.8,
+            "machado": 0.7,
+            "edjane": 0.8,
+            "vivian": 0.4,
+            "izadora": 0.6
+          },
+          "undecided": 11.2,
+          "resultSource": "https://www.cnnbrasil.com.br/eleicoes/futura-sp-tarcisio-venceria-em-1o-turno-com-54-haddad-tem-315/",
+          "resultSourceLabel": "cnnbrasil.com.br — resultado publicado"
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 57.1,
+            "haddad": 34.5
+          },
+          "undecided": 8.3,
+          "resultSource": "https://www.cnnbrasil.com.br/eleicoes/futura-sp-tarcisio-venceria-em-1o-turno-com-54-haddad-tem-315/",
+          "resultSourceLabel": "cnnbrasil.com.br — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "pollster": "AtlasIntel",
+      "publication": "Estadão · CNN Brasil",
+      "protocol": "SP069642026",
+      "published": "2026-09-03",
+      "start": "2026-08-26",
+      "end": "2026-08-31",
+      "field": "26–31 ago",
+      "sample": 1810,
+      "margin": 1,
+      "confidence": 95,
+      "method": "Recrutamento digital aleatório (Atlas RDR)",
+      "resultSource": "https://www.cnnbrasil.com.br/eleicoes/atlas-estadao-tarcisio-venceria-no-1o-turno-com-511-haddad-tem-399/",
+      "resultSourceLabel": "cnnbrasil.com.br — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 51.1,
+            "haddad": 39.9,
+            "vera": 1,
+            "machado": 1.3,
+            "edjane": 0.2,
+            "vivian": 1,
+            "izadora": 0
+          },
+          "undecided": 5.5,
+          "resultSource": "https://www.cnnbrasil.com.br/eleicoes/atlas-estadao-tarcisio-venceria-no-1o-turno-com-511-haddad-tem-399/",
+          "resultSourceLabel": "cnnbrasil.com.br — resultado publicado"
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 53.2,
+            "haddad": 42.6
+          },
+          "undecided": 4.2,
+          "resultSource": "https://www.cnnbrasil.com.br/eleicoes/atlas-estadao-tarcisio-venceria-no-1o-turno-com-511-haddad-tem-399/",
+          "resultSourceLabel": "cnnbrasil.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 12,
       "pollster": "Vox Brasil",
       "publication": "poder360.com.br",

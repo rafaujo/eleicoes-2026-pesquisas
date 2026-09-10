@@ -69,10 +69,16 @@ class ElectionCatalogTests(unittest.TestCase):
         latest_gerp = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP014772026")
         latest_realtime = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP013472026")
         latest_vox = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP009402026")
+        latest_atlas = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP069642026")
+        latest_futura = next(poll for poll in self.sp["polls"] if poll["protocol"] == "SP001522026")
         self.assertEqual(latest_quaest["scenarios"]["first-main"]["results"]["tarcisio"], 40)
         self.assertEqual(latest_gerp["scenarios"]["first-main"]["results"]["haddad"], 32)
         self.assertEqual(latest_realtime["scenarios"]["first-short"]["results"]["tarcisio"], 52)
         self.assertEqual(latest_vox["scenarios"]["first-main"]["results"]["tarcisio"], 55.3)
+        self.assertEqual(latest_atlas["scenarios"]["first-main"]["results"]["tarcisio"], 51.1)
+        self.assertEqual(latest_atlas["scenarios"]["runoff-tarcisio-haddad"]["results"]["haddad"], 42.6)
+        self.assertEqual(latest_futura["scenarios"]["first-main"]["results"]["haddad"], 31.5)
+        self.assertEqual(latest_futura["scenarios"]["runoff-tarcisio-haddad"]["results"]["tarcisio"], 57.1)
 
     def test_sao_paulo_official_files_cover_curated_protocols(self) -> None:
         metadata = json.loads((ROOT / "data" / "tse-metadata-sp.json").read_text(encoding="utf-8"))

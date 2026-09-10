@@ -118,7 +118,12 @@ class ScenarioDataTests(unittest.TestCase):
             "BR002512026",  # GERP
             "BR079352026",  # Meio/Ideia
             "BR054202026",  # Palver
+            "BR049142026",  # PoderData/Aya, 10 de setembro
         }.issubset(protocols))
+
+        poderdata = next(poll for poll in self.database["polls"] if poll["protocol"] == "BR049142026")
+        self.assertEqual(poderdata["scenarios"]["first-with-cury-marcal"]["results"]["cury"], 10)
+        self.assertEqual(poderdata["scenarios"]["runoff-lula-flavio"]["results"], {"lula": 45, "flavio": 47})
 
 
 if __name__ == "__main__":

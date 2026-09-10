@@ -172,10 +172,33 @@
       "sample": 3000,
       "margin": 1.8,
       "confidence": 95,
-      "method": "Não informada",
+      "method": "Entrevistas telefônicas automatizadas (URA)",
       "resultSource": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-36-de-flavio-no-1o-turno/",
       "resultSourceLabel": "poder360.com.br — resultado publicado",
       "scenarios": {
+        "first-with-cury-marcal": {
+          "results": {
+            "lula": 38,
+            "flavio": 36,
+            "cury": 10,
+            "marcal": 2,
+            "caiado": 2,
+            "renan": 3,
+            "zema": 1
+          },
+          "undecided": 4,
+          "resultSource": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-36-de-flavio-no-1o-turno/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 45,
+            "flavio": 47
+          },
+          "undecided": 8,
+          "resultSource": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-36-de-flavio-no-1o-turno/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        },
         "runoff-lula-cury": {
           "results": {
             "lula": 43,
