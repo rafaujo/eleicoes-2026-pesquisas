@@ -161,6 +161,33 @@
   ],
   "polls": [
     {
+      "id": 55,
+      "pollster": "PoderData",
+      "publication": "poder360.com.br",
+      "protocol": "BR049142026",
+      "published": "2026-09-10",
+      "start": "2026-09-06",
+      "end": "2026-09-09",
+      "field": "6–9 set",
+      "sample": 3000,
+      "margin": 1.8,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-36-de-flavio-no-1o-turno/",
+      "resultSourceLabel": "poder360.com.br — resultado publicado",
+      "scenarios": {
+        "runoff-lula-cury": {
+          "results": {
+            "lula": 43,
+            "cury": 44
+          },
+          "undecided": 13,
+          "resultSource": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-36-de-flavio-no-1o-turno/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "pollster": "Palver",
       "publication": "BOL/UOL",
       "protocol": "BR054202026",
@@ -512,6 +539,15 @@
           "undecided": 17,
           "resultSource": "https://www.infomoney.com.br/politica/quaest-lula-tem-36-e-flavio-29-no-primeiro-turno-a-menos-de-um-mes-do-1o-turno/",
           "resultSourceLabel": "infomoney.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 41,
+            "flavio": 41
+          },
+          "undecided": 18,
+          "resultSource": "https://www.metropoles.com/brasil/quaest-lula-e-flavio-bolsonaro-empatam-com-41-no-2o-turno",
+          "resultSourceLabel": "metropoles.com — resultado publicado"
         }
       }
     },
