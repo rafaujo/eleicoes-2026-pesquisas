@@ -31,6 +31,7 @@ except ImportError:  # A mensagem amigável é emitida apenas se uma fonte PDF a
 
 ROOT = Path(__file__).resolve().parents[1]
 ELECTIONS_FILE = ROOT / "data" / "elections.json"
+DISCOVERY_FILE = ROOT / "data" / "result-discovery.json"
 INDEX_URL = "https://depoisdas17.com.br/pesquisas/"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; Pulso26Bot/1.0; +https://github.com/rafaujo/eleicoes-2026-pesquisas)",
@@ -172,6 +173,23 @@ def normalize(value: str) -> str:
 
 def protocol_key(value: str) -> str:
     return "".join(char for char in value.upper() if char.isalnum())
+
+
+def direct_article_url(article: dict[str, str]) -> str:
+    """Converte links descobertos em URLs diretas quando o portal é previsível.
+
+    O Google Notícias não expõe a URL original no RSS. A CNN, porém, usa no
+    endereço o título normalizado da matéria; reconstruí-lo nos dá uma fonte
+    jornalística verificável sem depender do redirecionamento do Google.
+    """
+    if normalize(article.get("source", "")) != "cnn brasil":
+        return ""
+    title = re.sub(r"\s+-\s+CNN Brasil\s*$", "", article.get("title", ""), flags=re.I)
+    title = re.sub(r"(?<=\d)[,.](?=\d)", "", title).replace("º", "o").replace("ª", "a")
+    decomposed = unicodedata.normalize("NFKD", title)
+    plain = "".join(char for char in decomposed if not unicodedata.combining(char))
+    slug = re.sub(r"[^a-z0-9]+", "-", plain.lower()).strip("-")
+    return f"https://www.cnnbrasil.com.br/eleicoes/{slug}/" if slug else ""
 
 
 def percentage(value: str) -> float:
@@ -396,6 +414,53 @@ def source_confirms(detail: dict, election_id: str, results: dict[str, float], m
     return True
 
 
+def load_discovered_articles() -> list[dict[str, str]]:
+    if not DISCOVERY_FILE.is_file():
+        return []
+    return json.loads(DISCOVERY_FILE.read_text(encoding="utf-8")).get("pending", [])
+
+
+def confirming_discovered_source(
+    detail: dict,
+    election_id: str,
+    results: dict[str, float],
+    articles: list[dict[str, str]],
+    cache: dict[str, str | OSError],
+) -> tuple[str, str] | None:
+    """Localiza uma matéria descoberta que confirme integralmente a ficha.
+
+    A conciliação exige mesma eleição, mesmo instituto, publicação até sete
+    dias depois do campo e confirmação do protocolo, amostra e de todos os
+    percentuais. Assim uma notícia semelhante não pode ser ligada por engano.
+    """
+    end = date.fromisoformat(detail["end"])
+    pollster = normalize(detail["pollster"])
+    for article in articles:
+        if article.get("election") != election_id:
+            continue
+        article_pollster = normalize(article.get("pollster", ""))
+        if not article_pollster or not (
+            article_pollster in pollster or pollster in article_pollster
+        ):
+            continue
+        try:
+            published = date.fromisoformat(article.get("published", ""))
+        except ValueError:
+            continue
+        if not end <= published <= end + timedelta(days=7):
+            continue
+        url = direct_article_url(article)
+        if not url:
+            continue
+        try:
+            markup = fetch_cached(cache, url)
+        except OSError:
+            continue
+        if source_confirms(detail, election_id, results, markup):
+            return url, markup
+    return None
+
+
 def source_confirmed_scenario(
     detail: dict,
     election_id: str,
@@ -544,6 +609,7 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
     warnings: list[str] = []
     since = date.today() - timedelta(days=lookback_days)
     document_cache: dict[str, str | OSError] = {}
+    discovered_articles = load_discovered_articles()
 
     for url in index_links(fetch_cached(document_cache, INDEX_URL), since):
         slug = url.rstrip("/").rsplit("/", 1)[-1]
@@ -591,8 +657,22 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
                 markup = fetch_cached(document_cache, detail["source"])
             except OSError as error:
                 warnings.append(f"{detail['source']}: {error}")
-                continue
-            exact_confirmation = source_confirms(detail, election_id, results, markup)
+                markup = ""
+            verified_source = detail["source"]
+            exact_confirmation = bool(markup) and source_confirms(
+                detail, election_id, results, markup
+            )
+            if not exact_confirmation:
+                discovered = confirming_discovered_source(
+                    detail,
+                    election_id,
+                    results,
+                    discovered_articles,
+                    document_cache,
+                )
+                if discovered:
+                    verified_source, markup = discovered
+                    exact_confirmation = True
             if not exact_confirmation:
                 confirmed = source_confirmed_scenario(detail, election_id, catalog, markup)
                 if not confirmed:
@@ -605,12 +685,12 @@ def ingest(lookback_days: int = 10) -> tuple[int, list[str]]:
             if scenario_quality.get(scenario_id, -1) > quality:
                 continue
             source_markup_for_dates = source_markup_for_dates or markup
-            source_labels[detail["source"]] = urllib.parse.urlparse(detail["source"]).netloc.removeprefix("www.")
+            source_labels[verified_source] = urllib.parse.urlparse(verified_source).netloc.removeprefix("www.")
             scenarios[scenario_id] = {
                 "results": results,
                 "undecided": detail["undecided"],
-                "resultSource": detail["source"],
-                "resultSourceLabel": f"{source_labels[detail['source']]} — resultado publicado",
+                "resultSource": verified_source,
+                "resultSourceLabel": f"{source_labels[verified_source]} — resultado publicado",
             }
             scenario_quality[scenario_id] = quality
         if not scenarios:

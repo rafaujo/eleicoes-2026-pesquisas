@@ -3,6 +3,8 @@ from unittest.mock import patch
 
 from scripts.ingest_results import (
     Node,
+    confirming_discovered_source,
+    direct_article_url,
     fetch_cached,
     index_links,
     normalize,
@@ -21,6 +23,48 @@ from scripts.ingest_results import (
 
 
 class IngestResultsTests(unittest.TestCase):
+    def test_cnn_discovery_title_becomes_direct_article_url(self) -> None:
+        article = {
+            "source": "CNN Brasil",
+            "title": "Atlas/Estadão: Tarcísio venceria no 1º turno com 51,1%; Haddad tem 39,9% - CNN Brasil",
+        }
+
+        self.assertEqual(
+            direct_article_url(article),
+            "https://www.cnnbrasil.com.br/eleicoes/atlas-estadao-tarcisio-venceria-no-1o-turno-com-511-haddad-tem-399/",
+        )
+
+    def test_discovered_article_is_used_only_after_full_confirmation(self) -> None:
+        detail = {
+            "pollster": "AtlasIntel",
+            "protocol": "SP069642026",
+            "sample": 1810,
+            "end": "2026-08-31",
+        }
+        article = {
+            "election": "governor-sp",
+            "pollster": "AtlasIntel",
+            "source": "CNN Brasil",
+            "published": "2026-09-03",
+            "title": "Atlas/Estadão: Tarcísio venceria no 1º turno com 51,1%; Haddad tem 39,9% - CNN Brasil",
+        }
+        source = (
+            "Registro SP-06964/2026. Foram ouvidas 1.810 pessoas. "
+            "Tarcísio de Freitas tem 51,1%; Fernando Haddad, 39,9%."
+        )
+
+        with patch("scripts.ingest_results.fetch", return_value=source):
+            confirmed = confirming_discovered_source(
+                detail,
+                "governor-sp",
+                {"tarcisio": 51.1, "haddad": 39.9},
+                [article],
+                {},
+            )
+
+        self.assertIsNotNone(confirmed)
+        self.assertEqual(confirmed[0], direct_article_url(article))
+
     def test_fetch_cache_reuses_successes_and_failures(self) -> None:
         cache = {}
         with patch("scripts.ingest_results.fetch", return_value="conteúdo") as mocked_fetch:
