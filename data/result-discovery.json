@@ -66,6 +66,7 @@
     "15378f41bf6708788744",
     "1555af4b0aeb7886e49a",
     "15d44022ff7a4aa72ef1",
+    "15fbfe2acf04392ad3c3",
     "1637b2aef93af42ebf05",
     "16ec403cda7484806f23",
     "170143e3f96f251d797b",
@@ -78,6 +79,7 @@
     "1944b06ac40ce080cd4b",
     "19529d21b8ea73d78ee6",
     "1971cc737d6b3f22b259",
+    "1a05ef17ba4c9a453537",
     "1a082666b71aa1da28e9",
     "1a367c75afb0850177c1",
     "1a8c9b773d5f0068f0fb",
@@ -336,6 +338,7 @@
     "762e5a8536a7a9d9ad07",
     "766dd0226a520310973a",
     "76892460567f8268363c",
+    "7704ca6c861fcd69f028",
     "77470bfba2b4bc0452b3",
     "77fc4380d52976900a12",
     "783d1b2f6376d4842098",
@@ -755,6 +758,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Atlas: Flávio Bolsonaro sobe a 37,4% no 1º turno; Lula mantém 43% - Metrópoles",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYUJkbkxtM3IxNmdGWlp0amJOWE5GOVRBSWlVeTN0Wnk0NnlzY2FfdlkxbWJuaTNGc1c0bUF6ZXNIRFhyd0NCZUNhbXdvdXcweXZtN3Jvb1o5cGxITDBtRXo1SkpPT3I4M0YzZm83Z0xxS1pRTnpja0dUODdaSl9vT3ExdXZ2RFNkN2dybXU4SVBvN002Wm5QbnFR?oc=5",
+      "source": "Metrópoles",
+      "published": "2026-09-10",
+      "pollster": "AtlasIntel",
+      "key": "15fbfe2acf04392ad3c3"
+    },
     {
       "election": "governor-mg",
       "title": "Quaest: Cleitinho lidera com 32%; Kalil e Patrus empatam em 2º com 11% - sucessofm.com",

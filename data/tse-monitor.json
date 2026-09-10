@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-10 14:24:29",
+  "sourceGeneratedAt": "2026-09-10 18:25:00",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -787,17 +787,6 @@
       "sample": 1104,
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
       "tradeName": "",
-      "contractors": []
-    },
-    "BR049142026": {
-      "protocol": "BR049142026",
-      "registeredAt": "2026-09-04",
-      "fieldStart": "2026-09-06",
-      "fieldEnd": "2026-09-09",
-      "disclosureDate": "2026-09-10",
-      "sample": 3000,
-      "company": "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA",
-      "tradeName": "PODERDATA",
       "contractors": []
     },
     "BR078062026": {
