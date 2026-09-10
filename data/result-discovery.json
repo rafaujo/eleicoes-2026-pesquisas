@@ -745,15 +745,6 @@
   ],
   "pending": [
     {
-      "election": "governor-sp",
-      "title": "Tarcísio tem 42% contra 27% de Haddad no 1º turno, aponta pesquisa Quaest - CBN São José dos Campos e Vale",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNjZGcXRkS1BzMXhIRDFuQ1ZGaHZST080a25kaW1pSzlQMTVONE44ZzBicURrNmtSTkVhZGduWUxENWdqVWN4Tzd6YjJYOHNBRG1UZF8yMGk0MXJwZEUtSnpOcHdzMlhFRmwxekVEOUJENGxRVzJzN3V1VVFza3BXOGcyeWJtVjVtWERzZWF5dWI4bC1UXzZQaWxxSkZ5bUE?oc=5",
-      "source": "CBN São José dos Campos e Vale",
-      "published": "2026-09-09",
-      "pollster": "Quaest",
-      "key": "71abe39dc6ae625a7b78"
-    },
-    {
       "election": "governor-mg",
       "title": "Quaest: Cleitinho lidera com 32%; Kalil e Patrus empatam em 2º com 11% - sucessofm.com",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMm9QeHNwclRjdE9oQ3BpLVhFWnhObDdsQWlySW9PN0ZCZjFtbzNraUFBWFRMd1QwRW1sMDZCQ1A1cWR3enhoZktxRE9RYWlaMmtFM01VNHU3SGlGc0ttM2pPUjM0ZUFKeHlOUHhUb0FQbElZclQ3WDgtRUxLRHA1VTlkVzlRNDg1dVNFOWdBUjhaUk9YQ0IzRXBVd2FuSThpRTZlR3Y3SQ?oc=5",
@@ -761,6 +752,15 @@
       "published": "2026-09-09",
       "pollster": "Quaest",
       "key": "7152163946be6468b175"
+    },
+    {
+      "election": "governor-sp",
+      "title": "Quaest: Tarcísio lidera com 42% no 1º turno em SP; Haddad tem 27% - UOL Notícias",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdG8xLWNRSUw5NjZjLWJMU24tVTJBTHlhT01VSzNrOTBURmtDUjgxQTRCVUk0VXRvNEVpUGktYzBUWnRPNXNiMUhGQ1JSckRxN2pKSUlvby1fZlRESnRjWGcyZ3psb2ZhTHM5TWs0X2ZKZEp4VlpWdkx4S1JhdEEweDc5MnBVQQ?oc=5",
+      "source": "UOL Notícias",
+      "published": "2026-09-09",
+      "pollster": "Quaest",
+      "key": "17b94a583f79219c0c16"
     },
     {
       "election": "governor-sp",
