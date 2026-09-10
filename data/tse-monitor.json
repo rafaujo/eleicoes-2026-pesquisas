@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-10 18:25:00",
+  "sourceGeneratedAt": "2026-09-10 21:36:15",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -226,6 +226,7 @@
     "BR034612026",
     "BR034732026",
     "BR034792026",
+    "BR034822026",
     "BR034902026",
     "BR034912026",
     "BR034932026",
@@ -294,6 +295,7 @@
     "BR043202026",
     "BR043282026",
     "BR043672026",
+    "BR043752026",
     "BR043962026",
     "BR044092026",
     "BR044192026",
@@ -453,6 +455,7 @@
     "BR068352026",
     "BR068542026",
     "BR068682026",
+    "BR069022026",
     "BR069042026",
     "BR069152026",
     "BR069162026",
@@ -574,6 +577,7 @@
     "BR087612026",
     "BR087652026",
     "BR087742026",
+    "BR087872026",
     "BR087912026",
     "BR087942026",
     "BR087952026",
@@ -745,6 +749,17 @@
       "tradeName": "DATAVERO INSTITUTO DE PESQUISAS",
       "contractors": []
     },
+    "BR034822026": {
+      "protocol": "BR034822026",
+      "registeredAt": "2026-09-09",
+      "fieldStart": "2026-09-10",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-15",
+      "sample": 2000,
+      "company": "INSTITUTO INDEXA PESQUISAS LTDA",
+      "tradeName": "INDEXA PESQUISAS",
+      "contractors": []
+    },
     "BR035152026": {
       "protocol": "BR035152026",
       "registeredAt": "2026-08-24",
@@ -778,6 +793,17 @@
       "tradeName": "NEXUS",
       "contractors": []
     },
+    "BR043752026": {
+      "protocol": "BR043752026",
+      "registeredAt": "2026-09-09",
+      "fieldStart": "2026-08-30",
+      "fieldEnd": "2026-08-31",
+      "disclosureDate": "2026-09-15",
+      "sample": 300,
+      "company": "R MUNARIN PESQUISAS",
+      "tradeName": "APURA PARANA",
+      "contractors": []
+    },
     "BR044422026": {
       "protocol": "BR044422026",
       "registeredAt": "2026-09-02",
@@ -786,6 +812,17 @@
       "disclosureDate": "2026-09-08",
       "sample": 1104,
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
+    "BR069022026": {
+      "protocol": "BR069022026",
+      "registeredAt": "2026-09-09",
+      "fieldStart": "2026-09-09",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-15",
+      "sample": 2002,
+      "company": "MDA-PESQUISA DE OPINIAO PUBLICA E CONSULT. ESTATIST. LTDA - EPP",
       "tradeName": "",
       "contractors": []
     },
@@ -834,6 +871,17 @@
       "contractors": [
         "INSTITUTO DE PESQUISAS PERFIL LTDA"
       ]
+    },
+    "BR087872026": {
+      "protocol": "BR087872026",
+      "registeredAt": "2026-09-09",
+      "fieldStart": "2026-09-10",
+      "fieldEnd": "2026-09-12",
+      "disclosureDate": "2026-09-15",
+      "sample": 602,
+      "company": "LUIZ MIGUEL DE OLIVEIRA",
+      "tradeName": "L3 SISTEMAS E CONSULTORIA",
+      "contractors": []
     }
   },
   "agendaSource": "https://depoisdas17.com.br/agenda/",
@@ -860,6 +908,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "BR034822026": {
+      "protocol": "BR034822026",
+      "fieldStart": "2026-09-10",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-15",
+      "sample": 2000,
+      "company": "Indexa",
+      "tradeName": "Indexa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR040762026": {
       "protocol": "BR040762026",
       "fieldStart": "2026-09-11",
@@ -868,6 +927,17 @@
       "sample": 2000,
       "company": "Nexus",
       "tradeName": "Nexus",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR069022026": {
+      "protocol": "BR069022026",
+      "fieldStart": "2026-09-09",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-15",
+      "sample": 2002,
+      "company": "MDA",
+      "tradeName": "MDA",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

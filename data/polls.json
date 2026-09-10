@@ -211,6 +211,83 @@
       }
     },
     {
+      "id": 56,
+      "pollster": "AtlasIntel",
+      "publication": "veja.abril.com.br",
+      "protocol": "BR014522026",
+      "published": "2026-09-10",
+      "start": "2026-09-04",
+      "end": "2026-09-09",
+      "field": "4–9 set",
+      "sample": 5000,
+      "margin": 1,
+      "confidence": 95,
+      "method": "Painel online",
+      "resultSource": "https://veja.abril.com.br/politica/a-nova-pesquisa-atlasintel-sobre-a-disputa-lula-x-flavio-bolsonaro/",
+      "resultSourceLabel": "veja.abril.com.br — resultado publicado",
+      "scenarios": {
+        "first-with-cury-marcal": {
+          "results": {
+            "lula": 43,
+            "flavio": 37.4,
+            "cury": 6.6,
+            "marcal": 1,
+            "caiado": 1.1,
+            "renan": 6.5,
+            "zema": 2.1
+          },
+          "undecided": 1.0,
+          "resultSource": "https://veja.abril.com.br/politica/a-nova-pesquisa-atlasintel-sobre-a-disputa-lula-x-flavio-bolsonaro/",
+          "resultSourceLabel": "veja.abril.com.br — resultado publicado"
+        },
+        "runoff-lula-cury": {
+          "results": {
+            "lula": 43.8,
+            "cury": 41.1
+          },
+          "undecided": 15.2,
+          "resultSource": "https://veja.abril.com.br/politica/a-nova-pesquisa-atlasintel-sobre-a-disputa-lula-x-flavio-bolsonaro/",
+          "resultSourceLabel": "veja.abril.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 46.2,
+            "flavio": 46.4
+          },
+          "undecided": 7.4,
+          "resultSource": "https://veja.abril.com.br/politica/a-nova-pesquisa-atlasintel-sobre-a-disputa-lula-x-flavio-bolsonaro/",
+          "resultSourceLabel": "veja.abril.com.br — resultado publicado"
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 46,
+            "renan": 33.8
+          },
+          "undecided": 20.2,
+          "resultSource": "https://veja.abril.com.br/politica/a-nova-pesquisa-atlasintel-sobre-a-disputa-lula-x-flavio-bolsonaro/",
+          "resultSourceLabel": "veja.abril.com.br — resultado publicado"
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 46,
+            "zema": 46.2
+          },
+          "undecided": 7.7,
+          "resultSource": "https://veja.abril.com.br/politica/a-nova-pesquisa-atlasintel-sobre-a-disputa-lula-x-flavio-bolsonaro/",
+          "resultSourceLabel": "veja.abril.com.br — resultado publicado"
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 45.7,
+            "caiado": 45.7
+          },
+          "undecided": 8.6,
+          "resultSource": "https://veja.abril.com.br/politica/a-nova-pesquisa-atlasintel-sobre-a-disputa-lula-x-flavio-bolsonaro/",
+          "resultSourceLabel": "veja.abril.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "pollster": "Palver",
       "publication": "BOL/UOL",
       "protocol": "BR054202026",
