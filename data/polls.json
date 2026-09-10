@@ -562,6 +562,15 @@
           "undecided": 17,
           "resultSource": "https://www.infomoney.com.br/politica/quaest-lula-tem-36-e-flavio-29-no-primeiro-turno-a-menos-de-um-mes-do-1o-turno/",
           "resultSourceLabel": "infomoney.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 41,
+            "flavio": 41
+          },
+          "undecided": 18,
+          "resultSource": "https://www.metropoles.com/brasil/quaest-lula-e-flavio-bolsonaro-empatam-com-41-no-2o-turno",
+          "resultSourceLabel": "metropoles.com — resultado publicado"
         }
       }
     },
