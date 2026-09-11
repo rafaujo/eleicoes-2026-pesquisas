@@ -98,6 +98,47 @@
   ],
   "polls": [
     {
+      "id": 16,
+      "pollster": "Paraná Pesquisas",
+      "publication": "gazetadopovo.com.br",
+      "protocol": "SP080902026",
+      "published": "2026-09-11",
+      "start": "2026-09-07",
+      "end": "2026-09-10",
+      "field": "7–10 set",
+      "sample": 1680,
+      "margin": 2.4,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/parana-pesquisas-governador-sao-paulo-setembro-2026/",
+      "resultSourceLabel": "gazetadopovo.com.br — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 49.7,
+            "haddad": 34.5,
+            "vera": 1.8,
+            "machado": 0.7,
+            "edjane": 0.7,
+            "vivian": 0.7,
+            "izadora": 0.6
+          },
+          "undecided": 11.4,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/parana-pesquisas-governador-sao-paulo-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 52.9,
+            "haddad": 37.5
+          },
+          "undecided": 9.7,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/parana-pesquisas-governador-sao-paulo-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 13,
       "pollster": "Quaest",
       "publication": "cartacapital.com.br",
