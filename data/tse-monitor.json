@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-11 14:24:01",
+  "sourceGeneratedAt": "2026-09-11 18:29:59",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -93,6 +93,7 @@
     "BR013682026",
     "BR013812026",
     "BR014282026",
+    "BR014312026",
     "BR014432026",
     "BR014522026",
     "BR014612026",
@@ -401,6 +402,7 @@
     "BR060262026",
     "BR060372026",
     "BR060482026",
+    "BR060542026",
     "BR060582026",
     "BR060742026",
     "BR060872026",
@@ -567,6 +569,7 @@
     "BR085922026",
     "BR086022026",
     "BR086112026",
+    "BR086912026",
     "BR086942026",
     "BR086952026",
     "BR087032026",
@@ -670,6 +673,17 @@
       "sample": 1500,
       "company": "DATAVERO PESQUISA E CONSULTORIA LTDA",
       "tradeName": "DATAVERO INSTITUTO DE PESQUISAS",
+      "contractors": []
+    },
+    "BR014312026": {
+      "protocol": "BR014312026",
+      "registeredAt": "2026-09-10",
+      "fieldStart": "2026-09-11",
+      "fieldEnd": "2026-09-15",
+      "disclosureDate": "2026-09-16",
+      "sample": 2000,
+      "company": "AMERICAN ANALYTICS DO BRASIL CONSULTORIA LTDA",
+      "tradeName": "AMERICAN ANALYTICS",
       "contractors": []
     },
     "BR018332026": {
@@ -804,6 +818,17 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR060542026": {
+      "protocol": "BR060542026",
+      "registeredAt": "2026-09-10",
+      "fieldStart": "2026-09-10",
+      "fieldEnd": "2026-09-12",
+      "disclosureDate": "2026-09-16",
+      "sample": 602,
+      "company": "LUIZ MIGUEL DE OLIVEIRA",
+      "tradeName": "L3 SISTEMAS E CONSULTORIA",
+      "contractors": []
+    },
     "BR069022026": {
       "protocol": "BR069022026",
       "registeredAt": "2026-09-09",
@@ -846,6 +871,17 @@
       "sample": 40500,
       "company": "INSTITUTO VERITA LTDA",
       "tradeName": "VERITA",
+      "contractors": []
+    },
+    "BR086912026": {
+      "protocol": "BR086912026",
+      "registeredAt": "2026-09-10",
+      "fieldStart": "2026-09-12",
+      "fieldEnd": "2026-09-14",
+      "disclosureDate": "2026-09-16",
+      "sample": 2000,
+      "company": "INSTITUTO DATATRENDS LTDA",
+      "tradeName": "DATATRENDS",
       "contractors": []
     },
     "BR087652026": {
