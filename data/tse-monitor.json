@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-11 18:29:59",
+  "sourceGeneratedAt": "2026-09-11 21:41:47",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -911,6 +911,17 @@
   },
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "BR014312026": {
+      "protocol": "BR014312026",
+      "fieldStart": "2026-09-11",
+      "fieldEnd": "2026-09-15",
+      "disclosureDate": "2026-09-16",
+      "sample": 2000,
+      "company": "American Analytics",
+      "tradeName": "American Analytics",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR018332026": {
       "protocol": "BR018332026",
       "fieldStart": "2026-09-08",
@@ -963,6 +974,17 @@
       "sample": 40500,
       "company": "Veritá",
       "tradeName": "Veritá",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR086912026": {
+      "protocol": "BR086912026",
+      "fieldStart": "2026-09-12",
+      "fieldEnd": "2026-09-14",
+      "disclosureDate": "2026-09-16",
+      "sample": 2000,
+      "company": "Datatrends",
+      "tradeName": "Datatrends",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
