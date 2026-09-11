@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10 18:25:00",
-  "syncedAt": "2026-09-10T18:25:01+00:00",
+  "generatedAt": "2026-09-11 04:35:38",
+  "syncedAt": "2026-09-11T04:35:38+00:00",
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
   "pesqEle": "https://pesqele-divulgacao.tse.jus.br/app/pesquisa/listar.xhtml",
   "resourceUrls": {
@@ -92,6 +92,22 @@
           "resourceOrigin": "Outros"
         }
       ]
+    },
+    "BR014522026": {
+      "protocol": "BR014522026",
+      "registeredAt": "2026-09-04",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-09",
+      "disclosureDate": "2026-09-10",
+      "sample": 5000,
+      "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
+      "tradeName": "ATLASINTEL",
+      "statistician": "ANDREI CAMILO DOS SANTOS",
+      "conre": "11220",
+      "researchCost": 75000.0,
+      "methodology": "Pesquisa quantitativa com coleta aleatória via questionário estruturado web e pós-estratificação da amostra de acordo com as características do eleitorado de Brasil.",
+      "samplingPlan": "Amostra aleatória pós-estratificada via algoritmo iterativo com quotas proporcionais, representando características do eleitorado de Brasil: SEXO: Masculino: 47.2%; Feminino: 52.8%. FAIXA ETÁRIA: Entre 16 a 24 anos: 12.1%; Entre 25 a 34 anos: 19.0%; Entre 35 a 44 anos: 19.7%; Entre 45 a 59 anos: 25.6%; 60 ou mais: 23.6%. ESCOLARIDADE: Ensino Fundamental completo ou incompleto e eleitores sem educação formal: 32.1%; Ensino Médio completo ou incompleto: 40.6%; Ensino Superior completo ou incompleto: 27.3%. NÍVEL ECONÔMICO: Renda familiar mensal até R$2000: 18.7%; Mais de R$2.000 a R$3.000: 11.5%; Mais de R$3.000 a R$5.000: 26.4%; Mais de R$5.000 a R$10.000: 26.2%; Mais de R$10.000: 17.1%. OBS.: devido ao arredondamento, a soma dos percentuais pode variar de 99% a 101%. Na agregação final, para cada variável de ponderação, serão admissíveis desvios de até 1.0 pontos percentuais em relação às quotas estipuladas. Confiança estimada: 95%, margem de erro: +/- 1.0 pontos percentuais. FONTE DOS DADOS: PNADc 2025/2026 para nível econômico e escolaridade | TSE 2026 para sexo e faixa etária.",
+      "contractors": []
     },
     "BR014612026": {
       "protocol": "BR014612026",
