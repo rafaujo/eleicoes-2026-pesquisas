@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-12 04:30:55",
+  "sourceGeneratedAt": "2026-09-12 13:35:42",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -684,17 +684,6 @@
       "sample": 2000,
       "company": "AMERICAN ANALYTICS DO BRASIL CONSULTORIA LTDA",
       "tradeName": "AMERICAN ANALYTICS",
-      "contractors": []
-    },
-    "BR018332026": {
-      "protocol": "BR018332026",
-      "registeredAt": "2026-09-05",
-      "fieldStart": "2026-09-08",
-      "fieldEnd": "2026-09-11",
-      "disclosureDate": "2026-09-11",
-      "sample": 2002,
-      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
-      "tradeName": "",
       "contractors": []
     },
     "BR021422026": {

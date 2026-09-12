@@ -47,6 +47,7 @@
     "0bc7f2b002a760c437d0",
     "0c4f283551c362d4711b",
     "0c83bfca353818ed76ba",
+    "0d167b8b56e0c6c018be",
     "0d3cda1e07eae2fb5f27",
     "0d650f1202565e8f59a7",
     "0dac999b43694a7b2d7f",
@@ -273,6 +274,7 @@
     "58805b8d4ee02f19aa36",
     "58b255bb2fda772169ee",
     "598386b75de2aafb1e2f",
+    "59a644db688c7c2da364",
     "59c75ecd6c40d9a7bf39",
     "5a5d0fb44def7052685e",
     "5b2c54cf4a43001ad18c",
@@ -293,6 +295,7 @@
     "5fce57e7d6d71ba7984b",
     "5ff19f7de192d84e6092",
     "606492061cc315dbb1bf",
+    "60ad1e1a777f5f795a9b",
     "60b78b3948d487760681",
     "60d10365513c1144fa64",
     "60dcb3491ad6a96d1d52",
@@ -352,6 +355,7 @@
     "71abe39dc6ae625a7b78",
     "71b065d1537e41d6fdc2",
     "7213a8500cca37c85721",
+    "721ad764aaec9e08c6a4",
     "72244bbc8a7a262c7a0f",
     "729a5664e31d0c07f16e",
     "737fd5a8f9878fadc9b5",
@@ -456,6 +460,7 @@
     "968f7d95f5978e47cb96",
     "969c1542a93f57243fa4",
     "9704959bab872056d6bf",
+    "97296d8035cb3770d366",
     "976916fbad2944d4b3dd",
     "97c9ae4163fb06d671df",
     "980ba08e0573d16b84d5",
@@ -520,6 +525,7 @@
     "a5e747bca32e7b99a5ec",
     "a651c309af7e36569397",
     "a65f376ce06c118b2d01",
+    "a695452aa9383ff64aa7",
     "a6b99fa28abef5d71aad",
     "a7192b79decff4ced234",
     "a72b0945b9301079a77e",
@@ -741,7 +747,9 @@
     "e8760670bd721c7b1d12",
     "e8954f28cc7c8c128017",
     "e8c5f95bfd5fe67dfadc",
+    "e8f1fe95bb397992d83c",
     "e91e97de7c0290839b46",
+    "e9464e0004cba53e77df",
     "e97d11fd5201b73bcefc",
     "e9ac11a4336d7e193057",
     "eae89a48c9b9ee4f30da",
@@ -793,6 +801,7 @@
     "f76355c117bdc342151a",
     "f798bd54bad0ab11b3c2",
     "f80ad363390932214ab5",
+    "f81f945d7844911684d3",
     "f8abc8c5ce6ddacc11ea",
     "f8da591350e455bb6ec9",
     "f9118b301efdc88cd47c",
@@ -823,6 +832,15 @@
   ],
   "pending": [
     {
+      "election": "president-br",
+      "title": "Datafolha: Caiado marca 4% e segue em 4º lugar na corrida presidencial - Goiás 246",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNeFdSdlA0LUlBOW1wX3kwMGZOY0I3cVphSXYzWHo4bFRhQkIzZy1CUVgweXYyc2JCOTAzcUpXU0RTSGZ2UjE0ZDZZcUNQVFV3a1FaT1ljS0MtbkdBSTB4ZW9PWHBOWFpKQl92YUhxaXdtLVdsMGktRFNFYVQxdFlsM0h4ZG5ZcHJPcjRBOGtUMHV4SW5WMVhyYXNCamdmV0lFb1lwWkpVZUQ1Y1d5RFhYN0lDQk53YWZNMHphOXZ5WVdnTG5sQWc?oc=5",
+      "source": "Goiás 246",
+      "published": "2026-09-12",
+      "pollster": "Datafolha",
+      "key": "e9464e0004cba53e77df"
+    },
+    {
       "election": "governor-sp",
       "title": "Datafolha em SP: Tarcísio, 49%; Haddad, 29% - G1",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWU5PbVNzTm5UOXkxSnJSbzV5bWItbDdGWlk0WlZ6a2E3dXByTHhmbnlzV0ZURHhfelhBbGhKdnNwamRSVFhNOER5cnFEcFhWS3FCdjNoeDZuMFJ1ZU1mLThwOTctQ2t1R0FzMi1GMmdKY3RlTnBwQVVaT3ozUndWNDJCaDVFTXprZndWZ1hPSkhSTmtFRVVfUTRfR0l6dVZrdFlKb0c3eE9hclNW0gG7AUFVX3lxTE9ybHQyUnB6Qy1tNG9zZ2xMT18zWWt1TUwzeV9rN1BQZlpXZUh3bjlvLWtzZHRib1pJbGhVVUJ4NzlrY01FbXcyZ00yVm9IZzNQcHE3bFdUN2M0NU9JRWlyX09JV0lLRTN0cnNoR1VKcEw3M09JX3htLUd6bDZVYjVtUDNicTZHbEtZc3Ffd2JkVHBKdElPbHU3eDBsQ3UzXzlsRmkxMVBGdDZMUkI0N2N0cEgtRkNzRjMwaUk?oc=5",
@@ -832,15 +850,6 @@
       "key": "99a280ab39fa245c8c93"
     },
     {
-      "election": "president-br",
-      "title": "Datafolha: Flávio Bolsonaro e Lula são rejeitados por 46% dos eleitores - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOeEJER2dJbnQ1RnlqTlJtaFpJMTZBVWtFU0ZFU0tmWU8wc0MxT0VCbktpcE9abzVyeXNpSmZXeUk4TXBjUUl5bGZDNXRBeXZmRG9BNld4c0FLODV5WFAzZUhYMDJvLUV5R0hmSksyUm11Ul9ZWEFrR1JXd0lUVDdDOF9YTlA5dkRPOHJJZzBnRVdoVUI4bW1rRVB2Y25XcFJHekxiUi0wVk9NbjcxeTEwdXJoOTdQMHBMZUU0?oc=5",
-      "source": "Folha de S.Paulo",
-      "published": "2026-09-11",
-      "pollster": "Datafolha",
-      "key": "97c9ae4163fb06d671df"
-    },
-    {
       "election": "governor-mg",
       "title": "Datafolha: Cletinho tem 37% e mantém liderança em corrida pelo Governo de MG - Folha de S.Paulo",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQOWlhLXVObUpLVElldk5HdWlNb3J3cTRfUGNBV1gzcXN3XzFjazBSTEJUUGpOdkFpMzlYQlUzLWJ0UDl5bTdMX05tc2ZWdGdnZW93NHFqcF9kbVpQR1hvcjhiZjRPc2FXQ0N6cnNfcVpFY0YzZllfcW9lckItakktekl1VzM1WXBsdVdZaEd6WFExN1kzRmI1RzJzMXcxYjR4TkQ5aHhMeVBPZkxLWDFsSW8zbVZTYnp0Smw3ZUREVU1lUQ?oc=5",
@@ -848,6 +857,24 @@
       "published": "2026-09-11",
       "pollster": "Datafolha",
       "key": "09bb3e9d35f7bbb055f3"
+    },
+    {
+      "election": "president-br",
+      "title": "Eleitores de Zema, Renan Santos, Caiado e Cury migrariam para Flávio Bolsonaro no segundo turno, aponta Quaest - Jornal Além Parahyba",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONERtbk5UbE9yMDNxZHBiYVZjMEhsaFk1bDZ5ZURidkdWLXpWemo1dS1uLUJMS0haVUxPV0JEWXliWGc0bmRUTjE5YUNEVTdFTzEtSFpuX3E2TnFOcVJYUmZtbThNY2dtelVKRVZuVGd1bElCUW4zdW03dVhsV0hUNjNNYjZwdnk4engxeVpsd2FGTzRQZ2lraC1ueW5TYnFxbG5vYWhPS2N5LWhjd1hrTzRiMlhUS2pwOHFNMTQ0VHpKYWtZb1J3MEVPeTVnMWFEd2dlY0dNbzRzSncxaWRUN05TcFVnRUd3LUE?oc=5",
+      "source": "Jornal Além Parahyba",
+      "published": "2026-09-10",
+      "pollster": "Quaest",
+      "key": "f81f945d7844911684d3"
+    },
+    {
+      "election": "president-br",
+      "title": "Pesquisa Meio/Ideia: Lula tem 38,4% e Flávio Bolsonaro, 37,3%, no 1º turno - Exame",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWVdLU0Z0OTZwdVl0RmxyaVRBd1RaX0lvUzc3czFkVUpyQVAtT3RITUlxc0ozNk10bjdPT2RwSWhPZG9UWTl1Q2tDbTVBMjhaOWZtM3NueVRrUWZTUi1RS1pPa3BxTGl0TnJ0RV9vZzJabms4M1o4RG5lWlpaOGswM0IxNUN1RkxVWllIbXdPVkFISlNKbHR3aw?oc=5",
+      "source": "Exame",
+      "published": "2026-09-10",
+      "pollster": "Ideia",
+      "key": "59a644db688c7c2da364"
     },
     {
       "election": "governor-mg",
