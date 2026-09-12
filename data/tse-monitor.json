@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-12 17:45:01",
+  "sourceGeneratedAt": "2026-09-12 21:25:44",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -900,6 +900,28 @@
   },
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "BR005352026": {
+      "protocol": "BR005352026",
+      "fieldStart": "2026-09-14",
+      "fieldEnd": "2026-09-16",
+      "disclosureDate": "2026-09-17",
+      "sample": 2400,
+      "company": "Gerp",
+      "tradeName": "Gerp",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR007492026": {
+      "protocol": "BR007492026",
+      "fieldStart": "2026-09-11",
+      "fieldEnd": "2026-09-17",
+      "disclosureDate": "2026-09-17",
+      "sample": 2000,
+      "company": "Futura Inteligência",
+      "tradeName": "Futura Inteligência",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR014312026": {
       "protocol": "BR014312026",
       "fieldStart": "2026-09-11",
@@ -919,6 +941,17 @@
       "sample": 2000,
       "company": "Indexa",
       "tradeName": "Indexa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR040292026": {
+      "protocol": "BR040292026",
+      "fieldStart": "2026-09-15",
+      "fieldEnd": "2026-09-17",
+      "disclosureDate": "2026-09-17",
+      "sample": 2002,
+      "company": "Datafolha",
+      "tradeName": "Datafolha",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

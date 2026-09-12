@@ -97,6 +97,17 @@
       "tradeName": "Badra",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP099862026": {
+      "protocol": "SP099862026",
+      "fieldStart": "2026-09-12",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-17",
+      "sample": 2000,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
     }
   }
 }
