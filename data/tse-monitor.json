@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-11 21:41:47",
+  "sourceGeneratedAt": "2026-09-12 04:30:55",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -922,17 +922,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "BR018332026": {
-      "protocol": "BR018332026",
-      "fieldStart": "2026-09-08",
-      "fieldEnd": "2026-09-11",
-      "disclosureDate": "2026-09-11",
-      "sample": 2002,
-      "company": "Datafolha",
-      "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR034822026": {
       "protocol": "BR034822026",
       "fieldStart": "2026-09-10",
@@ -963,17 +952,6 @@
       "sample": 2002,
       "company": "MDA",
       "tradeName": "MDA",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR080932026": {
-      "protocol": "BR080932026",
-      "fieldStart": "2026-09-06",
-      "fieldEnd": "2026-09-11",
-      "disclosureDate": "2026-09-11",
-      "sample": 40500,
-      "company": "Veritá",
-      "tradeName": "Veritá",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

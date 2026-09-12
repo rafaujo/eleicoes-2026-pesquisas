@@ -43,17 +43,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "MG016112026": {
-      "protocol": "MG016112026",
-      "fieldStart": "2026-09-08",
-      "fieldEnd": "2026-09-11",
-      "disclosureDate": "2026-09-11",
-      "sample": 1204,
-      "company": "Datafolha",
-      "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "MG060142026": {
       "protocol": "MG060142026",
       "fieldStart": "2026-09-08",
@@ -73,17 +62,6 @@
       "sample": 1560,
       "company": "F5 Atualiza Dados",
       "tradeName": "F5 Atualiza Dados",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "MG099182026": {
-      "protocol": "MG099182026",
-      "fieldStart": "2026-09-05",
-      "fieldEnd": "2026-09-10",
-      "disclosureDate": "2026-09-11",
-      "sample": 2030,
-      "company": "Veritá",
-      "tradeName": "Veritá",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
