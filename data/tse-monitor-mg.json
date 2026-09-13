@@ -32,6 +32,17 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "MG000292026": {
+      "protocol": "MG000292026",
+      "fieldStart": "2026-09-14",
+      "fieldEnd": "2026-09-19",
+      "disclosureDate": "2026-09-18",
+      "sample": 1500,
+      "company": "Instituto Panorama",
+      "tradeName": "Instituto Panorama",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG004682026": {
       "protocol": "MG004682026",
       "fieldStart": "2026-09-09",
