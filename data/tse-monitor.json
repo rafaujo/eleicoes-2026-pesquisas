@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-14 04:51:25",
+  "sourceGeneratedAt": "2026-09-14 16:21:34",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -963,17 +963,6 @@
       "sample": 2002,
       "company": "Datafolha",
       "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR040762026": {
-      "protocol": "BR040762026",
-      "fieldStart": "2026-09-11",
-      "fieldEnd": "2026-09-13",
-      "disclosureDate": "2026-09-14",
-      "sample": 2000,
-      "company": "Nexus",
-      "tradeName": "Nexus",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
