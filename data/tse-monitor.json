@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-14 16:21:34",
+  "sourceGeneratedAt": "2026-09-14 22:28:40",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -20,6 +20,7 @@
     "BR002902026",
     "BR003452026",
     "BR003532026",
+    "BR003602026",
     "BR003622026",
     "BR003662026",
     "BR003862026",
@@ -34,6 +35,7 @@
     "BR005232026",
     "BR005292026",
     "BR005302026",
+    "BR005352026",
     "BR005472026",
     "BR005582026",
     "BR005742026",
@@ -51,6 +53,7 @@
     "BR007262026",
     "BR007382026",
     "BR007392026",
+    "BR007492026",
     "BR007732026",
     "BR007892026",
     "BR008222026",
@@ -138,6 +141,7 @@
     "BR019712026",
     "BR019792026",
     "BR019922026",
+    "BR020322026",
     "BR020422026",
     "BR020522026",
     "BR020802026",
@@ -267,6 +271,7 @@
     "BR039652026",
     "BR039692026",
     "BR040062026",
+    "BR040292026",
     "BR040312026",
     "BR040542026",
     "BR040592026",
@@ -409,6 +414,7 @@
     "BR061502026",
     "BR061882026",
     "BR062072026",
+    "BR062212026",
     "BR062312026",
     "BR062362026",
     "BR062592026",
@@ -653,6 +659,17 @@
     "BR099982026"
   ],
   "pending": {
+    "BR003602026": {
+      "protocol": "BR003602026",
+      "registeredAt": "2026-09-11",
+      "fieldStart": "2026-09-13",
+      "fieldEnd": "2026-09-16",
+      "disclosureDate": "2026-09-17",
+      "sample": 3000,
+      "company": "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA",
+      "tradeName": "PODERDATA",
+      "contractors": []
+    },
     "BR005302026": {
       "protocol": "BR005302026",
       "registeredAt": "2026-08-25",
@@ -662,6 +679,28 @@
       "sample": 1800,
       "company": "INSTITUTO DE PESQUISAS PERFIL LTDA",
       "tradeName": "",
+      "contractors": []
+    },
+    "BR005352026": {
+      "protocol": "BR005352026",
+      "registeredAt": "2026-09-11",
+      "fieldStart": "2026-09-14",
+      "fieldEnd": "2026-09-16",
+      "disclosureDate": "2026-09-17",
+      "sample": 2400,
+      "company": "GERP MERCADOLOGIA LTDA",
+      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
+      "contractors": []
+    },
+    "BR007492026": {
+      "protocol": "BR007492026",
+      "registeredAt": "2026-09-11",
+      "fieldStart": "2026-09-11",
+      "fieldEnd": "2026-09-17",
+      "disclosureDate": "2026-09-17",
+      "sample": 2000,
+      "company": "100% CIDADES PARTICIPACOES LTDA",
+      "tradeName": "100 CIDADES",
       "contractors": []
     },
     "BR009192026": {
@@ -684,6 +723,17 @@
       "sample": 2000,
       "company": "AMERICAN ANALYTICS DO BRASIL CONSULTORIA LTDA",
       "tradeName": "AMERICAN ANALYTICS",
+      "contractors": []
+    },
+    "BR020322026": {
+      "protocol": "BR020322026",
+      "registeredAt": "2026-09-12",
+      "fieldStart": "2026-09-13",
+      "fieldEnd": "2026-09-18",
+      "disclosureDate": "2026-09-18",
+      "sample": 40500,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
       "contractors": []
     },
     "BR021422026": {
@@ -763,14 +813,14 @@
       "tradeName": "",
       "contractors": []
     },
-    "BR036072026": {
-      "protocol": "BR036072026",
-      "registeredAt": "2026-09-08",
-      "fieldStart": "2026-09-10",
-      "fieldEnd": "2026-09-13",
-      "disclosureDate": "2026-09-14",
-      "sample": 2004,
-      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+    "BR040292026": {
+      "protocol": "BR040292026",
+      "registeredAt": "2026-09-11",
+      "fieldStart": "2026-09-15",
+      "fieldEnd": "2026-09-17",
+      "disclosureDate": "2026-09-17",
+      "sample": 2002,
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": []
     },
@@ -816,6 +866,17 @@
       "sample": 602,
       "company": "LUIZ MIGUEL DE OLIVEIRA",
       "tradeName": "L3 SISTEMAS E CONSULTORIA",
+      "contractors": []
+    },
+    "BR062212026": {
+      "protocol": "BR062212026",
+      "registeredAt": "2026-09-11",
+      "fieldStart": "2026-09-11",
+      "fieldEnd": "2026-09-16",
+      "disclosureDate": "2026-09-17",
+      "sample": 5000,
+      "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
+      "tradeName": "ATLASINTEL",
       "contractors": []
     },
     "BR069022026": {
