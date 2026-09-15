@@ -64,6 +64,17 @@
       "tradeName": "Instituto Panorama",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG078982026": {
+      "protocol": "MG078982026",
+      "fieldStart": "2026-09-15",
+      "fieldEnd": "2026-09-18",
+      "disclosureDate": "2026-09-20",
+      "sample": 1560,
+      "company": "F5 Atualiza Dados",
+      "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
     }
   }
 }

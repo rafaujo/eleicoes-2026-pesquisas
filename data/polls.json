@@ -373,6 +373,19 @@
           "undecided": 17.8,
           "resultSource": "https://www.cartacapital.com.br/politica/cnt-mda-lula-venceria-qualquer-adversario-em-2o-turno-incluindo-flavio-bolsonaro/",
           "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "first-with-cury": {
+          "results": {
+            "lula": 40.5,
+            "flavio": 30.4,
+            "cury": 6,
+            "caiado": 3,
+            "zema": 1,
+            "renan": 2.7
+          },
+          "undecided": 15.3,
+          "resultSource": "https://www.cartacapital.com.br/politica/nova-rodada-da-pesquisa-cnt-mda-mostra-lula-na-lideranca-do-1o-turno/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
         }
       }
     },
@@ -395,13 +408,13 @@
         "first-with-cury": {
           "results": {
             "lula": 39,
-            "flavio": 35,
-            "cury": 6,
+            "flavio": 33,
+            "cury": 5,
             "caiado": 4,
             "zema": 2,
             "renan": 3
           },
-          "undecided": 10,
+          "undecided": 11,
           "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/11/datafolha-2o-turno-presidente-11-setembro.ghtml",
           "resultSourceLabel": "g1.globo.com — resultado publicado"
         },
@@ -576,6 +589,19 @@
           "undecided": 8.6,
           "resultSource": "https://veja.abril.com.br/politica/a-nova-pesquisa-atlasintel-sobre-a-disputa-lula-x-flavio-bolsonaro/",
           "resultSourceLabel": "veja.abril.com.br — resultado publicado"
+        },
+        "first-with-cury": {
+          "results": {
+            "lula": 43,
+            "flavio": 37.4,
+            "cury": 6.6,
+            "caiado": 1.1,
+            "zema": 2.1,
+            "renan": 6.5
+          },
+          "undecided": 2,
+          "resultSource": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-464-e-lula-462-no-2o-turno-diz-atlasintel/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
         }
       }
     },
@@ -688,6 +714,19 @@
           "results": {
             "lula": 40,
             "flavio": 47
+          },
+          "undecided": 14,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/gerp-presidente-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "first-with-cury": {
+          "results": {
+            "lula": 34,
+            "flavio": 37,
+            "cury": 6,
+            "caiado": 5,
+            "zema": 1,
+            "renan": 4
           },
           "undecided": 14,
           "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/gerp-presidente-setembro-2026/",
@@ -879,8 +918,8 @@
             "renan": 3
           },
           "undecided": 18,
-          "resultSource": "https://www.bnews.com.br/noticias/politica/quaest-mostra-lula-na-lideranca-mas-flavio-encurta-distancia-e-cury-perde-forca-na-corrida-de-2026.html",
-          "resultSourceLabel": "bnews.com.br — resultado publicado"
+          "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/07/quaest-presidente-7-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
         },
         "runoff-lula-cury": {
           "results": {
@@ -968,7 +1007,7 @@
             "zema": 0.3,
             "renan": 3.7
           },
-          "undecided": 2,
+          "undecided": 3.3,
           "resultSource": "https://francesnews.com.br/post/2026/09/26/38199-flavio-bolsonaro-e-lula-estao-empatados-na-disputa-presidencial-aponta-verita",
           "resultSourceLabel": "francesnews.com.br — resultado publicado"
         },

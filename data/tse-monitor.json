@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-15 18:58:18",
+  "sourceGeneratedAt": "2026-09-15 22:12:23",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -791,17 +791,6 @@
       "tradeName": "DATAVERO INSTITUTO DE PESQUISAS",
       "contractors": []
     },
-    "BR034822026": {
-      "protocol": "BR034822026",
-      "registeredAt": "2026-09-09",
-      "fieldStart": "2026-09-10",
-      "fieldEnd": "2026-09-13",
-      "disclosureDate": "2026-09-15",
-      "sample": 2000,
-      "company": "INSTITUTO INDEXA PESQUISAS LTDA",
-      "tradeName": "INDEXA PESQUISAS",
-      "contractors": []
-    },
     "BR035152026": {
       "protocol": "BR035152026",
       "registeredAt": "2026-08-24",
@@ -877,17 +866,6 @@
       "sample": 5000,
       "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
       "tradeName": "ATLASINTEL",
-      "contractors": []
-    },
-    "BR069022026": {
-      "protocol": "BR069022026",
-      "registeredAt": "2026-09-09",
-      "fieldStart": "2026-09-09",
-      "fieldEnd": "2026-09-13",
-      "disclosureDate": "2026-09-15",
-      "sample": 2002,
-      "company": "MDA-PESQUISA DE OPINIAO PUBLICA E CONSULT. ESTATIST. LTDA - EPP",
-      "tradeName": "",
       "contractors": []
     },
     "BR078062026": {
