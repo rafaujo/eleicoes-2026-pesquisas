@@ -94,9 +94,56 @@
         "tarcisio",
         "haddad"
       ]
+    },
+    {
+      "id": "first-auto-haddad-tarcisio",
+      "round": 1,
+      "label": "Lista com 2 nomes",
+      "comparisonGroup": "first-round",
+      "comparisonLabel": "Primeiro turno — listas integradas",
+      "candidates": [
+        "tarcisio",
+        "haddad"
+      ]
     }
   ],
   "polls": [
+    {
+      "id": 18,
+      "pollster": "Real Time Big Data",
+      "publication": "gazetadopovo.com.br",
+      "protocol": "SP027942026",
+      "published": "2026-09-14",
+      "start": "2026-09-09",
+      "end": "2026-09-12",
+      "field": "9–12 set",
+      "sample": 2000,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-sao-paulo-setembro-2026/",
+      "resultSourceLabel": "gazetadopovo.com.br — resultado publicado",
+      "scenarios": {
+        "first-auto-haddad-tarcisio": {
+          "results": {
+            "tarcisio": 53,
+            "haddad": 36
+          },
+          "undecided": 11,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-sao-paulo-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 57,
+            "haddad": 38
+          },
+          "undecided": 5,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-sao-paulo-setembro-2026/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        }
+      }
+    },
     {
       "id": 16,
       "pollster": "Paraná Pesquisas",
@@ -135,6 +182,38 @@
           "undecided": 9.7,
           "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/parana-pesquisas-governador-sao-paulo-setembro-2026/",
           "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 17,
+      "pollster": "Datafolha",
+      "publication": "g1.globo.com",
+      "protocol": "SP041892026",
+      "published": "2026-09-11",
+      "start": "2026-09-08",
+      "end": "2026-09-10",
+      "field": "8–10 set",
+      "sample": 1610,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/09/11/datafolha-sp-governador-11-setembro.ghtml",
+      "resultSourceLabel": "g1.globo.com — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "tarcisio": 49,
+            "haddad": 29,
+            "vera": 2,
+            "machado": 3,
+            "edjane": 3,
+            "vivian": 2,
+            "izadora": 1
+          },
+          "undecided": 11,
+          "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/09/11/datafolha-sp-governador-11-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
         }
       }
     },

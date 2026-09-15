@@ -195,6 +195,38 @@
   ],
   "polls": [
     {
+      "id": 9,
+      "pollster": "Datafolha",
+      "publication": "terra.com.br",
+      "protocol": "MG016112026",
+      "published": "2026-09-11",
+      "start": "2026-09-08",
+      "end": "2026-09-10",
+      "field": "8–10 set",
+      "sample": 1204,
+      "margin": 3,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.terra.com.br/noticias/brasil/politica/datafolha-em-mg-cleitinho-tem-37-em-votos-no-1-turno-patrus-soma-13-e-kalil-pontua-11,d70804847f444ea94f60d2ea64a53c3a0o9qeon5.html",
+      "resultSourceLabel": "terra.com.br — resultado publicado",
+      "scenarios": {
+        "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe": {
+          "results": {
+            "cleitinho": 37,
+            "patrus": 13,
+            "kalil": 11,
+            "gabriel": 4,
+            "mateus": 4,
+            "roscoe": 4,
+            "ben": 1
+          },
+          "undecided": 26,
+          "resultSource": "https://www.terra.com.br/noticias/brasil/politica/datafolha-em-mg-cleitinho-tem-37-em-votos-no-1-turno-patrus-soma-13-e-kalil-pontua-11,d70804847f444ea94f60d2ea64a53c3a0o9qeon5.html",
+          "resultSourceLabel": "terra.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 7,
       "pollster": "Quaest",
       "publication": "gazetadopovo.com.br",
