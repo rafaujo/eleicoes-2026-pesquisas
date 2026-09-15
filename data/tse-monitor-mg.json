@@ -32,17 +32,6 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
-    "MG000292026": {
-      "protocol": "MG000292026",
-      "fieldStart": "2026-09-14",
-      "fieldEnd": "2026-09-19",
-      "disclosureDate": "2026-09-18",
-      "sample": 1500,
-      "company": "Instituto Panorama",
-      "tradeName": "Instituto Panorama",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "MG004682026": {
       "protocol": "MG004682026",
       "fieldStart": "2026-09-09",
@@ -65,25 +54,14 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "MG060142026": {
-      "protocol": "MG060142026",
-      "fieldStart": "2026-09-08",
-      "fieldEnd": "2026-09-13",
-      "disclosureDate": "2026-09-14",
-      "sample": 1100,
-      "company": "Sectral Negocios",
-      "tradeName": "Sectral Negocios",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "MG090352026": {
-      "protocol": "MG090352026",
-      "fieldStart": "2026-09-09",
-      "fieldEnd": "2026-09-12",
-      "disclosureDate": "2026-09-14",
-      "sample": 1560,
-      "company": "F5 Atualiza Dados",
-      "tradeName": "F5 Atualiza Dados",
+    "MG061242026": {
+      "protocol": "MG061242026",
+      "fieldStart": "2026-09-14",
+      "fieldEnd": "2026-09-18",
+      "disclosureDate": "2026-09-19",
+      "sample": 1500,
+      "company": "Instituto Panorama",
+      "tradeName": "Instituto Panorama",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
