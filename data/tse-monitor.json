@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-15 14:58:23",
+  "sourceGeneratedAt": "2026-09-15 18:58:18",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -1005,17 +1005,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "BR034822026": {
-      "protocol": "BR034822026",
-      "fieldStart": "2026-09-10",
-      "fieldEnd": "2026-09-13",
-      "disclosureDate": "2026-09-15",
-      "sample": 2000,
-      "company": "Indexa",
-      "tradeName": "Indexa",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR040292026": {
       "protocol": "BR040292026",
       "fieldStart": "2026-09-15",
@@ -1024,17 +1013,6 @@
       "sample": 2002,
       "company": "Datafolha",
       "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR069022026": {
-      "protocol": "BR069022026",
-      "fieldStart": "2026-09-09",
-      "fieldEnd": "2026-09-13",
-      "disclosureDate": "2026-09-15",
-      "sample": 2002,
-      "company": "MDA",
-      "tradeName": "MDA",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

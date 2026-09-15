@@ -163,6 +163,7 @@
     "27edc73e8188f6e6b4a2",
     "2804d6a68925e0d0ba1e",
     "281633fc823978dd8b3b",
+    "29133d27348918160a06",
     "295b0b80934e9d36488f",
     "299549eca4011414c54d",
     "29bedc4f445f0a34c3ec",
@@ -417,6 +418,7 @@
     "721ad764aaec9e08c6a4",
     "72244bbc8a7a262c7a0f",
     "729a5664e31d0c07f16e",
+    "730f3d954a3d711440da",
     "737fd5a8f9878fadc9b5",
     "73ef5c312c30b01958ba",
     "74728ad4e541f1b47979",
@@ -557,6 +559,7 @@
     "9aca261336bbbee66ead",
     "9ad30a4dc76e5505e234",
     "9af8b6658c2f70b8cfd6",
+    "9b01476db8665586864f",
     "9b809d5d5c0bbb6e2652",
     "9c159e3bf7ceea5f20e4",
     "9c3ee00c17ff9f0e2c1b",
@@ -876,6 +879,7 @@
     "e97d11fd5201b73bcefc",
     "e9ac11a4336d7e193057",
     "e9c98f2342ee3004eb44",
+    "ea46c57d5974d087c255",
     "ea60e081471ebe7d5ef3",
     "eae89a48c9b9ee4f30da",
     "eb16e6bcaa5da778f1b4",
@@ -1002,15 +1006,6 @@
       "key": "75c044ec479f7f98d963"
     },
     {
-      "election": "governor-sp",
-      "title": "Real Time Big Data: Tarcísio venceria Haddad no segundo turno pelo governo de SP, com 57% - Rádio Itatiaia",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQVVJ1R2JaZWZDcHE2ZEIwNVFDa2Y2SVY5b2EzdjhRV2RhckJQdWFIaDZnX3ViN1RBelI4ZzRLa2lVU3dxaDJva3JpZFhEQTZjbENLeXQwU19xNGFndXRnY0VwOS1IUm8wQ0drbmdxTHdsd1ZkYzFpUlFkamZLV3FoaFh3TURCOUJrNHpQclZ4cnhDRl8tMGpsbkNOODFWVDdiaG1hdlpPMURtaEJjeW5hZGVDenVOaEtjb1d5M04zbWFaYUlsY3FkMmEyVHZTdERrNHlYVHZFdTc2UQ?oc=5",
-      "source": "Rádio Itatiaia",
-      "published": "2026-09-14",
-      "pollster": "Real Time Big Data",
-      "key": "01c0c653ab9c5319d856"
-    },
-    {
       "election": "president-br",
       "title": "Datafolha: Flávio lidera em quase todas as faixas de renda, exceto entre os mais pobres, que tendem a Lula - oglobo.globo.com",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOdUNFSlBkNmgxVWR5V2dzYWVVdUNrZXgyWGZJQ0xHSWd6a3hLMVZFMHRxOVI1bldlc3ZrUTVRTFJRckRtYjlrZXc4ZFJRaWdmQWdlRWhqTHhpVENnTElDNWV1NW10LWpSdnFvODBwNlFKTjFGQWlhUHdWRHY3UEdlNk1wdzNkMHFzeVFyTHFoMnUxX2E3SElhejFHT2tqNjNEZTlDOTFYUy1MbnZDQWpiTVpmNGhfbzFKVEtyN3BnNEowVEpKUGdkZTl2SWREWkNVR3pQTjNvOHBwMU9vZlZfLXFtWERlZlZoYmNYUzNleWXSAf8BQVVfeXFMT1EzeGhWVmVXOWpXaVBTdTJsamN1U0pmbEVUZnBxcGhFSWcyemhSNVFZdHc4ZXppdW95M0M1aVlqV0h6QlJScnhYZ1pYZjh6VE5IdnMwdTFaV2dYVjM3emE4ZW92akdiWVktU19PSzhrQzFGTnJDMVN1SHhzSmZNdUxrUXR5bHFnNkpkVndQNmw1eVNsZXNfdWFuc08zVGRnZmtQNzF1YTlRVnQ4T19vY1hZbEZtaXd1OVZyTkh3N3lnZFJLcmFHbU9kUXJUTGljVlY2UDBnX0pVUm81NnFzS2F1RF9DZThUeFVISGI2ZnNzMEc1eUpmcHRMTFNRckNB?oc=5",
@@ -1020,22 +1015,13 @@
       "key": "85c7c7b59d83b298169b"
     },
     {
-      "election": "governor-sp",
-      "title": "Datafolha: Tarcísio lidera em SP contra Haddad e poderia vencer disputa em primeiro turno - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRU1faGtRSzVNTFFwbU03bi0yVk5zckF1eHIxeDRZdllwZ1djWF8wX3NRWTdyT3BadHFONWloU1l2Q0x0VmJyckFWRlZpcUF2dkxwdkZ4YjRHWjAwNXladWUyQkVTb0lVVGNfeFU1dkVDUUdIbjNkZ01UVEo5aGtDaS10SURUb3M3QXN5am1PYmJWblRzQ1FpS292eHllYXQ4YVROT2k4R1hWZHgtUFdlZVVPc2s1RUVyMmswR0w3Wmx1NHhpTlNPNElHa0NJTFk5RkFTeg?oc=5",
-      "source": "Folha de S.Paulo",
-      "published": "2026-09-11",
-      "pollster": "Datafolha",
-      "key": "525e3c1d2d36171931d0"
-    },
-    {
       "election": "governor-mg",
-      "title": "Datafolha: Cletinho tem 37% e mantém liderança em corrida pelo Governo de MG - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQOWlhLXVObUpLVElldk5HdWlNb3J3cTRfUGNBV1gzcXN3XzFjazBSTEJUUGpOdkFpMzlYQlUzLWJ0UDl5bTdMX05tc2ZWdGdnZW93NHFqcF9kbVpQR1hvcjhiZjRPc2FXQ0N6cnNfcVpFY0YzZllfcW9lckItakktekl1VzM1WXBsdVdZaEd6WFExN1kzRmI1RzJzMXcxYjR4TkQ5aHhMeVBPZkxLWDFsSW8zbVZTYnp0Smw3ZUREVU1lUQ?oc=5",
-      "source": "Folha de S.Paulo",
-      "published": "2026-09-11",
+      "title": "Cleitinho lidera Datafolha em MG com 37%; Patrus tem 13% - SpaceMoney",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1WQkNhcDdqVkw3ZXhpMmlKSkJfWEV1MVhWem4tOXlZcHFwZTBla2F2VDVNMGhTbVdNWDE4cjg0QkhZamtXeGxITnd5djlaeTdqX1VFVUhkSVEtUHlYU2FsU05hMGp1NlZ4bEhOVUJicVdsYVhjcFhjcg?oc=5",
+      "source": "SpaceMoney",
+      "published": "2026-09-12",
       "pollster": "Datafolha",
-      "key": "09bb3e9d35f7bbb055f3"
+      "key": "6015e26dc24b7854194f"
     },
     {
       "election": "president-br",
