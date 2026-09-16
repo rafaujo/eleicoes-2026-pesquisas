@@ -195,6 +195,38 @@
   ],
   "polls": [
     {
+      "id": 10,
+      "pollster": "F5",
+      "publication": "jmonline.com.br",
+      "protocol": "MG090352026",
+      "published": "2026-09-15",
+      "start": "2026-09-09",
+      "end": "2026-09-12",
+      "field": "9–12 set",
+      "sample": 1560,
+      "margin": 2.5,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://jmonline.com.br/politica/f5-cleitinho-lidera-com-34-e-sim-es-kalil-e-patrus-disputam-vice-lideranca-ao-governo-de-minas-1.665410",
+      "resultSourceLabel": "jmonline.com.br — resultado publicado",
+      "scenarios": {
+        "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe": {
+          "results": {
+            "cleitinho": 34,
+            "patrus": 10,
+            "kalil": 10,
+            "gabriel": 2,
+            "mateus": 14,
+            "roscoe": 5,
+            "ben": 2
+          },
+          "undecided": 23,
+          "resultSource": "https://jmonline.com.br/politica/f5-cleitinho-lidera-com-34-e-sim-es-kalil-e-patrus-disputam-vice-lideranca-ao-governo-de-minas-1.665410",
+          "resultSourceLabel": "jmonline.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 9,
       "pollster": "Datafolha",
       "publication": "terra.com.br",
