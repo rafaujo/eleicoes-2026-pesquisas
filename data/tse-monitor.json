@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-16 14:56:50",
+  "sourceGeneratedAt": "2026-09-16 18:53:00",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -29,6 +29,7 @@
     "BR004302026",
     "BR004322026",
     "BR004552026",
+    "BR004852026",
     "BR005052026",
     "BR005072026",
     "BR005202026",
@@ -58,6 +59,7 @@
     "BR007892026",
     "BR008222026",
     "BR008352026",
+    "BR008602026",
     "BR008732026",
     "BR008782026",
     "BR008792026",
@@ -168,6 +170,7 @@
     "BR024482026",
     "BR024762026",
     "BR025312026",
+    "BR025872026",
     "BR026022026",
     "BR026972026",
     "BR027432026",
@@ -402,6 +405,7 @@
     "BR059532026",
     "BR059872026",
     "BR059972026",
+    "BR060042026",
     "BR060052026",
     "BR060092026",
     "BR060262026",
@@ -411,6 +415,7 @@
     "BR060582026",
     "BR060742026",
     "BR060872026",
+    "BR061002026",
     "BR061502026",
     "BR061882026",
     "BR062072026",
@@ -670,6 +675,17 @@
       "tradeName": "PODERDATA",
       "contractors": []
     },
+    "BR004852026": {
+      "protocol": "BR004852026",
+      "registeredAt": "2026-09-15",
+      "fieldStart": "2026-09-18",
+      "fieldEnd": "2026-09-20",
+      "disclosureDate": "2026-09-21",
+      "sample": 2000,
+      "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
+      "tradeName": "NEXUS",
+      "contractors": []
+    },
     "BR005302026": {
       "protocol": "BR005302026",
       "registeredAt": "2026-08-25",
@@ -701,6 +717,17 @@
       "sample": 2000,
       "company": "100% CIDADES PARTICIPACOES LTDA",
       "tradeName": "100 CIDADES",
+      "contractors": []
+    },
+    "BR008602026": {
+      "protocol": "BR008602026",
+      "registeredAt": "2026-09-14",
+      "fieldStart": "2026-09-15",
+      "fieldEnd": "2026-09-20",
+      "disclosureDate": "2026-09-20",
+      "sample": 5000,
+      "company": "PALVER CONSULTORIA E DESENVOLVIMENTO TECNOLOGICO LTDA.",
+      "tradeName": "PALVER",
       "contractors": []
     },
     "BR009192026": {
@@ -756,6 +783,17 @@
       "sample": 2000,
       "company": "100% CIDADES PARTICIPACOES LTDA",
       "tradeName": "100 CIDADES",
+      "contractors": []
+    },
+    "BR025872026": {
+      "protocol": "BR025872026",
+      "registeredAt": "2026-09-15",
+      "fieldStart": "2026-09-15",
+      "fieldEnd": "2026-09-20",
+      "disclosureDate": "2026-09-21",
+      "sample": 2000,
+      "company": "AMERICAN ANALYTICS DO BRASIL CONSULTORIA LTDA",
+      "tradeName": "AMERICAN ANALYTICS",
       "contractors": []
     },
     "BR027722026": {
@@ -846,6 +884,17 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR060042026": {
+      "protocol": "BR060042026",
+      "registeredAt": "2026-09-15",
+      "fieldStart": "2026-09-17",
+      "fieldEnd": "2026-09-20",
+      "disclosureDate": "2026-09-21",
+      "sample": 2004,
+      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR060542026": {
       "protocol": "BR060542026",
       "registeredAt": "2026-09-10",
@@ -855,6 +904,17 @@
       "sample": 602,
       "company": "LUIZ MIGUEL DE OLIVEIRA",
       "tradeName": "L3 SISTEMAS E CONSULTORIA",
+      "contractors": []
+    },
+    "BR061002026": {
+      "protocol": "BR061002026",
+      "registeredAt": "2026-09-14",
+      "fieldStart": "2026-09-04",
+      "fieldEnd": "2026-09-09",
+      "disclosureDate": "2026-09-20",
+      "sample": 5000,
+      "company": "PALVER CONSULTORIA E DESENVOLVIMENTO TECNOLOGICO LTDA.",
+      "tradeName": "PALVER",
       "contractors": []
     },
     "BR062212026": {
@@ -991,17 +1051,6 @@
       "sample": 2002,
       "company": "Datafolha",
       "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR086912026": {
-      "protocol": "BR086912026",
-      "fieldStart": "2026-09-12",
-      "fieldEnd": "2026-09-14",
-      "disclosureDate": "2026-09-16",
-      "sample": 2000,
-      "company": "Datatrends",
-      "tradeName": "Datatrends",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
