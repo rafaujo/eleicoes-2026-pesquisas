@@ -32,17 +32,6 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
-    "MG004682026": {
-      "protocol": "MG004682026",
-      "fieldStart": "2026-09-09",
-      "fieldEnd": "2026-09-12",
-      "disclosureDate": "2026-09-15",
-      "sample": 1000,
-      "company": "DataTempo",
-      "tradeName": "DataTempo",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "MG059192026": {
       "protocol": "MG059192026",
       "fieldStart": "2026-09-12",
