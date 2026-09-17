@@ -182,6 +182,7 @@
     "2b082ba894e931760ca7",
     "2b39f7a63733c9c07e0f",
     "2c42d8162f6725eb3025",
+    "2c62dd05491a88d9c03e",
     "2c675a15ef2d7b6008e4",
     "2cacb71d5ab09da35129",
     "2cb81bf093ec6454fd03",
@@ -488,6 +489,7 @@
     "8319e390602b3d6b2f68",
     "839dc6a02e7050fdbba6",
     "83bf2a31fd103904c4a4",
+    "842800cd61546f3d66c1",
     "85044fc8898338718303",
     "851a6c89ae92df18d754",
     "852313dc80ac539f6b02",
@@ -587,6 +589,7 @@
     "9e4447cfe6b435a97184",
     "9e7f94a1b4a008e6537f",
     "9e81c176cadef9d21679",
+    "9e884cc69c4d262a140d",
     "9ed78bbadce13409aaec",
     "9ee6bbcd91f24664ab6b",
     "9eef9c903b3a24307906",
@@ -762,6 +765,7 @@
     "c5150ec81fa63916b14c",
     "c56b3e48ba97247a85de",
     "c61d6baa9e6844e02c5e",
+    "c67077d61e97bb6532a1",
     "c6763d9f6e61d0036413",
     "c7c4162be9a97b2cda63",
     "c8db0239f4d213769f0a",
@@ -853,6 +857,7 @@
     "df32f1a0cf33f0e79dba",
     "df7c55b28c8a5a51006f",
     "e025124d9e10dbe2b350",
+    "e042ffd2cb3388af49e6",
     "e04f5569d82defbe4a30",
     "e0d6b167fcfc41ce75cc",
     "e1ecf65fc82c5300d1ae",
@@ -980,6 +985,7 @@
     "fd83aba51196ef940511",
     "fe8950a1e5da3fdd77fe",
     "ff75a9df4cb2e582dfd7",
+    "ff79508850127b223964",
     "ffd9e965068c0bdfa7e3",
     "fffc7e3084915a3f157a"
   ],
@@ -1075,15 +1081,6 @@
       "key": "f318106822ce4e5270c4"
     },
     {
-      "election": "governor-mg",
-      "title": "Quaest: Cleitinho chega a 32% e abre 21 pontos sobre Kalil e Patrus em Minas; a 6% de fechar eleiçao no 1º turno - DiviNews",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOa3ZZQkxzUEhkNVVDNlFBcUZNVmZnR3ZacE54MmNweWxSQ0tJeC02TWlESTZCcWVPUk1oaGJzUXpuYnJwZTJPdGNoUUhXeGxyeHc4SDRtWk9vcVozNVlhMWdTXzdWeDIyVURVNjlCNjlqeW1idTNmM05XTXJwS3FIOTZCNUhkMXh1VXBkNWJZOW11QmdlU2RZUHlXMWNfa3hGZjUzRVEtZWNvRmVYbXBpbVlGVENjcnlJenp2b09uRHpGcEZNNEhIS21xVUtrTDVnUzJVWEczOWU?oc=5",
-      "source": "DiviNews",
-      "published": "2026-09-10",
-      "pollster": "Quaest",
-      "key": "2d6846904bb7c50d4d76"
-    },
-    {
       "election": "president-br",
       "title": "Pesquisa Meio/Ideia: Lula tem 38,4% e Flávio Bolsonaro, 37,3%, no 1º turno - exame.com",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWVdLU0Z0OTZwdVl0RmxyaVRBd1RaX0lvUzc3czFkVUpyQVAtT3RITUlxc0ozNk10bjdPT2RwSWhPZG9UWTl1Q2tDbTVBMjhaOWZtM3NueVRrUWZTUi1RS1pPa3BxTGl0TnJ0RV9vZzJabms4M1o4RG5lWlpaOGswM0IxNUN1RkxVWllIbXdPVkFISlNKbHR3aw?oc=5",
@@ -1091,6 +1088,15 @@
       "published": "2026-09-10",
       "pollster": "Ideia",
       "key": "1ae4d04a9e9e36b36e65"
+    },
+    {
+      "election": "governor-mg",
+      "title": "Quaest MG: Cleitinho tem 32% das intenções de voto contra 11% de Kalil e Patrus e 8% de Simões - Estadão",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPS1dPNDZmcXNWQmFLTXlSVW5WWHpQeFJWTHRQNmJhSXhWd3pwYzJVUFpKbl9rUTZvUmgxR1ZRZ1dYRm5uTEY1TnQ5ZTJjOUJUZHhwMVRuM2NucElUUkJSd2xWek44WUlzeFFPajJhclV5RDFJZ1B5VWp5Mkc0Umx5OUl6c1pnZXBnbmI2bFFKTERKc0o3X19MUDNZN3JZTGdYTnFhUWJQYjk4WFVoMnVtYl9Ld1dLV0Jnd3RZSHQ3bWxjWWc0ZTV3OFRYY0JrMjc2X0HSAdcBQVVfeXFMTnU0c0JKYTRKUVJ6NGlpbmJsSGJXUk5mVDVZX0dLMzcwZXNJNk9KbXlMdTNibGh2c3JielFBLXdfUUdWWHNxWHpuVnhfeWZnSzFQdG8yZ3Eyc1BXcl9WUFpobHhDUy0tSU01T0x5ZHlyWG40bnBUejV6OTJZZnBPQWVOZlBXVVF6eHo2d21nWlotd0xsSzdXVFZmSHJzOHgwRjUzcERPVnU5bzJLUDFwek1iSnpycTlhWWpIa2ItamJNU3ZMbW03Z1FnRFFWMTN4cklLNTNYZWs?oc=5",
+      "source": "Estadão",
+      "published": "2026-09-09",
+      "pollster": "Quaest",
+      "key": "c67077d61e97bb6532a1"
     },
     {
       "election": "governor-sp",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-17 04:48:56",
+  "sourceGeneratedAt": "2026-09-17 14:58:43",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -1007,17 +1007,6 @@
       "sample": 2000,
       "company": "Nexus",
       "tradeName": "Nexus",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR005352026": {
-      "protocol": "BR005352026",
-      "fieldStart": "2026-09-14",
-      "fieldEnd": "2026-09-16",
-      "disclosureDate": "2026-09-17",
-      "sample": 2400,
-      "company": "Gerp",
-      "tradeName": "Gerp",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
