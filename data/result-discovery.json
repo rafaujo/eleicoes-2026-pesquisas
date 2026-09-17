@@ -224,6 +224,7 @@
     "3713d2ed89346a091d44",
     "375e74875b22537f51c2",
     "37f6c1ab59df4d720db0",
+    "37fd14e4550d710193f2",
     "3862721f84ab731cff08",
     "387bb85cea24a92164f4",
     "389408d9d7586bd49b05",
@@ -238,6 +239,7 @@
     "3afa54a6a1d69fe14d71",
     "3afde6c86d23a4c7846d",
     "3b2e34f8fcf43b163f2f",
+    "3b52d993f45112290424",
     "3b5971dd2f9456b6708a",
     "3b79f277f63f67fa8695",
     "3b9f2210bfa611722a87",
@@ -264,6 +266,7 @@
     "41da1a6aca120760f0b1",
     "41e7eff875eee6a9fd68",
     "427cf2d620a22dae7879",
+    "42a759bb87014c72519c",
     "42bfca01720c3ac2b712",
     "43e19f54bde6d19db4b1",
     "43ffb9ff2f3a0f535ed5",
@@ -983,6 +986,15 @@
   "pending": [
     {
       "election": "president-br",
+      "title": "Pesquisa Quaest: Lula é visto como desonesto por 49% e Flávio Bolsonaro, por 42% - Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPS0FDdlVDS01zQWRlbExDU3hISE16RDdhMFVZelpZNW92SUI2NS1PQjBTZmwxdkRvUXhsdFpXX1pWQkxsZ25MSDF6SWQtc3BoVVpYZDNmQ3hjeXUwRXhLLUNmWGtqS0QySExPTHNWMDM3T1VKX2w0NEVnZ0JWRV9EYlVMQ1ZkalNSS19UaFJJNkV1T1NHLXVXTEFLNlYtRThPbFlWamJuNzJFMkxpSUItM3hZMEFCM2JNLVh3MVcxZmYxTE5LZjBaUDFXQlJPYzhTUzV4TGFpeEdjbHNVU2ZGMVdPU3E5S1JDREJicFRXVjA0ZG5T0gGDAkFVX3lxTE5ncDBETGdtb2U0eVNkaEk2VjlRbHppazJJeEFKSmRQWURTSUJNMUVjQmZnYnMyTVF2ZDdYLWw3SnRLaklWdXhpaGNPWVZwdDZPVktuRkFtOWJZNXU3OTBuS0Z3Z01PYXhMdmlwRF9VSDBiQmF6Q01wZGtkUU5iR25HMnc1UXFBdHpteVBrdk5YaDdJNnZOX0dRRnJGZk1hOTlOdngzcW10M0lmeDFvajlRU1JjZ1hxS3ZJYVJ5Zk5KNFNFX3hkdFNWUy1KRS10U2Y4S0RfSU54dHFQb3RITWYxbTVZRnllSVBKQnpLaExHMXJEbldmS3RMWFgyNlc4T2dLRDA?oc=5",
+      "source": "Valor Econômico",
+      "published": "2026-09-16",
+      "pollster": "Quaest",
+      "key": "42a759bb87014c72519c"
+    },
+    {
+      "election": "president-br",
       "title": "BTG/Nexus: Em cenário de 2º turno, Lula tem 47% das intenções de voto contra 46% de Flávio Bolsonaro - Estadão",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSlNpMl9EN3hUcXJ2WWdKYTBXZ0FraTVSRmZ2elJCOXV6RUp2cVZUTl95a2ZKTTI4RFNvYmJLckpDNm4tM3hvVHlybTItSkNLX0wwTnF1MkZabFdpYzBQc2VfbkZ3S0pDWTVObW81X2hLZi1XcVJ5V0t3dUdZdUN2TVl5ZGFhT2dISXR1RF9uME01TTRQZ2tqZ0FMMWZ4ODFndkxLVXBkVWVQT2VkMm9pQmFmdDFqeUh3MnhEbFRRTU82WkJTd0NzQVBJQjY1LW41OUtkaFpZb9IB3AFBVV95cUxPTTBHUGVMZjFlUld0bW9sUzJzWkxQdUN0MUZSLXFTdS1WbXhLZG9XZzJudWx1aVZDQ05SSFZBWVREQTlLUDlRLTRBd3YxRVNyb1M4dlo2cGRsbzRnUWZ4Y1BnRXl3dnYxbXRua2YwVEloNGZTNmRZekpiMzBnWnhtS215dFowSW0tc3R1TWU3R1ljdW56Tm8wc0dNZGE1YUxtSS16enNXTHNfbnFxZW12SUo3TVdsX2lpNFlBb2ZOYTRZSklnazJsVzk0UXpuRUR5c1FUek9ybUpETlF2?oc=5",
       "source": "Estadão",
@@ -1027,15 +1039,6 @@
       "key": "75c044ec479f7f98d963"
     },
     {
-      "election": "president-br",
-      "title": "Datafolha: Flávio lidera em quase todas as faixas de renda, exceto entre os mais pobres, que tendem a Lula - oglobo.globo.com",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOdUNFSlBkNmgxVWR5V2dzYWVVdUNrZXgyWGZJQ0xHSWd6a3hLMVZFMHRxOVI1bldlc3ZrUTVRTFJRckRtYjlrZXc4ZFJRaWdmQWdlRWhqTHhpVENnTElDNWV1NW10LWpSdnFvODBwNlFKTjFGQWlhUHdWRHY3UEdlNk1wdzNkMHFzeVFyTHFoMnUxX2E3SElhejFHT2tqNjNEZTlDOTFYUy1MbnZDQWpiTVpmNGhfbzFKVEtyN3BnNEowVEpKUGdkZTl2SWREWkNVR3pQTjNvOHBwMU9vZlZfLXFtWERlZlZoYmNYUzNleWXSAf8BQVVfeXFMT1EzeGhWVmVXOWpXaVBTdTJsamN1U0pmbEVUZnBxcGhFSWcyemhSNVFZdHc4ZXppdW95M0M1aVlqV0h6QlJScnhYZ1pYZjh6VE5IdnMwdTFaV2dYVjM3emE4ZW92akdiWVktU19PSzhrQzFGTnJDMVN1SHhzSmZNdUxrUXR5bHFnNkpkVndQNmw1eVNsZXNfdWFuc08zVGRnZmtQNzF1YTlRVnQ4T19vY1hZbEZtaXd1OVZyTkh3N3lnZFJLcmFHbU9kUXJUTGljVlY2UDBnX0pVUm81NnFzS2F1RF9DZThUeFVISGI2ZnNzMEc1eUpmcHRMTFNRckNB?oc=5",
-      "source": "oglobo.globo.com",
-      "published": "2026-09-12",
-      "pollster": "Datafolha",
-      "key": "85c7c7b59d83b298169b"
-    },
-    {
       "election": "governor-mg",
       "title": "Cleitinho lidera Datafolha em MG com 37%; Patrus tem 13% - SpaceMoney",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1WQkNhcDdqVkw3ZXhpMmlKSkJfWEV1MVhWem4tOXlZcHFwZTBla2F2VDVNMGhTbVdNWDE4cjg0QkhZamtXeGxITnd5djlaeTdqX1VFVUhkSVEtUHlYU2FsU05hMGp1NlZ4bEhOVUJicVdsYVhjcFhjcg?oc=5",
@@ -1043,6 +1046,15 @@
       "published": "2026-09-12",
       "pollster": "Datafolha",
       "key": "6015e26dc24b7854194f"
+    },
+    {
+      "election": "president-br",
+      "title": "Datafolha: Lula tem 46% e Flávio marca 44% no segundo turno - Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQWVZ6TkZRc0NlaHpYWXJkVTRrWU5ZM3BjM0luanAyV2tEOGhlRWlITDJHdURkSEJ2aTViTW5kWHFFU0Izel9WWFEwSk5YSzBLLTZ4RzRIVHRheXlSUDdrTnNNY0J5WUhZOVFtQjVKTHN5Z2liN3o2bXJpWndzcWNNOEJfWUVEdkVIbUlaMnB5aENuZkg5ZG00TzNGVU9DZGNONEJ2eG1sb0dZdmNNZmR5Um1lYnFHVlBLTHY5dkNsYUdWYlRFQ2xJbmZhNUdLYWg1djlERThaVHlmbER4RW9PLXNmNDNwb3lmMHVabUJUVnHSAf8BQVVfeXFMTjBRUXJHTGpUQXR6dF9vRGRhdEhfZzBubkt0UU0xbDYwRXBwSU5TQWI2MHNsUjUzNGdrVFY0WE9BUWV3WGdXNWZOSzFNck1wYmozbmtyWWVzNklmUzY1cVpLSWp3angzU3JtVXJqY3k5V3JXal9TTW9QS3ZHQnFtQXNCWWVQdERfazFfcFJyc2doNDF3N3RIZVBJSHNjTzZWQUZ4MDlKcHZia094THFlQ181cWVmN3dSNDhSMXZwdFd6LU9TcExIRFh4eDNraGVGdHNZTHJPYXIxdUw2UXNXZlA0ZXJ3c0xsSkE3SzF0YU81R2FLc1M2NFE1Z2ZBOW53?oc=5",
+      "source": "Valor Econômico",
+      "published": "2026-09-12",
+      "pollster": "Datafolha",
+      "key": "37fd14e4550d710193f2"
     },
     {
       "election": "president-br",
