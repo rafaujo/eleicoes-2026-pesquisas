@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-17 14:58:43",
+  "sourceGeneratedAt": "2026-09-17 19:00:02",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -664,17 +664,6 @@
     "BR099982026"
   ],
   "pending": {
-    "BR003602026": {
-      "protocol": "BR003602026",
-      "registeredAt": "2026-09-11",
-      "fieldStart": "2026-09-13",
-      "fieldEnd": "2026-09-16",
-      "disclosureDate": "2026-09-17",
-      "sample": 3000,
-      "company": "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA",
-      "tradeName": "PODERDATA",
-      "contractors": []
-    },
     "BR004852026": {
       "protocol": "BR004852026",
       "registeredAt": "2026-09-15",
@@ -695,17 +684,6 @@
       "sample": 1800,
       "company": "INSTITUTO DE PESQUISAS PERFIL LTDA",
       "tradeName": "",
-      "contractors": []
-    },
-    "BR005352026": {
-      "protocol": "BR005352026",
-      "registeredAt": "2026-09-11",
-      "fieldStart": "2026-09-14",
-      "fieldEnd": "2026-09-16",
-      "disclosureDate": "2026-09-17",
-      "sample": 2400,
-      "company": "GERP MERCADOLOGIA LTDA",
-      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
       "contractors": []
     },
     "BR007492026": {

@@ -176,6 +176,7 @@
     "29fbfc8080427e7051be",
     "2a4acbaac1316f7df558",
     "2a7288afb9d298194461",
+    "2a8193282fa0dceb1e5a",
     "2ae10d3729bcfd2b36b1",
     "2ae85294c591cf597502",
     "2af03b6c599d49dd79ec",
@@ -520,6 +521,7 @@
     "8c4f5b7159d2a602d6fd",
     "8ccfac183ddc697423aa",
     "8d70886ebd45cbb49848",
+    "8e3cf0b7c5f74b703917",
     "8ee32de2aeb0b347d7e2",
     "8eebe6b4908d5dfc0df0",
     "8f06992bae38fb81cb2b",
@@ -819,6 +821,7 @@
     "d6a2eae55cd5c89466db",
     "d6c344eaed138aaebd6d",
     "d6ceb9de0884fad214aa",
+    "d6e33a706c1d6c56f783",
     "d6fae93e6ed3234d322f",
     "d7a9fa5d6152153989a4",
     "d7bde8dbc901e50c69a2",
@@ -896,6 +899,7 @@
     "e91e97de7c0290839b46",
     "e9464e0004cba53e77df",
     "e97d11fd5201b73bcefc",
+    "e995898423e1a91fb7fb",
     "e9ac11a4336d7e193057",
     "e9c98f2342ee3004eb44",
     "ea46c57d5974d087c255",
@@ -992,12 +996,21 @@
   "pending": [
     {
       "election": "president-br",
-      "title": "Pesquisa Quaest: Lula é visto como desonesto por 49% e Flávio Bolsonaro, por 42% - Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPS0FDdlVDS01zQWRlbExDU3hISE16RDdhMFVZelpZNW92SUI2NS1PQjBTZmwxdkRvUXhsdFpXX1pWQkxsZ25MSDF6SWQtc3BoVVpYZDNmQ3hjeXUwRXhLLUNmWGtqS0QySExPTHNWMDM3T1VKX2w0NEVnZ0JWRV9EYlVMQ1ZkalNSS19UaFJJNkV1T1NHLXVXTEFLNlYtRThPbFlWamJuNzJFMkxpSUItM3hZMEFCM2JNLVh3MVcxZmYxTE5LZjBaUDFXQlJPYzhTUzV4TGFpeEdjbHNVU2ZGMVdPU3E5S1JDREJicFRXVjA0ZG5T0gGDAkFVX3lxTE5ncDBETGdtb2U0eVNkaEk2VjlRbHppazJJeEFKSmRQWURTSUJNMUVjQmZnYnMyTVF2ZDdYLWw3SnRLaklWdXhpaGNPWVZwdDZPVktuRkFtOWJZNXU3OTBuS0Z3Z01PYXhMdmlwRF9VSDBiQmF6Q01wZGtkUU5iR25HMnc1UXFBdHpteVBrdk5YaDdJNnZOX0dRRnJGZk1hOTlOdngzcW10M0lmeDFvajlRU1JjZ1hxS3ZJYVJ5Zk5KNFNFX3hkdFNWUy1KRS10U2Y4S0RfSU54dHFQb3RITWYxbTVZRnllSVBKQnpLaExHMXJEbldmS3RMWFgyNlc4T2dLRDA?oc=5",
-      "source": "Valor Econômico",
+      "title": "Futura: Flávio tem 48,1% no 2º turno; Lula, 43,7% - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONXZzS1lHS1hSOEtfMllRX1NzMVBPSWk3R2F2QTNjalJBam9ocjlZQnJPUUdIRUhESDktTkV1MC1TNzdjVzBsRXZ1ZnNZbXRxSmM4TzA4V0hXMm1jYWY0UWo2R05ka2lIZmV4MmtBNjZUSFV6TGF2YlZmTTRSSl93cGpyNWVUb0JX?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-09-17",
+      "pollster": "Futura",
+      "key": "2a8193282fa0dceb1e5a"
+    },
+    {
+      "election": "president-br",
+      "title": "Quaest: 49% não consideram Lula honesto; 42% dizem o mesmo sobre Flávio Bolsonaro - G1",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPV1U3Q2J2dGlsbnc3bVJ6V1JsN2xRNlhnSGNqcE41MktVd19XLV9xd2RSM0pnZjdmdGVfTXFXa2JrUWUxZHYwUHpBZ2U5TTgwMGo4V05jQmI5WmdROWZKS1ViekJ2TkhPY1BydlVQZS1MNDFBR09TWXd2Z3dRRHZ2UGFJMUJnWlpzNHhwakdUb3U2ZGxrVFdmLUhqdjdqQkxRemw1MW13YXdzLTN2Rktz0gG-AUFVX3lxTE9HT1QxRGE5N2ljbWNqSTl3Z1gzNjJUY2MxVEpKcU1mZTlKRUZMWjNoaEhKSlVMWHE3aWN4eUdFdlBmRDV5SGowSEZLZTg4NWpNZjN5RE5QUGJKdGZfc0cyUDF3SlljQTlwNmludnI1akNpNzVONm9SN3JXRkpnQkZxZWZHWFRxMTJYZUhGRkg2RUdwWUpBNTRsSkpIWmtfV1NUbWM3SlBrNDFjbGk3eEJSLTIxRF94aFQwVDhiRXc?oc=5",
+      "source": "G1",
       "published": "2026-09-16",
       "pollster": "Quaest",
-      "key": "42a759bb87014c72519c"
+      "key": "8e3cf0b7c5f74b703917"
     },
     {
       "election": "president-br",
@@ -1045,15 +1058,6 @@
       "key": "75c044ec479f7f98d963"
     },
     {
-      "election": "governor-mg",
-      "title": "Cleitinho lidera Datafolha em MG com 37%; Patrus tem 13% - SpaceMoney",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1WQkNhcDdqVkw3ZXhpMmlKSkJfWEV1MVhWem4tOXlZcHFwZTBla2F2VDVNMGhTbVdNWDE4cjg0QkhZamtXeGxITnd5djlaeTdqX1VFVUhkSVEtUHlYU2FsU05hMGp1NlZ4bEhOVUJicVdsYVhjcFhjcg?oc=5",
-      "source": "SpaceMoney",
-      "published": "2026-09-12",
-      "pollster": "Datafolha",
-      "key": "6015e26dc24b7854194f"
-    },
-    {
       "election": "president-br",
       "title": "Datafolha: Lula tem 46% e Flávio marca 44% no segundo turno - Valor Econômico",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQWVZ6TkZRc0NlaHpYWXJkVTRrWU5ZM3BjM0luanAyV2tEOGhlRWlITDJHdURkSEJ2aTViTW5kWHFFU0Izel9WWFEwSk5YSzBLLTZ4RzRIVHRheXlSUDdrTnNNY0J5WUhZOVFtQjVKTHN5Z2liN3o2bXJpWndzcWNNOEJfWUVEdkVIbUlaMnB5aENuZkg5ZG00TzNGVU9DZGNONEJ2eG1sb0dZdmNNZmR5Um1lYnFHVlBLTHY5dkNsYUdWYlRFQ2xJbmZhNUdLYWg1djlERThaVHlmbER4RW9PLXNmNDNwb3lmMHVabUJUVnHSAf8BQVVfeXFMTjBRUXJHTGpUQXR6dF9vRGRhdEhfZzBubkt0UU0xbDYwRXBwSU5TQWI2MHNsUjUzNGdrVFY0WE9BUWV3WGdXNWZOSzFNck1wYmozbmtyWWVzNklmUzY1cVpLSWp3angzU3JtVXJqY3k5V3JXal9TTW9QS3ZHQnFtQXNCWWVQdERfazFfcFJyc2doNDF3N3RIZVBJSHNjTzZWQUZ4MDlKcHZia094THFlQ181cWVmN3dSNDhSMXZwdFd6LU9TcExIRFh4eDNraGVGdHNZTHJPYXIxdUw2UXNXZlA0ZXJ3c0xsSkE3SzF0YU81R2FLc1M2NFE1Z2ZBOW53?oc=5",
@@ -1061,6 +1065,15 @@
       "published": "2026-09-12",
       "pollster": "Datafolha",
       "key": "37fd14e4550d710193f2"
+    },
+    {
+      "election": "governor-mg",
+      "title": "Cleitinho lidera Datafolha em MG com 37%; Patrus tem 13% - spacemoney.com.br",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1WQkNhcDdqVkw3ZXhpMmlKSkJfWEV1MVhWem4tOXlZcHFwZTBla2F2VDVNMGhTbVdNWDE4cjg0QkhZamtXeGxITnd5djlaeTdqX1VFVUhkSVEtUHlYU2FsU05hMGp1NlZ4bEhOVUJicVdsYVhjcFhjcg?oc=5",
+      "source": "spacemoney.com.br",
+      "published": "2026-09-12",
+      "pollster": "Datafolha",
+      "key": "047a4b141a87bd4cac95"
     },
     {
       "election": "president-br",
