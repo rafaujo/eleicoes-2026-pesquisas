@@ -292,6 +292,7 @@
     "482a84aa85cd9a2f63a4",
     "48985bc98a4658b78368",
     "48c0e353b7579b467ffe",
+    "48c7fe1211a22fbbe4b2",
     "48dafb5243a48eb5c377",
     "4923baaf26fb17e1704e",
     "497ff98d015a43c118c8",
@@ -348,6 +349,7 @@
     "59a644db688c7c2da364",
     "59c75ecd6c40d9a7bf39",
     "5a5d0fb44def7052685e",
+    "5b1c12c4ea36d18e5559",
     "5b2c54cf4a43001ad18c",
     "5bf5f84c1609a0177eb8",
     "5c31e88702aa18fb32db",
@@ -407,6 +409,7 @@
     "68547a0be01eb0c144f9",
     "688a8e66f43cc80923fa",
     "68c8bbb70c6d16b44371",
+    "69bde24224d4c047605d",
     "6a9d67a69ecfaa406f41",
     "6aa6269898ade362c55f",
     "6ac87dc6b88f6c1a8f1e",
@@ -424,6 +427,7 @@
     "6d8957b92303290d3dce",
     "6e6922b2574016668c39",
     "6ea057ad40421bee2b9f",
+    "6ef5ed561238a95ac4e6",
     "6efd01a089d79fb97a50",
     "6f1fc72ebc86ae9b3a8a",
     "6f2488330523ff5a6b43",
@@ -510,6 +514,7 @@
     "851a6c89ae92df18d754",
     "852313dc80ac539f6b02",
     "856a1e14abff3cae3d4b",
+    "857676126ed08c1aaf5a",
     "85c7c7b59d83b298169b",
     "8620df4558fd35d2c99b",
     "86566aabc13f684bd8f3",
@@ -804,6 +809,7 @@
     "cb7d4d153b924a741ecf",
     "cb88aaeb621709d08082",
     "cbf57b6f12bfe5edc20f",
+    "cbfb5a60972da9c63669",
     "cc0ef97276590153e3eb",
     "cc45d77b57a8845c2a99",
     "cc494f50059dbbd40a0c",
@@ -848,6 +854,7 @@
     "d6ceb9de0884fad214aa",
     "d6e33a706c1d6c56f783",
     "d6fae93e6ed3234d322f",
+    "d759a10a96e9da740196",
     "d795ae8a62a125c36832",
     "d7a9fa5d6152153989a4",
     "d7bde8dbc901e50c69a2",
@@ -1025,12 +1032,12 @@
   "pending": [
     {
       "election": "president-br",
-      "title": "Datafolha, 1º turno: Lula, 39%; Flávio Bolsonaro, 36%; Cury, 6%; Caiado, 4%; Renan, 3%; Zema, 2% - GC Notícias",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQzBUT1BwY25pa09Pbm5JTDhuNURHUWRaQUpXa0pjQkdCXzdDZjlnaGQ5NTFSWVlUdUQtenowU3NYd2p4YlRiLVZlVzVEenVhc0RzazJMVzhTQzVDSVY5WG84RUNxYVdBSDBQOG9xRFptRUYwMTdtZUpzeWI4Wk9CUG51OHJMcUx5VjdnbnkzYzlkek5vMXkyTDJqZFB5UDZGVkJ0OXRaaExTV3VPd24yNWxuUjNWbTVtSmpTbUF1T0NyU1U?oc=5",
-      "source": "GC Notícias",
+      "title": "Datafolha aponta empate técnico entre Lula e Flávio Bolsonaro no 1º turno - Mais Região",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWnRXYkM1d2R4SkpBOUJhMXg4YVAtVjZTd0UxMWs4a01mcmpaNkpGc0JJQlRmWGFHQm5DbDdCeGlsX2lwM0dmSng2MENrSW9XTU9vNHJydGJJaG1JbXFsbFVlZU1QRXdPelpiXzkySXF4ZmNlZnpOc205MXlvei1MdXdnQ1QxOGVJTWtEbGRCcUZ5R25NbVlCak4yTGpSRUVZenFrNGkzZ0NSSE15MkxhMXRfWmplcGRs?oc=5",
+      "source": "Mais Região",
       "published": "2026-09-18",
       "pollster": "Datafolha",
-      "key": "dd1cd957b8ef1d957272"
+      "key": "69bde24224d4c047605d"
     },
     {
       "election": "president-br",
@@ -1148,6 +1155,15 @@
       "published": "2026-09-09",
       "pollster": "Quaest",
       "key": "c67077d61e97bb6532a1"
+    },
+    {
+      "election": "governor-mg",
+      "title": "Pesquisa Atlas: Cleitinho lidera disputa pelo governo de Minas Gerais com 41%; Patrus tem 30% - Estadão",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQN25wVXN5NUY1a2daWEJiQzYwRGVYcVJVRXZkeGRESEYxWVp2Q29uVjVOZDBVYTg2Qm5qV1VFS2hZN21Pbm1zeEFMb3gtaXBfRTA2ekZSSVpCVzhYZ1lQVkFzUkJXYVZWQ2thMVJzZ1RLTG9ldkY3aVlSX0FaYmZZOE9mTU5vQUl6ZjVjTGxiSVB4c2poVUVGSFViRTVlUHU2NzBqSmVrZUphYlVjelY00gG0AUFVX3lxTE9TbmFhSkZ3RVZ6WmxrRWhyXzJfNUpWSXNSOUxETkUxSTZxeE5QaC12MHhscGYzcnVPR1hGWUNCb19FdVFhanE2ZVhJUDU5YTF3N2xZWlhfaEpIX3Q0TGRSVkhZVy1VSlhPRmYxQ3VYa1dWaE9NdXdDRm1rWTlJTjF5amJtRGZEcDF5Ym1nbV9zQlpGNHFUYTNRVS1wNjVaQnBTLWQxSXdQSmc1TWQxMDlPb3lPVA?oc=5",
+      "source": "Estadão",
+      "published": "2026-09-09",
+      "pollster": "AtlasIntel",
+      "key": "5b1c12c4ea36d18e5559"
     },
     {
       "election": "governor-sp",
