@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-18 04:39:19",
+  "sourceGeneratedAt": "2026-09-18 14:29:47",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -815,17 +815,6 @@
       "disclosureDate": "2026-08-30",
       "sample": 1200,
       "company": "IPAT - INSTITUTO DE PESQUISAS A TRIBUNA LTDA",
-      "tradeName": "",
-      "contractors": []
-    },
-    "BR040292026": {
-      "protocol": "BR040292026",
-      "registeredAt": "2026-09-11",
-      "fieldStart": "2026-09-15",
-      "fieldEnd": "2026-09-17",
-      "disclosureDate": "2026-09-17",
-      "sample": 2002,
-      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": []
     },
