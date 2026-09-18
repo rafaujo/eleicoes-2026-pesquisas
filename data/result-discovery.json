@@ -3,6 +3,7 @@
   "seenKeys": [
     "00030c37a6c09f8fccab",
     "0028f619701432a77502",
+    "0076867e759d9dedb124",
     "0114ade22216b17c244e",
     "012933814da4c85c5a6e",
     "016a6b75dd865e7151c5",
@@ -39,6 +40,7 @@
     "08129c7b6810eeb4df0e",
     "0815ce49f9c52bfb4569",
     "0820c81ee9a0159ad41c",
+    "08667dfa791dcd28c5e1",
     "08b89b35227c8bb655a7",
     "08e993cea7219a714638",
     "090a0863d4b410691aa3",
@@ -210,6 +212,7 @@
     "2fbd0360b8d4cd2e4cb3",
     "2fd2801e2b9512c7a745",
     "30733fe2b189f10e48bc",
+    "308d91bd2486f8bbedd9",
     "30ea93f0c77d237c2088",
     "31255ae25317157f6cd9",
     "3148f2f19447cd4e5253",
@@ -217,6 +220,7 @@
     "319478b4784745bb89e9",
     "31acd276571fac8ec949",
     "31b025e012b4f30578b4",
+    "31b3a92feb21a749d171",
     "31b52fa2e76ad466564c",
     "31e9a364146b3b4a2657",
     "3288c6f059df5ed36a8f",
@@ -437,6 +441,7 @@
     "701b83cd7f2ef934e87a",
     "704a7d8998c0926efae3",
     "70a0be3442499c2c5905",
+    "70efb54a46941dca01cd",
     "7152163946be6468b175",
     "717c31d3df3a3e771868",
     "71abe39dc6ae625a7b78",
@@ -529,6 +534,7 @@
     "880fa95513e6d000974c",
     "88351b34a6b57923b57b",
     "896b2d1c053ec5dd7e4b",
+    "89b3000427e89d755ea4",
     "89c042643421a26095f1",
     "89f78a52477fcb264ecb",
     "8a6f52d3f38da1288443",
@@ -634,6 +640,7 @@
     "a10065a169b34a22338c",
     "a11eb460ce57be9f30fc",
     "a1245e2d1f532a69f495",
+    "a1f81413882839d8c3c3",
     "a27e10bcd5959f0faef9",
     "a2b70988426fa4b846e5",
     "a2f1e3d82995262bb588",
@@ -802,6 +809,7 @@
     "c9998a21318ac92e4e12",
     "c9c0d799b7c05ba1641e",
     "ca7a551c5f9acb41c659",
+    "ca9087fd6dcbcc27a89d",
     "ca9197a8f68d6783be94",
     "caa24f28c78e927aa03e",
     "caa87a89c65df53840f9",
@@ -956,6 +964,7 @@
     "edb24d704604b63a14c0",
     "edd22567a1c8a995ca9a",
     "ee011fc79f2cb19dd8c3",
+    "eef69334fa573ad23d06",
     "ef0d0e2c5dce0d3a53a4",
     "ef31b6af5e6681e0ef3a",
     "ef4553ba866b6dae2e72",
@@ -1076,6 +1085,15 @@
       "key": "d7bde8dbc901e50c69a2"
     },
     {
+      "election": "governor-sp",
+      "title": "Tarcísio de Freitas (Republicanos) lidera com 49% das intenções de voto para governador de SP - datafolha.folha.uol.com.br",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNbXZFdnM5OUlMNnpTX3liaGFnLWZRNzVlb3RQZjZTWG9CV0lEbmp4NmsxbXN6U2NOVjNoZk4tQlpNS1g4WGYtQUpmZ1Y4UXNmTzQ5REJQcFdSejRLZ015TWtKWnZuME95eUJqWno1bmVrRFZCQWRfaS03OVEzdnAyc3E4aGNWT3Z0X3Mxc29DMGF4LTRyZ3FaMTJOak9rcmJNSGZMM0dKX2R3ZlVaLW5nTHczYl9RaUZwV3JQQVFnRmp6MlpRdnQ2bXY2T0lFTUNHUW5kWWFqUnJRQnZtRUIwM1hR?oc=5",
+      "source": "datafolha.folha.uol.com.br",
+      "published": "2026-09-14",
+      "pollster": "Datafolha",
+      "key": "eef69334fa573ad23d06"
+    },
+    {
       "election": "president-br",
       "title": "BTG/Nexus: Em cenário de 2º turno, Lula tem 47% das intenções de voto contra 46% de Flávio Bolsonaro - Estadão",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSlNpMl9EN3hUcXJ2WWdKYTBXZ0FraTVSRmZ2elJCOXV6RUp2cVZUTl95a2ZKTTI4RFNvYmJLckpDNm4tM3hvVHlybTItSkNLX0wwTnF1MkZabFdpYzBQc2VfbkZ3S0pDWTVObW81X2hLZi1XcVJ5V0t3dUdZdUN2TVl5ZGFhT2dISXR1RF9uME01TTRQZ2tqZ0FMMWZ4ODFndkxLVXBkVWVQT2VkMm9pQmFmdDFqeUh3MnhEbFRRTU82WkJTd0NzQVBJQjY1LW41OUtkaFpZb9IB3AFBVV95cUxPTTBHUGVMZjFlUld0bW9sUzJzWkxQdUN0MUZSLXFTdS1WbXhLZG9XZzJudWx1aVZDQ05SSFZBWVREQTlLUDlRLTRBd3YxRVNyb1M4dlo2cGRsbzRnUWZ4Y1BnRXl3dnYxbXRua2YwVEloNGZTNmRZekpiMzBnWnhtS215dFowSW0tc3R1TWU3R1ljdW56Tm8wc0dNZGE1YUxtSS16enNXTHNfbnFxZW12SUo3TVdsX2lpNFlBb2ZOYTRZSklnazJsVzk0UXpuRUR5c1FUek9ybUpETlF2?oc=5",
@@ -1095,12 +1113,12 @@
     },
     {
       "election": "president-br",
-      "title": "Datafolha: Caiado marca 4% e segue em 4º lugar na corrida presidencial - goias246.com.br",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOdm1XaXRPMUM1UmxRMGk5UzNLXzloM0d5bG5OU24zSlNrZ1dEcHB5enhmUnZlOTVqN29kOThBZHdTWmRtdkJfTXVSOE84ZkNOTmdfR0pSbUFuWXNXVUV4eUs3dGdqcXExY0lZME1mbndyN0RvS1VTTHQzQk9vejZ5RzNOMWVyMS1lUlZXdGhzZWtBU18wNnpEN1RVeVA3R0JvNjlTSGduQmFRbmp6XzVGOEIwZlFCQXJqZ3BScEdFMno4SW5NZkNj?oc=5",
-      "source": "goias246.com.br",
+      "title": "No 1º turno, Lula tem 39%, contra 35% de Flavio, e no 2º turno persiste empate técnico entre eles - datafolha.folha.uol.com.br",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPNnhmYXR6V1FpQ184QmdfbnlSeGoxNXYyRmo0TUNyYWRnU0piQkduVktZVVJfTEdpQ3JKNmtXOFcyZERNY3R6Q0k0Z0QtWWJnbThBZS1aN2tudjBBZERvVVJ1M05KUnpDdEwyXzZqQXNIWnNMMkhhdVByNnl5eGdxWml6c19vb0VOSENVejBJYlNoaEJWNlBHYXRId1hrWXpodXNkbnpyU2QwakMtb3RxTDRIdDRDTXpGdlRRVUx1VU9kaFZmY3JGazVDNFB6RGJfU1hZU0lyNUhLb09vd25vN2QtcXg?oc=5",
+      "source": "datafolha.folha.uol.com.br",
       "published": "2026-09-14",
       "pollster": "Datafolha",
-      "key": "75c044ec479f7f98d963"
+      "key": "31b3a92feb21a749d171"
     },
     {
       "election": "president-br",
@@ -1157,6 +1175,15 @@
       "key": "c67077d61e97bb6532a1"
     },
     {
+      "election": "governor-sp",
+      "title": "Quaest: Tarcísio tem 42% e Haddad, 27%, na disputa pelo governo de SP, aponta pesquisa - Estadão",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxObzJYdWlhTXB0SXhHOGpmQ3ZwTUJDWVY0MTYxU013RXRuS3RvV0JUNlJXVEJneEZlVzlXLXN1Mk9MdG1BT0F6UlVnSnVVRFBWYkVhVUQ3NU5YWWNKOE50UDlRd01Lb0FEeHVYbHpMd2JCOWFqTHM3TDhQRmJNY19MWjFSc3RIdWJmdHJqZXpIbUxtRXloMVp2b0FjUTdsRTIwdWFxTFBDc3FBb2ZWMXk3N0dvYWhsbzNJN3hCRzRYY0o5UWV30gHKAUFVX3lxTE41QmFEQnRBMldKZFRrWW5lTkFuVWFuUHpTck9lWW5FV3VSMkpXV09yTGd6U2JRbUZWZlBpMkZLNm1XLUJSTTlIMWkwTy1OQ3E2TU54WktxSkZPNC1La2R1LUtYbE1xUGtUaTVKMEIyNldBRW5WT1lPTnVwNGE3WUJoQ2xGcnh0MGlDaXljWUJVUW9aVk1SOHZ6NzNGcTlxNmhHdENyU1Z3bUVRZWh3azBCV0MtWDhfSW56TkRUbWNpQTBVc0IwRmtPd2c?oc=5",
+      "source": "Estadão",
+      "published": "2026-09-09",
+      "pollster": "Quaest",
+      "key": "70efb54a46941dca01cd"
+    },
+    {
       "election": "governor-mg",
       "title": "Pesquisa Atlas: Cleitinho lidera disputa pelo governo de Minas Gerais com 41%; Patrus tem 30% - Estadão",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQN25wVXN5NUY1a2daWEJiQzYwRGVYcVJVRXZkeGRESEYxWVp2Q29uVjVOZDBVYTg2Qm5qV1VFS2hZN21Pbm1zeEFMb3gtaXBfRTA2ekZSSVpCVzhYZ1lQVkFzUkJXYVZWQ2thMVJzZ1RLTG9ldkY3aVlSX0FaYmZZOE9mTU5vQUl6ZjVjTGxiSVB4c2poVUVGSFViRTVlUHU2NzBqSmVrZUphYlVjelY00gG0AUFVX3lxTE9TbmFhSkZ3RVZ6WmxrRWhyXzJfNUpWSXNSOUxETkUxSTZxeE5QaC12MHhscGYzcnVPR1hGWUNCb19FdVFhanE2ZVhJUDU5YTF3N2xZWlhfaEpIX3Q0TGRSVkhZVy1VSlhPRmYxQ3VYa1dWaE9NdXdDRm1rWTlJTjF5amJtRGZEcDF5Ym1nbV9zQlpGNHFUYTNRVS1wNjVaQnBTLWQxSXdQSmc1TWQxMDlPb3lPVA?oc=5",
@@ -1164,15 +1191,6 @@
       "published": "2026-09-09",
       "pollster": "AtlasIntel",
       "key": "5b1c12c4ea36d18e5559"
-    },
-    {
-      "election": "governor-sp",
-      "title": "Quaest: Tarcísio lidera com 42% no 1º turno em SP; Haddad tem 27% - UOL Notícias",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdG8xLWNRSUw5NjZjLWJMU24tVTJBTHlhT01VSzNrOTBURmtDUjgxQTRCVUk0VXRvNEVpUGktYzBUWnRPNXNiMUhGQ1JSckRxN2pKSUlvby1fZlRESnRjWGcyZ3psb2ZhTHM5TWs0X2ZKZEp4VlpWdkx4S1JhdEEweDc5MnBVQQ?oc=5",
-      "source": "UOL Notícias",
-      "published": "2026-09-09",
-      "pollster": "Quaest",
-      "key": "17b94a583f79219c0c16"
     },
     {
       "election": "president-br",
