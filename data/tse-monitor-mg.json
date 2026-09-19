@@ -32,6 +32,17 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "MG032762026": {
+      "protocol": "MG032762026",
+      "fieldStart": "2026-09-19",
+      "fieldEnd": "2026-09-22",
+      "disclosureDate": "2026-09-23",
+      "sample": 1506,
+      "company": "Quaest",
+      "tradeName": "Quaest",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG032902026": {
       "protocol": "MG032902026",
       "fieldStart": "2026-09-15",
@@ -40,6 +51,28 @@
       "sample": 1800,
       "company": "Atlasintel",
       "tradeName": "Atlasintel",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG039472026": {
+      "protocol": "MG039472026",
+      "fieldStart": "2026-09-16",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-23",
+      "sample": 1500,
+      "company": "Instituto Alves Lima",
+      "tradeName": "Instituto Alves Lima",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG042972026": {
+      "protocol": "MG042972026",
+      "fieldStart": "2026-09-16",
+      "fieldEnd": "2026-09-21",
+      "disclosureDate": "2026-09-23",
+      "sample": 1000,
+      "company": "Scany Pesquisa",
+      "tradeName": "Scany Pesquisa",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

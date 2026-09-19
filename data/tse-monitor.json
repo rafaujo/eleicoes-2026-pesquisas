@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-18 21:39:38",
+  "sourceGeneratedAt": "2026-09-19 04:34:06",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -38,6 +38,7 @@
     "BR005302026",
     "BR005352026",
     "BR005472026",
+    "BR005482026",
     "BR005582026",
     "BR005742026",
     "BR005752026",
@@ -249,6 +250,7 @@
     "BR035942026",
     "BR035982026",
     "BR036072026",
+    "BR036092026",
     "BR036272026",
     "BR036382026",
     "BR036562026",
@@ -324,6 +326,7 @@
     "BR046652026",
     "BR047002026",
     "BR047272026",
+    "BR047392026",
     "BR047492026",
     "BR047622026",
     "BR047792026",
@@ -686,6 +689,17 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR005482026": {
+      "protocol": "BR005482026",
+      "registeredAt": "2026-09-17",
+      "fieldStart": "2026-09-18",
+      "fieldEnd": "2026-09-22",
+      "disclosureDate": "2026-09-23",
+      "sample": 2000,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": []
+    },
     "BR007492026": {
       "protocol": "BR007492026",
       "registeredAt": "2026-09-11",
@@ -818,6 +832,17 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR036092026": {
+      "protocol": "BR036092026",
+      "registeredAt": "2026-09-17",
+      "fieldStart": "2026-09-19",
+      "fieldEnd": "2026-09-22",
+      "disclosureDate": "2026-09-23",
+      "sample": 1104,
+      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR040762026": {
       "protocol": "BR040762026",
       "registeredAt": "2026-09-08",
@@ -849,6 +874,17 @@
       "sample": 1104,
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
       "tradeName": "",
+      "contractors": []
+    },
+    "BR047392026": {
+      "protocol": "BR047392026",
+      "registeredAt": "2026-09-17",
+      "fieldStart": "2026-09-17",
+      "fieldEnd": "2026-09-22",
+      "disclosureDate": "2026-09-23",
+      "sample": 5000,
+      "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
+      "tradeName": "ATLASINTEL",
       "contractors": []
     },
     "BR060042026": {
@@ -974,17 +1010,6 @@
       "sample": 2000,
       "company": "Nexus",
       "tradeName": "Nexus",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR020322026": {
-      "protocol": "BR020322026",
-      "fieldStart": "2026-09-13",
-      "fieldEnd": "2026-09-18",
-      "disclosureDate": "2026-09-18",
-      "sample": 40500,
-      "company": "Veritá",
-      "tradeName": "Veritá",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

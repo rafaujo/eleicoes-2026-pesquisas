@@ -198,6 +198,7 @@
     "2c675a15ef2d7b6008e4",
     "2cacb71d5ab09da35129",
     "2cb81bf093ec6454fd03",
+    "2d031875f176d27bd0a6",
     "2d0fc1539e387f7e6ac4",
     "2d2c222216297af71250",
     "2d6846904bb7c50d4d76",
@@ -294,6 +295,7 @@
     "46d4c59c0a66ad109176",
     "4782ea2caa713b892a42",
     "482a84aa85cd9a2f63a4",
+    "486036aa78878d92abbc",
     "48985bc98a4658b78368",
     "48c0e353b7579b467ffe",
     "48c7fe1211a22fbbe4b2",
@@ -480,6 +482,7 @@
     "7bc4bc88c1e3b5c7b53e",
     "7c2b7a3143523e01e50d",
     "7c5733d035e4c29a240d",
+    "7c61d06a5e117882164d",
     "7cad81f775c104692770",
     "7cbd2ced70bb39a01245",
     "7cc3b58bd28f684f3cf7",
@@ -640,6 +643,7 @@
     "a10065a169b34a22338c",
     "a11eb460ce57be9f30fc",
     "a1245e2d1f532a69f495",
+    "a1d6ee9e4a6ddf97aad9",
     "a1f81413882839d8c3c3",
     "a27e10bcd5959f0faef9",
     "a2b70988426fa4b846e5",
@@ -967,6 +971,7 @@
     "eef69334fa573ad23d06",
     "ef0d0e2c5dce0d3a53a4",
     "ef31b6af5e6681e0ef3a",
+    "ef32803e9f8d5926f9fb",
     "ef4553ba866b6dae2e72",
     "efb1a82984d962477618",
     "efbd3a84e6a3c5e1c485",
@@ -1025,6 +1030,7 @@
     "fade59703e283692f6c0",
     "fae241547f29a883fc14",
     "fba87e09e6429cdfeaa8",
+    "fbd9c67e3bf6d9e1083a",
     "fc1c5e583d703284be1f",
     "fc1e86ae3d6f8df0c6cd",
     "fc250ab3a40e1d11e5e4",
@@ -1041,12 +1047,21 @@
   "pending": [
     {
       "election": "president-br",
-      "title": "Datafolha aponta empate técnico entre Lula e Flávio Bolsonaro no 1º turno - Mais Região",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWnRXYkM1d2R4SkpBOUJhMXg4YVAtVjZTd0UxMWs4a01mcmpaNkpGc0JJQlRmWGFHQm5DbDdCeGlsX2lwM0dmSng2MENrSW9XTU9vNHJydGJJaG1JbXFsbFVlZU1QRXdPelpiXzkySXF4ZmNlZnpOc205MXlvei1MdXdnQ1QxOGVJTWtEbGRCcUZ5R25NbVlCak4yTGpSRUVZenFrNGkzZ0NSSE15MkxhMXRfWmplcGRs?oc=5",
-      "source": "Mais Região",
+      "title": "Datafolha: 38% dizem que crise no STF prejudica Lula e 31% afirmam que prejudica Flávio Bolsonaro - G1",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVlhqMjBEMHJ2QlVXQlZLUkVmQUwyTXdJTWxINm52UXRrM3RnTmlPZkV5MkpKT0xCVHAyNWFzY2pPb3JudV83eks4OU03X3VXazRuOXN2SjI1OGdaR3Z1TWVjSUdRa2psV0tuYnVsZ2lqbjI2bUk2VktVVkJFQlhDV2pyR2xqZUtWWnA3MWhsTUtFOVBWeU05ZGRFSnlpaVVsTXhvTmFoNUxJX3hacGYxVlpIY0dZb0hRZ1RuMWp2X2FFdDQxWlg1OGNWb9IB2gFBVV95cUxQLTltZzBpMEVPSFlwekgzb2szSnZPLWhlQ3FDVFdLSHZ2ZFo5RF85U05JbGUwZnV2cjJuanE5dHVmVXd6cVFmTGFJRTQwWWh5bjNZNkg4YTg3SzV6OFR5YmpaOWUtODhON2lUbDgzTWFoSkxwbUJuT0lsSEZEY1dUTWk2VEFqQXdzd3dsY2J4aXhvR21IaUhod3d2d3BMNXBiRlllXzF0UTJuSERyYml3VkVXX1p6eVhsMTJwME03cXpEMDZZMzl6aXRLTVQ4TW5XbVJSZWx2a1JFZw?oc=5",
+      "source": "G1",
       "published": "2026-09-18",
       "pollster": "Datafolha",
-      "key": "69bde24224d4c047605d"
+      "key": "486036aa78878d92abbc"
+    },
+    {
+      "election": "governor-mg",
+      "title": "Veritá: Cleitinho tem 47,4% no 1º turno em MG; Patrus, 21,2% - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdDNwSnh3bmhlYUh3WEpJQmNGalZYalhCQmFub3hZdGstY1lLSkFwNkxHY0FBM3VYREJCY1BUMTd6XzEtV2d0WVVPX1RNQzFuc2hhMXZjbGwyc0ZZajJfNWIyWUZ5YTJxZ211SkhNTmQxSVU4NnpVR3Q1STc3bXA2SzNQNUtFZkhFREwtay1vdDEzRGRNb1Br?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-09-18",
+      "pollster": "Veritá",
+      "key": "2d031875f176d27bd0a6"
     },
     {
       "election": "president-br",
