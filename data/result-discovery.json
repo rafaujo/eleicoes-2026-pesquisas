@@ -294,6 +294,7 @@
     "46c982b4fa72a02eb938",
     "46d4c59c0a66ad109176",
     "4782ea2caa713b892a42",
+    "480c246af0fb6c24d4a9",
     "482a84aa85cd9a2f63a4",
     "486036aa78878d92abbc",
     "48985bc98a4658b78368",
@@ -317,6 +318,7 @@
     "4e72681ac4ebefd6a704",
     "4f34e2d1bc1a7689cf08",
     "4f3a1499ec070efd366d",
+    "4f8d3e587ead3f36aa3c",
     "4fb1e9133664ef37d7f5",
     "4fbeaa0daea89b6256a8",
     "50532ceabf65d851a3e6",
@@ -398,6 +400,7 @@
     "6443e75ba6a6373d6229",
     "646f36c1f774b1f60542",
     "648a2d4bda3ed572bc8a",
+    "64a60ee5e8f9bd44be1c",
     "64b603c75db2a3f11d37",
     "653faf359e25f05ec131",
     "65488cf29f83601d7f2f",
@@ -494,6 +497,7 @@
     "7e73478a7a38d6324741",
     "7e8513b5b2ce4b567c21",
     "7ea455d031576e054872",
+    "7eea8dd934e6d5fe3938",
     "7f245375bf665058f42a",
     "7f28863349dca7ad8cbb",
     "7f49be81ac14e10bc792",
@@ -889,6 +893,7 @@
     "dbde93adf20fc06c7d2d",
     "dc00ae45ad63ae358dfc",
     "dc09e2901c117c79e19b",
+    "dc1fd4b1e7917590bcfe",
     "dc435f7a4f0294e32c19",
     "dc63eae68ddef63cae9b",
     "dc68c7db94d79c8370b2",
@@ -918,6 +923,7 @@
     "e2b2be9618dd365d730a",
     "e308e5f99910091f5cf0",
     "e388f116c3185eced87e",
+    "e38f3fad90aa3520e721",
     "e3e5d7da349f9b8dece9",
     "e405b69173fe305bbb8c",
     "e47d8c4fff68a44c46bb",
@@ -1047,12 +1053,12 @@
   "pending": [
     {
       "election": "president-br",
-      "title": "Datafolha: 38% dizem que crise no STF prejudica Lula e 31% afirmam que prejudica Flávio Bolsonaro - G1",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVlhqMjBEMHJ2QlVXQlZLUkVmQUwyTXdJTWxINm52UXRrM3RnTmlPZkV5MkpKT0xCVHAyNWFzY2pPb3JudV83eks4OU03X3VXazRuOXN2SjI1OGdaR3Z1TWVjSUdRa2psV0tuYnVsZ2lqbjI2bUk2VktVVkJFQlhDV2pyR2xqZUtWWnA3MWhsTUtFOVBWeU05ZGRFSnlpaVVsTXhvTmFoNUxJX3hacGYxVlpIY0dZb0hRZ1RuMWp2X2FFdDQxWlg1OGNWb9IB2gFBVV95cUxQLTltZzBpMEVPSFlwekgzb2szSnZPLWhlQ3FDVFdLSHZ2ZFo5RF85U05JbGUwZnV2cjJuanE5dHVmVXd6cVFmTGFJRTQwWWh5bjNZNkg4YTg3SzV6OFR5YmpaOWUtODhON2lUbDgzTWFoSkxwbUJuT0lsSEZEY1dUTWk2VEFqQXdzd3dsY2J4aXhvR21IaUhod3d2d3BMNXBiRlllXzF0UTJuSERyYml3VkVXX1p6eVhsMTJwME03cXpEMDZZMzl6aXRLTVQ4TW5XbVJSZWx2a1JFZw?oc=5",
-      "source": "G1",
+      "title": "Datafolha: Lula tem 39% e Flávio Bolsonaro, 29% entre jovens; veja pesquisa por segmentos - Folha de S.Paulo",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRDQtdDRxYmFhSHBBbjlyVG1XVXMzcjJfSzFnNlNUajVnR1N2MnlhdVU4b2dQMGw2UmJTNXFiS1ltQ2NSZ21sODAtMEoxQXVFVUVIdGh0S01UU0p4U3lHNDlfZ0dfNlViaElfQUlBc2JfQzJtRkw5WFZ4NG9ndkZ4SHpqRW1TNm9QV1FUaXByc0hmVWpqZ3hDSjIyd1BYa29BMnplUHg4Qmt0M2x4QXlnb2kyNUJnVzdzQ0VLZWY5Yk9hMkg4RVcyeHF6cVZaMU0?oc=5",
+      "source": "Folha de S.Paulo",
       "published": "2026-09-18",
       "pollster": "Datafolha",
-      "key": "486036aa78878d92abbc"
+      "key": "dc1fd4b1e7917590bcfe"
     },
     {
       "election": "governor-mg",
@@ -1062,6 +1068,15 @@
       "published": "2026-09-18",
       "pollster": "Veritá",
       "key": "2d031875f176d27bd0a6"
+    },
+    {
+      "election": "president-br",
+      "title": "AtlasIntel: Flávio Bolsonaro tem 47,2% contra 46,8% de Lula no segundo turno - Varela Net",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPLTAyb3FVUjdzNUpPR0oxU21yS01XZ0d2LTdKSWxWay03RDVZNjU0Z3FnZl9lUG05cWFtM0JQQU95ZFVkblpvbDdXZm9FTldKRkY3SDczaGJpOVVhQmVGXzFXbmVCaUJrOFhuckpxeGR3ZUV5LXZaSlZNQ1phTkt1a09DR3FfWHRKc0xqSEJWdFRGNFI0VmVfbVQtWVc4eVpxbzZndUtQSXZWOXVDUHY2cjBQZkZlbUJYekNmZA?oc=5",
+      "source": "Varela Net",
+      "published": "2026-09-17",
+      "pollster": "AtlasIntel",
+      "key": "4f8d3e587ead3f36aa3c"
     },
     {
       "election": "president-br",
