@@ -676,6 +676,7 @@
     "a72b0945b9301079a77e",
     "a7cc9169fce24c4d75e7",
     "a7eb04349a95d10f2d7e",
+    "a863ed35eaa621f22ead",
     "a864acc1dc9ba742c0ee",
     "a887a247e4f5ce599644",
     "a8b0c8f85ed583632b18",
@@ -1170,21 +1171,21 @@
     },
     {
       "election": "president-br",
-      "title": "Eleitores de Zema, Renan Santos, Caiado e Cury migrariam para Flávio Bolsonaro no segundo turno, aponta Quaest - Jornal Além Parahyba",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONERtbk5UbE9yMDNxZHBiYVZjMEhsaFk1bDZ5ZURidkdWLXpWemo1dS1uLUJMS0haVUxPV0JEWXliWGc0bmRUTjE5YUNEVTdFTzEtSFpuX3E2TnFOcVJYUmZtbThNY2dtelVKRVZuVGd1bElCUW4zdW03dVhsV0hUNjNNYjZwdnk4engxeVpsd2FGTzRQZ2lraC1ueW5TYnFxbG5vYWhPS2N5LWhjd1hrTzRiMlhUS2pwOHFNMTQ0VHpKYWtZb1J3MEVPeTVnMWFEd2dlY0dNbzRzSncxaWRUN05TcFVnRUd3LUE?oc=5",
-      "source": "Jornal Além Parahyba",
-      "published": "2026-09-10",
-      "pollster": "Quaest",
-      "key": "f81f945d7844911684d3"
-    },
-    {
-      "election": "president-br",
       "title": "Real Time Big Data: Lula 62%, Flávio Bolsonaro 25%, Augusto Cury 3%, Renan Santos 2%, Romeu Zema 1%, Pablo Marçal 1% e Ronaldo Caiado 1% - iMaranhense",
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPMzY5U0xTekZGT2tGR3dFdWY4QmZmbnV3Q1Z5aHdzYWZ3TWZObWJnR0ctaldRck5ZdEY3Ty1iUF9sUnVwbkJ0TG4wTXhESDFmWTJPRWVFVEcyZ2M2WFFhNnlNOGJTdDZ0aHo3RmhWMm5VckZkMDVVN09GUGR5TmJPMXF5VlNXRGhQU2NsSGlBcWUxbzJWQmhEMmdFUXU3RWdMN1ZRazhKZEV4YXJUMmNyN0xJYUFHejlOcHNqbW04d0dhUmtMLVBHSG5vZWdPUHctU29lSXAzVzJIZFB3MFVYNVo1QUl1YzRDR0JaSzdvM3g1Y2M?oc=5",
       "source": "iMaranhense",
       "published": "2026-09-10",
       "pollster": "Real Time Big Data",
       "key": "f318106822ce4e5270c4"
+    },
+    {
+      "election": "president-br",
+      "title": "Eleitores de Zema, Renan Santos, Caiado e Cury migrariam para Flávio Bolsonaro no segundo turno, aponta Quaest - jornalalemparahyba.com.br",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxONERtbk5UbE9yMDNxZHBiYVZjMEhsaFk1bDZ5ZURidkdWLXpWemo1dS1uLUJMS0haVUxPV0JEWXliWGc0bmRUTjE5YUNEVTdFTzEtSFpuX3E2TnFOcVJYUmZtbThNY2dtelVKRVZuVGd1bElCUW4zdW03dVhsV0hUNjNNYjZwdnk4engxeVpsd2FGTzRQZ2lraC1ueW5TYnFxbG5vYWhPS2N5LWhjd1hrTzRiMlhUS2pwOHFNMTQ0VHpKYWtZb1J3MEVPeTVnMWFEd2dlY0dNbzRzSncxaWRUN05TcFVnRUd3LUE?oc=5",
+      "source": "jornalalemparahyba.com.br",
+      "published": "2026-09-10",
+      "pollster": "Quaest",
+      "key": "a863ed35eaa621f22ead"
     },
     {
       "election": "president-br",

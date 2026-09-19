@@ -32,6 +32,17 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "MG026382026": {
+      "protocol": "MG026382026",
+      "fieldStart": "2026-09-19",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-24",
+      "sample": 1100,
+      "company": "Sectral Negocios",
+      "tradeName": "Sectral Negocios",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG032762026": {
       "protocol": "MG032762026",
       "fieldStart": "2026-09-19",
@@ -54,17 +65,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "MG039472026": {
-      "protocol": "MG039472026",
-      "fieldStart": "2026-09-16",
-      "fieldEnd": "2026-09-23",
-      "disclosureDate": "2026-09-23",
-      "sample": 1500,
-      "company": "Instituto Alves Lima",
-      "tradeName": "Instituto Alves Lima",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "MG042972026": {
       "protocol": "MG042972026",
       "fieldStart": "2026-09-16",
@@ -73,6 +73,17 @@
       "sample": 1000,
       "company": "Scany Pesquisa",
       "tradeName": "Scany Pesquisa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG059722026": {
+      "protocol": "MG059722026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-24",
+      "sample": 500,
+      "company": "Inpac",
+      "tradeName": "Inpac",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -109,6 +120,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG074002026": {
+      "protocol": "MG074002026",
+      "fieldStart": "2026-09-22",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-24",
+      "sample": 1204,
+      "company": "Datafolha",
+      "tradeName": "Datafolha",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG078982026": {
       "protocol": "MG078982026",
       "fieldStart": "2026-09-15",
@@ -128,6 +150,17 @@
       "sample": 782,
       "company": "F5 Atualiza Dados",
       "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG093812026": {
+      "protocol": "MG093812026",
+      "fieldStart": "2026-09-16",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-24",
+      "sample": 1500,
+      "company": "Instituto Alves Lima",
+      "tradeName": "Instituto Alves Lima",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
