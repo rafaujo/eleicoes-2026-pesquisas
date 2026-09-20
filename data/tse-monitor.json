@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-19 21:27:11",
+  "sourceGeneratedAt": "2026-09-20 04:50:37",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -18,6 +18,7 @@
     "BR002802026",
     "BR002822026",
     "BR002902026",
+    "BR003042026",
     "BR003452026",
     "BR003532026",
     "BR003602026",
@@ -55,6 +56,7 @@
     "BR007262026",
     "BR007382026",
     "BR007392026",
+    "BR007452026",
     "BR007492026",
     "BR007732026",
     "BR007892026",
@@ -120,6 +122,7 @@
     "BR017092026",
     "BR017152026",
     "BR017202026",
+    "BR017392026",
     "BR017442026",
     "BR017472026",
     "BR017552026",
@@ -170,6 +173,7 @@
     "BR024232026",
     "BR024482026",
     "BR024762026",
+    "BR025122026",
     "BR025312026",
     "BR025872026",
     "BR026022026",
@@ -289,6 +293,7 @@
     "BR041612026",
     "BR041692026",
     "BR041932026",
+    "BR042022026",
     "BR042152026",
     "BR042272026",
     "BR042392026",
@@ -354,6 +359,7 @@
     "BR052102026",
     "BR052252026",
     "BR052272026",
+    "BR052682026",
     "BR052702026",
     "BR053152026",
     "BR053232026",
@@ -443,6 +449,7 @@
     "BR065402026",
     "BR065502026",
     "BR065592026",
+    "BR065712026",
     "BR065912026",
     "BR065942026",
     "BR065962026",
@@ -648,6 +655,7 @@
     "BR095702026",
     "BR095762026",
     "BR095782026",
+    "BR095872026",
     "BR095922026",
     "BR096502026",
     "BR096572026",
@@ -667,6 +675,17 @@
     "BR099982026"
   ],
   "pending": {
+    "BR003042026": {
+      "protocol": "BR003042026",
+      "registeredAt": "2026-09-18",
+      "fieldStart": "2026-09-22",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-24",
+      "sample": 2002,
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR004852026": {
       "protocol": "BR004852026",
       "registeredAt": "2026-09-15",
@@ -698,6 +717,17 @@
       "sample": 2000,
       "company": "REAL TIME MIDIA LTDA",
       "tradeName": "REAL TIME BIG DATA",
+      "contractors": []
+    },
+    "BR007452026": {
+      "protocol": "BR007452026",
+      "registeredAt": "2026-09-18",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-25",
+      "disclosureDate": "2026-09-24",
+      "sample": 1064,
+      "company": "NILSON ANTONIO GONCALVES DE SOUZA LTDA",
+      "tradeName": "CLENIX COMUNICACAO",
       "contractors": []
     },
     "BR007492026": {
@@ -744,6 +774,17 @@
       "tradeName": "AMERICAN ANALYTICS",
       "contractors": []
     },
+    "BR017392026": {
+      "protocol": "BR017392026",
+      "registeredAt": "2026-09-18",
+      "fieldStart": "2026-09-20",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-24",
+      "sample": 3000,
+      "company": "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA",
+      "tradeName": "PODERDATA",
+      "contractors": []
+    },
     "BR020322026": {
       "protocol": "BR020322026",
       "registeredAt": "2026-09-12",
@@ -775,6 +816,17 @@
       "sample": 2000,
       "company": "100% CIDADES PARTICIPACOES LTDA",
       "tradeName": "100 CIDADES",
+      "contractors": []
+    },
+    "BR025122026": {
+      "protocol": "BR025122026",
+      "registeredAt": "2026-09-18",
+      "fieldStart": "2026-09-18",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-24",
+      "sample": 2700,
+      "company": "ALFA INTELIGENCIA E SERVICOS DE SOFTWARE E OPINIAO S/A",
+      "tradeName": "ALFA INTELIGENCIA",
       "contractors": []
     },
     "BR025872026": {
@@ -854,6 +906,17 @@
       "tradeName": "NEXUS",
       "contractors": []
     },
+    "BR042022026": {
+      "protocol": "BR042022026",
+      "registeredAt": "2026-09-18",
+      "fieldStart": "2026-09-19",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-24",
+      "sample": 2000,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": []
+    },
     "BR043752026": {
       "protocol": "BR043752026",
       "registeredAt": "2026-09-09",
@@ -885,6 +948,17 @@
       "sample": 5000,
       "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
       "tradeName": "ATLASINTEL",
+      "contractors": []
+    },
+    "BR052682026": {
+      "protocol": "BR052682026",
+      "registeredAt": "2026-09-18",
+      "fieldStart": "2026-09-18",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-24",
+      "sample": 2000,
+      "company": "100% CIDADES PARTICIPACOES LTDA",
+      "tradeName": "100 CIDADES",
       "contractors": []
     },
     "BR060042026": {
@@ -929,6 +1003,17 @@
       "sample": 5000,
       "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
       "tradeName": "ATLASINTEL",
+      "contractors": []
+    },
+    "BR065712026": {
+      "protocol": "BR065712026",
+      "registeredAt": "2026-09-18",
+      "fieldStart": "2026-09-19",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-24",
+      "sample": 1100,
+      "company": "SECTRAL SERVICOS E COMERCIO EM GERAL LTDA",
+      "tradeName": "SECTRAL NEGOCIOS",
       "contractors": []
     },
     "BR078062026": {
@@ -997,6 +1082,17 @@
       "sample": 602,
       "company": "LUIZ MIGUEL DE OLIVEIRA",
       "tradeName": "L3 SISTEMAS E CONSULTORIA",
+      "contractors": []
+    },
+    "BR095872026": {
+      "protocol": "BR095872026",
+      "registeredAt": "2026-09-18",
+      "fieldStart": "2026-09-20",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-24",
+      "sample": 5000,
+      "company": "PALVER CONSULTORIA E DESENVOLVIMENTO TECNOLOGICO LTDA.",
+      "tradeName": "PALVER",
       "contractors": []
     }
   },

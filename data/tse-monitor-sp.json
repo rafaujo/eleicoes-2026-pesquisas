@@ -54,17 +54,6 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
-    "SP021012026": {
-      "protocol": "SP021012026",
-      "fieldStart": "2026-09-14",
-      "fieldEnd": "2026-09-19",
-      "disclosureDate": "2026-09-19",
-      "sample": 3025,
-      "company": "Veritá",
-      "tradeName": "Veritá",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "SP024562026": {
       "protocol": "SP024562026",
       "fieldStart": "2026-09-19",
@@ -106,17 +95,6 @@
       "sample": 1610,
       "company": "Datafolha",
       "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "SP056562026": {
-      "protocol": "SP056562026",
-      "fieldStart": "2026-09-14",
-      "fieldEnd": "2026-09-15",
-      "disclosureDate": "2026-09-19",
-      "sample": 2000,
-      "company": "Vox Brasil",
-      "tradeName": "Vox Brasil",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
