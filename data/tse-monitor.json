@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-20 14:13:04",
+  "sourceGeneratedAt": "2026-09-20 18:11:42",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -1120,6 +1120,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "BR006202026": {
+      "protocol": "BR006202026",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 600,
+      "company": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR025122026": {
       "protocol": "BR025122026",
       "fieldStart": "2026-09-18",
@@ -1142,6 +1153,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "BR049942026": {
+      "protocol": "BR049942026",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 500,
+      "company": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR052682026": {
       "protocol": "BR052682026",
       "fieldStart": "2026-09-18",
@@ -1161,6 +1183,17 @@
       "sample": 782,
       "company": "F5 Atualiza Dados",
       "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR059342026": {
+      "protocol": "BR059342026",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 400,
+      "company": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }

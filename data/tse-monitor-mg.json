@@ -32,6 +32,28 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "MG015802026": {
+      "protocol": "MG015802026",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 400,
+      "company": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG021872026": {
+      "protocol": "MG021872026",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 500,
+      "company": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG026382026": {
       "protocol": "MG026382026",
       "fieldStart": "2026-09-19",
@@ -40,6 +62,17 @@
       "sample": 1100,
       "company": "Sectral Negocios",
       "tradeName": "Sectral Negocios",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG029802026": {
+      "protocol": "MG029802026",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 600,
+      "company": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -117,6 +150,17 @@
       "sample": 1204,
       "company": "Datafolha",
       "tradeName": "Datafolha",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG077672026": {
+      "protocol": "MG077672026",
+      "fieldStart": "2026-09-20",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 2030,
+      "company": "Veritá",
+      "tradeName": "Veritá",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
