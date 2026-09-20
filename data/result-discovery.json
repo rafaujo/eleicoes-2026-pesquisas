@@ -239,6 +239,7 @@
     "34f3c3573e8ba8f9af51",
     "3639ba2c85a974c7f3bd",
     "366b9b9f44ee5f237b7f",
+    "369e7fa37f0ebe6a42c5",
     "3711d53c4202f93b5cb8",
     "3713d2ed89346a091d44",
     "375e74875b22537f51c2",
@@ -287,6 +288,7 @@
     "427cf2d620a22dae7879",
     "42a759bb87014c72519c",
     "42bfca01720c3ac2b712",
+    "42ef735ff3c944252133",
     "43e19f54bde6d19db4b1",
     "43ffb9ff2f3a0f535ed5",
     "440ece9e8e508695332b",
@@ -587,6 +589,7 @@
     "92faf4aa62a15eac6a2a",
     "93271eee5f89268d7a39",
     "93afc7d015ac8d798804",
+    "93dafc58b1ff6db85803",
     "94091ffcf09f791d976f",
     "94331503bc08fba0788e",
     "943d92b094c7e83f1754",
@@ -926,6 +929,7 @@
     "e1f63146f19d26879ae3",
     "e1faea46e15957a9f733",
     "e2291636641097368027",
+    "e229bc2b8a1cb8a1f60c",
     "e229fa4b28a63068cea0",
     "e27246f467ee31b55dc0",
     "e2b2be9618dd365d730a",
@@ -1011,6 +1015,7 @@
     "f506c26293f0094f1151",
     "f53a6594fd4ae21145ec",
     "f588790a93c480677d41",
+    "f5b5792757f774940213",
     "f61c1ff2801dd0d34548",
     "f6252ac302bba8555e83",
     "f64d6c7eb5036e2447c9",
@@ -1059,6 +1064,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "governor-mg",
+      "title": "Datafolha aponta Cleitinho com 37%, Patrus com 13% e Kalil com 11% na disputa pelo governo de MG - Por Dentro de Tudo",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdzd0UVBWSWtTTW1RdWV5eExGT1ZXRDlVV1I2eXBQaHJjZjl6T2FHWWVuMndqMFZmV1A1YWh5YkhTTDg1azhiQ3ZEQjZnbmtidXQ1NDJ2YV8xRUVmVzhqZkd0NmZ0LTFXMXhLbGFYS3RWY2l6bXhEdEgwczYyQm9scFVNc3BZdV93SDlyWDZDRkg3MXZxTjFRZVNmSVMtNEZCSjZyM2IwaU1fb08wQXJrUnlINE42UXRieE9YRHpDTHFsQQ?oc=5",
+      "source": "Por Dentro de Tudo",
+      "published": "2026-09-20",
+      "pollster": "Datafolha",
+      "key": "42ef735ff3c944252133"
+    },
     {
       "election": "president-br",
       "title": "Datafolha: Lula tem 39% e Flávio Bolsonaro, 29% entre jovens; veja pesquisa por segmentos - Folha de S.Paulo",
