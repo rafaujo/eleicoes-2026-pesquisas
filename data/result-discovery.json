@@ -265,6 +265,7 @@
     "3b79f277f63f67fa8695",
     "3b9f2210bfa611722a87",
     "3c1457f674966c810f4a",
+    "3c67c30ccb541a646f3f",
     "3cbe52d0658d59f233c7",
     "3cc87a6d847ec84c47cf",
     "3ce6ee0d32c2ce0e8943",
@@ -407,6 +408,7 @@
     "648a2d4bda3ed572bc8a",
     "64a60ee5e8f9bd44be1c",
     "64b603c75db2a3f11d37",
+    "64c53b120b541b612ccd",
     "653faf359e25f05ec131",
     "65488cf29f83601d7f2f",
     "6557dc9451ee4a94efd3",
@@ -591,6 +593,7 @@
     "92d261a1e55bc2582794",
     "92faf4aa62a15eac6a2a",
     "93271eee5f89268d7a39",
+    "93a34ce07e9c76e9a2c7",
     "93afc7d015ac8d798804",
     "93dafc58b1ff6db85803",
     "94091ffcf09f791d976f",
@@ -706,6 +709,7 @@
     "ab0869de39831e2fa430",
     "ab5431f519044bae5c8d",
     "ab6d67784e7fc7fb3524",
+    "aba998cfa61ce4ea1316",
     "abc920a168d4d5c34aab",
     "abe2046677064c9fe8f1",
     "ac017206c2e4c2fdfc95",
@@ -1160,12 +1164,12 @@
     },
     {
       "election": "governor-mg",
-      "title": "Datafolha: Cleitinho sobe a 37%, abre 24 pontos e coloca vitória no 1º turno no radar; em eventual 2º turno, vence Patrus e Kalil - DiviNews",
+      "title": "Datafolha: Cleitinho sobe a 37%, abre 24 pontos e coloca vitória no 1º turno no radar; em eventual 2º turno, vence Patrus e Kalil - divinews.com",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOajVHM2s3cENTekZGTDNLVzFrTzFLODUtSXh4WnVqaFRKa05jbTFqS0FVV0txbGtwcVBRbTRuaE1yMVJSazlVcjZvTE42Sm9HRlZ1U0VVUHc2U1A1eXlyYzYyQVlORmlQNDdSeUp2MzJGZzdxYVhiV2NTYllaVk5CRGh4VkpvTGtHdWdQZlVqM1FYa09ZS2ZLcmZ1aUU3bm9SVV85YnByN2VJMDBzamRwdTVPcEpxQVRpdUFYQXllOEJBODladUlXWTAwOEliZXZJQjdlQVU3XzBxVkZOZmg1YWVnb1JRUUx3cDBwa2N3?oc=5",
-      "source": "DiviNews",
+      "source": "divinews.com",
       "published": "2026-09-14",
       "pollster": "Datafolha",
-      "key": "c14af471706a6fc78a30"
+      "key": "64c53b120b541b612ccd"
     },
     {
       "election": "president-br",
