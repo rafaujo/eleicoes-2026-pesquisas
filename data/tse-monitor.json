@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-21 16:27:46",
+  "sourceGeneratedAt": "2026-09-21 22:34:23",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -318,6 +318,7 @@
     "BR044202026",
     "BR044422026",
     "BR044622026",
+    "BR044672026",
     "BR044682026",
     "BR044882026",
     "BR044962026",
@@ -939,6 +940,17 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR044672026": {
+      "protocol": "BR044672026",
+      "registeredAt": "2026-09-20",
+      "fieldStart": "2026-09-20",
+      "fieldEnd": "2026-09-25",
+      "disclosureDate": "2026-09-26",
+      "sample": 40500,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": []
+    },
     "BR047392026": {
       "protocol": "BR047392026",
       "registeredAt": "2026-09-17",
@@ -1109,17 +1121,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "BR004852026": {
-      "protocol": "BR004852026",
-      "fieldStart": "2026-09-18",
-      "fieldEnd": "2026-09-20",
-      "disclosureDate": "2026-09-21",
-      "sample": 2000,
-      "company": "Nexus",
-      "tradeName": "Nexus",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR006202026": {
       "protocol": "BR006202026",
       "fieldStart": "2026-09-21",
@@ -1150,6 +1151,17 @@
       "sample": 2000,
       "company": "American Analytics",
       "tradeName": "American Analytics",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR044672026": {
+      "protocol": "BR044672026",
+      "fieldStart": "2026-09-20",
+      "fieldEnd": "2026-09-25",
+      "disclosureDate": "2026-09-26",
+      "sample": 40500,
+      "company": "Veritá",
+      "tradeName": "Veritá",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

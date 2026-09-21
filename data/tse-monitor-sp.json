@@ -109,6 +109,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP057692026": {
+      "protocol": "SP057692026",
+      "fieldStart": "2026-09-22",
+      "fieldEnd": "2026-09-25",
+      "disclosureDate": "2026-09-26",
+      "sample": 400,
+      "company": "Olhar Publico Pesquisas de Opiniao",
+      "tradeName": "Olhar Publico Pesquisas de Opiniao",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP074952026": {
       "protocol": "SP074952026",
       "fieldStart": "2026-09-16",
@@ -139,6 +150,17 @@
       "sample": 1000,
       "company": "Scany Pesquisa",
       "tradeName": "Scany Pesquisa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP099672026": {
+      "protocol": "SP099672026",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-25",
+      "disclosureDate": "2026-09-26",
+      "sample": 3025,
+      "company": "Veritá",
+      "tradeName": "Veritá",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
