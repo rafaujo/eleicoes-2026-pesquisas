@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-22 04:50:39",
+  "sourceGeneratedAt": "2026-09-22 14:50:23",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -971,17 +971,6 @@
       "sample": 2000,
       "company": "100% CIDADES PARTICIPACOES LTDA",
       "tradeName": "100 CIDADES",
-      "contractors": []
-    },
-    "BR060042026": {
-      "protocol": "BR060042026",
-      "registeredAt": "2026-09-15",
-      "fieldStart": "2026-09-17",
-      "fieldEnd": "2026-09-20",
-      "disclosureDate": "2026-09-21",
-      "sample": 2004,
-      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
-      "tradeName": "",
       "contractors": []
     },
     "BR060542026": {
