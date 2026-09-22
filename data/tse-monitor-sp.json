@@ -98,6 +98,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP046292026": {
+      "protocol": "SP046292026",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-22",
+      "disclosureDate": "2026-09-27",
+      "sample": 1200,
+      "company": "A. R. Publicidade e Pesquisa",
+      "tradeName": "A. R. Publicidade e Pesquisa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP057692026": {
       "protocol": "SP057692026",
       "fieldStart": "2026-09-22",
@@ -106,6 +117,17 @@
       "sample": 400,
       "company": "Olhar Publico Pesquisas de Opiniao",
       "tradeName": "Olhar Publico Pesquisas de Opiniao",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP063402026": {
+      "protocol": "SP063402026",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-27",
+      "sample": 700,
+      "company": "Asn Pesquisas Publicas",
+      "tradeName": "Asn Pesquisas Publicas",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

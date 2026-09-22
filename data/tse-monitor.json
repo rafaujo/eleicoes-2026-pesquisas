@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-22 14:50:23",
+  "sourceGeneratedAt": "2026-09-22 18:51:52",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -277,6 +277,7 @@
     "BR038502026",
     "BR038572026",
     "BR039212026",
+    "BR039292026",
     "BR039652026",
     "BR039692026",
     "BR040062026",
@@ -441,6 +442,7 @@
     "BR063452026",
     "BR063602026",
     "BR063662026",
+    "BR063892026",
     "BR064282026",
     "BR064722026",
     "BR064812026",
@@ -621,6 +623,7 @@
     "BR089772026",
     "BR090112026",
     "BR090222026",
+    "BR090272026",
     "BR090282026",
     "BR090442026",
     "BR090482026",
@@ -896,6 +899,17 @@
       "tradeName": "",
       "contractors": []
     },
+    "BR039292026": {
+      "protocol": "BR039292026",
+      "registeredAt": "2026-09-21",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-27",
+      "sample": 2400,
+      "company": "GERP MERCADOLOGIA LTDA",
+      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
+      "contractors": []
+    },
     "BR040762026": {
       "protocol": "BR040762026",
       "registeredAt": "2026-09-08",
@@ -1006,6 +1020,17 @@
       "tradeName": "ATLASINTEL",
       "contractors": []
     },
+    "BR063892026": {
+      "protocol": "BR063892026",
+      "registeredAt": "2026-09-21",
+      "fieldStart": "2026-09-22",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-27",
+      "sample": 2000,
+      "company": "INSTITUTO GAZETA LTDA",
+      "tradeName": "IGAPE- INSTITUTO GAZETA DE PEQUISAS",
+      "contractors": []
+    },
     "BR065712026": {
       "protocol": "BR065712026",
       "registeredAt": "2026-09-18",
@@ -1085,6 +1110,17 @@
       "tradeName": "L3 SISTEMAS E CONSULTORIA",
       "contractors": []
     },
+    "BR090272026": {
+      "protocol": "BR090272026",
+      "registeredAt": "2026-09-21",
+      "fieldStart": "2026-09-17",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-27",
+      "sample": 1200,
+      "company": "IPAT - INSTITUTO DE PESQUISAS A TRIBUNA LTDA",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR095872026": {
       "protocol": "BR095872026",
       "registeredAt": "2026-09-18",
@@ -1129,6 +1165,28 @@
       "sample": 2700,
       "company": "Alfa Inteligência",
       "tradeName": "Alfa Inteligência",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR036252026": {
+      "protocol": "BR036252026",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-27",
+      "sample": 468,
+      "company": "F5 Atualiza Dados",
+      "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR039292026": {
+      "protocol": "BR039292026",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-27",
+      "sample": 2400,
+      "company": "Gerp",
+      "tradeName": "Gerp",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -1184,6 +1242,17 @@
       "sample": 400,
       "company": "Resultado Pesquisa e Assessoria Ltda - ME",
       "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR099342026": {
+      "protocol": "BR099342026",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-27",
+      "sample": 595,
+      "company": "F5 Atualiza Dados",
+      "tradeName": "F5 Atualiza Dados",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }

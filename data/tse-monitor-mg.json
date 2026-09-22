@@ -131,6 +131,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG082562026": {
+      "protocol": "MG082562026",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-27",
+      "sample": 468,
+      "company": "F5 Atualiza Dados",
+      "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG083202026": {
       "protocol": "MG083202026",
       "fieldStart": "2026-09-17",
@@ -139,6 +150,28 @@
       "sample": 782,
       "company": "F5 Atualiza Dados",
       "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG087782026": {
+      "protocol": "MG087782026",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-27",
+      "sample": 595,
+      "company": "F5 Atualiza Dados",
+      "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG088682026": {
+      "protocol": "MG088682026",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-25",
+      "disclosureDate": "2026-09-27",
+      "sample": 3000,
+      "company": "Insight Brasil",
+      "tradeName": "Insight Brasil",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
