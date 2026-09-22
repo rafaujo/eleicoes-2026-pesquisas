@@ -65,17 +65,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "SP026762026": {
-      "protocol": "SP026762026",
-      "fieldStart": "2026-09-15",
-      "fieldEnd": "2026-09-20",
-      "disclosureDate": "2026-09-21",
-      "sample": 1800,
-      "company": "Atlasintel",
-      "tradeName": "Atlasintel",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "SP030572026": {
       "protocol": "SP030572026",
       "fieldStart": "2026-09-19",
@@ -117,17 +106,6 @@
       "sample": 400,
       "company": "Olhar Publico Pesquisas de Opiniao",
       "tradeName": "Olhar Publico Pesquisas de Opiniao",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "SP074952026": {
-      "protocol": "SP074952026",
-      "fieldStart": "2026-09-16",
-      "fieldEnd": "2026-09-19",
-      "disclosureDate": "2026-09-21",
-      "sample": 2000,
-      "company": "Real Time Big Data",
-      "tradeName": "Real Time Big Data",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

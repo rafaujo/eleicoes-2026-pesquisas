@@ -161,6 +161,82 @@
   ],
   "polls": [
     {
+      "id": 64,
+      "pollster": "Quaest",
+      "publication": "g1.globo.com",
+      "protocol": "BR060042026",
+      "published": "2026-09-21",
+      "start": "2026-09-17",
+      "end": "2026-09-20",
+      "field": "17–20 set",
+      "sample": 2004,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/21/quaest-presidente-2o-turno-21-setembro.ghtml",
+      "resultSourceLabel": "g1.globo.com — resultado publicado",
+      "scenarios": {
+        "first-with-cury": {
+          "results": {
+            "lula": 37,
+            "flavio": 33,
+            "cury": 6,
+            "caiado": 4,
+            "zema": 1,
+            "renan": 3
+          },
+          "undecided": 15,
+          "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/21/quaest-presidente-2o-turno-21-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 41,
+            "caiado": 39
+          },
+          "undecided": 20,
+          "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/21/quaest-presidente-2o-turno-21-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-lula-cury": {
+          "results": {
+            "lula": 39,
+            "cury": 35
+          },
+          "undecided": 26,
+          "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/21/quaest-presidente-2o-turno-21-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 41,
+            "flavio": 42
+          },
+          "undecided": 17,
+          "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/21/quaest-presidente-2o-turno-21-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 41,
+            "renan": 38
+          },
+          "undecided": 21,
+          "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/21/quaest-presidente-2o-turno-21-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 46,
+            "zema": 32
+          },
+          "undecided": 22,
+          "resultSource": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/09/21/quaest-presidente-2o-turno-21-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 61,
       "pollster": "Gerp",
       "publication": "gazetadopovo.com.br",

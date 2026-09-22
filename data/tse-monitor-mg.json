@@ -87,17 +87,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "MG032902026": {
-      "protocol": "MG032902026",
-      "fieldStart": "2026-09-15",
-      "fieldEnd": "2026-09-20",
-      "disclosureDate": "2026-09-21",
-      "sample": 1800,
-      "company": "Atlasintel",
-      "tradeName": "Atlasintel",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "MG042972026": {
       "protocol": "MG042972026",
       "fieldStart": "2026-09-16",
@@ -117,28 +106,6 @@
       "sample": 500,
       "company": "Inpac",
       "tradeName": "Inpac",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "MG073312026": {
-      "protocol": "MG073312026",
-      "fieldStart": "2026-09-16",
-      "fieldEnd": "2026-09-19",
-      "disclosureDate": "2026-09-21",
-      "sample": 2000,
-      "company": "Real Time Big Data",
-      "tradeName": "Real Time Big Data",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "MG073372026": {
-      "protocol": "MG073372026",
-      "fieldStart": "2026-09-17",
-      "fieldEnd": "2026-09-20",
-      "disclosureDate": "2026-09-21",
-      "sample": 1197,
-      "company": "Instituto Ver Pesquisa e Comunicacao Ltda",
-      "tradeName": "Instituto Ver Pesquisa e Comunicacao Ltda",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
