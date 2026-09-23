@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-23 14:59:45",
+  "sourceGeneratedAt": "2026-09-23 19:02:27",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -965,17 +965,6 @@
       "tradeName": "VERITA",
       "contractors": []
     },
-    "BR047392026": {
-      "protocol": "BR047392026",
-      "registeredAt": "2026-09-17",
-      "fieldStart": "2026-09-17",
-      "fieldEnd": "2026-09-22",
-      "disclosureDate": "2026-09-23",
-      "sample": 5000,
-      "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
-      "tradeName": "ATLASINTEL",
-      "contractors": []
-    },
     "BR052682026": {
       "protocol": "BR052682026",
       "registeredAt": "2026-09-18",
@@ -1223,6 +1212,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "BR056422026": {
+      "protocol": "BR056422026",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-28",
+      "sample": 777,
+      "company": "F5 Atualiza Dados",
+      "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR059342026": {
       "protocol": "BR059342026",
       "fieldStart": "2026-09-21",
@@ -1231,6 +1231,17 @@
       "sample": 400,
       "company": "Resultado Pesquisa e Assessoria Ltda - ME",
       "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR075572026": {
+      "protocol": "BR075572026",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-28",
+      "sample": 2000,
+      "company": "Nexus",
+      "tradeName": "Nexus",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

@@ -87,6 +87,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG033512026": {
+      "protocol": "MG033512026",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-28",
+      "sample": 2000,
+      "company": "Real Time Big Data",
+      "tradeName": "Real Time Big Data",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG042942026": {
+      "protocol": "MG042942026",
+      "fieldStart": "2026-09-22",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-28",
+      "sample": 1800,
+      "company": "Atlasintel",
+      "tradeName": "Atlasintel",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG042972026": {
       "protocol": "MG042972026",
       "fieldStart": "2026-09-16",
@@ -98,6 +120,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG045422026": {
+      "protocol": "MG045422026",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-28",
+      "sample": 300,
+      "company": "Instituto de Pesquisa Soberano",
+      "tradeName": "Instituto de Pesquisa Soberano",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG049252026": {
+      "protocol": "MG049252026",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-28",
+      "sample": 1067,
+      "company": "IPSensus",
+      "tradeName": "IPSensus",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG059722026": {
       "protocol": "MG059722026",
       "fieldStart": "2026-09-26",
@@ -106,6 +150,17 @@
       "sample": 500,
       "company": "Inpac",
       "tradeName": "Inpac",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG065562026": {
+      "protocol": "MG065562026",
+      "fieldStart": "2026-09-24",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-28",
+      "sample": 401,
+      "company": "Viavox Consultoria Administrativa e Pesquisas de Opiniao Ltda",
+      "tradeName": "Viavox Consultoria Administrativa e Pesquisas de Opiniao Ltda",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

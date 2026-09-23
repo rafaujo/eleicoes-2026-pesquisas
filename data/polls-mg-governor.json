@@ -195,6 +195,88 @@
   ],
   "polls": [
     {
+      "id": 12,
+      "pollster": "AtlasIntel",
+      "publication": "cartacapital.com.br",
+      "protocol": "MG032902026",
+      "published": "2026-09-23",
+      "start": "2026-09-15",
+      "end": "2026-09-20",
+      "field": "15–20 set",
+      "sample": 1799,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.cartacapital.com.br/politica/pesquisa-atlasintel-cleitinho-e-o-favorito-para-o-governo-de-mg/",
+      "resultSourceLabel": "cartacapital.com.br — resultado publicado",
+      "scenarios": {
+        "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe": {
+          "results": {
+            "cleitinho": 39.3,
+            "patrus": 31,
+            "kalil": 8.3,
+            "gabriel": 2.7,
+            "mateus": 5.6,
+            "roscoe": 7.3,
+            "ben": 1.4
+          },
+          "undecided": 4.3,
+          "resultSource": "https://www.cartacapital.com.br/politica/pesquisa-atlasintel-cleitinho-e-o-favorito-para-o-governo-de-mg/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "runoff-cleitinho-kalil": {
+          "results": {
+            "cleitinho": 51.2,
+            "kalil": 36.8
+          },
+          "undecided": 12.1,
+          "resultSource": "https://www.cartacapital.com.br/politica/pesquisa-atlasintel-cleitinho-e-o-favorito-para-o-governo-de-mg/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "runoff-cleitinho-patrus": {
+          "results": {
+            "cleitinho": 53.1,
+            "patrus": 41.1
+          },
+          "undecided": 5.8,
+          "resultSource": "https://www.cartacapital.com.br/politica/pesquisa-atlasintel-cleitinho-e-o-favorito-para-o-governo-de-mg/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "pollster": "F5",
+      "publication": "em.com.br",
+      "protocol": "MG078982026",
+      "published": "2026-09-22",
+      "start": "2026-09-15",
+      "end": "2026-09-18",
+      "field": "15–18 set",
+      "sample": 1560,
+      "margin": 2.5,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.em.com.br/politica/2026/09/7506058-pesquisa-f5-cleitinho-tem-33-simoes-14-patrus-11-kalil-10.html",
+      "resultSourceLabel": "em.com.br — resultado publicado",
+      "scenarios": {
+        "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe": {
+          "results": {
+            "cleitinho": 33,
+            "patrus": 11,
+            "kalil": 10,
+            "gabriel": 2,
+            "mateus": 14,
+            "roscoe": 6,
+            "ben": 1
+          },
+          "undecided": 23,
+          "resultSource": "https://www.em.com.br/politica/2026/09/7506058-pesquisa-f5-cleitinho-tem-33-simoes-14-patrus-11-kalil-10.html",
+          "resultSourceLabel": "em.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 11,
       "pollster": "Veritá",
       "publication": "cnnbrasil.com.br",
