@@ -195,6 +195,38 @@
   ],
   "polls": [
     {
+      "id": 11,
+      "pollster": "Veritá",
+      "publication": "cnnbrasil.com.br",
+      "protocol": "MG059192026",
+      "published": "2026-09-18",
+      "start": "2026-09-12",
+      "end": "2026-09-17",
+      "field": "12–17 set",
+      "sample": 2030,
+      "margin": 2.5,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.cnnbrasil.com.br/eleicoes/verita-cleitinho-tem-474-no-1o-turno-em-mg-patrus-212/#goog_rewarded",
+      "resultSourceLabel": "cnnbrasil.com.br — resultado publicado",
+      "scenarios": {
+        "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe": {
+          "results": {
+            "cleitinho": 47.4,
+            "patrus": 21.2,
+            "kalil": 8.2,
+            "gabriel": 1.3,
+            "mateus": 3.1,
+            "roscoe": 8.4,
+            "ben": 1.7
+          },
+          "undecided": 8.8,
+          "resultSource": "https://www.cnnbrasil.com.br/eleicoes/verita-cleitinho-tem-474-no-1o-turno-em-mg-patrus-212/#goog_rewarded",
+          "resultSourceLabel": "cnnbrasil.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 10,
       "pollster": "F5",
       "publication": "jmonline.com.br",

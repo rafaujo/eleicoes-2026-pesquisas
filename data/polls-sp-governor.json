@@ -105,9 +105,91 @@
         "tarcisio",
         "haddad"
       ]
+    },
+    {
+      "id": "first-auto-haddad-izadora-machado-tarcisio-vera-vivian",
+      "round": 1,
+      "label": "Lista com 6 nomes",
+      "comparisonGroup": "first-round",
+      "comparisonLabel": "Primeiro turno — listas integradas",
+      "candidates": [
+        "tarcisio",
+        "haddad",
+        "vera",
+        "machado",
+        "vivian",
+        "izadora"
+      ]
     }
   ],
   "polls": [
+    {
+      "id": 19,
+      "pollster": "Paraná Pesquisas",
+      "publication": "cartacapital.com.br",
+      "protocol": "SP030572026",
+      "published": "2026-09-22",
+      "start": "2026-09-19",
+      "end": "2026-09-21",
+      "field": "19–21 set",
+      "sample": 1600,
+      "margin": 2.5,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.cartacapital.com.br/politica/parana-pesquisas-tarcisio-tem-50-e-haddad-33-em-sp/",
+      "resultSourceLabel": "cartacapital.com.br — resultado publicado",
+      "scenarios": {
+        "first-auto-haddad-izadora-machado-tarcisio-vera-vivian": {
+          "results": {
+            "tarcisio": 50.7,
+            "haddad": 33.3,
+            "vera": 1.8,
+            "machado": 1,
+            "vivian": 0.9,
+            "izadora": 0.6
+          },
+          "undecided": 11.8,
+          "resultSource": "https://www.cartacapital.com.br/politica/parana-pesquisas-tarcisio-tem-50-e-haddad-33-em-sp/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 54,
+            "haddad": 36.4
+          },
+          "undecided": 9.6,
+          "resultSource": "https://www.cartacapital.com.br/politica/parana-pesquisas-tarcisio-tem-50-e-haddad-33-em-sp/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 20,
+      "pollster": "Real Time Big Data",
+      "publication": "static.poder360.com.br",
+      "protocol": "SP074952026",
+      "published": "2026-09-20",
+      "start": "2026-09-19",
+      "end": "2026-09-19",
+      "field": "19–19 set",
+      "sample": 2000,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://static.poder360.com.br/uploads/2026/09/real-time-big-data-SP-21set2026.pdf",
+      "resultSourceLabel": "static.poder360.com.br — resultado publicado",
+      "scenarios": {
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 57,
+            "haddad": 39
+          },
+          "undecided": 4,
+          "resultSource": "https://static.poder360.com.br/uploads/2026/09/real-time-big-data-SP-21set2026.pdf",
+          "resultSourceLabel": "static.poder360.com.br — resultado publicado"
+        }
+      }
+    },
     {
       "id": 18,
       "pollster": "Real Time Big Data",
