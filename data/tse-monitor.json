@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-24 15:03:08",
+  "sourceGeneratedAt": "2026-09-24 19:07:15",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -33,10 +33,12 @@
     "BR004852026",
     "BR005052026",
     "BR005072026",
+    "BR005092026",
     "BR005202026",
     "BR005232026",
     "BR005292026",
     "BR005302026",
+    "BR005312026",
     "BR005352026",
     "BR005472026",
     "BR005482026",
@@ -66,6 +68,7 @@
     "BR008732026",
     "BR008782026",
     "BR008792026",
+    "BR008952026",
     "BR009192026",
     "BR009352026",
     "BR009462026",
@@ -112,6 +115,7 @@
     "BR015242026",
     "BR015532026",
     "BR015642026",
+    "BR015742026",
     "BR015762026",
     "BR016262026",
     "BR016372026",
@@ -198,6 +202,7 @@
     "BR029182026",
     "BR029212026",
     "BR029442026",
+    "BR029902026",
     "BR029952026",
     "BR029972026",
     "BR030032026",
@@ -215,6 +220,7 @@
     "BR031212026",
     "BR031352026",
     "BR031382026",
+    "BR031422026",
     "BR031452026",
     "BR031482026",
     "BR031652026",
@@ -263,6 +269,7 @@
     "BR036782026",
     "BR037152026",
     "BR037422026",
+    "BR037622026",
     "BR037682026",
     "BR037702026",
     "BR037722026",
@@ -313,6 +320,7 @@
     "BR043282026",
     "BR043672026",
     "BR043752026",
+    "BR043912026",
     "BR043962026",
     "BR044092026",
     "BR044192026",
@@ -321,6 +329,7 @@
     "BR044622026",
     "BR044672026",
     "BR044682026",
+    "BR044822026",
     "BR044882026",
     "BR044962026",
     "BR045192026",
@@ -406,6 +415,7 @@
     "BR058302026",
     "BR058562026",
     "BR058642026",
+    "BR058692026",
     "BR058802026",
     "BR058882026",
     "BR059082026",
@@ -448,6 +458,7 @@
     "BR064812026",
     "BR064932026",
     "BR065102026",
+    "BR065202026",
     "BR065292026",
     "BR065402026",
     "BR065502026",
@@ -519,6 +530,7 @@
     "BR075192026",
     "BR075352026",
     "BR075552026",
+    "BR075572026",
     "BR075612026",
     "BR075862026",
     "BR076002026",
@@ -567,6 +579,7 @@
     "BR080932026",
     "BR081092026",
     "BR081332026",
+    "BR081682026",
     "BR081812026",
     "BR081862026",
     "BR082162026",
@@ -632,6 +645,7 @@
     "BR091102026",
     "BR091232026",
     "BR091712026",
+    "BR091892026",
     "BR092092026",
     "BR092282026",
     "BR092472026",
@@ -701,6 +715,17 @@
       "tradeName": "NEXUS",
       "contractors": []
     },
+    "BR005092026": {
+      "protocol": "BR005092026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-09-30",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-09-29",
+      "sample": 2400,
+      "company": "GERP MERCADOLOGIA LTDA",
+      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
+      "contractors": []
+    },
     "BR005302026": {
       "protocol": "BR005302026",
       "registeredAt": "2026-08-25",
@@ -709,6 +734,17 @@
       "disclosureDate": "2026-08-31",
       "sample": 1800,
       "company": "INSTITUTO DE PESQUISAS PERFIL LTDA",
+      "tradeName": "",
+      "contractors": []
+    },
+    "BR005312026": {
+      "protocol": "BR005312026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 1104,
+      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
       "tradeName": "",
       "contractors": []
     },
@@ -756,6 +792,17 @@
       "tradeName": "PALVER",
       "contractors": []
     },
+    "BR008952026": {
+      "protocol": "BR008952026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 2100,
+      "company": "INSTITUTO VOX BRASIL OPINIAO E PESQUISAS LTDA",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR009192026": {
       "protocol": "BR009192026",
       "registeredAt": "2026-09-04",
@@ -776,6 +823,17 @@
       "sample": 2000,
       "company": "AMERICAN ANALYTICS DO BRASIL CONSULTORIA LTDA",
       "tradeName": "AMERICAN ANALYTICS",
+      "contractors": []
+    },
+    "BR015742026": {
+      "protocol": "BR015742026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 600,
+      "company": "NELSON RANNIERI TIRONE LTDA",
+      "tradeName": "STATS - PESQUISA E GESTAO",
       "contractors": []
     },
     "BR017392026": {
@@ -866,6 +924,28 @@
       "tradeName": "SECTRAL NEGOCIOS",
       "contractors": []
     },
+    "BR029902026": {
+      "protocol": "BR029902026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-09-24",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 5000,
+      "company": "PALVER CONSULTORIA E DESENVOLVIMENTO TECNOLOGICO LTDA.",
+      "tradeName": "PALVER",
+      "contractors": []
+    },
+    "BR031422026": {
+      "protocol": "BR031422026",
+      "registeredAt": "2026-09-24",
+      "fieldStart": "2026-09-12",
+      "fieldEnd": "2026-09-18",
+      "disclosureDate": "2026-09-30",
+      "sample": 2003,
+      "company": "E P P EMPRESA DE PESQUISA E CONSULTORIA LTDA",
+      "tradeName": "E P P",
+      "contractors": []
+    },
     "BR034342026": {
       "protocol": "BR034342026",
       "registeredAt": "2026-08-22",
@@ -896,6 +976,17 @@
       "disclosureDate": "2026-09-23",
       "sample": 1104,
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
+    "BR037622026": {
+      "protocol": "BR037622026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-29",
+      "sample": 800,
+      "company": "ENFOQUE ASSESSORIA DE COMUNICACAO INTEGRADA LTDA - ME",
       "tradeName": "",
       "contractors": []
     },
@@ -943,6 +1034,17 @@
       "tradeName": "APURA PARANA",
       "contractors": []
     },
+    "BR043912026": {
+      "protocol": "BR043912026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 5000,
+      "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
+      "tradeName": "ATLASINTEL",
+      "contractors": []
+    },
     "BR044422026": {
       "protocol": "BR044422026",
       "registeredAt": "2026-09-02",
@@ -965,6 +1067,17 @@
       "tradeName": "VERITA",
       "contractors": []
     },
+    "BR044822026": {
+      "protocol": "BR044822026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-09-24",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 1600,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": []
+    },
     "BR052682026": {
       "protocol": "BR052682026",
       "registeredAt": "2026-09-18",
@@ -974,6 +1087,17 @@
       "sample": 2000,
       "company": "100% CIDADES PARTICIPACOES LTDA",
       "tradeName": "100 CIDADES",
+      "contractors": []
+    },
+    "BR058692026": {
+      "protocol": "BR058692026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-09-03",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 6000,
+      "company": "JOTA JORNALISMO S/A",
+      "tradeName": "JOTA JORNALISMO",
       "contractors": []
     },
     "BR060542026": {
@@ -1020,6 +1144,17 @@
       "tradeName": "IGAPE- INSTITUTO GAZETA DE PEQUISAS",
       "contractors": []
     },
+    "BR065202026": {
+      "protocol": "BR065202026",
+      "registeredAt": "2026-09-22",
+      "fieldStart": "2026-09-24",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-28",
+      "sample": 2004,
+      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR065712026": {
       "protocol": "BR065712026",
       "registeredAt": "2026-09-18",
@@ -1029,6 +1164,17 @@
       "sample": 1100,
       "company": "SECTRAL SERVICOS E COMERCIO EM GERAL LTDA",
       "tradeName": "SECTRAL NEGOCIOS",
+      "contractors": []
+    },
+    "BR075572026": {
+      "protocol": "BR075572026",
+      "registeredAt": "2026-09-22",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-28",
+      "sample": 2000,
+      "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
+      "tradeName": "NEXUS",
       "contractors": []
     },
     "BR078062026": {
@@ -1062,6 +1208,17 @@
       "sample": 40500,
       "company": "INSTITUTO VERITA LTDA",
       "tradeName": "VERITA",
+      "contractors": []
+    },
+    "BR081682026": {
+      "protocol": "BR081682026",
+      "registeredAt": "2026-09-23",
+      "fieldStart": "2026-10-01",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-09-29",
+      "sample": 2400,
+      "company": "GERP MERCADOLOGIA LTDA",
+      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
       "contractors": []
     },
     "BR086912026": {
@@ -1107,6 +1264,17 @@
       "disclosureDate": "2026-09-27",
       "sample": 1200,
       "company": "IPAT - INSTITUTO DE PESQUISAS A TRIBUNA LTDA",
+      "tradeName": "",
+      "contractors": []
+    },
+    "BR091892026": {
+      "protocol": "BR091892026",
+      "registeredAt": "2026-09-22",
+      "fieldStart": "2026-09-24",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-28",
+      "sample": 401,
+      "company": "VIAVOX CONSULTORIA ADMINISTRATIVA E PESQUISAS DE OPINIAO LTDA",
       "tradeName": "",
       "contractors": []
     },
