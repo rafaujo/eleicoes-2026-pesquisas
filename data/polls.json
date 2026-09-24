@@ -161,6 +161,194 @@
   ],
   "polls": [
     {
+      "id": 66,
+      "pollster": "Alfa Inteligência",
+      "publication": "cartacapital.com.br",
+      "protocol": "BR025122026",
+      "published": "2026-09-24",
+      "start": "2026-09-18",
+      "end": "2026-09-23",
+      "field": "18–23 set",
+      "sample": 2700,
+      "margin": 1.8,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.cartacapital.com.br/politica/lula-lidera-em-1o-turno-e-empata-com-flavio-bolsonaro-no-2o-indica-pesquisa-alfa/",
+      "resultSourceLabel": "cartacapital.com.br — resultado publicado",
+      "scenarios": {
+        "first-with-cury": {
+          "results": {
+            "lula": 40,
+            "flavio": 33,
+            "cury": 6,
+            "caiado": 5,
+            "zema": 1,
+            "renan": 3
+          },
+          "undecided": 11,
+          "resultSource": "https://www.cartacapital.com.br/politica/lula-lidera-em-1o-turno-e-empata-com-flavio-bolsonaro-no-2o-indica-pesquisa-alfa/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 43,
+            "caiado": 42
+          },
+          "undecided": 15,
+          "resultSource": "https://www.cartacapital.com.br/politica/lula-lidera-em-1o-turno-e-empata-com-flavio-bolsonaro-no-2o-indica-pesquisa-alfa/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "runoff-lula-cury": {
+          "results": {
+            "lula": 42,
+            "cury": 39
+          },
+          "undecided": 19,
+          "resultSource": "https://www.cartacapital.com.br/politica/lula-lidera-em-1o-turno-e-empata-com-flavio-bolsonaro-no-2o-indica-pesquisa-alfa/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 43,
+            "flavio": 43
+          },
+          "undecided": 14,
+          "resultSource": "https://www.cartacapital.com.br/politica/lula-lidera-em-1o-turno-e-empata-com-flavio-bolsonaro-no-2o-indica-pesquisa-alfa/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 43,
+            "renan": 37
+          },
+          "undecided": 20,
+          "resultSource": "https://www.cartacapital.com.br/politica/lula-lidera-em-1o-turno-e-empata-com-flavio-bolsonaro-no-2o-indica-pesquisa-alfa/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 46,
+            "zema": 39
+          },
+          "undecided": 15,
+          "resultSource": "https://www.cartacapital.com.br/politica/lula-lidera-em-1o-turno-e-empata-com-flavio-bolsonaro-no-2o-indica-pesquisa-alfa/",
+          "resultSourceLabel": "cartacapital.com.br — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 67,
+      "pollster": "PoderData",
+      "publication": "poder360.com.br",
+      "protocol": "BR017392026",
+      "published": "2026-09-24",
+      "start": "2026-09-20",
+      "end": "2026-09-23",
+      "field": "20–23 set",
+      "sample": 3000,
+      "margin": 1.8,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.poder360.com.br/poderdata/flavio-tem-46-e-lula-45-no-2o-turno-diz-poderdata-aya/",
+      "resultSourceLabel": "poder360.com.br — resultado publicado",
+      "scenarios": {
+        "runoff-lula-cury": {
+          "results": {
+            "lula": 42,
+            "cury": 45
+          },
+          "undecided": 13,
+          "resultSource": "https://www.poder360.com.br/poderdata/flavio-tem-46-e-lula-45-no-2o-turno-diz-poderdata-aya/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 45,
+            "flavio": 46
+          },
+          "undecided": 9,
+          "resultSource": "https://www.poder360.com.br/poderdata/flavio-tem-46-e-lula-45-no-2o-turno-diz-poderdata-aya/",
+          "resultSourceLabel": "poder360.com.br — resultado publicado"
+        }
+      }
+    },
+    {
+      "id": 68,
+      "pollster": "Real Time Big Data",
+      "publication": "gazetadopovo.com.br",
+      "protocol": "BR042022026",
+      "published": "2026-09-24",
+      "start": "2026-09-19",
+      "end": "2026-09-23",
+      "field": "19–23 set",
+      "sample": 2000,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026-2/",
+      "resultSourceLabel": "gazetadopovo.com.br — resultado publicado",
+      "scenarios": {
+        "first-with-cury": {
+          "results": {
+            "lula": 41,
+            "flavio": 37,
+            "cury": 6,
+            "caiado": 2,
+            "zema": 1,
+            "renan": 6
+          },
+          "undecided": 6,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026-2/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-caiado": {
+          "results": {
+            "lula": 44,
+            "caiado": 44
+          },
+          "undecided": 12,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026-2/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-cury": {
+          "results": {
+            "lula": 44,
+            "cury": 43
+          },
+          "undecided": 13,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026-2/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-flavio": {
+          "results": {
+            "lula": 44,
+            "flavio": 45
+          },
+          "undecided": 11,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026-2/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-renan": {
+          "results": {
+            "lula": 44,
+            "renan": 38
+          },
+          "undecided": 18,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026-2/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        },
+        "runoff-lula-zema": {
+          "results": {
+            "lula": 45,
+            "zema": 39
+          },
+          "undecided": 16,
+          "resultSource": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-setembro-2026-2/",
+          "resultSourceLabel": "gazetadopovo.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 65,
       "pollster": "AtlasIntel",
       "publication": "gazetadopovo.com.br",

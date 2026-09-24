@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-24 19:07:15",
+  "sourceGeneratedAt": "2026-09-24 22:21:39",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -1303,6 +1303,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "BR005092026": {
+      "protocol": "BR005092026",
+      "fieldStart": "2026-09-30",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-09-29",
+      "sample": 2400,
+      "company": "Gerp",
+      "tradeName": "Gerp",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR006202026": {
       "protocol": "BR006202026",
       "fieldStart": "2026-09-21",
@@ -1314,14 +1325,14 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "BR025122026": {
-      "protocol": "BR025122026",
-      "fieldStart": "2026-09-18",
-      "fieldEnd": "2026-09-23",
-      "disclosureDate": "2026-09-24",
-      "sample": 2700,
-      "company": "Alfa Inteligência",
-      "tradeName": "Alfa Inteligência",
+    "BR008952026": {
+      "protocol": "BR008952026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 2100,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -1391,6 +1402,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "BR058392026": {
+      "protocol": "BR058392026",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-29",
+      "sample": 775,
+      "company": "F5 Atualiza Dados",
+      "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR058692026": {
+      "protocol": "BR058692026",
+      "fieldStart": "2026-09-03",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 6000,
+      "company": "JOTA",
+      "tradeName": "JOTA",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR059342026": {
       "protocol": "BR059342026",
       "fieldStart": "2026-09-21",
@@ -1410,6 +1443,17 @@
       "sample": 2000,
       "company": "Nexus",
       "tradeName": "Nexus",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR081682026": {
+      "protocol": "BR081682026",
+      "fieldStart": "2026-10-01",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-09-29",
+      "sample": 2400,
+      "company": "Gerp",
+      "tradeName": "Gerp",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

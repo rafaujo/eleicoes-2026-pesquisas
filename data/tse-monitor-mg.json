@@ -32,6 +32,17 @@
   "pending": {},
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "MG013022026": {
+      "protocol": "MG013022026",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-29",
+      "sample": 775,
+      "company": "F5 Atualiza Dados",
+      "tradeName": "F5 Atualiza Dados",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG015802026": {
       "protocol": "MG015802026",
       "fieldStart": "2026-09-21",
@@ -40,6 +51,28 @@
       "sample": 400,
       "company": "Resultado Pesquisa e Assessoria Ltda - ME",
       "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG018512026": {
+      "protocol": "MG018512026",
+      "fieldStart": "2026-09-24",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-29",
+      "sample": 1000,
+      "company": "DataTempo",
+      "tradeName": "DataTempo",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG020192026": {
+      "protocol": "MG020192026",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 1506,
+      "company": "Quaest",
+      "tradeName": "Quaest",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -87,6 +120,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG036882026": {
+      "protocol": "MG036882026",
+      "fieldStart": "2026-09-18",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-29",
+      "sample": 1120,
+      "company": "Promidia Pesquisas de Opiniao Publica",
+      "tradeName": "Promidia Pesquisas de Opiniao Publica",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG042942026": {
       "protocol": "MG042942026",
       "fieldStart": "2026-09-22",
@@ -109,11 +153,33 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "MG049252026": {
-      "protocol": "MG049252026",
+    "MG050322026": {
+      "protocol": "MG050322026",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-29",
+      "sample": 600,
+      "company": "Stats - Pesquisa e Gestao",
+      "tradeName": "Stats - Pesquisa e Gestao",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG051512026": {
+      "protocol": "MG051512026",
+      "fieldStart": "2026-09-20",
+      "fieldEnd": "2026-09-25",
+      "disclosureDate": "2026-09-30",
+      "sample": 1420,
+      "company": "Data Dados Pesquisa de Mercado",
+      "tradeName": "Data Dados Pesquisa de Mercado",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG059622026": {
+      "protocol": "MG059622026",
       "fieldStart": "2026-09-23",
       "fieldEnd": "2026-09-27",
-      "disclosureDate": "2026-09-28",
+      "disclosureDate": "2026-09-29",
       "sample": 1067,
       "company": "IPSensus",
       "tradeName": "IPSensus",
@@ -150,6 +216,17 @@
       "sample": 1204,
       "company": "Datafolha",
       "tradeName": "Datafolha",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG075972026": {
+      "protocol": "MG075972026",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-29",
+      "sample": 600,
+      "company": "Instituto Ver",
+      "tradeName": "Instituto Ver",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
