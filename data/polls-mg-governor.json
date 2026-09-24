@@ -195,6 +195,69 @@
   ],
   "polls": [
     {
+      "id": 14,
+      "pollster": "Quaest",
+      "publication": "g1.globo.com",
+      "protocol": "MG032762026",
+      "published": "2026-09-22",
+      "start": "2026-09-19",
+      "end": "2026-09-22",
+      "field": "19–22 set",
+      "sample": 1506,
+      "margin": 3,
+      "confidence": 95,
+      "method": "Presencial",
+      "resultSource": "https://g1.globo.com/mg/minas-gerais/eleicoes/2026/noticia/2026/09/23/quaest-mg-governador-23-setembro.ghtml",
+      "resultSourceLabel": "g1.globo.com — resultado publicado",
+      "scenarios": {
+        "first-main": {
+          "results": {
+            "cleitinho": 37,
+            "kalil": 8,
+            "patrus": 16,
+            "mateus": 7,
+            "gabriel": 2,
+            "roscoe": 5,
+            "tulio": 1,
+            "duda": 0,
+            "ben": 1,
+            "indira": 0,
+            "henrique": 0
+          },
+          "undecided": 23,
+          "resultSource": "https://g1.globo.com/mg/minas-gerais/eleicoes/2026/noticia/2026/09/23/quaest-mg-governador-23-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-cleitinho-kalil": {
+          "results": {
+            "cleitinho": 49,
+            "kalil": 26
+          },
+          "undecided": 25,
+          "resultSource": "https://g1.globo.com/mg/minas-gerais/eleicoes/2026/noticia/2026/09/23/quaest-mg-governador-23-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-cleitinho-mateus": {
+          "results": {
+            "cleitinho": 50,
+            "mateus": 18
+          },
+          "undecided": 32,
+          "resultSource": "https://g1.globo.com/mg/minas-gerais/eleicoes/2026/noticia/2026/09/23/quaest-mg-governador-23-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-cleitinho-patrus": {
+          "results": {
+            "cleitinho": 50,
+            "patrus": 26
+          },
+          "undecided": 24,
+          "resultSource": "https://g1.globo.com/mg/minas-gerais/eleicoes/2026/noticia/2026/09/23/quaest-mg-governador-23-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 12,
       "pollster": "AtlasIntel",
       "publication": "cartacapital.com.br",

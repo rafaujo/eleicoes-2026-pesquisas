@@ -124,6 +124,42 @@
   ],
   "polls": [
     {
+      "id": 22,
+      "pollster": "Quaest",
+      "publication": "g1.globo.com",
+      "protocol": "SP024562026",
+      "published": "2026-09-23",
+      "start": "2026-09-19",
+      "end": "2026-09-22",
+      "field": "19–22 set",
+      "sample": 1800,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Presencial",
+      "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/09/23/quaest-sp-governador-23-setembro.ghtml",
+      "resultSourceLabel": "g1.globo.com — resultado publicado",
+      "scenarios": {
+        "first-auto-haddad-tarcisio": {
+          "results": {
+            "tarcisio": 44,
+            "haddad": 27
+          },
+          "undecided": 25,
+          "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/09/23/quaest-sp-governador-23-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 49,
+            "haddad": 30
+          },
+          "undecided": 21,
+          "resultSource": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/09/23/quaest-sp-governador-23-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 19,
       "pollster": "Paraná Pesquisas",
       "publication": "cartacapital.com.br",
