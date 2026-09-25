@@ -91,6 +91,7 @@
     "132b301c991f4e58a32d",
     "133564a6bddde0adf637",
     "1340c401186bb0c09698",
+    "137216f04089ed9c587f",
     "13790234e8c1e09485b0",
     "13795bbaa10855752df5",
     "13a77e03944652e10db3",
@@ -350,6 +351,7 @@
     "41fd275181ca0e2cf6ab",
     "427cf2d620a22dae7879",
     "42a759bb87014c72519c",
+    "42ac7a9c693ab3804508",
     "42bfca01720c3ac2b712",
     "42e47835df3923dc1139",
     "42eac89d554fa2eea139",
@@ -362,6 +364,7 @@
     "447e18c5f45245c0b005",
     "459c940e7ff8ba2ec267",
     "45c5a15fbd5efc23792d",
+    "4654e09e00dfab7a3ae9",
     "4658528aa9fab8f6986a",
     "46c982b4fa72a02eb938",
     "46d4c59c0a66ad109176",
@@ -410,6 +413,7 @@
     "51e35a000fd69b281d8f",
     "525e3c1d2d36171931d0",
     "52a878105eb6e17ccf07",
+    "52c3f7c19842b2a0e713",
     "533369631eb5ba9a03e8",
     "5336cefa01e41ce2d805",
     "538d52b42e138e623ca4",
@@ -543,6 +547,7 @@
     "6d77934bc2bba473b4f1",
     "6d7a4b686eb97cde6a02",
     "6d8957b92303290d3dce",
+    "6dc944c67cfba4fe810d",
     "6e6922b2574016668c39",
     "6ea057ad40421bee2b9f",
     "6ef5ed561238a95ac4e6",
@@ -662,6 +667,7 @@
     "8620df4558fd35d2c99b",
     "86566aabc13f684bd8f3",
     "865e3d3989aeb39b0ccd",
+    "86c5aa1c14ea443a8fbf",
     "86d4f7d6723415212031",
     "86ece0079f9f8d628fc8",
     "87224b8a98758aefff91",
@@ -706,6 +712,7 @@
     "8f6c133d212655c7f936",
     "8f78c2acca4ea658e0d5",
     "8fbf39e3bbee25019fbf",
+    "8feca6772b4718bced20",
     "907fd05e8818942d8976",
     "90d20ef34b16c3283111",
     "90dfe0c47513b4111e9b",
@@ -837,6 +844,7 @@
     "a72b0945b9301079a77e",
     "a7cc9169fce24c4d75e7",
     "a7eb04349a95d10f2d7e",
+    "a7f8018aee4c7856f890",
     "a863ed35eaa621f22ead",
     "a864acc1dc9ba742c0ee",
     "a887a247e4f5ce599644",
@@ -1061,6 +1069,7 @@
     "d195ebb10eaa1ac95879",
     "d20405455c09479dc549",
     "d2635b988f056e5de0bb",
+    "d26781e13cf6c8437f2d",
     "d27304ee35f4ddabc5f6",
     "d28b91fcb5220b942385",
     "d2d28e5b6ff91fe9581b",
@@ -1188,6 +1197,7 @@
     "e9eb23af628221a22946",
     "ea46c57d5974d087c255",
     "ea60e081471ebe7d5ef3",
+    "ea698c91b8741533365e",
     "ea9a17851d8c95b4453b",
     "eae89a48c9b9ee4f30da",
     "eb16e6bcaa5da778f1b4",
@@ -1314,12 +1324,12 @@
     },
     {
       "election": "governor-sp",
-      "title": "Vox Brasil: Tarcísio tem 56,5% contra 33,4% de Haddad no 1º turno em SP - Portal Tela",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMnVQVjdJakdLN0lsOTk4MHE4UmhEYkVGcXhIRDlWUllHcHlLLWp0MDhpMHpDb0VQMHNOOGRGVlE4R1o0ck1TQTR2Qi1FdDc5SjJMYThybWxIOUlVWjRWV3FKZ2FTZGphTlozcUJiVkJtOTdxcC11eU9EZi14d1huZ3puOEJqOVUydDJBR0VHNzEtQ0dNaTRhSGVHTVM5cjVUZWdBYzdYS1dQWmRsZkRlM3prUmQ?oc=5",
-      "source": "Portal Tela",
+      "title": "Pesquisa Vox Brasil: Tarcísio tem 56,5% e Haddad, 33,4%, no 1º turno em SP - exame.com",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRU03RUhDNVVoMW1XTXVxcjFJYXAzSThzMUhVS3pXOUNoMW1RVmhOOXFheXMxN0hjeXQzSzJrNGVnT0ZPaUM2ZzRFSXNrRzFnVVNGeGhrbmpJZG43Z0k1Z2FDUnllaElsa0lMbEJfVHduc3RaNUdUQXNSaXpoeFUxcDJNQ2JLRk84ZkVFbU8ya2FVMkdHMnprNQ?oc=5",
+      "source": "exame.com",
       "published": "2026-09-25",
       "pollster": "Vox Brasil",
-      "key": "5e690a537463177afe2b"
+      "key": "52c3f7c19842b2a0e713"
     },
     {
       "election": "governor-sp",
@@ -1340,15 +1350,6 @@
       "key": "d61b3e08140963db1d74"
     },
     {
-      "election": "governor-sp",
-      "title": "Quaest: Tarcísio lidera com 44% no 1° turno em SP; Haddad tem 27% - noticias.uol.com.br",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQejNKMHA1SlV0Z3YtY3hObTVJR05wbkw0UjVnZURmR1ZMVG1pSWVnNGE5b1hDRkE1VkEzb0FHUjhIMXpvNWVKMFhwbmhxNHptOEN0ODdiUm5PYVhSeF80STEzSVpYUGVpdjFKR0d5NEFvUjJHY0ZPZzlvS0l1czNiSDBNVnhpcEVzSnUtbkhCcU51Zw?oc=5",
-      "source": "noticias.uol.com.br",
-      "published": "2026-09-24",
-      "pollster": "Quaest",
-      "key": "91ba4d535d9e68b32bb5"
-    },
-    {
       "election": "president-br",
       "title": "Datafolha: Lula tem 40% e Flávio Bolsonaro, 36% em 1º turno; rivais empatam em 2º turno - Folha de S.Paulo",
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQV3hmVjBkNmNfR0lNcjRHWUxjazlHNmNKbm81MThFcEtPYzhUR3pJM24xeWdiOF9pb2xHeG5TZlBKcXRnMjZUQ3UyTXhQSkZGVndEN0REa0p0a2lzbVpnWUxuTTQzV3ptTkJYWGlwU0tWdmdtaTBYRDRyQ0tHbUNjWDlsQ3NTd0FBNG9rX2dYb01DcllNOGhCaU1XT3JjU3FSSHBOc1pPdUNMMGZTckdSZXM5ZHV2X3hyM0tpY0lxek9ad0Z2SVYtUkt6Ui0?oc=5",
@@ -1356,6 +1357,15 @@
       "published": "2026-09-24",
       "pollster": "Datafolha",
       "key": "8c1eca563623642dd94c"
+    },
+    {
+      "election": "governor-sp",
+      "title": "Em SP Quaest mostra Tarcísio oscilando de 42% para 44%, e Haddad com 27% no 1º turno - Correio Braziliense",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNc0dSNWNFY2lXdEt0YU1NZEVpNnN6N05GRzQwcjczUVB1S1lTSEFjWFRXWUJMOEN4c1lkWlBPbm5CWUtGNndKa01nMl9ISmNfb3Y5UFp6c1hiaFl6X3I1UXZQZkhVV2VyTmhkRzBNTjBWcEx5RW1kTG5iTDhBcS1DZ1hNSGpxRkFHMXNFODVjTDVTNjBWeG05VHpRd19QWlo4d1pvZk5RVWdKU09ZMFF4blE4ay1Ea2RubTAxTjhQaEtVMmhPOHBoQW82RGpiNjlQZVd6am1kd193V0J6dlRUedIB5gFBVV95cUxNY3ZqWDBESUloZU1uYUFoZWRGOVBrRXpHcUswVVcyd1ljMXFmcnRLSUhCQVB0eE9yVmhZY1gtSHktSmhORkRHNkNnZ24zbUVEZjZ3Q3lXeU1pWTEzcVljampSNVlrLXM4anZIdjAxb1cydUxtQlk2emN3ZmVrallOVi13QTBXZmNiMmNWZjBVTGtFOXVIV3N1WXVkVTh3Y3Rjd00weV9NVjAwT0FPTG5jT3NnNGVLeEhaSFFITzg5RUdVd3VaOXJxSzByRUROYVRYc1JDUmh4SzJFbWhCQ0hhMXJUNXFQZw?oc=5",
+      "source": "Correio Braziliense",
+      "published": "2026-09-24",
+      "pollster": "Quaest",
+      "key": "6dc944c67cfba4fe810d"
     },
     {
       "election": "governor-mg",
