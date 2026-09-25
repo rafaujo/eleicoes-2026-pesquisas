@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-25 15:13:55",
+  "sourceGeneratedAt": "2026-09-25 19:14:45",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -55,6 +55,7 @@
     "BR006642026",
     "BR006682026",
     "BR006952026",
+    "BR006982026",
     "BR007262026",
     "BR007382026",
     "BR007392026",
@@ -84,6 +85,7 @@
     "BR010782026",
     "BR010792026",
     "BR010842026",
+    "BR011222026",
     "BR011292026",
     "BR011472026",
     "BR011652026",
@@ -174,6 +176,7 @@
     "BR024112026",
     "BR024162026",
     "BR024192026",
+    "BR024212026",
     "BR024232026",
     "BR024482026",
     "BR024762026",
@@ -610,6 +613,7 @@
     "BR086942026",
     "BR086952026",
     "BR087032026",
+    "BR087062026",
     "BR087072026",
     "BR087132026",
     "BR087302026",
@@ -759,6 +763,17 @@
       "tradeName": "REAL TIME BIG DATA",
       "contractors": []
     },
+    "BR006982026": {
+      "protocol": "BR006982026",
+      "registeredAt": "2026-09-24",
+      "fieldStart": "2026-09-27",
+      "fieldEnd": "2026-09-29",
+      "disclosureDate": "2026-09-30",
+      "sample": 2000,
+      "company": "INSTITUTO INDEXA PESQUISAS LTDA",
+      "tradeName": "INDEXA PESQUISAS",
+      "contractors": []
+    },
     "BR007452026": {
       "protocol": "BR007452026",
       "registeredAt": "2026-09-18",
@@ -814,6 +829,17 @@
       "tradeName": "DATAVERO INSTITUTO DE PESQUISAS",
       "contractors": []
     },
+    "BR011222026": {
+      "protocol": "BR011222026",
+      "registeredAt": "2026-09-24",
+      "fieldStart": "2026-09-24",
+      "fieldEnd": "2026-09-29",
+      "disclosureDate": "2026-09-30",
+      "sample": 2000,
+      "company": "100% CIDADES PARTICIPACOES LTDA",
+      "tradeName": "100 CIDADES",
+      "contractors": []
+    },
     "BR014312026": {
       "protocol": "BR014312026",
       "registeredAt": "2026-09-10",
@@ -867,6 +893,17 @@
       "sample": 2000,
       "company": "100% CIDADES PARTICIPACOES LTDA",
       "tradeName": "100 CIDADES",
+      "contractors": []
+    },
+    "BR024212026": {
+      "protocol": "BR024212026",
+      "registeredAt": "2026-09-24",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-09-30",
+      "disclosureDate": "2026-09-30",
+      "sample": 500,
+      "company": "INSTITUTO DE PESQUISAS PERFIL LTDA",
+      "tradeName": "",
       "contractors": []
     },
     "BR025872026": {
@@ -1197,6 +1234,17 @@
       "sample": 2000,
       "company": "INSTITUTO DATATRENDS LTDA",
       "tradeName": "DATATRENDS",
+      "contractors": []
+    },
+    "BR087062026": {
+      "protocol": "BR087062026",
+      "registeredAt": "2026-09-24",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-30",
+      "sample": 2000,
+      "company": "BOAS IDEIAS INTELIGENCIA EM PESQUISA E ESTRATEGIA DIGITAL LTDA",
+      "tradeName": "BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.",
       "contractors": []
     },
     "BR087652026": {

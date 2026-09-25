@@ -248,6 +248,7 @@
     "2e8d4ed3ebc99cb62d45",
     "2ec3897adae67fab3844",
     "2edc28fbad96b17752d1",
+    "2f5ff1f2a1410113c658",
     "2f70cc228d9555a170c6",
     "2f89e0868da91c2368b4",
     "2f8d010865a25977d5f2",
@@ -453,6 +454,7 @@
     "5e4714914fa05c0592f7",
     "5e51a1c1e36d4b8b6207",
     "5e6498f0f42d4be397fa",
+    "5e690a537463177afe2b",
     "5e9457fa8ae15e99ce4a",
     "5e98f9b03a22271cccb4",
     "5ec56ea3762a42ffc3f4",
@@ -900,6 +902,7 @@
     "b39d751b6bcb125d39c8",
     "b3c58cb9ce0453f0e21e",
     "b3dfbeb95d43565ec300",
+    "b421a936c9f1332ada8e",
     "b42b08811ca26b9dee86",
     "b437b4b9dcbd1a8895ee",
     "b45258ca5b1a87f625f3",
@@ -912,6 +915,7 @@
     "b5fe0700d0ea4ab967f5",
     "b64f591ae52c24902995",
     "b64fec1ded49da3a55c9",
+    "b66284df43017b7ea857",
     "b6667ec8a7f5c736f941",
     "b679d1d0ccfa1fbf1c70",
     "b68a3227a637de4fface",
@@ -1300,13 +1304,31 @@
   ],
   "pending": [
     {
+      "election": "governor-mg",
+      "title": "Real Time Big Data mostra Cleitinho com 35% e Patrus com 19% na disputa pelo Governo de Minas - DiviNews",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSjQ1UmN1TDh6VG5pNjVoYkwtLUUzMTV4TDZMRXNIcHhZOGk4Sl9EaVZVV2MzdEJkZW5jNzlvUGZMaXhyc1hxNWtGSURLaTlMeWx5MDQyd1kwLV8zNU9HMk9kMjFmSklJaURWVTNVQzRYakphMFZ1YTE5dkZZS1FwUGpmVGhwTDczcEIySmVXU0VDcGxVbEdONTd6M0NCZHJSdGxRUHpEQVI3VTJsNGlmU3prdmdQT2Ewb1BiVldTZ2kzQQ?oc=5",
+      "source": "DiviNews",
+      "published": "2026-09-25",
+      "pollster": "Real Time Big Data",
+      "key": "b66284df43017b7ea857"
+    },
+    {
       "election": "governor-sp",
-      "title": "Vox Brasil: Tarcísio tem 56,5% e vence Haddad no 1º turno em SP - TV Sim Brasil",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbGtVZ3NucWxOTTgxX3VIYUM2Z1IyNTZHc25CZFpGRmgxWThIQ1VZTm14SzlJVnVscUMzM3lVQWJPNHlhbng2SF82X3pRclZYRFJhUmpaSTdfdmo5V3haOW5SSng3a0l2V0xqbE16dVE1RndoRDMzQzV3YVZYMzV6dEtGQTJSaS1YZzZFeVBvb2VHZFU4QmFRcXdGNWZXM1kybjZ6N0VUbi0yZXA4NHFkWlFHNjRHSkVhdkVBSg?oc=5",
-      "source": "TV Sim Brasil",
+      "title": "Vox Brasil: Tarcísio tem 56,5% contra 33,4% de Haddad no 1º turno em SP - Portal Tela",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMnVQVjdJakdLN0lsOTk4MHE4UmhEYkVGcXhIRDlWUllHcHlLLWp0MDhpMHpDb0VQMHNOOGRGVlE4R1o0ck1TQTR2Qi1FdDc5SjJMYThybWxIOUlVWjRWV3FKZ2FTZGphTlozcUJiVkJtOTdxcC11eU9EZi14d1huZ3puOEJqOVUydDJBR0VHNzEtQ0dNaTRhSGVHTVM5cjVUZWdBYzdYS1dQWmRsZkRlM3prUmQ?oc=5",
+      "source": "Portal Tela",
       "published": "2026-09-25",
       "pollster": "Vox Brasil",
-      "key": "88ff00157c65cc63f43a"
+      "key": "5e690a537463177afe2b"
+    },
+    {
+      "election": "governor-sp",
+      "title": "Tarcísio tem 50% e Haddad, 30% em pesquisa Datafolha em SP - CBN São José dos Campos e Vale",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZnVoRWMyWWQweHlKdUxudk5NOHlfUnhZek5QUHVMU01YNlRSUU9DTE95WUFPS3dDLWdSTFIxcDFpbU5kMGhLVHRrM1UtdlpkMXYwOTZRS3VWNERqYVhuZ3RTV3IyOFRZTGs5NXRfVlVZX2xrWjlfeFFySmh6ay1VbFBZemU5cHl1ekIw?oc=5",
+      "source": "CBN São José dos Campos e Vale",
+      "published": "2026-09-25",
+      "pollster": "Datafolha",
+      "key": "216fa143b6075801ca62"
     },
     {
       "election": "president-br",
@@ -1316,15 +1338,6 @@
       "published": "2026-09-24",
       "pollster": "Futura",
       "key": "d61b3e08140963db1d74"
-    },
-    {
-      "election": "governor-mg",
-      "title": "Datafolha: Cleitinho vai a 40% em MG no 1º turno, ante 15% de Patrus e 9% de Kalil - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQem1vM2I5ZFBUT3luaUNKUnRUMUgyQUFldHFhZnJ0Ul9KT3pBSHRmVWI4c3NPWVl6akN6MU5zVXBZRFctdEZZeE9UZlBKb19UNjVjeUZ6bXR2dVlLSEtJaWNfSExNZHlncEVPSHpESGVzd19DYktVNUtVbE5OYURHRXQ4MFlXZVNsQU9PRnhWTXFab1Iyak95LW5WYXdwOTAtRmZtZFoyOFZiY3hqV3V1VzFNSjJGSF9PalJlZEhKck0wSmQ0TEE?oc=5",
-      "source": "Folha de S.Paulo",
-      "published": "2026-09-24",
-      "pollster": "Datafolha",
-      "key": "c529f2fd68e00157fbc7"
     },
     {
       "election": "governor-sp",
@@ -1343,15 +1356,6 @@
       "published": "2026-09-24",
       "pollster": "Datafolha",
       "key": "8c1eca563623642dd94c"
-    },
-    {
-      "election": "governor-sp",
-      "title": "Datafolha: Tarcísio tem 50%, contra 30% de Haddad, e poderia vencer em 1º turno em SP - 24/09/2026 - Política - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWUpFdmZxdlV5ZjdCOHVmT01RMUxtNWdpMUQ3WWlMWkR5T25TdmEzZjZoOWdfaGlyYlc2VnR4T01WejN6QkFrb3NvbHUyYnFyYUt4T3VIWmZIQmtMVjFpX3JTckNKdHVKdFlRRExuZFNXQ2QwbUxKQm5IeGJHVW56cnRWSFlZQUFha1FOcnRac1lZTmtTTjl1ZENBSVAyeXhMandtYzA0dDVMLTROTFM5N3VELWJuMFBpMVk3bmw3aGZWUTRHNGtqZEt3?oc=5",
-      "source": "Folha de S.Paulo",
-      "published": "2026-09-24",
-      "pollster": "Datafolha",
-      "key": "2f8d010865a25977d5f2"
     },
     {
       "election": "governor-mg",
