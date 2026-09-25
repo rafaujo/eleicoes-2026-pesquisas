@@ -87,6 +87,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG021942026": {
+      "protocol": "MG021942026",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-30",
+      "sample": 500,
+      "company": "Inpac",
+      "tradeName": "Inpac",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG023552026": {
+      "protocol": "MG023552026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-29",
+      "disclosureDate": "2026-09-30",
+      "sample": 801,
+      "company": "Nexxus Mais",
+      "tradeName": "Nexxus Mais",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG029802026": {
       "protocol": "MG029802026",
       "fieldStart": "2026-09-21",
@@ -205,6 +227,17 @@
       "sample": 2030,
       "company": "Veritá",
       "tradeName": "Veritá",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG080272026": {
+      "protocol": "MG080272026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-29",
+      "disclosureDate": "2026-09-30",
+      "sample": 3503,
+      "company": "Nexxus Mais",
+      "tradeName": "Nexxus Mais",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-25 04:53:36",
+  "sourceGeneratedAt": "2026-09-25 15:13:55",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -1281,6 +1281,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "BR006982026": {
+      "protocol": "BR006982026",
+      "fieldStart": "2026-09-27",
+      "fieldEnd": "2026-09-29",
+      "disclosureDate": "2026-09-30",
+      "sample": 2000,
+      "company": "Indexa",
+      "tradeName": "Indexa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR008952026": {
       "protocol": "BR008952026",
       "fieldStart": "2026-09-26",
@@ -1289,6 +1300,17 @@
       "sample": 2100,
       "company": "Vox Brasil",
       "tradeName": "Vox Brasil",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR011222026": {
+      "protocol": "BR011222026",
+      "fieldStart": "2026-09-24",
+      "fieldEnd": "2026-09-29",
+      "disclosureDate": "2026-09-30",
+      "sample": 2000,
+      "company": "Futura Inteligência",
+      "tradeName": "Futura Inteligência",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -1399,6 +1421,17 @@
       "sample": 2400,
       "company": "Gerp",
       "tradeName": "Gerp",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR087062026": {
+      "protocol": "BR087062026",
+      "fieldStart": "2026-09-25",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-09-30",
+      "sample": 2000,
+      "company": "Instituto Ideia",
+      "tradeName": "Instituto Ideia",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

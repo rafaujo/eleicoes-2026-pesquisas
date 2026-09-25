@@ -195,6 +195,56 @@
   ],
   "polls": [
     {
+      "id": 15,
+      "pollster": "Datafolha",
+      "publication": "cbn.globo.com",
+      "protocol": "MG074002026",
+      "published": "2026-09-24",
+      "start": "2026-09-22",
+      "end": "2026-09-24",
+      "field": "22–24 set",
+      "sample": 1204,
+      "margin": 3,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://cbn.globo.com/coberturas/eleicoes-2026/noticia/2026/09/24/datafolha-em-mg-cleitinho-lidera-com-40percent-patrus-tem-15percent-kalil-9percent-simoes-5percent.ghtml",
+      "resultSourceLabel": "cbn.globo.com — resultado publicado",
+      "scenarios": {
+        "first-auto-ben-cleitinho-gabriel-kalil-mateus-patrus-roscoe": {
+          "results": {
+            "cleitinho": 40,
+            "patrus": 15,
+            "kalil": 9,
+            "gabriel": 3,
+            "mateus": 5,
+            "roscoe": 5,
+            "ben": 1
+          },
+          "undecided": 24,
+          "resultSource": "https://cbn.globo.com/coberturas/eleicoes-2026/noticia/2026/09/24/datafolha-em-mg-cleitinho-lidera-com-40percent-patrus-tem-15percent-kalil-9percent-simoes-5percent.ghtml",
+          "resultSourceLabel": "cbn.globo.com — resultado publicado"
+        },
+        "runoff-cleitinho-kalil": {
+          "results": {
+            "cleitinho": 57,
+            "kalil": 26
+          },
+          "undecided": 17,
+          "resultSource": "https://g1.globo.com/google/amp/mg/minas-gerais/eleicoes/2026/noticia/2026/09/24/datafolha-mg-governador-24-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        },
+        "runoff-cleitinho-patrus": {
+          "results": {
+            "cleitinho": 60,
+            "patrus": 23
+          },
+          "undecided": 17,
+          "resultSource": "https://g1.globo.com/google/amp/mg/minas-gerais/eleicoes/2026/noticia/2026/09/24/datafolha-mg-governador-24-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 14,
       "pollster": "Quaest",
       "publication": "g1.globo.com",

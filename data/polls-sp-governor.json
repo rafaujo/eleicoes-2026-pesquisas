@@ -124,6 +124,37 @@
   ],
   "polls": [
     {
+      "id": 23,
+      "pollster": "Datafolha",
+      "publication": "g1.globo.com",
+      "protocol": "SP037302026",
+      "published": "2026-09-24",
+      "start": "2026-09-22",
+      "end": "2026-09-23",
+      "field": "22–23 set",
+      "sample": 1610,
+      "margin": 2,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://g1.globo.com/google/amp/sp/sao-paulo/eleicoes/2026/noticia/2026/09/24/datafolha-sp-governador-24-setembro.ghtml",
+      "resultSourceLabel": "g1.globo.com — resultado publicado",
+      "scenarios": {
+        "first-auto-haddad-izadora-machado-tarcisio-vera-vivian": {
+          "results": {
+            "tarcisio": 50,
+            "haddad": 30,
+            "vera": 2,
+            "machado": 2,
+            "vivian": 2,
+            "izadora": 1
+          },
+          "undecided": 13,
+          "resultSource": "https://g1.globo.com/google/amp/sp/sao-paulo/eleicoes/2026/noticia/2026/09/24/datafolha-sp-governador-24-setembro.ghtml",
+          "resultSourceLabel": "g1.globo.com — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 22,
       "pollster": "Quaest",
       "publication": "g1.globo.com",
