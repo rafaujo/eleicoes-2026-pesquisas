@@ -87,17 +87,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "MG026382026": {
-      "protocol": "MG026382026",
-      "fieldStart": "2026-09-19",
-      "fieldEnd": "2026-09-23",
-      "disclosureDate": "2026-09-24",
-      "sample": 1100,
-      "company": "Sectral Negocios",
-      "tradeName": "Sectral Negocios",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "MG029802026": {
       "protocol": "MG029802026",
       "fieldStart": "2026-09-21",
@@ -186,17 +175,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "MG059722026": {
-      "protocol": "MG059722026",
-      "fieldStart": "2026-09-26",
-      "fieldEnd": "2026-09-27",
-      "disclosureDate": "2026-09-24",
-      "sample": 500,
-      "company": "Inpac",
-      "tradeName": "Inpac",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "MG065562026": {
       "protocol": "MG065562026",
       "fieldStart": "2026-09-24",
@@ -205,17 +183,6 @@
       "sample": 401,
       "company": "Viavox Consultoria Administrativa e Pesquisas de Opiniao Ltda",
       "tradeName": "Viavox Consultoria Administrativa e Pesquisas de Opiniao Ltda",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "MG074002026": {
-      "protocol": "MG074002026",
-      "fieldStart": "2026-09-22",
-      "fieldEnd": "2026-09-24",
-      "disclosureDate": "2026-09-24",
-      "sample": 1204,
-      "company": "Datafolha",
-      "tradeName": "Datafolha",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -271,17 +238,6 @@
       "sample": 3000,
       "company": "Insight Brasil",
       "tradeName": "Insight Brasil",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "MG093812026": {
-      "protocol": "MG093812026",
-      "fieldStart": "2026-09-16",
-      "fieldEnd": "2026-09-23",
-      "disclosureDate": "2026-09-24",
-      "sample": 1500,
-      "company": "Instituto Alves Lima",
-      "tradeName": "Instituto Alves Lima",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-24 22:21:39",
+  "sourceGeneratedAt": "2026-09-25 04:53:36",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -836,17 +836,6 @@
       "tradeName": "STATS - PESQUISA E GESTAO",
       "contractors": []
     },
-    "BR017392026": {
-      "protocol": "BR017392026",
-      "registeredAt": "2026-09-18",
-      "fieldStart": "2026-09-20",
-      "fieldEnd": "2026-09-23",
-      "disclosureDate": "2026-09-24",
-      "sample": 3000,
-      "company": "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA",
-      "tradeName": "PODERDATA",
-      "contractors": []
-    },
     "BR020322026": {
       "protocol": "BR020322026",
       "registeredAt": "2026-09-12",
@@ -878,17 +867,6 @@
       "sample": 2000,
       "company": "100% CIDADES PARTICIPACOES LTDA",
       "tradeName": "100 CIDADES",
-      "contractors": []
-    },
-    "BR025122026": {
-      "protocol": "BR025122026",
-      "registeredAt": "2026-09-18",
-      "fieldStart": "2026-09-18",
-      "fieldEnd": "2026-09-23",
-      "disclosureDate": "2026-09-24",
-      "sample": 2700,
-      "company": "ALFA INTELIGENCIA E SERVICOS DE SOFTWARE E OPINIAO S/A",
-      "tradeName": "ALFA INTELIGENCIA",
       "contractors": []
     },
     "BR025872026": {
@@ -1010,17 +988,6 @@
       "sample": 2000,
       "company": "NEXUS PESQUISA E INTELIGENCIA DE DADOS LTDA",
       "tradeName": "NEXUS",
-      "contractors": []
-    },
-    "BR042022026": {
-      "protocol": "BR042022026",
-      "registeredAt": "2026-09-18",
-      "fieldStart": "2026-09-19",
-      "fieldEnd": "2026-09-23",
-      "disclosureDate": "2026-09-24",
-      "sample": 2000,
-      "company": "REAL TIME MIDIA LTDA",
-      "tradeName": "REAL TIME BIG DATA",
       "contractors": []
     },
     "BR043752026": {
@@ -1292,17 +1259,6 @@
   },
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
-    "BR003042026": {
-      "protocol": "BR003042026",
-      "fieldStart": "2026-09-22",
-      "fieldEnd": "2026-09-24",
-      "disclosureDate": "2026-09-24",
-      "sample": 2002,
-      "company": "Datafolha",
-      "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR005092026": {
       "protocol": "BR005092026",
       "fieldStart": "2026-09-30",
@@ -1377,17 +1333,6 @@
       "sample": 500,
       "company": "Resultado Pesquisa e Assessoria Ltda - ME",
       "tradeName": "Resultado Pesquisa e Assessoria Ltda - ME",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR052682026": {
-      "protocol": "BR052682026",
-      "fieldStart": "2026-09-18",
-      "fieldEnd": "2026-09-24",
-      "disclosureDate": "2026-09-24",
-      "sample": 2000,
-      "company": "Futura Inteligência",
-      "tradeName": "Futura Inteligência",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
