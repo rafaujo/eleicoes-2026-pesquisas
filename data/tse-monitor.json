@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-26 14:27:50",
+  "sourceGeneratedAt": "2026-09-26 18:35:37",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -575,6 +575,7 @@
     "BR080162026",
     "BR080202026",
     "BR080362026",
+    "BR080392026",
     "BR080452026",
     "BR080542026",
     "BR080632026",
@@ -672,6 +673,7 @@
     "BR094412026",
     "BR094462026",
     "BR094792026",
+    "BR095032026",
     "BR095212026",
     "BR095542026",
     "BR095702026",
@@ -1203,6 +1205,17 @@
       "tradeName": "REAL TIME BIG DATA",
       "contractors": []
     },
+    "BR080392026": {
+      "protocol": "BR080392026",
+      "registeredAt": "2026-09-25",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-01",
+      "sample": 2506,
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR080932026": {
       "protocol": "BR080932026",
       "registeredAt": "2026-09-05",
@@ -1291,6 +1304,17 @@
       "sample": 401,
       "company": "VIAVOX CONSULTORIA ADMINISTRATIVA E PESQUISAS DE OPINIAO LTDA",
       "tradeName": "",
+      "contractors": []
+    },
+    "BR095032026": {
+      "protocol": "BR095032026",
+      "registeredAt": "2026-09-25",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-30",
+      "disclosureDate": "2026-10-01",
+      "sample": 2000,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
       "contractors": []
     },
     "BR095872026": {

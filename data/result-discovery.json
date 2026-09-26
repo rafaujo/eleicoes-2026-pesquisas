@@ -291,6 +291,8 @@
     "34e1fb9b22405e11118a",
     "34f3c3573e8ba8f9af51",
     "351a13d4c81418df7421",
+    "3560479a7be83c1c75fd",
+    "359319ffdbe6073e50a9",
     "3639ba2c85a974c7f3bd",
     "366b9b9f44ee5f237b7f",
     "366c632de411d0c84a22",
@@ -323,6 +325,7 @@
     "3b2e34f8fcf43b163f2f",
     "3b52d993f45112290424",
     "3b5971dd2f9456b6708a",
+    "3b797351a9541308bf0e",
     "3b79f277f63f67fa8695",
     "3b9f2210bfa611722a87",
     "3bb641821305fcad6f7a",
@@ -650,6 +653,7 @@
     "7f49be81ac14e10bc792",
     "7f5a9432927127d7bd84",
     "7f747aa2b35ebc062b28",
+    "7fe03c259694f62739ba",
     "805224ffccd4acc90a25",
     "80a0bacf56ff3c819bca",
     "80b70cd8183715ccd520",
@@ -1046,6 +1050,7 @@
     "c77cac8c78fb668bf1ed",
     "c7c4162be9a97b2cda63",
     "c7cd30cb4846f15e9296",
+    "c7d46ff4dbbddac0664a",
     "c8334096fd5478c5a6cd",
     "c8db0239f4d213769f0a",
     "c9469646bc8df6381e52",
@@ -1166,6 +1171,7 @@
     "de5ad738ef2b097fbe1e",
     "de85bef59f41a604cb10",
     "dec8118b424b522c3b8e",
+    "df092e16f1dc4417411f",
     "df32f1a0cf33f0e79dba",
     "df7c55b28c8a5a51006f",
     "e01b8c73c4ab54fbc35d",
@@ -1369,6 +1375,15 @@
       "key": "52c3f7c19842b2a0e713"
     },
     {
+      "election": "president-br",
+      "title": "Datafolha: Lula e Flávio têm 38% no interior; petista lidera nas regiões metropolitanas - Folha de S.Paulo",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbFNtSWs4ZFlaSUthMzdtNmF5R3BkUFhQd1BVZW5GNjM3LTE3NTQxQndxLUE4WjkyTE9jM2doZzI0R0p5dU8ySDRJOEZ1QnRKQWJxOVd2eVV6Y1p3aF9jV1NlcUlYbl9ULTBRdEhuc2xlWEcxdE5VLWFWdGpzejRDazBLOTI0TkQxMDl0aXA3TGUzSEJNdmhValJyREZfRzkwZDJfM1VKeEdMRW5aMDlCZXNNNHZUZmhKUC1vZ3NSVWVROEVpbXkybzhYR3huOEE?oc=5",
+      "source": "Folha de S.Paulo",
+      "published": "2026-09-25",
+      "pollster": "Datafolha",
+      "key": "359319ffdbe6073e50a9"
+    },
+    {
       "election": "governor-sp",
       "title": "Tarcísio tem 50% e Haddad, 30% em pesquisa Datafolha em SP - CBN São José dos Campos e Vale",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZnVoRWMyWWQweHlKdUxudk5NOHlfUnhZek5QUHVMU01YNlRSUU9DTE95WUFPS3dDLWdSTFIxcDFpbU5kMGhLVHRrM1UtdlpkMXYwOTZRS3VWNERqYVhuZ3RTV3IyOFRZTGs5NXRfVlVZX2xrWjlfeFFySmh6ay1VbFBZemU5cHl1ekIw?oc=5",
@@ -1387,15 +1402,6 @@
       "key": "d61b3e08140963db1d74"
     },
     {
-      "election": "president-br",
-      "title": "Datafolha: Lula tem 40% e Flávio Bolsonaro, 36% em 1º turno; rivais empatam em 2º turno - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQV3hmVjBkNmNfR0lNcjRHWUxjazlHNmNKbm81MThFcEtPYzhUR3pJM24xeWdiOF9pb2xHeG5TZlBKcXRnMjZUQ3UyTXhQSkZGVndEN0REa0p0a2lzbVpnWUxuTTQzV3ptTkJYWGlwU0tWdmdtaTBYRDRyQ0tHbUNjWDlsQ3NTd0FBNG9rX2dYb01DcllNOGhCaU1XT3JjU3FSSHBOc1pPdUNMMGZTckdSZXM5ZHV2X3hyM0tpY0lxek9ad0Z2SVYtUkt6Ui0?oc=5",
-      "source": "Folha de S.Paulo",
-      "published": "2026-09-24",
-      "pollster": "Datafolha",
-      "key": "8c1eca563623642dd94c"
-    },
-    {
       "election": "governor-sp",
       "title": "Em SP Quaest mostra Tarcísio oscilando de 42% para 44%, e Haddad com 27% no 1º turno - Correio Braziliense",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNc0dSNWNFY2lXdEt0YU1NZEVpNnN6N05GRzQwcjczUVB1S1lTSEFjWFRXWUJMOEN4c1lkWlBPbm5CWUtGNndKa01nMl9ISmNfb3Y5UFp6c1hiaFl6X3I1UXZQZkhVV2VyTmhkRzBNTjBWcEx5RW1kTG5iTDhBcS1DZ1hNSGpxRkFHMXNFODVjTDVTNjBWeG05VHpRd19QWlo4d1pvZk5RVWdKU09ZMFF4blE4ay1Ea2RubTAxTjhQaEtVMmhPOHBoQW82RGpiNjlQZVd6am1kd193V0J6dlRUedIB5gFBVV95cUxNY3ZqWDBESUloZU1uYUFoZWRGOVBrRXpHcUswVVcyd1ljMXFmcnRLSUhCQVB0eE9yVmhZY1gtSHktSmhORkRHNkNnZ24zbUVEZjZ3Q3lXeU1pWTEzcVljampSNVlrLXM4anZIdjAxb1cydUxtQlk2emN3ZmVrallOVi13QTBXZmNiMmNWZjBVTGtFOXVIV3N1WXVkVTh3Y3Rjd00weV9NVjAwT0FPTG5jT3NnNGVLeEhaSFFITzg5RUdVd3VaOXJxSzByRUROYVRYc1JDUmh4SzJFbWhCQ0hhMXJUNXFQZw?oc=5",
@@ -1412,6 +1418,15 @@
       "published": "2026-09-23",
       "pollster": "Quaest",
       "key": "67dfbf5762610121a717"
+    },
+    {
+      "election": "president-br",
+      "title": "Datafolha aponta tendência de eleitores de Caiado, Zema, Renan e Cury em 2º turno entre Lula e Flávio - Bnews",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPZmYxR2JpV0F6aThKekl5aWY3eGZqZ1dVWXBvd0RpQ09UbWVMQzV3V0VzR3J2aV9jSmJ0eEVOSEJISHI4aUVELXJvUXk4alZWYW9YdFF4LV81cURianM0X3E2WEU1Q2VVU1hPMGN2VzMwRmw5SHhEcEliZjdzX1hyak5SeVMzMHM5VGtEUlN2aGQtWF9RZTZFeWgwZldXQTVZVzZtYVkwZkNoa2Zvb1BualVhUXR2VDZ1TGdqcGFlUmg5cDQxQVVrTEVLVzVpRWtCX0FhUDVlc2RPNEhjdTZj0gHkAUFVX3lxTE4wNnZNU0Nzc0hLUmtDRlp3QmgzNW1GbEF6R3ZhbERURHpBRlE5NkxKRWNOTDVpNEZodXBUOHBJcHZxV0hrek5pb0c1M0RLLUpnSmdSRHgzMWtXMEowQ0t4UGxBTEZpOHp0ZjNpVThCOXJVellEeGk2dWhSb0ZaZm5wREJZNHhkY2haRWVsR0laOTlzOVIzWmxPQmtQeThIRWNWSDBMUjdtdTZ6TGRhUlZ0dFFNdnRjeUxnZ0FRbzB0THdkRE9wXzgtY2hmS0FicVUtcWtRU3d3dXBBWjF1ZVp4eVBFQQ?oc=5",
+      "source": "Bnews",
+      "published": "2026-09-23",
+      "pollster": "Datafolha",
+      "key": "14b2639d4b4effc72a98"
     },
     {
       "election": "president-br",
