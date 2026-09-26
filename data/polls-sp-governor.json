@@ -191,6 +191,37 @@
       }
     },
     {
+      "id": 24,
+      "pollster": "Colectta",
+      "publication": "brazileconomy.com.br",
+      "protocol": "SP041862026",
+      "published": "2026-09-25",
+      "start": "2026-09-19",
+      "end": "2026-09-22",
+      "field": "19–22 set",
+      "sample": 1800,
+      "margin": 2.3,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://brazileconomy.com.br/politica/2026/09/pesquisa-brazil-economycolectta-aponta-reeleicao-de-tarcisio-no-1o-turno/",
+      "resultSourceLabel": "brazileconomy.com.br — resultado publicado",
+      "scenarios": {
+        "first-auto-haddad-izadora-machado-tarcisio-vera-vivian": {
+          "results": {
+            "tarcisio": 54.3,
+            "haddad": 38.7,
+            "vera": 1.5,
+            "machado": 1.4,
+            "vivian": 0.9,
+            "izadora": 1.4
+          },
+          "undecided": 26.7,
+          "resultSource": "https://brazileconomy.com.br/politica/2026/09/pesquisa-brazil-economycolectta-aponta-reeleicao-de-tarcisio-no-1o-turno/",
+          "resultSourceLabel": "brazileconomy.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 19,
       "pollster": "Paraná Pesquisas",
       "publication": "cartacapital.com.br",

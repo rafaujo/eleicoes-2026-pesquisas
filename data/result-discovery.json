@@ -351,6 +351,7 @@
     "40bd0f81c91306b43e4d",
     "40fa80a5ce2878cc37d0",
     "4113c87e2d8eeb733857",
+    "411d432fc305907ba64e",
     "419b8a7c3d5466492bb9",
     "41c82167e212a8e7845f",
     "41da1a6aca120760f0b1",
@@ -438,6 +439,7 @@
     "56585722802d8cdf5dd3",
     "56673b835a66373933df",
     "56847560727fe04cb577",
+    "569ea69ba22abf418dd8",
     "56f17a6bc075368d71ac",
     "571d1eec8fd8664f274e",
     "57546622f5e51376b4ac",
@@ -592,6 +594,7 @@
     "73ef5c312c30b01958ba",
     "74728ad4e541f1b47979",
     "748807dc8b75f918c6b1",
+    "74f86a6abc5d64b64b79",
     "7567fa339e7ae2855db7",
     "7583a07995bfef8064f4",
     "7591b07e42768c3f270f",
@@ -705,6 +708,7 @@
     "8b5ecde0cf637142ee8d",
     "8ba3363c1e79813d00df",
     "8bb9fc5b61e0a926cd34",
+    "8bbb91d8f1f792ca37a2",
     "8bd90b13dfe977887fa1",
     "8bf0f75c14482a4480dd",
     "8c1eca563623642dd94c",
@@ -745,6 +749,7 @@
     "93271eee5f89268d7a39",
     "93289d5eac15f5a136a6",
     "935513a9d6caa41d1d59",
+    "93615fa88599708188cc",
     "93a34ce07e9c76e9a2c7",
     "93afc7d015ac8d798804",
     "93dafc58b1ff6db85803",
@@ -999,6 +1004,7 @@
     "bffe0d940cf67589f230",
     "c00a037816cfe87d4046",
     "c055699a1b2928562b82",
+    "c07829028071d29d66fa",
     "c086099c156921bb35ea",
     "c09dab1b35f7c9a841aa",
     "c0e12e31ff72807e02cf",
@@ -1335,6 +1341,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Pesquisa Atlas/Bloomberg: Lula tem 47,7% e Flávio Bolsonaro registra 47,4% no 2º turno - Estadão",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQd1EzVEVRNkJwMmlXdDlVeEI4aHdyWjE4TnFNdkpXQ28xRk5xUWNnNWZ3cFFoWmFwaEEwcHRHQ0hfOWZHM1UtbzB0ZkZYV25iVzVuUGZfTTQzelJlVlU1MHFBV0ZKcmVIVjdqMW5RZjVIalFOUmNCOWY0R0N4LS1SWkhhZ3g1d21BWHo3eE1yX0Q0WDlTMHBoM1pTWE03VnlGaFUyRTBILVh6Um5la0g1SFRCU3VpWjJrMnFWbUJNNzdIQ0HSAcgBQVVfeXFMUEszaHc3UXo3WGFBS0ZMNDlRYzdNdUJYOFhMaXM1VWlUS2RzdU5zRW56cFNpRV9GQ21MRllEaFFLbmZzLTJxSnNZYThiQUtieHdoQUhXdTUzTlh4cm9fZ2RGcVBSUklZenoyNFZWLW1VdGJfM0o1QW9JVldxdzdnZVhtOGhWb25rbzY3dW9oenlKSFFSV0NKT3F3VVY3SWVjY1hrYWJUODE3WVFLOXZqY2ZEMk9qZ2JPRkp1V2tiaFlGRVJFT2JuSWo?oc=5",
+      "source": "Estadão",
+      "published": "2026-09-26",
+      "pollster": "AtlasIntel",
+      "key": "93615fa88599708188cc"
+    },
     {
       "election": "governor-mg",
       "title": "Real Time Big Data mostra Cleitinho com 35% e Patrus com 19% na disputa pelo Governo de Minas - DiviNews",
