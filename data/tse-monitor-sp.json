@@ -109,17 +109,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "SP041862026": {
-      "protocol": "SP041862026",
-      "fieldStart": "2026-09-19",
-      "fieldEnd": "2026-09-22",
-      "disclosureDate": "2026-09-25",
-      "sample": 1800,
-      "company": "Colectta",
-      "tradeName": "Colectta",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "SP046292026": {
       "protocol": "SP046292026",
       "fieldStart": "2026-09-21",
@@ -194,17 +183,6 @@
       "sample": 700,
       "company": "Asn Pesquisas Publicas",
       "tradeName": "Asn Pesquisas Publicas",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "SP077452026": {
-      "protocol": "SP077452026",
-      "fieldStart": "2026-09-20",
-      "fieldEnd": "2026-09-22",
-      "disclosureDate": "2026-09-25",
-      "sample": 1480,
-      "company": "Vox Brasil",
-      "tradeName": "Vox Brasil",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
