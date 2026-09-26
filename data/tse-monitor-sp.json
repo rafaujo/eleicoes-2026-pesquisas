@@ -65,6 +65,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP013672026": {
+      "protocol": "SP013672026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-01",
+      "sample": 1610,
+      "company": "Datafolha",
+      "tradeName": "Datafolha",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP014862026": {
       "protocol": "SP014862026",
       "fieldStart": "2026-09-22",
@@ -109,6 +120,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP040912026": {
+      "protocol": "SP040912026",
+      "fieldStart": "2026-09-29",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-01",
+      "sample": 1500,
+      "company": "Gerp",
+      "tradeName": "Gerp",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP046292026": {
       "protocol": "SP046292026",
       "fieldStart": "2026-09-21",
@@ -117,6 +139,17 @@
       "sample": 1200,
       "company": "A. R. Publicidade e Pesquisa",
       "tradeName": "A. R. Publicidade e Pesquisa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP054082026": {
+      "protocol": "SP054082026",
+      "fieldStart": "2026-10-01",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-10-01",
+      "sample": 1500,
+      "company": "Gerp",
+      "tradeName": "Gerp",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -153,6 +186,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP065172026": {
+      "protocol": "SP065172026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-09-29",
+      "disclosureDate": "2026-10-01",
+      "sample": 1100,
+      "company": "Intelligence Pesquisa e Comunicacao",
+      "tradeName": "Intelligence Pesquisa e Comunicacao",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP067532026": {
       "protocol": "SP067532026",
       "fieldStart": "2026-09-22",
@@ -161,6 +205,17 @@
       "sample": 1600,
       "company": "Futura Inteligência",
       "tradeName": "Futura Inteligência",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP069052026": {
+      "protocol": "SP069052026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-10-01",
+      "sample": 600,
+      "company": "Sebram Pesquisas",
+      "tradeName": "Sebram Pesquisas",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
