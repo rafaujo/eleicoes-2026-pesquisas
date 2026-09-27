@@ -43,6 +43,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG011022026": {
+      "protocol": "MG011022026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-10-02",
+      "sample": 1500,
+      "company": "Instituto Panorama",
+      "tradeName": "Instituto Panorama",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG013022026": {
       "protocol": "MG013022026",
       "fieldStart": "2026-09-25",
@@ -62,6 +73,28 @@
       "sample": 1000,
       "company": "DataTempo",
       "tradeName": "DataTempo",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG019082026": {
+      "protocol": "MG019082026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-02",
+      "sample": 1200,
+      "company": "IGAPE",
+      "tradeName": "IGAPE",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG019422026": {
+      "protocol": "MG019422026",
+      "fieldStart": "2026-09-27",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-03",
+      "sample": 2200,
+      "company": "Atlasintel",
+      "tradeName": "Atlasintel",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -153,6 +186,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG048102026": {
+      "protocol": "MG048102026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 2030,
+      "company": "Veritá",
+      "tradeName": "Veritá",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG050322026": {
       "protocol": "MG050322026",
       "fieldStart": "2026-09-23",
@@ -161,6 +205,17 @@
       "sample": 600,
       "company": "Stats - Pesquisa e Gestao",
       "tradeName": "Stats - Pesquisa e Gestao",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG051022026": {
+      "protocol": "MG051022026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-30",
+      "disclosureDate": "2026-10-02",
+      "sample": 1067,
+      "company": "IPSensus",
+      "tradeName": "IPSensus",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -271,6 +326,17 @@
       "sample": 3000,
       "company": "Insight Brasil",
       "tradeName": "Insight Brasil",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG094342026": {
+      "protocol": "MG094342026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-09-30",
+      "disclosureDate": "2026-10-02",
+      "sample": 601,
+      "company": "Multidados Pesquisa Profissional Avancada",
+      "tradeName": "Multidados Pesquisa Profissional Avancada",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

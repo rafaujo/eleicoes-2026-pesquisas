@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-27 15:09:01",
+  "sourceGeneratedAt": "2026-09-27 18:58:21",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -9,6 +9,7 @@
     "BR000942026",
     "BR001092026",
     "BR001362026",
+    "BR001482026",
     "BR002022026",
     "BR002092026",
     "BR002112026",
@@ -204,6 +205,7 @@
     "BR029122026",
     "BR029182026",
     "BR029212026",
+    "BR029282026",
     "BR029442026",
     "BR029902026",
     "BR029952026",
@@ -326,6 +328,7 @@
     "BR043912026",
     "BR043962026",
     "BR044092026",
+    "BR044142026",
     "BR044192026",
     "BR044202026",
     "BR044422026",
@@ -554,6 +557,7 @@
     "BR078342026",
     "BR078382026",
     "BR078402026",
+    "BR078442026",
     "BR078452026",
     "BR078472026",
     "BR078502026",
@@ -604,6 +608,7 @@
     "BR084482026",
     "BR084532026",
     "BR084552026",
+    "BR084742026",
     "BR084892026",
     "BR085212026",
     "BR085432026",
@@ -699,6 +704,17 @@
     "BR099982026"
   ],
   "pending": {
+    "BR001482026": {
+      "protocol": "BR001482026",
+      "registeredAt": "2026-09-26",
+      "fieldStart": "2026-09-29",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 2100,
+      "company": "INSTITUTO VOX BRASIL OPINIAO E PESQUISAS LTDA",
+      "tradeName": "",
+      "contractors": []
+    },
     "BR003042026": {
       "protocol": "BR003042026",
       "registeredAt": "2026-09-18",
@@ -941,6 +957,17 @@
       "tradeName": "SECTRAL NEGOCIOS",
       "contractors": []
     },
+    "BR029282026": {
+      "protocol": "BR029282026",
+      "registeredAt": "2026-09-26",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-02",
+      "sample": 2000,
+      "company": "INSTITUTO FRANCA DE PESQUISAS LTDA",
+      "tradeName": "INSTITUTO FRANCA DE PESQUISA PESQUISA E ASSESSORIA",
+      "contractors": []
+    },
     "BR029902026": {
       "protocol": "BR029902026",
       "registeredAt": "2026-09-23",
@@ -1049,6 +1076,17 @@
       "sample": 5000,
       "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
       "tradeName": "ATLASINTEL",
+      "contractors": []
+    },
+    "BR044142026": {
+      "protocol": "BR044142026",
+      "registeredAt": "2026-09-26",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-09-30",
+      "disclosureDate": "2026-10-02",
+      "sample": 1200,
+      "company": "INSTITUTO DATATRENDS LTDA",
+      "tradeName": "DATATRENDS",
       "contractors": []
     },
     "BR044422026": {
@@ -1194,6 +1232,17 @@
       "tradeName": "JOTA JORNALISMO",
       "contractors": []
     },
+    "BR078442026": {
+      "protocol": "BR078442026",
+      "registeredAt": "2026-09-26",
+      "fieldStart": "2026-09-30",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-02",
+      "sample": 1500,
+      "company": "DATAVERO PESQUISA E CONSULTORIA LTDA",
+      "tradeName": "DATAVERO INSTITUTO DE PESQUISAS",
+      "contractors": []
+    },
     "BR079322026": {
       "protocol": "BR079322026",
       "registeredAt": "2026-09-03",
@@ -1236,6 +1285,17 @@
       "sample": 2400,
       "company": "GERP MERCADOLOGIA LTDA",
       "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
+      "contractors": []
+    },
+    "BR084742026": {
+      "protocol": "BR084742026",
+      "registeredAt": "2026-09-26",
+      "fieldStart": "2026-09-29",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 1500,
+      "company": "BADRA COMUNICACAO LTDA",
+      "tradeName": "BADRA COMUNICACAO",
       "contractors": []
     },
     "BR086912026": {
@@ -1331,6 +1391,17 @@
   },
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
+    "BR001482026": {
+      "protocol": "BR001482026",
+      "fieldStart": "2026-09-29",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 2100,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR005092026": {
       "protocol": "BR005092026",
       "fieldStart": "2026-09-30",
@@ -1394,6 +1465,17 @@
       "sample": 2400,
       "company": "Gerp",
       "tradeName": "Gerp",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR044142026": {
+      "protocol": "BR044142026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-09-30",
+      "disclosureDate": "2026-10-02",
+      "sample": 1200,
+      "company": "Datatrends",
+      "tradeName": "Datatrends",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

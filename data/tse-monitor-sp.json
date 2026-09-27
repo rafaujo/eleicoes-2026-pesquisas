@@ -65,6 +65,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP004532026": {
+      "protocol": "SP004532026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-02",
+      "sample": 1600,
+      "company": "Futura Inteligência",
+      "tradeName": "Futura Inteligência",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP011422026": {
+      "protocol": "SP011422026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 2496,
+      "company": "Badra",
+      "tradeName": "Badra",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP013672026": {
       "protocol": "SP013672026",
       "fieldStart": "2026-09-28",
@@ -73,6 +95,17 @@
       "sample": 1610,
       "company": "Datafolha",
       "tradeName": "Datafolha",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP013942026": {
+      "protocol": "SP013942026",
+      "fieldStart": "2026-09-27",
+      "fieldEnd": "2026-09-28",
+      "disclosureDate": "2026-10-02",
+      "sample": 500,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -109,6 +142,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP019962026": {
+      "protocol": "SP019962026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-02",
+      "sample": 1500,
+      "company": "Instituto França",
+      "tradeName": "Instituto França",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP025382026": {
       "protocol": "SP025382026",
       "fieldStart": "2026-09-23",
@@ -117,6 +161,17 @@
       "sample": 2000,
       "company": "Real Time Big Data",
       "tradeName": "Real Time Big Data",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP026692026": {
+      "protocol": "SP026692026",
+      "fieldStart": "2026-09-29",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 1500,
+      "company": "Badra",
+      "tradeName": "Badra",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -139,6 +194,17 @@
       "sample": 1200,
       "company": "A. R. Publicidade e Pesquisa",
       "tradeName": "A. R. Publicidade e Pesquisa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP052362026": {
+      "protocol": "SP052362026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 400,
+      "company": "Academia de Pesquisa",
+      "tradeName": "Academia de Pesquisa",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -208,6 +274,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP069062026": {
+      "protocol": "SP069062026",
+      "fieldStart": "2026-09-27",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-03",
+      "sample": 2200,
+      "company": "Atlasintel",
+      "tradeName": "Atlasintel",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP073772026": {
       "protocol": "SP073772026",
       "fieldStart": "2026-09-27",
@@ -230,6 +307,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP080202026": {
+      "protocol": "SP080202026",
+      "fieldStart": "2026-09-27",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 1000,
+      "company": "American Analytics",
+      "tradeName": "American Analytics",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP086892026": {
+      "protocol": "SP086892026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-09-30",
+      "disclosureDate": "2026-10-02",
+      "sample": 1000,
+      "company": "Pimentel & Carpentieri Consultoria de Marketing Ltda",
+      "tradeName": "Pimentel & Carpentieri Consultoria de Marketing Ltda",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP087312026": {
       "protocol": "SP087312026",
       "fieldStart": "2026-09-24",
@@ -238,6 +337,28 @@
       "sample": 1500,
       "company": "American Analytics",
       "tradeName": "American Analytics",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP089482026": {
+      "protocol": "SP089482026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 500,
+      "company": "Academia de Pesquisa",
+      "tradeName": "Academia de Pesquisa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP098862026": {
+      "protocol": "SP098862026",
+      "fieldStart": "2026-09-30",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-02",
+      "sample": 500,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
