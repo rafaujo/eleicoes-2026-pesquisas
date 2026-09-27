@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-26 21:56:44",
+  "sourceGeneratedAt": "2026-09-27 05:15:01",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -1394,17 +1394,6 @@
       "sample": 2400,
       "company": "Gerp",
       "tradeName": "Gerp",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR044672026": {
-      "protocol": "BR044672026",
-      "fieldStart": "2026-09-20",
-      "fieldEnd": "2026-09-25",
-      "disclosureDate": "2026-09-26",
-      "sample": 40500,
-      "company": "Veritá",
-      "tradeName": "Veritá",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
