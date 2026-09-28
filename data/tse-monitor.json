@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-27 22:07:32",
+  "sourceGeneratedAt": "2026-09-28 05:19:01",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -1446,28 +1446,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "BR036252026": {
-      "protocol": "BR036252026",
-      "fieldStart": "2026-09-23",
-      "fieldEnd": "2026-09-24",
-      "disclosureDate": "2026-09-27",
-      "sample": 468,
-      "company": "F5 Atualiza Dados",
-      "tradeName": "F5 Atualiza Dados",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR039292026": {
-      "protocol": "BR039292026",
-      "fieldStart": "2026-09-23",
-      "fieldEnd": "2026-09-26",
-      "disclosureDate": "2026-09-27",
-      "sample": 2400,
-      "company": "Gerp",
-      "tradeName": "Gerp",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR044142026": {
       "protocol": "BR044142026",
       "fieldStart": "2026-09-28",
@@ -1553,17 +1531,6 @@
       "sample": 2000,
       "company": "Instituto Ideia",
       "tradeName": "Instituto Ideia",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR099342026": {
-      "protocol": "BR099342026",
-      "fieldStart": "2026-09-23",
-      "fieldEnd": "2026-09-24",
-      "disclosureDate": "2026-09-27",
-      "sample": 595,
-      "company": "F5 Atualiza Dados",
-      "tradeName": "F5 Atualiza Dados",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
