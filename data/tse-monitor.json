@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-28 05:19:01",
+  "sourceGeneratedAt": "2026-09-28 18:09:18",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -1446,6 +1446,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "BR017082026": {
+      "protocol": "BR017082026",
+      "fieldStart": "2026-10-03",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-10-03",
+      "sample": 4006,
+      "company": "Datafolha",
+      "tradeName": "Datafolha",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR024312026": {
+      "protocol": "BR024312026",
+      "fieldStart": "2026-09-29",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-10-03",
+      "sample": 2000,
+      "company": "Futura Inteligência",
+      "tradeName": "Futura Inteligência",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR044142026": {
       "protocol": "BR044142026",
       "fieldStart": "2026-09-28",
@@ -1454,6 +1476,28 @@
       "sample": 1200,
       "company": "Datatrends",
       "tradeName": "Datatrends",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR045222026": {
+      "protocol": "BR045222026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-03",
+      "sample": 40500,
+      "company": "Veritá",
+      "tradeName": "Veritá",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR047562026": {
+      "protocol": "BR047562026",
+      "fieldStart": "2026-09-29",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-03",
+      "sample": 2002,
+      "company": "MDA",
+      "tradeName": "MDA",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -1487,17 +1531,6 @@
       "sample": 6000,
       "company": "JOTA",
       "tradeName": "JOTA",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR075572026": {
-      "protocol": "BR075572026",
-      "fieldStart": "2026-09-25",
-      "fieldEnd": "2026-09-27",
-      "disclosureDate": "2026-09-28",
-      "sample": 2000,
-      "company": "Nexus",
-      "tradeName": "Nexus",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

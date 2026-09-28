@@ -120,6 +120,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "MG022552026": {
+      "protocol": "MG022552026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-03",
+      "sample": 2000,
+      "company": "Real Time Big Data",
+      "tradeName": "Real Time Big Data",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "MG023552026": {
       "protocol": "MG023552026",
       "fieldStart": "2026-09-26",
@@ -260,6 +271,28 @@
       "sample": 401,
       "company": "Viavox Consultoria Administrativa e Pesquisas de Opiniao Ltda",
       "tradeName": "Viavox Consultoria Administrativa e Pesquisas de Opiniao Ltda",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG067052026": {
+      "protocol": "MG067052026",
+      "fieldStart": "2026-10-02",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-10-03",
+      "sample": 2010,
+      "company": "Datafolha",
+      "tradeName": "Datafolha",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "MG068892026": {
+      "protocol": "MG068892026",
+      "fieldStart": "2026-10-02",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-10-03",
+      "sample": 3204,
+      "company": "Quaest",
+      "tradeName": "Quaest",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

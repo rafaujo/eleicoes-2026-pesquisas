@@ -175,6 +175,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP036322026": {
+      "protocol": "SP036322026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-03",
+      "sample": 400,
+      "company": "Academia de Pesquisa",
+      "tradeName": "Academia de Pesquisa",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP037362026": {
+      "protocol": "SP037362026",
+      "fieldStart": "2026-09-29",
+      "fieldEnd": "2026-09-30",
+      "disclosureDate": "2026-10-03",
+      "sample": 1000,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP040912026": {
       "protocol": "SP040912026",
       "fieldStart": "2026-09-29",
@@ -186,14 +208,14 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "SP052362026": {
-      "protocol": "SP052362026",
-      "fieldStart": "2026-09-26",
-      "fieldEnd": "2026-10-01",
-      "disclosureDate": "2026-10-02",
-      "sample": 400,
-      "company": "Academia de Pesquisa",
-      "tradeName": "Academia de Pesquisa",
+    "SP047262026": {
+      "protocol": "SP047262026",
+      "fieldStart": "2026-10-02",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-10-03",
+      "sample": 3702,
+      "company": "Quaest",
+      "tradeName": "Quaest",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -205,6 +227,17 @@
       "sample": 1500,
       "company": "Gerp",
       "tradeName": "Gerp",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP059642026": {
+      "protocol": "SP059642026",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-03",
+      "sample": 500,
+      "company": "Academia de Pesquisa",
+      "tradeName": "Academia de Pesquisa",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -263,6 +296,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP070792026": {
+      "protocol": "SP070792026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-01",
+      "disclosureDate": "2026-10-03",
+      "sample": 2000,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP073002026": {
+      "protocol": "SP073002026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-10-02",
+      "disclosureDate": "2026-10-03",
+      "sample": 3025,
+      "company": "Veritá",
+      "tradeName": "Veritá",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP073772026": {
       "protocol": "SP073772026",
       "fieldStart": "2026-09-27",
@@ -296,6 +351,17 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "SP082972026": {
+      "protocol": "SP082972026",
+      "fieldStart": "2026-09-28",
+      "fieldEnd": "2026-09-29",
+      "disclosureDate": "2026-10-03",
+      "sample": 1000,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "SP086892026": {
       "protocol": "SP086892026",
       "fieldStart": "2026-09-28",
@@ -318,14 +384,36 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "SP089482026": {
-      "protocol": "SP089482026",
-      "fieldStart": "2026-09-26",
+    "SP088672026": {
+      "protocol": "SP088672026",
+      "fieldStart": "2026-09-29",
       "fieldEnd": "2026-10-01",
-      "disclosureDate": "2026-10-02",
-      "sample": 500,
-      "company": "Academia de Pesquisa",
-      "tradeName": "Academia de Pesquisa",
+      "disclosureDate": "2026-10-03",
+      "sample": 1200,
+      "company": "Datatrends",
+      "tradeName": "Datatrends",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP093082026": {
+      "protocol": "SP093082026",
+      "fieldStart": "2026-09-30",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-10-03",
+      "sample": 1600,
+      "company": "Paraná Pesquisas",
+      "tradeName": "Paraná Pesquisas",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "SP093372026": {
+      "protocol": "SP093372026",
+      "fieldStart": "2026-10-02",
+      "fieldEnd": "2026-10-03",
+      "disclosureDate": "2026-10-03",
+      "sample": 2520,
+      "company": "Datafolha",
+      "tradeName": "Datafolha",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
