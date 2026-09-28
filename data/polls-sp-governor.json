@@ -124,6 +124,46 @@
   ],
   "polls": [
     {
+      "id": 25,
+      "pollster": "Futura Inteligência",
+      "publication": "admin.cnnbrasil.com.br",
+      "protocol": "SP067532026",
+      "published": "2026-09-27",
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "field": "26–26 set",
+      "sample": 1600,
+      "margin": 2.4,
+      "confidence": 95,
+      "method": "Não informada",
+      "resultSource": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/09/Relatorio_SP_2026set_2.pdf",
+      "resultSourceLabel": "admin.cnnbrasil.com.br — resultado publicado",
+      "scenarios": {
+        "first-auto-haddad-izadora-machado-tarcisio-vera-vivian": {
+          "results": {
+            "tarcisio": 54.8,
+            "haddad": 32.6,
+            "vera": 0.8,
+            "machado": 0.4,
+            "vivian": 0.4,
+            "izadora": 0.7
+          },
+          "undecided": 10.5,
+          "resultSource": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/09/Relatorio_SP_2026set_2.pdf",
+          "resultSourceLabel": "admin.cnnbrasil.com.br — resultado publicado"
+        },
+        "runoff-tarcisio-haddad": {
+          "results": {
+            "tarcisio": 58.2,
+            "haddad": 35.6
+          },
+          "undecided": 6.2,
+          "resultSource": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/09/Relatorio_SP_2026set_2.pdf",
+          "resultSourceLabel": "admin.cnnbrasil.com.br — resultado publicado"
+        }
+      }
+    },
+    {
       "id": 23,
       "pollster": "Datafolha",
       "publication": "g1.globo.com",
