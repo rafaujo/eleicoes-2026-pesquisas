@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "2026-09-28 23:48:56",
+  "sourceGeneratedAt": "2026-09-29 05:40:21",
   "seenProtocols": [
     "BR000492026",
     "BR000592026",
@@ -1498,17 +1498,6 @@
       "sample": 2002,
       "company": "MDA",
       "tradeName": "MDA",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR056422026": {
-      "protocol": "BR056422026",
-      "fieldStart": "2026-09-25",
-      "fieldEnd": "2026-09-26",
-      "disclosureDate": "2026-09-28",
-      "sample": 777,
-      "company": "F5 Atualiza Dados",
-      "tradeName": "F5 Atualiza Dados",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },

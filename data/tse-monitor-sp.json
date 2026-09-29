@@ -109,17 +109,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "SP014862026": {
-      "protocol": "SP014862026",
-      "fieldStart": "2026-09-22",
-      "fieldEnd": "2026-09-27",
-      "disclosureDate": "2026-09-28",
-      "sample": 1800,
-      "company": "Atlasintel",
-      "tradeName": "Atlasintel",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "SP015902026": {
       "protocol": "SP015902026",
       "fieldStart": "2026-09-25",
@@ -150,17 +139,6 @@
       "sample": 1500,
       "company": "Instituto França",
       "tradeName": "Instituto França",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "SP025382026": {
-      "protocol": "SP025382026",
-      "fieldStart": "2026-09-23",
-      "fieldEnd": "2026-09-26",
-      "disclosureDate": "2026-09-28",
-      "sample": 2000,
-      "company": "Real Time Big Data",
-      "tradeName": "Real Time Big Data",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -260,17 +238,6 @@
       "sample": 1100,
       "company": "Intelligence Pesquisa e Comunicacao",
       "tradeName": "Intelligence Pesquisa e Comunicacao",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "SP067532026": {
-      "protocol": "SP067532026",
-      "fieldStart": "2026-09-22",
-      "fieldEnd": "2026-09-26",
-      "disclosureDate": "2026-09-28",
-      "sample": 1600,
-      "company": "Futura Inteligência",
-      "tradeName": "Futura Inteligência",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
