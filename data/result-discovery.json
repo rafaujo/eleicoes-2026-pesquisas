@@ -769,8 +769,10 @@
     "8eebe6b4908d5dfc0df0",
     "8f00b8427e663d3d3d30",
     "8f06992bae38fb81cb2b",
+    "8f105eee2942355dd27f",
     "8f1d337e4b1c0188de5c",
     "8f21bff6cd86030db99a",
+    "8f4a4dbb31bdb30a790a",
     "8f5ad60b5a9f58a51be0",
     "8f6c133d212655c7f936",
     "8f78c2acca4ea658e0d5",
@@ -1113,6 +1115,7 @@
     "c7cd30cb4846f15e9296",
     "c7d46ff4dbbddac0664a",
     "c8334096fd5478c5a6cd",
+    "c8bb876b884fa354e3cd",
     "c8db0239f4d213769f0a",
     "c9469646bc8df6381e52",
     "c9511cd56d592ce2fcc4",
@@ -1432,6 +1435,24 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Pesquisa CNT/MDA aponta Flávio com 46,8% e Lula com 45,9% de votos - Congresso em Foco",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbFJhV3R6U0tLX1NLLUphUDlpbk9ValV3NnR2VFR4ZGpFZU9jczNPWkc4eVhfV0VWalFwYkNMekZCZzhwMGwyd2txNzJaQnk1STFhdFdFR1lEaXNfLXBqbzdnS0tRUkpqeXd1ODJpb3V5bmpUeGxxSTBYbzlJMkJYZnFyb2JDMlRMUGpnNjdiMDJNbklqMHhMUHY0Y2JKdmNpS0RZZzIwSG5PbVk5cWF2dnZpd1U?oc=5",
+      "source": "Congresso em Foco",
+      "published": "2026-10-16",
+      "pollster": "CNT/MDA",
+      "key": "8f4a4dbb31bdb30a790a"
+    },
+    {
+      "election": "president-br",
+      "title": "Futura: Flávio tem 50,8% dos votos válidos no 2º turno; Lula, 49,2% - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM2JOQ3Y2ODNjNHdOaFEydDB1OG16VDhtWGlMOXc1MjlLVmp0RFpic3M5N0xyemJLMDJLZ0tOZkdkZEVHZUF4c0dhUThYNjNfR1hZbWxjNm9EenYtM2EtTEY3U3pvMGQtZGVTaXB1bTY5bWNPLW5xZ0hXVlR0eFdIb0lvc0d1b1E0ZFJoYWJ5TUpmdVFFUjBVTTBfVmNPbHJE?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-10-16",
+      "pollster": "Futura",
+      "key": "8f105eee2942355dd27f"
+    },
     {
       "election": "president-br",
       "title": "Flávio e Lula empatam em 50% dos votos válidos, diz pesquisa PoderData - UOL Notícias",
