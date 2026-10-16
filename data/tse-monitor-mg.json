@@ -1,311 +1,764 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "17/08/2026 05:46:24",
+  "sourceGeneratedAt": "15/10/2026 05:46:43",
   "seenProtocols": [
+    "MG001022026",
+    "MG003662026",
     "MG004462026",
+    "MG004682026",
+    "MG009982026",
+    "MG011022026",
+    "MG013022026",
     "MG013032026",
+    "MG015792026",
+    "MG015802026",
+    "MG016112026",
     "MG016642026",
+    "MG018512026",
+    "MG019082026",
+    "MG019422026",
+    "MG020192026",
     "MG021092026",
+    "MG021872026",
+    "MG021942026",
+    "MG022552026",
+    "MG023552026",
     "MG024302026",
     "MG025612026",
+    "MG026382026",
     "MG027702026",
+    "MG029802026",
     "MG029912026",
+    "MG032762026",
+    "MG032902026",
+    "MG033512026",
     "MG034902026",
+    "MG036882026",
     "MG037312026",
+    "MG037942026",
     "MG037972026",
     "MG038372026",
+    "MG039462026",
+    "MG040462026",
+    "MG040602026",
+    "MG042942026",
+    "MG042972026",
+    "MG045422026",
+    "MG047162026",
+    "MG048102026",
+    "MG050322026",
+    "MG051022026",
+    "MG051512026",
     "MG056132026",
     "MG058322026",
     "MG059112026",
+    "MG059192026",
+    "MG059622026",
+    "MG059722026",
+    "MG060142026",
+    "MG061242026",
+    "MG063342026",
     "MG064752026",
+    "MG065562026",
     "MG065622026",
+    "MG067052026",
+    "MG068892026",
     "MG068972026",
     "MG072992026",
+    "MG073312026",
+    "MG073372026",
     "MG073832026",
+    "MG074002026",
+    "MG075972026",
+    "MG077672026",
     "MG078652026",
+    "MG078982026",
+    "MG079722026",
+    "MG079772026",
+    "MG080272026",
     "MG082142026",
+    "MG082562026",
+    "MG083202026",
     "MG086462026",
+    "MG087782026",
+    "MG088682026",
+    "MG090352026",
+    "MG093812026",
+    "MG094342026",
     "MG095982026",
-    "MG099272026"
+    "MG097292026",
+    "MG099182026",
+    "MG099272026",
+    "MG099802026"
   ],
-  "pending": {},
-  "agendaSource": "https://depoisdas17.com.br/agenda/",
-  "upcoming": {
+  "pending": {
     "MG001022026": {
       "protocol": "MG001022026",
+      "registeredAt": "2026-09-25 18:09:59",
       "fieldStart": "2026-09-26",
       "fieldEnd": "2026-09-30",
       "disclosureDate": "2026-10-01",
       "sample": 400,
-      "company": "IPSensus",
-      "tradeName": "IPSensus",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "LAIS CRISTINA RODRIGUES DE OLIVEIRA LTDA",
+      "tradeName": "IPSENSUS PESQUISAS",
+      "contractors": [
+        "REDE VITORIOSA DE COMUNICACOES LTDA. / VITORIOSA"
+      ]
+    },
+    "MG003662026": {
+      "protocol": "MG003662026",
+      "registeredAt": "2026-08-25 19:51:49",
+      "fieldStart": "2026-08-25",
+      "fieldEnd": "2026-08-29",
+      "disclosureDate": "2026-08-31",
+      "sample": 1100,
+      "company": "SECTRAL SERVICOS E COMERCIO EM GERAL LTDA",
+      "tradeName": "SECTRAL NEGOCIOS",
+      "contractors": [
+        "MVR2 EMPREENDIMENTOS LTDA"
+      ]
+    },
+    "MG004682026": {
+      "protocol": "MG004682026",
+      "registeredAt": "2026-09-09 17:25:19",
+      "fieldStart": "2026-09-09",
+      "fieldEnd": "2026-09-12",
+      "disclosureDate": "2026-09-15",
+      "sample": 1000,
+      "company": "DATA TEMPO LIMITADA",
+      "tradeName": "",
+      "contractors": [
+        "SEMPRE EDITORA LTDA"
+      ]
     },
     "MG011022026": {
       "protocol": "MG011022026",
+      "registeredAt": "2026-09-26 14:29:27",
       "fieldStart": "2026-09-26",
       "fieldEnd": "2026-09-28",
       "disclosureDate": "2026-10-02",
       "sample": 1500,
-      "company": "Instituto Panorama",
-      "tradeName": "Instituto Panorama",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "PANORAMA COMUNICACAO, PESQUISA E ASSESSORIA LTDA",
+      "tradeName": "INSTITUTO PANORAMA",
+      "contractors": [
+        "INSTITUTO APRIMORE CONSULTORIA E CAPACITACAO / APRIMORE"
+      ]
     },
     "MG013022026": {
       "protocol": "MG013022026",
+      "registeredAt": "2026-09-23 22:10:27",
       "fieldStart": "2026-09-25",
       "fieldEnd": "2026-09-26",
       "disclosureDate": "2026-09-29",
       "sample": 775,
-      "company": "F5 Atualiza Dados",
-      "tradeName": "F5 Atualiza Dados",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "F5 ATUALIZA DADOS LTDA",
+      "tradeName": "F5 ATUALIZA DADOS",
+      "contractors": [
+        "TV MINAS SUL LTDA"
+      ]
+    },
+    "MG015802026": {
+      "protocol": "MG015802026",
+      "registeredAt": "2026-09-19 21:48:31",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 400,
+      "company": "RESULTADO PESQUISA E ASSESSORIA LTDA - ME",
+      "tradeName": "",
+      "contractors": [
+        "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA / PSDB-DIRETORIO REGIONAL EM MG"
+      ]
     },
     "MG018512026": {
       "protocol": "MG018512026",
+      "registeredAt": "2026-09-23 16:40:48",
       "fieldStart": "2026-09-24",
       "fieldEnd": "2026-09-27",
       "disclosureDate": "2026-09-29",
       "sample": 1000,
-      "company": "DataTempo",
-      "tradeName": "DataTempo",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "DATA TEMPO LIMITADA",
+      "tradeName": "",
+      "contractors": [
+        "SEMPRE EDITORA LTDA"
+      ]
     },
     "MG019082026": {
       "protocol": "MG019082026",
+      "registeredAt": "2026-09-26 23:16:22",
       "fieldStart": "2026-09-28",
       "fieldEnd": "2026-10-02",
       "disclosureDate": "2026-10-02",
       "sample": 1200,
-      "company": "IGAPE",
-      "tradeName": "IGAPE",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "INSTITUTO GAZETA LTDA",
+      "tradeName": "IGAPE- INSTITUTO GAZETA DE PEQUISAS",
+      "contractors": [
+        "TV ATUAL LTDA / TV ATUAL"
+      ]
     },
     "MG019422026": {
       "protocol": "MG019422026",
+      "registeredAt": "2026-09-27 01:01:51",
       "fieldStart": "2026-09-27",
       "fieldEnd": "2026-10-02",
       "disclosureDate": "2026-10-03",
       "sample": 2200,
-      "company": "Atlasintel",
-      "tradeName": "Atlasintel",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
+      "tradeName": "ATLASINTEL",
+      "contractors": [
+        "ATLASINTEL TECNOLOGIA DE DADOS LTDA"
+      ]
     },
     "MG020192026": {
       "protocol": "MG020192026",
+      "registeredAt": "2026-09-23 19:36:58",
       "fieldStart": "2026-09-25",
       "fieldEnd": "2026-09-28",
       "disclosureDate": "2026-09-29",
       "sample": 1506,
-      "company": "Quaest",
-      "tradeName": "Quaest",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "contractors": [
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+      ]
+    },
+    "MG021872026": {
+      "protocol": "MG021872026",
+      "registeredAt": "2026-09-19 21:35:36",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 500,
+      "company": "RESULTADO PESQUISA E ASSESSORIA LTDA - ME",
+      "tradeName": "",
+      "contractors": [
+        "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA / PSDB-DIRETORIO REGIONAL EM MG"
+      ]
     },
     "MG021942026": {
       "protocol": "MG021942026",
+      "registeredAt": "2026-09-24 22:54:20",
       "fieldStart": "2026-09-25",
       "fieldEnd": "2026-09-27",
       "disclosureDate": "2026-09-30",
       "sample": 500,
-      "company": "Inpac",
-      "tradeName": "Inpac",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "INPAC INSTITUTO DE PESQUISAS APLICADAS E CONSULTORIA LTDA - ME",
+      "tradeName": "INPAC",
+      "contractors": [
+        "CONTATO PRODUCOES E RADIODIFUSAO LTDA"
+      ]
     },
     "MG022552026": {
       "protocol": "MG022552026",
+      "registeredAt": "2026-09-27 16:56:34",
       "fieldStart": "2026-09-28",
       "fieldEnd": "2026-10-02",
       "disclosureDate": "2026-10-03",
       "sample": 2000,
-      "company": "Real Time Big Data",
-      "tradeName": "Real Time Big Data",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": [
+        "TELEVISAO SOCIEDADE LIMITADA / REDE RECORD MINAS E/OU RECORD TV MINAS"
+      ]
     },
     "MG023552026": {
       "protocol": "MG023552026",
+      "registeredAt": "2026-09-24 22:39:18",
       "fieldStart": "2026-09-26",
       "fieldEnd": "2026-09-29",
       "disclosureDate": "2026-09-30",
       "sample": 801,
-      "company": "Nexxus Mais",
-      "tradeName": "Nexxus Mais",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "NEXXUS MAIS LTDA",
+      "tradeName": "NEXXUS MAIS",
+      "contractors": [
+        "LIBDS 07 PRODUCOES LTDA / LIBDS 07"
+      ]
+    },
+    "MG026382026": {
+      "protocol": "MG026382026",
+      "registeredAt": "2026-09-18 23:04:31",
+      "fieldStart": "2026-09-19",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-24",
+      "sample": 1100,
+      "company": "SECTRAL SERVICOS E COMERCIO EM GERAL LTDA",
+      "tradeName": "SECTRAL NEGOCIOS",
+      "contractors": [
+        "MVR2 EMPREENDIMENTOS LTDA"
+      ]
+    },
+    "MG029802026": {
+      "protocol": "MG029802026",
+      "registeredAt": "2026-09-19 21:22:52",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 600,
+      "company": "RESULTADO PESQUISA E ASSESSORIA LTDA - ME",
+      "tradeName": "",
+      "contractors": [
+        "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA / PSDB-DIRETORIO REGIONAL EM MG"
+      ]
+    },
+    "MG033512026": {
+      "protocol": "MG033512026",
+      "registeredAt": "2026-09-22 23:27:54",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-28",
+      "sample": 2000,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": [
+        "TELEVISAO SOCIEDADE LIMITADA / REDE RECORD MINAS E/OU RECORD TV MINAS"
+      ]
     },
     "MG036882026": {
       "protocol": "MG036882026",
+      "registeredAt": "2026-09-23 23:02:36",
       "fieldStart": "2026-09-18",
       "fieldEnd": "2026-09-24",
       "disclosureDate": "2026-09-29",
       "sample": 1120,
-      "company": "Promidia Pesquisas de Opiniao Publica",
-      "tradeName": "Promidia Pesquisas de Opiniao Publica",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "PROMIDIA PESQUISA DE OPINIAO PUBLICA E MARKETING LTDA",
+      "tradeName": "PROMIDIA PESQUISAS DE OPINIAO PUBLICA",
+      "contractors": [
+        "EXPRESSO FM E RADIODIFUSAO LTDA"
+      ]
+    },
+    "MG037942026": {
+      "protocol": "MG037942026",
+      "registeredAt": "2026-08-17 14:55:19",
+      "fieldStart": "2026-08-17",
+      "fieldEnd": "2026-08-20",
+      "disclosureDate": "2026-08-23",
+      "sample": 1000,
+      "company": "DATA TEMPO LIMITADA",
+      "tradeName": "",
+      "contractors": [
+        "SEMPRE EDITORA LTDA"
+      ]
+    },
+    "MG039462026": {
+      "protocol": "MG039462026",
+      "registeredAt": "2026-08-28 16:53:28",
+      "fieldStart": "2026-08-29",
+      "fieldEnd": "2026-08-30",
+      "disclosureDate": "2026-09-03",
+      "sample": 1000,
+      "company": "F5 ATUALIZA DADOS LTDA",
+      "tradeName": "F5 ATUALIZA DADOS",
+      "contractors": [
+        "I9 COMUNICACAO, CONSULTORIA E MARKETING LTDA / AREA 35"
+      ]
     },
     "MG040462026": {
       "protocol": "MG040462026",
+      "registeredAt": "2026-09-25 11:49:49",
       "fieldStart": "2026-09-25",
       "fieldEnd": "2026-09-29",
       "disclosureDate": "2026-10-01",
       "sample": 1000,
-      "company": "Instituto Ideia",
-      "tradeName": "Instituto Ideia",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "BOAS IDEIAS INTELIGENCIA EM PESQUISA E ESTRATEGIA DIGITAL LTDA",
+      "tradeName": "BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.",
+      "contractors": [
+        "SISTEMA MINEIRO DE COMUNICACAO LTDA"
+      ]
+    },
+    "MG042942026": {
+      "protocol": "MG042942026",
+      "registeredAt": "2026-09-22 23:16:57",
+      "fieldStart": "2026-09-22",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-28",
+      "sample": 1800,
+      "company": "ATLASINTEL TECNOLOGIA DE DADOS LTDA",
+      "tradeName": "ATLASINTEL",
+      "contractors": [
+        "ATLASINTEL TECNOLOGIA DE DADOS LTDA"
+      ]
+    },
+    "MG042972026": {
+      "protocol": "MG042972026",
+      "registeredAt": "2026-09-17 08:55:05",
+      "fieldStart": "2026-09-16",
+      "fieldEnd": "2026-09-21",
+      "disclosureDate": "2026-09-23",
+      "sample": 1000,
+      "company": "SCANY OPINIAO E PESQUISA LTDA",
+      "tradeName": "SCANY PESQUISA",
+      "contractors": [
+        "SCANY OPINIAO E PESQUISA LTDA"
+      ]
+    },
+    "MG045422026": {
+      "protocol": "MG045422026",
+      "registeredAt": "2026-09-22 23:53:28",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-28",
+      "sample": 300,
+      "company": "INSTITUTO DE PESQUISA SOBERANO LTDA",
+      "tradeName": "INSTITUTO DE PESQUISA SOBERANO",
+      "contractors": [
+        "RETINA ELETRICA PRODUCOES CULTURAIS LTDA / RETINA ELETRICA PRODUCOES CULTURAIS"
+      ]
     },
     "MG048102026": {
       "protocol": "MG048102026",
+      "registeredAt": "2026-09-26 22:06:43",
       "fieldStart": "2026-09-26",
       "fieldEnd": "2026-10-01",
       "disclosureDate": "2026-10-02",
       "sample": 2030,
-      "company": "Veritá",
-      "tradeName": "Veritá",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "INSTITUTO VERITA LTDA"
+      ]
     },
     "MG050322026": {
       "protocol": "MG050322026",
+      "registeredAt": "2026-09-23 08:30:53",
       "fieldStart": "2026-09-23",
       "fieldEnd": "2026-09-28",
       "disclosureDate": "2026-09-29",
       "sample": 600,
-      "company": "Stats - Pesquisa e Gestao",
-      "tradeName": "Stats - Pesquisa e Gestao",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "NELSON RANNIERI TIRONE LTDA",
+      "tradeName": "STATS - PESQUISA E GESTAO",
+      "contractors": [
+        "ASSOCIACAO PARA O DESENVOLVIMENTO DE UBERABA - ADUB / ADUB - ASSOCIACAO PARA O DESENVOLVIMENTO DE UBERABA"
+      ]
     },
     "MG051022026": {
       "protocol": "MG051022026",
+      "registeredAt": "2026-09-26 12:04:53",
       "fieldStart": "2026-09-26",
       "fieldEnd": "2026-09-30",
       "disclosureDate": "2026-10-02",
       "sample": 1067,
-      "company": "IPSensus",
-      "tradeName": "IPSensus",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "LAIS CRISTINA RODRIGUES DE OLIVEIRA LTDA",
+      "tradeName": "IPSENSUS PESQUISAS",
+      "contractors": [
+        "USA - USINA SIDERURGICA ATLAS S/A"
+      ]
     },
     "MG051512026": {
       "protocol": "MG051512026",
+      "registeredAt": "2026-09-24 00:20:17",
       "fieldStart": "2026-09-20",
       "fieldEnd": "2026-09-25",
       "disclosureDate": "2026-09-30",
       "sample": 1420,
-      "company": "Data Dados Pesquisa de Mercado",
-      "tradeName": "Data Dados Pesquisa de Mercado",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "DATA DADOS PESQUISA E OPINIAO PUBLICA LTDA",
+      "tradeName": "DATA DADOS PESQUISA DE MERCADO",
+      "contractors": [
+        "EXPRESSO FM E RADIODIFUSAO LTDA"
+      ]
     },
     "MG059622026": {
       "protocol": "MG059622026",
+      "registeredAt": "2026-09-23 12:51:06",
       "fieldStart": "2026-09-23",
       "fieldEnd": "2026-09-27",
       "disclosureDate": "2026-09-29",
       "sample": 1067,
-      "company": "IPSensus",
-      "tradeName": "IPSensus",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "LAIS CRISTINA RODRIGUES DE OLIVEIRA LTDA",
+      "tradeName": "IPSENSUS PESQUISAS",
+      "contractors": [
+        "USA - USINA SIDERURGICA ATLAS S/A"
+      ]
+    },
+    "MG059722026": {
+      "protocol": "MG059722026",
+      "registeredAt": "2026-09-18 20:14:40",
+      "fieldStart": "2026-09-26",
+      "fieldEnd": "2026-09-27",
+      "disclosureDate": "2026-09-24",
+      "sample": 500,
+      "company": "INPAC INSTITUTO DE PESQUISAS APLICADAS E CONSULTORIA LTDA - ME",
+      "tradeName": "INPAC",
+      "contractors": [
+        "LENE RADIODIFUSAO LTDA / RADIO BOA VISTA DE PARACATU"
+      ]
+    },
+    "MG060142026": {
+      "protocol": "MG060142026",
+      "registeredAt": "2026-09-08 23:32:12",
+      "fieldStart": "2026-09-08",
+      "fieldEnd": "2026-09-13",
+      "disclosureDate": "2026-09-14",
+      "sample": 1100,
+      "company": "SECTRAL SERVICOS E COMERCIO EM GERAL LTDA",
+      "tradeName": "SECTRAL NEGOCIOS",
+      "contractors": [
+        "MVR2 EMPREENDIMENTOS LTDA"
+      ]
+    },
+    "MG061242026": {
+      "protocol": "MG061242026",
+      "registeredAt": "2026-09-13 10:29:26",
+      "fieldStart": "2026-09-14",
+      "fieldEnd": "2026-09-18",
+      "disclosureDate": "2026-09-19",
+      "sample": 1500,
+      "company": "PANORAMA COMUNICACAO, PESQUISA E ASSESSORIA LTDA",
+      "tradeName": "INSTITUTO PANORAMA",
+      "contractors": [
+        "PARTIDO LIBERAL - MINAS GERAIS - MG - ESTADUAL"
+      ]
     },
     "MG063342026": {
       "protocol": "MG063342026",
+      "registeredAt": "2026-09-25 13:45:13",
       "fieldStart": "2026-09-22",
       "fieldEnd": "2026-09-24",
       "disclosureDate": "2026-10-01",
       "sample": 300,
-      "company": "Inpac",
-      "tradeName": "Inpac",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "INPAC INSTITUTO DE PESQUISAS APLICADAS E CONSULTORIA LTDA - ME",
+      "tradeName": "INPAC",
+      "contractors": [
+        "CONTATO PRODUCOES E RADIODIFUSAO LTDA"
+      ]
+    },
+    "MG065562026": {
+      "protocol": "MG065562026",
+      "registeredAt": "2026-09-22 23:44:02",
+      "fieldStart": "2026-09-24",
+      "fieldEnd": "2026-09-26",
+      "disclosureDate": "2026-09-28",
+      "sample": 401,
+      "company": "VIAVOX CONSULTORIA ADMINISTRATIVA E PESQUISAS DE OPINIAO LTDA",
+      "tradeName": "",
+      "contractors": [
+        "SOCIEDADE TRESPONTANA DE RADIODIFUSAO LTDA"
+      ]
     },
     "MG067052026": {
       "protocol": "MG067052026",
+      "registeredAt": "2026-09-27 18:30:10",
       "fieldStart": "2026-10-02",
       "fieldEnd": "2026-10-03",
       "disclosureDate": "2026-10-03",
       "sample": 2010,
-      "company": "Datafolha",
-      "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "contractors": [
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
+      ]
     },
     "MG068892026": {
       "protocol": "MG068892026",
+      "registeredAt": "2026-09-27 08:47:00",
       "fieldStart": "2026-10-02",
       "fieldEnd": "2026-10-03",
       "disclosureDate": "2026-10-03",
       "sample": 3204,
-      "company": "Quaest",
-      "tradeName": "Quaest",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
+      "tradeName": "",
+      "contractors": [
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+      ]
+    },
+    "MG073312026": {
+      "protocol": "MG073312026",
+      "registeredAt": "2026-09-15 22:39:08",
+      "fieldStart": "2026-09-16",
+      "fieldEnd": "2026-09-19",
+      "disclosureDate": "2026-09-21",
+      "sample": 2000,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": [
+        "TELEVISAO SOCIEDADE LIMITADA / REDE RECORD MINAS E/OU RECORD TV MINAS"
+      ]
+    },
+    "MG073372026": {
+      "protocol": "MG073372026",
+      "registeredAt": "2026-09-15 20:28:03",
+      "fieldStart": "2026-09-17",
+      "fieldEnd": "2026-09-20",
+      "disclosureDate": "2026-09-21",
+      "sample": 1197,
+      "company": "INSTITUTO VER PESQUISA E COMUNICACAO LTDA",
+      "tradeName": "",
+      "contractors": [
+        "RADIO ITATIAIA S.A."
+      ]
     },
     "MG075972026": {
       "protocol": "MG075972026",
+      "registeredAt": "2026-09-23 16:02:52",
       "fieldStart": "2026-09-25",
       "fieldEnd": "2026-09-27",
       "disclosureDate": "2026-09-29",
       "sample": 600,
-      "company": "Instituto Ver",
-      "tradeName": "Instituto Ver",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "INSTITUTO VER PESQUISA E COMUNICACAO LTDA",
+      "tradeName": "",
+      "contractors": [
+        "BRUNO ARGOLO RODRIGUES SILVA / JORNAL DA CIDADE"
+      ]
+    },
+    "MG077672026": {
+      "protocol": "MG077672026",
+      "registeredAt": "2026-09-19 22:58:45",
+      "fieldStart": "2026-09-20",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-25",
+      "sample": 2030,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "SISTEMA DE COMUNICACAO PANTANAL LTDA / REDE BRASIL DE TELEVISAO"
+      ]
     },
     "MG079772026": {
       "protocol": "MG079772026",
+      "registeredAt": "2026-09-25 21:15:56",
       "fieldStart": "2026-09-27",
       "fieldEnd": "2026-09-30",
       "disclosureDate": "2026-10-01",
       "sample": 803,
-      "company": "Nexxus Mais",
-      "tradeName": "Nexxus Mais",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "NEXXUS MAIS LTDA",
+      "tradeName": "NEXXUS MAIS",
+      "contractors": [
+        "LIBDS 07 PRODUCOES LTDA / LIBDS 07"
+      ]
     },
     "MG080272026": {
       "protocol": "MG080272026",
+      "registeredAt": "2026-09-24 22:24:17",
       "fieldStart": "2026-09-26",
       "fieldEnd": "2026-09-29",
       "disclosureDate": "2026-09-30",
       "sample": 3503,
-      "company": "Nexxus Mais",
-      "tradeName": "Nexxus Mais",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "NEXXUS MAIS LTDA",
+      "tradeName": "NEXXUS MAIS",
+      "contractors": [
+        "LIBDS 07 PRODUCOES LTDA / LIBDS 07"
+      ]
+    },
+    "MG082562026": {
+      "protocol": "MG082562026",
+      "registeredAt": "2026-09-21 12:29:14",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-27",
+      "sample": 468,
+      "company": "F5 ATUALIZA DADOS LTDA",
+      "tradeName": "F5 ATUALIZA DADOS",
+      "contractors": [
+        "TV MINAS SUL LTDA"
+      ]
+    },
+    "MG083202026": {
+      "protocol": "MG083202026",
+      "registeredAt": "2026-09-16 17:40:51",
+      "fieldStart": "2026-09-17",
+      "fieldEnd": "2026-09-19",
+      "disclosureDate": "2026-09-22",
+      "sample": 782,
+      "company": "F5 ATUALIZA DADOS LTDA",
+      "tradeName": "F5 ATUALIZA DADOS",
+      "contractors": [
+        "TV TIRADENTES LTDA"
+      ]
+    },
+    "MG087782026": {
+      "protocol": "MG087782026",
+      "registeredAt": "2026-09-21 12:09:17",
+      "fieldStart": "2026-09-23",
+      "fieldEnd": "2026-09-24",
+      "disclosureDate": "2026-09-27",
+      "sample": 595,
+      "company": "F5 ATUALIZA DADOS LTDA",
+      "tradeName": "F5 ATUALIZA DADOS",
+      "contractors": [
+        "TV MINAS SUL LTDA"
+      ]
+    },
+    "MG088682026": {
+      "protocol": "MG088682026",
+      "registeredAt": "2026-09-21 09:36:51",
+      "fieldStart": "2026-09-21",
+      "fieldEnd": "2026-09-25",
+      "disclosureDate": "2026-09-27",
+      "sample": 3000,
+      "company": "INSIGHT DATA ANALYTICS INFORMACAO E ANALISE LTDA",
+      "tradeName": "INSIGHT BRASIL",
+      "contractors": [
+        "UNIAO BRASIL - MINAS GERAIS - MG - ESTADUAL"
+      ]
+    },
+    "MG093812026": {
+      "protocol": "MG093812026",
+      "registeredAt": "2026-09-18 08:41:07",
+      "fieldStart": "2026-09-16",
+      "fieldEnd": "2026-09-23",
+      "disclosureDate": "2026-09-24",
+      "sample": 1500,
+      "company": "INSTITUTO ALVES LIMA - INTELIGENCIA EM PESQUISAS SOCIAIS E CONSULTORIA ESTRATEGICA LTDA",
+      "tradeName": "INSTITUTO ALVES LIMA",
+      "contractors": [
+        "SISTEMA MINEIRO DE COMUNICACAO LTDA"
+      ]
     },
     "MG094342026": {
       "protocol": "MG094342026",
+      "registeredAt": "2026-09-26 23:11:32",
       "fieldStart": "2026-09-28",
       "fieldEnd": "2026-09-30",
       "disclosureDate": "2026-10-02",
       "sample": 601,
-      "company": "Multidados Pesquisa Profissional Avancada",
-      "tradeName": "Multidados Pesquisa Profissional Avancada",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "MULTIDADOS PESQUISA LTDA",
+      "tradeName": "MULTIDADOS PESQUISA PROFISSIONAL AVANCADA",
+      "contractors": [
+        "MULTIDADOS PESQUISA LTDA"
+      ]
     },
     "MG097292026": {
       "protocol": "MG097292026",
+      "registeredAt": "2026-09-25 20:47:25",
       "fieldStart": "2026-09-28",
       "fieldEnd": "2026-10-01",
       "disclosureDate": "2026-10-01",
       "sample": 1204,
-      "company": "Datafolha",
-      "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "contractors": [
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
+      ]
+    },
+    "MG099182026": {
+      "protocol": "MG099182026",
+      "registeredAt": "2026-09-05 13:01:52",
+      "fieldStart": "2026-09-05",
+      "fieldEnd": "2026-09-10",
+      "disclosureDate": "2026-09-11",
+      "sample": 2030,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "INSTITUTO VERITA LTDA"
+      ]
+    },
+    "MG099802026": {
+      "protocol": "MG099802026",
+      "registeredAt": "2026-08-18 21:47:30",
+      "fieldStart": "2026-08-19",
+      "fieldEnd": "2026-08-23",
+      "disclosureDate": "2026-08-24",
+      "sample": 2030,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "INSTITUTO VERITA LTDA"
+      ]
     }
-  }
+  },
+  "agendaSource": "https://depoisdas17.com.br/agenda/",
+  "upcoming": {}
 }
