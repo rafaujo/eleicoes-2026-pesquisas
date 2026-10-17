@@ -146,6 +146,7 @@
     "1ab2cfb4688479cdd881",
     "1ae4d04a9e9e36b36e65",
     "1b6a2699f07858c4bb57",
+    "1b8fbcbd85db2a2ac3e4",
     "1b954bb7630691ea25e4",
     "1ba342b15b46d85eb6a2",
     "1bc26162b43b2a501575",
@@ -480,6 +481,7 @@
     "58228710dc48f4d0d26d",
     "58805b8d4ee02f19aa36",
     "58b255bb2fda772169ee",
+    "5903f505962e2a86861d",
     "598386b75de2aafb1e2f",
     "59a644db688c7c2da364",
     "59c75ecd6c40d9a7bf39",
@@ -640,6 +642,7 @@
     "75af1b62826f5b4947db",
     "75c044ec479f7f98d963",
     "75c0ed4d569317aed748",
+    "75cd13624fe0ce4d5433",
     "75d09f0535227692475a",
     "762c7b4fda4ea6c290a2",
     "762e5a8536a7a9d9ad07",
@@ -1055,6 +1058,7 @@
     "bd0d5eae22dab7e4b19a",
     "bdc3ca0dd24fde80c4b8",
     "bdd9e2ebe6850309c932",
+    "bdfcf5df85db1b395393",
     "be0400e470bd98ad2315",
     "be199eff496b79c65834",
     "be1c03b007ee8eb8d104",
@@ -1216,6 +1220,7 @@
     "d991ce6350183629d346",
     "d9cb0499c0c28a35dbd3",
     "da018a24a632d23be347",
+    "da2f9bfdf2993aed56d9",
     "da5fcd6be0443cfcda33",
     "dac597955c644d6d1e86",
     "db07da7fa15e6bdcf70e",
@@ -1440,21 +1445,21 @@
   "pending": [
     {
       "election": "president-br",
-      "title": "Pesquisa CNT/MDA aponta Flávio com 46,8% e Lula com 45,9% de votos - Congresso em Foco",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbFJhV3R6U0tLX1NLLUphUDlpbk9ValV3NnR2VFR4ZGpFZU9jczNPWkc4eVhfV0VWalFwYkNMekZCZzhwMGwyd2txNzJaQnk1STFhdFdFR1lEaXNfLXBqbzdnS0tRUkpqeXd1ODJpb3V5bmpUeGxxSTBYbzlJMkJYZnFyb2JDMlRMUGpnNjdiMDJNbklqMHhMUHY0Y2JKdmNpS0RZZzIwSG5PbVk5cWF2dnZpd1U?oc=5",
-      "source": "Congresso em Foco",
-      "published": "2026-10-16",
-      "pollster": "CNT/MDA",
-      "key": "8f4a4dbb31bdb30a790a"
-    },
-    {
-      "election": "president-br",
       "title": "Futura: Flávio tem 50,8% dos votos válidos no 2º turno; Lula, 49,2% - CNN Brasil",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM2JOQ3Y2ODNjNHdOaFEydDB1OG16VDhtWGlMOXc1MjlLVmp0RFpic3M5N0xyemJLMDJLZ0tOZkdkZEVHZUF4c0dhUThYNjNfR1hZbWxjNm9EenYtM2EtTEY3U3pvMGQtZGVTaXB1bTY5bWNPLW5xZ0hXVlR0eFdIb0lvc0d1b1E0ZFJoYWJ5TUpmdVFFUjBVTTBfVmNPbHJE?oc=5",
       "source": "CNN Brasil",
       "published": "2026-10-16",
       "pollster": "Futura",
       "key": "8f105eee2942355dd27f"
+    },
+    {
+      "election": "president-br",
+      "title": "CNT/MDA: Flávio Bolsonaro tem 46,8% e Lula tem 45,9%, em empate técnico no 2º turno - Estadão",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNX1hfQTM2WlpBZ0xDbXUyT1FaX2o5NVVrcUU5V3ZyZnBITU9Oc0NWVmxUdmVabkhiUV9ONlltTnNnVmVKbEZWbkJJSHRNbUVKaTFyUlpKM19CZnRtOWRZUWdTUHNGS0JKU05DMl9VYm5CdW1ZMlo5bXFnbTVJcEdtVU01N3FGV0kzRjFaZTRmeEhQZ1ZXdVdRZlN0RFZmQnduMGVHSndVemhncEpQeXFJX1hBdTFFMUhsZDhrdUx30gHDAUFVX3lxTE4zU2tWR0loUkdJc0ptWW03Uy1fNnJqSk1waEk5b3VJZHVlUS13ZWM2U3pzUnQ4RzdJTDlZSllXc1JXN011NUU2Tm5OLV9PUHZTR1RoVkJNRzZVS1RoU0dRWXEzTm1wQzhlb3pCOWxLSU83SFNqYXN6dmo3TDViVkxyR1MxbTRjMVo3X0g2NmI5QzZINkRwdExwdkV3MnBqM0FTNzFDUWdob182dkdZTndVT1BMbGpoeGFPbC0zYjBhMVNuUQ?oc=5",
+      "source": "Estadão",
+      "published": "2026-10-16",
+      "pollster": "CNT/MDA",
+      "key": "75cd13624fe0ce4d5433"
     },
     {
       "election": "president-br",

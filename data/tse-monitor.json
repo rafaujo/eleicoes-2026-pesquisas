@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "16/10/2026 05:47:08",
+  "sourceGeneratedAt": "17/10/2026 05:46:51",
   "seenProtocols": [
     "BR000012026",
     "BR000492026",
@@ -114,6 +114,7 @@
     "BR008462026",
     "BR008602026",
     "BR008732026",
+    "BR008752026",
     "BR008782026",
     "BR008792026",
     "BR008862026",
@@ -300,6 +301,7 @@
     "BR023362026",
     "BR023442026",
     "BR023452026",
+    "BR023482026",
     "BR023672026",
     "BR023862026",
     "BR023892026",
@@ -757,11 +759,13 @@
     "BR056352026",
     "BR056422026",
     "BR056432026",
+    "BR056542026",
     "BR056612026",
     "BR056712026",
     "BR056722026",
     "BR056782026",
     "BR056862026",
+    "BR057042026",
     "BR057112026",
     "BR057142026",
     "BR057202026",
@@ -1070,6 +1074,7 @@
     "BR079192026",
     "BR079232026",
     "BR079242026",
+    "BR079262026",
     "BR079322026",
     "BR079332026",
     "BR079352026",
@@ -1262,6 +1267,7 @@
     "BR092852026",
     "BR093012026",
     "BR093222026",
+    "BR093272026",
     "BR093302026",
     "BR093322026",
     "BR093332026",
@@ -1317,6 +1323,7 @@
     "BR096922026",
     "BR097022026",
     "BR097052026",
+    "BR097092026",
     "BR097142026",
     "BR097422026",
     "BR097492026",
@@ -1337,6 +1344,7 @@
     "BR098522026",
     "BR098532026",
     "BR098562026",
+    "BR098582026",
     "BR098702026",
     "BR098852026",
     "BR098882026",
@@ -1399,8 +1407,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
-        "EMPRESA FOLHA DA MANHA S.A."
+        "EMPRESA FOLHA DA MANHA S.A.",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
     "BR001362026": {
@@ -1556,8 +1564,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR003412026": {
@@ -2157,6 +2165,20 @@
         "PALVER CONSULTORIA E DESENVOLVIMENTO TECNOLOGICO LTDA."
       ]
     },
+    "BR008752026": {
+      "protocol": "BR008752026",
+      "registeredAt": "2026-10-16 22:17:01",
+      "fieldStart": "2026-10-20",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-22",
+      "sample": 910,
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "contractors": [
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
+      ]
+    },
     "BR008862026": {
       "protocol": "BR008862026",
       "registeredAt": "2026-09-27 21:16:14",
@@ -2506,8 +2528,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR012802026": {
@@ -3210,8 +3232,8 @@
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
       "tradeName": "",
       "contractors": [
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
-        "EDITORA GLOBO S/A / EDITORA GLOBO"
+        "EDITORA GLOBO S/A / EDITORA GLOBO",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
     "BR022122026": {
@@ -3394,6 +3416,19 @@
       "tradeName": "DATA CAPITAL PESQUISAS E CONSULTORIA",
       "contractors": [
         "SPN SISTEMA POTIGUAR DE NOTICIAS LTDA / SISTEMA POTIGUAR DE NOTICIAS SPN"
+      ]
+    },
+    "BR023482026": {
+      "protocol": "BR023482026",
+      "registeredAt": "2026-10-16 17:37:34",
+      "fieldStart": "2026-10-20",
+      "fieldEnd": "2026-10-21",
+      "disclosureDate": "2026-10-22",
+      "sample": 2000,
+      "company": "INSTITUTO INDEXA PESQUISAS LTDA",
+      "tradeName": "INDEXA PESQUISAS",
+      "contractors": [
+        "AGENCIA ESTADO S.A / AGENCIA ESTADO"
       ]
     },
     "BR023672026": {
@@ -5725,8 +5760,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR046272026": {
@@ -6454,8 +6489,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
-        "EMPRESA FOLHA DA MANHA S.A."
+        "EMPRESA FOLHA DA MANHA S.A.",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
     "BR054712026": {
@@ -6640,6 +6675,19 @@
         "REAL TIME MIDIA LTDA"
       ]
     },
+    "BR056542026": {
+      "protocol": "BR056542026",
+      "registeredAt": "2026-10-17 00:08:28",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1049,
+      "company": "DATA CONTROL INSTITUTO DE PESQUISA LTDA - ME",
+      "tradeName": "DATA CONTROL INSTITUTO DE PESQUISA",
+      "contractors": [
+        "DATA CONTROL INSTITUTO DE PESQUISA LTDA - ME"
+      ]
+    },
     "BR056612026": {
       "protocol": "BR056612026",
       "registeredAt": "2026-09-27 03:50:29",
@@ -6664,6 +6712,19 @@
       "tradeName": "",
       "contractors": [
         "TV RADIO CLUBE DE TERESINA SA"
+      ]
+    },
+    "BR057042026": {
+      "protocol": "BR057042026",
+      "registeredAt": "2026-10-16 20:22:14",
+      "fieldStart": "2026-10-19",
+      "fieldEnd": "2026-10-21",
+      "disclosureDate": "2026-10-22",
+      "sample": 1500,
+      "company": "EXATUS CONSULTORIA E PESQUISA LTDA",
+      "tradeName": "EXATUS CONSULTORIA E PESQUISA",
+      "contractors": [
+        "A DE O VIANA EDITORA E COMUNICACAO LTDA / GRUPO AGORA RN"
       ]
     },
     "BR057112026": {
@@ -7302,8 +7363,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
-        "EMPRESA FOLHA DA MANHA S.A."
+        "EMPRESA FOLHA DA MANHA S.A.",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
     "BR063842026": {
@@ -7707,8 +7768,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR067742026": {
@@ -8113,8 +8174,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR071932026": {
@@ -8833,6 +8894,19 @@
         "ELEICAO 2026 RODRIGO ANTONIO BONA IBIAPINA DEPUTADO ESTADUAL"
       ]
     },
+    "BR079262026": {
+      "protocol": "BR079262026",
+      "registeredAt": "2026-10-16 20:32:06",
+      "fieldStart": "2026-10-19",
+      "fieldEnd": "2026-10-21",
+      "disclosureDate": "2026-10-22",
+      "sample": 4000,
+      "company": "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA",
+      "tradeName": "PODERDATA",
+      "contractors": [
+        "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA"
+      ]
+    },
     "BR079322026": {
       "protocol": "BR079322026",
       "registeredAt": "2026-09-03 21:07:01",
@@ -9026,8 +9100,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR080532026": {
@@ -9378,8 +9452,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR084672026": {
@@ -9483,8 +9557,8 @@
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EDITORA GLOBO S/A / EDITORA GLOBO",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EDITORA GLOBO S/A / EDITORA GLOBO"
       ]
     },
     "BR085402026": {
@@ -10266,6 +10340,19 @@
         "INSTITUTO VERITA LTDA"
       ]
     },
+    "BR093272026": {
+      "protocol": "BR093272026",
+      "registeredAt": "2026-10-16 19:37:25",
+      "fieldStart": "2026-10-21",
+      "fieldEnd": "2026-10-24",
+      "disclosureDate": "2026-10-22",
+      "sample": 2400,
+      "company": "GERP MERCADOLOGIA LTDA",
+      "tradeName": "GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT",
+      "contractors": [
+        "GERP MERCADOLOGIA LTDA"
+      ]
+    },
     "BR093462026": {
       "protocol": "BR093462026",
       "registeredAt": "2026-08-10 22:45:27",
@@ -10697,6 +10784,20 @@
         "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
+    "BR097092026": {
+      "protocol": "BR097092026",
+      "registeredAt": "2026-10-16 21:18:52",
+      "fieldStart": "2026-10-20",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-22",
+      "sample": 2520,
+      "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
+      "tradeName": "",
+      "contractors": [
+        "EMPRESA FOLHA DA MANHA S.A.",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+      ]
+    },
     "BR097422026": {
       "protocol": "BR097422026",
       "registeredAt": "2026-09-05 13:35:21",
@@ -10918,6 +11019,19 @@
       "contractors": [
         "EMPRESA FOLHA DA MANHA S.A.",
         "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+      ]
+    },
+    "BR098582026": {
+      "protocol": "BR098582026",
+      "registeredAt": "2026-10-16 18:50:58",
+      "fieldStart": "2026-10-16",
+      "fieldEnd": "2026-10-19",
+      "disclosureDate": "2026-10-22",
+      "sample": 1000,
+      "company": "DATA TEMPO LIMITADA",
+      "tradeName": "",
+      "contractors": [
+        "SEMPRE EDITORA LTDA"
       ]
     },
     "BR098702026": {
