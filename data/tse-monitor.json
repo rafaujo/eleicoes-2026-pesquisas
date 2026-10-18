@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "17/10/2026 05:46:51",
+  "sourceGeneratedAt": "18/10/2026 05:46:37",
   "seenProtocols": [
     "BR000012026",
     "BR000492026",
@@ -47,6 +47,7 @@
     "BR004302026",
     "BR004322026",
     "BR004372026",
+    "BR004422026",
     "BR004552026",
     "BR004662026",
     "BR004672026",
@@ -160,6 +161,7 @@
     "BR012092026",
     "BR012102026",
     "BR012122026",
+    "BR012142026",
     "BR012212026",
     "BR012232026",
     "BR012252026",
@@ -206,6 +208,7 @@
     "BR016222026",
     "BR016262026",
     "BR016372026",
+    "BR016382026",
     "BR016552026",
     "BR016562026",
     "BR016662026",
@@ -299,6 +302,7 @@
     "BR023222026",
     "BR023292026",
     "BR023362026",
+    "BR023432026",
     "BR023442026",
     "BR023452026",
     "BR023482026",
@@ -376,6 +380,7 @@
     "BR029502026",
     "BR029522026",
     "BR029582026",
+    "BR029602026",
     "BR029812026",
     "BR029902026",
     "BR029952026",
@@ -424,6 +429,7 @@
     "BR032402026",
     "BR032432026",
     "BR032462026",
+    "BR032592026",
     "BR032602026",
     "BR032682026",
     "BR032892026",
@@ -434,6 +440,7 @@
     "BR033262026",
     "BR033272026",
     "BR033462026",
+    "BR033652026",
     "BR033692026",
     "BR033752026",
     "BR033962026",
@@ -510,6 +517,7 @@
     "BR038122026",
     "BR038192026",
     "BR038222026",
+    "BR038262026",
     "BR038302026",
     "BR038312026",
     "BR038332026",
@@ -585,6 +593,7 @@
     "BR043242026",
     "BR043282026",
     "BR043322026",
+    "BR043502026",
     "BR043552026",
     "BR043672026",
     "BR043752026",
@@ -750,6 +759,7 @@
     "BR055422026",
     "BR055562026",
     "BR055732026",
+    "BR055852026",
     "BR055882026",
     "BR055912026",
     "BR056002026",
@@ -788,6 +798,7 @@
     "BR058212026",
     "BR058232026",
     "BR058242026",
+    "BR058272026",
     "BR058302026",
     "BR058392026",
     "BR058462026",
@@ -825,6 +836,7 @@
     "BR060482026",
     "BR060542026",
     "BR060582026",
+    "BR060702026",
     "BR060742026",
     "BR060872026",
     "BR060912026",
@@ -1035,6 +1047,7 @@
     "BR076812026",
     "BR076832026",
     "BR076872026",
+    "BR076912026",
     "BR076962026",
     "BR077012026",
     "BR077072026",
@@ -1158,6 +1171,7 @@
     "BR084762026",
     "BR084892026",
     "BR084922026",
+    "BR084962026",
     "BR085172026",
     "BR085192026",
     "BR085212026",
@@ -1320,6 +1334,7 @@
     "BR096582026",
     "BR096612026",
     "BR096682026",
+    "BR096702026",
     "BR096922026",
     "BR097022026",
     "BR097052026",
@@ -1646,6 +1661,19 @@
         "INSTITUTO VERITA LTDA"
       ]
     },
+    "BR004422026": {
+      "protocol": "BR004422026",
+      "registeredAt": "2026-10-17 20:56:47",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1220,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "INSTITUTO VERITA LTDA"
+      ]
+    },
     "BR004662026": {
       "protocol": "BR004662026",
       "registeredAt": "2026-10-09 19:35:01",
@@ -1966,8 +1994,8 @@
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
       "tradeName": "",
       "contractors": [
-        "TELEVISAO PARAIBA LTDA / TV PARAIBA",
-        "TELEVISAO CABO BRANCO LTDA / TV CABO BRANCO"
+        "TELEVISAO CABO BRANCO LTDA / TV CABO BRANCO",
+        "TELEVISAO PARAIBA LTDA / TV PARAIBA"
       ]
     },
     "BR007172026": {
@@ -2479,6 +2507,19 @@
         "INSTITUTO VERITA LTDA"
       ]
     },
+    "BR012142026": {
+      "protocol": "BR012142026",
+      "registeredAt": "2026-10-17 21:27:23",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1220,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "INSTITUTO VERITA LTDA"
+      ]
+    },
     "BR012232026": {
       "protocol": "BR012232026",
       "registeredAt": "2026-09-11 20:56:13",
@@ -2749,6 +2790,19 @@
       "tradeName": "ATLASINTEL",
       "contractors": [
         "ATLASINTEL TECNOLOGIA DE DADOS LTDA"
+      ]
+    },
+    "BR016382026": {
+      "protocol": "BR016382026",
+      "registeredAt": "2026-10-17 20:07:40",
+      "fieldStart": "2026-10-19",
+      "fieldEnd": "2026-10-21",
+      "disclosureDate": "2026-10-23",
+      "sample": 1200,
+      "company": "INSTITUTO DATATRENDS LTDA",
+      "tradeName": "DATATRENDS",
+      "contractors": [
+        "INSTITUTO DATATRENDS LTDA"
       ]
     },
     "BR016552026": {
@@ -3153,8 +3207,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR020962026": {
@@ -3232,8 +3286,8 @@
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EDITORA GLOBO S/A / EDITORA GLOBO",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EDITORA GLOBO S/A / EDITORA GLOBO"
       ]
     },
     "BR022122026": {
@@ -3390,6 +3444,19 @@
       "tradeName": "",
       "contractors": [
         "SEMPRE EDITORA LTDA"
+      ]
+    },
+    "BR023432026": {
+      "protocol": "BR023432026",
+      "registeredAt": "2026-10-17 21:54:02",
+      "fieldStart": "2026-10-19",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1250,
+      "company": "ERIVALDO TRINDADE DE ARAUJO",
+      "tradeName": "ITEM PESQUISAS TECNICAS",
+      "contractors": [
+        "RADIO DIFUSORA DE MOSSORO SA / RADIO DIFUSORA"
       ]
     },
     "BR023442026": {
@@ -3975,8 +4042,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
-        "EMPRESA FOLHA DA MANHA S.A."
+        "EMPRESA FOLHA DA MANHA S.A.",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
     "BR029502026": {
@@ -4016,6 +4083,19 @@
       "tradeName": "VERITA",
       "contractors": [
         "INSTITUTO VERITA LTDA"
+      ]
+    },
+    "BR029602026": {
+      "protocol": "BR029602026",
+      "registeredAt": "2026-10-17 14:20:31",
+      "fieldStart": "2026-10-15",
+      "fieldEnd": "2026-10-19",
+      "disclosureDate": "2026-10-23",
+      "sample": 2000,
+      "company": "DATA CAPITAL PESQUISAS E CONSULTORIA LTDA",
+      "tradeName": "DATA CAPITAL PESQUISAS E CONSULTORIA",
+      "contractors": [
+        "SPN SISTEMA POTIGUAR DE NOTICIAS LTDA / SISTEMA POTIGUAR DE NOTICIAS SPN"
       ]
     },
     "BR029812026": {
@@ -4292,6 +4372,19 @@
         "INSTITUTO VERITA LTDA"
       ]
     },
+    "BR032592026": {
+      "protocol": "BR032592026",
+      "registeredAt": "2026-10-17 17:00:49",
+      "fieldStart": "2026-10-20",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 2100,
+      "company": "INSTITUTO VOX BRASIL OPINIAO E PESQUISAS LTDA",
+      "tradeName": "",
+      "contractors": [
+        "INSTITUTO VOX BRASIL OPINIAO E PESQUISAS LTDA"
+      ]
+    },
     "BR032602026": {
       "protocol": "BR032602026",
       "registeredAt": "2026-09-18 21:58:15",
@@ -4355,6 +4448,19 @@
       "tradeName": "VERITA",
       "contractors": [
         "INSTITUTO VERITA LTDA"
+      ]
+    },
+    "BR033652026": {
+      "protocol": "BR033652026",
+      "registeredAt": "2026-10-17 19:29:28",
+      "fieldStart": "2026-10-19",
+      "fieldEnd": "2026-10-21",
+      "disclosureDate": "2026-10-23",
+      "sample": 2000,
+      "company": "INSTITUTO DATATRENDS LTDA",
+      "tradeName": "DATATRENDS",
+      "contractors": [
+        "INSTITUTO DATATRENDS LTDA"
       ]
     },
     "BR033962026": {
@@ -4602,8 +4708,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR036092026": {
@@ -4838,6 +4944,19 @@
       "tradeName": "REAL TIME BIG DATA",
       "contractors": [
         "RADIO E TELEVISAO RECORD S.A / REDE RECORD DE TELEVISAO E/OU RECORD TV"
+      ]
+    },
+    "BR038262026": {
+      "protocol": "BR038262026",
+      "registeredAt": "2026-10-17 21:43:37",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1220,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "INSTITUTO VERITA LTDA"
       ]
     },
     "BR038302026": {
@@ -5335,6 +5454,19 @@
         "INSTITUTO VOX BRASIL OPINIAO E PESQUISAS LTDA"
       ]
     },
+    "BR043502026": {
+      "protocol": "BR043502026",
+      "registeredAt": "2026-10-17 16:37:42",
+      "fieldStart": "2026-10-20",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1500,
+      "company": "IPESPE INST DE PESQUISAS SOCIAIS POLITICAS E ECONOMICAS",
+      "tradeName": "",
+      "contractors": [
+        "IPESPE INST DE PESQUISAS SOCIAIS POLITICAS E ECONOMICAS"
+      ]
+    },
     "BR043552026": {
       "protocol": "BR043552026",
       "registeredAt": "2026-09-27 19:47:15",
@@ -5760,8 +5892,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
-        "EMPRESA FOLHA DA MANHA S.A."
+        "EMPRESA FOLHA DA MANHA S.A.",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
     "BR046272026": {
@@ -6584,6 +6716,19 @@
         "R10 COMUNICACAO LTDA / PORTAL R10"
       ]
     },
+    "BR055852026": {
+      "protocol": "BR055852026",
+      "registeredAt": "2026-10-17 13:22:53",
+      "fieldStart": "2026-10-22",
+      "fieldEnd": "2026-10-23",
+      "disclosureDate": "2026-10-23",
+      "sample": 800,
+      "company": "INSTITUTO DE PESQUISA INOPE EXCELENCIA LTDA",
+      "tradeName": "INST. DO NORTE DE OPINIAO PUBLICA E ESTATISTICA - INOPE",
+      "contractors": [
+        "INSTITUTO DE PESQUISA INOPE EXCELENCIA LTDA"
+      ]
+    },
     "BR055882026": {
       "protocol": "BR055882026",
       "registeredAt": "2026-09-27 02:11:59",
@@ -6871,6 +7016,19 @@
         "REAL TIME MIDIA LTDA"
       ]
     },
+    "BR058272026": {
+      "protocol": "BR058272026",
+      "registeredAt": "2026-10-17 21:09:53",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1220,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "INSTITUTO VERITA LTDA"
+      ]
+    },
     "BR058392026": {
       "protocol": "BR058392026",
       "registeredAt": "2026-09-23 22:15:45",
@@ -6998,8 +7156,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR059342026": {
@@ -7104,6 +7262,19 @@
       "tradeName": "L3 SISTEMAS E CONSULTORIA",
       "contractors": [
         "LUIZ MIGUEL DE OLIVEIRA"
+      ]
+    },
+    "BR060702026": {
+      "protocol": "BR060702026",
+      "registeredAt": "2026-10-17 21:47:29",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 15554,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "INSTITUTO VERITA LTDA"
       ]
     },
     "BR060912026": {
@@ -7363,8 +7534,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR063842026": {
@@ -7847,8 +8018,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR069292026": {
@@ -7965,8 +8136,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "BR070442026": {
@@ -8594,6 +8765,19 @@
         "CAMPO GRANDE NOTICIAS LTDA / CAMPO GRANDE NEWS LTDA"
       ]
     },
+    "BR076912026": {
+      "protocol": "BR076912026",
+      "registeredAt": "2026-10-17 20:27:28",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1220,
+      "company": "INSTITUTO VERITA LTDA",
+      "tradeName": "VERITA",
+      "contractors": [
+        "INSTITUTO VERITA LTDA"
+      ]
+    },
     "BR077072026": {
       "protocol": "BR077072026",
       "registeredAt": "2026-08-17 19:13:44",
@@ -9100,8 +9284,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
-        "EMPRESA FOLHA DA MANHA S.A."
+        "EMPRESA FOLHA DA MANHA S.A.",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
     "BR080532026": {
@@ -9452,8 +9636,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
-        "EMPRESA FOLHA DA MANHA S.A."
+        "EMPRESA FOLHA DA MANHA S.A.",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
     "BR084672026": {
@@ -9506,6 +9690,19 @@
       "tradeName": "REAL TIME BIG DATA",
       "contractors": [
         "REAL TIME MIDIA LTDA"
+      ]
+    },
+    "BR084962026": {
+      "protocol": "BR084962026",
+      "registeredAt": "2026-10-17 19:06:34",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1200,
+      "company": "ALFA INTELIGENCIA E SERVICOS DE SOFTWARE E OPINIAO S/A",
+      "tradeName": "ALFA INTELIGENCIA",
+      "contractors": [
+        "ALFA INTELIGENCIA E SERVICOS DE SOFTWARE E OPINIAO S/A"
       ]
     },
     "BR085172026": {
@@ -9779,8 +9976,8 @@
       "company": "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.",
       "tradeName": "",
       "contractors": [
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
-        "EDITORA GLOBO S/A / EDITORA GLOBO"
+        "EDITORA GLOBO S/A / EDITORA GLOBO",
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
       ]
     },
     "BR087342026": {
@@ -10756,6 +10953,19 @@
       "tradeName": "VERITA",
       "contractors": [
         "INSTITUTO VERITA LTDA"
+      ]
+    },
+    "BR096702026": {
+      "protocol": "BR096702026",
+      "registeredAt": "2026-10-17 17:03:14",
+      "fieldStart": "2026-10-19",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 2000,
+      "company": "REAL TIME MIDIA LTDA",
+      "tradeName": "REAL TIME BIG DATA",
+      "contractors": [
+        "REAL TIME MIDIA LTDA"
       ]
     },
     "BR097022026": {

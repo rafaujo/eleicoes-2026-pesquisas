@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "17/10/2026 05:46:51",
+  "sourceGeneratedAt": "18/10/2026 05:46:37",
   "seenProtocols": [
     "MG001022026",
     "MG003662026",
@@ -728,8 +728,8 @@
       "company": "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.",
       "tradeName": "",
       "contractors": [
-        "EMPRESA FOLHA DA MANHA S.A.",
-        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA"
+        "GLOBO COMUNICACAO E PARTICIPACOES S/A / TV/REDE/GLOBO.COM/CANAIS GLOBO/GLOBOPLAY/ELETROMIDIA",
+        "EMPRESA FOLHA DA MANHA S.A."
       ]
     },
     "MG099182026": {
