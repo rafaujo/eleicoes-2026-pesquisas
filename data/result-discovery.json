@@ -1291,6 +1291,7 @@
     "e5747cb24e44cba74d06",
     "e58b23f0f6dfcdb7606e",
     "e5905be7e4d0b2a1be7a",
+    "e59805061379ed8c0d69",
     "e5aa94aceb1ed89b4a20",
     "e649d48c8a2d06d5ed16",
     "e6817c311afbc775136d",
@@ -1445,6 +1446,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Lula tem 51% dos votos válidos, e Flávio Bolsonaro, 49%, diz pesquisa Vox Brasil - JOTA Info",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQS01yNkQ4b2MwRFVTbmNBVW9STjBzb0VmQnppaW4xYndWa2J0MFg4WVg0NlhoV3pZS0F3bTB5VUFZSjdOTG5DNVd3bzAxS1U2Vl9XVjBPSnFnalE1ZnRkYU5oa3FzWm00R3YtUllSUDhGSXNRMmpNLU9mS3VIODBLT2piWTUyRGV5X0VVTXpxNmpEaE9zWUxBbmFtZjRTZTM3ZFFlV0wwX25HbkcwYkxTMUxEU0VQeDhVNW51OQ?oc=5",
+      "source": "JOTA Info",
+      "published": "2026-10-18",
+      "pollster": "Vox Brasil",
+      "key": "e59805061379ed8c0d69"
+    },
     {
       "election": "president-br",
       "title": "Futura: Flávio tem 50,8% dos votos válidos no 2º turno; Lula, 49,2% - CNN Brasil",
