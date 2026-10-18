@@ -11292,6 +11292,28 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
+    "BR032592026": {
+      "protocol": "BR032592026",
+      "fieldStart": "2026-10-20",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 2100,
+      "company": "Vox Brasil",
+      "tradeName": "Vox Brasil",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR033652026": {
+      "protocol": "BR033652026",
+      "fieldStart": "2026-10-19",
+      "fieldEnd": "2026-10-21",
+      "disclosureDate": "2026-10-23",
+      "sample": 2000,
+      "company": "Datatrends",
+      "tradeName": "Datatrends",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
     "BR038352026": {
       "protocol": "BR038352026",
       "fieldStart": "2026-10-17",
@@ -11300,6 +11322,17 @@
       "sample": 2400,
       "company": "Gerp",
       "tradeName": "Gerp",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR043502026": {
+      "protocol": "BR043502026",
+      "fieldStart": "2026-10-20",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1500,
+      "company": "Ipespe",
+      "tradeName": "Ipespe",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -11322,6 +11355,17 @@
       "sample": 2000,
       "company": "Nexus",
       "tradeName": "Nexus",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR060702026": {
+      "protocol": "BR060702026",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 15554,
+      "company": "Veritá",
+      "tradeName": "Veritá",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
@@ -11388,6 +11432,17 @@
       "sample": 1500,
       "company": "Instituto Ideia",
       "tradeName": "Instituto Ideia",
+      "contractors": [],
+      "source": "https://depoisdas17.com.br/agenda/"
+    },
+    "BR084962026": {
+      "protocol": "BR084962026",
+      "fieldStart": "2026-10-18",
+      "fieldEnd": "2026-10-22",
+      "disclosureDate": "2026-10-23",
+      "sample": 1200,
+      "company": "Alfa Inteligência",
+      "tradeName": "Alfa Inteligência",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
