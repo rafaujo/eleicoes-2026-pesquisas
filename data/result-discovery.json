@@ -83,6 +83,7 @@
     "0dd2e5f259a460ca7473",
     "0df4cf782d1b1f22539a",
     "0ee159ef25d38891568d",
+    "0f1c1f22c5d3bfabeced",
     "0f9db8618aa0a6b5e153",
     "0fa71b972fdcbed8b968",
     "0ff89f6d8c18d7b9680c",
@@ -1392,6 +1393,7 @@
     "f2ea915c7549d598e799",
     "f318106822ce4e5270c4",
     "f37beda76070948f4e76",
+    "f3c9c1a9fd92874d0af1",
     "f3ce6cc6f27c06048a42",
     "f3f592d792c07c4ea39d",
     "f40d476b1623af2c127f",
@@ -1478,12 +1480,21 @@
     },
     {
       "election": "president-br",
-      "title": "Flávio tem 50,3% dos votos válidos contra 49,7% de Lula, diz BTG/Nexus - Poder360",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPX09taVBFSHR6SVU5cjNodFFQZms0eUM2dlZPMnlQdVN1SGZBUHZOZzdpZTJraXRNcHFEVFNxejF2eXRMZW81XzJHekFkUDh6UUhmeUJLbFZ5MFdGZEwtTEdyT1FGcl9VU1FJY2JpNmJFTFp6Q0t2RVo4Z1ZTR1I2UjVtM2VoX1ZZZjRNMXBfVU1aMG9CUVF4UXdOMUJYLTJNZ0t2cXh3Qjlac19kd3JiMDRwTGQ?oc=5",
-      "source": "Poder360",
+      "title": "BTG/Nexus: Flávio Bolsonaro tem 46,5% das intenções de voto, contra 45,9% de Lula, mostra pesquisa - Estadão",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOS0FKTjFBbW5oczVqajhXS2FRRDhocnFpSWVMY05leFBCaTZPVmIwZHRld1B1RHdwWGdQQTRzNG00cTVSTk1faklTQWdhVV94MXlRWVlWV0w2TmNoUDlTRFlMS2xUY2NQc3NrNXljR3daNDVyNDZkRmdqandnd01zdDYwM19KRUhLNXZfSzB4U01RVjlQb19nMjRLS29rY29haWoyb2RMMEdIMlU4dnVrWG0xTkFXd205SlFjTlhvR1NIUS13LXZqejhvYXI4c25iTkHSAdcBQVVfeXFMUFdncVhvNjQ5MEdYd2I5elN4dHdpMi1MVkI2RlBldkxxTkpwWFozU1Iwc2xyOTVJNjRxNUp5M2dvbWFJOTZKWm8tTG9Kc3AtOEFvRnQ0N3pJY3l1N1V4TE1mNEEyV3EwMjNVNG5adzloamlLMXlMbWZrcGNtZ3hwamdFb2lJX081X2ZVcW5XbTdBN3Q1aDB4T0lMcFlDNGlBaVBYelN0UjdvbjV1RGpYN3Y0T1lueDRhbXNEQkltR2Nob2FqRm5UdE51MTA1eks4aTRZeWl5THM?oc=5",
+      "source": "Estadão",
       "published": "2026-10-19",
       "pollster": "Nexus",
-      "key": "6e49554226933e048bc4"
+      "key": "f3c9c1a9fd92874d0af1"
+    },
+    {
+      "election": "president-br",
+      "title": "Pesquisa Futura: Flávio Bolsonaro tem 50,4% dos votos válidos, ante 49,6% de Lula - JOTA Info",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPbGxDWnhxdjlpOW9vSVZzOGFJRUdvYkdEeXgwWWVIdEw1VmYyUU85OEVKYk8ydDhuclRMbFpRODdobmRyZWZ6Sm1hUWlhSVBpYnRCZ1FwNGJIS0RVRDNCNjJBLTduYWdycW1HUWdjTDlvSkJDVmh0RnU1NmRxRk5yTTc1SHVnX2xjaGRlOHItS21rbVd2UDlJTFl3dGx6Nm9GWFFIS2ZYdEpTUXBDMDdKeEFfZ09VeFVwVlhmdg?oc=5",
+      "source": "JOTA Info",
+      "published": "2026-10-19",
+      "pollster": "Futura",
+      "key": "0f1c1f22c5d3bfabeced"
     },
     {
       "election": "president-br",
