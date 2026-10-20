@@ -313,6 +313,7 @@
     "351a13d4c81418df7421",
     "3560479a7be83c1c75fd",
     "359319ffdbe6073e50a9",
+    "35cb9d79305c2e266083",
     "3639ba2c85a974c7f3bd",
     "36435a858c3766cfc3c5",
     "366b9b9f44ee5f237b7f",
@@ -393,6 +394,7 @@
     "42e47835df3923dc1139",
     "42eac89d554fa2eea139",
     "42ef735ff3c944252133",
+    "42f01fb7c2ea7092aa0f",
     "437338ed8309e263fb9e",
     "439308b1fba9cf665a90",
     "43e19f54bde6d19db4b1",
@@ -895,6 +897,7 @@
     "a0139e6d55ad7b8547cf",
     "a02a1245891756e664bf",
     "a03d4ac76ec4763c305d",
+    "a044dc07a4c1b6bfd1ae",
     "a04500f443b946abc3c9",
     "a0494ab2ac7fc91204bb",
     "a063f3e2adc171759927",
@@ -1469,6 +1472,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "A cinco dias do segundo turno, Flávio Bolsonaro e Lula estão em empate técnico, aponta Real Time Big Data - Brasil de Fato",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOS0Jna0VsbDJTeVZCM0lwZHNYaUhvaEp0RURybjVxeDNQR3hKS0JNR0VUT2JMVGJEMWh2ZkluUUllc0JHc0hKTDZHS0RTTkFacHlQNzRkbG1lR3JfclVZOS1VY2RpNEducXpwbmlDNWNvTnc1S3d1Uk1UN1BZU3AxUFJHOGhieFlUOUxJdTh0emZVeTY5Tzd0OV9DR2RPQjVQTzFxU0Vad3ljQWd6Q3QzZnYwTEh6SEZrZUxpYW9tTDVEd3BKV1ItYTBkMGVmQkd0ejMwNlEzb2xpbThNUTBOUw?oc=5",
+      "source": "Brasil de Fato",
+      "published": "2026-10-20",
+      "pollster": "Real Time Big Data",
+      "key": "42f01fb7c2ea7092aa0f"
+    },
     {
       "election": "president-br",
       "title": "Pesquisa Atlas: Flávio Bolsonaro tem 49,8% e Lula soma 47,6% - Estadão",
