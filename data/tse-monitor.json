@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "19/10/2026 14:22:04",
+  "sourceGeneratedAt": "20/10/2026 05:46:45",
   "seenProtocols": [
     "BR000012026",
     "BR000492026",
@@ -367,6 +367,7 @@
     "BR028052026",
     "BR028172026",
     "BR028232026",
+    "BR028282026",
     "BR028422026",
     "BR028462026",
     "BR028472026",
@@ -881,6 +882,7 @@
     "BR062892026",
     "BR063112026",
     "BR063302026",
+    "BR063412026",
     "BR063452026",
     "BR063502026",
     "BR063562026",
@@ -4059,6 +4061,19 @@
       "tradeName": "REAL TIME BIG DATA",
       "contractors": [
         "REAL TIME MIDIA LTDA"
+      ]
+    },
+    "BR028282026": {
+      "protocol": "BR028282026",
+      "registeredAt": "2026-10-19 19:28:57",
+      "fieldStart": "2026-10-23",
+      "fieldEnd": "2026-10-24",
+      "disclosureDate": "2026-10-25",
+      "sample": 4000,
+      "company": "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA",
+      "tradeName": "PODERDATA",
+      "contractors": [
+        "PODERDATA PESQUISA, JORNALISMO E COMUNICACAO LTDA"
       ]
     },
     "BR028422026": {
@@ -7747,6 +7762,19 @@
       "tradeName": "EXATUS CONSULTORIA E PESQUISA",
       "contractors": [
         "A DE O VIANA EDITORA E COMUNICACAO LTDA / GRUPO AGORA RN"
+      ]
+    },
+    "BR063412026": {
+      "protocol": "BR063412026",
+      "registeredAt": "2026-10-19 22:55:02",
+      "fieldStart": "2026-10-22",
+      "fieldEnd": "2026-10-24",
+      "disclosureDate": "2026-10-25",
+      "sample": 1550,
+      "company": "METADATA SOLUCOES INTELIGENTES LTDA",
+      "tradeName": "METADATA",
+      "contractors": [
+        "METADATA SOLUCOES INTELIGENTES LTDA"
       ]
     },
     "BR063502026": {
@@ -11878,17 +11906,6 @@
   },
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
-    "BR008202026": {
-      "protocol": "BR008202026",
-      "fieldStart": "2026-10-15",
-      "fieldEnd": "2026-10-19",
-      "disclosureDate": "2026-10-20",
-      "sample": 2700,
-      "company": "Alfa Inteligência",
-      "tradeName": "Alfa Inteligência",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR018232026": {
       "protocol": "BR018232026",
       "fieldStart": "2026-10-19",
