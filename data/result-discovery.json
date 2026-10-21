@@ -233,6 +233,7 @@
     "27edc73e8188f6e6b4a2",
     "2804d6a68925e0d0ba1e",
     "281633fc823978dd8b3b",
+    "282f2ae442e44381e9f7",
     "29133d27348918160a06",
     "295b0b80934e9d36488f",
     "298a493cbb017ad44574",
@@ -462,6 +463,7 @@
     "51a75c47523bb8aa283e",
     "51e35a000fd69b281d8f",
     "521f0784f07eccff2f31",
+    "52303a6c474ded5b3ecd",
     "525e3c1d2d36171931d0",
     "52a878105eb6e17ccf07",
     "52c3f7c19842b2a0e713",
@@ -553,6 +555,7 @@
     "60dcb3491ad6a96d1d52",
     "618f416af6e3530ab503",
     "619792b5733b2ccefa3f",
+    "62218a81436732994388",
     "62255d544c0fe0839e78",
     "626723a6221049f4bb6f",
     "6281bb501c232adf1906",
@@ -1064,6 +1067,7 @@
     "b9128ec5560a5b4a3db3",
     "b91520e3c095a88f7425",
     "b918708fa2fb58975b04",
+    "b94728b2b3962a69d48d",
     "b984f5765ceb48a944ce",
     "b987bccc7114f0f66265",
     "ba01f9d56ef69a60e97c",
@@ -1366,6 +1370,7 @@
     "eb222cf5f5cce0d3d041",
     "eb424e3c813653f04a5e",
     "eb4b4f8b1eb77e55db38",
+    "eb4f22ecc6396377ffdc",
     "eb617cd08b5c7af92a64",
     "ebb69ae746ed1139e551",
     "ec1da35ef09bd532779c",
@@ -1509,12 +1514,12 @@
     },
     {
       "election": "president-br",
-      "title": "Ideia: Flávio lidera entre eleitores de Caiado, Zema e Renan; Lula, de Cury - CNN Brasil",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQa3ktRWxPdXNWVVVUVzBoZ2xrQWc4Y1lKMm00T2F2Y0xrbnJIMDN5bDdLMHUzaF84Vl9lVDU2TjQ1a2RTeFpOaHc1NnExR1l2ejJRM0VxeUJxR1FuNjk4ekhHNkpnbXROVF85ZWZlVWt3RV9NMmRNOExGUG0yQjhoSUkxbFJFZDNDSzJteXVRLWU5eERLRDk0STYwVEd4U2VCY1h2R21ucUZQSVAxX013?oc=5",
-      "source": "CNN Brasil",
+      "title": "Flávio Bolsonaro tem 51,1%, e Lula, 48,9% dos votos válidos, e seguem empatados, diz Meio/Ideia - Folha de S.Paulo",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOa1duYzU1V1RFWUlqR3UzRlZBeHQ5VFl6Z0NDREN5ajlGdnRwZUtYN0tvOVlMcjVEZnpKZ2thQUI3N0xIZF9RSHBBX3dta2NHQ0lyM25uM2Y2dFNEdi1yMU1Lc25Hb3o3VUJBSU0xdTNSNGJLZHVwd1VMamcxYTNDN3BzQUIwS1VYTjFYYndzTUFtSFJlcXV2dlYzUnkxNUNUYmcyMF9qQkU4TjNCLUNMbUVCa1FLQl9tMUR0NzZGWmZJVzQ0N2tWLV9hWS0tWC1xbGc?oc=5",
+      "source": "Folha de S.Paulo",
       "published": "2026-10-21",
       "pollster": "Ideia",
-      "key": "5a42716ec438ddbfd1b1"
+      "key": "62218a81436732994388"
     },
     {
       "election": "president-br",
@@ -1545,12 +1550,12 @@
     },
     {
       "election": "president-br",
-      "title": "Pesquisa Futura: Flávio Bolsonaro tem 50,4% dos votos válidos, ante 49,6% de Lula - JOTA Info",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPbGxDWnhxdjlpOW9vSVZzOGFJRUdvYkdEeXgwWWVIdEw1VmYyUU85OEVKYk8ydDhuclRMbFpRODdobmRyZWZ6Sm1hUWlhSVBpYnRCZ1FwNGJIS0RVRDNCNjJBLTduYWdycW1HUWdjTDlvSkJDVmh0RnU1NmRxRk5yTTc1SHVnX2xjaGRlOHItS21rbVd2UDlJTFl3dGx6Nm9GWFFIS2ZYdEpTUXBDMDdKeEFfZ09VeFVwVlhmdg?oc=5",
-      "source": "JOTA Info",
+      "title": "Futura: Flávio tem 50,4% dos votos válidos no 2º turno; Lula, 49,6% - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNOHlndUF4b0lZdTFKdE90Q21EZjBjMlpGUnlDMm9XNEVVNkpYQzd0bktjSTY1a0diM2RuTDIweHZNcERCSzdIdlF4RTliZ0I1M3pJV2VqQ2Vic1VKb0g3VFpqM2E3WFB1a0M0TzVCQVMtTGpCcm9kWF9BNnU2SURyTTlWZUNvYlEzck4yZkRSekUzSktQUFhoenlPRTB0dDFx?oc=5",
+      "source": "CNN Brasil",
       "published": "2026-10-19",
       "pollster": "Futura",
-      "key": "0f1c1f22c5d3bfabeced"
+      "key": "b94728b2b3962a69d48d"
     },
     {
       "election": "president-br",
