@@ -11942,17 +11942,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "BR023482026": {
-      "protocol": "BR023482026",
-      "fieldStart": "2026-10-20",
-      "fieldEnd": "2026-10-21",
-      "disclosureDate": "2026-10-22",
-      "sample": 2000,
-      "company": "Indexa",
-      "tradeName": "Indexa",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR028282026": {
       "protocol": "BR028282026",
       "fieldStart": "2026-10-23",
@@ -12049,17 +12038,6 @@
       "sample": 4001,
       "company": "Instituto Phoenix",
       "tradeName": "Instituto Phoenix",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR079262026": {
-      "protocol": "BR079262026",
-      "fieldStart": "2026-10-19",
-      "fieldEnd": "2026-10-21",
-      "disclosureDate": "2026-10-22",
-      "sample": 4000,
-      "company": "Poderdata",
-      "tradeName": "Poderdata",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
