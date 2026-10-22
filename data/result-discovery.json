@@ -314,6 +314,7 @@
     "34e1fb9b22405e11118a",
     "34f3c3573e8ba8f9af51",
     "351a13d4c81418df7421",
+    "3557941cd465c6262ed8",
     "3560479a7be83c1c75fd",
     "359319ffdbe6073e50a9",
     "35cb9d79305c2e266083",
@@ -884,6 +885,7 @@
     "9af8b6658c2f70b8cfd6",
     "9b01476db8665586864f",
     "9b809d5d5c0bbb6e2652",
+    "9b8e95e7c05d8f3ac01c",
     "9c159e3bf7ceea5f20e4",
     "9c301cb964ba97e66400",
     "9c3ee00c17ff9f0e2c1b",
@@ -1495,6 +1497,24 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Pesquisa PoderData mostra empate técnico entre Flávio e Lula a 3 dias do 2º turno - CartaCapital",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNQ2dXRXZGaU5kUi1BTUYwMmEwYVYwYllkZmI1SGlleHFkQllIRUJPT3plSjB0N3JfaVAtdFpFaDVYWHBtWkJzUXVGelMwUDZ2cGNxTkpFSnVXVElLclYxSnV5TkVncHhJbFdfblQwdmpJdTFEVFZPbFBQNWEzcmZSWWtNVXI4SjNjcngxMVN5Y1QtQmRaTmdlWjFVbk5SY3hnNldSTjFXRXExbE84VHNFbWtzMTVOVU1IMG1zcWdOSlc?oc=5",
+      "source": "CartaCapital",
+      "published": "2026-10-22",
+      "pollster": "PoderData",
+      "key": "3557941cd465c6262ed8"
+    },
+    {
+      "election": "president-br",
+      "title": "Flávio tem 53% dos votos válidos contra 47% de Lula, diz Gerp - Poder360",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUExFVXdPOUhDMXQwUDRYcllZWXp5WHdWbkNiOXY0Vkx1Q2JBS1RPV002WjBmU09ZQ3BkeDBPNTVaUzNGR2VkOVdYN2Zqd3U1dEF4bnVLNmNpVzVqRmMyMEhBYjN0WkJxQi1uMm9XSjlnMFFoSU1lTjNka0F2ZE9TWW81bzZ6TG0wMzdOUk8xTkF2NnI3RzFkbUItME1hT2dXSG9GMjUxeUdFUjA?oc=5",
+      "source": "Poder360",
+      "published": "2026-10-21",
+      "pollster": "GERP",
+      "key": "9b8e95e7c05d8f3ac01c"
+    },
     {
       "election": "president-br",
       "title": "Quaest: Flávio Bolsonaro marca 45%, e Lula tem 44% no 2º turno - Folha de S.Paulo",
