@@ -59,6 +59,7 @@
     "09b37d617962b76eb176",
     "09bb3e9d35f7bbb055f3",
     "09be6dea0fd271fb124b",
+    "0a0225b88a343f0ecf50",
     "0a16bc46114f1e509c38",
     "0a187eafd5c8e2617b23",
     "0add506ea329e103f0ff",
@@ -1496,15 +1497,6 @@
   "pending": [
     {
       "election": "president-br",
-      "title": "Flávio Bolsonaro tem 51% dos votos válidos, ante 49% de Lula, diz pesquisa Palver - JOTA Info",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQek0wTUVXbWFRSXQ5MnhPOTVVTE9GTzc4Wm9hUDdSVlRhWFZSaGkzSnlZUHBmVWFaQmdRcjBaNWxBeFl5MDlkOElEM1pXWVVLeGZ0cDE1NmZvVnU5Yzd1RkhscFZQQTFVU0pNVUUwakNuYXBpU3lmOXJQRlRVVUltbUpxODRFaGxvVUJDbl9OdnRqa1A4YWtscXNPZGlrNXFTQ1BXZ0VicHlOcUgyOVNaR053SHY5VEF3bDZFZWFsNA?oc=5",
-      "source": "JOTA Info",
-      "published": "2026-10-21",
-      "pollster": "Palver",
-      "key": "ae010f03a0a3bd115e6e"
-    },
-    {
-      "election": "president-br",
       "title": "Quaest: Flávio Bolsonaro marca 45%, e Lula tem 44% no 2º turno - Folha de S.Paulo",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUHRtaVVoRmRIVV90UEJiNV9YemFhUkZJRFRYNW5wejlvamFBMGMxZ04xZmQwdklzVHpOUVVlb3Jwd25XLUEwakluTDUzcXU0R0NGQlprTXBEbENnM1BjSHh1T2RHMEJtZ1hMLUMwdWVCYnZRcmRWZmd4S0d6V0s1Yk9JLWYydHJrakZFZ0Q5YnFYSHdLQ25sYVBiWGpwM0lDb2RzcjVUektIQlFN?oc=5",
       "source": "Folha de S.Paulo",
@@ -1520,6 +1512,15 @@
       "published": "2026-10-21",
       "pollster": "Ideia",
       "key": "62218a81436732994388"
+    },
+    {
+      "election": "president-br",
+      "title": "Flávio Bolsonaro tem 50% e Lula, 48%, indica pesquisa Palver - Congresso em Foco",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOVV3Y2UwdVV1N3h5dXd2azM5UGVodmo4MGczWW05MVRNMHpEczVlYm42dWlOeHZNQ2d6MldmNVoweHIxNl92QWVaMzV2TFZjeDhBWkE0NlpZa203aGYtVnEtaGo3c0dPMzJQYzk2dTljZFhsbHRfMEFVZ3VNQnB4TWJfYkxCS0NUN3NJcEkwT2U3WndIOEUxNTE2TFFDbHJwbV91a0UyUWtEUUE?oc=5",
+      "source": "Congresso em Foco",
+      "published": "2026-10-21",
+      "pollster": "Palver",
+      "key": "0a0225b88a343f0ecf50"
     },
     {
       "election": "president-br",
