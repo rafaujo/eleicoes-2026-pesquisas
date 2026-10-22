@@ -125,6 +125,7 @@
     "1565b406b71e52fdc467",
     "15d44022ff7a4aa72ef1",
     "15fbfe2acf04392ad3c3",
+    "1607f77558e59e069c6b",
     "1637b2aef93af42ebf05",
     "16a037d1dcc0a765509e",
     "16ec403cda7484806f23",
@@ -1505,6 +1506,15 @@
       "published": "2026-10-22",
       "pollster": "PoderData",
       "key": "3557941cd465c6262ed8"
+    },
+    {
+      "election": "president-br",
+      "title": "Datafolha, 2º turno: Flávio Bolsonaro, 47%; Lula, 46% - G1",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQYndlb0tHSDA2blp5R2FqXzJQak5nZE9wLVZGZWZ5emxEdVJZLVlNdDd0Y2RFYnp1UnA3RnNuMDdVWVptSlhOZ2dtMHpLSUtDUUpnNy1RY2gyVzQ3bkpNT20zMjJIUDFyMXJNVldEa2QtbFQzZFM0TGFvNHBoZndmQlBNUmlETWk5R1BjWW1FOUhJVGZyWlFGSU5RLTNJMG1ZUGI3dVlUYldvdHhWQ2Fla0YwYU5DX09ib1VRM3plR2ZFTkNSd3pYVW9BY09LZ9IB3AFBVV95cUxOU2dyS0hHU01ERWJDZmFKRUg0V0JIelZuYjNxeF9jZHAyUDUtUm5aeEtEMzRzMmR2QXowUGE4cml2Rml2TUdvWnRoZFhGc2xhWmt6bFFXQlJMQXVYU3N3TGZaeExUUWhWb1BtUVo0cUZJT3pCcXhmbFp5aVRKTTl3R0RtMF9JOXhIVEhSMjlZUXNTS3d5d1J0aURxWDVPVTA3Mk9wSDJiYU5FU2w1OVZMcXZObU5rdEM1WEI5R3dHQldVdzRwQ2xOdkhVd05wcGpKeW9sYXVmM2tPaUxp?oc=5",
+      "source": "G1",
+      "published": "2026-10-22",
+      "pollster": "Datafolha",
+      "key": "1607f77558e59e069c6b"
     },
     {
       "election": "president-br",
