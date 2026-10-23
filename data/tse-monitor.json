@@ -12063,34 +12063,12 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "BR093272026": {
-      "protocol": "BR093272026",
-      "fieldStart": "2026-10-21",
-      "fieldEnd": "2026-10-24",
-      "disclosureDate": "2026-10-22",
-      "sample": 2400,
-      "company": "Gerp",
-      "tradeName": "Gerp",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR095402026": {
       "protocol": "BR095402026",
       "fieldStart": "2026-10-23",
       "fieldEnd": "2026-10-24",
       "disclosureDate": "2026-10-24",
       "sample": 4050,
-      "company": "Datafolha",
-      "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR097092026": {
-      "protocol": "BR097092026",
-      "fieldStart": "2026-10-20",
-      "fieldEnd": "2026-10-22",
-      "disclosureDate": "2026-10-22",
-      "sample": 2520,
       "company": "Datafolha",
       "tradeName": "Datafolha",
       "contractors": [],
