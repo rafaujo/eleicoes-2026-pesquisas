@@ -11964,17 +11964,6 @@
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
-    "BR033652026": {
-      "protocol": "BR033652026",
-      "fieldStart": "2026-10-19",
-      "fieldEnd": "2026-10-21",
-      "disclosureDate": "2026-10-23",
-      "sample": 2000,
-      "company": "Datatrends",
-      "tradeName": "Datatrends",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR048632026": {
       "protocol": "BR048632026",
       "fieldStart": "2026-10-21",
@@ -12005,17 +11994,6 @@
       "sample": 15554,
       "company": "Veritá",
       "tradeName": "Veritá",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR061732026": {
-      "protocol": "BR061732026",
-      "fieldStart": "2026-10-19",
-      "fieldEnd": "2026-10-22",
-      "disclosureDate": "2026-10-24",
-      "sample": 4001,
-      "company": "Instituto Phoenix",
-      "tradeName": "Instituto Phoenix",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
