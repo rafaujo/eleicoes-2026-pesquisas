@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
-  "sourceGeneratedAt": "24/10/2026 05:46:41",
+  "sourceGeneratedAt": "23/10/2026 05:46:44",
   "seenProtocols": [
     "BR000012026",
     "BR000492026",
@@ -11928,17 +11928,6 @@
       "sample": 1200,
       "company": "Simplex",
       "tradeName": "Simplex",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR021362026": {
-      "protocol": "BR021362026",
-      "fieldStart": "2026-10-21",
-      "fieldEnd": "2026-10-23",
-      "disclosureDate": "2026-10-24",
-      "sample": 2002,
-      "company": "MDA",
-      "tradeName": "MDA",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     },
