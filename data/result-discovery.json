@@ -151,6 +151,7 @@
     "19efea3b5d32465e8581",
     "1a05ef17ba4c9a453537",
     "1a082666b71aa1da28e9",
+    "1a1ef6727c53c0f6b1cf",
     "1a367c75afb0850177c1",
     "1a8c9b773d5f0068f0fb",
     "1ab2cfb4688479cdd881",
@@ -560,6 +561,7 @@
     "5fb88593ac6bd8cbaedd",
     "5fce57e7d6d71ba7984b",
     "5ff19f7de192d84e6092",
+    "60093c48ac3b2564808e",
     "6015e26dc24b7854194f",
     "606492061cc315dbb1bf",
     "60886a5dcd02b8e0e2f9",
@@ -578,6 +580,7 @@
     "62a1124300ffd3b92345",
     "62c9ca080098f726dd4a",
     "6314733acfd7429c0d72",
+    "635d911bfcb2c87a82b7",
     "637e0e00441e269142a6",
     "6384ea84341d57a2c358",
     "6398d5f535a4b5cf835b",
@@ -1279,6 +1282,7 @@
     "d6e33a706c1d6c56f783",
     "d6fae93e6ed3234d322f",
     "d759a10a96e9da740196",
+    "d7606ddbdc3edf83fdf1",
     "d795ae8a62a125c36832",
     "d7a9fa5d6152153989a4",
     "d7bde8dbc901e50c69a2",
@@ -1527,6 +1531,24 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Nexus/BTG: Flávio tem 50,5% de votos válidos e Lula soma 49,5% - Mais Goiás",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcnJlSG1JXzNxR2NrZC1WWUVSdGVlRWxBYjRHdkdtNTRaM25pNXBLSGtfVXFDNXVZcFRTb3RIQlNDRzZfR1hzUjlGbTJNLWs3dEpYMVUyczQ3Y3NCWXZRVlBueFNzNjQxNnRBRUdsY0RTdDRaVWhTWWw2V2Y1QWtHTnNEdzl4T29HaWY5R0piQXZYTWpucGVyZ3RsdGFqczZXSlBfSF9jOXR4cWM?oc=5",
+      "source": "Mais Goiás",
+      "published": "2026-10-24",
+      "pollster": "Nexus",
+      "key": "d7606ddbdc3edf83fdf1"
+    },
+    {
+      "election": "president-br",
+      "title": "Flávio Bolsonaro tem 50,7% e Lula, 49,3%, dos votos válidos, aponta pesquisa CNT/MDA - JOTA Info",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQXJKcEhKWG5QWEw4aWF1WTUxbEZ1UnFrX0RicnBkWXM3RmdpbUVJUnR6MmdNWlVOSnZVT0JzRjdwOUk3dXhxV0puMktadTNJeVVIZVJlSVNDMEZDUjRyZXRzdVNUZjByQjg1YmNsdjdmYWZWWkR6cmdfZkNQTmpqdW5waGpSVmNWUkdWM1R4MDBRa3RtdzJnNVBITU9tX1JISjdlRThFbjlGSV82Uk1jYmh4WFdmVF8yZGMxTmVLYw?oc=5",
+      "source": "JOTA Info",
+      "published": "2026-10-24",
+      "pollster": "CNT/MDA",
+      "key": "60093c48ac3b2564808e"
+    },
     {
       "election": "president-br",
       "title": "Quaest: maioria diz que Flávio Bolsonaro tem maior chance de reduzir impostos, e Lula, de manter programas sociais - G1",
