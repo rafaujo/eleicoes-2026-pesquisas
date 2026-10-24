@@ -281,6 +281,7 @@
     "2e18a9e8b93aa0d90062",
     "2e4de5bcce91166876bb",
     "2e52f1a735dfa898ad77",
+    "2e7cf4514ab7c9f616ab",
     "2e8d4ed3ebc99cb62d45",
     "2ec3897adae67fab3844",
     "2edc28fbad96b17752d1",
@@ -337,6 +338,7 @@
     "3713d2ed89346a091d44",
     "375e74875b22537f51c2",
     "3765996f9f72fb56fddf",
+    "379bc52ee65da89776ea",
     "37f6c1ab59df4d720db0",
     "37fd14e4550d710193f2",
     "3857c15b4ed7aa990024",
@@ -1552,12 +1554,12 @@
     },
     {
       "election": "president-br",
-      "title": "Datafolha: Flávio Bolsonaro e Lula empatam com 50% dos votos válidos cada um - Folha de S.Paulo",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxONzdYdUl6TTI2VzFSNlNvOVo2M0pWbEJiMmJDdW9IczhGWEhabHMwSE81MGFBLUNvOXdtN0c2TktwLU13dHJ1TmNUVXR4UUZCSmdBQkFfajhhaEo2OE9pLUcxZHdvS2lIb1JPMVlzSEc0am82cmJjamtNbFp4NHVPcjZ2WnQzcFRyTVhGQlVnd29yZkp6SnY1UFViQWp1RXZwY3VCQ0tIUm9NNFVlX2hNeWlrUmVTMWFJbklJUlR3?oc=5",
+      "title": "Datafolha: 46% rejeitam só Flávio Bolsonaro, e 45%, só Lula - Folha de S.Paulo",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWGN4blRfaHBNUmZjSlJIZzUtT0pWcnpIRkJhNFEzNmlPWVd4bGlybmJkMW14Wk16R0owcHFGNTNTQ3FnWDR6a2NFUnp2MnVtdzc0bHQtaDZaYlFFWUkyVF9BbWVoRElsYndoMmNueER5Vi1fZUR1RXQ4WUlRYmFvdG1qR2haMm82TWdjR0hTeThFbVNTQnhnOUxqaw?oc=5",
       "source": "Folha de S.Paulo",
       "published": "2026-10-22",
       "pollster": "Datafolha",
-      "key": "d5da2e97c86816125525"
+      "key": "2e7cf4514ab7c9f616ab"
     },
     {
       "election": "president-br",
