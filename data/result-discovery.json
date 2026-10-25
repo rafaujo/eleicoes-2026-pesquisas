@@ -1170,6 +1170,7 @@
     "c249179d9a9d8a2bb140",
     "c24f8ebf0a4964d70af3",
     "c2b1acbb3c298ef4e1da",
+    "c2eb39e236997bfbe246",
     "c307af3c5c2a34201a24",
     "c312a022baee85ab457d",
     "c31bda592370ae3d7a53",
@@ -1497,6 +1498,7 @@
     "f80ad363390932214ab5",
     "f81f945d7844911684d3",
     "f853f400d0a061874493",
+    "f85f9497ff7e78cf67cd",
     "f865081b8068bb5fbc1f",
     "f8abc8c5ce6ddacc11ea",
     "f8da591350e455bb6ec9",
@@ -1552,6 +1554,15 @@
       "published": "2026-10-25",
       "pollster": "Futura",
       "key": "ee2a392c1ae7aeece180"
+    },
+    {
+      "election": "president-br",
+      "title": "Lula e Flávio Bolsonaro aparecem empatados em nova pesquisa AtlasIntel - Brasil de Fato",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmp3bHI0czFpSEFxWkFySkdMMURqX0lGWWZDaEs5R0xRekR0RGxfUWIxZWJ1eHZ4YjFNRFNuMkFJNlgzMDVuMElFSlRuSTlDRUhlMF9OS1UybVUyYWJJZVhpMi1qV0twel9lZEQ3WHVtM0RVM2xTelpVeVNoaGVJbzFzZllfMTRFWkVZYUJndVJfbV9BNk5Fb0dVX0N2c2JFN3o2S25hNHRuN3lPUjVveVFQVXk?oc=5",
+      "source": "Brasil de Fato",
+      "published": "2026-10-24",
+      "pollster": "AtlasIntel",
+      "key": "f85f9497ff7e78cf67cd"
     },
     {
       "election": "president-br",
