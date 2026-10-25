@@ -131,6 +131,7 @@
     "15d44022ff7a4aa72ef1",
     "15fbfe2acf04392ad3c3",
     "1607f77558e59e069c6b",
+    "16240d4d928f74212fa6",
     "1637b2aef93af42ebf05",
     "16a037d1dcc0a765509e",
     "16ec403cda7484806f23",
@@ -247,6 +248,7 @@
     "2804d6a68925e0d0ba1e",
     "281633fc823978dd8b3b",
     "282f2ae442e44381e9f7",
+    "290d5fbe3dcdb34a61e0",
     "29133d27348918160a06",
     "293e96147008fa65d928",
     "295b0b80934e9d36488f",
@@ -482,6 +484,7 @@
     "510ae5fa16c43e814add",
     "51a75c47523bb8aa283e",
     "51e35a000fd69b281d8f",
+    "51f59e52226b3c152702",
     "521f0784f07eccff2f31",
     "52303a6c474ded5b3ecd",
     "525e3c1d2d36171931d0",
@@ -1584,21 +1587,21 @@
     },
     {
       "election": "president-br",
-      "title": "Flávio Bolsonaro tem 50,7% e Lula, 49,3%, dos votos válidos, aponta pesquisa CNT/MDA - JOTA Info",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQXJKcEhKWG5QWEw4aWF1WTUxbEZ1UnFrX0RicnBkWXM3RmdpbUVJUnR6MmdNWlVOSnZVT0JzRjdwOUk3dXhxV0puMktadTNJeVVIZVJlSVNDMEZDUjRyZXRzdVNUZjByQjg1YmNsdjdmYWZWWkR6cmdfZkNQTmpqdW5waGpSVmNWUkdWM1R4MDBRa3RtdzJnNVBITU9tX1JISjdlRThFbjlGSV82Uk1jYmh4WFdmVF8yZGMxTmVLYw?oc=5",
-      "source": "JOTA Info",
-      "published": "2026-10-24",
-      "pollster": "CNT/MDA",
-      "key": "60093c48ac3b2564808e"
-    },
-    {
-      "election": "president-br",
       "title": "Datafolha: Lula é rejeitado por 46%, e Flávio Bolsonaro, por 45% - Folha de S.Paulo",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZGRSZFRiN2JmLXVuWDRQczVRb3ROcDhiT3lSWnV1Q09Ud0t4dGQtaTVERjN6MGlIU0tVQTc1U1Q4WWxBemZxaFYzTUNWMTNFUGx4cmw0ZmVaaEVFR2NmX2lySi1vQkV3RlFwaG05a1FMM0NreWFacDNVeG1wQVhfWnlucGtOZ2I4NVluTVprOHlUNTh1dTVqT21DOUU5ODY4X21VbFJSblI0dmJKbXc?oc=5",
       "source": "Folha de S.Paulo",
       "published": "2026-10-24",
       "pollster": "Datafolha",
       "key": "293e96147008fa65d928"
+    },
+    {
+      "election": "president-br",
+      "title": "CNT/MDA: Flávio tem 50,7% dos votos válidos e Lula, 49,3%; mulheres são maioria entre indecisos - Estadão",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQTFpxcm1lVjktdjEtRDgwbmZQWWQxeHYtZm42SWhqUDhfbndsZnBpVWFlRG9XZW9NRmJoSGl1Wnd4RWZpYVBGY0xNLVZDWU1Ud2FZWGZNYmRvSnU1RUFmb0ZKb1Q2WVNEczNxRk05XzJLdXkzWXpvU012QVpsVGZ6TFpJSzFUQldTeXYwRDVzcWlpZ05sVDFUY2dPa3JRd21tbU1SemY3Sm85b0d3OHZ0Y1hhcXRMS3h2dmFKcnBuMlFuS2g4Z1RSb2FUSm01QdIB0wFBVV95cUxNNGtxZ0xDcVVsZVpSVmpvV1FNSDRobU15LVp2MDZVOHR4VEVfTjlFajZfX1BFMklkOFRLaEJhZXRpc0YyQjhaemh0NUZFTjc1MEl6bHdLOEpLSFhsclZHVzhxU1JsaFRpcWx6QVJoZlM2T2lDZGlaYW10LW5pMm1vdDh6YWphQ1J4Q1dvTmU1cC1CcG54ZlVBaXE3Z25pNFdaQXltQjNuUmpnTEZRQmt4OS1vOGt0Qk1OUzJCUVpRVXgyQ1FCaktqT0ZuTU5nLXBFNllN?oc=5",
+      "source": "Estadão",
+      "published": "2026-10-24",
+      "pollster": "CNT/MDA",
+      "key": "16240d4d928f74212fa6"
     },
     {
       "election": "president-br",
