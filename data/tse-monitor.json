@@ -11920,17 +11920,6 @@
   },
   "agendaSource": "https://depoisdas17.com.br/agenda/",
   "upcoming": {
-    "BR018232026": {
-      "protocol": "BR018232026",
-      "fieldStart": "2026-10-19",
-      "fieldEnd": "2026-10-23",
-      "disclosureDate": "2026-10-24",
-      "sample": 1200,
-      "company": "Simplex",
-      "tradeName": "Simplex",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
     "BR028282026": {
       "protocol": "BR028282026",
       "fieldStart": "2026-10-23",
@@ -11939,72 +11928,6 @@
       "sample": 4000,
       "company": "Poderdata",
       "tradeName": "Poderdata",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR031812026": {
-      "protocol": "BR031812026",
-      "fieldStart": "2026-10-19",
-      "fieldEnd": "2026-10-23",
-      "disclosureDate": "2026-10-24",
-      "sample": 15554,
-      "company": "Veritá",
-      "tradeName": "Veritá",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR048632026": {
-      "protocol": "BR048632026",
-      "fieldStart": "2026-10-21",
-      "fieldEnd": "2026-10-23",
-      "disclosureDate": "2026-10-24",
-      "sample": 1537,
-      "company": "Instituto França",
-      "tradeName": "Instituto França",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR056012026": {
-      "protocol": "BR056012026",
-      "fieldStart": "2026-10-23",
-      "fieldEnd": "2026-10-23",
-      "disclosureDate": "2026-10-24",
-      "sample": 3000,
-      "company": "Colectta",
-      "tradeName": "Colectta",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR082342026": {
-      "protocol": "BR082342026",
-      "fieldStart": "2026-10-23",
-      "fieldEnd": "2026-10-24",
-      "disclosureDate": "2026-10-24",
-      "sample": 2000,
-      "company": "Nexus",
-      "tradeName": "Nexus",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR095402026": {
-      "protocol": "BR095402026",
-      "fieldStart": "2026-10-23",
-      "fieldEnd": "2026-10-24",
-      "disclosureDate": "2026-10-24",
-      "sample": 4050,
-      "company": "Datafolha",
-      "tradeName": "Datafolha",
-      "contractors": [],
-      "source": "https://depoisdas17.com.br/agenda/"
-    },
-    "BR097262026": {
-      "protocol": "BR097262026",
-      "fieldStart": "2026-10-21",
-      "fieldEnd": "2026-10-24",
-      "disclosureDate": "2026-10-24",
-      "sample": 2000,
-      "company": "Futura Inteligência",
-      "tradeName": "Futura Inteligência",
       "contractors": [],
       "source": "https://depoisdas17.com.br/agenda/"
     }
