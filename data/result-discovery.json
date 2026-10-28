@@ -514,6 +514,7 @@
     "56847560727fe04cb577",
     "569ea69ba22abf418dd8",
     "56b7cce32547eeef625f",
+    "56d42335cfc84b7dfc25",
     "56f17a6bc075368d71ac",
     "571d1eec8fd8664f274e",
     "57546622f5e51376b4ac",
@@ -1038,6 +1039,7 @@
     "ace1c100ccb5e9be9dbe",
     "ad29ca975c2a4f67d244",
     "ad347cbab98f649679d8",
+    "ade46c347ad717c17239",
     "adf772fca0f0521778b4",
     "ae010f03a0a3bd115e6e",
     "ae0626e9e5a01aea7fa9",
@@ -1072,6 +1074,7 @@
     "b2682fbf43dfc2a1b59a",
     "b292050af3cb6ccb0842",
     "b2c4fe088dabdabfe9ec",
+    "b2c844ebea3661a6c82c",
     "b39d751b6bcb125d39c8",
     "b3c58cb9ce0453f0e21e",
     "b3dfbeb95d43565ec300",
@@ -1581,6 +1584,15 @@
       "published": "2026-10-24",
       "pollster": "Nexus",
       "key": "c5682c2f532942563acb"
+    },
+    {
+      "election": "president-br",
+      "title": "Flávio tem 52% dos votos válidos contra 48% de Lula, diz Gerp - Poder360",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQeWlxN1dkcWhQMWpVTEo3WUI3QnBlN0pFY0t5VHpsLUdqY0lfQ0tWUC0xTXNOVmF3RnB4TW13UjRXblhjaUd4cHRiMEJadERaRHJ4azkzTGlYOXFYd3g3SHA2LXNkRlN2LUNxRHIwSGtJNVFleVhuSXpNTWxtZnQ3eVQ4THRLY3RKYlpTWC1PYVNydUFab3E1a1hMYmliaFNOZ192NWxGajRvWmM?oc=5",
+      "source": "Poder360",
+      "published": "2026-10-24",
+      "pollster": "GERP",
+      "key": "b2c844ebea3661a6c82c"
     },
     {
       "election": "president-br",
