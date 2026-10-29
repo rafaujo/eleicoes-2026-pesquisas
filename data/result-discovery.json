@@ -201,6 +201,7 @@
     "205de905acb206dd8e9f",
     "206feabab3cbf0513ce7",
     "20937a5124789b919c3f",
+    "20e916794b7141e7c919",
     "211e585e94ba00e48013",
     "21517eb2d5e25fe8020c",
     "2155ac4bd7c0c04b2a10",
@@ -1075,6 +1076,7 @@
     "b292050af3cb6ccb0842",
     "b2c4fe088dabdabfe9ec",
     "b2c844ebea3661a6c82c",
+    "b34f3ba5999907c0c5d0",
     "b39d751b6bcb125d39c8",
     "b3c58cb9ce0453f0e21e",
     "b3dfbeb95d43565ec300",
@@ -1431,6 +1433,7 @@
     "eb4f22ecc6396377ffdc",
     "eb617cd08b5c7af92a64",
     "ebb69ae746ed1139e551",
+    "ebfe7fd5fe333466af92",
     "ec1da35ef09bd532779c",
     "ec208fe677a73fbca9e6",
     "ec2214fc7343ef9436be",
@@ -1719,6 +1722,15 @@
       "published": "2026-10-19",
       "pollster": "Nexus",
       "key": "f3c9c1a9fd92874d0af1"
+    },
+    {
+      "election": "president-br",
+      "title": "Flávio reage e vai a 52% contra 48% de Lula, diz PoderData/Aya - Poder360",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQeXdlLTlXeFk1TjV3eklYbW52QmJOVzRzRi1RLUVQQ080SGJaTXpIanQ0d0ZCajNIdmJTX3lyRk1aTWY1NHBuY0toczVIX1JrNnVlenVIQlRTUkZzRFpDdVVjZjFUQlRMejk2cDZ5QUJIdEFWSlJYQ3RndHJGUnlmOGJMRHU3Y1pINDAyOWZnZUtkNEtEU2lkcEVLcEFVQzA?oc=5",
+      "source": "Poder360",
+      "published": "2026-10-19",
+      "pollster": "PoderData",
+      "key": "ebfe7fd5fe333466af92"
     },
     {
       "election": "president-br",
