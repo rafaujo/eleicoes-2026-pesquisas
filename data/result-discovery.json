@@ -70,6 +70,7 @@
     "0b20d6cf023d21dae559",
     "0b3dc98facf228bb9e2e",
     "0b487f83095cbf5c62ca",
+    "0b9afc891d56bd52974f",
     "0bc3fca9fe8c4d8d47be",
     "0bc7f2b002a760c437d0",
     "0c206284d40161074806",
@@ -566,6 +567,7 @@
     "5f375618f819157ddf81",
     "5f3f831ad7213c5fe05c",
     "5f610cf53188f3f935b4",
+    "5f74ebf10b061c38e87e",
     "5f7ba29257713b8aaba8",
     "5f9bbe5598d27629958f",
     "5f9c2005c0d7d677331e",
@@ -891,6 +893,7 @@
     "94e64f7142acf7a348cc",
     "95043b1ed0d99e389cee",
     "9557a4e758e6785839f4",
+    "956ca97c20b27a31feb5",
     "95d2bb856ef401fb8e92",
     "964b9706d1104a35254b",
     "968f7d95f5978e47cb96",
@@ -1218,6 +1221,7 @@
     "c7cd30cb4846f15e9296",
     "c7d46ff4dbbddac0664a",
     "c8334096fd5478c5a6cd",
+    "c8b5e4a0765bbd3ef47c",
     "c8bb876b884fa354e3cd",
     "c8db0239f4d213769f0a",
     "c9469646bc8df6381e52",
@@ -1573,12 +1577,30 @@
     },
     {
       "election": "president-br",
+      "title": "Veritá: Flávio tem 51,56% dos votos válidos no 2º turno; Lula, 48,44% - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWTFnUHpnRkxCQm12U1FsYkVKVzcyN2NHV1VPVkM5bzZ3djVtazRRRlhXY2ZYaUU5RGRSWWtZenFBVmJ3MjN0R3dwNnNlaXFrcUhTUjhLYWJQNUhJc2lsSmc0Q1YwMVV5Ni01UEpLb1J2Ti1JZmZSYW82SVB2cFhKb3JJOERTSXFFQzdkY1RtZDJLQnhyN3JQX1Y0UE9GaVRJeV9r?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-10-25",
+      "pollster": "Veritá",
+      "key": "956ca97c20b27a31feb5"
+    },
+    {
+      "election": "president-br",
       "title": "Lula e Flávio Bolsonaro aparecem empatados em nova pesquisa AtlasIntel - Brasil de Fato",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmp3bHI0czFpSEFxWkFySkdMMURqX0lGWWZDaEs5R0xRekR0RGxfUWIxZWJ1eHZ4YjFNRFNuMkFJNlgzMDVuMElFSlRuSTlDRUhlMF9OS1UybVUyYWJJZVhpMi1qV0twel9lZEQ3WHVtM0RVM2xTelpVeVNoaGVJbzFzZllfMTRFWkVZYUJndVJfbV9BNk5Fb0dVX0N2c2JFN3o2S25hNHRuN3lPUjVveVFQVXk?oc=5",
       "source": "Brasil de Fato",
       "published": "2026-10-24",
       "pollster": "AtlasIntel",
       "key": "f85f9497ff7e78cf67cd"
+    },
+    {
+      "election": "president-br",
+      "title": "Quaest: Flávio Bolsonaro marca 51% dos votos válidos, e Lula tem 49% na véspera da eleição - Folha de S.Paulo",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNOGk3QWZiNm50QWNXNnZlZ2xoNGUydzAyMlB2NU1mZlg2ZmtEV2RKWDFOSVU0VFFXdURMQ0N2QmtFM0dSZUF4cjh5M0ZzNWRCSW1icXo1enNOcVR3YlIwYVgxaHlmTzFIQXEtTk1CUHI2OFlBeHVJRTRxZ3JRTlk2a1VPSXBvY3I5TlFpUFZKU0gwbW9JRmtaang3ZVppZU9iYlNNS2d6bmxtQjg1S2h6aGxSblRlZHVxSnNXTkYwSE1JMGwtSDFrSjBNZmstcXhLdWc?oc=5",
+      "source": "Folha de S.Paulo",
+      "published": "2026-10-24",
+      "pollster": "Quaest",
+      "key": "c8b5e4a0765bbd3ef47c"
     },
     {
       "election": "president-br",
@@ -1624,15 +1646,6 @@
       "published": "2026-10-24",
       "pollster": "CNT/MDA",
       "key": "16240d4d928f74212fa6"
-    },
-    {
-      "election": "president-br",
-      "title": "Quaest, 2º turno - votos válidos: Flávio Bolsonaro, 51%; Lula, 49% - G1",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUFgtYjNjT0RqQ0xqOHE4Sk5EN0dOcEZnWk5hdFZ0Si1RMFN1TmZuaVZ5bnFyMWNjWmxpLWhteFZBLVRHVmpGa0xET1NCMTNsZjI1VlZVT25ZS0lXOU1IYmctQnhpblBvTS1GSHNwXzJXSHUxN09vS2pWMWszV0pUbTQyTkpyMmJjRUJwQVdpMGpYZTZ6cTlqYjBoQXB0VHctc0pLMGFyclEzMkZHUlNncTdyaW1tVXBy0gHHAUFVX3lxTE9nWHNWdmdqbjFtamR0cm91N3dBMmpZVXdlczRFdEV6aFJPLWhrVDR6U0t3NlcyakNoU0ktdDJFVERmYzRWLUYxWDdzWmdURXEtaFQwblVVWUtnUzQ4WXh2ZHcwLU5zYWZNaXJzektPaFZLMGFWeW5YbXBOUDgxbXhVN3JyNGNTTnBvajVoY0VfUHQzTGZ3Z3JWZ1FDYlJJRlJvdEN2SDcxeGVGX3pOVEs5TzYxR1NkSnZxbzlwT1VaYmZ5OTBSeW8?oc=5",
-      "source": "G1",
-      "published": "2026-10-24",
-      "pollster": "Quaest",
-      "key": "075f9f4ee8ea05083c17"
     },
     {
       "election": "president-br",
