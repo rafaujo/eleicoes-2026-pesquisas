@@ -87,6 +87,7 @@
     "0dac999b43694a7b2d7f",
     "0dd2e5f259a460ca7473",
     "0df4cf782d1b1f22539a",
+    "0ea12fc892b42eac01ec",
     "0ee159ef25d38891568d",
     "0f1c1f22c5d3bfabeced",
     "0f9db8618aa0a6b5e153",
@@ -146,6 +147,7 @@
     "17f305b873d0e31fe7e8",
     "1827888484e5ebeeff4a",
     "1864846b3538e374e1e4",
+    "18831bf7e1013986633b",
     "18ae73fbda21d5c9e001",
     "18cda805a91cb1122faf",
     "18d13286b9b686194771",
@@ -220,6 +222,7 @@
     "22e2cecfe2b3ee7a62eb",
     "22ec3eefa157899a6cbb",
     "2312e68e41fbc530e4f0",
+    "234148b826c2eafbcd89",
     "23a1b15ab51ac26cdf78",
     "23b88a328365d7920b58",
     "240d21bf99fe7fb98b9a",
@@ -1360,6 +1363,7 @@
     "de12158d8a7e1f923497",
     "de5ad738ef2b097fbe1e",
     "de85bef59f41a604cb10",
+    "de8faf754ef402d307f7",
     "dec8118b424b522c3b8e",
     "df092e16f1dc4417411f",
     "df32f1a0cf33f0e79dba",
@@ -1700,6 +1704,15 @@
       "published": "2026-10-21",
       "pollster": "Ideia",
       "key": "62218a81436732994388"
+    },
+    {
+      "election": "president-br",
+      "title": "Flávio Bolsonaro se distancia de Lula, mas empate persiste, aponta pesquisa Futura - JOTA Info",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVElRX2JTSW9XeU1ldEJkOFB3Z2I3NmVKcVhaNWZ5UUx4WVYxajRLaUlKQkx2VzRCSHJwYWxDeFRsZTlzNGZaZGJvM1RHZE5XYXZlR3ZYbnRvWkVjdnlIZHJid3lXNnU2MW5nd1k0bHpfRTM3ZFNaM2NQSzBWZ1owTk80VXZuZ0h5VjNtYTBPTFpTZi1DVWQtSFNhckZ6ejc1a2NidUhtdFVUaF9GajJxdnBLcU5PSThzLTgtYVJRazlGZXM?oc=5",
+      "source": "JOTA Info",
+      "published": "2026-10-21",
+      "pollster": "Futura",
+      "key": "234148b826c2eafbcd89"
     },
     {
       "election": "president-br",
