@@ -472,6 +472,7 @@
     "4cfee3b79e6a581a2c2b",
     "4d3e413164ea117d2da0",
     "4d75b8e49ef42fdf4521",
+    "4e1b86f77afff38167c7",
     "4e72681ac4ebefd6a704",
     "4eaaec6c2ee3502a2c36",
     "4f144f5bf13c71176976",
@@ -1039,6 +1040,7 @@
     "aba998cfa61ce4ea1316",
     "abafb706cfe6e5ed6aa9",
     "abc920a168d4d5c34aab",
+    "abcdd486c4c44db563dc",
     "abe2046677064c9fe8f1",
     "ac017206c2e4c2fdfc95",
     "ac2ccda06ab836c9b295",
@@ -1590,15 +1592,6 @@
     },
     {
       "election": "president-br",
-      "title": "Lula e Flávio Bolsonaro aparecem empatados em nova pesquisa AtlasIntel - Brasil de Fato",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmp3bHI0czFpSEFxWkFySkdMMURqX0lGWWZDaEs5R0xRekR0RGxfUWIxZWJ1eHZ4YjFNRFNuMkFJNlgzMDVuMElFSlRuSTlDRUhlMF9OS1UybVUyYWJJZVhpMi1qV0twel9lZEQ3WHVtM0RVM2xTelpVeVNoaGVJbzFzZllfMTRFWkVZYUJndVJfbV9BNk5Fb0dVX0N2c2JFN3o2S25hNHRuN3lPUjVveVFQVXk?oc=5",
-      "source": "Brasil de Fato",
-      "published": "2026-10-24",
-      "pollster": "AtlasIntel",
-      "key": "f85f9497ff7e78cf67cd"
-    },
-    {
-      "election": "president-br",
       "title": "Quaest: Flávio Bolsonaro marca 51% dos votos válidos, e Lula tem 49% na véspera da eleição - Folha de S.Paulo",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNOGk3QWZiNm50QWNXNnZlZ2xoNGUydzAyMlB2NU1mZlg2ZmtEV2RKWDFOSVU0VFFXdURMQ0N2QmtFM0dSZUF4cjh5M0ZzNWRCSW1icXo1enNOcVR3YlIwYVgxaHlmTzFIQXEtTk1CUHI2OFlBeHVJRTRxZ3JRTlk2a1VPSXBvY3I5TlFpUFZKU0gwbW9JRmtaang3ZVppZU9iYlNNS2d6bmxtQjg1S2h6aGxSblRlZHVxSnNXTkYwSE1JMGwtSDFrSjBNZmstcXhLdWc?oc=5",
       "source": "Folha de S.Paulo",
@@ -1632,6 +1625,15 @@
       "published": "2026-10-24",
       "pollster": "Palver",
       "key": "86b6a52a14214814a232"
+    },
+    {
+      "election": "president-br",
+      "title": "AtlasIntel mostra Flávio com 50,8% contra 49,2% de Lula - Mais Goiás",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZGcxVkVTeEZsSFhFZDh6WG1IQm1PYnNGdm52UGw3bkRGYWZ0QnhPMUgzNDRYMWRLOVhoZGJGU2QwNWVVVHFwQlp4RXhpT2wwbHZHRS03OWotNTZYOUxDamhVMjlpbVpoZ2RsM0dPMkdzOGc5R3JpSXpBaXUxS3BDa0JXc1FlQk51bFlIYklDcTlEOGdIcWpXVHJQcnpWaUZzT3Bn?oc=5",
+      "source": "Mais Goiás",
+      "published": "2026-10-24",
+      "pollster": "AtlasIntel",
+      "key": "4e1b86f77afff38167c7"
     },
     {
       "election": "president-br",
