@@ -71,6 +71,7 @@
     "0b20d6cf023d21dae559",
     "0b3dc98facf228bb9e2e",
     "0b487f83095cbf5c62ca",
+    "0b9776014504de4c9355",
     "0b9afc891d56bd52974f",
     "0bc3fca9fe8c4d8d47be",
     "0bc7f2b002a760c437d0",
@@ -103,6 +104,7 @@
     "114a6ce8ad8e6bb6c7ca",
     "1195da3b204cd7fb89be",
     "119f56f25cc786e43308",
+    "11d54250d42567141612",
     "1216899316a0e7c60c21",
     "1235f70ce43b61cd731a",
     "12458d81e80148ee4223",
@@ -438,6 +440,7 @@
     "43ffb9ff2f3a0f535ed5",
     "440ece9e8e508695332b",
     "447e18c5f45245c0b005",
+    "450ad80402113e32b75e",
     "455d78350b99228f2473",
     "459c940e7ff8ba2ec267",
     "45c5a15fbd5efc23792d",
@@ -1232,6 +1235,7 @@
     "c7d46ff4dbbddac0664a",
     "c824cdddf4f19a453c04",
     "c8334096fd5478c5a6cd",
+    "c8344793d2ef5cfee7cd",
     "c8b5e4a0765bbd3ef47c",
     "c8bb876b884fa354e3cd",
     "c8db0239f4d213769f0a",
@@ -1258,6 +1262,7 @@
     "cc6b098bb4a3ca171b8f",
     "cc8a9dcfcd2e82b6495f",
     "ccb8938701d259d9f263",
+    "ccc09250f7897db824f9",
     "cce852532c3b47e924f2",
     "cd42f013099dd4ed4308",
     "cd4630ec1447755dea05",
@@ -1440,6 +1445,7 @@
     "e9b65138f3ae714e7a72",
     "e9c98f2342ee3004eb44",
     "e9eb23af628221a22946",
+    "e9ef43fa9fa9c453df60",
     "ea46c57d5974d087c255",
     "ea60e081471ebe7d5ef3",
     "ea698c91b8741533365e",
@@ -1583,21 +1589,21 @@
   "pending": [
     {
       "election": "president-br",
-      "title": "Flávio Bolsonaro tem 50,1% dos válidos; Lula, 49,9%, diz pesquisa eleitoral Futura - JOTA Info",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPXzN6QzZNNXpOOXZxQ2h4c2VxcnBjRGNUN0RWSm11ci01MUdtM1BmTW1HWURGQlpSX0xEby1wOTVwem1QaEZvQ1dXSkxvNm51cTBONWNkbVRNMDhlcEN0djJwQjdCNkNyM1FVWk1lTmdfNXRCUDlJUHJ4ampwU09xcjhqZEN4N0FzQnJwM0c4S21OYmNrOUZuWWpXc0hQM2dVa1IwQ2hHd2J0U3lSZzMwU212MEVNNkZ6N3pjYQ?oc=5",
-      "source": "JOTA Info",
-      "published": "2026-10-25",
-      "pollster": "Futura",
-      "key": "ee2a392c1ae7aeece180"
-    },
-    {
-      "election": "president-br",
       "title": "Veritá: Flávio tem 51,56% dos votos válidos no 2º turno; Lula, 48,44% - CNN Brasil",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWTFnUHpnRkxCQm12U1FsYkVKVzcyN2NHV1VPVkM5bzZ3djVtazRRRlhXY2ZYaUU5RGRSWWtZenFBVmJ3MjN0R3dwNnNlaXFrcUhTUjhLYWJQNUhJc2lsSmc0Q1YwMVV5Ni01UEpLb1J2Ti1JZmZSYW82SVB2cFhKb3JJOERTSXFFQzdkY1RtZDJLQnhyN3JQX1Y0UE9GaVRJeV9r?oc=5",
       "source": "CNN Brasil",
       "published": "2026-10-25",
       "pollster": "Veritá",
       "key": "956ca97c20b27a31feb5"
+    },
+    {
+      "election": "president-br",
+      "title": "Flávio Bolsonaro tem 50,1% dos válidos; Lula, 49,9%, diz pesquisa eleitoral Futura - JOTA Info",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPXzN6QzZNNXpOOXZxQ2h4c2VxcnBjRGNUN0RWSm11ci01MUdtM1BmTW1HWURGQlpSX0xEby1wOTVwem1QaEZvQ1dXSkxvNm51cTBONWNkbVRNMDhlcEN0djJwQjdCNkNyM1FVWk1lTmdfNXRCUDlJUHJ4ampwU09xcjhqZEN4N0FzQnJwM0c4S21OYmNrOUZuWWpXc0hQM2dVa1IwQ2hHd2J0U3lSZzMwU212MEVNNkZ6N3pjYQ?oc=5",
+      "source": "JOTA Info",
+      "published": "2026-10-24",
+      "pollster": "Futura",
+      "key": "e9ef43fa9fa9c453df60"
     },
     {
       "election": "president-br",
