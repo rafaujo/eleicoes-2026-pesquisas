@@ -3,6 +3,7 @@
   "seenKeys": [
     "00030c37a6c09f8fccab",
     "0028f619701432a77502",
+    "0072bdaf2162187dc325",
     "0076867e759d9dedb124",
     "0090552002d510ea4933",
     "00e2eb19defa527db516",
@@ -1604,6 +1605,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Datafolha: 48% dizem não votar em Lula; 46% em Flávio - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMHlYQzRmNUNGMDFadWlTQjl5dFhwUjBRck1IYXJ6OTgxWldhdmhkcUs4WmE5QnpoeWFuZm9La0dsUnNfWEd6dFd4OEM1aGJLMEFBZ3dBQjJRUzF4MklXR2Q4NFREaDI4OHVSWGQzVkhRUGJrRlpQRFpmRDlmTTVydEVDSU1uQ1BmcV9lRG1Rem83Zw?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-11-04",
+      "pollster": "Datafolha",
+      "key": "0072bdaf2162187dc325"
+    },
     {
       "election": "president-br",
       "title": "Flávio tem 51% e Lula tem 49% dos votos válidos, diz PoderData/Aya - Poder360",
