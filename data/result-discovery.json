@@ -1025,6 +1025,7 @@
     "a5261ffc1c893a7ab70e",
     "a552ceda8fdc0900eaac",
     "a55f1f76f89906838ce2",
+    "a5948f333643dc58fc0b",
     "a5da6c93405b8332c63f",
     "a5e747bca32e7b99a5ec",
     "a613ccf3ea4ee231802e",
@@ -1062,6 +1063,7 @@
     "abafb706cfe6e5ed6aa9",
     "abc920a168d4d5c34aab",
     "abcdd486c4c44db563dc",
+    "abd194b657db0ddba8ec",
     "abe2046677064c9fe8f1",
     "ac017206c2e4c2fdfc95",
     "ac2ccda06ab836c9b295",
@@ -1604,21 +1606,21 @@
   "pending": [
     {
       "election": "president-br",
+      "title": "Flávio tem 51% e Lula tem 49% dos votos válidos, diz PoderData/Aya - Poder360",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOHNray1Eek9yR0dycnBxLWJVbEVJTkpFaHNNVlhDMVl1Q1B5WjQ4ZnNtVHlGdVNBV0RqSkVfZlhyNTdvQ3dicW5uaGZZd1hmeHAtUGZWNGJteTZJRG9EaElFRHhZT0VZVnVJMnRCenVVNWh5NWpMbURtYU5yeV9JVGVQa3gtNFA4Y0hWb3RaOExZVGxOV2lXZ3Ryc1ItYm9PeFN4dDNHVQ?oc=5",
+      "source": "Poder360",
+      "published": "2026-10-25",
+      "pollster": "PoderData",
+      "key": "a5948f333643dc58fc0b"
+    },
+    {
+      "election": "president-br",
       "title": "Veritá: Flávio tem 51,56% dos votos válidos no 2º turno; Lula, 48,44% - CNN Brasil",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWTFnUHpnRkxCQm12U1FsYkVKVzcyN2NHV1VPVkM5bzZ3djVtazRRRlhXY2ZYaUU5RGRSWWtZenFBVmJ3MjN0R3dwNnNlaXFrcUhTUjhLYWJQNUhJc2lsSmc0Q1YwMVV5Ni01UEpLb1J2Ti1JZmZSYW82SVB2cFhKb3JJOERTSXFFQzdkY1RtZDJLQnhyN3JQX1Y0UE9GaVRJeV9r?oc=5",
       "source": "CNN Brasil",
       "published": "2026-10-25",
       "pollster": "Veritá",
       "key": "956ca97c20b27a31feb5"
-    },
-    {
-      "election": "president-br",
-      "title": "Pesquisa PoderData/Aya aponta empate técnico entre Flávio Bolsonaro e Lula para o segundo turno - Portal VV8",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPWnJYcDhwbl9JWjVycmhscldjaVVPbFRiTTNtcHdXYkNhYUhxblotRzAxRDhOSWQ2YW1SYlJWYnNKblFTVlRadllkUEZqYlIwX2ZYZTgzNHAwYUpaS2FxUHZ0azFIWmV0YjYwcF90VzlQR0FWYjJSM2lHMjFuWHdtMmZTU2JpWGdzZkVsVUdOWE5IOFplQ3l3ckdaSmcwUzlmS0QtbGJnNGl1V2Rlb21WcHZqUlF2MVg2ZmxxTUNoTUNPSFU1aUFCQzBEUnBOVlU?oc=5",
-      "source": "Portal VV8",
-      "published": "2026-10-25",
-      "pollster": "PoderData",
-      "key": "39568b51bd3d05ac30e5"
     },
     {
       "election": "president-br",
