@@ -377,6 +377,7 @@
     "39522630c2cc5b674402",
     "39568b51bd3d05ac30e5",
     "3a22e69e39df5d9fe31b",
+    "3a2f57b37b2a47953863",
     "3a3788370252c246c2bb",
     "3aac63b49dd7557bc6fd",
     "3aaf1b79d72baf694f43",
@@ -1614,6 +1615,15 @@
       "published": "2026-11-04",
       "pollster": "Datafolha",
       "key": "0072bdaf2162187dc325"
+    },
+    {
+      "election": "president-br",
+      "title": "Genial/Quaest: 56% dos eleitores rejeitam Lula; outros 55% rejeitam Flávio - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPX0c4T0NIdkJQTG9GaWM4NlVidFl5dlMzeDU5WkV6Ry1xZXR4cEZFblh4NHQ0TDBmVkRLS3BPNkYxVm5EZnNqQkVPSHBTMUwyWEhuZERpOVVydVFlRzNnT3ZQSFduZFhZTEZUWFB1SDFFQWo2QTJWLTBfVURrd0x2MWFzbFk5dm51T2NzbF84SHlkZmVjTlp5bEtEVFAtS2lJeDdhUWFFa2pPb3ZQQVE?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-11-03",
+      "pollster": "Quaest",
+      "key": "3a2f57b37b2a47953863"
     },
     {
       "election": "president-br",
