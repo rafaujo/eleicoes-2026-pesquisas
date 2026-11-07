@@ -34,6 +34,7 @@
     "049243782f86326fb132",
     "04c9d19ae74cb687d39f",
     "04eafa10178b72553162",
+    "0502e149eb63ee2d408b",
     "0504d1a1ca569d5f983c",
     "053c34165e078f95bd23",
     "055923e95f929a70c2a0",
@@ -140,6 +141,7 @@
     "16240d4d928f74212fa6",
     "1637b2aef93af42ebf05",
     "16a037d1dcc0a765509e",
+    "16e7f87e3f63e9906323",
     "16ec403cda7484806f23",
     "170143e3f96f251d797b",
     "1742d9d411976cb2c297",
@@ -1174,6 +1176,7 @@
     "bb6d4839e2304a8c16ce",
     "bb7b24dd7c683b825f4f",
     "bbea671617ac6abd5dd7",
+    "bc1abdda3e5acb411fa8",
     "bc26460fe84f24efed32",
     "bc27ac23e60cc54038c9",
     "bc8193cef775cd87b2a8",
@@ -1610,6 +1613,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "CNT/MDA: Lula tem 48%, e Flávio, 39% no 2º turno - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQc2tVaVZEbUtlNnc2TFZBSkRKeGVZSWlmR285elp4OFJOZlpGUGUtN3N6Sk5xQU0yaDBEWEtYNXVUdVBFcmZvdG03OHBUVTZiU0RfRm5fZVUtcG4wSm04NGltRVhyTjZ5bklUV2kyalRNamRIWHNCNUtqTzNtZzUyakxIUkhHZXRkaFE?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-11-07",
+      "pollster": "CNT/MDA",
+      "key": "16e7f87e3f63e9906323"
+    },
     {
       "election": "president-br",
       "title": "Futura/Apex: Lula e Flávio têm empate técnico no 1º turno - CNN Brasil",
