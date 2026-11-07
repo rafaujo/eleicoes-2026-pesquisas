@@ -971,6 +971,7 @@
     "9e3dbc4e13c5c493a59e",
     "9e4447cfe6b435a97184",
     "9e4d048466643cad490d",
+    "9e79932537ac13e4df1e",
     "9e7f94a1b4a008e6537f",
     "9e81c176cadef9d21679",
     "9e884cc69c4d262a140d",
@@ -1089,6 +1090,7 @@
     "affc702594575e0f199f",
     "b01b960fe2f39540b690",
     "b083adfd43ce8fab61fe",
+    "b097ba0f96b0febfed2f",
     "b0a86f8d69c0c0d0f767",
     "b0b798396e91060d4d5a",
     "b1052859f86f8f6d1a6e",
@@ -1608,6 +1610,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Futura/Apex: Lula e Flávio têm empate técnico no 1º turno - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeElxOEtlSWxZMXVoLVJZbEtNR0UweTZiZ3pHTEd4YXJ2bkNHZ1hNWFdqU1pwaVRsVlI4bE9XM1hvWHZrNmt3YTQ4Y3hHWklBS3c4em9KeWU2NWx1SG10S2VKQlNOVHBiYWtnVUF5cXlYUXZCYmpNbGVNalZ6M1BGOVlHbUVWbktJeEhUM0UwcHVzcU1qOTVVTGhVbw?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-11-06",
+      "pollster": "Futura",
+      "key": "9e79932537ac13e4df1e"
+    },
     {
       "election": "president-br",
       "title": "Datafolha: 48% dizem não votar em Lula; 46% em Flávio - CNN Brasil",
