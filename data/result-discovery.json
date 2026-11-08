@@ -243,6 +243,7 @@
     "25ceccf19f6e3d35a072",
     "25f2afcaa0aff24456e7",
     "25fbdefc0bb1f17f634d",
+    "2610359965aaed6fc37e",
     "2630eb37108ddcdc2f38",
     "263a7dbccb58aa531781",
     "265d12a8019970755a8a",
@@ -411,6 +412,7 @@
     "3dc7af40119000511270",
     "3e94aac0e4d1c66c533f",
     "3e9630c74e3f1a50bc29",
+    "3ed04a305e41f091c959",
     "3f103c3ee7862ffe6712",
     "3f2ae8de314a1c527b62",
     "3f38d962227a688b8609",
@@ -518,6 +520,7 @@
     "52d07a0d71a9deb23070",
     "533369631eb5ba9a03e8",
     "5336cefa01e41ce2d805",
+    "533e15e6d3073dd19233",
     "53894548ad3cd0da7203",
     "538d52b42e138e623ca4",
     "53bfb37cb576be53bc59",
@@ -700,6 +703,7 @@
     "70de4d7b1fdf8896c091",
     "70efb54a46941dca01cd",
     "7152163946be6468b175",
+    "715368c65156b212dac9",
     "7179ae7a578532700eca",
     "717c31d3df3a3e771868",
     "719cf3f0f48d8cf4ee55",
@@ -922,6 +926,7 @@
     "956ca97c20b27a31feb5",
     "95d2bb856ef401fb8e92",
     "964b9706d1104a35254b",
+    "9674eb58d2b38df27672",
     "9676c39977b0b29ac13a",
     "968f7d95f5978e47cb96",
     "96960dcb2df8dbe3d557",
@@ -1034,6 +1039,7 @@
     "a5948f333643dc58fc0b",
     "a5da6c93405b8332c63f",
     "a5e747bca32e7b99a5ec",
+    "a5ed231aa756a12e7106",
     "a613ccf3ea4ee231802e",
     "a651c309af7e36569397",
     "a65f376ce06c118b2d01",
@@ -1616,6 +1622,24 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Futura: No 2º turno, Lula tem 46,5% contra 44% de Flávio Bolsonaro - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTWJYSTNacWhEcG5oclBDbTVndkNoOVlPc3B5Ui0xWVN4WGhCVzVCa3Npa2hkaHBsWlpSaWRzT1FlWnBnYVNMVm1LVDJMdlNvYlAxVUVuZjdRTTdVblVrSEpqUlJxSlhKV3ZpWkF0QmNqYWNldEphUGlmU0pvRDJRYm5mVWYwM3gwZmpab1dsdWt3QUNtdEhxbExuRUtJVjg4N1E?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-11-08",
+      "pollster": "Futura",
+      "key": "9674eb58d2b38df27672"
+    },
+    {
+      "election": "president-br",
+      "title": "Quaest: 62% consideram errada saída de Flávio Bolsonaro do Brasil após derrota eleitoral - Transmissão Política",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcFlSUHFhNjYwRzN3bmVsWjhvNFJIbUFOX2YtR3RjRnVOOUlRT21fMjVKckhna01NZi1vdnFUY1d1cXEtVWpGZ2hMdndESFJRVDF0OExGUktRM0h5eklKb2lyTW02MXV0T1RPdFVuYkl5U3BjMWVrSV9OdWlTYTY3d3BKcl93MkNzVHYzUTk0b2hHSkVNZTliRHBNT3hfOEM1LUtrUVI5bkNnWVFRRTVlTDBwSQ?oc=5",
+      "source": "Transmissão Política",
+      "published": "2026-11-08",
+      "pollster": "Quaest",
+      "key": "2610359965aaed6fc37e"
+    },
     {
       "election": "president-br",
       "title": "CNT/MDA: Lula tem 48%, e Flávio, 39% no 2º turno - CNN Brasil",
