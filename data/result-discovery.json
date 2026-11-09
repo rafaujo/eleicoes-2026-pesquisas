@@ -436,6 +436,7 @@
     "41fd275181ca0e2cf6ab",
     "421b47d9cfc7c308d4f8",
     "427cf2d620a22dae7879",
+    "427eb127c5713ed90b02",
     "42a759bb87014c72519c",
     "42ac7a9c693ab3804508",
     "42bfca01720c3ac2b712",
@@ -910,6 +911,7 @@
     "9305e26c4fbfb731135e",
     "93271eee5f89268d7a39",
     "93289d5eac15f5a136a6",
+    "9328ddca99a25b08872e",
     "935513a9d6caa41d1d59",
     "93615fa88599708188cc",
     "93a34ce07e9c76e9a2c7",
@@ -1294,6 +1296,7 @@
     "cc8a9dcfcd2e82b6495f",
     "ccb8938701d259d9f263",
     "ccc09250f7897db824f9",
+    "ccc43cd691e3d7c1c618",
     "cce852532c3b47e924f2",
     "cd42f013099dd4ed4308",
     "cd4630ec1447755dea05",
@@ -1628,9 +1631,27 @@
       "title": "Futura: No 2º turno, Lula tem 46,5% contra 44% de Flávio Bolsonaro - CNN Brasil",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTWJYSTNacWhEcG5oclBDbTVndkNoOVlPc3B5Ui0xWVN4WGhCVzVCa3Npa2hkaHBsWlpSaWRzT1FlWnBnYVNMVm1LVDJMdlNvYlAxVUVuZjdRTTdVblVrSEpqUlJxSlhKV3ZpWkF0QmNqYWNldEphUGlmU0pvRDJRYm5mVWYwM3gwZmpab1dsdWt3QUNtdEhxbExuRUtJVjg4N1E?oc=5",
       "source": "CNN Brasil",
-      "published": "2026-11-08",
+      "published": "2026-11-09",
       "pollster": "Futura",
-      "key": "9674eb58d2b38df27672"
+      "key": "427eb127c5713ed90b02"
+    },
+    {
+      "election": "governor-mg",
+      "title": "Datafolha: Cleitinho amplia liderança na disputa pelo governo de Minas - Revista Fórum",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA1RlIwZU9WdzA0TG1zLXFVazY1R1MwaW5DSFc2bEwyTHJod2ZWUGZpaUVqTWQtS2I3RGtjRFZYdW5ZY3QtdkVmNmFTajFHbDZCV056c2JYNzJ2d1Z0WEN5Zm9WQklBa0Y3VEpvSnd5R0I?oc=5",
+      "source": "Revista Fórum",
+      "published": "2026-11-08",
+      "pollster": "Datafolha",
+      "key": "ccc43cd691e3d7c1c618"
+    },
+    {
+      "election": "governor-sp",
+      "title": "Tarcísio aumenta chance de vencer no 1º turno, com 49% contra 29% de Haddad, aponta pesquisa Datafolha - Times Brasil | CNBC",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaVdnM2VBSGd5QzJzQUtxazczWlFkZmxXMU5zTDJzN2JORzUxRUNlNkkwNlVfMFVxUEl3LXVmV20wVW13YVkwLTJDQkc3VzMwOEdUTHJwT0RQUnhUQkhoU0p5SThWVy1PWTlLNGNGS2dpNW5zc01lNEI4LVREekthdXg0TGJMQmtval9VS29ocFJGeG9hVHBxQ2FMYXAxa2xkWThQT3JwS0psdDNQU3NJSS1ZYWRBZTYyaFNCVXJqeVIzc09UTzNfTVFoLXBoZw?oc=5",
+      "source": "Times Brasil | CNBC",
+      "published": "2026-11-08",
+      "pollster": "Datafolha",
+      "key": "9328ddca99a25b08872e"
     },
     {
       "election": "president-br",
