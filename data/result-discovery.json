@@ -196,6 +196,7 @@
     "1deb122bf4c8af550c4b",
     "1e07ec7d249d70786998",
     "1e7096250771a49818bc",
+    "1e87cf8a6fb1984d5cd7",
     "1e8f222689c1b086805c",
     "1f10d0c4a5eee45273a2",
     "1f2bc5516eeea862eeee",
@@ -405,6 +406,7 @@
     "3cc87a6d847ec84c47cf",
     "3cdd898290bac51ff4de",
     "3ce6ee0d32c2ce0e8943",
+    "3d2c3ccc1e9b3661e3b2",
     "3d2cd3b5809617a0006a",
     "3d5e9962c2883e39e930",
     "3d7cce88baa66b3e7136",
@@ -656,6 +658,7 @@
     "686a50cb8de034534ea6",
     "688a8e66f43cc80923fa",
     "68c8bbb70c6d16b44371",
+    "691f14fc8ef5186e1517",
     "695be890e38cf4b48f9b",
     "69bde24224d4c047605d",
     "69cd99ef4b8b5332ffa6",
@@ -950,6 +953,7 @@
     "98fb07260d19709646db",
     "993e0167d0dae9a2d78c",
     "99a280ab39fa245c8c93",
+    "99a64ffedb00962a3353",
     "99a6e61aef946566726b",
     "99fbb5285f7f2af6a13b",
     "9a2d20d4b632c3aa43c7",
@@ -1049,6 +1053,7 @@
     "a6b99fa28abef5d71aad",
     "a7192b79decff4ced234",
     "a72b0945b9301079a77e",
+    "a781dfc3ec4ede765520",
     "a79886b832e652b5093f",
     "a7cc9169fce24c4d75e7",
     "a7eb04349a95d10f2d7e",
@@ -1103,11 +1108,13 @@
     "b083adfd43ce8fab61fe",
     "b097ba0f96b0febfed2f",
     "b0a86f8d69c0c0d0f767",
+    "b0b58974f272ab9d6e4b",
     "b0b798396e91060d4d5a",
     "b1052859f86f8f6d1a6e",
     "b12ccca62747d67a95c8",
     "b12fd9cbb50a15ddb520",
     "b13378bca1fd80904bf3",
+    "b1380ce01845202a8575",
     "b14b048f174e60fe40d1",
     "b179a4c5e56c5ea7bd89",
     "b18b9293839ea98e9b83",
@@ -1627,22 +1634,22 @@
   ],
   "pending": [
     {
-      "election": "president-br",
-      "title": "Futura: No 2º turno, Lula tem 46,5% contra 44% de Flávio Bolsonaro - CNN Brasil",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTWJYSTNacWhEcG5oclBDbTVndkNoOVlPc3B5Ui0xWVN4WGhCVzVCa3Npa2hkaHBsWlpSaWRzT1FlWnBnYVNMVm1LVDJMdlNvYlAxVUVuZjdRTTdVblVrSEpqUlJxSlhKV3ZpWkF0QmNqYWNldEphUGlmU0pvRDJRYm5mVWYwM3gwZmpab1dsdWt3QUNtdEhxbExuRUtJVjg4N1E?oc=5",
-      "source": "CNN Brasil",
-      "published": "2026-11-09",
-      "pollster": "Futura",
-      "key": "427eb127c5713ed90b02"
-    },
-    {
       "election": "governor-mg",
       "title": "Datafolha: Cleitinho amplia liderança na disputa pelo governo de Minas - Revista Fórum",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA1RlIwZU9WdzA0TG1zLXFVazY1R1MwaW5DSFc2bEwyTHJod2ZWUGZpaUVqTWQtS2I3RGtjRFZYdW5ZY3QtdkVmNmFTajFHbDZCV056c2JYNzJ2d1Z0WEN5Zm9WQklBa0Y3VEpvSnd5R0I?oc=5",
       "source": "Revista Fórum",
-      "published": "2026-11-08",
+      "published": "2026-11-09",
       "pollster": "Datafolha",
-      "key": "ccc43cd691e3d7c1c618"
+      "key": "b0b58974f272ab9d6e4b"
+    },
+    {
+      "election": "president-br",
+      "title": "Quaest pós-eleição aponta vantagem de Lula sobre Flávio Bolsonaro em cinco segmentos do eleitorado - Blog do Dércio",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORFFUaHo2SFlzOThhR2pScmhZUzZwNmlRRHVmWHhjcXE3QXRYUGZONDh6aHFEcldpS1Bpd0lpR1lXZ3pseUtZYlVjYTZxRm0zdXhSWFVxMk9xaDU5RTRBYW56Q3BTRlp1TzFHalQwT3RKR1RLaHdsZ3d4UU1nUG93REUzbTQ0azRVOEhEZ2Z3NG9JS18tWGtnejdMdnFKOWxNemRGcWFYa0dZN0JYRkJ0Ym5VaWZ4Ui11OXJjcTlR?oc=5",
+      "source": "Blog do Dércio",
+      "published": "2026-11-09",
+      "pollster": "Quaest",
+      "key": "1e87cf8a6fb1984d5cd7"
     },
     {
       "election": "governor-sp",
@@ -1655,12 +1662,12 @@
     },
     {
       "election": "president-br",
-      "title": "Quaest: 62% consideram errada saída de Flávio Bolsonaro do Brasil após derrota eleitoral - Transmissão Política",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcFlSUHFhNjYwRzN3bmVsWjhvNFJIbUFOX2YtR3RjRnVOOUlRT21fMjVKckhna01NZi1vdnFUY1d1cXEtVWpGZ2hMdndESFJRVDF0OExGUktRM0h5eklKb2lyTW02MXV0T1RPdFVuYkl5U3BjMWVrSV9OdWlTYTY3d3BKcl93MkNzVHYzUTk0b2hHSkVNZTliRHBNT3hfOEM1LUtrUVI5bkNnWVFRRTVlTDBwSQ?oc=5",
-      "source": "Transmissão Política",
+      "title": "Futura: Flávio é rejeitado por 47,1% dos eleitores; Lula, por 45,9% - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORFZPNW9DQU1LVU9vTGlHa3g2c3JHaUhhT2tKZmZTVlo2LVhkT3JxbXp1bUZXRDNIYmdGallnMVlNZmxNcGxfRC1GWGZmZ0JOTXNUMWdsc1dWWmM5a3ZiVDduMlNsZkk2amxZVVdCNk9CZDlnQ2dZYWNqcGlwRUdDWENjZDdXZVZ6c0hqTUplR1pKN1h1dWFxVE5IRERpMUNL?oc=5",
+      "source": "CNN Brasil",
       "published": "2026-11-08",
-      "pollster": "Quaest",
-      "key": "2610359965aaed6fc37e"
+      "pollster": "Futura",
+      "key": "3d2c3ccc1e9b3661e3b2"
     },
     {
       "election": "president-br",
