@@ -298,6 +298,7 @@
     "2d260fa4a62e844d82ec",
     "2d2c222216297af71250",
     "2d6846904bb7c50d4d76",
+    "2db150fa6c91d2d4b597",
     "2db97b2892a91af009d8",
     "2dc4743958e407c5de3e",
     "2dd4b2215c9151ad08d4",
@@ -1643,6 +1644,15 @@
       "key": "b0b58974f272ab9d6e4b"
     },
     {
+      "election": "governor-sp",
+      "title": "Tarcísio aumenta chance de vencer no 1º turno, com 49% contra 29% de Haddad, aponta pesquisa Datafolha - Times Brasil | CNBC",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaVdnM2VBSGd5QzJzQUtxazczWlFkZmxXMU5zTDJzN2JORzUxRUNlNkkwNlVfMFVxUEl3LXVmV20wVW13YVkwLTJDQkc3VzMwOEdUTHJwT0RQUnhUQkhoU0p5SThWVy1PWTlLNGNGS2dpNW5zc01lNEI4LVREekthdXg0TGJMQmtval9VS29ocFJGeG9hVHBxQ2FMYXAxa2xkWThQT3JwS0psdDNQU3NJSS1ZYWRBZTYyaFNCVXJqeVIzc09UTzNfTVFoLXBoZw?oc=5",
+      "source": "Times Brasil | CNBC",
+      "published": "2026-11-09",
+      "pollster": "Datafolha",
+      "key": "2db150fa6c91d2d4b597"
+    },
+    {
       "election": "president-br",
       "title": "Quaest pós-eleição aponta vantagem de Lula sobre Flávio Bolsonaro em cinco segmentos do eleitorado - Blog do Dércio",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORFFUaHo2SFlzOThhR2pScmhZUzZwNmlRRHVmWHhjcXE3QXRYUGZONDh6aHFEcldpS1Bpd0lpR1lXZ3pseUtZYlVjYTZxRm0zdXhSWFVxMk9xaDU5RTRBYW56Q3BTRlp1TzFHalQwT3RKR1RLaHdsZ3d4UU1nUG93REUzbTQ0azRVOEhEZ2Z3NG9JS18tWGtnejdMdnFKOWxNemRGcWFYa0dZN0JYRkJ0Ym5VaWZ4Ui11OXJjcTlR?oc=5",
@@ -1650,15 +1660,6 @@
       "published": "2026-11-09",
       "pollster": "Quaest",
       "key": "1e87cf8a6fb1984d5cd7"
-    },
-    {
-      "election": "governor-sp",
-      "title": "Tarcísio aumenta chance de vencer no 1º turno, com 49% contra 29% de Haddad, aponta pesquisa Datafolha - Times Brasil | CNBC",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaVdnM2VBSGd5QzJzQUtxazczWlFkZmxXMU5zTDJzN2JORzUxRUNlNkkwNlVfMFVxUEl3LXVmV20wVW13YVkwLTJDQkc3VzMwOEdUTHJwT0RQUnhUQkhoU0p5SThWVy1PWTlLNGNGS2dpNW5zc01lNEI4LVREekthdXg0TGJMQmtval9VS29ocFJGeG9hVHBxQ2FMYXAxa2xkWThQT3JwS0psdDNQU3NJSS1ZYWRBZTYyaFNCVXJqeVIzc09UTzNfTVFoLXBoZw?oc=5",
-      "source": "Times Brasil | CNBC",
-      "published": "2026-11-08",
-      "pollster": "Datafolha",
-      "key": "9328ddca99a25b08872e"
     },
     {
       "election": "president-br",
