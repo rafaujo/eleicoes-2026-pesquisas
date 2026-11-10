@@ -447,6 +447,7 @@
     "42eac89d554fa2eea139",
     "42ef735ff3c944252133",
     "42f01fb7c2ea7092aa0f",
+    "431ed5ffa5f8b045ff9b",
     "437338ed8309e263fb9e",
     "439308b1fba9cf665a90",
     "43e19f54bde6d19db4b1",
@@ -931,6 +932,7 @@
     "9557a4e758e6785839f4",
     "956ca97c20b27a31feb5",
     "95d2bb856ef401fb8e92",
+    "95ee08f06926885459e9",
     "964b9706d1104a35254b",
     "9674eb58d2b38df27672",
     "9676c39977b0b29ac13a",
@@ -1019,6 +1021,7 @@
     "a1a78148e145db0ae89b",
     "a1d6ee9e4a6ddf97aad9",
     "a1f81413882839d8c3c3",
+    "a220cd13fc6f09f2bf89",
     "a2530aa37b7f20779c45",
     "a27e10bcd5959f0faef9",
     "a2b70988426fa4b846e5",
@@ -1635,13 +1638,22 @@
   ],
   "pending": [
     {
+      "election": "president-br",
+      "title": "Futura: Flávio tem 45,4% contra 45% de Lula no 2º turno - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQc01YbXRGeE12T2lFSFVMRHFnYVdja28wcENtVHk1S2QwOVlpcVpTcno0WjA2d202MHFsdnJzak1CSGNvTXVWc0dyT0RhV1R4cUNLNnpqdmxySEJ0c1hxeFY0X25IbkNBSEpWX0tWakRsMThYVDJxWVgtX3VQVVp1R3VIWDdHczB4S3RPS0Y5QmJKeDBZ?oc=5",
+      "source": "CNN Brasil",
+      "published": "2026-11-10",
+      "pollster": "Futura",
+      "key": "431ed5ffa5f8b045ff9b"
+    },
+    {
       "election": "governor-mg",
-      "title": "Datafolha: Cleitinho amplia liderança na disputa pelo governo de Minas - Revista Fórum",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA1RlIwZU9WdzA0TG1zLXFVazY1R1MwaW5DSFc2bEwyTHJod2ZWUGZpaUVqTWQtS2I3RGtjRFZYdW5ZY3QtdkVmNmFTajFHbDZCV056c2JYNzJ2d1Z0WEN5Zm9WQklBa0Y3VEpvSnd5R0I?oc=5",
-      "source": "Revista Fórum",
+      "title": "Datafolha: Cleitinho lidera cenários de 1º e 2º turnos ao governo de MG - CNN Brasil",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMkFaUzB4QkcwdmJMbXhETzR4QVN5YWZPR1hxLXRkZ2NtY2hLN0NLTVg1dzQ5Nzg3ZVQtU0Q3a0M2cXZ6TUU4c1EwWFo4YXoyUDdEa1BBemk0ZWNqWUNLVE9QUWYxdHMzeHN4TENUT2FGenJOclQzOVl0cUhTZGlqSWpSWjJ1YnVqeUVEOVktVy0tX2ZNLXNPU1N0NUF5UmtGN3lSLU1QdnJucUFrSHc?oc=5",
+      "source": "CNN Brasil",
       "published": "2026-11-09",
       "pollster": "Datafolha",
-      "key": "b0b58974f272ab9d6e4b"
+      "key": "95ee08f06926885459e9"
     },
     {
       "election": "governor-sp",
