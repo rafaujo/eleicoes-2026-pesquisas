@@ -73,6 +73,7 @@
     "0b20d6cf023d21dae559",
     "0b3dc98facf228bb9e2e",
     "0b487f83095cbf5c62ca",
+    "0b5c42760a626ccd21a1",
     "0b9776014504de4c9355",
     "0b9afc891d56bd52974f",
     "0bc3fca9fe8c4d8d47be",
@@ -559,6 +560,7 @@
     "58805b8d4ee02f19aa36",
     "58b255bb2fda772169ee",
     "5903f505962e2a86861d",
+    "5952e70ed5efcbdf9bf8",
     "598386b75de2aafb1e2f",
     "59a644db688c7c2da364",
     "59c75ecd6c40d9a7bf39",
@@ -1013,6 +1015,7 @@
     "a0a3fa90920cdbc02c6b",
     "a0c45630045f2aeb087e",
     "a0cd917af27b1aecf5c9",
+    "a0e5bea0e7b7aaca2ee0",
     "a0ea6c2c5a0a30eecc60",
     "a0f63a1f45c7115d653b",
     "a10065a169b34a22338c",
@@ -1639,12 +1642,30 @@
   "pending": [
     {
       "election": "president-br",
+      "title": "Datafolha Aponta Empate De Lula Com Flávio Bolsonaro E Cury Entra Na Disputa; Confira - Taktá No AR",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSXYyaTItWi00TzFYOVJzNkJGU25SUm1fWWFJWFhJSUdMWFpqRVFfMElhLTVEQ3R4ZzF6SDRocHdXWF9sRW5OdlhPYS16ZV9EVy1YQmZSdjhPaGdnY2FHdktfckxOZnktWXlXNGVGSmRUSl9mTFJJUVlkdk4wN2lSR3BZLUc3bmY5YmVubVpkaEpJOWFXVTE1Y1YzYXE1Yl8xN1lqSWs3MDdFQjVESnN6SFVobWh3Zw?oc=5",
+      "source": "Taktá No AR",
+      "published": "2026-11-10",
+      "pollster": "Datafolha",
+      "key": "5952e70ed5efcbdf9bf8"
+    },
+    {
+      "election": "president-br",
       "title": "Futura: Flávio tem 45,4% contra 45% de Lula no 2º turno - CNN Brasil",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQc01YbXRGeE12T2lFSFVMRHFnYVdja28wcENtVHk1S2QwOVlpcVpTcno0WjA2d202MHFsdnJzak1CSGNvTXVWc0dyT0RhV1R4cUNLNnpqdmxySEJ0c1hxeFY0X25IbkNBSEpWX0tWakRsMThYVDJxWVgtX3VQVVp1R3VIWDdHczB4S3RPS0Y5QmJKeDBZ?oc=5",
       "source": "CNN Brasil",
       "published": "2026-11-10",
       "pollster": "Futura",
       "key": "431ed5ffa5f8b045ff9b"
+    },
+    {
+      "election": "president-br",
+      "title": "Quaest: Lula lidera em 9 estados e Flávio Bolsonaro em 7; veja onde cada candidato lidera - Muita Informação",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNlJEY05xcDh2cnNVZWxvSnJJdVVPYmMzRlQyZXVPWHpBVU9vYnRGeW9uNWRicEZzd1B6OWdXUjVKRU9qRDAxXy0tOHc1SjRia1lYM2I0N3lHVFdRdUp6Y0t5bFRJQk83Tkt2eHdkaTVIN3hWUXdoZ0xTRlFtelowMldQc056bm9xRTU5TXNCeWVwOUgwV0RrY2pHbVFzd0ZNYi12UUp5c2hCQVZCRzhHeUpWbHhBUUl2X3dxX3haWkxNekRSbkZV?oc=5",
+      "source": "Muita Informação",
+      "published": "2026-11-10",
+      "pollster": "Quaest",
+      "key": "0b5c42760a626ccd21a1"
     },
     {
       "election": "governor-mg",
@@ -1666,12 +1687,12 @@
     },
     {
       "election": "president-br",
-      "title": "Quaest pós-eleição aponta vantagem de Lula sobre Flávio Bolsonaro em cinco segmentos do eleitorado - Blog do Dércio",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORFFUaHo2SFlzOThhR2pScmhZUzZwNmlRRHVmWHhjcXE3QXRYUGZONDh6aHFEcldpS1Bpd0lpR1lXZ3pseUtZYlVjYTZxRm0zdXhSWFVxMk9xaDU5RTRBYW56Q3BTRlp1TzFHalQwT3RKR1RLaHdsZ3d4UU1nUG93REUzbTQ0azRVOEhEZ2Z3NG9JS18tWGtnejdMdnFKOWxNemRGcWFYa0dZN0JYRkJ0Ym5VaWZ4Ui11OXJjcTlR?oc=5",
-      "source": "Blog do Dércio",
-      "published": "2026-11-09",
+      "title": "Fuga de Flávio Bolsonaro: maioria dos brasileiros reprova, aponta pesquisa Quaest - ParaibaOnline",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNU2xfd0lBM2ZHNFVIMmVJM05RenhkWTNJZ291Zlk5Z2JMNU80ZnZpT082a3BXd3lVNlZJVXNNeFFHcVlUbWJ0SjdJcVhfUXEwSXc1UFBvSldva3U0bmZvcmdRb3hTLVh5MnpOQ0lyek9fVzZYMjE4cUtldVpfZ2hEVVNjNE5QeGR4aFA0anNaQkVfUGZSZ3BnNGx5WHpabnNYX2ROUDJTTzdxOE1XZDBSYVZNMzRlSUZRaWQwZ19fd1hIcTB6TFE?oc=5",
+      "source": "ParaibaOnline",
+      "published": "2026-11-08",
       "pollster": "Quaest",
-      "key": "1e87cf8a6fb1984d5cd7"
+      "key": "a220cd13fc6f09f2bf89"
     },
     {
       "election": "president-br",
