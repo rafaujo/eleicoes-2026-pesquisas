@@ -155,6 +155,7 @@
     "1827888484e5ebeeff4a",
     "1864846b3538e374e1e4",
     "18831bf7e1013986633b",
+    "189a851b8dfdfabfadec",
     "18ae73fbda21d5c9e001",
     "18cda805a91cb1122faf",
     "18d13286b9b686194771",
@@ -1652,6 +1653,15 @@
       "published": "2026-11-13",
       "pollster": "AtlasIntel",
       "key": "7508724b2fa6a370ffc8"
+    },
+    {
+      "election": "governor-sp",
+      "title": "Atlas/Bloomberg: 33% dos eleitores de direita querem Tarcísio liderando o campo; 30% preferem Flávio - Estadão",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPZTVIazBxenZrc1ZjcURhQ3g4WnJuc3ZabnpOSU1peGVtTGl1ay1Zd0xyOXVjaFRwbE5jbDdvUXQ1Y2Q4RmRSb19pemJSNUtZTzRSSHRkNjFqZ1NVaVIzOTFiQ0FrNXhMbzA0WEdoM2gyY0dIeEJpcHltM3YzZHlYbUxwc0F1RWJ3NWZUYU5OcVM4TTdYTWJmN0pXWkdNT01QMVBMSkp3Y2F0eUV1Qm96U1M5SUFSUDdpN0hLTGt6Z01aNURVal9FNnNrLUbSAdIBQVVfeXFMT1M0RDJfdkNDel9hUW1FTGFrQW5PdlRmZWREVm9mZHI1TXAyRzFLazFiNW5xSHI3WmkycEJkM0JLSGowNEJQWW9ZY2x5T0dadTBRdkkyRGJUQ3BLNnNYeEhabGVqaHU5NWQxVm94VWpDNEc0TXR6dGpJaUU3SmZha1JKRVlPb21PRmJOQVdwdmE0N3l3U0JoZ0FNQmZ2QnlBeWRXRFltRDlkNnNKYnpselpET0RoX1Z3cFNxQllVTUEtVnRsbUs5cDl6b015S3Jla01B?oc=5",
+      "source": "Estadão",
+      "published": "2026-11-13",
+      "pollster": "AtlasIntel",
+      "key": "189a851b8dfdfabfadec"
     },
     {
       "election": "president-br",
