@@ -1317,6 +1317,7 @@
     "ccb8938701d259d9f263",
     "ccc09250f7897db824f9",
     "ccc43cd691e3d7c1c618",
+    "ccda8bf015db46dbc6ea",
     "cce852532c3b47e924f2",
     "cd42f013099dd4ed4308",
     "cd4630ec1447755dea05",
@@ -1646,6 +1647,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Pesquisa BTG-Nexus: Lula tem 39% das intenções de voto no 1º turno, Flávio Bolsonaro, 35% - Terra",
+      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPNkRfZ3BLTVR6US1ZR0twU0VhbmFuQXgwd19kTzNnbF85emJrRnEtdnFQSFNzV2RHZXdla0lCTkVla25NRHF3VUR4azVMRXl3U2huYUctTE9idVdKajIyZUdjdDE3eVB2aFBjT3RNZmZ5MC1iUXRNWjRmc0lCUU9lY3ZUVkZCLVdJN29QcklpNnlkS2ZPRnZGc1B6UnRMQVUtblNpTHpQZG9STmdqMnotM2NnWEZ0ekhOSkpKNGU5UG5DcG05Q3o3NUhzMFZCbGhMTjlKTERVaEhweEtqWU5xdDJlWWVqeHpsMDhWdzNoYTRIcHV1akxTTTN2UFpLaHlZWDRtMy11eEhmc1F5RUln?oc=5",
+      "source": "Terra",
+      "published": "2026-11-16",
+      "pollster": "Nexus",
+      "key": "ccda8bf015db46dbc6ea"
+    },
     {
       "election": "president-br",
       "title": "Lula e Nikolas Ferreira lideram ranking de políticos mais bem avaliados, aponta AtlasIntel - ncnews.com.br",
