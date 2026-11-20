@@ -642,6 +642,7 @@
     "64a60ee5e8f9bd44be1c",
     "64b603c75db2a3f11d37",
     "64c53b120b541b612ccd",
+    "6528b7d6cfc60b8727f8",
     "653faf359e25f05ec131",
     "65488cf29f83601d7f2f",
     "6557dc9451ee4a94efd3",
@@ -1632,6 +1633,7 @@
     "fc3fc08401577dbf6e2a",
     "fc9e4de36a8c3a77c670",
     "fcf48f91c7cafc12f2a9",
+    "fd1f511cd53832cb05ff",
     "fd54769a89702cd002c8",
     "fd643c406f829f419750",
     "fd83aba51196ef940511",
@@ -1649,6 +1651,15 @@
   "pending": [
     {
       "election": "president-br",
+      "title": "Pesquisa Real Time Big Data: Lula tem 41% das intenções de voto no 1º turno, Flávio Bolsonaro, 37% - Terra",
+      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOSHU2SVpEZTVYTEpSVnZyQlNQb0xTMVBDbG5BUmEzTWlKRkstU1Vfc3k4U21NNWQwbmJVSzgtRXBnUk9JSGRVUUFCSnJGVlVlWWtMbE50N1E2ZEluSElaQlNjUzlVVG4wdlFwRldib28tbktDdDVVcXR0X0NfUFJqNnA3X1lVeXptRlZjTHpFZ0gxVDJDbzQtb3hNSS1qZmtWazZhVi1Fb1JlSnp2THoxZXhVNTNsTkF6aHQxNE9EX25wOTEtN0xRM1hYOTFDMm9KZzFDUDB1aEFRekRQZlNWUUFURlJVTHhGdlI5ZzBrd210dzNlQnVRa0JtX0l3bUJLY2VoalBQNDE1MlNMNVpqMGY0dWhfRVFBQlY0?oc=5",
+      "source": "Terra",
+      "published": "2026-11-17",
+      "pollster": "Real Time Big Data",
+      "key": "fd1f511cd53832cb05ff"
+    },
+    {
+      "election": "president-br",
       "title": "Pesquisa BTG-Nexus: Lula tem 39% das intenções de voto no 1º turno, Flávio Bolsonaro, 35% - Terra",
       "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPNkRfZ3BLTVR6US1ZR0twU0VhbmFuQXgwd19kTzNnbF85emJrRnEtdnFQSFNzV2RHZXdla0lCTkVla25NRHF3VUR4azVMRXl3U2huYUctTE9idVdKajIyZUdjdDE3eVB2aFBjT3RNZmZ5MC1iUXRNWjRmc0lCUU9lY3ZUVkZCLVdJN29QcklpNnlkS2ZPRnZGc1B6UnRMQVUtblNpTHpQZG9STmdqMnotM2NnWEZ0ekhOSkpKNGU5UG5DcG05Q3o3NUhzMFZCbGhMTjlKTERVaEhweEtqWU5xdDJlWWVqeHpsMDhWdzNoYTRIcHV1akxTTTN2UFpLaHlZWDRtMy11eEhmc1F5RUln?oc=5",
       "source": "Terra",
@@ -1664,6 +1675,15 @@
       "published": "2026-11-13",
       "pollster": "AtlasIntel",
       "key": "7508724b2fa6a370ffc8"
+    },
+    {
+      "election": "president-br",
+      "title": "Datafolha: Flávio Bolsonaro tem 51% e Lula, 49% dos votos válidos - GC Notícias",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOQlNMR2NuMnNRRVpkT1lPZVZQUGdCXzJtQ3Nqd2F4VXdIamNocml3b0JNR2JBYVlSVU9wZFdGRG5aYjNMWWZfUS1xdWx3RzdJTTJ6OWVaMjhXSU81WWdVTm9TRXdIWmhhRkY3TXlKSzRtcGlQaU5oZmhtdm0zcnVIUXVhVUpJSm9sQXRzSk9kTU56amhuTGRXVS1yTkNpdVVqSG13bFJWSzVuU2NHTG9DT2Z5YVZvQklIdEJQeVlPbw?oc=5",
+      "source": "GC Notícias",
+      "published": "2026-11-13",
+      "pollster": "Datafolha",
+      "key": "6528b7d6cfc60b8727f8"
     },
     {
       "election": "governor-sp",
