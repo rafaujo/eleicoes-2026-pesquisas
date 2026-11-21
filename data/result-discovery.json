@@ -927,6 +927,7 @@
     "93615fa88599708188cc",
     "93a34ce07e9c76e9a2c7",
     "93afc7d015ac8d798804",
+    "93cfad95ec205bab141b",
     "93dafc58b1ff6db85803",
     "940801792f35d9c940a6",
     "94091ffcf09f791d976f",
@@ -1657,6 +1658,15 @@
       "published": "2026-11-17",
       "pollster": "Real Time Big Data",
       "key": "fd1f511cd53832cb05ff"
+    },
+    {
+      "election": "president-br",
+      "title": "Pesquisa AtlasIntel: Lula tem 45,8% no 1º turno; Flávio Bolsonaro, 43,4% - Terra",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPeDdlLVM0R3V4MnEwNHJXYi1VQ3dDaE5VOC0ya080MzRsQWVBRXdHWFc1djR0UUgxbWNFbF9XZlFJZDhjdi1MRW5zS2tpYVhzQkxwSFpCMEh4eUNCQ0lqc3NHeGhpcXdYMjhZRDQ2aGVKRG0waEYycko2Z1ZPRnd5R3dfYkFWNVgzYWFnRjd1TG4xczBuaThPckZJWkJxQkp1NEQxSGVDNEdMbDZOdjJ2Vm5vY2dzLUJLbTBXUXZnc28xTmFrWTdodU13RmZRa2NjMnlnVUFfbWZKbC1lb2trZWphNk9BeXduS3R1TmJaOEFZS0phdVE?oc=5",
+      "source": "Terra",
+      "published": "2026-11-17",
+      "pollster": "AtlasIntel",
+      "key": "93cfad95ec205bab141b"
     },
     {
       "election": "president-br",
