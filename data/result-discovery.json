@@ -1004,6 +1004,7 @@
     "9f249cd5fc047ef07ae8",
     "9f2a4ebb5759d16b3845",
     "9f3d6430231f6406a10d",
+    "9f7b8eef7ef2f56011bb",
     "9f8478489609e63990ae",
     "9f9815bbddacae564158",
     "9fef53040216c2bd4dc5",
@@ -1676,6 +1677,15 @@
       "published": "2026-11-16",
       "pollster": "Nexus",
       "key": "ccda8bf015db46dbc6ea"
+    },
+    {
+      "election": "president-br",
+      "title": "ANÁLISE DA PESQUISA ATLAS COM 5.014 ELEITORES EM AGOSTO: LULA TEM 47,1% E FLÁVIO 42,6 NO 2º TURNO Drinking (uNTfbgvEg5) - Unisba Media",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVXR1ZmJ3NWZ2WkVHTWhxeHdaRVpMNHVPMmZHRnZndkNNbDBUSFlvQW9xU1dOOGF1MWFTcTZwMFhhcG5URGE5ZEFoOTE3VVAwMDYwcVZKYkFyT202SGYyV3lYTDgxQkc0LWlyUkV4QWRncGNPcU9TQlRkX3ZyUjdlaGJR?oc=5",
+      "source": "Unisba Media",
+      "published": "2026-11-15",
+      "pollster": "AtlasIntel",
+      "key": "9f7b8eef7ef2f56011bb"
     },
     {
       "election": "president-br",
