@@ -1126,6 +1126,7 @@
     "b0a86f8d69c0c0d0f767",
     "b0b58974f272ab9d6e4b",
     "b0b798396e91060d4d5a",
+    "b0ea33aee7d796f404ca",
     "b1052859f86f8f6d1a6e",
     "b12ccca62747d67a95c8",
     "b12fd9cbb50a15ddb520",
@@ -1651,6 +1652,15 @@
     "fffc7e3084915a3f157a"
   ],
   "pending": [
+    {
+      "election": "president-br",
+      "title": "Quaest: Lula e Flávio Bolsonaro empatam em 42% no 2º turno e senador absorve votos de rivais - sentidohorario.com.br",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOR194ZFZXaHpoYkJFWVJTa2ZYOEU4cTN1Qi1xM0k5VUtWU08wclQ5OG5Pbjg2RzJiMEk0NEFOakZZaXYyYjRzclFSMzFyY1BaSzUtdHJkbW1mcG9ZWENxdTIzYVdUZHdBNnZUVEFua3VIdXh2b0FqbUYwMjNLeEYwSjdjWFR1Z1AyZDhrVFZIeWJKME0zOWNJU0ZoRjA2VU9oQlB5ZVR4NkVYTDV6amV4NGI1UXhiUW5hLW9ac2d3?oc=5",
+      "source": "sentidohorario.com.br",
+      "published": "2026-11-24",
+      "pollster": "Quaest",
+      "key": "b0ea33aee7d796f404ca"
+    },
     {
       "election": "president-br",
       "title": "Pesquisa Real Time Big Data: Lula tem 41% das intenções de voto no 1º turno, Flávio Bolsonaro, 37% - Terra",
